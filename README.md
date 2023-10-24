@@ -1,2 +1,2 @@
-e# rh-camel
+# rh-camel
 Docs
