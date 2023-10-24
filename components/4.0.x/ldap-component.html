@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <title>LDAP :: Red Hat Integration</title>
     <meta name="description" content="Perform searches on LDAP servers.">
-    <meta name="generator" content="Antora 3.0.3">
+    <meta name="generator" content="Antora 3.1.4">
     <link rel="stylesheet" href="../../_/css/site.css">
   </head>
   <body class="article">
@@ -2043,12 +2043,39 @@ In other words placeholders allows to externalize the configuration from your co
 </div>
 </div>
 <div class="sect1">
-<h2 id="_dircontext"><a class="anchor" href="#_dircontext"></a>DirContext</h2>
+<h2 id="_etext"><a class="anchor" href="#_etext"></a>etext</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>The URI, <code>ldap:ldapserver</code>, references a Spring bean with the ID,
+<p>The URI, <code>ldap:ldapserver</code>, references a bean with the ID
 <code>ldapserver</code>. The <code>ldapserver</code> bean may be defined as follows:</p>
 </div>
+<div class="exampleblock">
+<div class="content">
+<div class="dlist">
+<dl>
+<dt class="hdlist1">Java (Quarkus)</dt>
+<dd>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">public class LdapServerProducer {
+
+    @Produces
+    @Dependent
+    @Named("ldapserver")
+    public DirContext createLdapServer() throws Exception {
+        Hashtable&lt;String, String&gt; env = new Hashtable&lt;&gt;();
+        env.put(Context.INITIAL_CONTEXT_FACTORY, "com.sun.jndi.ldap.LdapCtxFactory");
+        env.put(Context.PROVIDER_URL, "ldap://localhost:10389");
+        env.put(Context.SECURITY_AUTHENTICATION, "none");
+
+        return new InitialDirContext(env);
+    }
+}</code></pre>
+</div>
+</div>
+</dd>
+<dt class="hdlist1">XML (Spring)</dt>
+<dd>
 <div class="listingblock">
 <div class="content">
 <pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;bean id="ldapserver" class="javax.naming.directory.InitialDirContext" scope="prototype"&gt;
@@ -2060,6 +2087,11 @@ In other words placeholders allows to externalize the configuration from your co
     &lt;/props&gt;
   &lt;/constructor-arg&gt;
 &lt;/bean&gt;</code></pre>
+</div>
+</div>
+</dd>
+</dl>
+</div>
 </div>
 </div>
 <div class="paragraph">
@@ -2074,12 +2106,10 @@ that connects anonymously to a locally hosted LDAP server.</p>
 </td>
 <td class="content">
 <div class="paragraph">
-<p><code>DirContext</code> objects are <strong>not</strong> required to support concurrency by
-contract. It is therefore important that the directory context is
-declared with the setting, <code>scope="prototype"</code>, in the <code>bean</code> definition
-or that the context supports concurrency. In the Spring framework,
-<code>prototype</code> scoped objects are instantiated each time they are looked
-up.</p>
+<p><code>DirContext</code> objects are <strong>not</strong> required to support concurrency by contract. It is therefore important to manage the directory context&#8217;s lifecycle appropriately. In the Spring framework, <code>prototype</code> scoped objects are instantiated each time they are looked up to ensure concurrency and avoid sharing the same context between multiple threads.</p>
+</div>
+<div class="paragraph">
+<p>For Camel Quarkus applications, you can achieve similar behavior by using the <code>@Dependent</code> annotation. When you annotate a component or bean with <code>@Dependent</code>, a new instance of the component is created for each injection point or usage, which effectively provides the same concurrency guarantees as Spring&#8217;s <code>prototype</code> scope. This ensures that each part of your application interacts with a separate and isolated <code>DirContext</code> instance, preventing unintended thread interference.</p>
 </div>
 </td>
 </tr>
@@ -2115,7 +2145,7 @@ for information about <a href="https://cheatsheetseries.owasp.org/cheatsheets/LD
 <h2 id="_samples"><a class="anchor" href="#_samples"></a>Samples</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>Following on from the Spring configuration above, the code sample below
+<p>Following on from the configuration above, the code sample below
 sends an LDAP request to filter search a group for a member. The Common
 Name is then extracted from the response.</p>
 </div>
@@ -2130,7 +2160,7 @@ Collection&lt;SearchResult&gt; results = template.requestBody(
 if (results.size() &gt; 0) {
   // Extract what we need from the device's profile
 
-  Iterator resultIter = results.iterator();
+  Iterator&lt;SearchResult&gt; resultIter = results.iterator();
   SearchResult searchResult = (SearchResult) resultIter.next();
   Attributes attributes = searchResult.getAttributes();
   Attribute deviceCNAttr = attributes.get("cn");
@@ -2209,6 +2239,34 @@ the InitialDirContext bean - see below sample.</p>
 <div class="paragraph">
 <p><strong>SSL Configuration</strong></p>
 </div>
+<div class="exampleblock">
+<div class="content">
+<div class="dlist">
+<dl>
+<dt class="hdlist1">Java (Quarkus)</dt>
+<dd>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">public class LdapServerProducer {
+
+    @Produces
+    @Dependent
+    @Named("ldapserver")
+    public DirContext createLdapServer() throws Exception {
+        Hashtable&lt;String, String&gt; env = new Hashtable&lt;&gt;();
+        env.put(Context.INITIAL_CONTEXT_FACTORY, "com.sun.jndi.ldap.LdapCtxFactory");
+        env.put(Context.PROVIDER_URL, "ldaps://" + InetAddress.getLocalHost().getCanonicalHostName() + ":10636");
+        env.put(Context.SECURITY_AUTHENTICATION, "none");
+        env.put("java.naming.ldap.factory.socket", CustomSSLSocketFactory.class.getName());
+
+        return new InitialDirContext(env);
+    }
+}</code></pre>
+</div>
+</div>
+</dd>
+<dt class="hdlist1">XML (Spring)</dt>
+<dd>
 <div class="listingblock">
 <div class="content">
 <pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;?xml version="1.0" encoding="UTF-8"?&gt;
@@ -2243,14 +2301,120 @@ the InitialDirContext bean - see below sample.</p>
 &lt;/beans&gt;</code></pre>
 </div>
 </div>
+</dd>
+</dl>
+</div>
+</div>
+</div>
 <div class="paragraph">
 <p><strong>Custom Socket Factory</strong></p>
 </div>
+<div class="exampleblock">
+<div class="content">
+<div class="dlist">
+<dl>
+<dt class="hdlist1">Java (Quarkus)</dt>
+<dd>
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">package com.example.ldap;
-
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java"><span class="fold-block is-hidden-folded">import java.io.FileInputStream;
 import java.io.IOException;
+import java.io.InputStream;
+import java.net.InetAddress;
+import java.net.Socket;
+import java.net.UnknownHostException;
+import java.security.KeyStore;
+
+import javax.net.SocketFactory;
+import javax.net.ssl.SSLContext;
+import javax.net.ssl.SSLSocketFactory;
+import javax.net.ssl.TrustManagerFactory;
+
+import org.eclipse.microprofile.config.ConfigProvider;
+
+</span><span class="fold-block">public class CustomSSLSocketFactory extends SSLSocketFactory {
+
+    private SSLSocketFactory delegate;
+
+    public CustomSSLSocketFactory() throws Exception {
+        String trustStoreFilename = ConfigProvider.getConfig().getValue("ldap.trustStore", String.class);
+        String trustStorePassword = ConfigProvider.getConfig().getValue("ldap.trustStorePassword", String.class);
+        KeyStore keyStore = KeyStore.getInstance(KeyStore.getDefaultType());
+        try (InputStream in = new FileInputStream(trustStoreFilename)) {
+            keyStore.load(in, trustStorePassword.toCharArray());
+        }
+        TrustManagerFactory tmf = TrustManagerFactory.getInstance("SunX509");
+        tmf.init(keyStore);
+        SSLContext ctx = SSLContext.getInstance("TLS");
+        ctx.init(null, tmf.getTrustManagers(), null);
+        delegate = ctx.getSocketFactory();
+    }
+
+    public static SocketFactory getDefault() {
+        try {
+            return new CustomSSLSocketFactory();
+        } catch (Exception ex) {
+            ex.printStackTrace();
+            return null;
+        }
+    }
+
+    @Override
+    public Socket createSocket(Socket s, String host, int port, boolean autoClose) throws IOException {
+        return delegate.createSocket(s, host, port, autoClose);
+    }
+
+    @Override
+    public String[] getDefaultCipherSuites() {
+        return delegate.getDefaultCipherSuites();
+    }
+
+    @Override
+    public String[] getSupportedCipherSuites() {
+        return delegate.getSupportedCipherSuites();
+    }
+
+    @Override
+    public Socket createSocket(String host, int port) throws IOException, UnknownHostException {
+        return delegate.createSocket(host, port);
+    }
+
+    @Override
+    public Socket createSocket(InetAddress address, int port) throws IOException {
+        return delegate.createSocket(address, port);
+    }
+
+    @Override
+    public Socket createSocket(String host, int port, InetAddress localAddress, int localPort)
+            throws IOException, UnknownHostException {
+        return delegate.createSocket(host, port, localAddress, localPort);
+    }
+
+    @Override
+    public Socket createSocket(InetAddress address, int port, InetAddress localAddress, int localPort)
+            throws IOException {
+        return delegate.createSocket(address, port, localAddress, localPort);
+    }
+}</span></code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>The constructor uses the <code>ConfigProvider</code> to read the <code>ldap.trustStore</code> and <code>ldap.trustStorePassword</code> configuration properties, which could be specified in the <code>application.properties</code> file as follows:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-properties hljs" data-lang="properties">ldap.trustStore=/path/to/truststore.jks
+ldap.trustStorePassword=secret</code></pre>
+</div>
+</div>
+</dd>
+<dt class="hdlist1">XML (Spring)</dt>
+<dd>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java"><span class="fold-block">package com.example.ldap;
+
+</span><span class="fold-block is-hidden-folded">import java.io.IOException;
 import java.net.InetAddress;
 import java.net.Socket;
 import java.security.KeyStore;
@@ -2262,7 +2426,7 @@ import javax.net.ssl.TrustManagerFactory;
 
 import org.apache.camel.support.jsse.SSLContextParameters;
 
-/**
+</span><span class="fold-block">/**
  * The CustomSocketFactory. Loads the KeyStore and creates an instance of SSLSocketFactory
  */
 public class CustomSocketFactory extends SSLSocketFactory {
@@ -2332,7 +2496,12 @@ public class CustomSocketFactory extends SSLSocketFactory {
     public Socket createSocket(InetAddress ia, int i, InetAddress ia1, int i1) throws IOException {
         return socketFactory.createSocket(ia, i, ia1, i1);
     }
-}</code></pre>
+}</span></code></pre>
+</div>
+</div>
+</dd>
+</dl>
+</div>
 </div>
 </div>
 <div class="paragraph">
