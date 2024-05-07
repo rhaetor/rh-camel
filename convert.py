@@ -5,13 +5,11 @@ from pathlib import Path
 dir = Path('.')
 
 files = list(dir.rglob("*.html"))
-print(files)
 for fpth in files:
     with open(fpth,"r") as f:
-        content=f.read()
+        content=f.readlines()
         for line in content:
             if "Red Hat" in line:
+                line=line.replace('href="/" > Red Hat Integration < /a >', 'href="../../manual/index.html" > Red Hat Apache Build of Apache Camel Manual < /a >')
+                line=line.replace("Red Hat Integration", "Red Hat Apache Build of Apache Camel")
                 print(line)
-
-        newcont=content.replace("Red Hat Integration", "Red Hat Apache Camel")
-        newcont=content.replace('href="/" > Red Hat Integration < /a >', 'href="https://rhaetor.github.io/rh-camel/manual/" > Red Hat Apache Camel Manual < /a >')
