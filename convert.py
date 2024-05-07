@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 import os
 from pathlib import Path 
+from regex import re
 
 dir = Path('.')
 
@@ -13,3 +14,6 @@ for fpth in files:
                 line=line.replace('href="/" > Red Hat Integration < /a >', 'href="../../manual/index.html" > Red Hat Apache Build of Apache Camel Manual < /a >')
                 line=line.replace("Red Hat Integration", "Red Hat Apache Build of Apache Camel")
                 print(line)
+                #re.replace("<div class="edit-this-page">(.*?)Edit this Page</a></div>\n", "")
+
+
