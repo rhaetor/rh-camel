@@ -2108,6 +2108,20 @@ In other words placeholders allows to externalize the configuration from your co
 <div class="paragraph">
 <p>Queries with variables need to reference a JsonObject instance from the registry:</p>
 </div>
+<div class="paragraph">
+<p>  bookByIdQuery.graphql file:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>query BookById($id: Int!) {
+  bookById(id: $id) {
+    id
+    name
+    author
+  }
+}</pre>
+</div>
+</div>
 <div class="listingblock">
 <div class="content">
 <pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">@BindToRegistry("bookByIdQueryVariables")
