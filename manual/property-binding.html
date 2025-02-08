@@ -3,15 +3,15 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>Property binding in Camel :: Red Hat Apache Build of Apache Camel Manual</title>
-    <meta name="generator" content="Antora 3.0.3">
+    <title>Property binding in Camel :: Red Hat build of Apache Camel</title>
+    <meta name="generator" content="Antora 3.1.4">
     <link rel="stylesheet" href="../_/css/site.css">
   </head>
   <body class="article">
 <header class="header">
   <nav class="navbar">
     <div class="navbar-brand">
-      <a class="navbar-item" href="../../manual/index.html">Red Hat Apache Build of Apache Camel Manual</a>
+      <a class="navbar-item" href="/">Red Hat build of Apache Camel</a>
       <button class="navbar-burger" data-target="topbar-nav">
         <span></span>
         <span></span>
@@ -26,6 +26,7 @@
     <div class="panels">
 <div class="nav-panel-menu is-active" data-panel="menu">
   <nav class="nav-menu">
+    <button class="nav-menu-toggle" aria-label="Toggle expand/collapse all" style="display: none"></button>
     <h3 class="title"><a href="index.html">User manual</a></h3>
 <ul class="nav-list">
   <li class="nav-item" data-depth="0">
@@ -56,7 +57,16 @@
     <a class="nav-link" href="camel-console.html">Camel Developer Console</a>
   </li>
   <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
     <a class="nav-link" href="camel-jbang.html">Camel JBang</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="camel-jbang-kubernetes.html">Camel Kubernetes plugin</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="camel-jbang-k.html">Camel K plugin</a>
+  </li>
+</ul>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="camel-maven-plugin.html">Camel Maven Plugin</a>
@@ -95,6 +105,9 @@
     <a class="nav-link" href="using-propertyplaceholder.html">How to use Camel property placeholders</a>
   </li>
   <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="variables.html">How to use Variables</a>
+  </li>
+  <li class="nav-item" data-depth="2">
     <button class="nav-item-toggle"></button>
     <a class="nav-link" href="testing.html">Testing</a>
 <ul class="nav-list">
@@ -110,7 +123,13 @@
 </ul>
   </li>
   <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
     <a class="nav-link" href="rest-dsl.html">Working with REST and Rest DSL</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="rest-dsl-openapi.html">Rest DSL contract first</a>
+  </li>
+</ul>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="writing-components.html">Writing Components</a>
@@ -477,9 +496,6 @@
     <a class="nav-link" href="faq/how-should-i-invoke-my-pojos-or-spring-services.html">How should I invoke my POJOs or Spring Services?</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="faq/how-to-avoid-importing-bunch-of-cxf-packages-when-start-up-the-camel-cxf-endpoint-from-osgi-platform-.html">How to avoid importing bunch of cxf packages when start up the camel-cxf endpoint from OSGi platform?</a>
-  </li>
-  <li class="nav-item" data-depth="2">
     <a class="nav-link" href="faq/how-to-avoid-sending-some-or-all-message-headers.html">How to avoid sending some or all message headers?</a>
   </li>
   <li class="nav-item" data-depth="2">
@@ -598,11 +614,11 @@
 <div class="nav-panel-explore" data-panel="explore">
   <div class="context">
     <span class="title">User manual</span>
-    <span class="version">default</span>
+    <span class="version"></span>
   </div>
   <ul class="components">
     <li class="component">
-      <a class="title" href="../components/next/index.html">Camel Components</a>
+      <div class="title"><a href="../components/next/index.html">Camel Components</a></div>
       <ul class="versions">
         <li class="version is-latest">
           <a href="../components/next/index.html">Next (Pre-release)</a>
@@ -610,12 +626,7 @@
       </ul>
     </li>
     <li class="component is-current">
-      <a class="title" href="index.html">User manual</a>
-      <ul class="versions">
-        <li class="version is-current is-latest">
-          <a href="index.html">default</a>
-        </li>
-      </ul>
+      <div class="title"><a href="index.html">User manual</a></div>
     </li>
   </ul>
 </div>
@@ -632,6 +643,7 @@
     <li><a href="property-binding.html">Property binding in Camel</a></li>
   </ul>
 </nav>
+<div class="edit-this-page"><a href="file:///code/jboss/jboss-camel/docs/user-manual/modules/ROOT/pages/property-binding.adoc">Edit this Page</a></div>
 </div>
   <div class="content">
 <aside class="toc sidebar" data-title="Contents" data-levels="2">
@@ -694,7 +706,10 @@ then you specify the method as shown: <code>#class:com.foo.MyClassType#myFactory
 And if the factory method requires parameters they can be specified as follows:
 <code>#class:com.foo.MyClassType#myFactoryMethod('Hello World', 5, true)</code>.
 Or if you need to create the instance via constructor parameters then you can specify the parameters as shown:
-<code>#class:com.foo.MyClass('Hello World', 5, true)</code>.</p>
+<code>#class:com.foo.MyClass('Hello World', 5, true)</code>.
+If the factory method is on another bean or class, then you must specify this as shown:
+<code>#class:com.foo.MyClassType#com.foo.MyFactory:myFactoryMethod</code>. Where <code>com.foo.MyFactory</code> either refers to a FQN classname,
+or can refer to an existing bean by id, such as: <code>#class:com.foo.MyClassType#myFactoryBean:myFactoryMethod</code>.</p>
 </li>
 <li>
 <p><em>valueAs(type):value</em> - To declare that the value should be converted to the given type, such as <code>#valueAs(int):123</code>
@@ -892,6 +907,60 @@ can specify how the Bar instance should be created, such as via a factory method
     .withProperty("bar.age", "33");
     .withProperty("bar.rider", "true")
     .bind();</code></pre>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_using_fluent_builder_class"><a class="anchor" href="#_using_fluent_builder_class"></a>Using fluent builder class</h3>
+<div class="paragraph">
+<p>When you are in need to configure a bean via <em>fluent builder class</em>, such as the following example:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">public class MyDriverBuilder {
+
+ private String url;
+ private String username;
+ private String password;
+
+ public MyDriverBuilder url(String url) {
+     this.url = url;
+     return this;
+ }
+
+ public MyDriverBuilder username(String username) {
+     this.username = username;
+     return this;
+ }
+
+ public MyDriverBuilder password(String password) {
+     this.password = password;
+     return this;
+ }
+
+ public MyDriver build() {
+     return new MyDriver(url, username, password);
+ }
+}</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>And you want to create an instance of <code>MyDriver</code> via the <code>MyDriverBuilder</code> class, then this can be done as follows:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">MyDriver driver = PropertyBindingSupport.build()
+  .withCamelContext(context)
+  .withTarget(new MyDriverBuilder())
+  .withFluentBuilder(true)
+  .withProperty("url", "localhost:1234")
+  .withProperty("username", "scott")
+  .withProperty("password", "tiger")
+  .build(MyDriver.class);</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Notice how we use the <code>build(MyDriver.class)</code> to build the bean via the target class <code>.withTarget(new MyDriverBuilder())</code>.
+The build method will by default invoke <code>build</code> as the builder method, but you can specify the name, such as <code>.build(MyDriver.class, "myBuilderMethod");</code></p>
 </div>
 </div>
 </div>

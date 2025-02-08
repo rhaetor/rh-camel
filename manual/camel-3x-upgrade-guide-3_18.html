@@ -3,15 +3,15 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>Apache Camel 3.x Upgrade Guide :: Red Hat Apache Build of Apache Camel Manual</title>
-    <meta name="generator" content="Antora 3.0.3">
+    <title>Apache Camel 3.x Upgrade Guide :: Red Hat build of Apache Camel</title>
+    <meta name="generator" content="Antora 3.1.4">
     <link rel="stylesheet" href="../_/css/site.css">
   </head>
   <body class="article">
 <header class="header">
   <nav class="navbar">
     <div class="navbar-brand">
-      <a class="navbar-item" href="../../manual/index.html">Red Hat Apache Build of Apache Camel Manual</a>
+      <a class="navbar-item" href="/">Red Hat build of Apache Camel</a>
       <button class="navbar-burger" data-target="topbar-nav">
         <span></span>
         <span></span>
@@ -26,6 +26,7 @@
     <div class="panels">
 <div class="nav-panel-menu is-active" data-panel="menu">
   <nav class="nav-menu">
+    <button class="nav-menu-toggle" aria-label="Toggle expand/collapse all" style="display: none"></button>
     <h3 class="title"><a href="index.html">User manual</a></h3>
 <ul class="nav-list">
   <li class="nav-item" data-depth="0">
@@ -56,7 +57,16 @@
     <a class="nav-link" href="camel-console.html">Camel Developer Console</a>
   </li>
   <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
     <a class="nav-link" href="camel-jbang.html">Camel JBang</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="camel-jbang-kubernetes.html">Camel Kubernetes plugin</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="camel-jbang-k.html">Camel K plugin</a>
+  </li>
+</ul>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="camel-maven-plugin.html">Camel Maven Plugin</a>
@@ -95,6 +105,9 @@
     <a class="nav-link" href="using-propertyplaceholder.html">How to use Camel property placeholders</a>
   </li>
   <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="variables.html">How to use Variables</a>
+  </li>
+  <li class="nav-item" data-depth="2">
     <button class="nav-item-toggle"></button>
     <a class="nav-link" href="testing.html">Testing</a>
 <ul class="nav-list">
@@ -110,7 +123,13 @@
 </ul>
   </li>
   <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
     <a class="nav-link" href="rest-dsl.html">Working with REST and Rest DSL</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="rest-dsl-openapi.html">Rest DSL contract first</a>
+  </li>
+</ul>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="writing-components.html">Writing Components</a>
@@ -477,9 +496,6 @@
     <a class="nav-link" href="faq/how-should-i-invoke-my-pojos-or-spring-services.html">How should I invoke my POJOs or Spring Services?</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="faq/how-to-avoid-importing-bunch-of-cxf-packages-when-start-up-the-camel-cxf-endpoint-from-osgi-platform-.html">How to avoid importing bunch of cxf packages when start up the camel-cxf endpoint from OSGi platform?</a>
-  </li>
-  <li class="nav-item" data-depth="2">
     <a class="nav-link" href="faq/how-to-avoid-sending-some-or-all-message-headers.html">How to avoid sending some or all message headers?</a>
   </li>
   <li class="nav-item" data-depth="2">
@@ -598,11 +614,11 @@
 <div class="nav-panel-explore" data-panel="explore">
   <div class="context">
     <span class="title">User manual</span>
-    <span class="version">default</span>
+    <span class="version"></span>
   </div>
   <ul class="components">
     <li class="component">
-      <a class="title" href="../components/next/index.html">Camel Components</a>
+      <div class="title"><a href="../components/next/index.html">Camel Components</a></div>
       <ul class="versions">
         <li class="version is-latest">
           <a href="../components/next/index.html">Next (Pre-release)</a>
@@ -610,12 +626,7 @@
       </ul>
     </li>
     <li class="component is-current">
-      <a class="title" href="index.html">User manual</a>
-      <ul class="versions">
-        <li class="version is-current is-latest">
-          <a href="index.html">default</a>
-        </li>
-      </ul>
+      <div class="title"><a href="index.html">User manual</a></div>
     </li>
   </ul>
 </div>
@@ -632,6 +643,7 @@
     <li><a href="camel-3x-upgrade-guide-3_18.html">Apache Camel 3.x Upgrade Guide</a></li>
   </ul>
 </nav>
+<div class="edit-this-page"><a href="file:///code/jboss/jboss-camel/docs/user-manual/modules/ROOT/pages/camel-3x-upgrade-guide-3_18.adoc">Edit this Page</a></div>
 </div>
   <div class="content">
 <aside class="toc sidebar" data-title="Contents" data-levels="2">
@@ -643,7 +655,7 @@
 <div class="sectionbody">
 <div class="paragraph">
 <p>This document is for helping you upgrade your Apache Camel application
-from Camel 3.x to 3.y. For example if you are upgrading Camel 3.0 to 3.2, then you should follow the guides
+from Camel 3.x to 3.y. For example, if you are upgrading Camel 3.0 to 3.2, then you should follow the guides
 from both 3.0 to 3.1 and 3.1 to 3.2.</p>
 </div>
 </div>
@@ -655,7 +667,7 @@ from both 3.0 to 3.1 and 3.1 to 3.2.</p>
 <h3 id="_camel_core"><a class="anchor" href="#_camel_core"></a>camel-core</h3>
 <div class="paragraph">
 <p>Camel will now mask all known secret values when logging endpoint URIs to avoid leaking sensitive details
-such as from stacktraces. Previously only a sub set of known <em>secret</em> keys was masked.</p>
+such as from stack traces. Previously only a subset of known <em>secret</em> keys was masked.</p>
 </div>
 <div class="paragraph">
 <p>The type converter from <code>InputStream</code> to <code>byte[]</code> will now close the input stream after the conversion.</p>
@@ -675,7 +687,7 @@ to better separate output between text and json based.</p>
 <div class="sect2">
 <h3 id="_camel_cxf"><a class="anchor" href="#_camel_cxf"></a>camel-cxf</h3>
 <div class="paragraph">
-<p>The <code>camel-cxf</code> JAR has been split up into SOAP vs REST and Spring and non Spring JARs.</p>
+<p>The <code>camel-cxf</code> JAR has been split up into SOAP vs. REST and Spring and non-Spring JARs.</p>
 </div>
 <div class="paragraph">
 <p>Users should therefore choose <code>camel-cxf</code> to migrate among the following JARs:</p>
@@ -703,11 +715,11 @@ to better separate output between text and json based.</p>
 </ul>
 </div>
 <div class="paragraph">
-<p>For example if you were using CXF for SOAP and with Spring XML, then you would need to migrate
+<p>For example, if you were using CXF for SOAP and with Spring XML, then you would need to migrate
 from using <code>camel-cxf</code> to <code>camel-cxf-spring-soap</code> and <code>camel-cxf-spring-transport</code>.</p>
 </div>
 <div class="paragraph">
-<p>When using Spring Boot then you need to migrate from <code>camel-cxf-starter</code> to use SOAP or REST:</p>
+<p>When using Spring Boot, then you need to migrate from <code>camel-cxf-starter</code> to use SOAP or REST:</p>
 </div>
 <div class="ulist">
 <ul>
@@ -720,7 +732,7 @@ from using <code>camel-cxf</code> to <code>camel-cxf-spring-soap</code> and <cod
 </ul>
 </div>
 <div class="paragraph">
-<p>The <code>camel-cxf</code> XML XSD schemas has also changed namespaces:</p>
+<p>The <code>camel-cxf</code> XML XSD schemas have also changed namespaces:</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
 <colgroup>
@@ -773,6 +785,65 @@ i.e. <code>org.apache.camel.component.cxf</code> is now <code>org.apache.camel.c
 <p>This means, for example, the <code>CxfComponent</code> class is now located
 in <code>org.apache.camel.component.cxf.jaxws</code>.</p>
 </div>
+<div class="paragraph">
+<p>Some classes in the following packages were refactored, and the package was updated.
+If you were using one of those packages and, after the migration, a <code>ClassNotFoundException</code> is thrown,
+an update should be considered</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Old Package</th>
+<th class="tableblock halign-left valign-top">New Package</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>org.apache.camel.component.cxf</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>org.apache.camel.component.cxf.common</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>org.apache.camel.component.cxf.interceptors</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>org.apache.camel.component.cxf.util</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>org.apache.camel.component.cxf.converter</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>org.apache.camel.component.cxf.jaxrs</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>org.apache.camel.component.cxf</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>org.apache.camel.component.cxf.jaxws</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>org.apache.camel.component.cxf.spring</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>org.apache.camel.component.cxf.spring.jaxrs</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>org.apache.camel.component.cxf.spring</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>org.apache.camel.component.cxf.spring.jaxws</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>org.apache.camel.component.cxf</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>org.apache.camel.component.cxf.spring.jaxws</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>org.apache.camel.component.cxf.transport.spring</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>org.apache.camel.component.cxf.spring.transport</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>org.apache.camel.component.cxf.common.header</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>org.apache.camel.component.cxf.transport.header</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>org.apache.camel.component.cxf.common.message</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>org.apache.camel.component.cxf.transport.message</code></p></td>
+</tr>
+</tbody>
+</table>
 </div>
 <div class="sect2">
 <h3 id="_camel_endpointdsl"><a class="anchor" href="#_camel_endpointdsl"></a>camel-endpointdsl</h3>

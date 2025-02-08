@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>CSV :: Red Hat Camel Reference</title>
+    <title>CSV :: Red Hat build of Apache Camel</title>
     <meta name="description" content="Handle CSV (Comma Separated Values) payloads.">
     <meta name="generator" content="Antora 3.1.4">
     <link rel="stylesheet" href="../../../_/css/site.css">
@@ -12,7 +12,7 @@
 <header class="header">
   <nav class="navbar">
     <div class="navbar-brand">
-      <a class="navbar-item" href="../../manual/index.html">Red Hat Apache Build of Apache Camel Manual</a>
+      <a class="navbar-item" href="/">Red Hat build of Apache Camel</a>
       <button class="navbar-burger" data-target="topbar-nav">
         <span></span>
         <span></span>
@@ -27,6 +27,7 @@
     <div class="panels">
 <div class="nav-panel-menu is-active" data-panel="menu">
   <nav class="nav-menu">
+    <button class="nav-menu-toggle" aria-label="Toggle expand/collapse all" style="display: none"></button>
     <h3 class="title"><a href="../index.html">Camel Components</a></h3>
 <ul class="nav-list">
   <li class="nav-item" data-depth="0">
@@ -36,7 +37,46 @@
     <a class="nav-link" href="../index.html">Components</a>
 <ul class="nav-list">
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="../activemq-component.html">ActiveMQ</a>
+    <a class="nav-link" href="../activemq-component.html">ActiveMQ 5.x</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../activemq6-component.html">ActiveMQ 6.x</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../ai-summary.html">AI</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../chatscript-component.html">ChatScript</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../djl-component.html">Deep Java Library</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../langchain4j-chat-component.html">LangChain4j Chat</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../langchain4j-embeddings-component.html">LangChain4j Embeddings</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../langchain4j-tokenizer-component.html">LangChain4j Tokenizer</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../langchain4j-tools-component.html">LangChain4j Tools</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../langchain4j-web-search-component.html">LangChain4j Web Search</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../milvus-component.html">Milvus</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../pinecone-component.html">Pinecone</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../qdrant-component.html">Qdrant</a>
+  </li>
+</ul>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="../amqp-component.html">AMQP</a>
@@ -65,6 +105,15 @@
 <ul class="nav-list">
   <li class="nav-item" data-depth="3">
     <a class="nav-link" href="../aws2-athena-component.html">AWS Athena</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../aws-bedrock-component.html">AWS Bedrock</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../aws-bedrock-agent-component.html">AWS Bedrock Agent</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../aws-bedrock-agent-runtime-component.html">AWS Bedrock Agent Runtime</a>
   </li>
   <li class="nav-item" data-depth="3">
     <a class="nav-link" href="../aws-cloudtrail-component.html">AWS Cloudtrail</a>
@@ -169,7 +218,7 @@
     <a class="nav-link" href="../azure-storage-blob-component.html">Azure Storage Blob Service</a>
   </li>
   <li class="nav-item" data-depth="3">
-    <a class="nav-link" href="../azure-storage-datalake-component.html">Azure Storage Datalake Service</a>
+    <a class="nav-link" href="../azure-storage-datalake-component.html">Azure Storage Data Lake Service</a>
   </li>
   <li class="nav-item" data-depth="3">
     <a class="nav-link" href="../azure-storage-queue-component.html">Azure Storage Queue Service</a>
@@ -202,9 +251,6 @@
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="../cql-component.html">Cassandra CQL</a>
-  </li>
-  <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="../chatscript-component.html">ChatScript</a>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="../chunk-component.html">Chunk</a>
@@ -277,9 +323,6 @@
     <a class="nav-link" href="../debezium-sqlserver-component.html">Debezium SQL Server Connector</a>
   </li>
 </ul>
-  </li>
-  <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="../djl-component.html">Deep Java Library</a>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="../dhis2-component.html">DHIS2</a>
@@ -395,6 +438,9 @@
   </li>
   <li class="nav-item" data-depth="3">
     <a class="nav-link" href="../google-pubsub-component.html">Google Pubsub</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../google-pubsub-lite-component.html">Google PubSub Lite</a>
   </li>
   <li class="nav-item" data-depth="3">
     <a class="nav-link" href="../google-secret-manager-component.html">Google Secret Manager</a>
@@ -687,7 +733,7 @@
     <a class="nav-link" href="../ldif-component.html">LDIF</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="../log-component.html">Log</a>
+    <a class="nav-link" href="../log-component.html">Log Data</a>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="../lucene-component.html">Lucene</a>
@@ -900,10 +946,16 @@
     <a class="nav-link" href="../smb-component.html">SMB</a>
   </li>
   <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../smooks-component.html">Smooks</a>
+  </li>
+  <li class="nav-item" data-depth="2">
     <a class="nav-link" href="../smpp-component.html">SMPP</a>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="../snmp-component.html">SNMP</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../solr-component.html">Solr</a>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="../splunk-component.html">Splunk</a>
@@ -966,6 +1018,18 @@
     <a class="nav-link" href="../stub-component.html">Stub</a>
   </li>
   <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../tahu-summary.html">Tahu</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../tahu-edge-component.html">Tahu Edge Node / Device</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../tahu-host-component.html">Tahu Host Application</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
     <a class="nav-link" href="../telegram-component.html">Telegram</a>
   </li>
   <li class="nav-item" data-depth="2">
@@ -1026,7 +1090,7 @@
     <a class="nav-link" href="../whatsapp-component.html">WhatsApp</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="../wordpress-component.html">Wordpress</a>
+    <a class="nav-link" href="../wordpress-component.html">WordPress</a>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="../workday-component.html">Workday</a>
@@ -1419,7 +1483,13 @@
     <a class="nav-link" href="../others/openapi-java.html">Openapi Java</a>
   </li>
   <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../others/openapi-validator.html">Openapi Validator</a>
+  </li>
+  <li class="nav-item" data-depth="2">
     <a class="nav-link" href="../others/opentelemetry.html">OpenTelemetry</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../others/platform-http-jolokia.html">Platform HTTP Jolokia</a>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="../others/platform-http-main.html">Platform Http Main</a>
@@ -1567,7 +1637,7 @@
     <a class="nav-link" href="../eips/event-message.html">Event Message</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="../eips/failover-eip.html">Failover</a>
+    <a class="nav-link" href="../eips/failoverLoadBalancer-eip.html">Failover Load Balancer</a>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="../eips/faultToleranceConfiguration-eip.html">Fault Tolerance Configuration</a>
@@ -1597,13 +1667,13 @@
     <a class="nav-link" href="../eips/loadBalance-eip.html">Load Balance</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="../eips/log-eip.html">Log</a>
+    <a class="nav-link" href="../eips/log-eip.html">Logger</a>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="../eips/loop-eip.html">Loop</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="../eips/marshal-eip.html">Marshal EIP</a>
+    <a class="nav-link" href="../eips/marshal-eip.html">Marshal</a>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="../eips/message.html">Message</a>
@@ -1660,6 +1730,9 @@
     <a class="nav-link" href="../eips/point-to-point-channel.html">Point to Point Channel</a>
   </li>
   <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../eips/poll-eip.html">Poll</a>
+  </li>
+  <li class="nav-item" data-depth="2">
     <a class="nav-link" href="../eips/pollEnrich-eip.html">Poll Enrich</a>
   </li>
   <li class="nav-item" data-depth="2">
@@ -1675,7 +1748,7 @@
     <a class="nav-link" href="../eips/publish-subscribe-channel.html">Publish Subscribe Channel</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="../eips/random-eip.html">Random</a>
+    <a class="nav-link" href="../eips/randomLoadBalancer-eip.html">Random Load Balancer</a>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="../eips/recipientList-eip.html">Recipient List</a>
@@ -1717,7 +1790,7 @@
     <a class="nav-link" href="../eips/rollback-eip.html">Rollback</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="../eips/roundRobin-eip.html">Round Robin</a>
+    <a class="nav-link" href="../eips/roundRobinLoadBalancer-eip.html">Round Robin Load Balancer</a>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="../eips/routingSlip-eip.html">Routing Slip</a>
@@ -1729,7 +1802,7 @@
     <a class="nav-link" href="../eips/sample-eip.html">Sample</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="../eips/scatter-gather.html">Scatter Gather</a>
+    <a class="nav-link" href="../eips/scatter-gather.html">Scatter-Gather</a>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="../eips/script-eip.html">Script</a>
@@ -1759,6 +1832,9 @@
     <a class="nav-link" href="../eips/setVariable-eip.html">Set Variable</a>
   </li>
   <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../eips/setVariables-eip.html">Set Variables</a>
+  </li>
+  <li class="nav-item" data-depth="2">
     <a class="nav-link" href="../eips/sort-eip.html">Sort</a>
   </li>
   <li class="nav-item" data-depth="2">
@@ -1768,7 +1844,7 @@
     <a class="nav-link" href="../eips/step-eip.html">Step</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="../eips/sticky-eip.html">Sticky</a>
+    <a class="nav-link" href="../eips/stickyLoadBalancer-eip.html">Sticky Load Balancer</a>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="../eips/stop-eip.html">Stop</a>
@@ -1789,7 +1865,7 @@
     <a class="nav-link" href="../eips/toD-eip.html">To D</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="../eips/topic-eip.html">Topic</a>
+    <a class="nav-link" href="../eips/topicLoadBalancer-eip.html">Topic Load Balancer</a>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="../eips/transactional-client.html">Transactional Client</a>
@@ -1798,13 +1874,13 @@
     <a class="nav-link" href="../eips/transform-eip.html">Transform</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="../eips/unmarshal-eip.html">Unmarshal EIP</a>
+    <a class="nav-link" href="../eips/unmarshal-eip.html">Unmarshal</a>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="../eips/validate-eip.html">Validate</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="../eips/weighted-eip.html">Weighted</a>
+    <a class="nav-link" href="../eips/weightedLoadBalancer-eip.html">Weighted Load Balancer</a>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="../eips/wireTap-eip.html">Wire Tap</a>
@@ -1823,7 +1899,7 @@
   </div>
   <ul class="components">
     <li class="component is-current">
-      <a class="title" href="../index.html">Camel Components</a>
+      <div class="title"><a href="../index.html">Camel Components</a></div>
       <ul class="versions">
         <li class="version is-current is-latest">
           <a href="../index.html">Next (Pre-release)</a>
@@ -1831,12 +1907,7 @@
       </ul>
     </li>
     <li class="component">
-      <a class="title" href="../../../manual/index.html">User manual</a>
-      <ul class="versions">
-        <li class="version is-latest">
-          <a href="../../../manual/index.html">default</a>
-        </li>
-      </ul>
+      <div class="title"><a href="../../../manual/index.html">User manual</a></div>
     </li>
   </ul>
 </div>
@@ -1854,6 +1925,7 @@
     <li><a href="csv-dataformat.html">CSV</a></li>
   </ul>
 </nav>
+<div class="edit-this-page"><a href="file:///code/jboss/jboss-camel/docs/components/modules/dataformats/pages/csv-dataformat.adoc">Edit this Page</a></div>
 </div>
   <div class="content">
 <aside class="toc sidebar" data-title="Contents" data-levels="2">
@@ -1898,7 +1970,7 @@ exported/imported by Excel.</p>
 <tbody>
 <tr>
 <td class="tableblock halign-left valign-top"><div class="content"><div id="_dataformat_option_formatRef" class="paragraph">
-<p><a href="#_dataformat_option_formatRef" class="anchor"></a><strong>formatRef</strong></p>
+<p><a href="#_dataformat_option_formatRef" class="anchor"></a><strong>formatRef</strong> (advanced)</p>
 </div></div></td>
 <td class="tableblock halign-left valign-top"></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>String</code></p></td>
@@ -1908,7 +1980,7 @@ exported/imported by Excel.</p>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><div class="content"><div id="_dataformat_option_formatName" class="paragraph">
-<p><a href="#_dataformat_option_formatName" class="anchor"></a><strong>formatName</strong></p>
+<p><a href="#_dataformat_option_formatName" class="anchor"></a><strong>formatName</strong> (advanced)</p>
 </div></div></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>DEFAULT</code></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>Enum</code></p></td>
@@ -1943,7 +2015,7 @@ exported/imported by Excel.</p>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><div class="content"><div id="_dataformat_option_commentMarkerDisabled" class="paragraph">
-<p><a href="#_dataformat_option_commentMarkerDisabled" class="anchor"></a><strong>commentMarkerDisabled</strong></p>
+<p><a href="#_dataformat_option_commentMarkerDisabled" class="anchor"></a><strong>commentMarkerDisabled</strong> (advanced)</p>
 </div></div></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>false</code></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>Boolean</code></p></td>
@@ -1953,7 +2025,7 @@ exported/imported by Excel.</p>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><div class="content"><div id="_dataformat_option_commentMarker" class="paragraph">
-<p><a href="#_dataformat_option_commentMarker" class="anchor"></a><strong>commentMarker</strong></p>
+<p><a href="#_dataformat_option_commentMarker" class="anchor"></a><strong>commentMarker</strong> (advanced)</p>
 </div></div></td>
 <td class="tableblock halign-left valign-top"></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>String</code></p></td>
@@ -1963,7 +2035,7 @@ exported/imported by Excel.</p>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><div class="content"><div id="_dataformat_option_delimiter" class="paragraph">
-<p><a href="#_dataformat_option_delimiter" class="anchor"></a><strong>delimiter</strong></p>
+<p><a href="#_dataformat_option_delimiter" class="anchor"></a><strong>delimiter</strong> (common)</p>
 </div></div></td>
 <td class="tableblock halign-left valign-top"></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>String</code></p></td>
@@ -1973,7 +2045,7 @@ exported/imported by Excel.</p>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><div class="content"><div id="_dataformat_option_escapeDisabled" class="paragraph">
-<p><a href="#_dataformat_option_escapeDisabled" class="anchor"></a><strong>escapeDisabled</strong></p>
+<p><a href="#_dataformat_option_escapeDisabled" class="anchor"></a><strong>escapeDisabled</strong> (advanced)</p>
 </div></div></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>false</code></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>Boolean</code></p></td>
@@ -1983,7 +2055,7 @@ exported/imported by Excel.</p>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><div class="content"><div id="_dataformat_option_escape" class="paragraph">
-<p><a href="#_dataformat_option_escape" class="anchor"></a><strong>escape</strong></p>
+<p><a href="#_dataformat_option_escape" class="anchor"></a><strong>escape</strong> (advanced)</p>
 </div></div></td>
 <td class="tableblock halign-left valign-top"></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>String</code></p></td>
@@ -1993,7 +2065,7 @@ exported/imported by Excel.</p>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><div class="content"><div id="_dataformat_option_headerDisabled" class="paragraph">
-<p><a href="#_dataformat_option_headerDisabled" class="anchor"></a><strong>headerDisabled</strong></p>
+<p><a href="#_dataformat_option_headerDisabled" class="anchor"></a><strong>headerDisabled</strong> (common)</p>
 </div></div></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>false</code></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>Boolean</code></p></td>
@@ -2003,7 +2075,7 @@ exported/imported by Excel.</p>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><div class="content"><div id="_dataformat_option_header" class="paragraph">
-<p><a href="#_dataformat_option_header" class="anchor"></a><strong>header</strong></p>
+<p><a href="#_dataformat_option_header" class="anchor"></a><strong>header</strong> (common)</p>
 </div></div></td>
 <td class="tableblock halign-left valign-top"></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>Array</code></p></td>
@@ -2013,7 +2085,7 @@ exported/imported by Excel.</p>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><div class="content"><div id="_dataformat_option_allowMissingColumnNames" class="paragraph">
-<p><a href="#_dataformat_option_allowMissingColumnNames" class="anchor"></a><strong>allowMissingColumnNames</strong></p>
+<p><a href="#_dataformat_option_allowMissingColumnNames" class="anchor"></a><strong>allowMissingColumnNames</strong> (common)</p>
 </div></div></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>false</code></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>Boolean</code></p></td>
@@ -2023,7 +2095,7 @@ exported/imported by Excel.</p>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><div class="content"><div id="_dataformat_option_ignoreEmptyLines" class="paragraph">
-<p><a href="#_dataformat_option_ignoreEmptyLines" class="anchor"></a><strong>ignoreEmptyLines</strong></p>
+<p><a href="#_dataformat_option_ignoreEmptyLines" class="anchor"></a><strong>ignoreEmptyLines</strong> (common)</p>
 </div></div></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>false</code></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>Boolean</code></p></td>
@@ -2033,7 +2105,7 @@ exported/imported by Excel.</p>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><div class="content"><div id="_dataformat_option_ignoreSurroundingSpaces" class="paragraph">
-<p><a href="#_dataformat_option_ignoreSurroundingSpaces" class="anchor"></a><strong>ignoreSurroundingSpaces</strong></p>
+<p><a href="#_dataformat_option_ignoreSurroundingSpaces" class="anchor"></a><strong>ignoreSurroundingSpaces</strong> (common)</p>
 </div></div></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>false</code></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>Boolean</code></p></td>
@@ -2043,7 +2115,7 @@ exported/imported by Excel.</p>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><div class="content"><div id="_dataformat_option_nullStringDisabled" class="paragraph">
-<p><a href="#_dataformat_option_nullStringDisabled" class="anchor"></a><strong>nullStringDisabled</strong></p>
+<p><a href="#_dataformat_option_nullStringDisabled" class="anchor"></a><strong>nullStringDisabled</strong> (advanced)</p>
 </div></div></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>false</code></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>Boolean</code></p></td>
@@ -2053,7 +2125,7 @@ exported/imported by Excel.</p>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><div class="content"><div id="_dataformat_option_nullString" class="paragraph">
-<p><a href="#_dataformat_option_nullString" class="anchor"></a><strong>nullString</strong></p>
+<p><a href="#_dataformat_option_nullString" class="anchor"></a><strong>nullString</strong> (advanced)</p>
 </div></div></td>
 <td class="tableblock halign-left valign-top"></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>String</code></p></td>
@@ -2063,7 +2135,7 @@ exported/imported by Excel.</p>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><div class="content"><div id="_dataformat_option_quoteDisabled" class="paragraph">
-<p><a href="#_dataformat_option_quoteDisabled" class="anchor"></a><strong>quoteDisabled</strong></p>
+<p><a href="#_dataformat_option_quoteDisabled" class="anchor"></a><strong>quoteDisabled</strong> (common)</p>
 </div></div></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>false</code></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>Boolean</code></p></td>
@@ -2073,17 +2145,17 @@ exported/imported by Excel.</p>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><div class="content"><div id="_dataformat_option_quote" class="paragraph">
-<p><a href="#_dataformat_option_quote" class="anchor"></a><strong>quote</strong></p>
+<p><a href="#_dataformat_option_quote" class="anchor"></a><strong>quote</strong> (common)</p>
 </div></div></td>
 <td class="tableblock halign-left valign-top"></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>String</code></p></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>Sets the quote which by default is.</p>
+<p>Sets the quote to use which by default is double-quote character.</p>
 </div></div></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><div class="content"><div id="_dataformat_option_recordSeparatorDisabled" class="paragraph">
-<p><a href="#_dataformat_option_recordSeparatorDisabled" class="anchor"></a><strong>recordSeparatorDisabled</strong></p>
+<p><a href="#_dataformat_option_recordSeparatorDisabled" class="anchor"></a><strong>recordSeparatorDisabled</strong> (common)</p>
 </div></div></td>
 <td class="tableblock halign-left valign-top"></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>String</code></p></td>
@@ -2093,7 +2165,7 @@ exported/imported by Excel.</p>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><div class="content"><div id="_dataformat_option_recordSeparator" class="paragraph">
-<p><a href="#_dataformat_option_recordSeparator" class="anchor"></a><strong>recordSeparator</strong></p>
+<p><a href="#_dataformat_option_recordSeparator" class="anchor"></a><strong>recordSeparator</strong> (common)</p>
 </div></div></td>
 <td class="tableblock halign-left valign-top"></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>String</code></p></td>
@@ -2103,7 +2175,7 @@ exported/imported by Excel.</p>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><div class="content"><div id="_dataformat_option_skipHeaderRecord" class="paragraph">
-<p><a href="#_dataformat_option_skipHeaderRecord" class="anchor"></a><strong>skipHeaderRecord</strong></p>
+<p><a href="#_dataformat_option_skipHeaderRecord" class="anchor"></a><strong>skipHeaderRecord</strong> (common)</p>
 </div></div></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>false</code></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>Boolean</code></p></td>
@@ -2113,7 +2185,7 @@ exported/imported by Excel.</p>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><div class="content"><div id="_dataformat_option_quoteMode" class="paragraph">
-<p><a href="#_dataformat_option_quoteMode" class="anchor"></a><strong>quoteMode</strong></p>
+<p><a href="#_dataformat_option_quoteMode" class="anchor"></a><strong>quoteMode</strong> (common)</p>
 </div></div></td>
 <td class="tableblock halign-left valign-top"></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>Enum</code></p></td>
@@ -2145,7 +2217,7 @@ exported/imported by Excel.</p>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><div class="content"><div id="_dataformat_option_ignoreHeaderCase" class="paragraph">
-<p><a href="#_dataformat_option_ignoreHeaderCase" class="anchor"></a><strong>ignoreHeaderCase</strong></p>
+<p><a href="#_dataformat_option_ignoreHeaderCase" class="anchor"></a><strong>ignoreHeaderCase</strong> (common)</p>
 </div></div></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>false</code></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>Boolean</code></p></td>
@@ -2155,7 +2227,7 @@ exported/imported by Excel.</p>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><div class="content"><div id="_dataformat_option_trim" class="paragraph">
-<p><a href="#_dataformat_option_trim" class="anchor"></a><strong>trim</strong></p>
+<p><a href="#_dataformat_option_trim" class="anchor"></a><strong>trim</strong> (common)</p>
 </div></div></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>false</code></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>Boolean</code></p></td>
@@ -2165,7 +2237,7 @@ exported/imported by Excel.</p>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><div class="content"><div id="_dataformat_option_trailingDelimiter" class="paragraph">
-<p><a href="#_dataformat_option_trailingDelimiter" class="anchor"></a><strong>trailingDelimiter</strong></p>
+<p><a href="#_dataformat_option_trailingDelimiter" class="anchor"></a><strong>trailingDelimiter</strong> (common)</p>
 </div></div></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>false</code></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>Boolean</code></p></td>
@@ -2175,7 +2247,7 @@ exported/imported by Excel.</p>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><div class="content"><div id="_dataformat_option_marshallerFactoryRef" class="paragraph">
-<p><a href="#_dataformat_option_marshallerFactoryRef" class="anchor"></a><strong>marshallerFactoryRef</strong></p>
+<p><a href="#_dataformat_option_marshallerFactoryRef" class="anchor"></a><strong>marshallerFactoryRef</strong> (advanced)</p>
 </div></div></td>
 <td class="tableblock halign-left valign-top"></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>String</code></p></td>
@@ -2185,7 +2257,7 @@ exported/imported by Excel.</p>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><div class="content"><div id="_dataformat_option_lazyLoad" class="paragraph">
-<p><a href="#_dataformat_option_lazyLoad" class="anchor"></a><strong>lazyLoad</strong></p>
+<p><a href="#_dataformat_option_lazyLoad" class="anchor"></a><strong>lazyLoad</strong> (advanced)</p>
 </div></div></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>false</code></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>Boolean</code></p></td>
@@ -2195,7 +2267,7 @@ exported/imported by Excel.</p>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><div class="content"><div id="_dataformat_option_useMaps" class="paragraph">
-<p><a href="#_dataformat_option_useMaps" class="anchor"></a><strong>useMaps</strong></p>
+<p><a href="#_dataformat_option_useMaps" class="anchor"></a><strong>useMaps</strong> (common)</p>
 </div></div></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>false</code></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>Boolean</code></p></td>
@@ -2205,7 +2277,7 @@ exported/imported by Excel.</p>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><div class="content"><div id="_dataformat_option_useOrderedMaps" class="paragraph">
-<p><a href="#_dataformat_option_useOrderedMaps" class="anchor"></a><strong>useOrderedMaps</strong></p>
+<p><a href="#_dataformat_option_useOrderedMaps" class="anchor"></a><strong>useOrderedMaps</strong> (common)</p>
 </div></div></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>false</code></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>Boolean</code></p></td>
@@ -2215,7 +2287,7 @@ exported/imported by Excel.</p>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><div class="content"><div id="_dataformat_option_recordConverterRef" class="paragraph">
-<p><a href="#_dataformat_option_recordConverterRef" class="anchor"></a><strong>recordConverterRef</strong></p>
+<p><a href="#_dataformat_option_recordConverterRef" class="anchor"></a><strong>recordConverterRef</strong> (advanced)</p>
 </div></div></td>
 <td class="tableblock halign-left valign-top"></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>String</code></p></td>
@@ -2225,7 +2297,7 @@ exported/imported by Excel.</p>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><div class="content"><div id="_dataformat_option_captureHeaderRecord" class="paragraph">
-<p><a href="#_dataformat_option_captureHeaderRecord" class="anchor"></a><strong>captureHeaderRecord</strong></p>
+<p><a href="#_dataformat_option_captureHeaderRecord" class="anchor"></a><strong>captureHeaderRecord</strong> (advanced)</p>
 </div></div></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>false</code></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>Boolean</code></p></td>
@@ -2267,15 +2339,17 @@ exported/imported by Excel.</p>
 </div>
 </div>
 <div class="sect1">
-<h2 id="_marshalling_a_map_to_csv"><a class="anchor" href="#_marshalling_a_map_to_csv"></a>Marshalling a Map to CSV</h2>
+<h2 id="_examples"><a class="anchor" href="#_examples"></a>Examples</h2>
 <div class="sectionbody">
+<div class="sect2">
+<h3 id="_marshalling_a_map_to_csv"><a class="anchor" href="#_marshalling_a_map_to_csv"></a>Marshalling a Map to CSV</h3>
 <div class="paragraph">
 <p>The component allows you to marshal a Java Map (or any other message
 type that can be converted in a Map) into a
 CSV payload.</p>
 </div>
 <div class="paragraph">
-<p>Considering the following body</p>
+<p>Considering the following body:</p>
 </div>
 <div class="listingblock">
 <div class="content">
@@ -2285,8 +2359,21 @@ body.put("bar", 123);</code></pre>
 </div>
 </div>
 <div class="paragraph">
-<p>and this Java route definition</p>
+<p>and this route definition:</p>
 </div>
+<div id="_tabs_1" class="openblock tabs is-sync is-loading">
+<div class="content">
+<div class="ulist tablist">
+<ul>
+<li id="_tabs_1_java" class="tab">
+<p>Java</p>
+</li>
+<li id="_tabs_1_xml" class="tab">
+<p>XML</p>
+</li>
+</ul>
+</div>
+<div id="_tabs_1_java--panel" class="tabpanel" aria-labelledby="_tabs_1_java">
 <div class="listingblock">
 <div class="content">
 <pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">from("direct:start")
@@ -2294,9 +2381,8 @@ body.put("bar", 123);</code></pre>
     .to("mock:result");</code></pre>
 </div>
 </div>
-<div class="paragraph">
-<p>or this XML route definition</p>
 </div>
+<div id="_tabs_1_xml--panel" class="tabpanel" aria-labelledby="_tabs_1_xml">
 <div class="listingblock">
 <div class="content">
 <pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;route&gt;
@@ -2308,6 +2394,9 @@ body.put("bar", 123);</code></pre>
 &lt;/route&gt;</code></pre>
 </div>
 </div>
+</div>
+</div>
+</div>
 <div class="paragraph">
 <p>then it will produce</p>
 </div>
@@ -2317,12 +2406,10 @@ body.put("bar", 123);</code></pre>
 </div>
 </div>
 </div>
-</div>
-<div class="sect1">
-<h2 id="_unmarshalling_a_csv_message_into_a_java_list"><a class="anchor" href="#_unmarshalling_a_csv_message_into_a_java_list"></a>Unmarshalling a CSV message into a Java List</h2>
-<div class="sectionbody">
+<div class="sect2">
+<h3 id="_unmarshalling_a_csv_message_into_a_java_list"><a class="anchor" href="#_unmarshalling_a_csv_message_into_a_java_list"></a>Unmarshalling a CSV message into a Java List</h3>
 <div class="paragraph">
-<p>Unmarshalling will transform a CSV messsage into a Java List with CSV
+<p>Unmarshalling will transform a CSV message into a Java List with CSV
 file lines (containing another List with all the field values).</p>
 </div>
 <div class="paragraph">
@@ -2360,24 +2447,20 @@ for (List&lt;String&gt; line : data) {
 </div>
 </div>
 </div>
-</div>
-<div class="sect1">
-<h2 id="_marshalling_a_listmap_to_csv"><a class="anchor" href="#_marshalling_a_listmap_to_csv"></a>Marshalling a List&lt;Map&gt; to CSV</h2>
-<div class="sectionbody">
+<div class="sect2">
+<h3 id="_marshalling_a_listmap_to_csv"><a class="anchor" href="#_marshalling_a_listmap_to_csv"></a>Marshalling a List&lt;Map&gt; to CSV</h3>
 <div class="paragraph">
 <p><strong>Since Camel 2.1</strong></p>
 </div>
 <div class="paragraph">
 <p>If you have multiple rows of data you want to be marshalled into CSV
-format you can now store the message payload as a
+format, you can now store the message payload as a
 <code>List&lt;Map&lt;String, Object&gt;&gt;</code> object where the list contains a Map for
 each row.</p>
 </div>
 </div>
-</div>
-<div class="sect1">
-<h2 id="_file_poller_of_csv_then_unmarshaling"><a class="anchor" href="#_file_poller_of_csv_then_unmarshaling"></a>File Poller of CSV, then unmarshaling</h2>
-<div class="sectionbody">
+<div class="sect2">
+<h3 id="_file_poller_of_csv_then_unmarshaling"><a class="anchor" href="#_file_poller_of_csv_then_unmarshaling"></a>File Poller of CSV, then unmarshaling</h3>
 <div class="paragraph">
 <p>Given a bean which can handle the incoming data&#8230;&#8203;</p>
 </div>
@@ -2411,12 +2494,10 @@ public void doHandleCsvData(List&lt;List&lt;String&gt;&gt; csvData)
 </div>
 </div>
 </div>
-</div>
-<div class="sect1">
-<h2 id="_marshaling_with_a_pipe_as_delimiter"><a class="anchor" href="#_marshaling_with_a_pipe_as_delimiter"></a>Marshaling with a pipe as delimiter</h2>
-<div class="sectionbody">
+<div class="sect2">
+<h3 id="_marshaling_with_a_pipe_as_delimiter"><a class="anchor" href="#_marshaling_with_a_pipe_as_delimiter"></a>Marshaling with a pipe as delimiter</h3>
 <div class="paragraph">
-<p>Considering the following body</p>
+<p>Considering the following body:</p>
 </div>
 <div class="listingblock">
 <div class="content">
@@ -2426,8 +2507,21 @@ body.put("bar", 123);</code></pre>
 </div>
 </div>
 <div class="paragraph">
-<p>and this Java route definition</p>
+<p>And this Java route definition:</p>
 </div>
+<div id="_tabs_2" class="openblock tabs is-sync is-loading">
+<div class="content">
+<div class="ulist tablist">
+<ul>
+<li id="_tabs_2_java" class="tab">
+<p>Java</p>
+</li>
+<li id="_tabs_2_xml" class="tab">
+<p>XML</p>
+</li>
+</ul>
+</div>
+<div id="_tabs_2_java--panel" class="tabpanel" aria-labelledby="_tabs_2_java">
 <div class="listingblock">
 <div class="content">
 <pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">from("direct:start")
@@ -2435,9 +2529,8 @@ body.put("bar", 123);</code></pre>
     .to("mock:result")</code></pre>
 </div>
 </div>
-<div class="paragraph">
-<p>or this XML route definition</p>
 </div>
+<div id="_tabs_2_xml--panel" class="tabpanel" aria-labelledby="_tabs_2_xml">
 <div class="listingblock">
 <div class="content">
 <pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;route&gt;
@@ -2449,8 +2542,11 @@ body.put("bar", 123);</code></pre>
 &lt;/route&gt;</code></pre>
 </div>
 </div>
+</div>
+</div>
+</div>
 <div class="paragraph">
-<p>then it will produce</p>
+<p>Then it will produce:</p>
 </div>
 <div class="listingblock">
 <div class="content">
@@ -2501,10 +2597,8 @@ should illustrate this customization.</p>
 </div>
 </div>
 </div>
-</div>
-<div class="sect1">
-<h2 id="_collecting_header_record"><a class="anchor" href="#_collecting_header_record"></a>Collecting header record</h2>
-<div class="sectionbody">
+<div class="sect2">
+<h3 id="_collecting_header_record"><a class="anchor" href="#_collecting_header_record"></a>Collecting header record</h3>
 <div class="paragraph">
 <p>You can instruct the CSV Data Format to collect the headers into
 a message header called CamelCsvHeaderRecord.</p>
@@ -2520,10 +2614,8 @@ from("direct:start")
 </div>
 </div>
 </div>
-</div>
-<div class="sect1">
-<h2 id="_using_skipfirstline_or_skipheaderrecord_option_while_unmarshaling"><a class="anchor" href="#_using_skipfirstline_or_skipheaderrecord_option_while_unmarshaling"></a>Using skipFirstLine or skipHeaderRecord option while unmarshaling</h2>
-<div class="sectionbody">
+<div class="sect2">
+<h3 id="_using_skipfirstline_or_skipheaderrecord_option_while_unmarshaling"><a class="anchor" href="#_using_skipfirstline_or_skipheaderrecord_option_while_unmarshaling"></a>Using skipFirstLine or skipHeaderRecord option while unmarshaling</h3>
 <div class="paragraph">
 <p>*For Camel &gt;= 2.16.5
 The instruction for CSV Data format to skip headers or first line is the following.
@@ -2547,20 +2639,19 @@ Usign the Spring/XML DSL:</p>
 <p>You can instruct the CSV Data Format to skip the
 first line which contains the CSV headers. Using the Spring/XML DSL:</p>
 </div>
-<div class="listingblock">
+<div id="_tabs_3" class="openblock tabs is-sync is-loading">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;route&gt;
-  &lt;from uri="direct:start" /&gt;
-  &lt;unmarshal&gt;
-    &lt;csv skipFirstLine="true" /&gt;
-  &lt;/unmarshal&gt;
-  &lt;to uri="bean:myCsvHandler?method=doHandleCsv" /&gt;
-&lt;/route&gt;</code></pre>
+<div class="ulist tablist">
+<ul>
+<li id="_tabs_3_java" class="tab">
+<p>Java</p>
+</li>
+<li id="_tabs_3_xml" class="tab">
+<p>XML</p>
+</li>
+</ul>
 </div>
-</div>
-<div class="paragraph">
-<p>Or the Java DSL:</p>
-</div>
+<div id="_tabs_3_java--panel" class="tabpanel" aria-labelledby="_tabs_3_java">
 <div class="listingblock">
 <div class="content">
 <pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">CsvDataFormat csv = new CsvDataFormat();
@@ -2572,27 +2663,37 @@ from("direct:start")
 </div>
 </div>
 </div>
-</div>
-<div class="sect1">
-<h2 id="_unmarshaling_with_a_pipe_as_delimiter"><a class="anchor" href="#_unmarshaling_with_a_pipe_as_delimiter"></a>Unmarshaling with a pipe as delimiter</h2>
-<div class="sectionbody">
-<div class="paragraph">
-<p>Using the Spring/XML DSL:</p>
-</div>
+<div id="_tabs_3_xml--panel" class="tabpanel" aria-labelledby="_tabs_3_xml">
 <div class="listingblock">
 <div class="content">
 <pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;route&gt;
   &lt;from uri="direct:start" /&gt;
   &lt;unmarshal&gt;
-    &lt;csv delimiter="|" /&gt;
+    &lt;csv skipFirstLine="true" /&gt;
   &lt;/unmarshal&gt;
   &lt;to uri="bean:myCsvHandler?method=doHandleCsv" /&gt;
 &lt;/route&gt;</code></pre>
 </div>
 </div>
-<div class="paragraph">
-<p>Or the Java DSL:</p>
 </div>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_unmarshaling_with_a_pipe_as_delimiter"><a class="anchor" href="#_unmarshaling_with_a_pipe_as_delimiter"></a>Unmarshaling with a pipe as delimiter</h3>
+<div id="_tabs_4" class="openblock tabs is-sync is-loading">
+<div class="content">
+<div class="ulist tablist">
+<ul>
+<li id="_tabs_4_java" class="tab">
+<p>Java</p>
+</li>
+<li id="_tabs_4_spring_xml" class="tab">
+<p>Spring XML</p>
+</li>
+</ul>
+</div>
+<div id="_tabs_4_java--panel" class="tabpanel" aria-labelledby="_tabs_4_java">
 <div class="listingblock">
 <div class="content">
 <pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">CsvDataFormat csv = new CsvDataFormat();
@@ -2605,6 +2706,9 @@ from("direct:start")
   .to("bean:myCsvHandler?method=doHandleCsv");</code></pre>
 </div>
 </div>
+<div class="paragraph">
+<p>Or, possibly:</p>
+</div>
 <div class="listingblock">
 <div class="content">
 <pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">CsvDataFormat csv = new CsvDataFormat();
@@ -2615,16 +2719,20 @@ from("direct:start")
   .to("bean:myCsvHandler?method=doHandleCsv");</code></pre>
 </div>
 </div>
+</div>
+<div id="_tabs_4_spring_xml--panel" class="tabpanel" aria-labelledby="_tabs_4_spring_xml">
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">CsvDataFormat csv = new CsvDataFormat();
-CSVConfig csvConfig = new CSVConfig();
-csvConfig.setDelimiter(";");
-csv.setConfig(csvConfig);
-
-from("direct:start")
-  .unmarshal(csv)
-  .to("bean:myCsvHandler?method=doHandleCsv");</code></pre>
+<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;route&gt;
+  &lt;from uri="direct:start" /&gt;
+  &lt;unmarshal&gt;
+    &lt;csv delimiter="|" /&gt;
+  &lt;/unmarshal&gt;
+  &lt;to uri="bean:myCsvHandler?method=doHandleCsv" /&gt;
+&lt;/route&gt;</code></pre>
+</div>
+</div>
+</div>
 </div>
 </div>
 <div class="paragraph">
@@ -2640,7 +2748,8 @@ csvConfig.setDelimiter(';');</code></pre>
 </div>
 </div>
 <div class="paragraph">
-<p>doesn&#8217;t work. You have to set the delimiter as a String!</p>
+<p>This doesn&#8217;t work. You have to set the delimiter as a String!</p>
+</div>
 </div>
 </div>
 </div>
@@ -2648,11 +2757,11 @@ csvConfig.setDelimiter(';');</code></pre>
 <h2 id="_dependencies"><a class="anchor" href="#_dependencies"></a>Dependencies</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>To use CSV in your Camel routes you need to add a dependency on
+<p>To use CSV in your Camel routes, you need to add a dependency on
 <strong>camel-csv</strong>, which implements this data format.</p>
 </div>
 <div class="paragraph">
-<p>If you use Maven you can just add the following to your pom.xml,
+<p>If you use Maven, you can add the following to your pom.xml,
 substituting the version number for the latest and greatest release (see
 the download page for the latest versions).</p>
 </div>
@@ -2664,6 +2773,9 @@ the download page for the latest versions).</p>
   &lt;version&gt;x.x.x&lt;/version&gt;
 &lt;/dependency&gt;</code></pre>
 </div>
+</div>
+<div class="paragraph">
+<p>Unresolved include directive in modules/dataformats/pages/csv-dataformat.adoc - include::spring-boot:partial$starter.adoc[]</p>
 </div>
 </div>
 </div>

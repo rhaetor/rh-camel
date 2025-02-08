@@ -3,15 +3,15 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>CamelContext Auto Configuration :: Red Hat Apache Build of Apache Camel Manual</title>
-    <meta name="generator" content="Antora 3.0.3">
+    <title>CamelContext Auto Configuration :: Red Hat build of Apache Camel</title>
+    <meta name="generator" content="Antora 3.1.4">
     <link rel="stylesheet" href="../_/css/site.css">
   </head>
   <body class="article">
 <header class="header">
   <nav class="navbar">
     <div class="navbar-brand">
-      <a class="navbar-item" href="../../manual/index.html">Red Hat Apache Build of Apache Camel Manual</a>
+      <a class="navbar-item" href="/">Red Hat build of Apache Camel</a>
       <button class="navbar-burger" data-target="topbar-nav">
         <span></span>
         <span></span>
@@ -26,6 +26,7 @@
     <div class="panels">
 <div class="nav-panel-menu is-active" data-panel="menu">
   <nav class="nav-menu">
+    <button class="nav-menu-toggle" aria-label="Toggle expand/collapse all" style="display: none"></button>
     <h3 class="title"><a href="index.html">User manual</a></h3>
 <ul class="nav-list">
   <li class="nav-item" data-depth="0">
@@ -56,7 +57,16 @@
     <a class="nav-link" href="camel-console.html">Camel Developer Console</a>
   </li>
   <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
     <a class="nav-link" href="camel-jbang.html">Camel JBang</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="camel-jbang-kubernetes.html">Camel Kubernetes plugin</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="camel-jbang-k.html">Camel K plugin</a>
+  </li>
+</ul>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="camel-maven-plugin.html">Camel Maven Plugin</a>
@@ -95,6 +105,9 @@
     <a class="nav-link" href="using-propertyplaceholder.html">How to use Camel property placeholders</a>
   </li>
   <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="variables.html">How to use Variables</a>
+  </li>
+  <li class="nav-item" data-depth="2">
     <button class="nav-item-toggle"></button>
     <a class="nav-link" href="testing.html">Testing</a>
 <ul class="nav-list">
@@ -110,7 +123,13 @@
 </ul>
   </li>
   <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
     <a class="nav-link" href="rest-dsl.html">Working with REST and Rest DSL</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="rest-dsl-openapi.html">Rest DSL contract first</a>
+  </li>
+</ul>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="writing-components.html">Writing Components</a>
@@ -477,9 +496,6 @@
     <a class="nav-link" href="faq/how-should-i-invoke-my-pojos-or-spring-services.html">How should I invoke my POJOs or Spring Services?</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="faq/how-to-avoid-importing-bunch-of-cxf-packages-when-start-up-the-camel-cxf-endpoint-from-osgi-platform-.html">How to avoid importing bunch of cxf packages when start up the camel-cxf endpoint from OSGi platform?</a>
-  </li>
-  <li class="nav-item" data-depth="2">
     <a class="nav-link" href="faq/how-to-avoid-sending-some-or-all-message-headers.html">How to avoid sending some or all message headers?</a>
   </li>
   <li class="nav-item" data-depth="2">
@@ -598,11 +614,11 @@
 <div class="nav-panel-explore" data-panel="explore">
   <div class="context">
     <span class="title">User manual</span>
-    <span class="version">default</span>
+    <span class="version"></span>
   </div>
   <ul class="components">
     <li class="component">
-      <a class="title" href="../components/next/index.html">Camel Components</a>
+      <div class="title"><a href="../components/next/index.html">Camel Components</a></div>
       <ul class="versions">
         <li class="version is-latest">
           <a href="../components/next/index.html">Next (Pre-release)</a>
@@ -610,12 +626,7 @@
       </ul>
     </li>
     <li class="component is-current">
-      <a class="title" href="index.html">User manual</a>
-      <ul class="versions">
-        <li class="version is-current is-latest">
-          <a href="index.html">default</a>
-        </li>
-      </ul>
+      <div class="title"><a href="index.html">User manual</a></div>
     </li>
   </ul>
 </div>
@@ -633,6 +644,7 @@
     <li><a href="camelcontext-autoconfigure.html">CamelContext Auto Configuration</a></li>
   </ul>
 </nav>
+<div class="edit-this-page"><a href="file:///code/jboss/jboss-camel/docs/user-manual/modules/ROOT/pages/camelcontext-autoconfigure.adoc">Edit this Page</a></div>
 </div>
   <div class="content">
 <aside class="toc sidebar" data-title="Contents" data-levels="2">
@@ -649,14 +661,14 @@
 </div>
 </div>
 <div class="sect1">
-<h2 id="_camel_auto_configuration"><a class="anchor" href="#_camel_auto_configuration"></a>Camel Auto Configuration</h2>
+<h2 id="_camel_autoconfiguration"><a class="anchor" href="#_camel_autoconfiguration"></a>Camel Autoconfiguration</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>Under these runtimes then the auto configuration is performed by shared code from the <code>camel-main</code> JAR
+<p>Under these runtimes then the autoconfiguration is performed by shared code from the <code>camel-main</code> JAR
 to ensure the configuration is similar on these runtimes.</p>
 </div>
 <div class="paragraph">
-<p>The auto configuration is executed in several steps:</p>
+<p>The autoconfiguration is executed in several steps:</p>
 </div>
 <div class="olist arabic">
 <ol class="arabic">
@@ -664,14 +676,14 @@ to ensure the configuration is similar on these runtimes.</p>
 <p>Configure <code>CamelContext</code> (and more such as components) from <a href="../components/next/properties-component.html" class="xref page">properties</a> from external sources like <code>application.properties|yaml</code></p>
 </li>
 <li>
-<p>Configure optional services that has been registering in the <a href="registry.html" class="xref page">Registry</a></p>
+<p>Configure optional services that have been registered in the <a href="registry.html" class="xref page">Registry</a></p>
 </li>
 </ol>
 </div>
 <div class="sect2">
-<h3 id="_auto_configuration_of_properties"><a class="anchor" href="#_auto_configuration_of_properties"></a>Auto configuration of Properties</h3>
+<h3 id="_autoconfiguration_of_properties"><a class="anchor" href="#_autoconfiguration_of_properties"></a>Autoconfiguration of Properties</h3>
 <div class="paragraph">
-<p>This is used for configuring the standard set of options (more than 100 options) which is listed in the <em>Camel Main Options</em> table at <a href="../components/next/others/main.html" class="xref page">Camel Main</a>.</p>
+<p>This is used for configuring the standard set of more than 100 options which are listed in the <em>Camel Main Options</em> table at <a href="../components/next/others/main.html" class="xref page">Camel Main</a>.</p>
 </div>
 <div class="admonitionblock note">
 <table>
@@ -680,23 +692,24 @@ to ensure the configuration is similar on these runtimes.</p>
 <i class="fa icon-note" title="Note"></i>
 </td>
 <td class="content">
-When using Camel on Spring Boot then these options are prefixed with <code>camel.springboot</code>, and not <code>camel.main</code>.
+When using Camel on Spring Boot, then these options are prefixed with <code>camel.springboot</code>, and not <code>camel.main</code>.
 </td>
 </tr>
 </table>
 </div>
 </div>
 <div class="sect2">
-<h3 id="_auto_configuration_of_optional_services"><a class="anchor" href="#_auto_configuration_of_optional_services"></a>Auto configuration of Optional Services</h3>
+<h3 id="_autoconfiguration_of_optional_services"><a class="anchor" href="#_autoconfiguration_of_optional_services"></a>Autoconfiguration of Optional Services</h3>
 <div class="paragraph">
 <p>After configuring the standard options, then Camel will look in the <a href="registry.html" class="xref page">Registry</a> for custom
-services to be used. For example to plugin a custom <code>UnitOfWorkFactory</code>.</p>
+services to be used.
+For example, to plug in a custom <code>UnitOfWorkFactory</code>.</p>
 </div>
 <div class="paragraph">
 <p>The services can be anything that can be plugged into Camel (typically services that implement an SPI interface <code>org.apache.camel.spi</code>).</p>
 </div>
 <div class="paragraph">
-<p>The following SPI services, can only a single instance (singleton) be in the <a href="registry.html" class="xref page">Registry</a>.</p>
+<p>The following SPI services can only a single instance (singleton) be in the <a href="registry.html" class="xref page">Registry</a>.</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
 <colgroup>
@@ -720,7 +733,7 @@ services to be used. For example to plugin a custom <code>UnitOfWorkFactory</cod
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>ClassResolver</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">To use a custom class resolver (only needed if you run Camel on a special application server to deal with classloading)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">To use a custom class resolver. This is only necessary if you run Camel on a special application server to deal with classloading.</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>Debugger</code></p></td>
@@ -740,7 +753,7 @@ services to be used. For example to plugin a custom <code>UnitOfWorkFactory</cod
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>FactoryFinderResolver</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">To use a custom factory finder resolver (only needed if you run Camel on a special application server to deal with classloading)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">To use a custom factory finder resolver. This is only necessary if you run Camel on a special application server to deal with classloading.</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>HealthCheckRegistry</code></p></td>
@@ -748,7 +761,7 @@ services to be used. For example to plugin a custom <code>UnitOfWorkFactory</cod
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>InflightRepository</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">To use a custom inflight repository</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">To use a custom in flight repository</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>ManagementObjectNameStrategy</code></p></td>
@@ -813,7 +826,7 @@ services to be used. For example to plugin a custom <code>UnitOfWorkFactory</cod
 </tbody>
 </table>
 <div class="paragraph">
-<p>For the following SPI services, there can be multiple (1..n) implementations in the <a href="registry.html" class="xref page">Registry</a>.</p>
+<p>For the following SPI services, there can be multiple (one or more) implementations in the <a href="registry.html" class="xref page">Registry</a>.</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
 <colgroup>

@@ -3,15 +3,15 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>Health Checks :: Red Hat Apache Build of Apache Camel Manual</title>
-    <meta name="generator" content="Antora 3.0.3">
+    <title>Health Checks :: Red Hat build of Apache Camel</title>
+    <meta name="generator" content="Antora 3.1.4">
     <link rel="stylesheet" href="../_/css/site.css">
   </head>
   <body class="article">
 <header class="header">
   <nav class="navbar">
     <div class="navbar-brand">
-      <a class="navbar-item" href="../../manual/index.html">Red Hat Apache Build of Apache Camel Manual</a>
+      <a class="navbar-item" href="/">Red Hat build of Apache Camel</a>
       <button class="navbar-burger" data-target="topbar-nav">
         <span></span>
         <span></span>
@@ -26,6 +26,7 @@
     <div class="panels">
 <div class="nav-panel-menu is-active" data-panel="menu">
   <nav class="nav-menu">
+    <button class="nav-menu-toggle" aria-label="Toggle expand/collapse all" style="display: none"></button>
     <h3 class="title"><a href="index.html">User manual</a></h3>
 <ul class="nav-list">
   <li class="nav-item" data-depth="0">
@@ -56,7 +57,16 @@
     <a class="nav-link" href="camel-console.html">Camel Developer Console</a>
   </li>
   <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
     <a class="nav-link" href="camel-jbang.html">Camel JBang</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="camel-jbang-kubernetes.html">Camel Kubernetes plugin</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="camel-jbang-k.html">Camel K plugin</a>
+  </li>
+</ul>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="camel-maven-plugin.html">Camel Maven Plugin</a>
@@ -95,6 +105,9 @@
     <a class="nav-link" href="using-propertyplaceholder.html">How to use Camel property placeholders</a>
   </li>
   <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="variables.html">How to use Variables</a>
+  </li>
+  <li class="nav-item" data-depth="2">
     <button class="nav-item-toggle"></button>
     <a class="nav-link" href="testing.html">Testing</a>
 <ul class="nav-list">
@@ -110,7 +123,13 @@
 </ul>
   </li>
   <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
     <a class="nav-link" href="rest-dsl.html">Working with REST and Rest DSL</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="rest-dsl-openapi.html">Rest DSL contract first</a>
+  </li>
+</ul>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="writing-components.html">Writing Components</a>
@@ -477,9 +496,6 @@
     <a class="nav-link" href="faq/how-should-i-invoke-my-pojos-or-spring-services.html">How should I invoke my POJOs or Spring Services?</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="faq/how-to-avoid-importing-bunch-of-cxf-packages-when-start-up-the-camel-cxf-endpoint-from-osgi-platform-.html">How to avoid importing bunch of cxf packages when start up the camel-cxf endpoint from OSGi platform?</a>
-  </li>
-  <li class="nav-item" data-depth="2">
     <a class="nav-link" href="faq/how-to-avoid-sending-some-or-all-message-headers.html">How to avoid sending some or all message headers?</a>
   </li>
   <li class="nav-item" data-depth="2">
@@ -598,11 +614,11 @@
 <div class="nav-panel-explore" data-panel="explore">
   <div class="context">
     <span class="title">User manual</span>
-    <span class="version">default</span>
+    <span class="version"></span>
   </div>
   <ul class="components">
     <li class="component">
-      <a class="title" href="../components/next/index.html">Camel Components</a>
+      <div class="title"><a href="../components/next/index.html">Camel Components</a></div>
       <ul class="versions">
         <li class="version is-latest">
           <a href="../components/next/index.html">Next (Pre-release)</a>
@@ -610,12 +626,7 @@
       </ul>
     </li>
     <li class="component is-current">
-      <a class="title" href="index.html">User manual</a>
-      <ul class="versions">
-        <li class="version is-current is-latest">
-          <a href="index.html">default</a>
-        </li>
-      </ul>
+      <div class="title"><a href="index.html">User manual</a></div>
     </li>
   </ul>
 </div>
@@ -633,6 +644,7 @@
     <li><a href="health-check.html">Health Checks</a></li>
   </ul>
 </nav>
+<div class="edit-this-page"><a href="file:///code/jboss/jboss-camel/docs/user-manual/modules/ROOT/pages/health-check.adoc">Edit this Page</a></div>
 </div>
   <div class="content">
 <aside class="toc sidebar" data-title="Contents" data-levels="2">
@@ -785,6 +797,13 @@ camel.health.registryEnabled=false</code></pre>
 <div class="listingblock">
 <div class="content">
 <pre class="highlightjs highlight"><code class="language-properties hljs" data-lang="properties">camel.health.exclude-pattern = myroute,foo,bar*</code></pre>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_routes_that_are_not_automatically_started"><a class="anchor" href="#_routes_that_are_not_automatically_started"></a>Routes that are not automatically started</h4>
+<div class="paragraph">
+<p>If a route is configured to not to automatically start (<code>autoStartup=false</code>),
+then the route and its corresponding consumer health checks is always up as it is externally managed.</p>
 </div>
 </div>
 </div>
@@ -963,10 +982,10 @@ the <em>name</em>-check syntax.</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">import org.apache.camel.spi.annotations.HealthCheck;
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java"><span class="fold-block is-hidden-folded">import org.apache.camel.spi.annotations.HealthCheck;
 import org.apache.camel.impl.health.AbstractHealthCheck;
 
-@HealthCheck("my-check")
+</span><span class="fold-block">@HealthCheck("my-check")
 public final class MyHealthCheck extends AbstractHealthCheck {
 
     public MyHealthCheck() {
@@ -987,7 +1006,7 @@ public final class MyHealthCheck extends AbstractHealthCheck {
             builder.up();
         }
     }
-}</code></pre>
+}</span></code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -1025,7 +1044,7 @@ to discover the custom health checks.</p>
 </div>
 </div>
 <div class="paragraph">
-<p>And if you use the classic Spring XML or Blueprint XML, you can enable this on <code>&lt;camelContext&gt;</code> as shown:</p>
+<p>And if you use the classic Spring XML, you can enable this on <code>&lt;camelContext&gt;</code> as shown:</p>
 </div>
 <div class="listingblock">
 <div class="content">
@@ -1096,7 +1115,7 @@ Camel will then use these custom component health checks when it performs <stron
 <div class="ulist">
 <ul>
 <li>
-<p>Camel Standalone: <a href="https://github.com/apache/camel-examples/tree/main/examples/main-health">main-health</a></p>
+<p>Camel Standalone: <a href="https://github.com/apache/camel-examples/tree/main/main-health">main-health</a></p>
 </li>
 <li>
 <p>Camel Spring Boot: <a href="https://github.com/apache/camel-spring-boot-examples/tree/main/health-checks">health-checks</a></p>

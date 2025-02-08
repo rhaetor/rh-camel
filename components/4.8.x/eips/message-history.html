@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>Message History :: Red Hat Camel Reference</title>
+    <title>Message History :: Red Hat build of Apache Camel</title>
     <meta name="generator" content="Antora 3.1.4">
     <link rel="stylesheet" href="../../../_/css/site.css">
   </head>
@@ -11,7 +11,7 @@
 <header class="header">
   <nav class="navbar">
     <div class="navbar-brand">
-      <a class="navbar-item" href="../../manual/index.html">Red Hat Apache Build of Apache Camel Manual</a>
+      <a class="navbar-item" href="/">Red Hat build of Apache Camel</a>
       <button class="navbar-burger" data-target="topbar-nav">
         <span></span>
         <span></span>
@@ -26,6 +26,7 @@
     <div class="panels">
 <div class="nav-panel-menu is-active" data-panel="menu">
   <nav class="nav-menu">
+    <button class="nav-menu-toggle" aria-label="Toggle expand/collapse all" style="display: none"></button>
     <h3 class="title"><a href="../index.html">Camel Components</a></h3>
 <ul class="nav-list">
   <li class="nav-item" data-depth="0">
@@ -35,7 +36,46 @@
     <a class="nav-link" href="../index.html">Components</a>
 <ul class="nav-list">
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="../activemq-component.html">ActiveMQ</a>
+    <a class="nav-link" href="../activemq-component.html">ActiveMQ 5.x</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../activemq6-component.html">ActiveMQ 6.x</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../ai-summary.html">AI</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../chatscript-component.html">ChatScript</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../djl-component.html">Deep Java Library</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../langchain4j-chat-component.html">LangChain4j Chat</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../langchain4j-embeddings-component.html">LangChain4j Embeddings</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../langchain4j-tokenizer-component.html">LangChain4j Tokenizer</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../langchain4j-tools-component.html">LangChain4j Tools</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../langchain4j-web-search-component.html">LangChain4j Web Search</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../milvus-component.html">Milvus</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../pinecone-component.html">Pinecone</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../qdrant-component.html">Qdrant</a>
+  </li>
+</ul>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="../amqp-component.html">AMQP</a>
@@ -64,6 +104,15 @@
 <ul class="nav-list">
   <li class="nav-item" data-depth="3">
     <a class="nav-link" href="../aws2-athena-component.html">AWS Athena</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../aws-bedrock-component.html">AWS Bedrock</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../aws-bedrock-agent-component.html">AWS Bedrock Agent</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../aws-bedrock-agent-runtime-component.html">AWS Bedrock Agent Runtime</a>
   </li>
   <li class="nav-item" data-depth="3">
     <a class="nav-link" href="../aws-cloudtrail-component.html">AWS Cloudtrail</a>
@@ -168,7 +217,7 @@
     <a class="nav-link" href="../azure-storage-blob-component.html">Azure Storage Blob Service</a>
   </li>
   <li class="nav-item" data-depth="3">
-    <a class="nav-link" href="../azure-storage-datalake-component.html">Azure Storage Datalake Service</a>
+    <a class="nav-link" href="../azure-storage-datalake-component.html">Azure Storage Data Lake Service</a>
   </li>
   <li class="nav-item" data-depth="3">
     <a class="nav-link" href="../azure-storage-queue-component.html">Azure Storage Queue Service</a>
@@ -201,9 +250,6 @@
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="../cql-component.html">Cassandra CQL</a>
-  </li>
-  <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="../chatscript-component.html">ChatScript</a>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="../chunk-component.html">Chunk</a>
@@ -276,9 +322,6 @@
     <a class="nav-link" href="../debezium-sqlserver-component.html">Debezium SQL Server Connector</a>
   </li>
 </ul>
-  </li>
-  <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="../djl-component.html">Deep Java Library</a>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="../dhis2-component.html">DHIS2</a>
@@ -394,6 +437,9 @@
   </li>
   <li class="nav-item" data-depth="3">
     <a class="nav-link" href="../google-pubsub-component.html">Google Pubsub</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../google-pubsub-lite-component.html">Google PubSub Lite</a>
   </li>
   <li class="nav-item" data-depth="3">
     <a class="nav-link" href="../google-secret-manager-component.html">Google Secret Manager</a>
@@ -686,7 +732,7 @@
     <a class="nav-link" href="../ldif-component.html">LDIF</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="../log-component.html">Log</a>
+    <a class="nav-link" href="../log-component.html">Log Data</a>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="../lucene-component.html">Lucene</a>
@@ -899,10 +945,16 @@
     <a class="nav-link" href="../smb-component.html">SMB</a>
   </li>
   <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../smooks-component.html">Smooks</a>
+  </li>
+  <li class="nav-item" data-depth="2">
     <a class="nav-link" href="../smpp-component.html">SMPP</a>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="../snmp-component.html">SNMP</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../solr-component.html">Solr</a>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="../splunk-component.html">Splunk</a>
@@ -965,6 +1017,18 @@
     <a class="nav-link" href="../stub-component.html">Stub</a>
   </li>
   <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../tahu-summary.html">Tahu</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../tahu-edge-component.html">Tahu Edge Node / Device</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../tahu-host-component.html">Tahu Host Application</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
     <a class="nav-link" href="../telegram-component.html">Telegram</a>
   </li>
   <li class="nav-item" data-depth="2">
@@ -1025,7 +1089,7 @@
     <a class="nav-link" href="../whatsapp-component.html">WhatsApp</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="../wordpress-component.html">Wordpress</a>
+    <a class="nav-link" href="../wordpress-component.html">WordPress</a>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="../workday-component.html">Workday</a>
@@ -1418,7 +1482,13 @@
     <a class="nav-link" href="../others/openapi-java.html">Openapi Java</a>
   </li>
   <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../others/openapi-validator.html">Openapi Validator</a>
+  </li>
+  <li class="nav-item" data-depth="2">
     <a class="nav-link" href="../others/opentelemetry.html">OpenTelemetry</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../others/platform-http-jolokia.html">Platform HTTP Jolokia</a>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="../others/platform-http-main.html">Platform Http Main</a>
@@ -1566,7 +1636,7 @@
     <a class="nav-link" href="event-message.html">Event Message</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="failover-eip.html">Failover</a>
+    <a class="nav-link" href="failoverLoadBalancer-eip.html">Failover Load Balancer</a>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="faultToleranceConfiguration-eip.html">Fault Tolerance Configuration</a>
@@ -1596,13 +1666,13 @@
     <a class="nav-link" href="loadBalance-eip.html">Load Balance</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="log-eip.html">Log</a>
+    <a class="nav-link" href="log-eip.html">Logger</a>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="loop-eip.html">Loop</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="marshal-eip.html">Marshal EIP</a>
+    <a class="nav-link" href="marshal-eip.html">Marshal</a>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="message.html">Message</a>
@@ -1659,6 +1729,9 @@
     <a class="nav-link" href="point-to-point-channel.html">Point to Point Channel</a>
   </li>
   <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="poll-eip.html">Poll</a>
+  </li>
+  <li class="nav-item" data-depth="2">
     <a class="nav-link" href="pollEnrich-eip.html">Poll Enrich</a>
   </li>
   <li class="nav-item" data-depth="2">
@@ -1674,7 +1747,7 @@
     <a class="nav-link" href="publish-subscribe-channel.html">Publish Subscribe Channel</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="random-eip.html">Random</a>
+    <a class="nav-link" href="randomLoadBalancer-eip.html">Random Load Balancer</a>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="recipientList-eip.html">Recipient List</a>
@@ -1716,7 +1789,7 @@
     <a class="nav-link" href="rollback-eip.html">Rollback</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="roundRobin-eip.html">Round Robin</a>
+    <a class="nav-link" href="roundRobinLoadBalancer-eip.html">Round Robin Load Balancer</a>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="routingSlip-eip.html">Routing Slip</a>
@@ -1728,7 +1801,7 @@
     <a class="nav-link" href="sample-eip.html">Sample</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="scatter-gather.html">Scatter Gather</a>
+    <a class="nav-link" href="scatter-gather.html">Scatter-Gather</a>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="script-eip.html">Script</a>
@@ -1758,6 +1831,9 @@
     <a class="nav-link" href="setVariable-eip.html">Set Variable</a>
   </li>
   <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="setVariables-eip.html">Set Variables</a>
+  </li>
+  <li class="nav-item" data-depth="2">
     <a class="nav-link" href="sort-eip.html">Sort</a>
   </li>
   <li class="nav-item" data-depth="2">
@@ -1767,7 +1843,7 @@
     <a class="nav-link" href="step-eip.html">Step</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="sticky-eip.html">Sticky</a>
+    <a class="nav-link" href="stickyLoadBalancer-eip.html">Sticky Load Balancer</a>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="stop-eip.html">Stop</a>
@@ -1788,7 +1864,7 @@
     <a class="nav-link" href="toD-eip.html">To D</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="topic-eip.html">Topic</a>
+    <a class="nav-link" href="topicLoadBalancer-eip.html">Topic Load Balancer</a>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="transactional-client.html">Transactional Client</a>
@@ -1797,13 +1873,13 @@
     <a class="nav-link" href="transform-eip.html">Transform</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="unmarshal-eip.html">Unmarshal EIP</a>
+    <a class="nav-link" href="unmarshal-eip.html">Unmarshal</a>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="validate-eip.html">Validate</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="weighted-eip.html">Weighted</a>
+    <a class="nav-link" href="weightedLoadBalancer-eip.html">Weighted Load Balancer</a>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="wireTap-eip.html">Wire Tap</a>
@@ -1822,7 +1898,7 @@
   </div>
   <ul class="components">
     <li class="component is-current">
-      <a class="title" href="../index.html">Camel Components</a>
+      <div class="title"><a href="../index.html">Camel Components</a></div>
       <ul class="versions">
         <li class="version is-current is-latest">
           <a href="../index.html">Next (Pre-release)</a>
@@ -1830,12 +1906,7 @@
       </ul>
     </li>
     <li class="component">
-      <a class="title" href="../../../manual/index.html">User manual</a>
-      <ul class="versions">
-        <li class="version is-latest">
-          <a href="../../../manual/index.html">default</a>
-        </li>
-      </ul>
+      <div class="title"><a href="../../../manual/index.html">User manual</a></div>
     </li>
   </ul>
 </div>
@@ -1853,6 +1924,7 @@
     <li><a href="message-history.html">Message History</a></li>
   </ul>
 </nav>
+<div class="edit-this-page"><a href="file:///code/jboss/jboss-camel/core/camel-core-engine/src/main/docs/modules/eips/pages/message-history.adoc">Edit this Page</a></div>
 </div>
   <div class="content">
 <aside class="toc sidebar" data-title="Contents" data-levels="2">
@@ -1876,7 +1948,8 @@ from the <a href="enterprise-integration-patterns.html" class="xref page">EIP pa
 </div>
 </div>
 <div class="paragraph">
-<p>Attaching a Message History to the message will provide a list of all applications that the message passed through since its origination.</p>
+<p>Attaching a Message History to the message will provide a list of all applications
+that the message has passed through since its origination.</p>
 </div>
 </div>
 </div>
@@ -1894,14 +1967,26 @@ in a <code>java.util.concurrent.CopyOnWriteArrayList</code> due to the need of b
 <p>The Message History can be enabled or disabled per CamelContext or per route (disabled by default).
 For example, you can turn it on with:</p>
 </div>
+<div id="_tabs_1" class="openblock tabs is-loading">
+<div class="content">
+<div class="ulist tablist">
+<ul>
+<li id="_tabs_1_java" class="tab">
+<p>Java</p>
+</li>
+<li id="_tabs_1_xml" class="tab">
+<p>XML</p>
+</li>
+</ul>
+</div>
+<div id="_tabs_1_java--panel" class="tabpanel" aria-labelledby="_tabs_1_java">
 <div class="listingblock">
 <div class="content">
 <pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">camelContext.setMessageHistory(true);</code></pre>
 </div>
 </div>
-<div class="paragraph">
-<p>Or in XML</p>
 </div>
+<div id="_tabs_1_xml--panel" class="tabpanel" aria-labelledby="_tabs_1_xml">
 <div class="listingblock">
 <div class="content">
 <pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;camelContext messageHistory="true"&gt;
@@ -1909,29 +1994,48 @@ For example, you can turn it on with:</p>
 &lt;/camelContext&gt;</code></pre>
 </div>
 </div>
+</div>
+</div>
+</div>
 <div class="paragraph">
 <p>Or when using Spring Boot or Quarkus, you can enable this in the configuration file:</p>
 </div>
+<div id="_tabs_2" class="openblock tabs is-loading">
+<div class="content">
+<div class="ulist tablist">
+<ul>
+<li id="_tabs_2_quarkus" class="tab">
+<p>Quarkus</p>
+</li>
+<li id="_tabs_2_spring_boot" class="tab">
+<p>Spring Boot</p>
+</li>
+</ul>
+</div>
+<div id="_tabs_2_quarkus--panel" class="tabpanel" aria-labelledby="_tabs_2_quarkus">
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-properties hljs" data-lang="properties">camel.quarkus.message-history = true</code></pre>
+</div>
+</div>
+</div>
+<div id="_tabs_2_spring_boot--panel" class="tabpanel" aria-labelledby="_tabs_2_spring_boot">
 <div class="listingblock">
 <div class="content">
 <pre class="highlightjs highlight"><code class="language-properties hljs" data-lang="properties">camel.springboot.message-history = true</code></pre>
 </div>
 </div>
-<div class="paragraph">
-<p>And in Quarkus:</p>
 </div>
-<div class="listingblock">
-<div class="content">
-<pre class="highlightjs highlight"><code class="language-properties hljs" data-lang="properties">camel.quarkus.message-history = true</code></pre>
 </div>
 </div>
 <div class="sect2">
 <h3 id="_route_level_message_history"><a class="anchor" href="#_route_level_message_history"></a>Route level Message History</h3>
 <div class="paragraph">
 <p>You can also enable or disable message history per route.
-When doing this then Camel can only gather message history in the routes where this is enabled,
-which means you may not have full coverage. You may still want to do this, for example to capture
-the history in a critical route to help pin-point where the route is slow.</p>
+When doing this, then Camel can only gather message history in the routes where this is enabled,
+which means you may not have full coverage.
+You may still want to do this, for example, to capture
+the history in a critical route to help pinpoint where the route is slow.</p>
 </div>
 <div class="paragraph">
 <p>A route level configuration overrides the global configuration.</p>
@@ -1951,6 +2055,19 @@ the history in a critical route to help pin-point where the route is slow.</p>
 <div class="paragraph">
 <p>You can also turn off message history per route:</p>
 </div>
+<div id="_tabs_3" class="openblock tabs is-loading">
+<div class="content">
+<div class="ulist tablist">
+<ul>
+<li id="_tabs_3_java" class="tab">
+<p>Java</p>
+</li>
+<li id="_tabs_3_xml" class="tab">
+<p>XML</p>
+</li>
+</ul>
+</div>
+<div id="_tabs_3_java--panel" class="tabpanel" aria-labelledby="_tabs_3_java">
 <div class="listingblock">
 <div class="content">
 <pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">from("jms:cheese")
@@ -1960,9 +2077,8 @@ the history in a critical route to help pin-point where the route is slow.</p>
   .to("jms:wine");</code></pre>
 </div>
 </div>
-<div class="paragraph">
-<p>And in XML:</p>
 </div>
+<div id="_tabs_3_xml--panel" class="tabpanel" aria-labelledby="_tabs_3_xml">
 <div class="listingblock">
 <div class="content">
 <pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;route messageHistory="true"&gt;
@@ -1971,6 +2087,9 @@ the history in a critical route to help pin-point where the route is slow.</p>
   &lt;to uri="bean:transform"/&gt;
   &lt;to uri="jms:wine"/&gt;
 &lt;/route&gt;</code></pre>
+</div>
+</div>
+</div>
 </div>
 </div>
 </div>
@@ -1983,14 +2102,26 @@ When enabled, then the message history will output this information in the route
 <div class="paragraph">
 <p>To enable source location:</p>
 </div>
+<div id="_tabs_4" class="openblock tabs is-loading">
+<div class="content">
+<div class="ulist tablist">
+<ul>
+<li id="_tabs_4_java" class="tab">
+<p>Java</p>
+</li>
+<li id="_tabs_4_xml" class="tab">
+<p>XML</p>
+</li>
+</ul>
+</div>
+<div id="_tabs_4_java--panel" class="tabpanel" aria-labelledby="_tabs_4_java">
 <div class="listingblock">
 <div class="content">
 <pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">camelContext.setSourceLocationEnabled(true);</code></pre>
 </div>
 </div>
-<div class="paragraph">
-<p>Or in XML</p>
 </div>
+<div id="_tabs_4_xml--panel" class="tabpanel" aria-labelledby="_tabs_4_xml">
 <div class="listingblock">
 <div class="content">
 <pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;camelContext sourceLocationEnabled="true"&gt;
@@ -1998,20 +2129,38 @@ When enabled, then the message history will output this information in the route
 &lt;/camelContext&gt;</code></pre>
 </div>
 </div>
+</div>
+</div>
+</div>
 <div class="paragraph">
 <p>Or when using Spring Boot or Quarkus, you can enable this in the configuration file:</p>
 </div>
+<div id="_tabs_5" class="openblock tabs is-loading">
+<div class="content">
+<div class="ulist tablist">
+<ul>
+<li id="_tabs_5_quarkus" class="tab">
+<p>Quarkus</p>
+</li>
+<li id="_tabs_5_spring_boot" class="tab">
+<p>Spring Boot</p>
+</li>
+</ul>
+</div>
+<div id="_tabs_5_quarkus--panel" class="tabpanel" aria-labelledby="_tabs_5_quarkus">
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-properties hljs" data-lang="properties">camel.quarkus.source-location-enabled = true</code></pre>
+</div>
+</div>
+</div>
+<div id="_tabs_5_spring_boot--panel" class="tabpanel" aria-labelledby="_tabs_5_spring_boot">
 <div class="listingblock">
 <div class="content">
 <pre class="highlightjs highlight"><code class="language-properties hljs" data-lang="properties">camel.springboot.source-location-enabled = true</code></pre>
 </div>
 </div>
-<div class="paragraph">
-<p>And in Quarkus:</p>
 </div>
-<div class="listingblock">
-<div class="content">
-<pre class="highlightjs highlight"><code class="language-properties hljs" data-lang="properties">camel.quarkus.source-location-enabled = true</code></pre>
 </div>
 </div>
 </div>
@@ -2051,11 +2200,11 @@ java.lang.IllegalArgumentException: The number is too low
 </div>
 </div>
 <div class="paragraph">
-<p>When Message History is enabled then the full history is logged as shown above. Here we can see the full path
+<p>When Message History is enabled, then the full history is logged as shown above. Here we can see the full path
 the message has been routed.</p>
 </div>
 <div class="paragraph">
-<p>When Message History is disabled (by default) then the error handler logs a brief history with the last node
+<p>When Message History is disabled, as it is by default, then the error handler logs a brief history with the last node
 where the exception occurred as shown below:</p>
 </div>
 <div class="listingblock">
@@ -2083,7 +2232,7 @@ java.lang.IllegalArgumentException: The number is too low
 where the exception occurred (throwException1).</p>
 </div>
 <div class="paragraph">
-<p>Notice that the source column is empty, because source location is not enabled.
+<p>Notice that the source column is empty because the source location is not enabled.
 When enabled then, you can see exactly which source file and line number the message routed:</p>
 </div>
 <div class="listingblock">
@@ -2094,7 +2243,7 @@ Message History
 ---------------------------------------------------------------------------------------------------------------------------------------
 Source                                   ID                             Processor                                          Elapsed (ms)
 MyJavaRouteBuilder:29                    route1/route1                  from[timer://java?period=2s]                                 10
-MyJavaRouteBuilder:32                    route1/setBody1                setBody[bean[MyJavaRouteBuilder method:randomNumbe            1
+MyJavaRouteBuilder:32                    route1/setBody1                setBody[bean[MyJavaRouteBuilder method:randomNumber           1
 MyJavaRouteBuilder:33                    route1/log1                    log                                                           1
 MyJavaRouteBuilder:34                    route1/filter1                 filter[simple{${body} &lt; 30}]                                  0
 MyJavaRouteBuilder:35                    route1/throwException1         throwException[java.lang.IllegalArgumentException]            0
@@ -2127,11 +2276,26 @@ from the <a href="../../../manual/error-handler.html" class="xref page">Error Ha
 message body/header details (to avoid logging sensitive message body details).
 You can enable this with <code>logExhaustedMessageBody</code> on the error handler as shown:</p>
 </div>
+<div id="_tabs_6" class="openblock tabs is-loading">
+<div class="content">
+<div class="ulist tablist">
+<ul>
+<li id="_tabs_6_java" class="tab">
+<p>Java</p>
+</li>
+<li id="_tabs_6_xml" class="tab">
+<p>XML</p>
+</li>
+</ul>
+</div>
+<div id="_tabs_6_java--panel" class="tabpanel" aria-labelledby="_tabs_6_java">
 <div class="listingblock">
 <div class="content">
 <pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">errorHandler(defaultErrorHandler().logExhaustedMessageBody(true));</code></pre>
 </div>
 </div>
+</div>
+<div id="_tabs_6_xml--panel" class="tabpanel" aria-labelledby="_tabs_6_xml">
 <div class="paragraph">
 <p>In XML configuring this is a bit different, as you configure this in the <code>redeliveryPolicy</code>
 of the <code>&lt;errorHandler&gt;</code> as shown:</p>
@@ -2151,6 +2315,9 @@ of the <code>&lt;errorHandler&gt;</code> as shown:</p>
       &lt;to uri="jms:wine"/&gt;
     &lt;/route&gt;
 &lt;/camelContext&gt;</code></pre>
+</div>
+</div>
+</div>
 </div>
 </div>
 </div>

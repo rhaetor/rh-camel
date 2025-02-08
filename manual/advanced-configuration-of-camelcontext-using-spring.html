@@ -1,17 +1,17 @@
-  <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>Camel Spring XML Auto Configuration :: Red Hat Apache Build of Apache Camel Manual</title>
-    <meta name="generator" content="Antora 3.0.3">
+    <title>Camel Spring XML Auto Configuration :: Red Hat build of Apache Camel</title>
+    <meta name="generator" content="Antora 3.1.4">
     <link rel="stylesheet" href="../_/css/site.css">
   </head>
   <body class="article">
 <header class="header">
   <nav class="navbar">
     <div class="navbar-brand">
-      <a class="navbar-item" href="../../manual/index.html">Red Hat Apache Build of Apache Camel Manual</a>
+      <a class="navbar-item" href="/">Red Hat build of Apache Camel</a>
       <button class="navbar-burger" data-target="topbar-nav">
         <span></span>
         <span></span>
@@ -26,6 +26,7 @@
     <div class="panels">
 <div class="nav-panel-menu is-active" data-panel="menu">
   <nav class="nav-menu">
+    <button class="nav-menu-toggle" aria-label="Toggle expand/collapse all" style="display: none"></button>
     <h3 class="title"><a href="index.html">User manual</a></h3>
 <ul class="nav-list">
   <li class="nav-item" data-depth="0">
@@ -56,7 +57,16 @@
     <a class="nav-link" href="camel-console.html">Camel Developer Console</a>
   </li>
   <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
     <a class="nav-link" href="camel-jbang.html">Camel JBang</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="camel-jbang-kubernetes.html">Camel Kubernetes plugin</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="camel-jbang-k.html">Camel K plugin</a>
+  </li>
+</ul>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="camel-maven-plugin.html">Camel Maven Plugin</a>
@@ -95,6 +105,9 @@
     <a class="nav-link" href="using-propertyplaceholder.html">How to use Camel property placeholders</a>
   </li>
   <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="variables.html">How to use Variables</a>
+  </li>
+  <li class="nav-item" data-depth="2">
     <button class="nav-item-toggle"></button>
     <a class="nav-link" href="testing.html">Testing</a>
 <ul class="nav-list">
@@ -110,7 +123,13 @@
 </ul>
   </li>
   <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
     <a class="nav-link" href="rest-dsl.html">Working with REST and Rest DSL</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="rest-dsl-openapi.html">Rest DSL contract first</a>
+  </li>
+</ul>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="writing-components.html">Writing Components</a>
@@ -477,9 +496,6 @@
     <a class="nav-link" href="faq/how-should-i-invoke-my-pojos-or-spring-services.html">How should I invoke my POJOs or Spring Services?</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="faq/how-to-avoid-importing-bunch-of-cxf-packages-when-start-up-the-camel-cxf-endpoint-from-osgi-platform-.html">How to avoid importing bunch of cxf packages when start up the camel-cxf endpoint from OSGi platform?</a>
-  </li>
-  <li class="nav-item" data-depth="2">
     <a class="nav-link" href="faq/how-to-avoid-sending-some-or-all-message-headers.html">How to avoid sending some or all message headers?</a>
   </li>
   <li class="nav-item" data-depth="2">
@@ -598,11 +614,11 @@
 <div class="nav-panel-explore" data-panel="explore">
   <div class="context">
     <span class="title">User manual</span>
-    <span class="version">default</span>
+    <span class="version"></span>
   </div>
   <ul class="components">
     <li class="component">
-      <a class="title" href="../components/next/index.html">Camel Components</a>
+      <div class="title"><a href="../components/next/index.html">Camel Components</a></div>
       <ul class="versions">
         <li class="version is-latest">
           <a href="../components/next/index.html">Next (Pre-release)</a>
@@ -610,12 +626,7 @@
       </ul>
     </li>
     <li class="component is-current">
-      <a class="title" href="index.html">User manual</a>
-      <ul class="versions">
-        <li class="version is-current is-latest">
-          <a href="index.html">default</a>
-        </li>
-      </ul>
+      <div class="title"><a href="index.html">User manual</a></div>
     </li>
   </ul>
 </div>
@@ -632,6 +643,7 @@
     <li><a href="advanced-configuration-of-camelcontext-using-spring.html">Camel Spring XML Auto Configuration</a></li>
   </ul>
 </nav>
+<div class="edit-this-page"><a href="file:///code/jboss/jboss-camel/docs/user-manual/modules/ROOT/pages/advanced-configuration-of-camelcontext-using-spring.adoc">Edit this Page</a></div>
 </div>
   <div class="content">
 <aside class="toc sidebar" data-title="Contents" data-levels="2">
@@ -646,7 +658,7 @@
 </div>
 <div class="paragraph">
 <p>A spring XML file is the XML files that uses <code>&lt;beans&gt;</code> as root tag and have an embedded <code>&lt;camelContext&gt;</code>.
-This is the classic way of using XML DSL with Apache Camel, that was implemented before Spring Boot.</p>
+This is the classic way of using XML DSL with Apache Camel. That was implemented before Spring Boot.</p>
 </div>
 <div class="paragraph">
 <p>If you use Camel on Spring Boot, then look at <a href="camelcontext-autoconfigure.html" class="xref page">Camel Context Auto Configuration</a> instead.</p>
@@ -654,15 +666,15 @@ This is the classic way of using XML DSL with Apache Camel, that was implemented
 </div>
 </div>
 <div class="sect1">
-<h2 id="_auto_configuration_of_optional_services"><a class="anchor" href="#_auto_configuration_of_optional_services"></a>Auto configuration of Optional Services</h2>
+<h2 id="_autoconfiguration_of_optional_services"><a class="anchor" href="#_autoconfiguration_of_optional_services"></a>Autoconfiguration of Optional Services</h2>
 <div class="sectionbody">
 <div class="paragraph">
 <p>Camel will configure these functions by doing a lookup in the Spring
 bean registry to find beans of the given type.</p>
 </div>
 <div class="paragraph">
-<p>The following list all requires at most 1 beans defined. If there are
-more than 1 bean of this type, then Camel will <strong>not</strong> use it.</p>
+<p>The following list all requires at most one bean defined. If there is
+more than one bean of this type, then Camel will <strong>not</strong> use it.</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
 <colgroup>
@@ -679,154 +691,154 @@ more than 1 bean of this type, then Camel will <strong>not</strong> use it.</p>
 </thead>
 <tbody>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">AsyncProcessorAwaitManager</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>AsyncProcessorAwaitManager</code></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">0..1</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">To use a 3rd part async process await manager.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">To use a third-party async process await manager.</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">BacklogTracer</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>BacklogTracer</code></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">0..1</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">To use a 3rd party <a href="backlog-tracer.html" class="xref page">BacklogTracer</a>.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">To use a third-party <a href="backlog-tracer.html" class="xref page">BacklogTracer</a>.</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">ClassResolver</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>ClassResolver</code></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">0..1</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">To use a 3rd party class resolver. More details at <a href="pluggable-class-resolvers.html" class="xref page">Pluggable Class Resolvers</a>.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">To use a third-party class resolver. More details at <a href="pluggable-class-resolvers.html" class="xref page">Pluggable Class Resolvers</a>.</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Debugger</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>Debugger</code></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">0..1</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">To use a <a href="debugger.html" class="xref page">Debugger</a> usually for tooling.</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Delayer</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>Delayer</code></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">0..1</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">To use a 3rd part <a href="../components/next/eips/delay-eip.html" class="xref page">Delayer</a>.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">To use a third-party <a href="../components/next/eips/delay-eip.html" class="xref page">Delayer</a>.</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">EventFactory</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>EventFactory</code></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">0..1</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">To use a 3rd part event factory.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">To use a third-party event factory.</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">ExecutorServiceManager</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>ExecutorServiceManager</code></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">0..1</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">To use a 3rd part executor service manager. More details at <a href="threading-model.html" class="xref page">Threading Model</a>.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">To use a third-party executor service manager. More details at <a href="threading-model.html" class="xref page">Threading Model</a>.</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">ExecutorServiceStrategy</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>ExecutorServiceStrategy</code></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">0..1</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">To use a 3rd part executor service strategy. More details at <a href="threading-model.html" class="xref page">Threading Model</a>.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">To use a third-party executor service strategy. More details at <a href="threading-model.html" class="xref page">Threading Model</a>.</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">FactoryFinderResolver</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>FactoryFinderResolver</code></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">0..1</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">To use a 3rd party factory finder.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">To use a third-party factory finder.</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">HeadersMapFactory</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>HeadersMapFactory</code></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">0..1</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">To use a 3rd party HeadersMapFactory implementation.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">To use a third-party HeadersMapFactory implementation.</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">HealthCheckRegistry</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>HealthCheckRegistry</code></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">0..1</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">To use a 3rd party <a href="health-check.html" class="xref page">HealthCheckRegistry</a> implementation.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">To use a third-party <a href="health-check.html" class="xref page">HealthCheckRegistry</a> implementation.</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">InflightRepository</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>InflightRepository</code></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">0..1</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">To use a 3rd part inflight repository.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">To use a third-party in flight repository.</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Logger</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>Logger</code></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">0..1</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">To use provided org.slf4j.Logger for <a href="../components/next/log-component.html" class="xref page">Log</a> component and <a href="../components/next/eips/log-eip.html" class="xref page">log() EIP</a>.</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">ManagementObjectNameStrategy</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>ManagementObjectNameStrategy</code></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">0..1</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">To use a 3rd part strategy for naming MBeans for <a href="jmx.html" class="xref page">management</a>.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">To use a third-party strategy for naming <code>MBeans</code> for <a href="jmx.html" class="xref page">management</a>.</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">ManagementStrategy</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>ManagementStrategy</code></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">0..1</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">To use a 3rd part strategy for <a href="jmx.html" class="xref page">management</a>, for example JMX management.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">To use a third-party strategy for <a href="jmx.html" class="xref page">management</a>, for example, JMX management.</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">MessageHistoryFactory</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>MessageHistoryFactory</code></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">0..1</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">To use a 3rd party MessageHistoryFactory implementation.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">To use a third-party MessageHistoryFactory implementation.</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">ModelJAXBContextFactory</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>ModelJAXBContextFactory</code></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">0..1</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">To use a 3rd party model JAXB ContextFactory</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">To use a third-party model JAXB ContextFactory</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">NodeIdFactory</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>NodeIdFactory</code></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">0..1</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">To use a 3rd part node id factory.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">To use a third-party node id factory.</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">PackageScanClassResolver</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>PackageScanClassResolver</code></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">0..1</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">To use a 3rd party package scan resolver. More details at <a href="pluggable-class-resolvers.html" class="xref page">Pluggable Class Resolvers</a>.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">To use a third-party package scan resolver. More details at <a href="pluggable-class-resolvers.html" class="xref page">Pluggable Class Resolvers</a>.</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">ProcessorFactory</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>ProcessorFactory</code></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">0..1</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">To use a 3rd part processor factory.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">To use a third-party processor factory.</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Registry</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>Registry</code></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">0..1</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">To use a 3rd party bean registry. By default Camel will use Spring ApplicationContext (when using Spring) as registry.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">To use a third-party bean registry. By default, Camel will use Spring ApplicationContext (when using Spring) as registry.</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">RuntimeEndpointRegistry</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>RuntimeEndpointRegistry</code></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">0..1</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">To use a 3rd party RuntimeEndpointRegistry implementation.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">To use a third-party <code>RuntimeEndpointRegistry</code> implementation.</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">RuntimeEndpointRegistry</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>RuntimeEndpointRegistry</code></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">0..1</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">To use a 3rd party RuntimeEndpointRegistry implementation.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">To use a third-party <code>RuntimeEndpointRegistry</code> implementation.</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">ShutdownStrategy</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>ShutdownStrategy</code></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">0..1</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">To use a 3rd part shutdown strategy.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">To use a third-party shutdown strategy.</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">StreamCachingStrategy</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>StreamCachingStrategy</code></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">0..1</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">To use a 3rd part <a href="stream-caching.html" class="xref page">Stream caching</a> strategy.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">To use a third-party <a href="stream-caching.html" class="xref page">Stream caching</a> strategy.</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">ThreadPoolFactory</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>ThreadPoolFactory</code></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">0..1</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">To use a 3rd part thread pool factory. More details at <a href="threading-model.html" class="xref page">Threading Model</a>.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">To use a third-party thread pool factory. More details at <a href="threading-model.html" class="xref page">Threading Model</a>.</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">TraceFormatter</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>TraceFormatter</code></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">0..1</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">To use a bean that has the tracing options configured.</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Tracer</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>Tracer`</code></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">0..1</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">To use a 3rd party <a href="tracer.html" class="xref page">Tracer</a>.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">To use a third-party <a href="tracer.html" class="xref page">Tracer</a>.</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">UnitOfWorkFactory</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>UnitOfWorkFactory`</code></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">0..1</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">To use 3rd part <code>UnitOfWork</code> implementations created by the factory.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">To use third-party <code>UnitOfWork</code> implementations created by the factory.</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">UuidGenerator</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>UuidGenerator`</code></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">0..1</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">To use a 3rd part <a href="uuidgenerator.html" class="xref page">UuidGenerator</a>.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">To use a third-party <a href="uuidgenerator.html" class="xref page">UuidGenerator</a>.</p></td>
 </tr>
 </tbody>
 </table>
@@ -848,52 +860,52 @@ more than 1 bean of this type, then Camel will <strong>not</strong> use it.</p>
 </thead>
 <tbody>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">CamelClusterService</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>CamelClusterService</code></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">0..n</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">To detect <a href="clustering.html" class="xref page">Clustering</a> services.</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">EndpointStrategy</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>EndpointStrategy</code></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">0..n</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">To use 3rd part endpoint strategies.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">To use third-party endpoint strategies.</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">EventNotifier</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>EventNotifier</code></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">0..n</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">To use 3rd part event notifiers.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">To use third-party event notifiers.</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">HealthCheckRepository</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>HealthCheckRepository</code></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">0..n</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">To use Camel <a href="health-check.html" class="xref page">Health Check</a> repositories.</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">InterceptStrategy</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>InterceptStrategy</code></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">0..n</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">To use your own <a href="../components/next/eips/intercept.html" class="xref page">Intercept</a>that intercepts every processing steps in all routes in the <a href="camelcontext.html" class="xref page">CamelContext</a>. For instance you can use this to do an AOP like performance timer interceptor.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">To use your own <a href="../components/next/eips/intercept.html" class="xref page">Intercept</a>that intercepts every processing step in all routes in the <a href="camelcontext.html" class="xref page">CamelContext</a>. For instance, you can use this to do an AOP like performance timer interceptor.</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">LifecycleStrategy</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>LifecycleStrategy</code></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">0..n</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">To use 3rd party lifecycle strategies.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">To use third-party lifecycle strategies.</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">LogListener</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>LogListener</code></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">0..n</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">To use custom <code>LogListener</code> implementations.</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">ModelLifecycleStrategy</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>ModelLifecycleStrategy</code></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">0..n</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">To use 3rd party model lifecycle strategies.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">To use third-party model lifecycle strategies.</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">RoutePolicyFactory</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>RoutePolicyFactory</code></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">0..n</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">To use a 3rd party route policy factory to create a route policy for every route.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">To use a third-party route policy factory to create a route policy for every route.</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">ServiceRegistry</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>ServiceRegistry</code></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">0..n</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">To use camel-cloud <a href="service-registry.html" class="xref page">Service Registries</a>.</p></td>
 </tr>

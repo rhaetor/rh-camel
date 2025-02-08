@@ -3,15 +3,15 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>Commercial Camel Offerings :: Red Hat Apache Build of Apache Camel Manual</title>
-    <meta name="generator" content="Antora 3.0.3">
+    <title>Commercial Camel Offerings :: Red Hat build of Apache Camel</title>
+    <meta name="generator" content="Antora 3.1.4">
     <link rel="stylesheet" href="../_/css/site.css">
   </head>
   <body class="article">
 <header class="header">
   <nav class="navbar">
     <div class="navbar-brand">
-      <a class="navbar-item" href="../../manual/index.html">Red Hat Apache Build of Apache Camel Manual</a>
+      <a class="navbar-item" href="/">Red Hat build of Apache Camel</a>
       <button class="navbar-burger" data-target="topbar-nav">
         <span></span>
         <span></span>
@@ -26,6 +26,7 @@
     <div class="panels">
 <div class="nav-panel-menu is-active" data-panel="menu">
   <nav class="nav-menu">
+    <button class="nav-menu-toggle" aria-label="Toggle expand/collapse all" style="display: none"></button>
     <h3 class="title"><a href="index.html">User manual</a></h3>
 <ul class="nav-list">
   <li class="nav-item" data-depth="0">
@@ -56,7 +57,16 @@
     <a class="nav-link" href="camel-console.html">Camel Developer Console</a>
   </li>
   <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
     <a class="nav-link" href="camel-jbang.html">Camel JBang</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="camel-jbang-kubernetes.html">Camel Kubernetes plugin</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="camel-jbang-k.html">Camel K plugin</a>
+  </li>
+</ul>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="camel-maven-plugin.html">Camel Maven Plugin</a>
@@ -95,6 +105,9 @@
     <a class="nav-link" href="using-propertyplaceholder.html">How to use Camel property placeholders</a>
   </li>
   <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="variables.html">How to use Variables</a>
+  </li>
+  <li class="nav-item" data-depth="2">
     <button class="nav-item-toggle"></button>
     <a class="nav-link" href="testing.html">Testing</a>
 <ul class="nav-list">
@@ -110,7 +123,13 @@
 </ul>
   </li>
   <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
     <a class="nav-link" href="rest-dsl.html">Working with REST and Rest DSL</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="rest-dsl-openapi.html">Rest DSL contract first</a>
+  </li>
+</ul>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="writing-components.html">Writing Components</a>
@@ -477,9 +496,6 @@
     <a class="nav-link" href="faq/how-should-i-invoke-my-pojos-or-spring-services.html">How should I invoke my POJOs or Spring Services?</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="faq/how-to-avoid-importing-bunch-of-cxf-packages-when-start-up-the-camel-cxf-endpoint-from-osgi-platform-.html">How to avoid importing bunch of cxf packages when start up the camel-cxf endpoint from OSGi platform?</a>
-  </li>
-  <li class="nav-item" data-depth="2">
     <a class="nav-link" href="faq/how-to-avoid-sending-some-or-all-message-headers.html">How to avoid sending some or all message headers?</a>
   </li>
   <li class="nav-item" data-depth="2">
@@ -598,11 +614,11 @@
 <div class="nav-panel-explore" data-panel="explore">
   <div class="context">
     <span class="title">User manual</span>
-    <span class="version">default</span>
+    <span class="version"></span>
   </div>
   <ul class="components">
     <li class="component">
-      <a class="title" href="../components/next/index.html">Camel Components</a>
+      <div class="title"><a href="../components/next/index.html">Camel Components</a></div>
       <ul class="versions">
         <li class="version is-latest">
           <a href="../components/next/index.html">Next (Pre-release)</a>
@@ -610,12 +626,7 @@
       </ul>
     </li>
     <li class="component is-current">
-      <a class="title" href="index.html">User manual</a>
-      <ul class="versions">
-        <li class="version is-current is-latest">
-          <a href="index.html">default</a>
-        </li>
-      </ul>
+      <div class="title"><a href="index.html">User manual</a></div>
     </li>
   </ul>
 </div>
@@ -632,6 +643,7 @@
     <li><a href="commercial-camel-offerings.html">Commercial Camel Offerings</a></li>
   </ul>
 </nav>
+<div class="edit-this-page"><a href="file:///code/jboss/jboss-camel/docs/user-manual/modules/ROOT/pages/commercial-camel-offerings.adoc">Edit this Page</a></div>
 </div>
   <div class="content">
 <aside class="toc sidebar" data-title="Contents" data-levels="2">
@@ -709,17 +721,17 @@ We provide 24/7 support for troubleshooting issues and outages, consulting on ar
 </div>
 </div>
 <div class="sect1">
-<h2 id="_red_hat"><a class="anchor" href="#_red_hat"></a><a href="https://www.redhat.com/en/technologies/jboss-middleware/fuse">Red Hat</a></h2>
+<h2 id="_red_hat"><a class="anchor" href="#_red_hat"></a><a href="https://www.redhat.com">Red Hat</a></h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p><a href="https://www.redhat.com/en/technologies/jboss-middleware/fuse">Red Hat</a> offers
-<a href="http://www.redhat.com/en/technologies/jboss-middleware/fuse">Fuse</a>,
-an enterprise integration platform based on Apache Camel and other
+<p><a href="https://www.redhat.com">Red Hat</a> offers a <a href="https://developers.redhat.com/products/redhat-build-of-camel/overview">supported build of Camel</a> as part of
+<a href="https://www.redhat.com/en/products/integration">Red Hat Integration</a> and <a href="https://www.redhat.com/en/products/application-foundations">Red Hat Application Foundations</a>.
+It contains an enterprise integration platform based on Apache Camel and other
 open source integration projects, with developer and production support.
 In addition to enterprise support, Red Hat provides
-<a href="https://www.redhat.com/en/services/training/courses-by-curriculum#Red-Hat-JBoss-Fuse-BRMS-and-more">training</a>,
+<a href="https://www.redhat.com/en/training/skills-path-finder/red-hat-certified-specialist-camel-development">training</a>,
 <a href="https://www.redhat.com/en/services/consulting">consulting</a>, and
-<a href="https://developers.redhat.com/products/fuse/overview/">a developer community</a>.</p>
+<a href="https://developers.redhat.com/products/redhat-build-of-camel/overview">a developer community</a>.</p>
 </div>
 </div>
 </div>
@@ -766,6 +778,14 @@ troubleshooting and SOA infrastructure implementations.</p>
 </div>
 </div>
 <div class="sect1">
+<h2 id="_sk_integration_solutions_private_limited"><a class="anchor" href="#_sk_integration_solutions_private_limited"></a><a href="https://skintegrationsolutions.com">SK Integration Solutions Private Limited</a></h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p><a href="https://skintegrationsolutions.com">SK Integration Solutions Private Limited</a> is a company based in India that offers the best practices for using Apache Camel in all phases of the SDLC.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
 <h2 id="_talend_inc"><a class="anchor" href="#_talend_inc"></a><a href="http://www.talend.com">Talend, Inc</a></h2>
 <div class="sectionbody">
 <div class="paragraph">
@@ -778,10 +798,13 @@ pre-configured OSGi runtime container.</p>
 </div>
 </div>
 <div class="sect1">
-<h2 id="_talisman_cloud_inc"><a class="anchor" href="#_talisman_cloud_inc"></a><a href="https://talismancloud.io">Talisman Cloud, Inc</a></h2>
+<h2 id="_talisman_platform"><a class="anchor" href="#_talisman_platform"></a><a href="https://talismanplatform.com">Talisman Platform</a></h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p><a href="https://talismancloud.io">Talisman Cloud, Inc</a> provides support subscription and consulting services for Apache Camel Karavan.</p>
+<p>The <a href="https://talismanplatform.com">Talisman Platform</a> is a production-ready data integration platform designed for business-critical integrations.
+Designed to facilitate integration driven by the robust capabilities of Apache Camel,
+building on top of <a href="https://github.com/apache/camel-karavan">Apache Camel Karavan</a>, the Talisman Platform offers exclusive additional features to enhance your integration experience.
+These include Authentication and Authorization mechanisms, advanced Monitoring and Observability tools, and a comprehensive API Gateway.</p>
 </div>
 </div>
 </div>

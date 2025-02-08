@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>Choice :: Red Hat Camel Reference</title>
+    <title>Choice :: Red Hat build of Apache Camel</title>
     <meta name="description" content="Route messages based on a series of predicates">
     <meta name="generator" content="Antora 3.1.4">
     <link rel="stylesheet" href="../../../_/css/site.css">
@@ -12,7 +12,7 @@
 <header class="header">
   <nav class="navbar">
     <div class="navbar-brand">
-      <a class="navbar-item" href="../../manual/index.html">Red Hat Apache Build of Apache Camel Manual</a>
+      <a class="navbar-item" href="/">Red Hat build of Apache Camel</a>
       <button class="navbar-burger" data-target="topbar-nav">
         <span></span>
         <span></span>
@@ -27,6 +27,7 @@
     <div class="panels">
 <div class="nav-panel-menu is-active" data-panel="menu">
   <nav class="nav-menu">
+    <button class="nav-menu-toggle" aria-label="Toggle expand/collapse all" style="display: none"></button>
     <h3 class="title"><a href="../index.html">Camel Components</a></h3>
 <ul class="nav-list">
   <li class="nav-item" data-depth="0">
@@ -36,7 +37,46 @@
     <a class="nav-link" href="../index.html">Components</a>
 <ul class="nav-list">
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="../activemq-component.html">ActiveMQ</a>
+    <a class="nav-link" href="../activemq-component.html">ActiveMQ 5.x</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../activemq6-component.html">ActiveMQ 6.x</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../ai-summary.html">AI</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../chatscript-component.html">ChatScript</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../djl-component.html">Deep Java Library</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../langchain4j-chat-component.html">LangChain4j Chat</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../langchain4j-embeddings-component.html">LangChain4j Embeddings</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../langchain4j-tokenizer-component.html">LangChain4j Tokenizer</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../langchain4j-tools-component.html">LangChain4j Tools</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../langchain4j-web-search-component.html">LangChain4j Web Search</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../milvus-component.html">Milvus</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../pinecone-component.html">Pinecone</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../qdrant-component.html">Qdrant</a>
+  </li>
+</ul>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="../amqp-component.html">AMQP</a>
@@ -65,6 +105,15 @@
 <ul class="nav-list">
   <li class="nav-item" data-depth="3">
     <a class="nav-link" href="../aws2-athena-component.html">AWS Athena</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../aws-bedrock-component.html">AWS Bedrock</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../aws-bedrock-agent-component.html">AWS Bedrock Agent</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../aws-bedrock-agent-runtime-component.html">AWS Bedrock Agent Runtime</a>
   </li>
   <li class="nav-item" data-depth="3">
     <a class="nav-link" href="../aws-cloudtrail-component.html">AWS Cloudtrail</a>
@@ -169,7 +218,7 @@
     <a class="nav-link" href="../azure-storage-blob-component.html">Azure Storage Blob Service</a>
   </li>
   <li class="nav-item" data-depth="3">
-    <a class="nav-link" href="../azure-storage-datalake-component.html">Azure Storage Datalake Service</a>
+    <a class="nav-link" href="../azure-storage-datalake-component.html">Azure Storage Data Lake Service</a>
   </li>
   <li class="nav-item" data-depth="3">
     <a class="nav-link" href="../azure-storage-queue-component.html">Azure Storage Queue Service</a>
@@ -202,9 +251,6 @@
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="../cql-component.html">Cassandra CQL</a>
-  </li>
-  <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="../chatscript-component.html">ChatScript</a>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="../chunk-component.html">Chunk</a>
@@ -277,9 +323,6 @@
     <a class="nav-link" href="../debezium-sqlserver-component.html">Debezium SQL Server Connector</a>
   </li>
 </ul>
-  </li>
-  <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="../djl-component.html">Deep Java Library</a>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="../dhis2-component.html">DHIS2</a>
@@ -395,6 +438,9 @@
   </li>
   <li class="nav-item" data-depth="3">
     <a class="nav-link" href="../google-pubsub-component.html">Google Pubsub</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../google-pubsub-lite-component.html">Google PubSub Lite</a>
   </li>
   <li class="nav-item" data-depth="3">
     <a class="nav-link" href="../google-secret-manager-component.html">Google Secret Manager</a>
@@ -687,7 +733,7 @@
     <a class="nav-link" href="../ldif-component.html">LDIF</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="../log-component.html">Log</a>
+    <a class="nav-link" href="../log-component.html">Log Data</a>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="../lucene-component.html">Lucene</a>
@@ -900,10 +946,16 @@
     <a class="nav-link" href="../smb-component.html">SMB</a>
   </li>
   <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../smooks-component.html">Smooks</a>
+  </li>
+  <li class="nav-item" data-depth="2">
     <a class="nav-link" href="../smpp-component.html">SMPP</a>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="../snmp-component.html">SNMP</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../solr-component.html">Solr</a>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="../splunk-component.html">Splunk</a>
@@ -966,6 +1018,18 @@
     <a class="nav-link" href="../stub-component.html">Stub</a>
   </li>
   <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../tahu-summary.html">Tahu</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../tahu-edge-component.html">Tahu Edge Node / Device</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../tahu-host-component.html">Tahu Host Application</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
     <a class="nav-link" href="../telegram-component.html">Telegram</a>
   </li>
   <li class="nav-item" data-depth="2">
@@ -1026,7 +1090,7 @@
     <a class="nav-link" href="../whatsapp-component.html">WhatsApp</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="../wordpress-component.html">Wordpress</a>
+    <a class="nav-link" href="../wordpress-component.html">WordPress</a>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="../workday-component.html">Workday</a>
@@ -1419,7 +1483,13 @@
     <a class="nav-link" href="../others/openapi-java.html">Openapi Java</a>
   </li>
   <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../others/openapi-validator.html">Openapi Validator</a>
+  </li>
+  <li class="nav-item" data-depth="2">
     <a class="nav-link" href="../others/opentelemetry.html">OpenTelemetry</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../others/platform-http-jolokia.html">Platform HTTP Jolokia</a>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="../others/platform-http-main.html">Platform Http Main</a>
@@ -1567,7 +1637,7 @@
     <a class="nav-link" href="event-message.html">Event Message</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="failover-eip.html">Failover</a>
+    <a class="nav-link" href="failoverLoadBalancer-eip.html">Failover Load Balancer</a>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="faultToleranceConfiguration-eip.html">Fault Tolerance Configuration</a>
@@ -1597,13 +1667,13 @@
     <a class="nav-link" href="loadBalance-eip.html">Load Balance</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="log-eip.html">Log</a>
+    <a class="nav-link" href="log-eip.html">Logger</a>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="loop-eip.html">Loop</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="marshal-eip.html">Marshal EIP</a>
+    <a class="nav-link" href="marshal-eip.html">Marshal</a>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="message.html">Message</a>
@@ -1660,6 +1730,9 @@
     <a class="nav-link" href="point-to-point-channel.html">Point to Point Channel</a>
   </li>
   <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="poll-eip.html">Poll</a>
+  </li>
+  <li class="nav-item" data-depth="2">
     <a class="nav-link" href="pollEnrich-eip.html">Poll Enrich</a>
   </li>
   <li class="nav-item" data-depth="2">
@@ -1675,7 +1748,7 @@
     <a class="nav-link" href="publish-subscribe-channel.html">Publish Subscribe Channel</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="random-eip.html">Random</a>
+    <a class="nav-link" href="randomLoadBalancer-eip.html">Random Load Balancer</a>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="recipientList-eip.html">Recipient List</a>
@@ -1717,7 +1790,7 @@
     <a class="nav-link" href="rollback-eip.html">Rollback</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="roundRobin-eip.html">Round Robin</a>
+    <a class="nav-link" href="roundRobinLoadBalancer-eip.html">Round Robin Load Balancer</a>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="routingSlip-eip.html">Routing Slip</a>
@@ -1729,7 +1802,7 @@
     <a class="nav-link" href="sample-eip.html">Sample</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="scatter-gather.html">Scatter Gather</a>
+    <a class="nav-link" href="scatter-gather.html">Scatter-Gather</a>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="script-eip.html">Script</a>
@@ -1759,6 +1832,9 @@
     <a class="nav-link" href="setVariable-eip.html">Set Variable</a>
   </li>
   <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="setVariables-eip.html">Set Variables</a>
+  </li>
+  <li class="nav-item" data-depth="2">
     <a class="nav-link" href="sort-eip.html">Sort</a>
   </li>
   <li class="nav-item" data-depth="2">
@@ -1768,7 +1844,7 @@
     <a class="nav-link" href="step-eip.html">Step</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="sticky-eip.html">Sticky</a>
+    <a class="nav-link" href="stickyLoadBalancer-eip.html">Sticky Load Balancer</a>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="stop-eip.html">Stop</a>
@@ -1789,7 +1865,7 @@
     <a class="nav-link" href="toD-eip.html">To D</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="topic-eip.html">Topic</a>
+    <a class="nav-link" href="topicLoadBalancer-eip.html">Topic Load Balancer</a>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="transactional-client.html">Transactional Client</a>
@@ -1798,13 +1874,13 @@
     <a class="nav-link" href="transform-eip.html">Transform</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="unmarshal-eip.html">Unmarshal EIP</a>
+    <a class="nav-link" href="unmarshal-eip.html">Unmarshal</a>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="validate-eip.html">Validate</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="weighted-eip.html">Weighted</a>
+    <a class="nav-link" href="weightedLoadBalancer-eip.html">Weighted Load Balancer</a>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="wireTap-eip.html">Wire Tap</a>
@@ -1823,7 +1899,7 @@
   </div>
   <ul class="components">
     <li class="component is-current">
-      <a class="title" href="../index.html">Camel Components</a>
+      <div class="title"><a href="../index.html">Camel Components</a></div>
       <ul class="versions">
         <li class="version is-current is-latest">
           <a href="../index.html">Next (Pre-release)</a>
@@ -1831,12 +1907,7 @@
       </ul>
     </li>
     <li class="component">
-      <a class="title" href="../../../manual/index.html">User manual</a>
-      <ul class="versions">
-        <li class="version is-latest">
-          <a href="../../../manual/index.html">default</a>
-        </li>
-      </ul>
+      <div class="title"><a href="../../../manual/index.html">User manual</a></div>
     </li>
   </ul>
 </div>
@@ -1854,6 +1925,7 @@
     <li><a href="choice-eip.html">Choice</a></li>
   </ul>
 </nav>
+<div class="edit-this-page"><a href="file:///code/jboss/jboss-camel/core/camel-core-engine/src/main/docs/modules/eips/pages/choice-eip.adoc">Edit this Page</a></div>
 </div>
   <div class="content">
 <aside class="toc sidebar" data-title="Contents" data-levels="2">
@@ -1865,8 +1937,7 @@
 <div class="sectionbody">
 <div class="paragraph">
 <p>The
-<a href="http://www.enterpriseintegrationpatterns.com/ContentBasedRouter.html">Content
-Based Router</a> from the <a href="enterprise-integration-patterns.html" class="xref page">EIP
+<a href="http://www.enterpriseintegrationpatterns.com/ContentBasedRouter.html">Content-Based Router</a> from the <a href="enterprise-integration-patterns.html" class="xref page">EIP
 patterns</a> allows you to route messages to the correct destination based
 on the contents of the message exchanges.</p>
 </div>
@@ -1881,7 +1952,7 @@ on the contents of the message exchanges.</p>
 <h2 id="_choice_options"><a class="anchor" href="#_choice_options"></a>Choice options</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>The Choice eip supports 4 options, which are listed below.</p>
+<p>The Choice eip supports 0 options, which are listed below.</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
 <colgroup>
@@ -1941,6 +2012,14 @@ on the contents of the message exchanges.</p>
 </tr>
 </tbody>
 </table>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_exchange_properties"><a class="anchor" href="#_exchange_properties"></a>Exchange properties</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>The Choice eip has no exchange properties.</p>
+</div>
 </div>
 </div>
 <div class="sect1">
@@ -2028,13 +2107,13 @@ such as checking message headers.</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="_why_can_i_not_use_otherwise_in_java_dsl"><a class="anchor" href="#_why_can_i_not_use_otherwise_in_java_dsl"></a>Why can I not use otherwise in Java DSL</h3>
+<h3 id="_why_can_i_not_use_otherwise_in_java_dsl"><a class="anchor" href="#_why_can_i_not_use_otherwise_in_java_dsl"></a>Why can I not use otherwise in Java DSL?</h3>
 <div class="paragraph">
 <p>When using the Choice EIP in the Java DSL you may have a situation where the compiler will not accept
 <code>when()</code> or <code>otherwise()</code> statements.</p>
 </div>
 <div class="paragraph">
-<p>For example as shown in the route below where we use the
+<p>For example, as shown in the route below where we use the
 <a href="loadBalance-eip.html" class="xref page">Load Balancer</a> EIP inside the Choice EIP in the first when:</p>
 </div>
 <div class="paragraph">
@@ -2051,9 +2130,9 @@ such as checking message headers.</p>
 </div>
 </div>
 <div class="paragraph">
-<p>Well the first issue is that the <a href="loadBalance-eip.html" class="xref page">Load Balancer</a> EIP
+<p>Well, the first issue is that the <a href="loadBalance-eip.html" class="xref page">Load Balancer</a> EIP
 uses the additional routing to know what to use in the load balancing.
-In this example that would be the:</p>
+In this example, that would be:</p>
 </div>
 <div class="listingblock">
 <div class="content">
@@ -2062,7 +2141,8 @@ In this example that would be the:</p>
 </div>
 <div class="paragraph">
 <p>To indicate when the balancing stops, you should use <code>.end()</code> to denote
-the end. So the route is updates as follows:</p>
+the end.
+So the route is updated as follows:</p>
 </div>
 <div class="paragraph">
 <p><strong>Code will still not compile</strong></p>
@@ -2107,9 +2187,10 @@ to the scope of the Choice EIP.</p>
 <div class="paragraph">
 <p>You only need to use <code>.endChoice()</code> when using certain
 <a href="enterprise-integration-patterns.html" class="xref page">EIP</a>s which often have additional
-methods to configure or as part of the EIP itself. For example the
-<a href="split-eip.html" class="xref page">Split</a> EIP has a sub-route which denotes the
-routing of each <em>split</em> message. You would also have to use
+methods to configure or as part of the EIP itself.
+For example, the <a href="split-eip.html" class="xref page">Split</a> EIP has a sub-route which denotes the
+routing of each <em>split</em> message.
+You would also have to use
 <code>.endChoice()</code> to indicate the end of the sub-route and to return
 to the Choice EIP.</p>
 </div>
@@ -2133,9 +2214,11 @@ generics you can do in Java programming language.</p>
 <h2 id="_precondition_mode"><a class="anchor" href="#_precondition_mode"></a>Precondition Mode</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>In precondition mode, the Choice EIP is an optimized <a href="http://www.enterpriseintegrationpatterns.com/ContentBasedRouter.html">Content
-Based Router</a> which selects a single branch (when/otherwise) during startup, and
-always executes the same branch. This allows to optimize the runtime Camel to avoid
+<p>In precondition mode,
+the Choice EIP is an optimized <a href="http://www.enterpriseintegrationpatterns.com/ContentBasedRouter.html">Content-Based Router</a>
+that selects a single branch (when/otherwise) during startup,
+and always executes the same branch.
+This allows optimizing the runtime Camel to avoid
 this evaluation process for every message; because they are supposed
 to always be routed on the same branch.</p>
 </div>
@@ -2155,8 +2238,9 @@ be based on property placeholders, JVM system properties, or OS Environment vari
 </div>
 <div class="paragraph">
 <p>The Choice EIP in precondition mode combined with <a href="../../../manual/route-template.html" class="xref page">Route Templates</a> allows
-for more flexible templates, as the template parameters can be used as the predicates in the Choice EIP;
-meaning that the Choice EIP in precondition mode is fully parameterized, but is optimized for best runtime performance.</p>
+for more flexible templates, as the template parameters can be used as the predicates in the Choice EIP.
+This means that the Choice EIP in precondition mode is fully parameterized,
+but is optimized for the best runtime performance.</p>
 </div>
 <div class="sect2">
 <h3 id="_example_2"><a class="anchor" href="#_example_2"></a>Example</h3>
@@ -2167,7 +2251,7 @@ on <a href="../../../manual/using-propertyplaceholder.html" class="xref page">pr
 </div>
 <div class="paragraph">
 <p>Here we select from the Switch the first predicate that matches. So if there is
-a property placeholder with the key <code>foo</code> then its select, and so on.
+a property placeholder with the key <code>foo</code> then it is selected, and so on.
 Notice how we can use <code>{{?foo}}</code> to mark the property placeholder as optional.</p>
 </div>
 <div id="_tabs_2" class="openblock tabs is-sync is-loading">
@@ -2248,7 +2332,7 @@ Notice how we can use <code>{{?foo}}</code> to mark the property placeholder as 
 <i class="fa icon-tip" title="Tip"></i>
 </td>
 <td class="content">
-Otherwise, is optional, and if none of the predicates would match, then no branches is selected.
+Otherwise, it is optional, and if none of the predicate matches, then no branches are selected.
 </td>
 </tr>
 </table>

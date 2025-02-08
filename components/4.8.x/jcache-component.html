@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>JCache :: Red Hat Camel Reference</title>
+    <title>JCache :: Red Hat build of Apache Camel</title>
     <meta name="description" content="Perform caching operations against JSR107/JCache.">
     <meta name="generator" content="Antora 3.1.4">
     <link rel="stylesheet" href="../../_/css/site.css">
@@ -12,7 +12,7 @@
 <header class="header">
   <nav class="navbar">
     <div class="navbar-brand">
-      <a class="navbar-item" href="../../manual/index.html">Red Hat Apache Build of Apache Camel Manual</a>
+      <a class="navbar-item" href="/">Red Hat build of Apache Camel</a>
       <button class="navbar-burger" data-target="topbar-nav">
         <span></span>
         <span></span>
@@ -27,6 +27,7 @@
     <div class="panels">
 <div class="nav-panel-menu is-active" data-panel="menu">
   <nav class="nav-menu">
+    <button class="nav-menu-toggle" aria-label="Toggle expand/collapse all" style="display: none"></button>
     <h3 class="title"><a href="index.html">Camel Components</a></h3>
 <ul class="nav-list">
   <li class="nav-item" data-depth="0">
@@ -36,7 +37,46 @@
     <a class="nav-link" href="index.html">Components</a>
 <ul class="nav-list">
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="activemq-component.html">ActiveMQ</a>
+    <a class="nav-link" href="activemq-component.html">ActiveMQ 5.x</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="activemq6-component.html">ActiveMQ 6.x</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="ai-summary.html">AI</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="chatscript-component.html">ChatScript</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="djl-component.html">Deep Java Library</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="langchain4j-chat-component.html">LangChain4j Chat</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="langchain4j-embeddings-component.html">LangChain4j Embeddings</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="langchain4j-tokenizer-component.html">LangChain4j Tokenizer</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="langchain4j-tools-component.html">LangChain4j Tools</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="langchain4j-web-search-component.html">LangChain4j Web Search</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="milvus-component.html">Milvus</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="pinecone-component.html">Pinecone</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="qdrant-component.html">Qdrant</a>
+  </li>
+</ul>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="amqp-component.html">AMQP</a>
@@ -65,6 +105,15 @@
 <ul class="nav-list">
   <li class="nav-item" data-depth="3">
     <a class="nav-link" href="aws2-athena-component.html">AWS Athena</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="aws-bedrock-component.html">AWS Bedrock</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="aws-bedrock-agent-component.html">AWS Bedrock Agent</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="aws-bedrock-agent-runtime-component.html">AWS Bedrock Agent Runtime</a>
   </li>
   <li class="nav-item" data-depth="3">
     <a class="nav-link" href="aws-cloudtrail-component.html">AWS Cloudtrail</a>
@@ -169,7 +218,7 @@
     <a class="nav-link" href="azure-storage-blob-component.html">Azure Storage Blob Service</a>
   </li>
   <li class="nav-item" data-depth="3">
-    <a class="nav-link" href="azure-storage-datalake-component.html">Azure Storage Datalake Service</a>
+    <a class="nav-link" href="azure-storage-datalake-component.html">Azure Storage Data Lake Service</a>
   </li>
   <li class="nav-item" data-depth="3">
     <a class="nav-link" href="azure-storage-queue-component.html">Azure Storage Queue Service</a>
@@ -202,9 +251,6 @@
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="cql-component.html">Cassandra CQL</a>
-  </li>
-  <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="chatscript-component.html">ChatScript</a>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="chunk-component.html">Chunk</a>
@@ -277,9 +323,6 @@
     <a class="nav-link" href="debezium-sqlserver-component.html">Debezium SQL Server Connector</a>
   </li>
 </ul>
-  </li>
-  <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="djl-component.html">Deep Java Library</a>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="dhis2-component.html">DHIS2</a>
@@ -395,6 +438,9 @@
   </li>
   <li class="nav-item" data-depth="3">
     <a class="nav-link" href="google-pubsub-component.html">Google Pubsub</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="google-pubsub-lite-component.html">Google PubSub Lite</a>
   </li>
   <li class="nav-item" data-depth="3">
     <a class="nav-link" href="google-secret-manager-component.html">Google Secret Manager</a>
@@ -687,7 +733,7 @@
     <a class="nav-link" href="ldif-component.html">LDIF</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="log-component.html">Log</a>
+    <a class="nav-link" href="log-component.html">Log Data</a>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="lucene-component.html">Lucene</a>
@@ -900,16 +946,49 @@
     <a class="nav-link" href="smb-component.html">SMB</a>
   </li>
   <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="smooks-component.html">Smooks</a>
+  </li>
+  <li class="nav-item" data-depth="2">
     <a class="nav-link" href="smpp-component.html">SMPP</a>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="snmp-component.html">SNMP</a>
   </li>
   <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="solr-component.html">Solr</a>
+  </li>
+  <li class="nav-item" data-depth="2">
     <a class="nav-link" href="splunk-component.html">Splunk</a>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="splunk-hec-component.html">Splunk HEC</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="spring-summary.html">Spring</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="spring-batch-component.html">Spring Batch</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="spring-event-component.html">Spring Event</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="spring-jdbc-component.html">Spring JDBC</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="spring-ldap-component.html">Spring LDAP</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="spring-rabbitmq-component.html">Spring RabbitMQ</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="spring-redis-component.html">Spring Redis</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="spring-ws-component.html">Spring WebService</a>
+  </li>
+</ul>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="sql-component.html">SQL</a>
@@ -937,6 +1016,18 @@
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="stub-component.html">Stub</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="tahu-summary.html">Tahu</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="tahu-edge-component.html">Tahu Edge Node / Device</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="tahu-host-component.html">Tahu Host Application</a>
+  </li>
+</ul>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="telegram-component.html">Telegram</a>
@@ -999,7 +1090,7 @@
     <a class="nav-link" href="whatsapp-component.html">WhatsApp</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="wordpress-component.html">Wordpress</a>
+    <a class="nav-link" href="wordpress-component.html">WordPress</a>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="workday-component.html">Workday</a>
@@ -1392,7 +1483,13 @@
     <a class="nav-link" href="others/openapi-java.html">Openapi Java</a>
   </li>
   <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="others/openapi-validator.html">Openapi Validator</a>
+  </li>
+  <li class="nav-item" data-depth="2">
     <a class="nav-link" href="others/opentelemetry.html">OpenTelemetry</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="others/platform-http-jolokia.html">Platform HTTP Jolokia</a>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="others/platform-http-main.html">Platform Http Main</a>
@@ -1540,7 +1637,7 @@
     <a class="nav-link" href="eips/event-message.html">Event Message</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="eips/failover-eip.html">Failover</a>
+    <a class="nav-link" href="eips/failoverLoadBalancer-eip.html">Failover Load Balancer</a>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="eips/faultToleranceConfiguration-eip.html">Fault Tolerance Configuration</a>
@@ -1570,13 +1667,13 @@
     <a class="nav-link" href="eips/loadBalance-eip.html">Load Balance</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="eips/log-eip.html">Log</a>
+    <a class="nav-link" href="eips/log-eip.html">Logger</a>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="eips/loop-eip.html">Loop</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="eips/marshal-eip.html">Marshal EIP</a>
+    <a class="nav-link" href="eips/marshal-eip.html">Marshal</a>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="eips/message.html">Message</a>
@@ -1633,6 +1730,9 @@
     <a class="nav-link" href="eips/point-to-point-channel.html">Point to Point Channel</a>
   </li>
   <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="eips/poll-eip.html">Poll</a>
+  </li>
+  <li class="nav-item" data-depth="2">
     <a class="nav-link" href="eips/pollEnrich-eip.html">Poll Enrich</a>
   </li>
   <li class="nav-item" data-depth="2">
@@ -1648,7 +1748,7 @@
     <a class="nav-link" href="eips/publish-subscribe-channel.html">Publish Subscribe Channel</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="eips/random-eip.html">Random</a>
+    <a class="nav-link" href="eips/randomLoadBalancer-eip.html">Random Load Balancer</a>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="eips/recipientList-eip.html">Recipient List</a>
@@ -1690,7 +1790,7 @@
     <a class="nav-link" href="eips/rollback-eip.html">Rollback</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="eips/roundRobin-eip.html">Round Robin</a>
+    <a class="nav-link" href="eips/roundRobinLoadBalancer-eip.html">Round Robin Load Balancer</a>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="eips/routingSlip-eip.html">Routing Slip</a>
@@ -1702,7 +1802,7 @@
     <a class="nav-link" href="eips/sample-eip.html">Sample</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="eips/scatter-gather.html">Scatter Gather</a>
+    <a class="nav-link" href="eips/scatter-gather.html">Scatter-Gather</a>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="eips/script-eip.html">Script</a>
@@ -1732,6 +1832,9 @@
     <a class="nav-link" href="eips/setVariable-eip.html">Set Variable</a>
   </li>
   <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="eips/setVariables-eip.html">Set Variables</a>
+  </li>
+  <li class="nav-item" data-depth="2">
     <a class="nav-link" href="eips/sort-eip.html">Sort</a>
   </li>
   <li class="nav-item" data-depth="2">
@@ -1741,7 +1844,7 @@
     <a class="nav-link" href="eips/step-eip.html">Step</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="eips/sticky-eip.html">Sticky</a>
+    <a class="nav-link" href="eips/stickyLoadBalancer-eip.html">Sticky Load Balancer</a>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="eips/stop-eip.html">Stop</a>
@@ -1762,7 +1865,7 @@
     <a class="nav-link" href="eips/toD-eip.html">To D</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="eips/topic-eip.html">Topic</a>
+    <a class="nav-link" href="eips/topicLoadBalancer-eip.html">Topic Load Balancer</a>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="eips/transactional-client.html">Transactional Client</a>
@@ -1771,13 +1874,13 @@
     <a class="nav-link" href="eips/transform-eip.html">Transform</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="eips/unmarshal-eip.html">Unmarshal EIP</a>
+    <a class="nav-link" href="eips/unmarshal-eip.html">Unmarshal</a>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="eips/validate-eip.html">Validate</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="eips/weighted-eip.html">Weighted</a>
+    <a class="nav-link" href="eips/weightedLoadBalancer-eip.html">Weighted Load Balancer</a>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="eips/wireTap-eip.html">Wire Tap</a>
@@ -1796,7 +1899,7 @@
   </div>
   <ul class="components">
     <li class="component is-current">
-      <a class="title" href="index.html">Camel Components</a>
+      <div class="title"><a href="index.html">Camel Components</a></div>
       <ul class="versions">
         <li class="version is-current is-latest">
           <a href="index.html">Next (Pre-release)</a>
@@ -1804,12 +1907,7 @@
       </ul>
     </li>
     <li class="component">
-      <a class="title" href="../../manual/index.html">User manual</a>
-      <ul class="versions">
-        <li class="version is-latest">
-          <a href="../../manual/index.html">default</a>
-        </li>
-      </ul>
+      <div class="title"><a href="../../manual/index.html">User manual</a></div>
     </li>
   </ul>
 </div>
@@ -1827,6 +1925,7 @@
     <li><a href="jcache-component.html">JCache</a></li>
   </ul>
 </nav>
+<div class="edit-this-page"><a href="file:///code/jboss/jboss-camel/docs/components/modules/ROOT/pages/jcache-component.adoc">Edit this Page</a></div>
 </div>
   <div class="content">
 <aside class="toc sidebar" data-title="Contents" data-levels="2">
@@ -1876,37 +1975,65 @@
 <div class="sect2">
 <h3 id="_configuring_component_options"><a class="anchor" href="#_configuring_component_options"></a>Configuring Component Options</h3>
 <div class="paragraph">
-<p>The component level is the highest level which holds general and common configurations that are inherited by the endpoints.
-For example a component may have security settings, credentials for authentication, urls for network connection and so forth.</p>
+<p>At the component level, you set general and shared configurations that are, then, inherited by the endpoints. It is the highest configuration level.</p>
 </div>
 <div class="paragraph">
-<p>Some components only have a few options, and others may have many. Because components typically have pre configured defaults
-that are commonly used, then you may often only need to configure a few options on a component; or none at all.</p>
+<p>For example, a component may have security settings, credentials for authentication, urls for network connection and so forth.</p>
 </div>
 <div class="paragraph">
-<p>Configuring components can be done with the <a href="../../manual/component-dsl.html" class="xref page">Component DSL</a>,
-in a configuration file (application.properties|yaml), or directly with Java code.</p>
+<p>Some components only have a few options, and others may have many.
+Because components typically have pre-configured defaults that are commonly used, then you may often only need to configure a few options on a component; or none at all.</p>
+</div>
+<div class="paragraph">
+<p>You can configure components using:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>the <a href="../../manual/component-dsl.html" class="xref page">Component DSL</a>.</p>
+</li>
+<li>
+<p>in a configuration file (<code>application.properties</code>, <code>*.yaml</code> files, etc).</p>
+</li>
+<li>
+<p>directly in the Java code.</p>
+</li>
+</ul>
 </div>
 </div>
 <div class="sect2">
 <h3 id="_configuring_endpoint_options"><a class="anchor" href="#_configuring_endpoint_options"></a>Configuring Endpoint Options</h3>
 <div class="paragraph">
-<p>Where you find yourself configuring the most is on endpoints, as endpoints often have many options, which allows you to
-configure what you need the endpoint to do. The options are also categorized into whether the endpoint is used as consumer (from)
-or as a producer (to), or used for both.</p>
+<p>You usually spend more time setting up endpoints because they have many options.
+These options help you customize what you want the endpoint to do.
+The options are also categorized into whether the endpoint is used as a consumer (<em>from</em>), as a producer (<em>to</em>), or  both.</p>
 </div>
 <div class="paragraph">
-<p>Configuring endpoints is most often done directly in the endpoint URI as path and query parameters. You can also use
-the <a href="../../manual/Endpoint-dsl.html" class="xref page">Endpoint DSL</a> and <a href="../../manual/dataformat-dsl.html" class="xref page">DataFormat DSL</a>
+<p>Configuring endpoints is most often done directly in the endpoint URI as <em>path</em> and <em>query</em> parameters.
+You can also use the <a href="../../manual/Endpoint-dsl.html" class="xref page">Endpoint DSL</a> and <a href="../../manual/dataformat-dsl.html" class="xref page">DataFormat DSL</a>
 as a <em>type safe</em> way of configuring endpoints and data formats in Java.</p>
 </div>
 <div class="paragraph">
-<p>A good practice when configuring options is to use <a href="../../manual/using-propertyplaceholder.html" class="xref page">Property Placeholders</a>,
-which allows to not hardcode urls, port numbers, sensitive information, and other settings.
-In other words placeholders allows to externalize the configuration from your code, and gives more flexibility and reuse.</p>
+<p>A good practice when configuring options is to use <a href="../../manual/using-propertyplaceholder.html" class="xref page">Property Placeholders</a>.</p>
 </div>
 <div class="paragraph">
-<p>The following two sections lists all the options, firstly for the component followed by the endpoint.</p>
+<p>Property placeholders provide a few benefits:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>They help prevent using hardcoded urls, port numbers, sensitive information, and other settings.</p>
+</li>
+<li>
+<p>They allow externalizing the configuration from the code.</p>
+</li>
+<li>
+<p>They help the code to become more flexible and reusable.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>The following two sections list all the options, firstly for the component followed by the endpoint.</p>
 </div>
 </div>
 </div>
@@ -2021,7 +2148,7 @@ In other words placeholders allows to externalize the configuration from your co
 </div>
 </div>
 <div class="paragraph">
-<p>with the following path and query parameters:</p>
+<p>With the following <em>path</em> and <em>query</em> parameters:</p>
 </div>
 <div class="sect2">
 <h3 id="_path_parameters_1_parameters"><a class="anchor" href="#_path_parameters_1_parameters"></a>Path Parameters (1 parameters)</h3>
@@ -2071,15 +2198,6 @@ In other words placeholders allows to externalize the configuration from your co
 </tr>
 </thead>
 <tbody>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><a id="_endpoint_query_option_cacheConfiguration"></a>
-<a href="#_endpoint_query_option_cacheConfiguration" class="anchor"></a><strong>cacheConfiguration</strong> (common)</p></td>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>A Configuration for the Cache.</p>
-</div></div></td>
-<td class="tableblock halign-center valign-top"></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Configuration</p></td>
-</tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><a id="_endpoint_query_option_cacheConfigurationProperties"></a>
 <a href="#_endpoint_query_option_cacheConfigurationProperties" class="anchor"></a><strong>cacheConfigurationProperties</strong> (common)</p></td>
@@ -2266,6 +2384,15 @@ In other words placeholders allows to externalize the configuration from your co
 <td class="tableblock halign-left valign-top"><p class="tableblock">boolean</p></td>
 </tr>
 <tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a id="_endpoint_query_option_cacheConfiguration"></a>
+<a href="#_endpoint_query_option_cacheConfiguration" class="anchor"></a><strong>cacheConfiguration</strong> (advanced)</p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>A Configuration for the Cache.</p>
+</div></div></td>
+<td class="tableblock halign-center valign-top"></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Configuration</p></td>
+</tr>
+<tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><a id="_endpoint_query_option_cacheLoaderFactory"></a>
 <a href="#_endpoint_query_option_cacheLoaderFactory" class="anchor"></a><strong>cacheLoaderFactory</strong> (advanced)</p></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
@@ -2422,36 +2549,37 @@ In other words placeholders allows to externalize the configuration from your co
 </div>
 </div>
 <div class="sect1">
-<h2 id="_jcache_policy"><a class="anchor" href="#_jcache_policy"></a>JCache Policy</h2>
+<h2 id="_usage"><a class="anchor" href="#_usage"></a>Usage</h2>
 <div class="sectionbody">
+<div class="sect2">
+<h3 id="_jcache_policy"><a class="anchor" href="#_jcache_policy"></a>JCache Policy</h3>
 <div class="paragraph">
-<p>The JCachePolicy is an interceptor around a route that caches the "result of the route" - the message body - after the route is completed.
-If next time the route is called with a "similar" Exchange, the cached value is used on the Exchange instead of executing the route.
-The policy uses the JSR107/JCache API of a cache implementation, so it&#8217;s required to add one (e.g. Hazelcast, Ehcache) to the classpath.</p>
+<p>The JCachePolicy is an interceptor around a route that caches the "result of the route" (the message body) after the route is completed.
+If the next time the route is called with a "similar" Exchange, the cached value is used on the Exchange instead of executing the route.
+The policy uses the JSR107/JCache API of a cache implementation, so it&#8217;s required to add one (e.g., Hazelcast, Ehcache) to the classpath.</p>
 </div>
 <div class="paragraph">
-<p>The policy takes a <em>key</em> value from the received Exchange to get or store values in the cache. By default the <em>key</em> is the message body.
-For example if the route - having a JCachePolicy - receives an Exchange with a String body "fruit" and the body at the
-end of the route is "apple", it stores a <em>key/value</em> pair "fruit=apple" in the cache. If next time another Exchange arrives
-with a body "fruit", the value "apple" is taken from the cache instead of letting the route process the Exchange.</p>
+<p>The policy takes a <em>key</em> value from the received Exchange to get or store values in the cache.
+By default, the <em>key</em> is the message body.
+For example, if the route - having a JCachePolicy - receives an Exchange with a String body <em>"fruit"</em> and the body at the
+end of the route is "apple", it stores a <em>key/value</em> pair <em>"fruit=apple"</em> in the cache. If next time another Exchange arrives
+with a body <em>"fruit"</em>, the value <em>"apple"</em> is taken from the cache instead of letting the route process the Exchange.</p>
 </div>
 <div class="paragraph">
-<p>So by default the message body at the beginning of the route is the cache <em>key</em> and the body at the end is the stored <em>value</em>.
-It&#8217;s possible to use something else as <em>key</em> by setting a Camel Expression via <em>.setKeyExpression()</em>
+<p>So by default, the message body at the beginning of the route is the cache <em>key</em> and the body at the end is the stored <em>value</em>.
+It&#8217;s possible to use something else as a <em>key</em> by setting a Camel Expression via <code>.setKeyExpression()</code>
 that will be used to determine the key.</p>
 </div>
 <div class="paragraph">
-<p>The policy needs a JCache Cache. It can be set directly by <em>.setCache()</em> or the policy will try to get or create the Cache
+<p>The policy needs a JCache Cache. It can be set directly by <code>.setCache()</code> or the policy will try to get or create the Cache
 based on the other parameters set.</p>
 </div>
 <div class="paragraph">
-<p>Similar caching solution is available for example in Spring using the @Cacheable annotation.</p>
+<p>Similar caching solution is available, for example, in Spring using the @Cacheable annotation.</p>
 </div>
 </div>
-</div>
-<div class="sect1">
-<h2 id="_jcachepolicy_fields"><a class="anchor" href="#_jcachepolicy_fields"></a>JCachePolicy Fields</h2>
-<div class="sectionbody">
+<div class="sect2">
+<h3 id="_jcachepolicy_fields"><a class="anchor" href="#_jcachepolicy_fields"></a>JCachePolicy Fields</h3>
 <table class="tableblock frame-all grid-all stretch">
 <colgroup>
 <col style="width: 16.6666%;">
@@ -2470,26 +2598,26 @@ based on the other parameters set.</p>
 <tbody>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>cache</strong></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">The Cache to use to store the cached values. If this value is set, <em>cacheManager</em>, <em>cacheName</em> and <em>cacheConfiguration</em> is ignored.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The Cache to use to store the cached values. If this value is set, <code>cacheManager</code>, <code>cacheName</code> and <code>cacheConfiguration</code> is ignored.</p></td>
 <td class="tableblock halign-left valign-top"></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Cache</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>cacheManager</strong></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">The CacheManager to use to lookup or create the Cache. Used only if <em>cache</em> is not set.</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Try to find a CacheManager in CamelContext registry or calls the standard JCache <em>Caching.getCachingProvider().getCacheManager()</em>.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The CacheManager to use to look up or create the Cache. Used only if <code>cache</code> is not set.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Try to find a <code>CacheManager</code> in the <code>CamelContext</code> registry or calls the standard JCache <code>Caching.getCachingProvider().getCacheManager()</code>.</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">CacheManager</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>cacheName</strong></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Name of the cache. Get the Cache from cacheManager or create a new one if it doesn&#8217;t exist.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Name of the cache. Get the Cache from <code>cacheManager</code> or create a new one if it doesn&#8217;t exist.</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">RouteId of the route.</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">String</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>cacheConfiguration</strong></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">JCache cache configuration to use if a new Cache is created</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Default new <em>MutableConfiguration</em> object.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Default new <code>MutableConfiguration</code> object.</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">CacheConfiguration</p></td>
 </tr>
 <tr>
@@ -2500,26 +2628,22 @@ based on the other parameters set.</p>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>enabled</strong></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">If policy is not enabled, no wrapper processor is added to the route. It has impact only during startup, not during runtime. For example it can be used to disable caching from properties.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">If the policy is not enabled, no wrapper processor is added to the route. It has impact only during startup, not during runtime. For example, it can be used to disable caching from properties.</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">true</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">boolean</p></td>
 </tr>
 </tbody>
 </table>
 </div>
-</div>
-<div class="sect1">
-<h2 id="_how_to_determine_cache_to_use"><a class="anchor" href="#_how_to_determine_cache_to_use"></a>How to determine cache to use?</h2>
-<div class="sectionbody">
+<div class="sect2">
+<h3 id="_how_to_determine_cache_to_use"><a class="anchor" href="#_how_to_determine_cache_to_use"></a>How to determine cache to use?</h3>
 
 </div>
-</div>
-<div class="sect1">
-<h2 id="_set_cache"><a class="anchor" href="#_set_cache"></a>Set cache</h2>
-<div class="sectionbody">
+<div class="sect2">
+<h3 id="_set_cache"><a class="anchor" href="#_set_cache"></a>Set cache</h3>
 <div class="paragraph">
 <p>The cache used by the policy can be set directly. This means you have to configure the cache yourself and get a JCache Cache object,
-but this gives the most flexibility. For example it can be setup in the config xml of the cache provider (Hazelcast, EhCache, &#8230;&#8203;)
+but this gives the most flexibility. For example, it can be setup in the config xml of the cache provider (Hazelcast, EhCache, &#8230;&#8203;)
 and used here. Or it&#8217;s possible to use the standard Caching API as below:</p>
 </div>
 <div class="listingblock">
@@ -2540,18 +2664,16 @@ from("direct:get-orders")
 </div>
 </div>
 </div>
-</div>
-<div class="sect1">
-<h2 id="_set_cachemanager"><a class="anchor" href="#_set_cachemanager"></a>Set cacheManager</h2>
-<div class="sectionbody">
+<div class="sect2">
+<h3 id="_set_cachemanager"><a class="anchor" href="#_set_cachemanager"></a>Set cacheManager</h3>
 <div class="paragraph">
-<p>If the <em>cache</em> is not set, the policy will try to lookup or create the cache automatically.
-If the <em>cacheManager</em> is set on the policy, it will try to get cache with the set <em>cacheName</em> (routeId by default) from the CacheManager.
-If the cache does not exist it will create a new one using the <em>cacheConfiguration</em> (new MutableConfiguration by default).</p>
+<p>If the <code>cache</code> is not set, the policy will try to look up or create the cache automatically.
+If the <code>cacheManager</code> is set on the policy, it will try to get cache with the set <code>cacheName</code> (routeId by default) from the CacheManager.
+If the cache does not exist, it will create a new one using the <code>cacheConfiguration</code> (new MutableConfiguration by default).</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">//In a Spring environment for example the CacheManager may already exist as a bean
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">//In a Spring environment, for example, the CacheManager may already exist as a bean
 @Autowire
 CacheManager cacheManager;
 ...
@@ -2563,20 +2685,18 @@ jcachePolicy.setCacheName("items")</code></pre>
 </div>
 </div>
 </div>
-</div>
-<div class="sect1">
-<h2 id="_find_cachemanager"><a class="anchor" href="#_find_cachemanager"></a>Find cacheManager</h2>
-<div class="sectionbody">
+<div class="sect2">
+<h3 id="_find_cachemanager"><a class="anchor" href="#_find_cachemanager"></a>Find cacheManager</h3>
 <div class="paragraph">
-<p>If <em>cacheManager</em> (and the <em>cache</em>) is not set, the policy will try to find a JCache CacheManager object:</p>
+<p>If <code>cacheManager</code> (and the <code>cache</code>) is not set, the policy will try to find a JCache CacheManager object:</p>
 </div>
 <div class="ulist">
 <ul>
 <li>
-<p>Lookup a CacheManager in Camel registry - that falls back on JNDI or Spring context based on the environment</p>
+<p>Lookup a CacheManager in Camel registry. That falls back on JNDI or Spring context based on the environment</p>
 </li>
 <li>
-<p>Use the standard api <em>Caching.getCachingProvider().getCacheManager()</em></p>
+<p>Use the standard api <code>Caching.getCachingProvider().getCacheManager()</code></p>
 </li>
 </ul>
 </div>
@@ -2590,12 +2710,11 @@ from("direct:get-orders").routeId("getorders")
 </div>
 </div>
 </div>
-</div>
-<div class="sect1">
-<h2 id="_partially_wrapped_route"><a class="anchor" href="#_partially_wrapped_route"></a>Partially wrapped route</h2>
-<div class="sectionbody">
+<div class="sect2">
+<h3 id="_partially_wrapped_route"><a class="anchor" href="#_partially_wrapped_route"></a>Partially wrapped route</h3>
 <div class="paragraph">
-<p>In the examples above the whole route was executed or skipped. A policy can be used to wrap only a segment of the route instead of all processors.</p>
+<p>In the examples above, the whole route was executed or skipped.
+A policy can be used to wrap only a segment of the route instead of all processors.</p>
 </div>
 <div class="listingblock">
 <div class="content">
@@ -2609,18 +2728,16 @@ from("direct:get-orders").routeId("getorders")
 </div>
 </div>
 <div class="paragraph">
-<p>The <em>.log()</em> at the beginning and at the end of the route is always called, but the section inside <em>.policy()</em> and <em>.end()</em> is executed based on the cache.</p>
+<p>The <code>.log()</code> at the beginning and at the end of the route is always called, but the section inside <code>.policy()</code> and <code>.end()</code> is executed based on the cache.</p>
 </div>
 </div>
-</div>
-<div class="sect1">
-<h2 id="_keyexpression"><a class="anchor" href="#_keyexpression"></a>KeyExpression</h2>
-<div class="sectionbody">
+<div class="sect2">
+<h3 id="_keyexpression"><a class="anchor" href="#_keyexpression"></a>KeyExpression</h3>
 <div class="paragraph">
-<p>By default the policy uses the received Exchange body as <em>key</em>, so the default expression is like <em>simple("${body})</em>.
-We can set a different Camel Expression as <em>keyExpression</em> which will be evaluated to determine the key.
-For example if we try to find an <em>order</em> by an <em>orderId</em> which is in the message headers,
-set <em>header("orderId")</em> (or <em>simple("${header.orderId})</em> as <em>keyExpression</em>.</p>
+<p>By default, the policy uses the received Exchange body as the <em>key</em>, so the default expression is like <code>simple("${body}")</code>.
+We can set a different Camel Expression as <code>keyExpression</code> which will be evaluated to determine the key.
+For example, if we try to find an <code>order</code> by an <code>orderId</code> which is in the message headers,
+set <code>header("orderId")</code> (or <code>simple("$\{header.orderId\}")</code> as <code>keyExpression</code>.</p>
 </div>
 <div class="paragraph">
 <p>The expression is evaluated only once at the beginning of the route to determine the <em>key</em>. If nothing was found in cache,
@@ -2645,29 +2762,23 @@ from("direct:get-orders")
 </div>
 </div>
 </div>
-</div>
-<div class="sect1">
-<h2 id="_bypassexpression"><a class="anchor" href="#_bypassexpression"></a>BypassExpression</h2>
-<div class="sectionbody">
+<div class="sect2">
+<h3 id="_bypassexpression"><a class="anchor" href="#_bypassexpression"></a>BypassExpression</h3>
 <div class="paragraph">
 <p>The <code>JCachePolicy</code> can be configured with an <code>Expression</code> that can per <code>Exchange</code> determine whether
 to look up the value from the cache or bypass. If the expression is evaluated to <code>false</code> then the route
 is executed as normal, and the returned value is inserted into the cache for future lookup.</p>
 </div>
 </div>
-</div>
-<div class="sect1">
-<h2 id="_camel_xml_dsl_examples"><a class="anchor" href="#_camel_xml_dsl_examples"></a>Camel XML DSL examples</h2>
-<div class="sectionbody">
+<div class="sect2">
+<h3 id="_camel_xml_dsl_examples"><a class="anchor" href="#_camel_xml_dsl_examples"></a>Camel XML DSL examples</h3>
 
 </div>
-</div>
-<div class="sect1">
-<h2 id="_use_jcachepolicy_in_an_xml_route"><a class="anchor" href="#_use_jcachepolicy_in_an_xml_route"></a>Use JCachePolicy in an XML route</h2>
-<div class="sectionbody">
+<div class="sect2">
+<h3 id="_use_jcachepolicy_in_an_xml_route"><a class="anchor" href="#_use_jcachepolicy_in_an_xml_route"></a>Use JCachePolicy in an XML route</h3>
 <div class="paragraph">
-<p>In Camel XML DSL we need a named reference to the JCachePolicy instance (registered in CamelContext or simply in Spring).
-We have to wrap the route between &lt;policy&gt;&#8230;&#8203;&lt;/policy&gt; tags after &lt;from&gt;.</p>
+<p>In Camel XML DSL, we need a named reference to the JCachePolicy instance (registered in CamelContext or simply in Spring).
+We have to wrap the route between <code>&lt;policy&gt;&#8230;&#8203;&lt;/policy&gt;</code> tags after <code>&lt;from&gt;</code>.</p>
 </div>
 <div class="listingblock">
 <div class="content">
@@ -2704,12 +2815,10 @@ We have to wrap the route between &lt;policy&gt;&#8230;&#8203;&lt;/policy&gt; ta
 </div>
 </div>
 </div>
-</div>
-<div class="sect1">
-<h2 id="_define_cachepolicy_in_spring"><a class="anchor" href="#_define_cachepolicy_in_spring"></a>Define CachePolicy in Spring</h2>
-<div class="sectionbody">
+<div class="sect2">
+<h3 id="_define_cachepolicy_in_spring"><a class="anchor" href="#_define_cachepolicy_in_spring"></a>Define CachePolicy in Spring</h3>
 <div class="paragraph">
-<p>It&#8217;s more convenient to create a JCachePolicy in Java especially within a RouteBuilder using the Camel DSL expressions,
+<p>It&#8217;s more convenient to create a JCachePolicy in Java, especially within a RouteBuilder using the Camel DSL expressions,
 but see this example to define it in a Spring XML:</p>
 </div>
 <div class="listingblock">
@@ -2725,13 +2834,11 @@ but see this example to define it in a Spring XML:</p>
 </div>
 </div>
 </div>
-</div>
-<div class="sect1">
-<h2 id="_create_cache_from_xml"><a class="anchor" href="#_create_cache_from_xml"></a>Create Cache from XML</h2>
-<div class="sectionbody">
+<div class="sect2">
+<h3 id="_create_cache_from_xml"><a class="anchor" href="#_create_cache_from_xml"></a>Create Cache from XML</h3>
 <div class="paragraph">
 <p>It&#8217;s not strictly speaking related to Camel XML DSL, but JCache providers usually have a way to configure the cache in an XML file.
-For example with Hazelcast you can add a <em>hazelcast.xml</em> to classpath to configure the cache "spring" used in the example above.</p>
+For example with Hazelcast, you can add a <code>hazelcast.xml</code> to classpath to configure the cache "spring" used in the example above.</p>
 </div>
 <div class="listingblock">
 <div class="content">
@@ -2751,10 +2858,8 @@ For example with Hazelcast you can add a <em>hazelcast.xml</em> to classpath to 
 </div>
 </div>
 </div>
-</div>
-<div class="sect1">
-<h2 id="_special_scenarios_and_error_handling"><a class="anchor" href="#_special_scenarios_and_error_handling"></a>Special scenarios and error handling</h2>
-<div class="sectionbody">
+<div class="sect2">
+<h3 id="_special_scenarios_and_error_handling"><a class="anchor" href="#_special_scenarios_and_error_handling"></a>Special scenarios and error handling</h3>
 <div class="paragraph">
 <p>If the Cache used by the policy is closed (can be done dynamically), the whole caching functionality is skipped,
 the route will be executed every time.</p>
@@ -2763,9 +2868,13 @@ the route will be executed every time.</p>
 <p>If the determined <em>key</em> is <em>null</em>, nothing is looked up or stored in cache.</p>
 </div>
 <div class="paragraph">
-<p>In case of an exception during the route, the error handled is called as always. If the exception gets <em>handled()</em>,
-the policy stores the Exchange body, otherwise nothing is added to the cache.
+<p>In case of an exception during the route, the error handled is called as always. If the exception gets <code>handled()</code>,
+the policy stores the Exchange body. Otherwise, nothing is added to the cache.
 If an exception happens during evaluating the keyExpression, the routing fails, the error handler is called as normally.</p>
+</div>
+<div class="paragraph">
+<p>Unresolved include directive in modules/ROOT/pages/jcache-component.adoc - include::spring-boot:partial$starter.adoc[]</p>
+</div>
 </div>
 </div>
 </div>

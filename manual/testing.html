@@ -3,15 +3,15 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>Testing :: Red Hat Apache Build of Apache Camel Manual</title>
-    <meta name="generator" content="Antora 3.0.3">
+    <title>Testing :: Red Hat build of Apache Camel</title>
+    <meta name="generator" content="Antora 3.1.4">
     <link rel="stylesheet" href="../_/css/site.css">
   </head>
   <body class="article">
 <header class="header">
   <nav class="navbar">
     <div class="navbar-brand">
-      <a class="navbar-item" href="../../manual/index.html">Red Hat Apache Build of Apache Camel Manual</a>
+      <a class="navbar-item" href="/">Red Hat build of Apache Camel</a>
       <button class="navbar-burger" data-target="topbar-nav">
         <span></span>
         <span></span>
@@ -26,6 +26,7 @@
     <div class="panels">
 <div class="nav-panel-menu is-active" data-panel="menu">
   <nav class="nav-menu">
+    <button class="nav-menu-toggle" aria-label="Toggle expand/collapse all" style="display: none"></button>
     <h3 class="title"><a href="index.html">User manual</a></h3>
 <ul class="nav-list">
   <li class="nav-item" data-depth="0">
@@ -56,7 +57,16 @@
     <a class="nav-link" href="camel-console.html">Camel Developer Console</a>
   </li>
   <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
     <a class="nav-link" href="camel-jbang.html">Camel JBang</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="camel-jbang-kubernetes.html">Camel Kubernetes plugin</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="camel-jbang-k.html">Camel K plugin</a>
+  </li>
+</ul>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="camel-maven-plugin.html">Camel Maven Plugin</a>
@@ -94,6 +104,9 @@
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="using-propertyplaceholder.html">How to use Camel property placeholders</a>
   </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="variables.html">How to use Variables</a>
+  </li>
   <li class="nav-item is-current-page" data-depth="2">
     <button class="nav-item-toggle"></button>
     <a class="nav-link" href="testing.html">Testing</a>
@@ -110,7 +123,13 @@
 </ul>
   </li>
   <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
     <a class="nav-link" href="rest-dsl.html">Working with REST and Rest DSL</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="rest-dsl-openapi.html">Rest DSL contract first</a>
+  </li>
+</ul>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="writing-components.html">Writing Components</a>
@@ -477,9 +496,6 @@
     <a class="nav-link" href="faq/how-should-i-invoke-my-pojos-or-spring-services.html">How should I invoke my POJOs or Spring Services?</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="faq/how-to-avoid-importing-bunch-of-cxf-packages-when-start-up-the-camel-cxf-endpoint-from-osgi-platform-.html">How to avoid importing bunch of cxf packages when start up the camel-cxf endpoint from OSGi platform?</a>
-  </li>
-  <li class="nav-item" data-depth="2">
     <a class="nav-link" href="faq/how-to-avoid-sending-some-or-all-message-headers.html">How to avoid sending some or all message headers?</a>
   </li>
   <li class="nav-item" data-depth="2">
@@ -598,11 +614,11 @@
 <div class="nav-panel-explore" data-panel="explore">
   <div class="context">
     <span class="title">User manual</span>
-    <span class="version">default</span>
+    <span class="version"></span>
   </div>
   <ul class="components">
     <li class="component">
-      <a class="title" href="../components/next/index.html">Camel Components</a>
+      <div class="title"><a href="../components/next/index.html">Camel Components</a></div>
       <ul class="versions">
         <li class="version is-latest">
           <a href="../components/next/index.html">Next (Pre-release)</a>
@@ -610,12 +626,7 @@
       </ul>
     </li>
     <li class="component is-current">
-      <a class="title" href="index.html">User manual</a>
-      <ul class="versions">
-        <li class="version is-current is-latest">
-          <a href="index.html">default</a>
-        </li>
-      </ul>
+      <div class="title"><a href="index.html">User manual</a></div>
     </li>
   </ul>
 </div>
@@ -633,6 +644,7 @@
     <li><a href="testing.html">Testing</a></li>
   </ul>
 </nav>
+<div class="edit-this-page"><a href="file:///code/jboss/jboss-camel/docs/user-manual/modules/ROOT/pages/testing.adoc">Edit this Page</a></div>
 </div>
   <div class="content">
 <aside class="toc sidebar" data-title="Contents" data-levels="2">
@@ -647,9 +659,8 @@
 integration. Typically, Camel users would use various different
 technologies wired together in a variety of EIPs with different
 endpoints, languages, bean integration, and
-dependency injection, so it&#8217;s very easy
-for things to go wrong!. Testing is the crucial weapon to ensure
-that things work as you would expect.</p>
+dependency injection, so it&#8217;s easy for things to go wrong!
+Testing is the crucial weapon to ensure that things work as you would expect.</p>
 </div>
 <div class="paragraph">
 <p>Camel is a Java library, so you can easily wire up tests in JUnit.
@@ -703,14 +714,14 @@ class for all your configuration and routing without.</p></td>
 <i class="fa icon-note" title="Note"></i>
 </td>
 <td class="content">
-If you are using Camel Quarkus then you can find information in
+If you are using Camel Quarkus, then you can find information in
 its documentation how to do testing with Quarkus and Camel.
 </td>
 </tr>
 </table>
 </div>
 <div class="paragraph">
-<p>In all approaches the test classes look pretty much the same in that
+<p>In all approaches, the test classes look pretty much the same in that
 they all reuse the <a href="bean-integration.html" class="xref page">Camel binding and
 injection annotations</a>.</p>
 </div>
@@ -759,20 +770,20 @@ mocks and allowing assertions to be added to an endpoint.</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><a href="../components/next/dataset-component.html" class="xref page">DataSet</a></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">For load &amp; soak testing this endpoint
+<td class="tableblock halign-left valign-top"><p class="tableblock">For load &amp; soak testing, this endpoint
 provides a way to create huge numbers of messages for sending to
 components and asserting that they are consumed correctly.</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><a href="../components/next/dataset-test-component.html" class="xref page">DataSet Test</a></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Used for automatic load
-a set of expected message from another endpoint which is then compared to the messages
-that arrives at this endpoint.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Used to automatically load
+a set of expected messages from another endpoint which is then compared to the messages
+that arrive at this endpoint.</p></td>
 </tr>
 </tbody>
 </table>
 <div class="paragraph">
-<p>The main endpoint is the <a href="../components/next/mock-component.html" class="xref page">Mock</a> endpoint which allows
+<p>The main endpoint is the <a href="../components/next/mock-component.html" class="xref page">Mock</a> endpoint, which allows
 expectations to be added to different endpoints; you can then run your
 tests and assert that your expectations are met at the end.</p>
 </div>
@@ -780,10 +791,20 @@ tests and assert that your expectations are met at the end.</p>
 <div class="sect2">
 <h3 id="_stubbing_out_physical_transport_technologies"><a class="anchor" href="#_stubbing_out_physical_transport_technologies"></a>Stubbing out physical transport technologies</h3>
 <div class="paragraph">
-<p>If you wish to test out a route but want to avoid actually using real physical transport
-(for example to unit test a transformation route
-rather than performing a full integration test) then the following
+<p>If you wish to test out a route but want to avoid actually using real physical transport, then the following
 endpoints can be useful:</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+For example, to unit test a transformation route rather than performing a full integration test
+</td>
+</tr>
+</table>
 </div>
 <table class="tableblock frame-all grid-all stretch">
 <colgroup>
@@ -811,7 +832,7 @@ a <code>BlockingQueue</code> which is good for testing asynchronous transports</
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><a href="../components/next/stub-component.html" class="xref page">Stub</a></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Works like <a href="../components/next/stub-component.html" class="xref page">SEDA</a> but does not
-validate the endpoint URI, which makes stubbing very easy.</p></td>
+validate the endpoint URI, which makes stubbing straightforward.</p></td>
 </tr>
 </tbody>
 </table>
@@ -822,7 +843,7 @@ validate the endpoint URI, which makes stubbing very easy.</p></td>
 <p>Camel provides some features to aid during testing of existing routes
 where you cannot or will not use <a href="../components/next/mock-component.html" class="xref page">Mock</a> etc.
 For example, you may have a production ready route which you want to test with some
-3rd party API which sends messages into this route.</p>
+third party API that sends messages into this route.</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
 <colgroup>
@@ -839,15 +860,15 @@ For example, you may have a production ready route which you want to test with s
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><a href="notify-builder.html" class="xref page">NotifyBuilder</a></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Allows you to be notified when
-a certain condition has occurred. For example when the route has
-completed 5 messages. You can build complex expressions to match your
+a certain condition has occurred. For example, when the route has
+completed five messages. You can build complex expressions to match your
 criteria when to be notified.</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><a href="advice-with.html" class="xref page">AdviceWith</a></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Allows you to <em>advice</em> (enhance)
 an existing route using a <a href="route-builder.html" class="xref page">RouteBuilder</a> style.
-For example, you can send (or send and skip) message to a <a href="../components/next/mock-component.html" class="xref page">Mock</a>
+For example, you can send (or send and skip) a message to a <a href="../components/next/mock-component.html" class="xref page">Mock</a>
 endpoint for validating the message send by Camel is as expected.</p></td>
 </tr>
 </tbody>

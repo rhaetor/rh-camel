@@ -3,15 +3,15 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>CamelContext :: Red Hat Apache Build of Apache Camel Manual</title>
-    <meta name="generator" content="Antora 3.0.3">
+    <title>CamelContext :: Red Hat build of Apache Camel</title>
+    <meta name="generator" content="Antora 3.1.4">
     <link rel="stylesheet" href="../_/css/site.css">
   </head>
   <body class="article">
 <header class="header">
   <nav class="navbar">
     <div class="navbar-brand">
-      <a class="navbar-item" href="../../manual/index.html">Red Hat Apache Build of Apache Camel Manual</a>
+      <a class="navbar-item" href="/">Red Hat build of Apache Camel</a>
       <button class="navbar-burger" data-target="topbar-nav">
         <span></span>
         <span></span>
@@ -26,6 +26,7 @@
     <div class="panels">
 <div class="nav-panel-menu is-active" data-panel="menu">
   <nav class="nav-menu">
+    <button class="nav-menu-toggle" aria-label="Toggle expand/collapse all" style="display: none"></button>
     <h3 class="title"><a href="index.html">User manual</a></h3>
 <ul class="nav-list">
   <li class="nav-item" data-depth="0">
@@ -56,7 +57,16 @@
     <a class="nav-link" href="camel-console.html">Camel Developer Console</a>
   </li>
   <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
     <a class="nav-link" href="camel-jbang.html">Camel JBang</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="camel-jbang-kubernetes.html">Camel Kubernetes plugin</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="camel-jbang-k.html">Camel K plugin</a>
+  </li>
+</ul>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="camel-maven-plugin.html">Camel Maven Plugin</a>
@@ -95,6 +105,9 @@
     <a class="nav-link" href="using-propertyplaceholder.html">How to use Camel property placeholders</a>
   </li>
   <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="variables.html">How to use Variables</a>
+  </li>
+  <li class="nav-item" data-depth="2">
     <button class="nav-item-toggle"></button>
     <a class="nav-link" href="testing.html">Testing</a>
 <ul class="nav-list">
@@ -110,7 +123,13 @@
 </ul>
   </li>
   <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
     <a class="nav-link" href="rest-dsl.html">Working with REST and Rest DSL</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="rest-dsl-openapi.html">Rest DSL contract first</a>
+  </li>
+</ul>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="writing-components.html">Writing Components</a>
@@ -477,9 +496,6 @@
     <a class="nav-link" href="faq/how-should-i-invoke-my-pojos-or-spring-services.html">How should I invoke my POJOs or Spring Services?</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="faq/how-to-avoid-importing-bunch-of-cxf-packages-when-start-up-the-camel-cxf-endpoint-from-osgi-platform-.html">How to avoid importing bunch of cxf packages when start up the camel-cxf endpoint from OSGi platform?</a>
-  </li>
-  <li class="nav-item" data-depth="2">
     <a class="nav-link" href="faq/how-to-avoid-sending-some-or-all-message-headers.html">How to avoid sending some or all message headers?</a>
   </li>
   <li class="nav-item" data-depth="2">
@@ -598,11 +614,11 @@
 <div class="nav-panel-explore" data-panel="explore">
   <div class="context">
     <span class="title">User manual</span>
-    <span class="version">default</span>
+    <span class="version"></span>
   </div>
   <ul class="components">
     <li class="component">
-      <a class="title" href="../components/next/index.html">Camel Components</a>
+      <div class="title"><a href="../components/next/index.html">Camel Components</a></div>
       <ul class="versions">
         <li class="version is-latest">
           <a href="../components/next/index.html">Next (Pre-release)</a>
@@ -610,12 +626,7 @@
       </ul>
     </li>
     <li class="component is-current">
-      <a class="title" href="index.html">User manual</a>
-      <ul class="versions">
-        <li class="version is-current is-latest">
-          <a href="index.html">default</a>
-        </li>
-      </ul>
+      <div class="title"><a href="index.html">User manual</a></div>
     </li>
   </ul>
 </div>
@@ -633,6 +644,7 @@
     <li><a href="camelcontext.html">CamelContext</a></li>
   </ul>
 </nav>
+<div class="edit-this-page"><a href="file:///code/jboss/jboss-camel/docs/user-manual/modules/ROOT/pages/camelcontext.adoc">Edit this Page</a></div>
 </div>
   <div class="content">
 <aside class="toc sidebar" data-title="Contents" data-levels="2">
@@ -643,10 +655,10 @@
 <div id="preamble">
 <div class="sectionbody">
 <div class="paragraph">
-<p>The <a href="https://www.javadoc.io/doc/org.apache.camel/camel-api/latest/org/apache/camel/CamelContext.html">CamelContext</a> is the runtime system, which holds together all the fundamental concepts of Apache Camel (routes, endpoints, components, etc).</p>
+<p>The <a href="https://www.javadoc.io/doc/org.apache.camel/camel-api/latest/org/apache/camel/CamelContext.html"><code>CamelContext</code></a> is the runtime system, which holds together all the fundamental concepts of Apache Camel (routes, endpoints, components, etc).</p>
 </div>
 <div class="paragraph">
-<p>This context object represents the Camel runtime system. Typically, you have one <em>CamelContext</em> instance in an application.</p>
+<p>This context object represents the Camel runtime system. Typically, you have one <code>CamelContext</code> instance in an application.</p>
 </div>
 <div class="imageblock">
 <div class="content">
@@ -822,7 +834,7 @@ your own custom code. The figure below shows the flow between processors.</p>
 <p>A route starts with a consumer (i.e., <code>from</code> in the DSL) that populates the initial <a href="exchange.html" class="xref page">exchange</a>. At each processor step, the output (out) message
 from the previous step is the input (in) message of the next. In many cases, processors don’t set an out message, so in this case the in message
 is reused. The <a href="exchange-pattern.html" class="xref page">exchange pattern</a> of the exchange determines, at the end of a route, whether a reply needs to be sent back to the caller of the route.
-If the exchange pattern (MEP) is InOnly, no reply will be sent back. If it’s InOut, Camel will take the out message from the last step and return it.</p>
+If the exchange pattern (MEP) is <code>InOnly</code>, no reply will be sent back. If it’s <code>InOut</code>, Camel will take the out message from the last step and return it.</p>
 </div>
 </div>
 <div class="sect2">
@@ -868,7 +880,7 @@ path <code>data/inbox</code> (2) tells <code>FileComponent</code> that the start
 option, <code>delay=5000</code> (3) indicates that files should be polled at a 5-second interval.</p>
 </div>
 <div class="paragraph">
-<p>The next figure shows how an endpoint works together with an exchange, producers,and consumers.</p>
+<p>The next figure shows how an endpoint works together with an exchange, producers, and consumers.</p>
 </div>
 <div class="imageblock">
 <div class="content">
@@ -898,7 +910,7 @@ does the heavy lifting.</p>
 <div class="paragraph">
 <p>A consumer is the service that receives messages produced by some external system,
 wraps them in an <a href="exchange.html" class="xref page">exchange</a>, and sends them to be processed.
-Consumers are the source of the exchanges being routed in Camel.
+Consumers are the source of the exchanges being routed in Apache Camel.
 To create a new exchange, a consumer will use the endpoint that wraps
 the payload being consumed. A <a href="processor.html" class="xref page">processor</a> is then used to initiate the routing of the
 exchange in Camel via the routing engine.</p>
@@ -944,7 +956,7 @@ File, FTP, and email components all use scheduled polling consumers.</p>
 <i class="fa icon-note" title="Note"></i>
 </td>
 <td class="content">
-In the Camel components its only either the event driven or scheduled polling consumers that
+In the Camel components, its only either the event driven or scheduled polling consumers that
 are in use. The polling consumer (non-scheduled) is only used to poll on-demand, such as
 when using the <a href="../components/next/eips/pollEnrich-eip.html" class="xref page">Poll Enrich</a> EIP, or from Java by
 creating a <code>PollingConsumer</code> instance via the <code>createPollingConsumer()</code> method from <code>Endpoint</code>.

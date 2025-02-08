@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>SMPP :: Red Hat Camel Reference</title>
+    <title>SMPP :: Red Hat build of Apache Camel</title>
     <meta name="description" content="Send and receive SMS messages using a SMSC (Short Message Service Center).">
     <meta name="generator" content="Antora 3.1.4">
     <link rel="stylesheet" href="../../_/css/site.css">
@@ -12,7 +12,7 @@
 <header class="header">
   <nav class="navbar">
     <div class="navbar-brand">
-      <a class="navbar-item" href="../../manual/index.html">Red Hat Apache Build of Apache Camel Manual</a>
+      <a class="navbar-item" href="/">Red Hat build of Apache Camel</a>
       <button class="navbar-burger" data-target="topbar-nav">
         <span></span>
         <span></span>
@@ -27,6 +27,7 @@
     <div class="panels">
 <div class="nav-panel-menu is-active" data-panel="menu">
   <nav class="nav-menu">
+    <button class="nav-menu-toggle" aria-label="Toggle expand/collapse all" style="display: none"></button>
     <h3 class="title"><a href="index.html">Camel Components</a></h3>
 <ul class="nav-list">
   <li class="nav-item" data-depth="0">
@@ -36,7 +37,46 @@
     <a class="nav-link" href="index.html">Components</a>
 <ul class="nav-list">
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="activemq-component.html">ActiveMQ</a>
+    <a class="nav-link" href="activemq-component.html">ActiveMQ 5.x</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="activemq6-component.html">ActiveMQ 6.x</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="ai-summary.html">AI</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="chatscript-component.html">ChatScript</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="djl-component.html">Deep Java Library</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="langchain4j-chat-component.html">LangChain4j Chat</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="langchain4j-embeddings-component.html">LangChain4j Embeddings</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="langchain4j-tokenizer-component.html">LangChain4j Tokenizer</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="langchain4j-tools-component.html">LangChain4j Tools</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="langchain4j-web-search-component.html">LangChain4j Web Search</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="milvus-component.html">Milvus</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="pinecone-component.html">Pinecone</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="qdrant-component.html">Qdrant</a>
+  </li>
+</ul>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="amqp-component.html">AMQP</a>
@@ -65,6 +105,15 @@
 <ul class="nav-list">
   <li class="nav-item" data-depth="3">
     <a class="nav-link" href="aws2-athena-component.html">AWS Athena</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="aws-bedrock-component.html">AWS Bedrock</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="aws-bedrock-agent-component.html">AWS Bedrock Agent</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="aws-bedrock-agent-runtime-component.html">AWS Bedrock Agent Runtime</a>
   </li>
   <li class="nav-item" data-depth="3">
     <a class="nav-link" href="aws-cloudtrail-component.html">AWS Cloudtrail</a>
@@ -169,7 +218,7 @@
     <a class="nav-link" href="azure-storage-blob-component.html">Azure Storage Blob Service</a>
   </li>
   <li class="nav-item" data-depth="3">
-    <a class="nav-link" href="azure-storage-datalake-component.html">Azure Storage Datalake Service</a>
+    <a class="nav-link" href="azure-storage-datalake-component.html">Azure Storage Data Lake Service</a>
   </li>
   <li class="nav-item" data-depth="3">
     <a class="nav-link" href="azure-storage-queue-component.html">Azure Storage Queue Service</a>
@@ -202,9 +251,6 @@
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="cql-component.html">Cassandra CQL</a>
-  </li>
-  <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="chatscript-component.html">ChatScript</a>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="chunk-component.html">Chunk</a>
@@ -277,9 +323,6 @@
     <a class="nav-link" href="debezium-sqlserver-component.html">Debezium SQL Server Connector</a>
   </li>
 </ul>
-  </li>
-  <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="djl-component.html">Deep Java Library</a>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="dhis2-component.html">DHIS2</a>
@@ -395,6 +438,9 @@
   </li>
   <li class="nav-item" data-depth="3">
     <a class="nav-link" href="google-pubsub-component.html">Google Pubsub</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="google-pubsub-lite-component.html">Google PubSub Lite</a>
   </li>
   <li class="nav-item" data-depth="3">
     <a class="nav-link" href="google-secret-manager-component.html">Google Secret Manager</a>
@@ -687,7 +733,7 @@
     <a class="nav-link" href="ldif-component.html">LDIF</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="log-component.html">Log</a>
+    <a class="nav-link" href="log-component.html">Log Data</a>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="lucene-component.html">Lucene</a>
@@ -899,6 +945,9 @@
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="smb-component.html">SMB</a>
   </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="smooks-component.html">Smooks</a>
+  </li>
   <li class="nav-item is-current-page" data-depth="2">
     <a class="nav-link" href="smpp-component.html">SMPP</a>
   </li>
@@ -906,10 +955,40 @@
     <a class="nav-link" href="snmp-component.html">SNMP</a>
   </li>
   <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="solr-component.html">Solr</a>
+  </li>
+  <li class="nav-item" data-depth="2">
     <a class="nav-link" href="splunk-component.html">Splunk</a>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="splunk-hec-component.html">Splunk HEC</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="spring-summary.html">Spring</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="spring-batch-component.html">Spring Batch</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="spring-event-component.html">Spring Event</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="spring-jdbc-component.html">Spring JDBC</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="spring-ldap-component.html">Spring LDAP</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="spring-rabbitmq-component.html">Spring RabbitMQ</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="spring-redis-component.html">Spring Redis</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="spring-ws-component.html">Spring WebService</a>
+  </li>
+</ul>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="sql-component.html">SQL</a>
@@ -937,6 +1016,18 @@
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="stub-component.html">Stub</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="tahu-summary.html">Tahu</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="tahu-edge-component.html">Tahu Edge Node / Device</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="tahu-host-component.html">Tahu Host Application</a>
+  </li>
+</ul>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="telegram-component.html">Telegram</a>
@@ -999,7 +1090,7 @@
     <a class="nav-link" href="whatsapp-component.html">WhatsApp</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="wordpress-component.html">Wordpress</a>
+    <a class="nav-link" href="wordpress-component.html">WordPress</a>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="workday-component.html">Workday</a>
@@ -1392,7 +1483,13 @@
     <a class="nav-link" href="others/openapi-java.html">Openapi Java</a>
   </li>
   <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="others/openapi-validator.html">Openapi Validator</a>
+  </li>
+  <li class="nav-item" data-depth="2">
     <a class="nav-link" href="others/opentelemetry.html">OpenTelemetry</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="others/platform-http-jolokia.html">Platform HTTP Jolokia</a>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="others/platform-http-main.html">Platform Http Main</a>
@@ -1540,7 +1637,7 @@
     <a class="nav-link" href="eips/event-message.html">Event Message</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="eips/failover-eip.html">Failover</a>
+    <a class="nav-link" href="eips/failoverLoadBalancer-eip.html">Failover Load Balancer</a>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="eips/faultToleranceConfiguration-eip.html">Fault Tolerance Configuration</a>
@@ -1570,13 +1667,13 @@
     <a class="nav-link" href="eips/loadBalance-eip.html">Load Balance</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="eips/log-eip.html">Log</a>
+    <a class="nav-link" href="eips/log-eip.html">Logger</a>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="eips/loop-eip.html">Loop</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="eips/marshal-eip.html">Marshal EIP</a>
+    <a class="nav-link" href="eips/marshal-eip.html">Marshal</a>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="eips/message.html">Message</a>
@@ -1633,6 +1730,9 @@
     <a class="nav-link" href="eips/point-to-point-channel.html">Point to Point Channel</a>
   </li>
   <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="eips/poll-eip.html">Poll</a>
+  </li>
+  <li class="nav-item" data-depth="2">
     <a class="nav-link" href="eips/pollEnrich-eip.html">Poll Enrich</a>
   </li>
   <li class="nav-item" data-depth="2">
@@ -1648,7 +1748,7 @@
     <a class="nav-link" href="eips/publish-subscribe-channel.html">Publish Subscribe Channel</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="eips/random-eip.html">Random</a>
+    <a class="nav-link" href="eips/randomLoadBalancer-eip.html">Random Load Balancer</a>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="eips/recipientList-eip.html">Recipient List</a>
@@ -1690,7 +1790,7 @@
     <a class="nav-link" href="eips/rollback-eip.html">Rollback</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="eips/roundRobin-eip.html">Round Robin</a>
+    <a class="nav-link" href="eips/roundRobinLoadBalancer-eip.html">Round Robin Load Balancer</a>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="eips/routingSlip-eip.html">Routing Slip</a>
@@ -1702,7 +1802,7 @@
     <a class="nav-link" href="eips/sample-eip.html">Sample</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="eips/scatter-gather.html">Scatter Gather</a>
+    <a class="nav-link" href="eips/scatter-gather.html">Scatter-Gather</a>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="eips/script-eip.html">Script</a>
@@ -1732,6 +1832,9 @@
     <a class="nav-link" href="eips/setVariable-eip.html">Set Variable</a>
   </li>
   <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="eips/setVariables-eip.html">Set Variables</a>
+  </li>
+  <li class="nav-item" data-depth="2">
     <a class="nav-link" href="eips/sort-eip.html">Sort</a>
   </li>
   <li class="nav-item" data-depth="2">
@@ -1741,7 +1844,7 @@
     <a class="nav-link" href="eips/step-eip.html">Step</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="eips/sticky-eip.html">Sticky</a>
+    <a class="nav-link" href="eips/stickyLoadBalancer-eip.html">Sticky Load Balancer</a>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="eips/stop-eip.html">Stop</a>
@@ -1762,7 +1865,7 @@
     <a class="nav-link" href="eips/toD-eip.html">To D</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="eips/topic-eip.html">Topic</a>
+    <a class="nav-link" href="eips/topicLoadBalancer-eip.html">Topic Load Balancer</a>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="eips/transactional-client.html">Transactional Client</a>
@@ -1771,13 +1874,13 @@
     <a class="nav-link" href="eips/transform-eip.html">Transform</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="eips/unmarshal-eip.html">Unmarshal EIP</a>
+    <a class="nav-link" href="eips/unmarshal-eip.html">Unmarshal</a>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="eips/validate-eip.html">Validate</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="eips/weighted-eip.html">Weighted</a>
+    <a class="nav-link" href="eips/weightedLoadBalancer-eip.html">Weighted Load Balancer</a>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="eips/wireTap-eip.html">Wire Tap</a>
@@ -1796,7 +1899,7 @@
   </div>
   <ul class="components">
     <li class="component is-current">
-      <a class="title" href="index.html">Camel Components</a>
+      <div class="title"><a href="index.html">Camel Components</a></div>
       <ul class="versions">
         <li class="version is-current is-latest">
           <a href="index.html">Next (Pre-release)</a>
@@ -1804,12 +1907,7 @@
       </ul>
     </li>
     <li class="component">
-      <a class="title" href="../../manual/index.html">User manual</a>
-      <ul class="versions">
-        <li class="version is-latest">
-          <a href="../../manual/index.html">default</a>
-        </li>
-      </ul>
+      <div class="title"><a href="../../manual/index.html">User manual</a></div>
     </li>
   </ul>
 </div>
@@ -1827,6 +1925,7 @@
     <li><a href="smpp-component.html">SMPP</a></li>
   </ul>
 </nav>
+<div class="edit-this-page"><a href="file:///code/jboss/jboss-camel/docs/components/modules/ROOT/pages/smpp-component.adoc">Edit this Page</a></div>
 </div>
   <div class="content">
 <aside class="toc sidebar" data-title="Contents" data-levels="2">
@@ -1857,8 +1956,8 @@ the protocol implementation.</p>
 Entity) and not as an SMSC itself.</p>
 </div>
 <div class="paragraph">
-<p>You are also able to execute ReplaceSm,
-QuerySm, SubmitMulti, CancelSm and DataSm.</p>
+<p>You are also able to execute <code>ReplaceSm</code>,
+<code>QuerySm</code>, <code>SubmitMulti</code>, <code>CancelSm</code>, and <code>DataSm</code>.</p>
 </div>
 <div class="paragraph">
 <p>Maven users will need to add the following dependency to their <code>pom.xml</code>
@@ -1880,7 +1979,7 @@ for this component:</p>
 <h2 id="_sms_limitations"><a class="anchor" href="#_sms_limitations"></a>SMS limitations</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>SMS is neither reliable or secure.  Users who require reliable and
+<p>SMS is neither reliable nor secure. Users who require reliable and
 secure delivery may want to consider using the XMPP or SIP components
 instead, combined with a smartphone app supporting the chosen protocol.</p>
 </div>
@@ -1888,7 +1987,7 @@ instead, combined with a smartphone app supporting the chosen protocol.</p>
 <ul>
 <li>
 <p>Reliability: although the SMPP standard offers a range of feedback
-mechanisms to indicate errors, non-delivery and confirmation of delivery
+mechanisms to indicate errors, non-delivery and confirmation of delivery,
 it is not uncommon for mobile networks to hide or simulate these
 responses.  For example, some networks automatically send a delivery
 confirmation for every message even if the destination number is invalid
@@ -1904,14 +2003,14 @@ authenticated in any other part of the network.  Some operators allow
 staff in retail outlets or call centres to browse through the SMS
 message histories of their customers.  Message sender identity can be
 easily forged.  Regulators and even the mobile telephone industry itself
-has cautioned against the use of SMS in two-factor authentication
+ have cautioned against the use of SMS in two-factor authentication
 schemes and other purposes where security is important.</p>
 </li>
 </ul>
 </div>
 <div class="paragraph">
 <p>While the Camel component makes it as easy as possible to send messages
-to the SMS network, it can not offer an easy solution to these problems.</p>
+to the SMS network, it cannot offer an easy solution to these problems.</p>
 </div>
 </div>
 </div>
@@ -1928,13 +2027,14 @@ component acts when more than one value is set.</p>
 <p>Data coding is an 8 bit field in the SMPP wire format.</p>
 </div>
 <div class="paragraph">
-<p>Alphabet corresponds to bits 0-3 of the data coding field.  For some
-types of message, where a message class is used (by setting bit 5 of the
+<p>The alphabet corresponds to bits 0–3 of the data coding field.
+For some types of message, where a message class is used (by setting bit 5 of the
 data coding field), the lower two bits of the data coding field are not
-interpreted as alphabet and only bits 2 and 3 impact the alphabet.</p>
+interpreted as alphabet.
+Only bits 2 and 3 impact the alphabet.</p>
 </div>
 <div class="paragraph">
-<p>Furthermore, current version of the JSMPP library only seems to support
+<p>Furthermore, the current version of the JSMPP library only seems to support
 bits 2 and 3, assuming that bits 0 and 1 are used for message class.
 This is why the Alphabet class in JSMPP doesn&#8217;t support the value 3
 (binary 0011) which indicates ISO-8859-1.</p>
@@ -1973,20 +2073,21 @@ array, the Camel SMPP component does not consider the data coding value
 (from either the header or endpoint parameter).</p>
 </div>
 <div class="paragraph">
-<p>If some characters in the String can not be represented in the chosen
-alphabet, they may be replaced by the question mark ( ? ) symbol.  Users
-of the API may want to consider checking if their message body can be
+<p>If some characters in the String cannot be represented in the chosen
+alphabet, they may be replaced by the question mark (<code>?</code>) symbol.
+Users of the API may want to consider checking if their message body can be
 converted to ISO-8859-1 before passing it to the component and if not,
-setting the alphabet header to request UCS-2 encoding.  If the alphabet
-and data coding options are not specified at all then the component may
+setting the alphabet header to request UCS-2 encoding.
+If the alphabet
+and data coding options are not specified at all, then the component may
 try to detect the required encoding and set the data coding for you.</p>
 </div>
 <div class="paragraph">
-<p>The list of alphabet codes are specified in the SMPP specification v3.4,
+<p>The list of alphabet codes is specified in the SMPP specification v3.4,
 section 5.2.19.  One notable limitation of the SMPP specification is
 that there is no alphabet code for explicitly requesting use of the GSM
-3.38 (7 bit) character set.  Choosing the value 0 for the alphabet
-selects the SMSC <em>default</em> alphabet, this usually means GSM 3.38 but it
+3.38 (7-bit) character set.  Choosing <code>0</code> for the alphabet
+selects the SMSC <em>default</em> alphabet, this usually means GSM 3.38, but it
 is not guaranteed.  The SMPP gateway Nexmo
 <a href="https://help.nexmo.com/hc/en-us/articles/204015813-How-to-change-the-character-encoding-in-SMPP-">actually
 allows the default to be mapped to any other character set with a
@@ -2007,10 +2108,11 @@ is completed automatically.</p>
 </div>
 <div class="paragraph">
 <p>If the GSM 3.38 alphabet is used, the component will pack up to 160
-characters into the 140 byte message body.  If an 8 bit character set is
-used (e.g. ISO-8859-1 for western Europe) then 140 characters will be
-allowed within the 140 byte message body.  If 16 bit UCS-2 encoding is
-used then just 70 characters fit into each 140 byte message.</p>
+characters into the 140-byte message body.
+If an 8-bit character set is used (e.g., ISO-8859-1 for Western Europe), then 140 characters will be
+allowed within the 140-byte message body.
+If 16 bit UCS-2 encoding is
+ used, then just 70 characters fit into each 140-byte message.</p>
 </div>
 <div class="paragraph">
 <p>Some SMSC providers implement throttling rules.  Each part of a message
@@ -2058,37 +2160,65 @@ use SSLSocket to init a connection to the server.</p>
 <div class="sect2">
 <h3 id="_configuring_component_options"><a class="anchor" href="#_configuring_component_options"></a>Configuring Component Options</h3>
 <div class="paragraph">
-<p>The component level is the highest level which holds general and common configurations that are inherited by the endpoints.
-For example a component may have security settings, credentials for authentication, urls for network connection and so forth.</p>
+<p>At the component level, you set general and shared configurations that are, then, inherited by the endpoints. It is the highest configuration level.</p>
 </div>
 <div class="paragraph">
-<p>Some components only have a few options, and others may have many. Because components typically have pre configured defaults
-that are commonly used, then you may often only need to configure a few options on a component; or none at all.</p>
+<p>For example, a component may have security settings, credentials for authentication, urls for network connection and so forth.</p>
 </div>
 <div class="paragraph">
-<p>Configuring components can be done with the <a href="../../manual/component-dsl.html" class="xref page">Component DSL</a>,
-in a configuration file (application.properties|yaml), or directly with Java code.</p>
+<p>Some components only have a few options, and others may have many.
+Because components typically have pre-configured defaults that are commonly used, then you may often only need to configure a few options on a component; or none at all.</p>
+</div>
+<div class="paragraph">
+<p>You can configure components using:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>the <a href="../../manual/component-dsl.html" class="xref page">Component DSL</a>.</p>
+</li>
+<li>
+<p>in a configuration file (<code>application.properties</code>, <code>*.yaml</code> files, etc).</p>
+</li>
+<li>
+<p>directly in the Java code.</p>
+</li>
+</ul>
 </div>
 </div>
 <div class="sect2">
 <h3 id="_configuring_endpoint_options"><a class="anchor" href="#_configuring_endpoint_options"></a>Configuring Endpoint Options</h3>
 <div class="paragraph">
-<p>Where you find yourself configuring the most is on endpoints, as endpoints often have many options, which allows you to
-configure what you need the endpoint to do. The options are also categorized into whether the endpoint is used as consumer (from)
-or as a producer (to), or used for both.</p>
+<p>You usually spend more time setting up endpoints because they have many options.
+These options help you customize what you want the endpoint to do.
+The options are also categorized into whether the endpoint is used as a consumer (<em>from</em>), as a producer (<em>to</em>), or  both.</p>
 </div>
 <div class="paragraph">
-<p>Configuring endpoints is most often done directly in the endpoint URI as path and query parameters. You can also use
-the <a href="../../manual/Endpoint-dsl.html" class="xref page">Endpoint DSL</a> and <a href="../../manual/dataformat-dsl.html" class="xref page">DataFormat DSL</a>
+<p>Configuring endpoints is most often done directly in the endpoint URI as <em>path</em> and <em>query</em> parameters.
+You can also use the <a href="../../manual/Endpoint-dsl.html" class="xref page">Endpoint DSL</a> and <a href="../../manual/dataformat-dsl.html" class="xref page">DataFormat DSL</a>
 as a <em>type safe</em> way of configuring endpoints and data formats in Java.</p>
 </div>
 <div class="paragraph">
-<p>A good practice when configuring options is to use <a href="../../manual/using-propertyplaceholder.html" class="xref page">Property Placeholders</a>,
-which allows to not hardcode urls, port numbers, sensitive information, and other settings.
-In other words placeholders allows to externalize the configuration from your code, and gives more flexibility and reuse.</p>
+<p>A good practice when configuring options is to use <a href="../../manual/using-propertyplaceholder.html" class="xref page">Property Placeholders</a>.</p>
 </div>
 <div class="paragraph">
-<p>The following two sections lists all the options, firstly for the component followed by the endpoint.</p>
+<p>Property placeholders provide a few benefits:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>They help prevent using hardcoded urls, port numbers, sensitive information, and other settings.</p>
+</li>
+<li>
+<p>They allow externalizing the configuration from the code.</p>
+</li>
+<li>
+<p>They help the code to become more flexible and reusable.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>The following two sections list all the options, firstly for the component followed by the endpoint.</p>
 </div>
 </div>
 </div>
@@ -2837,7 +2967,7 @@ In other words placeholders allows to externalize the configuration from your co
 </div>
 </div>
 <div class="paragraph">
-<p>with the following path and query parameters:</p>
+<p>With the following <em>path</em> and <em>query</em> parameters:</p>
 </div>
 <div class="sect2">
 <h3 id="_path_parameters_2_parameters"><a class="anchor" href="#_path_parameters_2_parameters"></a>Path Parameters (2 parameters)</h3>
@@ -4134,7 +4264,7 @@ When the SMPP consumer receives a <code>DeliverSm</code> or
 can also throw a <code>ProcessRequestException</code> instead of handle the
 failure. In this case, this exception is forwarded to the underlying
 <a href="http://jsmpp.org">JSMPP library</a> which will return the included error
-code to the SMSC. This feature is useful to e.g. instruct the SMSC to
+code to the SMSC. This feature is useful to e.g., instruct the SMSC to
 resend the short message at a later time. This could be done with the
 following lines of code:</p>
 </div>
@@ -4155,7 +4285,7 @@ specification</a> for the complete list of error codes and their meanings.</p>
 </div>
 </div>
 <div class="sect1">
-<h2 id="_samples"><a class="anchor" href="#_samples"></a>Samples</h2>
+<h2 id="_examples"><a class="anchor" href="#_examples"></a>Examples</h2>
 <div class="sectionbody">
 <div class="paragraph">
 <p>A route which sends an SMS using the Java DSL:</p>
@@ -4215,11 +4345,12 @@ from("direct:messageReceiver").id("sampleMessageReceiverRouteId")
 </div>
 <div class="paragraph">
 <p>Please note that with TRX binding type, you wouldn&#8217;t define a corresponding redundant SMPP consumer. Camel will use the
-specified route by <code>messageReceiverRouteId</code> as the corresponding consumer. Internally it uses one and same SmppSession
+specified route by <code>messageReceiverRouteId</code> as the corresponding consumer. Internally, it uses one and same SmppSession
 as producer for the provided consumer.</p>
 </div>
 <div class="paragraph">
-<p>When the SMPP Server doesn&#8217;t support TRX then you have to define separate producer (TX by default) and consumer (RX by default).</p>
+<p>When the SMPP Server doesn&#8217;t support TRX,
+then you have to define separate producer (TX by default) and consumer (RX by default).</p>
 </div>
 <div class="admonitionblock tip">
 <table>
@@ -4254,6 +4385,9 @@ configuration:</p>
 <div class="content">
 <pre class="highlightjs highlight"><code class="language-properties hljs" data-lang="properties">log4j.logger.org.apache.camel.component.smpp=DEBUG</code></pre>
 </div>
+</div>
+<div class="paragraph">
+<p>Unresolved include directive in modules/ROOT/pages/smpp-component.adoc - include::spring-boot:partial$starter.adoc[]</p>
 </div>
 </div>
 </div>

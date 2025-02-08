@@ -3,15 +3,15 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>Route Reload :: Red Hat Apache Build of Apache Camel Manual</title>
-    <meta name="generator" content="Antora 3.0.3">
+    <title>Route Reload :: Red Hat build of Apache Camel</title>
+    <meta name="generator" content="Antora 3.1.4">
     <link rel="stylesheet" href="../_/css/site.css">
   </head>
   <body class="article">
 <header class="header">
   <nav class="navbar">
     <div class="navbar-brand">
-      <a class="navbar-item" href="../../manual/index.html">Red Hat Apache Build of Apache Camel Manual</a>
+      <a class="navbar-item" href="/">Red Hat build of Apache Camel</a>
       <button class="navbar-burger" data-target="topbar-nav">
         <span></span>
         <span></span>
@@ -26,6 +26,7 @@
     <div class="panels">
 <div class="nav-panel-menu is-active" data-panel="menu">
   <nav class="nav-menu">
+    <button class="nav-menu-toggle" aria-label="Toggle expand/collapse all" style="display: none"></button>
     <h3 class="title"><a href="index.html">User manual</a></h3>
 <ul class="nav-list">
   <li class="nav-item" data-depth="0">
@@ -56,7 +57,16 @@
     <a class="nav-link" href="camel-console.html">Camel Developer Console</a>
   </li>
   <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
     <a class="nav-link" href="camel-jbang.html">Camel JBang</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="camel-jbang-kubernetes.html">Camel Kubernetes plugin</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="camel-jbang-k.html">Camel K plugin</a>
+  </li>
+</ul>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="camel-maven-plugin.html">Camel Maven Plugin</a>
@@ -95,6 +105,9 @@
     <a class="nav-link" href="using-propertyplaceholder.html">How to use Camel property placeholders</a>
   </li>
   <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="variables.html">How to use Variables</a>
+  </li>
+  <li class="nav-item" data-depth="2">
     <button class="nav-item-toggle"></button>
     <a class="nav-link" href="testing.html">Testing</a>
 <ul class="nav-list">
@@ -110,7 +123,13 @@
 </ul>
   </li>
   <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
     <a class="nav-link" href="rest-dsl.html">Working with REST and Rest DSL</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="rest-dsl-openapi.html">Rest DSL contract first</a>
+  </li>
+</ul>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="writing-components.html">Writing Components</a>
@@ -477,9 +496,6 @@
     <a class="nav-link" href="faq/how-should-i-invoke-my-pojos-or-spring-services.html">How should I invoke my POJOs or Spring Services?</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="faq/how-to-avoid-importing-bunch-of-cxf-packages-when-start-up-the-camel-cxf-endpoint-from-osgi-platform-.html">How to avoid importing bunch of cxf packages when start up the camel-cxf endpoint from OSGi platform?</a>
-  </li>
-  <li class="nav-item" data-depth="2">
     <a class="nav-link" href="faq/how-to-avoid-sending-some-or-all-message-headers.html">How to avoid sending some or all message headers?</a>
   </li>
   <li class="nav-item" data-depth="2">
@@ -598,11 +614,11 @@
 <div class="nav-panel-explore" data-panel="explore">
   <div class="context">
     <span class="title">User manual</span>
-    <span class="version">default</span>
+    <span class="version"></span>
   </div>
   <ul class="components">
     <li class="component">
-      <a class="title" href="../components/next/index.html">Camel Components</a>
+      <div class="title"><a href="../components/next/index.html">Camel Components</a></div>
       <ul class="versions">
         <li class="version is-latest">
           <a href="../components/next/index.html">Next (Pre-release)</a>
@@ -610,12 +626,7 @@
       </ul>
     </li>
     <li class="component is-current">
-      <a class="title" href="index.html">User manual</a>
-      <ul class="versions">
-        <li class="version is-current is-latest">
-          <a href="index.html">default</a>
-        </li>
-      </ul>
+      <div class="title"><a href="index.html">User manual</a></div>
     </li>
   </ul>
 </div>
@@ -633,6 +644,7 @@
     <li><a href="route-reload.html">RouteReload</a></li>
   </ul>
 </nav>
+<div class="edit-this-page"><a href="file:///code/jboss/jboss-camel/docs/user-manual/modules/ROOT/pages/route-reload.adoc">Edit this Page</a></div>
 </div>
   <div class="content">
 <aside class="toc sidebar" data-title="Contents" data-levels="2">
@@ -647,7 +659,7 @@
 for file changes, and then automatic trigger reload of the running routes in the Camel application.</p>
 </div>
 <div class="paragraph">
-<p>This functionality is intended for development purposes, and not for production use.</p>
+<p>This functionality is intended for development purposes and not for production use.</p>
 </div>
 <div class="admonitionblock note">
 <table>
@@ -670,7 +682,7 @@ can also reload Java source code changes and much more.
 <div class="sectionbody">
 <div class="paragraph">
 <p>You cannot watch for file changes in the Java classpath. It is only possible to watch
-for file changes in the file system (i.e. using <code>file</code> and not <code>classpath</code>).</p>
+for file changes in the file system (i.e., using <code>file</code> and not <code>classpath</code>).</p>
 </div>
 <div class="paragraph">
 <p>The route reloading can be configured in Java or with Spring Boot, Quarkus in the following way:</p>
@@ -734,33 +746,33 @@ camel.springboot.routes-reload-pattern = *.xml</code></pre>
 </thead>
 <tbody>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">routesReloadDirectory</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Directory to scan for route changes. Camel cannot scan the classpath, so this must be configured to a file directory. Development with Maven as build tool, you can configure the directory to be src/main/resources to scan for Camel routes in XML or YAML files.</p></td>
-<td class="tableblock halign-center valign-top"><p class="tableblock">src/main/resources/camel</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>routesReloadDirectory</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Directory to scan for route changes. Camel cannot scan the classpath, so this must be configured to a file directory. Development with Maven as build tool, you can configure the directory to be <code>src/main/resources</code> to scan for Camel routes in XML or YAML files.</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><code>src/main/resources/camel</code></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">String</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">routesReloadDirectoryRecursive</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Whether the directory to scan should include sub-directories. Depending on the number of sub-directories, then this can cause the JVM to startup slower as Camel uses the JDK file-watch service to scan for file changes.</p></td>
-<td class="tableblock halign-center valign-top"><p class="tableblock">false</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>routesReloadDirectoryRecursive</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Whether the directory to scan should include subdirectories. Depending on the number of sub-directories, then this can cause the JVM to start up slower as Camel uses the JDK file-watch service to scan for file changes.</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><code>false</code></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">boolean</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">routesReloadEnabled</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Used for enabling automatic routes reloading. If enabled then Camel will watch for file changes in the given reload directory, and trigger reloading routes if files are changed.</p></td>
-<td class="tableblock halign-center valign-top"><p class="tableblock">false</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>routesReloadEnabled</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Used for enabling automatic routes reloading. If enabled, then Camel will watch for file changes in the given reload directory, and trigger reloading routes if files are changed.</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><code>false</code></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">boolean</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">routesReloadPattern</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>routesReloadPattern</code></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Used for inclusive filtering of routes from directories. Typical used for specifying to accept routes in XML or YAML files. The default pattern is *.yaml,*.xml Multiple patterns can be specified separated by comma.</p></td>
-<td class="tableblock halign-center valign-top"><p class="tableblock">*.yaml,*.xml</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><code>*.yaml,*.xml</code></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">String</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">routesReloadRemoveAllRoutes</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">When reloading routes should all existing routes be stopped and removed. By default, Camel will stop and remove all existing routes before reloading routes. This ensures that only the reloaded routes will be active. If disabled then only routes with the same route id is updated, and any existing routes are continued to run.</p></td>
-<td class="tableblock halign-center valign-top"><p class="tableblock">true</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>routesReloadRemoveAllRoutes</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">When reloading routes should all existing routes be stopped and removed. By default, Camel will stop and remove all existing routes before reloading routes. This ensures that only the reloaded routes will be active. If disabled, then only routes with the same route id are updated, and any existing routes are continued to run.</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><code>true</code></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">boolean</p></td>
 </tr>
 </tbody>
@@ -769,9 +781,9 @@ camel.springboot.routes-reload-pattern = *.xml</code></pre>
 <div class="sect2">
 <h3 id="_must_use_route_ids"><a class="anchor" href="#_must_use_route_ids"></a>Must use route id&#8217;s</h3>
 <div class="paragraph">
-<p>When using route reload then it is recommended to assign id&#8217;s to your routes, so Camel
-knows exactly which routes have been updated. This is necessary because Camel
-must stop the existing routes from running, before they can be updated.</p>
+<p>When using route reload, then it is recommended to assign id&#8217;s to your routes, so Camel
+knows exactly which routes have been updated.
+This is necessary because Apache Camel must stop the existing routes from running before they can be updated.</p>
 </div>
 <div class="paragraph">
 <p>And adding new routes is therefore possible as they would have a new unique route id specified.</p>
@@ -786,15 +798,15 @@ must stop the existing routes from running, before they can be updated.</p>
 <p>See related <a href="context-reload.html" class="xref page">Context Reload</a>.</p>
 </div>
 <div class="paragraph">
-<p>See the following examples that comes with live reloading enabled:</p>
+<p>See the following examples that come with live reloading enabled:</p>
 </div>
 <div class="ulist">
 <ul>
 <li>
-<p><a href="https://github.com/apache/camel-examples/tree/main/examples/main-xml">camel-examples/examples/main-xml</a></p>
+<p><a href="https://github.com/apache/camel-examples/tree/main/main-xml">camel-examples/examples/main-xml</a></p>
 </li>
 <li>
-<p><a href="https://github.com/apache/camel-examples/tree/main/examples/main-yaml">camel-examples/examples/main-yaml</a></p>
+<p><a href="https://github.com/apache/camel-examples/tree/main/main-yaml">camel-examples/examples/main-yaml</a></p>
 </li>
 </ul>
 </div>

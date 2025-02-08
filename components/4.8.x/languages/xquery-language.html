@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>XQuery :: Red Hat Camel Reference</title>
+    <title>XQuery :: Red Hat build of Apache Camel</title>
     <meta name="description" content="Evaluates an XQuery expressions against an XML payload.">
     <meta name="generator" content="Antora 3.1.4">
     <link rel="stylesheet" href="../../../_/css/site.css">
@@ -12,7 +12,7 @@
 <header class="header">
   <nav class="navbar">
     <div class="navbar-brand">
-      <a class="navbar-item" href="../../manual/index.html">Red Hat Apache Build of Apache Camel Manual</a>
+      <a class="navbar-item" href="/">Red Hat build of Apache Camel</a>
       <button class="navbar-burger" data-target="topbar-nav">
         <span></span>
         <span></span>
@@ -27,6 +27,7 @@
     <div class="panels">
 <div class="nav-panel-menu is-active" data-panel="menu">
   <nav class="nav-menu">
+    <button class="nav-menu-toggle" aria-label="Toggle expand/collapse all" style="display: none"></button>
     <h3 class="title"><a href="../index.html">Camel Components</a></h3>
 <ul class="nav-list">
   <li class="nav-item" data-depth="0">
@@ -36,7 +37,46 @@
     <a class="nav-link" href="../index.html">Components</a>
 <ul class="nav-list">
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="../activemq-component.html">ActiveMQ</a>
+    <a class="nav-link" href="../activemq-component.html">ActiveMQ 5.x</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../activemq6-component.html">ActiveMQ 6.x</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../ai-summary.html">AI</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../chatscript-component.html">ChatScript</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../djl-component.html">Deep Java Library</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../langchain4j-chat-component.html">LangChain4j Chat</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../langchain4j-embeddings-component.html">LangChain4j Embeddings</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../langchain4j-tokenizer-component.html">LangChain4j Tokenizer</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../langchain4j-tools-component.html">LangChain4j Tools</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../langchain4j-web-search-component.html">LangChain4j Web Search</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../milvus-component.html">Milvus</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../pinecone-component.html">Pinecone</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../qdrant-component.html">Qdrant</a>
+  </li>
+</ul>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="../amqp-component.html">AMQP</a>
@@ -65,6 +105,15 @@
 <ul class="nav-list">
   <li class="nav-item" data-depth="3">
     <a class="nav-link" href="../aws2-athena-component.html">AWS Athena</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../aws-bedrock-component.html">AWS Bedrock</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../aws-bedrock-agent-component.html">AWS Bedrock Agent</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../aws-bedrock-agent-runtime-component.html">AWS Bedrock Agent Runtime</a>
   </li>
   <li class="nav-item" data-depth="3">
     <a class="nav-link" href="../aws-cloudtrail-component.html">AWS Cloudtrail</a>
@@ -169,7 +218,7 @@
     <a class="nav-link" href="../azure-storage-blob-component.html">Azure Storage Blob Service</a>
   </li>
   <li class="nav-item" data-depth="3">
-    <a class="nav-link" href="../azure-storage-datalake-component.html">Azure Storage Datalake Service</a>
+    <a class="nav-link" href="../azure-storage-datalake-component.html">Azure Storage Data Lake Service</a>
   </li>
   <li class="nav-item" data-depth="3">
     <a class="nav-link" href="../azure-storage-queue-component.html">Azure Storage Queue Service</a>
@@ -202,9 +251,6 @@
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="../cql-component.html">Cassandra CQL</a>
-  </li>
-  <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="../chatscript-component.html">ChatScript</a>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="../chunk-component.html">Chunk</a>
@@ -277,9 +323,6 @@
     <a class="nav-link" href="../debezium-sqlserver-component.html">Debezium SQL Server Connector</a>
   </li>
 </ul>
-  </li>
-  <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="../djl-component.html">Deep Java Library</a>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="../dhis2-component.html">DHIS2</a>
@@ -395,6 +438,9 @@
   </li>
   <li class="nav-item" data-depth="3">
     <a class="nav-link" href="../google-pubsub-component.html">Google Pubsub</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../google-pubsub-lite-component.html">Google PubSub Lite</a>
   </li>
   <li class="nav-item" data-depth="3">
     <a class="nav-link" href="../google-secret-manager-component.html">Google Secret Manager</a>
@@ -687,7 +733,7 @@
     <a class="nav-link" href="../ldif-component.html">LDIF</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="../log-component.html">Log</a>
+    <a class="nav-link" href="../log-component.html">Log Data</a>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="../lucene-component.html">Lucene</a>
@@ -900,10 +946,16 @@
     <a class="nav-link" href="../smb-component.html">SMB</a>
   </li>
   <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../smooks-component.html">Smooks</a>
+  </li>
+  <li class="nav-item" data-depth="2">
     <a class="nav-link" href="../smpp-component.html">SMPP</a>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="../snmp-component.html">SNMP</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../solr-component.html">Solr</a>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="../splunk-component.html">Splunk</a>
@@ -966,6 +1018,18 @@
     <a class="nav-link" href="../stub-component.html">Stub</a>
   </li>
   <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../tahu-summary.html">Tahu</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../tahu-edge-component.html">Tahu Edge Node / Device</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../tahu-host-component.html">Tahu Host Application</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
     <a class="nav-link" href="../telegram-component.html">Telegram</a>
   </li>
   <li class="nav-item" data-depth="2">
@@ -1026,7 +1090,7 @@
     <a class="nav-link" href="../whatsapp-component.html">WhatsApp</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="../wordpress-component.html">Wordpress</a>
+    <a class="nav-link" href="../wordpress-component.html">WordPress</a>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="../workday-component.html">Workday</a>
@@ -1419,7 +1483,13 @@
     <a class="nav-link" href="../others/openapi-java.html">Openapi Java</a>
   </li>
   <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../others/openapi-validator.html">Openapi Validator</a>
+  </li>
+  <li class="nav-item" data-depth="2">
     <a class="nav-link" href="../others/opentelemetry.html">OpenTelemetry</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../others/platform-http-jolokia.html">Platform HTTP Jolokia</a>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="../others/platform-http-main.html">Platform Http Main</a>
@@ -1567,7 +1637,7 @@
     <a class="nav-link" href="../eips/event-message.html">Event Message</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="../eips/failover-eip.html">Failover</a>
+    <a class="nav-link" href="../eips/failoverLoadBalancer-eip.html">Failover Load Balancer</a>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="../eips/faultToleranceConfiguration-eip.html">Fault Tolerance Configuration</a>
@@ -1597,13 +1667,13 @@
     <a class="nav-link" href="../eips/loadBalance-eip.html">Load Balance</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="../eips/log-eip.html">Log</a>
+    <a class="nav-link" href="../eips/log-eip.html">Logger</a>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="../eips/loop-eip.html">Loop</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="../eips/marshal-eip.html">Marshal EIP</a>
+    <a class="nav-link" href="../eips/marshal-eip.html">Marshal</a>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="../eips/message.html">Message</a>
@@ -1660,6 +1730,9 @@
     <a class="nav-link" href="../eips/point-to-point-channel.html">Point to Point Channel</a>
   </li>
   <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../eips/poll-eip.html">Poll</a>
+  </li>
+  <li class="nav-item" data-depth="2">
     <a class="nav-link" href="../eips/pollEnrich-eip.html">Poll Enrich</a>
   </li>
   <li class="nav-item" data-depth="2">
@@ -1675,7 +1748,7 @@
     <a class="nav-link" href="../eips/publish-subscribe-channel.html">Publish Subscribe Channel</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="../eips/random-eip.html">Random</a>
+    <a class="nav-link" href="../eips/randomLoadBalancer-eip.html">Random Load Balancer</a>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="../eips/recipientList-eip.html">Recipient List</a>
@@ -1717,7 +1790,7 @@
     <a class="nav-link" href="../eips/rollback-eip.html">Rollback</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="../eips/roundRobin-eip.html">Round Robin</a>
+    <a class="nav-link" href="../eips/roundRobinLoadBalancer-eip.html">Round Robin Load Balancer</a>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="../eips/routingSlip-eip.html">Routing Slip</a>
@@ -1729,7 +1802,7 @@
     <a class="nav-link" href="../eips/sample-eip.html">Sample</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="../eips/scatter-gather.html">Scatter Gather</a>
+    <a class="nav-link" href="../eips/scatter-gather.html">Scatter-Gather</a>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="../eips/script-eip.html">Script</a>
@@ -1759,6 +1832,9 @@
     <a class="nav-link" href="../eips/setVariable-eip.html">Set Variable</a>
   </li>
   <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../eips/setVariables-eip.html">Set Variables</a>
+  </li>
+  <li class="nav-item" data-depth="2">
     <a class="nav-link" href="../eips/sort-eip.html">Sort</a>
   </li>
   <li class="nav-item" data-depth="2">
@@ -1768,7 +1844,7 @@
     <a class="nav-link" href="../eips/step-eip.html">Step</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="../eips/sticky-eip.html">Sticky</a>
+    <a class="nav-link" href="../eips/stickyLoadBalancer-eip.html">Sticky Load Balancer</a>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="../eips/stop-eip.html">Stop</a>
@@ -1789,7 +1865,7 @@
     <a class="nav-link" href="../eips/toD-eip.html">To D</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="../eips/topic-eip.html">Topic</a>
+    <a class="nav-link" href="../eips/topicLoadBalancer-eip.html">Topic Load Balancer</a>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="../eips/transactional-client.html">Transactional Client</a>
@@ -1798,13 +1874,13 @@
     <a class="nav-link" href="../eips/transform-eip.html">Transform</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="../eips/unmarshal-eip.html">Unmarshal EIP</a>
+    <a class="nav-link" href="../eips/unmarshal-eip.html">Unmarshal</a>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="../eips/validate-eip.html">Validate</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="../eips/weighted-eip.html">Weighted</a>
+    <a class="nav-link" href="../eips/weightedLoadBalancer-eip.html">Weighted Load Balancer</a>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="../eips/wireTap-eip.html">Wire Tap</a>
@@ -1823,7 +1899,7 @@
   </div>
   <ul class="components">
     <li class="component is-current">
-      <a class="title" href="../index.html">Camel Components</a>
+      <div class="title"><a href="../index.html">Camel Components</a></div>
       <ul class="versions">
         <li class="version is-current is-latest">
           <a href="../index.html">Next (Pre-release)</a>
@@ -1831,12 +1907,7 @@
       </ul>
     </li>
     <li class="component">
-      <a class="title" href="../../../manual/index.html">User manual</a>
-      <ul class="versions">
-        <li class="version is-latest">
-          <a href="../../../manual/index.html">default</a>
-        </li>
-      </ul>
+      <div class="title"><a href="../../../manual/index.html">User manual</a></div>
     </li>
   </ul>
 </div>
@@ -1854,6 +1925,7 @@
     <li><a href="xquery-language.html">XQuery</a></li>
   </ul>
 </nav>
+<div class="edit-this-page"><a href="file:///code/jboss/jboss-camel/docs/components/modules/languages/pages/xquery-language.adoc">Edit this Page</a></div>
 </div>
   <div class="content">
 <aside class="toc sidebar" data-title="Contents" data-levels="2">
@@ -1902,7 +1974,7 @@ or as an expression for a <a href="../eips/recipientList-eip.html" class="xref p
 <tbody>
 <tr>
 <td class="tableblock halign-left valign-top"><div class="content"><div id="_language_option_configurationRef" class="paragraph">
-<p><a href="#_language_option_configurationRef" class="anchor"></a><strong>configurationRef</strong></p>
+<p><a href="#_language_option_configurationRef" class="anchor"></a><strong>configurationRef</strong> (advanced)</p>
 </div></div></td>
 <td class="tableblock halign-left valign-top"></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>String</code></p></td>
@@ -1912,7 +1984,7 @@ or as an expression for a <a href="../eips/recipientList-eip.html" class="xref p
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><div class="content"><div id="_language_option_source" class="paragraph">
-<p><a href="#_language_option_source" class="anchor"></a><strong>source</strong></p>
+<p><a href="#_language_option_source" class="anchor"></a><strong>source</strong> (common)</p>
 </div></div></td>
 <td class="tableblock halign-left valign-top"></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>String</code></p></td>
@@ -1922,7 +1994,7 @@ or as an expression for a <a href="../eips/recipientList-eip.html" class="xref p
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><div class="content"><div id="_language_option_resultType" class="paragraph">
-<p><a href="#_language_option_resultType" class="anchor"></a><strong>resultType</strong></p>
+<p><a href="#_language_option_resultType" class="anchor"></a><strong>resultType</strong> (common)</p>
 </div></div></td>
 <td class="tableblock halign-left valign-top"></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>String</code></p></td>
@@ -1932,7 +2004,7 @@ or as an expression for a <a href="../eips/recipientList-eip.html" class="xref p
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><div class="content"><div id="_language_option_trim" class="paragraph">
-<p><a href="#_language_option_trim" class="anchor"></a><strong>trim</strong></p>
+<p><a href="#_language_option_trim" class="anchor"></a><strong>trim</strong> (advanced)</p>
 </div></div></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>true</code></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>Boolean</code></p></td>
@@ -1966,39 +2038,39 @@ And the following variables are available as well:</p>
 </thead>
 <tbody>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">exchange</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>exchange</code></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Exchange</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">The current Exchange</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">in.body</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>in.body</code></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Object</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">The message body</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">out.body</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>out.body</code></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Object</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>deprecated</strong> The OUT message body (if any)</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">in.headers.*</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>in.headers.*</code></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Object</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">You can access the value of exchange.in.headers with key <strong>foo</strong> by using
 the variable which name is in.headers.foo</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">out.headers.*</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>out.headers.*</code></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Object</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>deprecated</strong> You can access the value of exchange.out.headers with key <strong>foo</strong> by using
-the variable which name is out.headers.foo variable</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>deprecated</strong> You can access the value of <code>exchange.out.headers</code> with key <strong>foo</strong> by using
+the variable which name is <code>out.headers.foo</code> variable</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>key name</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code><strong>key name</strong></code></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Object</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Any exchange.properties and exchange.in.headers and any additional
+<td class="tableblock halign-left valign-top"><p class="tableblock">Any <code>exchange.properties</code> and <code>exchange.in.headers</code> and any additional
 parameters set using <code>setParameters(Map)</code>. These parameters are added
-with they own key name, for instance if there is an IN header with the
-key name <strong>foo</strong> then its added as <strong>foo</strong>.</p></td>
+with their own key name, for instance, if there is an IN header with the
+key name <strong>foo</strong> then it is added as <strong>foo</strong>.</p></td>
 </tr>
 </tbody>
 </table>
@@ -2018,7 +2090,7 @@ key name <strong>foo</strong> then its added as <strong>foo</strong>.</p></td>
 <p>You can also use functions inside your query, in which case you need an
 explicit type conversion, or you will get an <code>org.w3c.dom.DOMException:
 HIERARCHY_REQUEST_ERR</code>). You need to pass in the expected output type of the function.
-For example the concat function returns a <code>String</code> which is done as shown:</p>
+For example, the concat function returns a <code>String</code> which is done as shown:</p>
 </div>
 <div class="listingblock">
 <div class="content">
@@ -2043,7 +2115,7 @@ For example the concat function returns a <code>String</code> which is done as s
 <h3 id="_using_namespaces"><a class="anchor" href="#_using_namespaces"></a>Using namespaces</h3>
 <div class="paragraph">
 <p>If you have a standard set of namespaces you wish to work with and wish
-to share them across many XQuery expressions you can use the
+to share them across many XQuery expressions, you can use the
 <code>org.apache.camel.support.builder.Namespaces</code> when using Java DSL as shown:</p>
 </div>
 <div class="listingblock">
@@ -2057,11 +2129,11 @@ from("direct:start")
 </div>
 <div class="paragraph">
 <p>Notice how the namespaces are provided to <code>xquery</code> with the <code>ns</code> variable
-that are passed in as the 2nd parameter.</p>
+that are passed in as the second parameter.</p>
 </div>
 <div class="paragraph">
 <p>Each namespace is a key=value pair, where the prefix is the key.
-In the XQuery expression then the namespace is used by its prefix, eg:</p>
+In the XQuery expression then the namespace is used by its prefix, e.g.:</p>
 </div>
 <div class="listingblock">
 <div class="content">
@@ -2079,7 +2151,7 @@ In the XQuery expression then the namespace is used by its prefix, eg:</p>
 </div>
 </div>
 <div class="paragraph">
-<p>When using namespaces in XML DSL then its different, as you setup the namespaces
+<p>When using namespaces in XML DSL then it is different, as you set up the namespaces
 in the XML root tag (or one of the <code>camelContext</code>, <code>routes</code>, <code>route</code> tags).</p>
 </div>
 <div class="paragraph">
@@ -2129,7 +2201,7 @@ as shown below:</p>
 <div class="paragraph">
 <p>Notice that xquery will use DOMResult by default, so if we want to grab
 the value of the person node, using <code>text()</code> we need to tell XQuery to use
-String as result type, as shown:</p>
+String as the result type, as shown:</p>
 </div>
 <div class="listingblock">
 <div class="content">
@@ -2157,10 +2229,10 @@ declare them in the XQuery expression.</p>
 <h2 id="_loading_script_from_external_resource"><a class="anchor" href="#_loading_script_from_external_resource"></a>Loading script from external resource</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>You can externalize the script and have Camel load it from a resource
+<p>You can externalize the script and have Apache Camel load it from a resource
 such as <code>"classpath:"</code>, <code>"file:"</code>, or <code>"http:"</code>.
 This is done using the following syntax: <code>"resource:scheme:location"</code>,
-e.g. to refer to a file on the classpath you can do:</p>
+e.g., to refer to a file on the classpath you can do:</p>
 </div>
 <div class="listingblock">
 <div class="content">
@@ -2174,7 +2246,7 @@ e.g. to refer to a file on the classpath you can do:</p>
 <div class="sectionbody">
 <div class="paragraph">
 <p>XQuery is a very powerful language for querying, searching, sorting and
-returning XML. For help learning XQuery try these tutorials</p>
+returning XML. For help learning XQuery, try these tutorials</p>
 </div>
 <div class="ulist">
 <ul>
@@ -2192,13 +2264,12 @@ returning XML. For help learning XQuery try these tutorials</p>
 <h2 id="_dependencies"><a class="anchor" href="#_dependencies"></a>Dependencies</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>To use XQuery in your camel routes you need to add the a dependency on
-<strong>camel-saxon</strong> which implements the XQuery language.</p>
+<p>To use XQuery in your Camel routes, you need to add the dependency on
+<strong>camel-saxon</strong>, which implements the XQuery language.</p>
 </div>
 <div class="paragraph">
-<p>If you use maven you could just add the following to your pom.xml,
-substituting the version number for the latest &amp; greatest release (see
-the download page for the latest versions).</p>
+<p>If you use Maven you could add the following to your <code>pom.xml</code>,
+substituting the version number for the latest &amp; greatest release.</p>
 </div>
 <div class="listingblock">
 <div class="content">
@@ -2208,6 +2279,9 @@ the download page for the latest versions).</p>
   &lt;version&gt;x.x.x&lt;/version&gt;
 &lt;/dependency&gt;</code></pre>
 </div>
+</div>
+<div class="paragraph">
+<p>Unresolved include directive in modules/languages/pages/xquery-language.adoc - include::spring-boot:partial$starter.adoc[]</p>
 </div>
 </div>
 </div>

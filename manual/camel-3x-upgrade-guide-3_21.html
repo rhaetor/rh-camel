@@ -3,15 +3,15 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>Apache Camel 3.x Upgrade Guide :: Red Hat Apache Build of Apache Camel Manual</title>
-    <meta name="generator" content="Antora 3.0.3">
+    <title>Apache Camel 3.x Upgrade Guide :: Red Hat build of Apache Camel</title>
+    <meta name="generator" content="Antora 3.1.4">
     <link rel="stylesheet" href="../_/css/site.css">
   </head>
   <body class="article">
 <header class="header">
   <nav class="navbar">
     <div class="navbar-brand">
-      <a class="navbar-item" href="../../manual/index.html">Red Hat Apache Build of Apache Camel Manual</a>
+      <a class="navbar-item" href="/">Red Hat build of Apache Camel</a>
       <button class="navbar-burger" data-target="topbar-nav">
         <span></span>
         <span></span>
@@ -26,6 +26,7 @@
     <div class="panels">
 <div class="nav-panel-menu is-active" data-panel="menu">
   <nav class="nav-menu">
+    <button class="nav-menu-toggle" aria-label="Toggle expand/collapse all" style="display: none"></button>
     <h3 class="title"><a href="index.html">User manual</a></h3>
 <ul class="nav-list">
   <li class="nav-item" data-depth="0">
@@ -56,7 +57,16 @@
     <a class="nav-link" href="camel-console.html">Camel Developer Console</a>
   </li>
   <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
     <a class="nav-link" href="camel-jbang.html">Camel JBang</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="camel-jbang-kubernetes.html">Camel Kubernetes plugin</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="camel-jbang-k.html">Camel K plugin</a>
+  </li>
+</ul>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="camel-maven-plugin.html">Camel Maven Plugin</a>
@@ -95,6 +105,9 @@
     <a class="nav-link" href="using-propertyplaceholder.html">How to use Camel property placeholders</a>
   </li>
   <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="variables.html">How to use Variables</a>
+  </li>
+  <li class="nav-item" data-depth="2">
     <button class="nav-item-toggle"></button>
     <a class="nav-link" href="testing.html">Testing</a>
 <ul class="nav-list">
@@ -110,7 +123,13 @@
 </ul>
   </li>
   <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
     <a class="nav-link" href="rest-dsl.html">Working with REST and Rest DSL</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="rest-dsl-openapi.html">Rest DSL contract first</a>
+  </li>
+</ul>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="writing-components.html">Writing Components</a>
@@ -477,9 +496,6 @@
     <a class="nav-link" href="faq/how-should-i-invoke-my-pojos-or-spring-services.html">How should I invoke my POJOs or Spring Services?</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="faq/how-to-avoid-importing-bunch-of-cxf-packages-when-start-up-the-camel-cxf-endpoint-from-osgi-platform-.html">How to avoid importing bunch of cxf packages when start up the camel-cxf endpoint from OSGi platform?</a>
-  </li>
-  <li class="nav-item" data-depth="2">
     <a class="nav-link" href="faq/how-to-avoid-sending-some-or-all-message-headers.html">How to avoid sending some or all message headers?</a>
   </li>
   <li class="nav-item" data-depth="2">
@@ -598,11 +614,11 @@
 <div class="nav-panel-explore" data-panel="explore">
   <div class="context">
     <span class="title">User manual</span>
-    <span class="version">default</span>
+    <span class="version"></span>
   </div>
   <ul class="components">
     <li class="component">
-      <a class="title" href="../components/next/index.html">Camel Components</a>
+      <div class="title"><a href="../components/next/index.html">Camel Components</a></div>
       <ul class="versions">
         <li class="version is-latest">
           <a href="../components/next/index.html">Next (Pre-release)</a>
@@ -610,12 +626,7 @@
       </ul>
     </li>
     <li class="component is-current">
-      <a class="title" href="index.html">User manual</a>
-      <ul class="versions">
-        <li class="version is-current is-latest">
-          <a href="index.html">default</a>
-        </li>
-      </ul>
+      <div class="title"><a href="index.html">User manual</a></div>
     </li>
   </ul>
 </div>
@@ -632,6 +643,7 @@
     <li><a href="camel-3x-upgrade-guide-3_21.html">Apache Camel 3.x Upgrade Guide</a></li>
   </ul>
 </nav>
+<div class="edit-this-page"><a href="file:///code/jboss/jboss-camel/docs/user-manual/modules/ROOT/pages/camel-3x-upgrade-guide-3_21.adoc">Edit this Page</a></div>
 </div>
   <div class="content">
 <aside class="toc sidebar" data-title="Contents" data-levels="2">
@@ -643,8 +655,32 @@
 <div class="sectionbody">
 <div class="paragraph">
 <p>This document is for helping you upgrade your Apache Camel application
-from Camel 3.x to 3.y. For example if you are upgrading Camel 3.0 to 3.2, then you should follow the guides
+from Camel 3.x to 3.y. For example, if you are upgrading Camel 3.0 to 3.2, then you should follow the guides
 from both 3.0 to 3.1 and 3.1 to 3.2.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_upgrading_camel_3_21_to_3_21_3"><a class="anchor" href="#_upgrading_camel_3_21_to_3_21_3"></a>Upgrading Camel 3.21 to 3.21.3</h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="_camel_kafka"><a class="anchor" href="#_camel_kafka"></a>camel-kafka</h3>
+<div class="paragraph">
+<p>The behavior for <code>breakOnFirstError</code> was altered as numerous issues were fixed. The behavior related to committing
+the offset is now determined by the <code>CommitManager</code> that is configured.</p>
+</div>
+<div class="paragraph">
+<p>When the default <code>CommitManager</code> is used (<code>NoopCommitManager</code>) then no commit is performed. The route implementation will
+be responsible for managing the offset using <code>KafkaManualCommit</code> to manage the retrying of the payload.</p>
+</div>
+<div class="paragraph">
+<p>When using the <code>SyncCommitManager</code> then the offset will be committed so that the payload is continually retried. This was
+the behavior described in the documentation.</p>
+</div>
+<div class="paragraph">
+<p>When using the <code>AsyncCommitManager</code> then the offset will be committed so that the payload is continually retried. This was
+the behavior described in the documentation.</p>
+</div>
 </div>
 </div>
 </div>
@@ -711,6 +747,68 @@ one of each out of the box.</p>
 </div>
 </div>
 <div class="sect2">
+<h3 id="_camel_micrometer"><a class="anchor" href="#_camel_micrometer"></a>camel-micrometer</h3>
+<div class="paragraph">
+<p>The metrics has been renamed to follow Micrometer naming convention <a href="https://micrometer.io/docs/concepts#_naming_meters">Naming Meters</a>.</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Old Name</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">New Name</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">CamelExchangeEventNotifier</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">camel.exchange.event.notifier</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">CamelExchangesFailed</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">camel.exchanges.failed</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">CamelExchangesFailuresHandled</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">camel.exchanges.failures.handled</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">CamelExchangesInflight</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">camel.exchanges.external.redeliveries</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">CamelExchangesSucceeded</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">camel.exchanges.succeeded</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">CamelExchangesTotal</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">camel.exchanges.total</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">CamelMessageHistory</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">camel.message.history</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">CamelRoutePolicy</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">camel.route.policy</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">CamelRoutePolicyLongTask</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">camel.route.policy.long.task</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">CamelRoutesAdded</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">camel.routes.added</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">CamelRoutesRunning</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">camel.routes.running</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="sect2">
 <h3 id="_camel_http_common"><a class="anchor" href="#_camel_http_common"></a>camel-http-common</h3>
 <div class="paragraph">
 <p>The API in <code>org.apache.camel.http.common.HttpBinding</code> has changed slightly to be more reusable.
@@ -729,7 +827,7 @@ To enable access, then set <code>accessExternalSchemaProtocols=all</code> or spe
 <div class="sect2">
 <h3 id="_camel_platform_http_vertx"><a class="anchor" href="#_camel_platform_http_vertx"></a>camel-platform-http-vertx</h3>
 <div class="paragraph">
-<p>If the route or consumer is suspended then http status 503 is now returned instead of 404.</p>
+<p>If the route or consumer is suspended, then http status 503 is now returned instead of 404.</p>
 </div>
 </div>
 <div class="sect2">
@@ -748,19 +846,19 @@ To enable access, then set <code>accessExternalSchemaProtocols=all</code> or spe
 <div class="sect2">
 <h3 id="_camel_cm_sms"><a class="anchor" href="#_camel_cm_sms"></a>camel-cm-sms</h3>
 <div class="paragraph">
-<p>XML parsers has been made more secure by disabling DOCTYPE and/or access to external DTD/Schema.</p>
+<p>XML parsers have been made more secure by disabling <code>DOCTYPE</code> and/or access to external DTD/Schema.</p>
 </div>
 </div>
 <div class="sect2">
 <h3 id="_camel_schematron"><a class="anchor" href="#_camel_schematron"></a>camel-schematron</h3>
 <div class="paragraph">
-<p>XML parsers has been made more secure by disabling DOCTYPE and/or access to external DTD/Schema.</p>
+<p>XML parsers have been made more secure by disabling <code>DOCTYPE</code> and/or access to external DTD/Schema.</p>
 </div>
 </div>
 <div class="sect2">
 <h3 id="_camel_xmlsecurity"><a class="anchor" href="#_camel_xmlsecurity"></a>camel-xmlsecurity</h3>
 <div class="paragraph">
-<p>XML parsers has been made more secure by disabling DOCTYPE and/or access to external DTD/Schema.</p>
+<p>XML parsers have been made more secure by disabling <code>DOCTYPE</code> and/or access to external DTD/Schema.</p>
 </div>
 </div>
 <div class="sect2">
@@ -840,7 +938,7 @@ with Camel on Spring Boot, then include the <code>camel-spring-boot-xml-starter<
 Spring Boot now also includes additional data per check, when using full exposure level.</p>
 </div>
 <div class="paragraph">
-<p>For example as shown below for the context health check:</p>
+<p>For example, as shown below for the context health check:</p>
 </div>
 <div class="listingblock">
 <div class="content">
@@ -884,7 +982,7 @@ This can be enabled again by setting <code>camel.metrics.uriTagDynamic=true</cod
 <div class="sect2">
 <h3 id="_camel_platform_http_starter"><a class="anchor" href="#_camel_platform_http_starter"></a>camel-platform-http-starter</h3>
 <div class="paragraph">
-<p>If the route or consumer is suspended then http status 503 is now returned instead of 404.</p>
+<p>If the route or consumer is suspended, then http status 503 is now returned instead of 404.</p>
 </div>
 <div class="paragraph">
 <p>The <code>platform-http-starter</code> has been changed from using <code>camel-servlet</code> to use Spring HTTP server directly.
@@ -900,7 +998,7 @@ Therefore, all the HTTP endpoints are no longer prefixed with the servlet contex
 </div>
 </div>
 <div class="paragraph">
-<p>Then calling <em>myservice</em> would before require to include the context-path, such as <code><a href="http://localhost:8080/camel/myservice" class="bare">http://localhost:8080/camel/myservice</a></code>.
+<p>Then calling <code><em>myservice</em></code> would before require including the context-path, such as <code><a href="http://localhost:8080/camel/myservice" class="bare">http://localhost:8080/camel/myservice</a></code>.
 Now the context-path is not in use, and the endpoint can be called with <code><a href="http://localhost:8080/myservice" class="bare">http://localhost:8080/myservice</a></code>.</p>
 </div>
 <div class="admonitionblock note">

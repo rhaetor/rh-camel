@@ -3,15 +3,15 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>How do I configure endpoints? :: Red Hat Apache Build of Apache Camel Manual</title>
-    <meta name="generator" content="Antora 3.0.3">
+    <title>How do I configure endpoints? :: Red Hat build of Apache Camel</title>
+    <meta name="generator" content="Antora 3.1.4">
     <link rel="stylesheet" href="../../_/css/site.css">
   </head>
   <body class="article">
 <header class="header">
   <nav class="navbar">
     <div class="navbar-brand">
-      <a class="navbar-item" href="../../manual/index.html">Red Hat Apache Build of Apache Camel Manual</a>
+      <a class="navbar-item" href="/">Red Hat build of Apache Camel</a>
       <button class="navbar-burger" data-target="topbar-nav">
         <span></span>
         <span></span>
@@ -26,6 +26,7 @@
     <div class="panels">
 <div class="nav-panel-menu is-active" data-panel="menu">
   <nav class="nav-menu">
+    <button class="nav-menu-toggle" aria-label="Toggle expand/collapse all" style="display: none"></button>
     <h3 class="title"><a href="../index.html">User manual</a></h3>
 <ul class="nav-list">
   <li class="nav-item" data-depth="0">
@@ -56,7 +57,16 @@
     <a class="nav-link" href="../camel-console.html">Camel Developer Console</a>
   </li>
   <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
     <a class="nav-link" href="../camel-jbang.html">Camel JBang</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../camel-jbang-kubernetes.html">Camel Kubernetes plugin</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../camel-jbang-k.html">Camel K plugin</a>
+  </li>
+</ul>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="../camel-maven-plugin.html">Camel Maven Plugin</a>
@@ -95,6 +105,9 @@
     <a class="nav-link" href="../using-propertyplaceholder.html">How to use Camel property placeholders</a>
   </li>
   <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../variables.html">How to use Variables</a>
+  </li>
+  <li class="nav-item" data-depth="2">
     <button class="nav-item-toggle"></button>
     <a class="nav-link" href="../testing.html">Testing</a>
 <ul class="nav-list">
@@ -110,7 +123,13 @@
 </ul>
   </li>
   <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
     <a class="nav-link" href="../rest-dsl.html">Working with REST and Rest DSL</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../rest-dsl-openapi.html">Rest DSL contract first</a>
+  </li>
+</ul>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="../writing-components.html">Writing Components</a>
@@ -477,9 +496,6 @@
     <a class="nav-link" href="how-should-i-invoke-my-pojos-or-spring-services.html">How should I invoke my POJOs or Spring Services?</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="how-to-avoid-importing-bunch-of-cxf-packages-when-start-up-the-camel-cxf-endpoint-from-osgi-platform-.html">How to avoid importing bunch of cxf packages when start up the camel-cxf endpoint from OSGi platform?</a>
-  </li>
-  <li class="nav-item" data-depth="2">
     <a class="nav-link" href="how-to-avoid-sending-some-or-all-message-headers.html">How to avoid sending some or all message headers?</a>
   </li>
   <li class="nav-item" data-depth="2">
@@ -598,11 +614,11 @@
 <div class="nav-panel-explore" data-panel="explore">
   <div class="context">
     <span class="title">User manual</span>
-    <span class="version">default</span>
+    <span class="version"></span>
   </div>
   <ul class="components">
     <li class="component">
-      <a class="title" href="../../components/next/index.html">Camel Components</a>
+      <div class="title"><a href="../../components/next/index.html">Camel Components</a></div>
       <ul class="versions">
         <li class="version is-latest">
           <a href="../../components/next/index.html">Next (Pre-release)</a>
@@ -610,12 +626,7 @@
       </ul>
     </li>
     <li class="component is-current">
-      <a class="title" href="../index.html">User manual</a>
-      <ul class="versions">
-        <li class="version is-current is-latest">
-          <a href="../index.html">default</a>
-        </li>
-      </ul>
+      <div class="title"><a href="../index.html">User manual</a></div>
     </li>
   </ul>
 </div>
@@ -633,6 +644,7 @@
     <li><a href="how-do-i-configure-endpoints.html">How do I configure endpoints?</a></li>
   </ul>
 </nav>
+<div class="edit-this-page"><a href="file:///code/jboss/jboss-camel/docs/user-manual/modules/faq/pages/how-do-i-configure-endpoints.adoc">Edit this Page</a></div>
 </div>
   <div class="content">
 <aside class="toc sidebar" data-title="Contents" data-levels="2">
@@ -668,81 +680,14 @@ endpoint.setSomething("aValue");</code></pre>
 </div>
 </div>
 <div class="sect1">
-<h2 id="HowdoIconfigureendpoints-UsingCDI"><a class="anchor" href="#HowdoIconfigureendpoints-UsingCDI"></a>Using CDI</h2>
-<div class="sectionbody">
-<div class="paragraph">
-<p>You can use CDI as dependency injection framework to configure
-your Component or Endpoint instances.</p>
-</div>
-<div class="paragraph">
-<p>For example, to configure the SJMS component, you can declare a producer method
-in a CDI bean:</p>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">class MyCdiComponent {
-
-  @PropertyInject("jms.maxConnections")
-  int maxConnections;
-
-  @Produces
-  @Named("sjms")
-  @ApplicationScoped
-    SjmsComponent sjms() {
-        SjmsComponent component = new SjmsComponent();
-        component.setConnectionFactory(new ActiveMQConnectionFactory("vm://broker?broker.persistent=false"));
-        component.setConnectionCount(maxConnections);
-        return component;
-    }
-}</code></pre>
-</div>
-</div>
-<div class="paragraph">
-<p>Then, the component is lazily looked-up by Camel CDI whenever it is referenced,
-e.g. from the Camel Java DSL:</p>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">class MyCdiRoute extends RouteBuilder {
-
-    @Override
-    public void configure() {
-        from("sjms:sample.queue")
-            .log("Received message [${body}]");
-    }
-}</code></pre>
-</div>
-</div>
-<div class="paragraph">
-<p>Besides, endpoints of that component can be injected in any CDI beans, e.g.:</p>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">class MyCdiBean {
-
-    @Inject
-    @Uri("sjms:sample.queue")
-    Endpoint endpoint;
-}</code></pre>
-</div>
-</div>
-</div>
-</div>
-<div class="sect1">
 <h2 id="HowdoIconfigureendpoints-UsingSpringXML"><a class="anchor" href="#HowdoIconfigureendpoints-UsingSpringXML"></a>Using Spring XML</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>You can configure your Component or
-Endpoint instances in your Spring
-XML as follows:</p>
+<p>You can configure your Component or Endpoint instances in your Spring XML as <code>&lt;bean&gt;</code> as follows:</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;camelContext id="camel" xmlns="http://camel.apache.org/schema/spring"&gt;
-    &lt;jmxAgent id="agent" disabled="true"/&gt;
-&lt;/camelContext&gt;
-
-&lt;bean id="activemq" class="org.apache.activemq.camel.component.ActiveMQComponent"&gt;
+<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;bean id="activemq" class="org.apache.activemq.camel.component.ActiveMQComponent"&gt;
   &lt;property name="connectionFactory"&gt;
     &lt;bean class="org.apache.activemq.ActiveMQConnectionFactory"&gt;
       &lt;property name="brokerURL" value="vm://localhost?broker.persistent=false&amp;amp;broker.useJmx=false"/&gt;
@@ -771,7 +716,7 @@ you can configure the password property via the URI</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-none hljs">pop3://host:port?password=foo</code></pre>
+<pre class="highlightjs highlight"><code class="language-text hljs" data-lang="text">pop3://host:port?password=foo</code></pre>
 </div>
 </div>
 <div class="sect2">
@@ -818,11 +763,11 @@ using the <code>#class:fullyQualifiedName</code> notation.</p>
 </div>
 <div class="paragraph">
 <p>If the parameter value starts with a <code>#class:</code> sign then Camel will load the
-class with the given name, and create an instanace of the bean using its <em>no-arg</em> constructor:</p>
+class with the given name, and create an instance of the bean using its <em>no-arg</em> constructor:</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-none hljs">file://inbox?sorter=#class:com.foo.MySpecialSorter</code></pre>
+<pre class="highlightjs highlight"><code class="language-text hljs" data-lang="text">file://inbox?sorter=#class:com.foo.MySpecialSorter</code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -831,7 +776,7 @@ class with the given name, and create an instanace of the bean using its <em>no-
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-none hljs">file://inbox?sorter=#class:com.foo.MySpecialSorter(10, 'Hello world', true)</code></pre>
+<pre class="highlightjs highlight"><code class="language-text hljs" data-lang="text">file://inbox?sorter=#class:com.foo.MySpecialSorter(10, 'Hello world', true)</code></pre>
 </div>
 </div>
 </div>
@@ -888,6 +833,22 @@ you may find a corner case when you use both <code>)</code> and <code>&amp;</cod
 </tr>
 </table>
 </div>
+<div class="sect3">
+<h4 id="_using_env_variables_with_raw_values"><a class="anchor" href="#_using_env_variables_with_raw_values"></a>Using ENV variables with raw values</h4>
+<div class="paragraph">
+<p><strong>Since Camel 4.7</strong></p>
+</div>
+<div class="paragraph">
+<p>If you need to use environment variables, for example as username or passwords then this is now possible by inlining
+the <a href="../../components/next/languages/simple-language.html" class="xref page">Simple</a> language
+using <code>$simple{xxx}</code> syntax in <code>RAW(&#8230;&#8203;)</code> as shown below:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">.to("ftp:joe@myftpserver.com?password=RAW($simple{env:MY_FTP_PASSWORD})&amp;binary=true")</code></pre>
+</div>
+</div>
+</div>
 </div>
 <div class="sect2">
 <h3 id="HowdoIconfigureendpoints-Usingpropertyplaceholders"><a class="anchor" href="#HowdoIconfigureendpoints-Usingpropertyplaceholders"></a>Using property placeholders</h3>
@@ -926,7 +887,7 @@ the <code>RAW(value)</code> style to ensure the password is used <em>as is</em>:
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-none hljs">myFtpPassword=RAW(se+re?t&amp;23)</code></pre>
+<pre class="highlightjs highlight"><code class="language-text hljs" data-lang="text">myFtpPassword=RAW(se+re?t&amp;23)</code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -957,9 +918,6 @@ key, as discussed in the following section.</p>
 <div class="sect2">
 <h3 id="_referring_to_a_property_placeholder"><a class="anchor" href="#_referring_to_a_property_placeholder"></a>Referring to a property placeholder</h3>
 <div class="paragraph">
-<p><strong>Since Camel 3.4</strong></p>
-</div>
-<div class="paragraph">
 <p>When using <code>{{key}}</code> in configuring endpoint URIs then Camel will replace the <code>{{key}}</code> while parsing the endpoint URI.
 This has its pros but also a few cons, such as when using sensitive information such as passwords. As we have seen
 in the previous section you can use RAW() syntax. Instead of using RAW() you can use <code>#property:key</code> notation,
@@ -988,9 +946,6 @@ as shown in the example below:</p>
 <div class="sect1">
 <h2 id="HowdoIconfigureendpoints-Configuringurisusingendpointwithbeanpropertystyle"><a class="anchor" href="#HowdoIconfigureendpoints-Configuringurisusingendpointwithbeanpropertystyle"></a>Configuring URIs using endpoint with bean property style</h2>
 <div class="sectionbody">
-<div class="paragraph">
-<p><strong>Since Camel 2.15</strong></p>
-</div>
 <div class="paragraph">
 <p>Sometimes configuring endpoint URIs may have many options, and therefore
 the URI can become long. In Java DSL you can break the URIs into new
@@ -1039,9 +994,6 @@ as:</p>
 <div class="sect1">
 <h2 id="HowdoIconfigureendpoints-Configuringlongurisusingnewlines"><a class="anchor" href="#HowdoIconfigureendpoints-Configuringlongurisusingnewlines"></a>Configuring long URIs using new lines</h2>
 <div class="sectionbody">
-<div class="paragraph">
-<p><strong>Since Camel 2.15</strong></p>
-</div>
 <div class="paragraph">
 <p>Sometimes configuring endpoint URIs may have many options, and therefore
 the URI can become long. In Java DSL you can break the URIs into new

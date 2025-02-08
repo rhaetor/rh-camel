@@ -3,15 +3,15 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>Java DSL :: Red Hat Apache Build of Apache Camel Manual</title>
-    <meta name="generator" content="Antora 3.0.3">
+    <title>Java DSL :: Red Hat build of Apache Camel</title>
+    <meta name="generator" content="Antora 3.1.4">
     <link rel="stylesheet" href="../_/css/site.css">
   </head>
   <body class="article">
 <header class="header">
   <nav class="navbar">
     <div class="navbar-brand">
-      <a class="navbar-item" href="../../manual/index.html">Red Hat Apache Build of Apache Camel Manual</a>
+      <a class="navbar-item" href="/">Red Hat build of Apache Camel</a>
       <button class="navbar-burger" data-target="topbar-nav">
         <span></span>
         <span></span>
@@ -26,6 +26,7 @@
     <div class="panels">
 <div class="nav-panel-menu is-active" data-panel="menu">
   <nav class="nav-menu">
+    <button class="nav-menu-toggle" aria-label="Toggle expand/collapse all" style="display: none"></button>
     <h3 class="title"><a href="index.html">User manual</a></h3>
 <ul class="nav-list">
   <li class="nav-item" data-depth="0">
@@ -56,7 +57,16 @@
     <a class="nav-link" href="camel-console.html">Camel Developer Console</a>
   </li>
   <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
     <a class="nav-link" href="camel-jbang.html">Camel JBang</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="camel-jbang-kubernetes.html">Camel Kubernetes plugin</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="camel-jbang-k.html">Camel K plugin</a>
+  </li>
+</ul>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="camel-maven-plugin.html">Camel Maven Plugin</a>
@@ -95,6 +105,9 @@
     <a class="nav-link" href="using-propertyplaceholder.html">How to use Camel property placeholders</a>
   </li>
   <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="variables.html">How to use Variables</a>
+  </li>
+  <li class="nav-item" data-depth="2">
     <button class="nav-item-toggle"></button>
     <a class="nav-link" href="testing.html">Testing</a>
 <ul class="nav-list">
@@ -110,7 +123,13 @@
 </ul>
   </li>
   <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
     <a class="nav-link" href="rest-dsl.html">Working with REST and Rest DSL</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="rest-dsl-openapi.html">Rest DSL contract first</a>
+  </li>
+</ul>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="writing-components.html">Writing Components</a>
@@ -477,9 +496,6 @@
     <a class="nav-link" href="faq/how-should-i-invoke-my-pojos-or-spring-services.html">How should I invoke my POJOs or Spring Services?</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="faq/how-to-avoid-importing-bunch-of-cxf-packages-when-start-up-the-camel-cxf-endpoint-from-osgi-platform-.html">How to avoid importing bunch of cxf packages when start up the camel-cxf endpoint from OSGi platform?</a>
-  </li>
-  <li class="nav-item" data-depth="2">
     <a class="nav-link" href="faq/how-to-avoid-sending-some-or-all-message-headers.html">How to avoid sending some or all message headers?</a>
   </li>
   <li class="nav-item" data-depth="2">
@@ -598,11 +614,11 @@
 <div class="nav-panel-explore" data-panel="explore">
   <div class="context">
     <span class="title">User manual</span>
-    <span class="version">default</span>
+    <span class="version"></span>
   </div>
   <ul class="components">
     <li class="component">
-      <a class="title" href="../components/next/index.html">Camel Components</a>
+      <div class="title"><a href="../components/next/index.html">Camel Components</a></div>
       <ul class="versions">
         <li class="version is-latest">
           <a href="../components/next/index.html">Next (Pre-release)</a>
@@ -610,12 +626,7 @@
       </ul>
     </li>
     <li class="component is-current">
-      <a class="title" href="index.html">User manual</a>
-      <ul class="versions">
-        <li class="version is-current is-latest">
-          <a href="index.html">default</a>
-        </li>
-      </ul>
+      <div class="title"><a href="index.html">User manual</a></div>
     </li>
   </ul>
 </div>
@@ -633,6 +644,7 @@
     <li><a href="java-dsl.html">Java DSL</a></li>
   </ul>
 </nav>
+<div class="edit-this-page"><a href="file:///code/jboss/jboss-camel/docs/user-manual/modules/ROOT/pages/java-dsl.adoc">Edit this Page</a></div>
 </div>
   <div class="content">
 <aside class="toc sidebar" data-title="Contents" data-levels="2">
@@ -643,7 +655,7 @@
 <div id="preamble">
 <div class="sectionbody">
 <div class="paragraph">
-<p>Apache Camel offers a Java based DSL.</p>
+<p>Apache Camel offers a Java-based DSL.</p>
 </div>
 <div class="paragraph">
 <p>In the Java DSL you create a route by extending the <a href="route-builder.html" class="xref page"><code>RouteBuilder</code> class</a>, and implementing the <code>configure</code> method.</p>
@@ -654,8 +666,8 @@
 <h2 id="_java_dsl_example"><a class="anchor" href="#_java_dsl_example"></a>Java DSL example</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>This is best illustrate by an example. In the code below we create a new
-class called <code>MyRouteBuilder</code> that extends the
+<p>This is best illustrated by an example.
+In the code below we create a new class called <code>MyRouteBuilder</code> that extends the
 <code>org.apache.camel.builder.RouteBuilder</code> from Camel.</p>
 </div>
 <div class="paragraph">
@@ -663,9 +675,9 @@ class called <code>MyRouteBuilder</code> that extends the
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">import org.apache.camel.builder.RouteBuilder;
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java"><span class="fold-block is-hidden-folded">import org.apache.camel.builder.RouteBuilder;
 
-/**
+</span><span class="fold-block">/**
  * A Camel Java DSL Router
  */
 public class MyRouteBuilder extends RouteBuilder {
@@ -686,7 +698,7 @@ public class MyRouteBuilder extends RouteBuilder {
                     .to("file:target/messages/others");
     }
 
-}</code></pre>
+}</span></code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -701,7 +713,7 @@ public class MyRouteBuilder extends RouteBuilder {
 </div>
 </div>
 <div class="paragraph">
-<p>Then we use the <a href="../components/next/eips/choice-eip.html" class="xref page">Content Based Router</a> EIP
+<p>Then we use the <a href="../components/next/eips/choice-eip.html" class="xref page">Content-Based Router</a> EIP
 (the <code>choice</code>) to route the message whether the person is from London or not.</p>
 </div>
 <div class="listingblock">
@@ -714,13 +726,33 @@ public class MyRouteBuilder extends RouteBuilder {
 </div>
 </div>
 <div class="sect2">
+<h3 id="_using_text_blocks_for_long_uris"><a class="anchor" href="#_using_text_blocks_for_long_uris"></a>Using Text Blocks for long URIs</h3>
+<div class="paragraph">
+<p>If you have very long endpoint <a href="uris.html" class="xref page">uris</a>, then you can declare those in Java text blocks, instead
+of breaking a String into multiple added elements:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">    from("""
+            debezium-postgres:customerEvents
+            ?databasePassword={{myPassword}}
+            &amp;databaseDbname=myDB
+            &amp;databaseHostname=myHost
+            &amp;pollIntervalMs=2000
+            &amp;queryFetchSize=100
+        """)
+        .to("kafka:cheese");</code></pre>
+</div>
+</div>
+</div>
+<div class="sect2">
 <h3 id="_routes_using_java_lambda_style"><a class="anchor" href="#_routes_using_java_lambda_style"></a>Routes using Java lambda style</h3>
 <div class="paragraph">
 <p>Camel now supports to define Camel routes in Java DSL using Lambda style. This can be beneficial for microservices or serverless where
 you may want to quickly define a few routes.</p>
 </div>
 <div class="paragraph">
-<p>For example using lambda style you can define a Camel route that takes messages from Kafka and send to JMS in a single line of code:</p>
+<p>For example, using lambda style you can define a Camel route that takes messages from Kafka and send to JMS in a single line of code:</p>
 </div>
 <div class="listingblock">
 <div class="content">
@@ -746,7 +778,7 @@ See more at the <a href="lambda-route-builder.html" class="xref page">LambdaRout
 <p>As mentioned in the Getting Started guide, you can use Camel&#8217;s Java DSL in a way that almost looks like a DSL. For instance:</p>
 </div>
 <div class="paragraph">
-<p><strong>Note</strong>: comments afterwards explain some of the constructs used in the example.</p>
+<p><strong>Note</strong>: comments afterward explain some of the constructs used in the example.</p>
 </div>
 <div class="listingblock">
 <div class="title"><strong>Example of Camel&#8217;s "Java DSL"</strong></div>

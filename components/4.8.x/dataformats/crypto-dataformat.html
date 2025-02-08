@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>Crypto (Java Cryptographic Extension) :: Red Hat Camel Reference</title>
+    <title>Crypto (Java Cryptographic Extension) :: Red Hat build of Apache Camel</title>
     <meta name="description" content="Encrypt and decrypt messages using Java Cryptography Extension (JCE).">
     <meta name="generator" content="Antora 3.1.4">
     <link rel="stylesheet" href="../../../_/css/site.css">
@@ -12,7 +12,7 @@
 <header class="header">
   <nav class="navbar">
     <div class="navbar-brand">
-      <a class="navbar-item" href="../../manual/index.html">Red Hat Apache Build of Apache Camel Manual</a>
+      <a class="navbar-item" href="/">Red Hat build of Apache Camel</a>
       <button class="navbar-burger" data-target="topbar-nav">
         <span></span>
         <span></span>
@@ -27,6 +27,7 @@
     <div class="panels">
 <div class="nav-panel-menu is-active" data-panel="menu">
   <nav class="nav-menu">
+    <button class="nav-menu-toggle" aria-label="Toggle expand/collapse all" style="display: none"></button>
     <h3 class="title"><a href="../index.html">Camel Components</a></h3>
 <ul class="nav-list">
   <li class="nav-item" data-depth="0">
@@ -36,7 +37,46 @@
     <a class="nav-link" href="../index.html">Components</a>
 <ul class="nav-list">
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="../activemq-component.html">ActiveMQ</a>
+    <a class="nav-link" href="../activemq-component.html">ActiveMQ 5.x</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../activemq6-component.html">ActiveMQ 6.x</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../ai-summary.html">AI</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../chatscript-component.html">ChatScript</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../djl-component.html">Deep Java Library</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../langchain4j-chat-component.html">LangChain4j Chat</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../langchain4j-embeddings-component.html">LangChain4j Embeddings</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../langchain4j-tokenizer-component.html">LangChain4j Tokenizer</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../langchain4j-tools-component.html">LangChain4j Tools</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../langchain4j-web-search-component.html">LangChain4j Web Search</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../milvus-component.html">Milvus</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../pinecone-component.html">Pinecone</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../qdrant-component.html">Qdrant</a>
+  </li>
+</ul>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="../amqp-component.html">AMQP</a>
@@ -65,6 +105,15 @@
 <ul class="nav-list">
   <li class="nav-item" data-depth="3">
     <a class="nav-link" href="../aws2-athena-component.html">AWS Athena</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../aws-bedrock-component.html">AWS Bedrock</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../aws-bedrock-agent-component.html">AWS Bedrock Agent</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../aws-bedrock-agent-runtime-component.html">AWS Bedrock Agent Runtime</a>
   </li>
   <li class="nav-item" data-depth="3">
     <a class="nav-link" href="../aws-cloudtrail-component.html">AWS Cloudtrail</a>
@@ -169,7 +218,7 @@
     <a class="nav-link" href="../azure-storage-blob-component.html">Azure Storage Blob Service</a>
   </li>
   <li class="nav-item" data-depth="3">
-    <a class="nav-link" href="../azure-storage-datalake-component.html">Azure Storage Datalake Service</a>
+    <a class="nav-link" href="../azure-storage-datalake-component.html">Azure Storage Data Lake Service</a>
   </li>
   <li class="nav-item" data-depth="3">
     <a class="nav-link" href="../azure-storage-queue-component.html">Azure Storage Queue Service</a>
@@ -202,9 +251,6 @@
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="../cql-component.html">Cassandra CQL</a>
-  </li>
-  <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="../chatscript-component.html">ChatScript</a>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="../chunk-component.html">Chunk</a>
@@ -277,9 +323,6 @@
     <a class="nav-link" href="../debezium-sqlserver-component.html">Debezium SQL Server Connector</a>
   </li>
 </ul>
-  </li>
-  <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="../djl-component.html">Deep Java Library</a>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="../dhis2-component.html">DHIS2</a>
@@ -395,6 +438,9 @@
   </li>
   <li class="nav-item" data-depth="3">
     <a class="nav-link" href="../google-pubsub-component.html">Google Pubsub</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../google-pubsub-lite-component.html">Google PubSub Lite</a>
   </li>
   <li class="nav-item" data-depth="3">
     <a class="nav-link" href="../google-secret-manager-component.html">Google Secret Manager</a>
@@ -687,7 +733,7 @@
     <a class="nav-link" href="../ldif-component.html">LDIF</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="../log-component.html">Log</a>
+    <a class="nav-link" href="../log-component.html">Log Data</a>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="../lucene-component.html">Lucene</a>
@@ -900,10 +946,16 @@
     <a class="nav-link" href="../smb-component.html">SMB</a>
   </li>
   <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../smooks-component.html">Smooks</a>
+  </li>
+  <li class="nav-item" data-depth="2">
     <a class="nav-link" href="../smpp-component.html">SMPP</a>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="../snmp-component.html">SNMP</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../solr-component.html">Solr</a>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="../splunk-component.html">Splunk</a>
@@ -966,6 +1018,18 @@
     <a class="nav-link" href="../stub-component.html">Stub</a>
   </li>
   <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../tahu-summary.html">Tahu</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../tahu-edge-component.html">Tahu Edge Node / Device</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../tahu-host-component.html">Tahu Host Application</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
     <a class="nav-link" href="../telegram-component.html">Telegram</a>
   </li>
   <li class="nav-item" data-depth="2">
@@ -1026,7 +1090,7 @@
     <a class="nav-link" href="../whatsapp-component.html">WhatsApp</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="../wordpress-component.html">Wordpress</a>
+    <a class="nav-link" href="../wordpress-component.html">WordPress</a>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="../workday-component.html">Workday</a>
@@ -1419,7 +1483,13 @@
     <a class="nav-link" href="../others/openapi-java.html">Openapi Java</a>
   </li>
   <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../others/openapi-validator.html">Openapi Validator</a>
+  </li>
+  <li class="nav-item" data-depth="2">
     <a class="nav-link" href="../others/opentelemetry.html">OpenTelemetry</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../others/platform-http-jolokia.html">Platform HTTP Jolokia</a>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="../others/platform-http-main.html">Platform Http Main</a>
@@ -1567,7 +1637,7 @@
     <a class="nav-link" href="../eips/event-message.html">Event Message</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="../eips/failover-eip.html">Failover</a>
+    <a class="nav-link" href="../eips/failoverLoadBalancer-eip.html">Failover Load Balancer</a>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="../eips/faultToleranceConfiguration-eip.html">Fault Tolerance Configuration</a>
@@ -1597,13 +1667,13 @@
     <a class="nav-link" href="../eips/loadBalance-eip.html">Load Balance</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="../eips/log-eip.html">Log</a>
+    <a class="nav-link" href="../eips/log-eip.html">Logger</a>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="../eips/loop-eip.html">Loop</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="../eips/marshal-eip.html">Marshal EIP</a>
+    <a class="nav-link" href="../eips/marshal-eip.html">Marshal</a>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="../eips/message.html">Message</a>
@@ -1660,6 +1730,9 @@
     <a class="nav-link" href="../eips/point-to-point-channel.html">Point to Point Channel</a>
   </li>
   <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../eips/poll-eip.html">Poll</a>
+  </li>
+  <li class="nav-item" data-depth="2">
     <a class="nav-link" href="../eips/pollEnrich-eip.html">Poll Enrich</a>
   </li>
   <li class="nav-item" data-depth="2">
@@ -1675,7 +1748,7 @@
     <a class="nav-link" href="../eips/publish-subscribe-channel.html">Publish Subscribe Channel</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="../eips/random-eip.html">Random</a>
+    <a class="nav-link" href="../eips/randomLoadBalancer-eip.html">Random Load Balancer</a>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="../eips/recipientList-eip.html">Recipient List</a>
@@ -1717,7 +1790,7 @@
     <a class="nav-link" href="../eips/rollback-eip.html">Rollback</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="../eips/roundRobin-eip.html">Round Robin</a>
+    <a class="nav-link" href="../eips/roundRobinLoadBalancer-eip.html">Round Robin Load Balancer</a>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="../eips/routingSlip-eip.html">Routing Slip</a>
@@ -1729,7 +1802,7 @@
     <a class="nav-link" href="../eips/sample-eip.html">Sample</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="../eips/scatter-gather.html">Scatter Gather</a>
+    <a class="nav-link" href="../eips/scatter-gather.html">Scatter-Gather</a>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="../eips/script-eip.html">Script</a>
@@ -1759,6 +1832,9 @@
     <a class="nav-link" href="../eips/setVariable-eip.html">Set Variable</a>
   </li>
   <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../eips/setVariables-eip.html">Set Variables</a>
+  </li>
+  <li class="nav-item" data-depth="2">
     <a class="nav-link" href="../eips/sort-eip.html">Sort</a>
   </li>
   <li class="nav-item" data-depth="2">
@@ -1768,7 +1844,7 @@
     <a class="nav-link" href="../eips/step-eip.html">Step</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="../eips/sticky-eip.html">Sticky</a>
+    <a class="nav-link" href="../eips/stickyLoadBalancer-eip.html">Sticky Load Balancer</a>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="../eips/stop-eip.html">Stop</a>
@@ -1789,7 +1865,7 @@
     <a class="nav-link" href="../eips/toD-eip.html">To D</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="../eips/topic-eip.html">Topic</a>
+    <a class="nav-link" href="../eips/topicLoadBalancer-eip.html">Topic Load Balancer</a>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="../eips/transactional-client.html">Transactional Client</a>
@@ -1798,13 +1874,13 @@
     <a class="nav-link" href="../eips/transform-eip.html">Transform</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="../eips/unmarshal-eip.html">Unmarshal EIP</a>
+    <a class="nav-link" href="../eips/unmarshal-eip.html">Unmarshal</a>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="../eips/validate-eip.html">Validate</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="../eips/weighted-eip.html">Weighted</a>
+    <a class="nav-link" href="../eips/weightedLoadBalancer-eip.html">Weighted Load Balancer</a>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="../eips/wireTap-eip.html">Wire Tap</a>
@@ -1823,7 +1899,7 @@
   </div>
   <ul class="components">
     <li class="component is-current">
-      <a class="title" href="../index.html">Camel Components</a>
+      <div class="title"><a href="../index.html">Camel Components</a></div>
       <ul class="versions">
         <li class="version is-current is-latest">
           <a href="../index.html">Next (Pre-release)</a>
@@ -1831,12 +1907,7 @@
       </ul>
     </li>
     <li class="component">
-      <a class="title" href="../../../manual/index.html">User manual</a>
-      <ul class="versions">
-        <li class="version is-latest">
-          <a href="../../../manual/index.html">default</a>
-        </li>
-      </ul>
+      <div class="title"><a href="../../../manual/index.html">User manual</a></div>
     </li>
   </ul>
 </div>
@@ -1854,6 +1925,7 @@
     <li><a href="crypto-dataformat.html">Crypto (Java Cryptographic Extension)</a></li>
   </ul>
 </nav>
+<div class="edit-this-page"><a href="file:///code/jboss/jboss-camel/docs/components/modules/dataformats/pages/crypto-dataformat.adoc">Edit this Page</a></div>
 </div>
   <div class="content">
 <aside class="toc sidebar" data-title="Contents" data-levels="2">
@@ -1870,7 +1942,7 @@
 <p>The Crypto Data Format integrates the Java
 Cryptographic Extension into Camel, allowing simple and flexible
 encryption and decryption of messages using Camel&#8217;s familiar marshall
-and unmarshal formatting mechanism. It assumes marshalling to mean
+and unmarshal formatting mechanism. It assumes marshaling to mean
 encryption to cyphertext and unmarshalling to mean decryption back to
 the original plaintext. This data format implements only symmetric
 (shared-key) encryption and decyption.</p>
@@ -1901,7 +1973,7 @@ the original plaintext. This data format implements only symmetric
 <tbody>
 <tr>
 <td class="tableblock halign-left valign-top"><div class="content"><div id="_dataformat_option_algorithm" class="paragraph">
-<p><a href="#_dataformat_option_algorithm" class="anchor"></a><strong>algorithm</strong></p>
+<p><a href="#_dataformat_option_algorithm" class="anchor"></a><strong>algorithm</strong> (common)</p>
 </div></div></td>
 <td class="tableblock halign-left valign-top"></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>String</code></p></td>
@@ -1911,7 +1983,7 @@ the original plaintext. This data format implements only symmetric
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><div class="content"><div id="_dataformat_option_keyRef" class="paragraph">
-<p><a href="#_dataformat_option_keyRef" class="anchor"></a><strong>keyRef</strong></p>
+<p><a href="#_dataformat_option_keyRef" class="anchor"></a><strong>keyRef</strong> (common)</p>
 </div></div></td>
 <td class="tableblock halign-left valign-top"></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>String</code></p></td>
@@ -1921,7 +1993,7 @@ the original plaintext. This data format implements only symmetric
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><div class="content"><div id="_dataformat_option_cryptoProvider" class="paragraph">
-<p><a href="#_dataformat_option_cryptoProvider" class="anchor"></a><strong>cryptoProvider</strong></p>
+<p><a href="#_dataformat_option_cryptoProvider" class="anchor"></a><strong>cryptoProvider</strong> (advanced)</p>
 </div></div></td>
 <td class="tableblock halign-left valign-top"></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>String</code></p></td>
@@ -1931,7 +2003,7 @@ the original plaintext. This data format implements only symmetric
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><div class="content"><div id="_dataformat_option_initVectorRef" class="paragraph">
-<p><a href="#_dataformat_option_initVectorRef" class="anchor"></a><strong>initVectorRef</strong></p>
+<p><a href="#_dataformat_option_initVectorRef" class="anchor"></a><strong>initVectorRef</strong> (advanced)</p>
 </div></div></td>
 <td class="tableblock halign-left valign-top"></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>String</code></p></td>
@@ -1941,7 +2013,7 @@ the original plaintext. This data format implements only symmetric
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><div class="content"><div id="_dataformat_option_algorithmParameterRef" class="paragraph">
-<p><a href="#_dataformat_option_algorithmParameterRef" class="anchor"></a><strong>algorithmParameterRef</strong></p>
+<p><a href="#_dataformat_option_algorithmParameterRef" class="anchor"></a><strong>algorithmParameterRef</strong> (advanced)</p>
 </div></div></td>
 <td class="tableblock halign-left valign-top"></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>String</code></p></td>
@@ -1951,7 +2023,7 @@ the original plaintext. This data format implements only symmetric
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><div class="content"><div id="_dataformat_option_bufferSize" class="paragraph">
-<p><a href="#_dataformat_option_bufferSize" class="anchor"></a><strong>bufferSize</strong></p>
+<p><a href="#_dataformat_option_bufferSize" class="anchor"></a><strong>bufferSize</strong> (common)</p>
 </div></div></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>4096</code></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>Integer</code></p></td>
@@ -1961,7 +2033,7 @@ the original plaintext. This data format implements only symmetric
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><div class="content"><div id="_dataformat_option_macAlgorithm" class="paragraph">
-<p><a href="#_dataformat_option_macAlgorithm" class="anchor"></a><strong>macAlgorithm</strong></p>
+<p><a href="#_dataformat_option_macAlgorithm" class="anchor"></a><strong>macAlgorithm</strong> (common)</p>
 </div></div></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>HmacSHA1</code></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>String</code></p></td>
@@ -1971,7 +2043,7 @@ the original plaintext. This data format implements only symmetric
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><div class="content"><div id="_dataformat_option_shouldAppendHMAC" class="paragraph">
-<p><a href="#_dataformat_option_shouldAppendHMAC" class="anchor"></a><strong>shouldAppendHMAC</strong></p>
+<p><a href="#_dataformat_option_shouldAppendHMAC" class="anchor"></a><strong>shouldAppendHMAC</strong> (common)</p>
 </div></div></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>true</code></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>Boolean</code></p></td>
@@ -1981,7 +2053,7 @@ the original plaintext. This data format implements only symmetric
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><div class="content"><div id="_dataformat_option_inline" class="paragraph">
-<p><a href="#_dataformat_option_inline" class="anchor"></a><strong>inline</strong></p>
+<p><a href="#_dataformat_option_inline" class="anchor"></a><strong>inline</strong> (advanced)</p>
 </div></div></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>false</code></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>Boolean</code></p></td>
@@ -1997,8 +2069,8 @@ the original plaintext. This data format implements only symmetric
 <h2 id="_basic_usage"><a class="anchor" href="#_basic_usage"></a>Basic Usage</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>At its most basic all that is required to encrypt/decrypt an exchange is a shared secret key.
-If one or more instances of the Crypto data format are configured with this key the format can
+<p>At its most basic, all that is required to encrypt/decrypt an exchange is a shared secret key.
+If one or more instances of the Crypto data format are configured with this key, the format can
 be used to encrypt the payload in one route (or part of one) and decrypted in another.
 For example, using the Java DSL as follows:</p>
 </div>
@@ -2041,7 +2113,7 @@ from("direct:basic-encryption")
 <h2 id="_specifying_the_encryption_algorithm"><a class="anchor" href="#_specifying_the_encryption_algorithm"></a>Specifying the Encryption Algorithm</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>Changing the algorithm is a matter of supplying the JCE algorithm name. If you change the algorithm you will need to use a compatible key.</p>
+<p>Changing the algorithm is a matter of supplying the JCE algorithm name. If you change the algorithm, you will need to use a compatible key.</p>
 </div>
 <div class="listingblock">
 <div class="content">
@@ -2069,7 +2141,7 @@ from("direct:hmac-algorithm")
 <div class="paragraph">
 <p>Some crypto algorithms, particularly block algorithms, require configuration with an initial block of data known as an Initialization Vector.
 In the JCE this is passed as an AlgorithmParameterSpec when the Cipher is initialized.
-To use such a vector with the CryptoDataFormat you can configure it with a byte[] containing the required data e.g.</p>
+To use such a vector with the CryptoDataFormat, you can configure it with a byte[] containing the required data, e.g.</p>
 </div>
 <div class="listingblock">
 <div class="content">
@@ -2097,6 +2169,19 @@ from("direct:init-vector")
 <div class="paragraph">
 <p>The same vector is required in both the encryption and decryption phases. As it is not necessary to keep the IV a secret, the DataFormat allows for it to be inlined into the encrypted data and subsequently read out in the decryption phase to initialize the Cipher. To inline the IV set the <code>Inline</code> flag.</p>
 </div>
+<div id="_tabs_1" class="openblock tabs is-sync is-loading">
+<div class="content">
+<div class="ulist tablist">
+<ul>
+<li id="_tabs_1_java" class="tab">
+<p>Java</p>
+</li>
+<li id="_tabs_1_spring_xml" class="tab">
+<p>Spring XML</p>
+</li>
+</ul>
+</div>
+<div id="_tabs_1_java--panel" class="tabpanel" aria-labelledby="_tabs_1_java">
 <div class="listingblock">
 <div class="content">
 <pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">KeyGenerator generator = KeyGenerator.getInstance("DES");
@@ -2116,9 +2201,8 @@ from("direct:inline")
     .to("mock:unencrypted");</code></pre>
 </div>
 </div>
-<div class="paragraph">
-<p>or with spring.</p>
 </div>
+<div id="_tabs_1_spring_xml--panel" class="tabpanel" aria-labelledby="_tabs_1_spring_xml">
 <div class="listingblock">
 <div class="content">
 <pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;crypto id="inline" algorithm="DES/CBC/PKCS5Padding" keyRef="desKey" initVectorRef="initializationVector"
@@ -2126,8 +2210,11 @@ from("direct:inline")
 &lt;crypto id="inline-decrypt" algorithm="DES/CBC/PKCS5Padding" keyRef="desKey" inline="true" /&gt;</code></pre>
 </div>
 </div>
+</div>
+</div>
+</div>
 <div class="paragraph">
-<p>For more information of the use of Initialization Vectors, consult</p>
+<p>For more information about the use of Initialization Vectors, consult</p>
 </div>
 <div class="ulist">
 <ul>
@@ -2148,8 +2235,21 @@ from("direct:inline")
 <h2 id="_hashed_message_authentication_codes_hmac"><a class="anchor" href="#_hashed_message_authentication_codes_hmac"></a>Hashed Message Authentication Codes (HMAC)</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>To avoid attacks against the encrypted data while it is in transit the CryptoDataFormat can also calculate a Message Authentication Code for the encrypted exchange contents based on a configurable MAC algorithm. The calculated HMAC is appended to the stream after encryption. It is separated from the stream in the decryption phase. The MAC is recalculated and verified against the transmitted version to ensure nothing was tampered with in transit. For more information on Message Authentication Codes see <a href="http://en.wikipedia.org/wiki/HMAC" class="bare">http://en.wikipedia.org/wiki/HMAC</a></p>
+<p>To avoid attacks against the encrypted data while it is in transit, the CryptoDataFormat can also calculate a Message Authentication Code for the encrypted exchange contents based on a configurable MAC algorithm. The calculated HMAC is appended to the stream after encryption. It is separated from the stream in the decryption phase. The MAC is recalculated and verified against the transmitted version to ensure nothing was tampered with in transit. For more information on Message Authentication Codes see <a href="http://en.wikipedia.org/wiki/HMAC" class="bare">http://en.wikipedia.org/wiki/HMAC</a></p>
 </div>
+<div id="_tabs_2" class="openblock tabs is-sync is-loading">
+<div class="content">
+<div class="ulist tablist">
+<ul>
+<li id="_tabs_2_java" class="tab">
+<p>Java</p>
+</li>
+<li id="_tabs_2_spring_xml" class="tab">
+<p>Spring XML</p>
+</li>
+</ul>
+</div>
+<div id="_tabs_2_java--panel" class="tabpanel" aria-labelledby="_tabs_2_java">
 <div class="listingblock">
 <div class="content">
 <pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">KeyGenerator generator = KeyGenerator.getInstance("DES");
@@ -2164,17 +2264,32 @@ from("direct:hmac")
     .to("mock:unencrypted");</code></pre>
 </div>
 </div>
-<div class="paragraph">
-<p>or with spring.</p>
 </div>
+<div id="_tabs_2_spring_xml--panel" class="tabpanel" aria-labelledby="_tabs_2_spring_xml">
 <div class="listingblock">
 <div class="content">
 <pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;crypto id="hmac" algorithm="DES" keyRef="desKey" shouldAppendHMAC="true" /&gt;</code></pre>
 </div>
 </div>
-<div class="paragraph">
-<p>By default the HMAC is calculated using the HmacSHA1 mac algorithm though this can be easily changed by supplying a different algorithm name. See here for how to check what algorithms are available through the configured security providers</p>
 </div>
+</div>
+</div>
+<div class="paragraph">
+<p>By default, the HMAC is calculated using the HmacSHA1 mac algorithm, though this can be easily changed by supplying a different algorithm name. See here for how to check what algorithms are available through the configured security providers</p>
+</div>
+<div id="_tabs_3" class="openblock tabs is-sync is-loading">
+<div class="content">
+<div class="ulist tablist">
+<ul>
+<li id="_tabs_3_java" class="tab">
+<p>Java</p>
+</li>
+<li id="_tabs_3_spring_xml" class="tab">
+<p>Spring XML</p>
+</li>
+</ul>
+</div>
+<div id="_tabs_3_java--panel" class="tabpanel" aria-labelledby="_tabs_3_java">
 <div class="listingblock">
 <div class="content">
 <pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">KeyGenerator generator = KeyGenerator.getInstance("DES");
@@ -2190,12 +2305,14 @@ from("direct:hmac-algorithm")
     .to("mock:unencrypted");</code></pre>
 </div>
 </div>
-<div class="paragraph">
-<p>or with spring.</p>
 </div>
+<div id="_tabs_3_spring_xml--panel" class="tabpanel" aria-labelledby="_tabs_3_spring_xml">
 <div class="listingblock">
 <div class="content">
 <pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;crypto id="hmac-algorithm" algorithm="DES" keyRef="desKey" macAlgorithm="HmacMD5" shouldAppendHMAC="true" /&gt;</code></pre>
+</div>
+</div>
+</div>
 </div>
 </div>
 </div>
@@ -2204,10 +2321,10 @@ from("direct:hmac-algorithm")
 <h2 id="_supplying_keys_dynamically"><a class="anchor" href="#_supplying_keys_dynamically"></a>Supplying Keys Dynamically</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>When using a Recipient list or similar EIP the recipient of an exchange can vary dynamically.
-Using the same key across all recipients may neither be feasible or desirable. It would be useful to be able to specify
-keys dynamically on a per exchange basis. The exchange could then be dynamically enriched with the key of its target
-recipient before being processed by the data format. To facilitate this the DataFormat allows for keys to be supplied
+<p>When using a Recipient list or similar EIP, the recipient of an exchange can vary dynamically.
+Using the same key across all recipients may neither be feasible nor desirable. It would be useful to be able to specify
+keys dynamically on a per-exchange basis. The exchange could then be dynamically enriched with the key of its target
+recipient before being processed by the data format. To facilitate this, the DataFormat allows for keys to be supplied
 dynamically via the message headers below</p>
 </div>
 <div class="ulist">
@@ -2217,12 +2334,25 @@ dynamically via the message headers below</p>
 </li>
 </ul>
 </div>
+<div id="_tabs_4" class="openblock tabs is-sync is-loading">
+<div class="content">
+<div class="ulist tablist">
+<ul>
+<li id="_tabs_4_java" class="tab">
+<p>Java</p>
+</li>
+<li id="_tabs_4_spring_xml" class="tab">
+<p>Spring XML</p>
+</li>
+</ul>
+</div>
+<div id="_tabs_4_java--panel" class="tabpanel" aria-labelledby="_tabs_4_java">
 <div class="listingblock">
 <div class="content">
 <pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">CryptoDataFormat cryptoFormat = new CryptoDataFormat("DES", null);
 /**
  * Note: the header containing the key should be cleared after
- * marshalling to stop it from leaking by accident and
+ * marshaling to stop it from leaking by accident and
  * potentially being compromised. The processor version below is
  * arguably better as the key is left in the header when you use
  * the DSL leaks the fact that camel encryption was used.
@@ -2240,12 +2370,14 @@ from("direct:key-in-header-decrypt").unmarshal(cryptoFormat).process(new Process
 }).to("mock:unencrypted");</code></pre>
 </div>
 </div>
-<div class="paragraph">
-<p>or with spring:</p>
 </div>
+<div id="_tabs_4_spring_xml--panel" class="tabpanel" aria-labelledby="_tabs_4_spring_xml">
 <div class="listingblock">
 <div class="content">
 <pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;crypto id="nokey" algorithm="DES" /&gt;</code></pre>
+</div>
+</div>
+</div>
 </div>
 </div>
 </div>
@@ -2254,7 +2386,7 @@ from("direct:key-in-header-decrypt").unmarshal(cryptoFormat).process(new Process
 <h2 id="_dependencies"><a class="anchor" href="#_dependencies"></a>Dependencies</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>To use the <a href="../crypto-component.html" class="xref page">Crypto</a> dataformat in your camel routes you
+<p>To use the <a href="../crypto-component.html" class="xref page">Crypto</a> dataformat in your camel routes, you
 need to add the following dependency to your pom.</p>
 </div>
 <div class="listingblock">
@@ -2266,6 +2398,9 @@ need to add the following dependency to your pom.</p>
   &lt;!-- use the same version as your Camel core version --&gt;
 &lt;/dependency&gt;</code></pre>
 </div>
+</div>
+<div class="paragraph">
+<p>Unresolved include directive in modules/dataformats/pages/crypto-dataformat.adoc - include::spring-boot:partial$starter.adoc[]</p>
 </div>
 </div>
 </div>

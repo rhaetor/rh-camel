@@ -3,15 +3,15 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>Try &#8230;&#8203; Catch &#8230;&#8203; Finally :: Red Hat Apache Build of Apache Camel Manual</title>
-    <meta name="generator" content="Antora 3.0.3">
+    <title>Try, Catch and Finally :: Red Hat build of Apache Camel</title>
+    <meta name="generator" content="Antora 3.1.4">
     <link rel="stylesheet" href="../_/css/site.css">
   </head>
   <body class="article">
 <header class="header">
   <nav class="navbar">
     <div class="navbar-brand">
-      <a class="navbar-item" href="../../manual/index.html">Red Hat Apache Build of Apache Camel Manual</a>
+      <a class="navbar-item" href="/">Red Hat build of Apache Camel</a>
       <button class="navbar-burger" data-target="topbar-nav">
         <span></span>
         <span></span>
@@ -26,6 +26,7 @@
     <div class="panels">
 <div class="nav-panel-menu is-active" data-panel="menu">
   <nav class="nav-menu">
+    <button class="nav-menu-toggle" aria-label="Toggle expand/collapse all" style="display: none"></button>
     <h3 class="title"><a href="index.html">User manual</a></h3>
 <ul class="nav-list">
   <li class="nav-item" data-depth="0">
@@ -56,7 +57,16 @@
     <a class="nav-link" href="camel-console.html">Camel Developer Console</a>
   </li>
   <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
     <a class="nav-link" href="camel-jbang.html">Camel JBang</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="camel-jbang-kubernetes.html">Camel Kubernetes plugin</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="camel-jbang-k.html">Camel K plugin</a>
+  </li>
+</ul>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="camel-maven-plugin.html">Camel Maven Plugin</a>
@@ -95,6 +105,9 @@
     <a class="nav-link" href="using-propertyplaceholder.html">How to use Camel property placeholders</a>
   </li>
   <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="variables.html">How to use Variables</a>
+  </li>
+  <li class="nav-item" data-depth="2">
     <button class="nav-item-toggle"></button>
     <a class="nav-link" href="testing.html">Testing</a>
 <ul class="nav-list">
@@ -110,7 +123,13 @@
 </ul>
   </li>
   <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
     <a class="nav-link" href="rest-dsl.html">Working with REST and Rest DSL</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="rest-dsl-openapi.html">Rest DSL contract first</a>
+  </li>
+</ul>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="writing-components.html">Writing Components</a>
@@ -477,9 +496,6 @@
     <a class="nav-link" href="faq/how-should-i-invoke-my-pojos-or-spring-services.html">How should I invoke my POJOs or Spring Services?</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="faq/how-to-avoid-importing-bunch-of-cxf-packages-when-start-up-the-camel-cxf-endpoint-from-osgi-platform-.html">How to avoid importing bunch of cxf packages when start up the camel-cxf endpoint from OSGi platform?</a>
-  </li>
-  <li class="nav-item" data-depth="2">
     <a class="nav-link" href="faq/how-to-avoid-sending-some-or-all-message-headers.html">How to avoid sending some or all message headers?</a>
   </li>
   <li class="nav-item" data-depth="2">
@@ -598,11 +614,11 @@
 <div class="nav-panel-explore" data-panel="explore">
   <div class="context">
     <span class="title">User manual</span>
-    <span class="version">default</span>
+    <span class="version"></span>
   </div>
   <ul class="components">
     <li class="component">
-      <a class="title" href="../components/next/index.html">Camel Components</a>
+      <div class="title"><a href="../components/next/index.html">Camel Components</a></div>
       <ul class="versions">
         <li class="version is-latest">
           <a href="../components/next/index.html">Next (Pre-release)</a>
@@ -610,12 +626,7 @@
       </ul>
     </li>
     <li class="component is-current">
-      <a class="title" href="index.html">User manual</a>
-      <ul class="versions">
-        <li class="version is-current is-latest">
-          <a href="index.html">default</a>
-        </li>
-      </ul>
+      <div class="title"><a href="index.html">User manual</a></div>
     </li>
   </ul>
 </div>
@@ -629,16 +640,17 @@
 <nav class="breadcrumbs" aria-label="breadcrumbs">
   <ul>
     <li><a href="index.html">User manual</a></li>
-    <li><a href="try-catch-finally.html">Try &#8230;&#8203; Catch &#8230;&#8203; Finally</a></li>
+    <li><a href="try-catch-finally.html">Try, Catch and Finally</a></li>
   </ul>
 </nav>
+<div class="edit-this-page"><a href="file:///code/jboss/jboss-camel/docs/user-manual/modules/ROOT/pages/try-catch-finally.adoc">Edit this Page</a></div>
 </div>
   <div class="content">
 <aside class="toc sidebar" data-title="Contents" data-levels="2">
   <div class="toc-menu"></div>
 </aside>
 <article class="doc">
-<h1 class="page">Try &#8230;&#8203; Catch &#8230;&#8203; Finally</h1>
+<h1 class="page">Try, Catch and Finally</h1>
 <div id="preamble">
 <div class="sectionbody">
 <div class="paragraph">
@@ -646,7 +658,7 @@
 It aims to work like its Java sisters but with more power.</p>
 </div>
 <div class="paragraph">
-<p>In Camel we prefix the keywords with <code>do</code> to avoid having same keyword as Java.
+<p>In Camel, we prefix the keywords with <code>do</code> to avoid having same keyword as Java.
 So we have:</p>
 </div>
 <div class="ulist">
@@ -719,7 +731,7 @@ The reason is that
 <h3 id="_using_onwhen_with_docatch"><a class="anchor" href="#_using_onwhen_with_docatch"></a>Using onWhen with doCatch</h3>
 <div class="paragraph">
 <p>You can use <a href="predicate.html" class="xref page">Predicate</a>s with <code>doCatch</code> to make it runtime determine if the block should be triggered or not.
-In our case we only want to trigger if the caused exception message contains the <strong>damn</strong> word.</p>
+In our case, we only want to trigger if the caused exception message contains the <strong>damn</strong> word.</p>
 </div>
 <div class="listingblock">
 <div class="content">
@@ -790,7 +802,10 @@ Instead of <code>end()</code> you can use <code>endDoTry()</code> to end and <em
 <div class="sect2">
 <h3 id="_using_nested_dotry_docatch_eips"><a class="anchor" href="#_using_nested_dotry_docatch_eips"></a>Using nested doTry &#8230;&#8203; doCatch EIPs</h3>
 <div class="paragraph">
-<p>When nesting doTry &#8230;&#8203; doCatch from an outer doTry &#8230;&#8203; doCatch EIP, then pay extra attention when using Java DSL as the Java programming language is not <em>indent aware</em> so you may write Java code that are indented in a way where you think that a catch block is associated with the other doTry but it is not.</p>
+<p>When nesting <code>doTry &#8230;&#8203; doCatch</code> from an outer <code>doTry &#8230;&#8203; doCatch</code> EIP,
+then pay extra attention when using Java DSL as the Java programming language is not <em>indent aware</em>
+so you may write Java code
+that is indented in a way where you think that a catch block is associated with the other doTry, but it is not.</p>
 </div>
 <div class="paragraph">
 <p>Given the following Java DSL:</p>
@@ -810,11 +825,12 @@ Instead of <code>end()</code> you can use <code>endDoTry()</code> to end and <em
 </div>
 </div>
 <div class="paragraph">
-<p>Then you may think that <em>docatch2</em> is associated on the outer doTry because of how the code is formatted.
-But it is <strong>not</strong>, both <em>docatch1</em> and <em>docatch2</em> are in the inner doTry, and the outer doTry has no catch blocks.</p>
+<p>Then you may think that <code><em>docatch2</em></code> is associated on the outer doTry because of how the code is formatted.
+But it is <strong>not</strong>, both <code><em>docatch1</em></code> and <code><em>docatch2</em></code> are in the inner <code>doTry</code>, and the outer <code>doTry</code> has no catch blocks.</p>
 </div>
 <div class="paragraph">
-<p>So in this example the route will throw the 1st exception which is then handled in <em>docatch1</em> which then throw a 2nd exception, that is not caught.</p>
+<p>So in this example, the route will throw the first exception which is then handled in <code><em>docatch1</em></code>
+which then throws a second exception, that is not caught.</p>
 </div>
 <div class="paragraph">
 <p>So what you must do is to end the doCatch block correct (notice how we use <code>endDoTry()</code> two times) as shown below:</p>

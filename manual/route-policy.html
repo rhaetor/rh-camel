@@ -3,15 +3,15 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>RoutePolicy :: Red Hat Apache Build of Apache Camel Manual</title>
-    <meta name="generator" content="Antora 3.0.3">
+    <title>RoutePolicy :: Red Hat build of Apache Camel</title>
+    <meta name="generator" content="Antora 3.1.4">
     <link rel="stylesheet" href="../_/css/site.css">
   </head>
   <body class="article">
 <header class="header">
   <nav class="navbar">
     <div class="navbar-brand">
-      <a class="navbar-item" href="../../manual/index.html">Red Hat Apache Build of Apache Camel Manual</a>
+      <a class="navbar-item" href="/">Red Hat build of Apache Camel</a>
       <button class="navbar-burger" data-target="topbar-nav">
         <span></span>
         <span></span>
@@ -26,6 +26,7 @@
     <div class="panels">
 <div class="nav-panel-menu is-active" data-panel="menu">
   <nav class="nav-menu">
+    <button class="nav-menu-toggle" aria-label="Toggle expand/collapse all" style="display: none"></button>
     <h3 class="title"><a href="index.html">User manual</a></h3>
 <ul class="nav-list">
   <li class="nav-item" data-depth="0">
@@ -56,7 +57,16 @@
     <a class="nav-link" href="camel-console.html">Camel Developer Console</a>
   </li>
   <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
     <a class="nav-link" href="camel-jbang.html">Camel JBang</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="camel-jbang-kubernetes.html">Camel Kubernetes plugin</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="camel-jbang-k.html">Camel K plugin</a>
+  </li>
+</ul>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="camel-maven-plugin.html">Camel Maven Plugin</a>
@@ -95,6 +105,9 @@
     <a class="nav-link" href="using-propertyplaceholder.html">How to use Camel property placeholders</a>
   </li>
   <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="variables.html">How to use Variables</a>
+  </li>
+  <li class="nav-item" data-depth="2">
     <button class="nav-item-toggle"></button>
     <a class="nav-link" href="testing.html">Testing</a>
 <ul class="nav-list">
@@ -110,7 +123,13 @@
 </ul>
   </li>
   <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
     <a class="nav-link" href="rest-dsl.html">Working with REST and Rest DSL</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="rest-dsl-openapi.html">Rest DSL contract first</a>
+  </li>
+</ul>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="writing-components.html">Writing Components</a>
@@ -477,9 +496,6 @@
     <a class="nav-link" href="faq/how-should-i-invoke-my-pojos-or-spring-services.html">How should I invoke my POJOs or Spring Services?</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="faq/how-to-avoid-importing-bunch-of-cxf-packages-when-start-up-the-camel-cxf-endpoint-from-osgi-platform-.html">How to avoid importing bunch of cxf packages when start up the camel-cxf endpoint from OSGi platform?</a>
-  </li>
-  <li class="nav-item" data-depth="2">
     <a class="nav-link" href="faq/how-to-avoid-sending-some-or-all-message-headers.html">How to avoid sending some or all message headers?</a>
   </li>
   <li class="nav-item" data-depth="2">
@@ -598,11 +614,11 @@
 <div class="nav-panel-explore" data-panel="explore">
   <div class="context">
     <span class="title">User manual</span>
-    <span class="version">default</span>
+    <span class="version"></span>
   </div>
   <ul class="components">
     <li class="component">
-      <a class="title" href="../components/next/index.html">Camel Components</a>
+      <div class="title"><a href="../components/next/index.html">Camel Components</a></div>
       <ul class="versions">
         <li class="version is-latest">
           <a href="../components/next/index.html">Next (Pre-release)</a>
@@ -610,12 +626,7 @@
       </ul>
     </li>
     <li class="component is-current">
-      <a class="title" href="index.html">User manual</a>
-      <ul class="versions">
-        <li class="version is-current is-latest">
-          <a href="index.html">default</a>
-        </li>
-      </ul>
+      <div class="title"><a href="index.html">User manual</a></div>
     </li>
   </ul>
 </div>
@@ -633,6 +644,7 @@
     <li><a href="route-policy.html">RoutePolicy</a></li>
   </ul>
 </nav>
+<div class="edit-this-page"><a href="file:///code/jboss/jboss-camel/docs/user-manual/modules/ROOT/pages/route-policy.adoc">Edit this Page</a></div>
 </div>
   <div class="content">
 <aside class="toc sidebar" data-title="Contents" data-levels="2">
@@ -703,9 +715,9 @@ example.</p>
 <ul>
 <li>
 <p><code>org.apache.camel.throttling.ThrottlingInflightRoutePolicy</code> - a throttling
-based policy that automatic suspends/resumes route(s) based on metrics
+based policy that automatically suspends/resumes route(s) based on metrics
 from the current in flight exchanges. You can use this to dynamically
-throttle e.g. a <a href="../components/next/jms-component.html" class="xref page">JMS</a> consumer, to avoid it consuming too
+ throttle, e.g. a <a href="../components/next/jms-component.html" class="xref page">JMS</a> consumer, to avoid it consuming too
 fast.</p>
 </li>
 <li>
@@ -728,7 +740,7 @@ during the day using a
 <h2 id="_suspendableservice"><a class="anchor" href="#_suspendableservice"></a>SuspendableService</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>If you want to dynamic suspend/resume routes then it is advised to
+<p>If you want to dynamic suspend/resume routes, then it is advised to
 use <code>SuspendableService</code> as it allows for fine-grained
 suspend and resume operations.</p>
 </div>
@@ -744,7 +756,7 @@ at least one <a href="exchange.html" class="xref page">Exchange</a> to be comple
 <em>works</em>.</p>
 </div>
 <div class="paragraph">
-<p>The throttling inflight route policy has the following options:</p>
+<p>The throttling in flight route policy has the following options:</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
 <colgroup>
@@ -764,14 +776,14 @@ at least one <a href="exchange.html" class="xref page">Exchange</a> to be comple
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>scope</code></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>Route</code></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">A scope for either <code>Route</code> or <code>Context</code> which defines if the current
-number of inflight exchanges is context based or for that particular
+number of in flight exchanges is context based or for that particular
 route.</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>maxInflightExchanges</code></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>1000</code></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">The maximum threshold when the throttling will start to suspend the
-route if the current number of inflight exchanges is higher than this
+route if the current number of in flight exchanges is higher than this
 value.</p></td>
 </tr>
 <tr>
@@ -797,15 +809,15 @@ again in case it has been suspended.</p></td>
 <div class="paragraph">
 <p>The <code>ThrottlingInflightRoutePolicy</code> compared to
 <a href="../components/next/eips/throttle-eip.html" class="xref page">Throttler</a> EIP is that it does <strong>not</strong> block during
-throttling. It does throttling that is approximate based, meaning that
-its more coarse grained and not explicit precise as the
+throttling. Its throttling is approximate-based, meaning that
+its coarser grained and not explicitly precise as the
 <a href="../components/next/eips/throttle-eip.html" class="xref page">Throttler</a> EIP.</p>
 </div>
 <div class="paragraph">
 <p>The <a href="../components/next/eips/throttle-eip.html" class="xref page">Throttler</a> EIP can
 be much more accurate and only allow a specific number of messages being
-passed per a given time unit. Also the <code>ThrottlingInflightRoutePolicy</code>
-is based its metrics on number of inflight exchanges where as
+passed per a given time unit. Also, the <code>ThrottlingInflightRoutePolicy</code>
+is based its metrics on number of in flight exchanges whereas
 <a href="../components/next/eips/throttle-eip.html" class="xref page">Throttler</a> EIP is based on number o
 messages per time unit.</p>
 </div>
@@ -878,7 +890,7 @@ a <code>RoutePolicy</code> instance for each route. This can be used when you
 want to use the same kind of route policy for all or some routes.</p>
 </div>
 <div class="paragraph">
-<p>With the factory you only need to configure this once, and every route created will
+<p>With the factory, you only need to configure this once, and every route created will
 have the policy assigned.</p>
 </div>
 <div class="paragraph">
@@ -899,7 +911,7 @@ have the policy assigned.</p>
 </div>
 <div class="paragraph">
 <p>You can have as many route policy factories as you want, so if you have two factories,
-you can just add them both as shown:</p>
+you can add them both as shown:</p>
 </div>
 <div class="listingblock">
 <div class="content">

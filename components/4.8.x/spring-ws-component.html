@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>Spring WebService :: Red Hat Camel Reference</title>
+    <title>Spring WebService :: Red Hat build of Apache Camel</title>
     <meta name="description" content="Access external web services as a client or expose your own web services.">
     <meta name="generator" content="Antora 3.1.4">
     <link rel="stylesheet" href="../../_/css/site.css">
@@ -12,7 +12,7 @@
 <header class="header">
   <nav class="navbar">
     <div class="navbar-brand">
-      <a class="navbar-item" href="../../manual/index.html">Red Hat Apache Build of Apache Camel Manual</a>
+      <a class="navbar-item" href="/">Red Hat build of Apache Camel</a>
       <button class="navbar-burger" data-target="topbar-nav">
         <span></span>
         <span></span>
@@ -27,6 +27,7 @@
     <div class="panels">
 <div class="nav-panel-menu is-active" data-panel="menu">
   <nav class="nav-menu">
+    <button class="nav-menu-toggle" aria-label="Toggle expand/collapse all" style="display: none"></button>
     <h3 class="title"><a href="index.html">Camel Components</a></h3>
 <ul class="nav-list">
   <li class="nav-item" data-depth="0">
@@ -36,7 +37,46 @@
     <a class="nav-link" href="index.html">Components</a>
 <ul class="nav-list">
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="activemq-component.html">ActiveMQ</a>
+    <a class="nav-link" href="activemq-component.html">ActiveMQ 5.x</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="activemq6-component.html">ActiveMQ 6.x</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="ai-summary.html">AI</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="chatscript-component.html">ChatScript</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="djl-component.html">Deep Java Library</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="langchain4j-chat-component.html">LangChain4j Chat</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="langchain4j-embeddings-component.html">LangChain4j Embeddings</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="langchain4j-tokenizer-component.html">LangChain4j Tokenizer</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="langchain4j-tools-component.html">LangChain4j Tools</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="langchain4j-web-search-component.html">LangChain4j Web Search</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="milvus-component.html">Milvus</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="pinecone-component.html">Pinecone</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="qdrant-component.html">Qdrant</a>
+  </li>
+</ul>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="amqp-component.html">AMQP</a>
@@ -65,6 +105,15 @@
 <ul class="nav-list">
   <li class="nav-item" data-depth="3">
     <a class="nav-link" href="aws2-athena-component.html">AWS Athena</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="aws-bedrock-component.html">AWS Bedrock</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="aws-bedrock-agent-component.html">AWS Bedrock Agent</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="aws-bedrock-agent-runtime-component.html">AWS Bedrock Agent Runtime</a>
   </li>
   <li class="nav-item" data-depth="3">
     <a class="nav-link" href="aws-cloudtrail-component.html">AWS Cloudtrail</a>
@@ -169,7 +218,7 @@
     <a class="nav-link" href="azure-storage-blob-component.html">Azure Storage Blob Service</a>
   </li>
   <li class="nav-item" data-depth="3">
-    <a class="nav-link" href="azure-storage-datalake-component.html">Azure Storage Datalake Service</a>
+    <a class="nav-link" href="azure-storage-datalake-component.html">Azure Storage Data Lake Service</a>
   </li>
   <li class="nav-item" data-depth="3">
     <a class="nav-link" href="azure-storage-queue-component.html">Azure Storage Queue Service</a>
@@ -202,9 +251,6 @@
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="cql-component.html">Cassandra CQL</a>
-  </li>
-  <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="chatscript-component.html">ChatScript</a>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="chunk-component.html">Chunk</a>
@@ -277,9 +323,6 @@
     <a class="nav-link" href="debezium-sqlserver-component.html">Debezium SQL Server Connector</a>
   </li>
 </ul>
-  </li>
-  <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="djl-component.html">Deep Java Library</a>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="dhis2-component.html">DHIS2</a>
@@ -395,6 +438,9 @@
   </li>
   <li class="nav-item" data-depth="3">
     <a class="nav-link" href="google-pubsub-component.html">Google Pubsub</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="google-pubsub-lite-component.html">Google PubSub Lite</a>
   </li>
   <li class="nav-item" data-depth="3">
     <a class="nav-link" href="google-secret-manager-component.html">Google Secret Manager</a>
@@ -687,7 +733,7 @@
     <a class="nav-link" href="ldif-component.html">LDIF</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="log-component.html">Log</a>
+    <a class="nav-link" href="log-component.html">Log Data</a>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="lucene-component.html">Lucene</a>
@@ -900,10 +946,16 @@
     <a class="nav-link" href="smb-component.html">SMB</a>
   </li>
   <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="smooks-component.html">Smooks</a>
+  </li>
+  <li class="nav-item" data-depth="2">
     <a class="nav-link" href="smpp-component.html">SMPP</a>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="snmp-component.html">SNMP</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="solr-component.html">Solr</a>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="splunk-component.html">Splunk</a>
@@ -966,6 +1018,18 @@
     <a class="nav-link" href="stub-component.html">Stub</a>
   </li>
   <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="tahu-summary.html">Tahu</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="tahu-edge-component.html">Tahu Edge Node / Device</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="tahu-host-component.html">Tahu Host Application</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
     <a class="nav-link" href="telegram-component.html">Telegram</a>
   </li>
   <li class="nav-item" data-depth="2">
@@ -1026,7 +1090,7 @@
     <a class="nav-link" href="whatsapp-component.html">WhatsApp</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="wordpress-component.html">Wordpress</a>
+    <a class="nav-link" href="wordpress-component.html">WordPress</a>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="workday-component.html">Workday</a>
@@ -1419,7 +1483,13 @@
     <a class="nav-link" href="others/openapi-java.html">Openapi Java</a>
   </li>
   <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="others/openapi-validator.html">Openapi Validator</a>
+  </li>
+  <li class="nav-item" data-depth="2">
     <a class="nav-link" href="others/opentelemetry.html">OpenTelemetry</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="others/platform-http-jolokia.html">Platform HTTP Jolokia</a>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="others/platform-http-main.html">Platform Http Main</a>
@@ -1567,7 +1637,7 @@
     <a class="nav-link" href="eips/event-message.html">Event Message</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="eips/failover-eip.html">Failover</a>
+    <a class="nav-link" href="eips/failoverLoadBalancer-eip.html">Failover Load Balancer</a>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="eips/faultToleranceConfiguration-eip.html">Fault Tolerance Configuration</a>
@@ -1597,13 +1667,13 @@
     <a class="nav-link" href="eips/loadBalance-eip.html">Load Balance</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="eips/log-eip.html">Log</a>
+    <a class="nav-link" href="eips/log-eip.html">Logger</a>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="eips/loop-eip.html">Loop</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="eips/marshal-eip.html">Marshal EIP</a>
+    <a class="nav-link" href="eips/marshal-eip.html">Marshal</a>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="eips/message.html">Message</a>
@@ -1660,6 +1730,9 @@
     <a class="nav-link" href="eips/point-to-point-channel.html">Point to Point Channel</a>
   </li>
   <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="eips/poll-eip.html">Poll</a>
+  </li>
+  <li class="nav-item" data-depth="2">
     <a class="nav-link" href="eips/pollEnrich-eip.html">Poll Enrich</a>
   </li>
   <li class="nav-item" data-depth="2">
@@ -1675,7 +1748,7 @@
     <a class="nav-link" href="eips/publish-subscribe-channel.html">Publish Subscribe Channel</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="eips/random-eip.html">Random</a>
+    <a class="nav-link" href="eips/randomLoadBalancer-eip.html">Random Load Balancer</a>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="eips/recipientList-eip.html">Recipient List</a>
@@ -1717,7 +1790,7 @@
     <a class="nav-link" href="eips/rollback-eip.html">Rollback</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="eips/roundRobin-eip.html">Round Robin</a>
+    <a class="nav-link" href="eips/roundRobinLoadBalancer-eip.html">Round Robin Load Balancer</a>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="eips/routingSlip-eip.html">Routing Slip</a>
@@ -1729,7 +1802,7 @@
     <a class="nav-link" href="eips/sample-eip.html">Sample</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="eips/scatter-gather.html">Scatter Gather</a>
+    <a class="nav-link" href="eips/scatter-gather.html">Scatter-Gather</a>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="eips/script-eip.html">Script</a>
@@ -1759,6 +1832,9 @@
     <a class="nav-link" href="eips/setVariable-eip.html">Set Variable</a>
   </li>
   <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="eips/setVariables-eip.html">Set Variables</a>
+  </li>
+  <li class="nav-item" data-depth="2">
     <a class="nav-link" href="eips/sort-eip.html">Sort</a>
   </li>
   <li class="nav-item" data-depth="2">
@@ -1768,7 +1844,7 @@
     <a class="nav-link" href="eips/step-eip.html">Step</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="eips/sticky-eip.html">Sticky</a>
+    <a class="nav-link" href="eips/stickyLoadBalancer-eip.html">Sticky Load Balancer</a>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="eips/stop-eip.html">Stop</a>
@@ -1789,7 +1865,7 @@
     <a class="nav-link" href="eips/toD-eip.html">To D</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="eips/topic-eip.html">Topic</a>
+    <a class="nav-link" href="eips/topicLoadBalancer-eip.html">Topic Load Balancer</a>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="eips/transactional-client.html">Transactional Client</a>
@@ -1798,13 +1874,13 @@
     <a class="nav-link" href="eips/transform-eip.html">Transform</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="eips/unmarshal-eip.html">Unmarshal EIP</a>
+    <a class="nav-link" href="eips/unmarshal-eip.html">Unmarshal</a>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="eips/validate-eip.html">Validate</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="eips/weighted-eip.html">Weighted</a>
+    <a class="nav-link" href="eips/weightedLoadBalancer-eip.html">Weighted Load Balancer</a>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="eips/wireTap-eip.html">Wire Tap</a>
@@ -1823,7 +1899,7 @@
   </div>
   <ul class="components">
     <li class="component is-current">
-      <a class="title" href="index.html">Camel Components</a>
+      <div class="title"><a href="index.html">Camel Components</a></div>
       <ul class="versions">
         <li class="version is-current is-latest">
           <a href="index.html">Next (Pre-release)</a>
@@ -1831,12 +1907,7 @@
       </ul>
     </li>
     <li class="component">
-      <a class="title" href="../../manual/index.html">User manual</a>
-      <ul class="versions">
-        <li class="version is-latest">
-          <a href="../../manual/index.html">default</a>
-        </li>
-      </ul>
+      <div class="title"><a href="../../manual/index.html">User manual</a></div>
     </li>
   </ul>
 </div>
@@ -1855,6 +1926,7 @@
     <li><a href="spring-ws-component.html">Spring WebService</a></li>
   </ul>
 </nav>
+<div class="edit-this-page"><a href="file:///code/jboss/jboss-camel/docs/components/modules/ROOT/pages/spring-ws-component.adoc">Edit this Page</a></div>
 </div>
   <div class="content">
 <aside class="toc sidebar" data-title="Contents" data-levels="2">
@@ -1872,7 +1944,7 @@
 </div>
 <div class="paragraph">
 <p>The Spring WS component allows you to integrate with
-<a href="http://static.springsource.org/spring-ws/sites/1.5/">Spring Web
+<a href="https://docs.spring.io/spring-ws/docs/4.0.x/reference/html/">Spring Web
 Services</a>. It offers both <em>client</em>-side support, for accessing web
 services, and <em>server</em>-side support for creating your own contract-first
 web services.</p>
@@ -1892,7 +1964,7 @@ for this component:</p>
 </div>
 </div>
 <div class="paragraph">
-<p><strong>Be aware</strong> Spring WS version 4.x does not support Axiom anymore (because Axiom does not support Jakarte JEE 9)</p>
+<p><strong>Be aware</strong> Spring WS version 4.x does not support Axiom anymore (because Axiom does not support Jakarta JEE 9)</p>
 </div>
 </div>
 </div>
@@ -1935,7 +2007,11 @@ the header of the message.</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>uri</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">In order to map web service requests that target a specific URI.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">To map web service requests that target a specific URI.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>uripath</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">To map web service requests that target a specific path in URI.</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>xpathresult</code></p></td>
@@ -1947,17 +2023,17 @@ should match the XPath result specified in the endpoint URI.</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>beanname</code></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Allows you to reference an
 <code>org.apache.camel.component.spring.ws.bean.CamelEndpointDispatcher</code>
-object in order to integrate with existing (legacy)
-<a href="http://static.springsource.org/spring-ws/sites/1.5/reference/html/server.html#server-endpoint-mapping">endpoint
+object to integrate with existing (legacy)
+<a href="https://docs.spring.io/spring-ws/docs/4.0.x/reference/html/#server-endpoint-mapping">endpoint
 mappings</a> like <code>PayloadRootQNameEndpointMapping</code>,
-<code>SoapActionEndpointMapping</code>, etc</p></td>
+<code>SoapActionEndpointMapping</code>, etc.</p></td>
 </tr>
 </tbody>
 </table>
 <div class="paragraph">
-<p>As a consumer the <strong>address</strong> should contain a value relevant to the
+<p>As a consumer, the <strong>address</strong> should contain a value relevant to the
 specified mapping-type (e.g. a SOAP action, XPath expression). As a
-producer the address should be set to the URI of the web service your
+producer, the address should be set to the URI of the web service your
 calling upon.</p>
 </div>
 </div>
@@ -1981,37 +2057,65 @@ calling upon.</p>
 <div class="sect2">
 <h3 id="_configuring_component_options"><a class="anchor" href="#_configuring_component_options"></a>Configuring Component Options</h3>
 <div class="paragraph">
-<p>The component level is the highest level which holds general and common configurations that are inherited by the endpoints.
-For example a component may have security settings, credentials for authentication, urls for network connection and so forth.</p>
+<p>At the component level, you set general and shared configurations that are, then, inherited by the endpoints. It is the highest configuration level.</p>
 </div>
 <div class="paragraph">
-<p>Some components only have a few options, and others may have many. Because components typically have pre configured defaults
-that are commonly used, then you may often only need to configure a few options on a component; or none at all.</p>
+<p>For example, a component may have security settings, credentials for authentication, urls for network connection and so forth.</p>
 </div>
 <div class="paragraph">
-<p>Configuring components can be done with the <a href="../../manual/component-dsl.html" class="xref page">Component DSL</a>,
-in a configuration file (application.properties|yaml), or directly with Java code.</p>
+<p>Some components only have a few options, and others may have many.
+Because components typically have pre-configured defaults that are commonly used, then you may often only need to configure a few options on a component; or none at all.</p>
+</div>
+<div class="paragraph">
+<p>You can configure components using:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>the <a href="../../manual/component-dsl.html" class="xref page">Component DSL</a>.</p>
+</li>
+<li>
+<p>in a configuration file (<code>application.properties</code>, <code>*.yaml</code> files, etc).</p>
+</li>
+<li>
+<p>directly in the Java code.</p>
+</li>
+</ul>
 </div>
 </div>
 <div class="sect2">
 <h3 id="_configuring_endpoint_options"><a class="anchor" href="#_configuring_endpoint_options"></a>Configuring Endpoint Options</h3>
 <div class="paragraph">
-<p>Where you find yourself configuring the most is on endpoints, as endpoints often have many options, which allows you to
-configure what you need the endpoint to do. The options are also categorized into whether the endpoint is used as consumer (from)
-or as a producer (to), or used for both.</p>
+<p>You usually spend more time setting up endpoints because they have many options.
+These options help you customize what you want the endpoint to do.
+The options are also categorized into whether the endpoint is used as a consumer (<em>from</em>), as a producer (<em>to</em>), or  both.</p>
 </div>
 <div class="paragraph">
-<p>Configuring endpoints is most often done directly in the endpoint URI as path and query parameters. You can also use
-the <a href="../../manual/Endpoint-dsl.html" class="xref page">Endpoint DSL</a> and <a href="../../manual/dataformat-dsl.html" class="xref page">DataFormat DSL</a>
+<p>Configuring endpoints is most often done directly in the endpoint URI as <em>path</em> and <em>query</em> parameters.
+You can also use the <a href="../../manual/Endpoint-dsl.html" class="xref page">Endpoint DSL</a> and <a href="../../manual/dataformat-dsl.html" class="xref page">DataFormat DSL</a>
 as a <em>type safe</em> way of configuring endpoints and data formats in Java.</p>
 </div>
 <div class="paragraph">
-<p>A good practice when configuring options is to use <a href="../../manual/using-propertyplaceholder.html" class="xref page">Property Placeholders</a>,
-which allows to not hardcode urls, port numbers, sensitive information, and other settings.
-In other words placeholders allows to externalize the configuration from your code, and gives more flexibility and reuse.</p>
+<p>A good practice when configuring options is to use <a href="../../manual/using-propertyplaceholder.html" class="xref page">Property Placeholders</a>.</p>
 </div>
 <div class="paragraph">
-<p>The following two sections lists all the options, firstly for the component followed by the endpoint.</p>
+<p>Property placeholders provide a few benefits:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>They help prevent using hardcoded urls, port numbers, sensitive information, and other settings.</p>
+</li>
+<li>
+<p>They allow externalizing the configuration from the code.</p>
+</li>
+<li>
+<p>They help the code to become more flexible and reusable.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>The following two sections list all the options, firstly for the component followed by the endpoint.</p>
 </div>
 </div>
 </div>
@@ -2090,7 +2194,7 @@ In other words placeholders allows to externalize the configuration from your co
 </div>
 </div>
 <div class="paragraph">
-<p>with the following path and query parameters:</p>
+<p>With the following <em>path</em> and <em>query</em> parameters:</p>
 </div>
 <div class="sect2">
 <h3 id="_path_parameters_3_parameters"><a class="anchor" href="#_path_parameters_3_parameters"></a>Path Parameters (3 parameters)</h3>
@@ -2502,8 +2606,10 @@ In other words placeholders allows to externalize the configuration from your co
 </div>
 </div>
 <div class="sect1">
-<h2 id="_accessing_web_services"><a class="anchor" href="#_accessing_web_services"></a>Accessing web services</h2>
+<h2 id="_usage"><a class="anchor" href="#_usage"></a>Usage</h2>
 <div class="sectionbody">
+<div class="sect2">
+<h3 id="_accessing_web_services"><a class="anchor" href="#_accessing_web_services"></a>Accessing web services</h3>
 <div class="paragraph">
 <p>To call a web service at <code>http://foo.com/bar</code> simply define a route:</p>
 </div>
@@ -2521,17 +2627,15 @@ In other words placeholders allows to externalize the configuration from your co
 </div>
 </div>
 <div class="paragraph">
-<p>Remember if it&#8217;s a SOAP service you&#8217;re calling you don&#8217;t have to include
+<p>Remember if it&#8217;s a SOAP service you&#8217;re calling, you don&#8217;t have to include
 SOAP tags. Spring-WS will perform the XML-to-SOAP marshaling.</p>
 </div>
 </div>
-</div>
-<div class="sect1">
-<h2 id="_sending_soap_and_ws_addressing_action_headers"><a class="anchor" href="#_sending_soap_and_ws_addressing_action_headers"></a>Sending SOAP and WS-Addressing action headers</h2>
-<div class="sectionbody">
+<div class="sect2">
+<h3 id="_sending_soap_and_ws_addressing_action_headers"><a class="anchor" href="#_sending_soap_and_ws_addressing_action_headers"></a>Sending SOAP and WS-Addressing action headers</h3>
 <div class="paragraph">
 <p>When a remote web service requires a SOAP action or use of the
-WS-Addressing standard you define your route as:</p>
+WS-Addressing standard, you define your route as:</p>
 </div>
 <div class="listingblock">
 <div class="content">
@@ -2540,7 +2644,7 @@ WS-Addressing standard you define your route as:</p>
 </div>
 </div>
 <div class="paragraph">
-<p>Optionally you can override the endpoint options with header values:</p>
+<p>Optionally, you can override the endpoint options with header values:</p>
 </div>
 <div class="listingblock">
 <div class="content">
@@ -2550,13 +2654,11 @@ SpringWebserviceConstants.SPRING_WS_SOAP_ACTION, "http://baz.com");</code></pre>
 </div>
 </div>
 </div>
-</div>
-<div class="sect1">
-<h2 id="_using_soap_headers"><a class="anchor" href="#_using_soap_headers"></a>Using SOAP headers</h2>
-<div class="sectionbody">
+<div class="sect2">
+<h3 id="_using_soap_headers"><a class="anchor" href="#_using_soap_headers"></a>Using SOAP headers</h3>
 <div class="paragraph">
 <p>You can provide the SOAP header(s) as a Camel Message header when
-sending a message to a spring-ws endpoint, for example given the
+sending a message to a spring-ws endpoint, for example, given the
 following SOAP header in a String</p>
 </div>
 <div class="listingblock">
@@ -2583,21 +2685,19 @@ Service.</p>
 the SOAP header.</p>
 </div>
 <div class="paragraph">
-<p>For an example see this
-<a href="https://svn.apache.org/repos/asf/camel/trunk/components/camel-spring-ws/src/test/java/org/apache/camel/component/spring/ws/SoapHeaderTest.java">unit
+<p>For example, see this
+<a href="https://github.com/apache/camel/blob/main/components/camel-spring-ws/src/test/java/org/apache/camel/component/spring/ws/SoapHeaderTest.java">unit
 test</a>.</p>
 </div>
 </div>
-</div>
-<div class="sect1">
-<h2 id="_the_header_and_attachment_propagation"><a class="anchor" href="#_the_header_and_attachment_propagation"></a>The header and attachment propagation</h2>
-<div class="sectionbody">
+<div class="sect2">
+<h3 id="_the_header_and_attachment_propagation"><a class="anchor" href="#_the_header_and_attachment_propagation"></a>The header and attachment propagation</h3>
 <div class="paragraph">
 <p>Spring WS Camel supports propagation of the headers and attachments into
-Spring-WS WebServiceMessage response. The
-endpoint will use so called "hook" the MessageFilter (default
-implementation is provided by BasicMessageFilter) to propagate the
-exchange headers and attachments into WebServiceMessage response. Now
+Spring-WS <code>WebServiceMessage</code> response. The
+endpoint will use so-called "hook" the <code>MessageFilter</code> (default
+implementation is provided by <code>BasicMessageFilter</code>) to propagate the
+exchange headers and attachments into <code>WebServiceMessage</code> response. Now
 you can use</p>
 </div>
 <div class="listingblock">
@@ -2616,19 +2716,17 @@ exchange.getIn().addAttachment("myAttachment", new DataHandler(...))</code></pre
 <div class="paragraph">
 <p>If the exchange header in the pipeline contains text, it generates
 Qname(key)=value attribute in the soap header. Recommended is to create
-a QName class directly and put into any key into header.</p>
+a QName class directly and put any key into header.</p>
 </div>
 </td>
 </tr>
 </table>
 </div>
 </div>
-</div>
-<div class="sect1">
-<h2 id="_how_to_transform_the_soap_header_using_a_stylesheet"><a class="anchor" href="#_how_to_transform_the_soap_header_using_a_stylesheet"></a>How to transform the soap header using a stylesheet</h2>
-<div class="sectionbody">
+<div class="sect2">
+<h3 id="_how_to_transform_the_soap_header_using_a_stylesheet"><a class="anchor" href="#_how_to_transform_the_soap_header_using_a_stylesheet"></a>How to transform the soap header using a stylesheet</h3>
 <div class="paragraph">
-<p>The header transformation filter (HeaderTransformationMessageFilter.java)
+<p>The header transformation filter (<code>HeaderTransformationMessageFilter</code>)
 can be used to transform the soap header for a soap request. If you want to use
 the header transformation filter, see the below example:</p>
 </div>
@@ -2651,31 +2749,38 @@ the header transformation filter, see the below example:</p>
 </div>
 </div>
 </div>
-</div>
-<div class="sect1">
-<h2 id="_the_custom_header_and_attachment_filtering"><a class="anchor" href="#_the_custom_header_and_attachment_filtering"></a>The custom header and attachment filtering</h2>
-<div class="sectionbody">
+<div class="sect2">
+<h3 id="_the_custom_header_and_attachment_filtering"><a class="anchor" href="#_the_custom_header_and_attachment_filtering"></a>The custom header and attachment filtering</h3>
 <div class="paragraph">
 <p>If you need to provide your custom processing of either headers or
-attachments, extend existing BasicMessageFilter and override the
-appropriate methods or write a brand new implementation of the
-MessageFilter interface.<br>
- To use your custom filter, add this into your spring context:</p>
+attachments, extend existing <code>BasicMessageFilter</code> and override the
+appropriate methods or write a brand-new implementation of the
+<code>MessageFilter</code> interface.
+To use your custom filter, add this into your spring context:</p>
 </div>
 <div class="paragraph">
 <p>You can specify either a global a or a local message filter as
-follows:
- a) the global custom filter that provides the global configuration for
+follows:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>the global custom filter that provides the global configuration for
 all Spring-WS endpoints</p>
+</li>
+</ul>
 </div>
 <div class="listingblock">
 <div class="content">
 <pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;bean id="messageFilter" class="your.domain.myMessageFiler" scope="singleton" /&gt;</code></pre>
 </div>
 </div>
-<div class="paragraph">
-<p>or
- b) the local messageFilter directly on the endpoint as follows:</p>
+<div class="ulist">
+<ul>
+<li>
+<p>the local messageFilter directly on the endpoint as follows:</p>
+</li>
+</ul>
 </div>
 <div class="listingblock">
 <div class="content">
@@ -2683,13 +2788,13 @@ all Spring-WS endpoints</p>
 </div>
 </div>
 <div class="paragraph">
-<p>For more information see
+<p>For more information, see
 <a href="https://issues.apache.org/jira/browse/CAMEL-5724">CAMEL-5724</a></p>
 </div>
 <div class="paragraph">
-<p>If you want to create your own MessageFilter, consider overriding the
-following methods in the default implementation of MessageFilter in
-class BasicMessageFilter:</p>
+<p>If you want to create your own <code>MessageFilter</code>, consider overriding the
+following methods in the default implementation of <code>MessageFilter</code> in
+class <code>BasicMessageFilter</code>:</p>
 </div>
 <div class="listingblock">
 <div class="content">
@@ -2701,10 +2806,8 @@ protected void doProcessSoapAttachements(Message inOrOut, SoapMessage response)
 </div>
 </div>
 </div>
-</div>
-<div class="sect1">
-<h2 id="_using_a_custom_messagesender_and_messagefactory"><a class="anchor" href="#_using_a_custom_messagesender_and_messagefactory"></a>Using a custom MessageSender and MessageFactory</h2>
-<div class="sectionbody">
+<div class="sect2">
+<h3 id="_using_a_custom_messagesender_and_messagefactory"><a class="anchor" href="#_using_a_custom_messagesender_and_messagefactory"></a>Using a custom MessageSender and MessageFactory</h3>
 <div class="paragraph">
 <p>A custom message sender or factory in the registry can be referenced
 like this:</p>
@@ -2728,31 +2831,22 @@ like this:</p>
             &lt;constructor-arg index="1" value="secret"/&gt;
         &lt;/bean&gt;
     &lt;/property&gt;
-&lt;/bean&gt;
-
-&lt;!-- force use of Sun SAAJ implementation, http://static.springsource.org/spring-ws/sites/1.5/faq.html#saaj-jboss --&gt;
-&lt;bean id="messageFactory" class="org.springframework.ws.soap.saaj.SaajSoapMessageFactory"&gt;
-    &lt;property name="messageFactory"&gt;
-        &lt;bean class="com.sun.xml.messaging.saaj.soap.ver1_1.SOAPMessageFactory1_1Impl"/&gt;
-    &lt;/property&gt;
 &lt;/bean&gt;</code></pre>
 </div>
 </div>
 </div>
-</div>
-<div class="sect1">
-<h2 id="_exposing_web_services"><a class="anchor" href="#_exposing_web_services"></a>Exposing web services</h2>
-<div class="sectionbody">
+<div class="sect2">
+<h3 id="_exposing_web_services"><a class="anchor" href="#_exposing_web_services"></a>Exposing web services</h3>
 <div class="paragraph">
-<p>In order to expose a web service using this component you first need to
-set-up a
-<a href="http://static.springsource.org/spring-ws/sites/1.5/reference/html/server.html">MessageDispatcher</a>
+<p>To expose a web service using this component, you first need to
+set up a
+<a href="https://docs.spring.io/spring-ws/docs/4.0.x/reference/html/#_the_messagedispatcher">MessageDispatcher</a>
 to look for endpoint mappings in a Spring XML file. If you plan on
-running inside a servlet container you probably want to use a
+running inside a servlet container, you probably want to use a
 <code>MessageDispatcherServlet</code> configured in <code>web.xml</code>.</p>
 </div>
 <div class="paragraph">
-<p>By default the <code>MessageDispatcherServlet</code> will look for a Spring XML
+<p>By default, the <code>MessageDispatcherServlet</code> will look for a Spring XML
 named <code>/WEB-INF/spring-ws-servlet.xml</code>. To use Camel with Spring-WS the
 only mandatory bean in that XML file is <code>CamelEndpointMapping</code>. This
 bean allows the <code>MessageDispatcher</code> to dispatch web service requests to
@@ -2797,21 +2891,19 @@ your routes.</p>
 </div>
 <div class="paragraph">
 <p>More information on setting up Spring-WS can be found in
-<a href="http://static.springsource.org/spring-ws/sites/1.5/reference/html/tutorial.html">Writing
+<a href="https://docs.spring.io/spring-ws/docs/4.0.x/reference/html/#tutorial">Writing
 Contract-First Web Services</a>. Basically paragraph 3.6 "Implementing the
 Endpoint" is handled by this component (specifically paragraph 3.6.2
 "Routing the Message to the Endpoint" is where <code>CamelEndpointMapping</code>
-comes in). Also don&#8217;t forget to check out the
+comes in). Also remember to check out the
 Spring Web Services Example included in the
 Camel distribution.</p>
 </div>
 </div>
-</div>
-<div class="sect1">
-<h2 id="_endpoint_mapping_in_routes"><a class="anchor" href="#_endpoint_mapping_in_routes"></a>Endpoint mapping in routes</h2>
-<div class="sectionbody">
+<div class="sect2">
+<h3 id="_endpoint_mapping_in_routes"><a class="anchor" href="#_endpoint_mapping_in_routes"></a>Endpoint mapping in routes</h3>
 <div class="paragraph">
-<p>With the XML configuration in-place you can now use Camel&#8217;s DSL to
+<p>With the XML configuration in place, you can now use Camel&#8217;s DSL to
 define what web service requests are handled by your endpoint:</p>
 </div>
 <div class="paragraph">
@@ -2856,16 +2948,14 @@ namespace).</p>
 </div>
 </div>
 </div>
-</div>
-<div class="sect1">
-<h2 id="_alternative_configuration_using_existing_endpoint_mappings"><a class="anchor" href="#_alternative_configuration_using_existing_endpoint_mappings"></a>Alternative configuration, using existing endpoint mappings</h2>
-<div class="sectionbody">
+<div class="sect2">
+<h3 id="_alternative_configuration_using_existing_endpoint_mappings"><a class="anchor" href="#_alternative_configuration_using_existing_endpoint_mappings"></a>Alternative configuration, using existing endpoint mappings</h3>
 <div class="paragraph">
 <p>For every endpoint with mapping-type <code>beanname</code> one bean of type
 <code>CamelEndpointDispatcher</code> with a corresponding name is required in the
-Registry/ApplicationContext. This bean acts as a bridge between the
+<code>Registry</code>/<code>ApplicationContext</code>. This bean acts as a bridge between the
 Camel endpoint and an existing
-<a href="http://static.springsource.org/spring-ws/sites/1.5/reference/html/server.html#server-endpoint-mapping">endpoint
+<a href="https://docs.spring.io/spring-ws/docs/4.0.x/reference/html/#server-endpoint-mapping">endpoint
 mapping</a> like <code>PayloadRootQNameEndpointMapping</code>.</p>
 </div>
 <div class="admonitionblock note">
@@ -2880,10 +2970,10 @@ mapping</a> like <code>PayloadRootQNameEndpointMapping</code>.</p>
 situations where you&#8217;re already using Spring-WS and have endpoint
 mappings defined in a Spring XML file. The <code>beanname</code> mapping-type
 allows you to wire your Camel route into an existing endpoint mapping.
-When you&#8217;re starting from scratch it&#8217;s recommended to define your
+When you&#8217;re starting from scratch, it&#8217;s recommended to define your
 endpoint mappings as Camel URI&#8217;s (as illustrated above with
 <code>endpointMapping</code>) since it requires less configuration and is more
-expressive. Alternatively you could use vanilla Spring-WS with the help
+expressive. Alternatively, you could use vanilla Spring-WS with the help
 of annotations.</p>
 </div>
 </td>
@@ -2916,18 +3006,16 @@ of annotations.</p>
 </div>
 </div>
 </div>
-</div>
-<div class="sect1">
-<h2 id="_pojo_unmarshalling"><a class="anchor" href="#_pojo_unmarshalling"></a>POJO (un)marshalling</h2>
-<div class="sectionbody">
+<div class="sect2">
+<h3 id="_pojo_unmarshalling"><a class="anchor" href="#_pojo_unmarshalling"></a>POJO (un)marshalling</h3>
 <div class="paragraph">
 <p>Camel&#8217;s pluggable data formats offer support for
 pojo/xml marshalling using libraries such as JAXB.
-You can use these data formats in your route to sent and
+You can use these data formats in your route to send and
 receive pojo&#8217;s, to and from web services.</p>
 </div>
 <div class="paragraph">
-<p>When <em>accessing</em> web services you can marshal the request and unmarshal
+<p>When <em>accessing</em> web services, you can marshal the request and unmarshal
 the response message:</p>
 </div>
 <div class="listingblock">
@@ -2939,13 +3027,17 @@ from("direct:example").marshal(jaxb).to("spring-ws:http://foo.com/bar").unmarsha
 </div>
 </div>
 <div class="paragraph">
-<p>Similarly when <em>providing</em> web services, you can unmarshal XML requests
+<p>Similarly, when <em>providing</em> web services, you can unmarshal XML requests
 to POJO&#8217;s and marshal the response message back to XML:</p>
 </div>
 <div class="listingblock">
 <div class="content">
 <pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">from("spring-ws:rootqname:{http://example.com/}GetFoo?endpointMapping=#endpointMapping").unmarshal(jaxb)
 .to("mock:example").marshal(jaxb);</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Unresolved include directive in modules/ROOT/pages/spring-ws-component.adoc - include::spring-boot:partial$starter.adoc[]</p>
 </div>
 </div>
 </div>

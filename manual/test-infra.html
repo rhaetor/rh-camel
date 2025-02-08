@@ -3,15 +3,15 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>Test Infrastructure :: Red Hat Apache Build of Apache Camel Manual</title>
-    <meta name="generator" content="Antora 3.0.3">
+    <title>Test Infrastructure :: Red Hat build of Apache Camel</title>
+    <meta name="generator" content="Antora 3.1.4">
     <link rel="stylesheet" href="../_/css/site.css">
   </head>
   <body class="article">
 <header class="header">
   <nav class="navbar">
     <div class="navbar-brand">
-      <a class="navbar-item" href="../../manual/index.html">Red Hat Apache Build of Apache Camel Manual</a>
+      <a class="navbar-item" href="/">Red Hat build of Apache Camel</a>
       <button class="navbar-burger" data-target="topbar-nav">
         <span></span>
         <span></span>
@@ -26,6 +26,7 @@
     <div class="panels">
 <div class="nav-panel-menu is-active" data-panel="menu">
   <nav class="nav-menu">
+    <button class="nav-menu-toggle" aria-label="Toggle expand/collapse all" style="display: none"></button>
     <h3 class="title"><a href="index.html">User manual</a></h3>
 <ul class="nav-list">
   <li class="nav-item" data-depth="0">
@@ -56,7 +57,16 @@
     <a class="nav-link" href="camel-console.html">Camel Developer Console</a>
   </li>
   <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
     <a class="nav-link" href="camel-jbang.html">Camel JBang</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="camel-jbang-kubernetes.html">Camel Kubernetes plugin</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="camel-jbang-k.html">Camel K plugin</a>
+  </li>
+</ul>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="camel-maven-plugin.html">Camel Maven Plugin</a>
@@ -95,6 +105,9 @@
     <a class="nav-link" href="using-propertyplaceholder.html">How to use Camel property placeholders</a>
   </li>
   <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="variables.html">How to use Variables</a>
+  </li>
+  <li class="nav-item" data-depth="2">
     <button class="nav-item-toggle"></button>
     <a class="nav-link" href="testing.html">Testing</a>
 <ul class="nav-list">
@@ -110,7 +123,13 @@
 </ul>
   </li>
   <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
     <a class="nav-link" href="rest-dsl.html">Working with REST and Rest DSL</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="rest-dsl-openapi.html">Rest DSL contract first</a>
+  </li>
+</ul>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="writing-components.html">Writing Components</a>
@@ -477,9 +496,6 @@
     <a class="nav-link" href="faq/how-should-i-invoke-my-pojos-or-spring-services.html">How should I invoke my POJOs or Spring Services?</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="faq/how-to-avoid-importing-bunch-of-cxf-packages-when-start-up-the-camel-cxf-endpoint-from-osgi-platform-.html">How to avoid importing bunch of cxf packages when start up the camel-cxf endpoint from OSGi platform?</a>
-  </li>
-  <li class="nav-item" data-depth="2">
     <a class="nav-link" href="faq/how-to-avoid-sending-some-or-all-message-headers.html">How to avoid sending some or all message headers?</a>
   </li>
   <li class="nav-item" data-depth="2">
@@ -598,11 +614,11 @@
 <div class="nav-panel-explore" data-panel="explore">
   <div class="context">
     <span class="title">User manual</span>
-    <span class="version">default</span>
+    <span class="version"></span>
   </div>
   <ul class="components">
     <li class="component">
-      <a class="title" href="../components/next/index.html">Camel Components</a>
+      <div class="title"><a href="../components/next/index.html">Camel Components</a></div>
       <ul class="versions">
         <li class="version is-latest">
           <a href="../components/next/index.html">Next (Pre-release)</a>
@@ -610,12 +626,7 @@
       </ul>
     </li>
     <li class="component is-current">
-      <a class="title" href="index.html">User manual</a>
-      <ul class="versions">
-        <li class="version is-current is-latest">
-          <a href="index.html">default</a>
-        </li>
-      </ul>
+      <div class="title"><a href="index.html">User manual</a></div>
     </li>
   </ul>
 </div>
@@ -634,6 +645,7 @@
     <li><a href="test-infra.html">Test Infra</a></li>
   </ul>
 </nav>
+<div class="edit-this-page"><a href="file:///code/jboss/jboss-camel/docs/user-manual/modules/ROOT/pages/test-infra.adoc">Edit this Page</a></div>
 </div>
   <div class="content">
 <aside class="toc sidebar" data-title="Contents" data-levels="2">
@@ -664,7 +676,7 @@ protected static CamelContextExtension contextExtension = new DefaultCamelContex
 </div>
 </div>
 <div class="paragraph">
-<p>Then, via the extension, you can access the context (ie.: <code>``contextExtension.getContext()</code>) to manipulate it as need in the tests.</p>
+<p>Then, via the extension, you can access the context (i.e.: <code>``contextExtension.getContext()</code>) to manipulate it as needed in the tests.</p>
 </div>
 <div class="paragraph">
 <p>The extension comes with a few utilities to simplify configuring the context, and adding routes at the appropriate time.</p>
@@ -731,7 +743,7 @@ public void createRouteBuilder(CamelContext context) throws Exception {
 <h2 id="_simulating_the_test_infrastructure"><a class="anchor" href="#_simulating_the_test_infrastructure"></a>Simulating the Test Infrastructure</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>One of the first steps when implementing a new test, is to identify how to simulate infrastructure required for it to
+<p>One of the first steps when implementing a new test is to identify how to simulate infrastructure required for it to
 run. The test-infra module provides a reusable library of infrastructure that can be used for that purpose.</p>
 </div>
 <div class="paragraph">
@@ -765,9 +777,10 @@ TestContainers). It makes it easier to hit edge cases as well as try different o
 latency, slow backends, etc).</p>
 </div>
 <div class="paragraph">
-<p>JUnit 5 manages the lifecycle of the services, therefore each service must be a JUnit 5 compliant extension. The exact
-extension point that a service must extend is specific to each service. The JUnit 5
-<a href="https://junit.org/junit5/docs/current/user-guide">documentation</a> is the reference for the extension points.</p>
+<p>JUnit 5 manages the lifecycle of the services.
+Therefore, each service must be a JUnit 5 compliant extension.
+The exact extension point that a service must extend is specific to each service.
+The <a href="https://junit.org/junit5/docs/current/user-guide">JUnit 5 documentation</a> is the reference for the extension points.</p>
 </div>
 <div class="paragraph">
 <p>When a container image is not available via TestContainers, tests can provide their own implementation using officially
@@ -776,7 +789,7 @@ to build the service can be provided. The Dockerfile should try to minimize the 
 whenever possible.</p>
 </div>
 <div class="paragraph">
-<p>It is also possible to use embeddable components when required, although this usually lead to more code and higher
+<p>It is also possible to use embeddable components when required, although this usually leads to more code and higher
 maintenance.</p>
 </div>
 <div class="sect3">
@@ -820,7 +833,7 @@ another for the container service:</p>
 </div>
 </div>
 <div class="paragraph">
-<p>In most cases a specialized service factory class is responsible for creating the service according to runtime
+<p>In most cases, a specialized service factory class is responsible for creating the service according to runtime
 parameters and/or other test scenarios constraints. When a service allows different service types or locations to be
 selected, this should be done via command line properties (<code>-D&lt;property.name&gt;=&lt;value&gt;</code>). For example, when allowing a
 service to choose between running as a local container or as remote instance, a property in the format
@@ -875,7 +888,7 @@ to be resolved in Spring&#8217;s XML files.</p>
 <div class="sect3">
 <h4 id="_packaging_recommendations"><a class="anchor" href="#_packaging_recommendations"></a>Packaging Recommendations</h4>
 <div class="paragraph">
-<p>This is test infrastructure code, therefore it should be package as test type artifacts. The
+<p>This is infrastructure code for testing, therefore, it should be package as test type artifacts. The
 <a href="https://github.com/apache/camel/blob/main/test-infra/camel-test-infra-parent">parent pom</a> should provide all the necessary bits for packaging the test infrastructure.</p>
 </div>
 </div>
@@ -934,7 +947,7 @@ static MyService service = MyServiceServiceFactory.createService();</code></pre>
 <pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">@RegisterExtension
 static MyService service = MyServiceServiceFactory
     .builder()
-        .addRemoveMapping(MyTestClass::myCustomRemoteService) // this is rarely needed
+        .addRemoveMapping(MyTestClass::myCustomRemoteService) // this is rarely necessary
         .addLocalMapping(MyTestClass::staticMethodReturningAService) // sets the handler for -Dmy-service.instance.type=local-myservice-local-container
         .addMapping("local-alternative-service", MyTestClass::anotherMethodReturningAService) // sets the handler for -Dmy-service.instance.type=local-alternative-service
     .createService();</code></pre>
@@ -1015,19 +1028,19 @@ and replace them with the ones from the <a href="https://github.com/apache/camel
 Then, it&#8217;s necessary to replace the <a href="https://github.com/apache/camel/blob/camel-3.6.0/components/camel-nats/src/test/java/org/apache/camel/component/nats/NatsTestSupport.java#L24-L45">container handling code and the old base class</a>
 with the <a href="https://github.com/apache/camel/blob/camel-3.7.0/components/camel-nats/src/test/java/org/apache/camel/component/nats/NatsTestSupport.java#L26-L27">service provided in the module</a>.
 Then, we replace the base class. The <code>ContainerAwareTestSupport</code> class and other similar classes from other
-<code>camel-testcontainer</code> modules are not necessary and can be replaced with <code>CamelTestSupport</code> or the spring based one
+<code>camel-testcontainer</code> modules are not necessary and can be replaced with <code>CamelTestSupport</code> or the spring-based one
 <code>CamelSpringTestSupport</code>.</p>
 </div>
 <div class="paragraph">
-<p>With the base changes in place, the next step is to make sure that addresses (URLs, hostnames, ports, etc) and
-resources (usernames, passwords, tokens, etc) referenced during the test execution, use the test-infra services. This
-may differ according to each service. Replacing the call to get the <a href="https://github.com/apache/camel/blob/camel-3.6.0/components/camel-nats/src/test/java/org/apache/camel/component/nats/NatsAuthConsumerLoadTest.java#L38">service URL</a>
-with the one provided by the new <a href="https://github.com/apache/camel/blob/camel-3.7.0/components/camel-nats/src/test/java/org/apache/camel/component/nats/NatsAuthConsumerLoadTest.java#L38">test infra service</a>
-is a good example of this type of changes that may be necessary.</p>
+<p>With the base changes in place, the next step is to make sure that addresses (URLs, hostnames, ports, etc.) and
+resources (usernames, passwords, tokens, etc.) referenced during the test execution, use the test-infra services. This
+may differ, according to each service. Replacing the call to get the <a href="https://github.com/apache/camel/blob/camel-3.6.0/components/camel-nats/src/test/java/org/apache/camel/component/nats/NatsAuthConsumerLoadTest.java#L38">service URL</a>
+with the one provided by the new <a href="https://github.com/apache/camel/blob/camel-4.4.0/components/camel-nats/src/test/java/org/apache/camel/component/nats/integration/NatsAuthConsumerLoadIT.java#L37">test infra service</a>
+is a good example of the changes that may be necessary.</p>
 </div>
 <div class="paragraph">
 <p>In some cases, it may be necessary to adjust the variables used in <a href="https://github.com/apache/camel/blob/camel-3.6.0/components/camel-consul/src/test/resources/org/apache/camel/component/consul/cloud/SpringConsulRibbonServiceCallRouteTest.xml#L36">simple language</a>
-so that they match the <a href="https://github.com/apache/camel/blob/camel-3.7.0/components/camel-consul/src/test/resources/org/apache/camel/component/consul/cloud/SpringConsulRibbonServiceCallRouteTest.xml#L36">new property format</a> used in the test infra service.</p>
+so that they match the <a href="https://github.com/apache/camel/blob/camel-3.14.0/components/camel-consul/src/test/resources/org/apache/camel/component/consul/cloud/SpringConsulRibbonServiceCallRouteTest.xml#L36">new property format</a> used in the test infra service.</p>
 </div>
 <div class="paragraph">
 <p>There are some cases where the container instance requires <a href="https://github.com/apache/camel/blob/camel-3.6.0/components/camel-pg-replication-slot/src/test/java/org/apache/camel/component/pg/replication/slot/integration/PgReplicationTestSupport.java#L31">extra customization</a>.
@@ -1043,7 +1056,7 @@ but this may be very specific to the test scenario.</p>
 <p>Most of the test infrastructure in this module is based on containers. Therefore, they will require a container runtime to run. Although the tests have been written and tested using Docker, they should also work with <a href="https://podman.io/">Podman</a> (another popular container runtime on Linux operating systems).</p>
 </div>
 <div class="paragraph">
-<p>Assuming Podman is properly installed and configured to behave like docker (i.e.: short name resolution, resolving docker.io registry, etc), the only requirement for using Podman is to export the DOCKER_HOST variable before running the tests.</p>
+<p>Assuming Podman is properly installed and configured to behave like docker (i.e.: short name resolution, resolving docker.io registry, etc.), the only requirement for using Podman is to export the <code>DOCKER_HOST</code> variable before running the tests.</p>
 </div>
 <div class="sect2">
 <h3 id="_linux"><a class="anchor" href="#_linux"></a>Linux</h3>
@@ -1068,16 +1081,22 @@ but this may be very specific to the test scenario.</p>
 <h2 id="_known_issues_andor_tips"><a class="anchor" href="#_known_issues_andor_tips"></a>Known Issues and/or Tips</h2>
 <div class="sectionbody">
 <div class="sect2">
-<h3 id="_multi_architecture_support_arm"><a class="anchor" href="#_multi_architecture_support_arm"></a>Multi-architecture support: ARM</h3>
+<h3 id="_multi_architecture_support"><a class="anchor" href="#_multi_architecture_support"></a>Multi-architecture support</h3>
 <div class="paragraph">
-<p>Some containers don&#8217;t have images available for ARM. In this case, it is recommended to use an alternative image or build your own. The list below contains some tips for specific components:</p>
+<p>Some containers don&#8217;t have images available for all architectures. In this case, it is recommended to:</p>
 </div>
-<div class="ulist">
-<ul>
+<div class="olist arabic">
+<ol class="arabic">
 <li>
-<p>camel-test-infra-kafka: use the Strimzi images <code>-Dkafka.instance.type=local-strimzi-container</code></p>
+<p>use an alternative image from a reputable source if they provide an image for that architecture.</p>
 </li>
-</ul>
+<li>
+<p>create a <code>Dockerfile</code> and build your own if the system is available on that arch.</p>
+</li>
+<li>
+<p>disable the tests on that architecture.</p>
+</li>
+</ol>
 </div>
 </div>
 </div>

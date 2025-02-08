@@ -3,8 +3,8 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>REST OpenApi :: Red Hat Camel Reference</title>
-    <meta name="description" content="Configure REST producers based on an OpenAPI specification document delegating to a component implementing the RestProducerFactory interface.">
+    <title>REST OpenApi :: Red Hat build of Apache Camel</title>
+    <meta name="description" content="To call REST services using OpenAPI specification as contract.">
     <meta name="generator" content="Antora 3.1.4">
     <link rel="stylesheet" href="../../_/css/site.css">
   </head>
@@ -12,7 +12,7 @@
 <header class="header">
   <nav class="navbar">
     <div class="navbar-brand">
-      <a class="navbar-item" href="../../manual/index.html">Red Hat Apache Build of Apache Camel Manual</a>
+      <a class="navbar-item" href="/">Red Hat build of Apache Camel</a>
       <button class="navbar-burger" data-target="topbar-nav">
         <span></span>
         <span></span>
@@ -27,6 +27,7 @@
     <div class="panels">
 <div class="nav-panel-menu is-active" data-panel="menu">
   <nav class="nav-menu">
+    <button class="nav-menu-toggle" aria-label="Toggle expand/collapse all" style="display: none"></button>
     <h3 class="title"><a href="index.html">Camel Components</a></h3>
 <ul class="nav-list">
   <li class="nav-item" data-depth="0">
@@ -36,7 +37,46 @@
     <a class="nav-link" href="index.html">Components</a>
 <ul class="nav-list">
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="activemq-component.html">ActiveMQ</a>
+    <a class="nav-link" href="activemq-component.html">ActiveMQ 5.x</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="activemq6-component.html">ActiveMQ 6.x</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="ai-summary.html">AI</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="chatscript-component.html">ChatScript</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="djl-component.html">Deep Java Library</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="langchain4j-chat-component.html">LangChain4j Chat</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="langchain4j-embeddings-component.html">LangChain4j Embeddings</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="langchain4j-tokenizer-component.html">LangChain4j Tokenizer</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="langchain4j-tools-component.html">LangChain4j Tools</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="langchain4j-web-search-component.html">LangChain4j Web Search</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="milvus-component.html">Milvus</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="pinecone-component.html">Pinecone</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="qdrant-component.html">Qdrant</a>
+  </li>
+</ul>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="amqp-component.html">AMQP</a>
@@ -65,6 +105,15 @@
 <ul class="nav-list">
   <li class="nav-item" data-depth="3">
     <a class="nav-link" href="aws2-athena-component.html">AWS Athena</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="aws-bedrock-component.html">AWS Bedrock</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="aws-bedrock-agent-component.html">AWS Bedrock Agent</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="aws-bedrock-agent-runtime-component.html">AWS Bedrock Agent Runtime</a>
   </li>
   <li class="nav-item" data-depth="3">
     <a class="nav-link" href="aws-cloudtrail-component.html">AWS Cloudtrail</a>
@@ -169,7 +218,7 @@
     <a class="nav-link" href="azure-storage-blob-component.html">Azure Storage Blob Service</a>
   </li>
   <li class="nav-item" data-depth="3">
-    <a class="nav-link" href="azure-storage-datalake-component.html">Azure Storage Datalake Service</a>
+    <a class="nav-link" href="azure-storage-datalake-component.html">Azure Storage Data Lake Service</a>
   </li>
   <li class="nav-item" data-depth="3">
     <a class="nav-link" href="azure-storage-queue-component.html">Azure Storage Queue Service</a>
@@ -202,9 +251,6 @@
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="cql-component.html">Cassandra CQL</a>
-  </li>
-  <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="chatscript-component.html">ChatScript</a>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="chunk-component.html">Chunk</a>
@@ -277,9 +323,6 @@
     <a class="nav-link" href="debezium-sqlserver-component.html">Debezium SQL Server Connector</a>
   </li>
 </ul>
-  </li>
-  <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="djl-component.html">Deep Java Library</a>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="dhis2-component.html">DHIS2</a>
@@ -395,6 +438,9 @@
   </li>
   <li class="nav-item" data-depth="3">
     <a class="nav-link" href="google-pubsub-component.html">Google Pubsub</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="google-pubsub-lite-component.html">Google PubSub Lite</a>
   </li>
   <li class="nav-item" data-depth="3">
     <a class="nav-link" href="google-secret-manager-component.html">Google Secret Manager</a>
@@ -687,7 +733,7 @@
     <a class="nav-link" href="ldif-component.html">LDIF</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="log-component.html">Log</a>
+    <a class="nav-link" href="log-component.html">Log Data</a>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="lucene-component.html">Lucene</a>
@@ -900,16 +946,49 @@
     <a class="nav-link" href="smb-component.html">SMB</a>
   </li>
   <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="smooks-component.html">Smooks</a>
+  </li>
+  <li class="nav-item" data-depth="2">
     <a class="nav-link" href="smpp-component.html">SMPP</a>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="snmp-component.html">SNMP</a>
   </li>
   <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="solr-component.html">Solr</a>
+  </li>
+  <li class="nav-item" data-depth="2">
     <a class="nav-link" href="splunk-component.html">Splunk</a>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="splunk-hec-component.html">Splunk HEC</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="spring-summary.html">Spring</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="spring-batch-component.html">Spring Batch</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="spring-event-component.html">Spring Event</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="spring-jdbc-component.html">Spring JDBC</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="spring-ldap-component.html">Spring LDAP</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="spring-rabbitmq-component.html">Spring RabbitMQ</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="spring-redis-component.html">Spring Redis</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="spring-ws-component.html">Spring WebService</a>
+  </li>
+</ul>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="sql-component.html">SQL</a>
@@ -937,6 +1016,18 @@
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="stub-component.html">Stub</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="tahu-summary.html">Tahu</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="tahu-edge-component.html">Tahu Edge Node / Device</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="tahu-host-component.html">Tahu Host Application</a>
+  </li>
+</ul>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="telegram-component.html">Telegram</a>
@@ -999,7 +1090,7 @@
     <a class="nav-link" href="whatsapp-component.html">WhatsApp</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="wordpress-component.html">Wordpress</a>
+    <a class="nav-link" href="wordpress-component.html">WordPress</a>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="workday-component.html">Workday</a>
@@ -1392,7 +1483,13 @@
     <a class="nav-link" href="others/openapi-java.html">Openapi Java</a>
   </li>
   <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="others/openapi-validator.html">Openapi Validator</a>
+  </li>
+  <li class="nav-item" data-depth="2">
     <a class="nav-link" href="others/opentelemetry.html">OpenTelemetry</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="others/platform-http-jolokia.html">Platform HTTP Jolokia</a>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="others/platform-http-main.html">Platform Http Main</a>
@@ -1540,7 +1637,7 @@
     <a class="nav-link" href="eips/event-message.html">Event Message</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="eips/failover-eip.html">Failover</a>
+    <a class="nav-link" href="eips/failoverLoadBalancer-eip.html">Failover Load Balancer</a>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="eips/faultToleranceConfiguration-eip.html">Fault Tolerance Configuration</a>
@@ -1570,13 +1667,13 @@
     <a class="nav-link" href="eips/loadBalance-eip.html">Load Balance</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="eips/log-eip.html">Log</a>
+    <a class="nav-link" href="eips/log-eip.html">Logger</a>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="eips/loop-eip.html">Loop</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="eips/marshal-eip.html">Marshal EIP</a>
+    <a class="nav-link" href="eips/marshal-eip.html">Marshal</a>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="eips/message.html">Message</a>
@@ -1633,6 +1730,9 @@
     <a class="nav-link" href="eips/point-to-point-channel.html">Point to Point Channel</a>
   </li>
   <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="eips/poll-eip.html">Poll</a>
+  </li>
+  <li class="nav-item" data-depth="2">
     <a class="nav-link" href="eips/pollEnrich-eip.html">Poll Enrich</a>
   </li>
   <li class="nav-item" data-depth="2">
@@ -1648,7 +1748,7 @@
     <a class="nav-link" href="eips/publish-subscribe-channel.html">Publish Subscribe Channel</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="eips/random-eip.html">Random</a>
+    <a class="nav-link" href="eips/randomLoadBalancer-eip.html">Random Load Balancer</a>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="eips/recipientList-eip.html">Recipient List</a>
@@ -1690,7 +1790,7 @@
     <a class="nav-link" href="eips/rollback-eip.html">Rollback</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="eips/roundRobin-eip.html">Round Robin</a>
+    <a class="nav-link" href="eips/roundRobinLoadBalancer-eip.html">Round Robin Load Balancer</a>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="eips/routingSlip-eip.html">Routing Slip</a>
@@ -1702,7 +1802,7 @@
     <a class="nav-link" href="eips/sample-eip.html">Sample</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="eips/scatter-gather.html">Scatter Gather</a>
+    <a class="nav-link" href="eips/scatter-gather.html">Scatter-Gather</a>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="eips/script-eip.html">Script</a>
@@ -1732,6 +1832,9 @@
     <a class="nav-link" href="eips/setVariable-eip.html">Set Variable</a>
   </li>
   <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="eips/setVariables-eip.html">Set Variables</a>
+  </li>
+  <li class="nav-item" data-depth="2">
     <a class="nav-link" href="eips/sort-eip.html">Sort</a>
   </li>
   <li class="nav-item" data-depth="2">
@@ -1741,7 +1844,7 @@
     <a class="nav-link" href="eips/step-eip.html">Step</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="eips/sticky-eip.html">Sticky</a>
+    <a class="nav-link" href="eips/stickyLoadBalancer-eip.html">Sticky Load Balancer</a>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="eips/stop-eip.html">Stop</a>
@@ -1762,7 +1865,7 @@
     <a class="nav-link" href="eips/toD-eip.html">To D</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="eips/topic-eip.html">Topic</a>
+    <a class="nav-link" href="eips/topicLoadBalancer-eip.html">Topic Load Balancer</a>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="eips/transactional-client.html">Transactional Client</a>
@@ -1771,13 +1874,13 @@
     <a class="nav-link" href="eips/transform-eip.html">Transform</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="eips/unmarshal-eip.html">Unmarshal EIP</a>
+    <a class="nav-link" href="eips/unmarshal-eip.html">Unmarshal</a>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="eips/validate-eip.html">Validate</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="eips/weighted-eip.html">Weighted</a>
+    <a class="nav-link" href="eips/weightedLoadBalancer-eip.html">Weighted Load Balancer</a>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="eips/wireTap-eip.html">Wire Tap</a>
@@ -1796,7 +1899,7 @@
   </div>
   <ul class="components">
     <li class="component is-current">
-      <a class="title" href="index.html">Camel Components</a>
+      <div class="title"><a href="index.html">Camel Components</a></div>
       <ul class="versions">
         <li class="version is-current is-latest">
           <a href="index.html">Next (Pre-release)</a>
@@ -1804,12 +1907,7 @@
       </ul>
     </li>
     <li class="component">
-      <a class="title" href="../../manual/index.html">User manual</a>
-      <ul class="versions">
-        <li class="version is-latest">
-          <a href="../../manual/index.html">default</a>
-        </li>
-      </ul>
+      <div class="title"><a href="../../manual/index.html">User manual</a></div>
     </li>
   </ul>
 </div>
@@ -1827,6 +1925,7 @@
     <li><a href="rest-openapi-component.html">REST OpenApi</a></li>
   </ul>
 </nav>
+<div class="edit-this-page"><a href="file:///code/jboss/jboss-camel/docs/components/modules/ROOT/pages/rest-openapi-component.adoc">Edit this Page</a></div>
 </div>
   <div class="content">
 <aside class="toc sidebar" data-title="Contents" data-levels="2">
@@ -1840,13 +1939,13 @@
 <p><strong>Since Camel 3.1</strong></p>
 </div>
 <div class="paragraph">
-<p><strong>Only producer is supported</strong></p>
+<p><strong>Both producer and consumer are supported</strong></p>
 </div>
 <div class="paragraph">
-<p>The REST OpenApi* configures rest producers from
+<p>The REST OpenApi configures rest producers from
 <a href="https://www.openapis.org/">OpenApi</a> (Open API) specification document and
 delegates to a component implementing the <em>RestProducerFactory</em>
-interface. Currently known working components are:</p>
+interface. Currently, known working components are:</p>
 </div>
 <div class="ulist">
 <ul>
@@ -1863,6 +1962,18 @@ interface. Currently known working components are:</p>
 <p><a href="vertx-http-component.html" class="xref page">vertx-http</a></p>
 </li>
 </ul>
+</div>
+<div class="admonitionblock important">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-important" title="Important"></i>
+</td>
+<td class="content">
+Only OpenAPI spec version 3.x is supported. You cannot use the old Swagger 2.0 spec.
+</td>
+</tr>
+</table>
 </div>
 <div class="paragraph">
 <p>Maven users will need to add the following dependency to their
@@ -1903,17 +2014,19 @@ load the resource, which means that you can use CLASSPATH resources
 failing that OpenApi&#8217;s own resource loading support.</p>
 </div>
 <div class="paragraph">
-<p>This component does not act as a HTTP client, it delegates that to
-another component mentioned above. The lookup mechanism searches for a
-single component that implements the <em>RestProducerFactory</em> interface and
-uses that. If the CLASSPATH contains more than one, then the property
+<p>This component does not act as an HTTP client.
+It delegates that to another component mentioned above.
+The lookup mechanism searches for a single component that
+implements the <code>RestProducerFactory</code> interface and
+uses that.
+If the <code><em>CLASSPATH</em></code> contains more than one, then the property
 <code>componentName</code> should be set to indicate which component to delegate
 to.</p>
 </div>
 <div class="paragraph">
-<p>Most of the configuration is taken from the OpenApi specification but
+<p>Most of the configuration is taken from the OpenApi specification, but
 the option exists to override those by specifying them on the component
-or on the endpoint. Typically you would just need to override the
+or on the endpoint. Typically, you would need to override the
 <code>host</code> or <code>basePath</code> if those differ from the specification.</p>
 </div>
 <div class="admonitionblock note">
@@ -1940,15 +2053,15 @@ components listed at the top.</p>
 </div>
 <div class="paragraph">
 <p>If you do not specify the <em>componentName</em> at either component or
-endpoint level, CLASSPATH is searched for a suitable delegate. There
-should be only one component present on the CLASSPATH that implements
-the <em>RestProducerFactory</em> interface for this to work.</p>
+endpoint level, <code><em>CLASSPATH</em></code> is searched for a suitable delegate. There
+should be only one component present on the <code><em>CLASSPATH</em></code> that implements
+the <code>RestProducerFactory</code> interface for this to work.</p>
 </div>
 <div class="paragraph">
 <p>This component&#8217;s endpoint URI is lenient which means that in addition
 to message headers you can specify REST operation&#8217;s parameters as
 endpoint parameters, these will be constant for all subsequent
-invocations so it makes sense to use this feature only for parameters
+invocations, so it makes sense to use this feature only for parameters
 that are indeed constant for all invocations&#8201;&#8212;&#8201;for example API version
 in path such as <code>/api/{version}/users/{id}</code>.</p>
 </div>
@@ -1973,37 +2086,65 @@ in path such as <code>/api/{version}/users/{id}</code>.</p>
 <div class="sect2">
 <h3 id="_configuring_component_options"><a class="anchor" href="#_configuring_component_options"></a>Configuring Component Options</h3>
 <div class="paragraph">
-<p>The component level is the highest level which holds general and common configurations that are inherited by the endpoints.
-For example a component may have security settings, credentials for authentication, urls for network connection and so forth.</p>
+<p>At the component level, you set general and shared configurations that are, then, inherited by the endpoints. It is the highest configuration level.</p>
 </div>
 <div class="paragraph">
-<p>Some components only have a few options, and others may have many. Because components typically have pre configured defaults
-that are commonly used, then you may often only need to configure a few options on a component; or none at all.</p>
+<p>For example, a component may have security settings, credentials for authentication, urls for network connection and so forth.</p>
 </div>
 <div class="paragraph">
-<p>Configuring components can be done with the <a href="../../manual/component-dsl.html" class="xref page">Component DSL</a>,
-in a configuration file (application.properties|yaml), or directly with Java code.</p>
+<p>Some components only have a few options, and others may have many.
+Because components typically have pre-configured defaults that are commonly used, then you may often only need to configure a few options on a component; or none at all.</p>
+</div>
+<div class="paragraph">
+<p>You can configure components using:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>the <a href="../../manual/component-dsl.html" class="xref page">Component DSL</a>.</p>
+</li>
+<li>
+<p>in a configuration file (<code>application.properties</code>, <code>*.yaml</code> files, etc).</p>
+</li>
+<li>
+<p>directly in the Java code.</p>
+</li>
+</ul>
 </div>
 </div>
 <div class="sect2">
 <h3 id="_configuring_endpoint_options"><a class="anchor" href="#_configuring_endpoint_options"></a>Configuring Endpoint Options</h3>
 <div class="paragraph">
-<p>Where you find yourself configuring the most is on endpoints, as endpoints often have many options, which allows you to
-configure what you need the endpoint to do. The options are also categorized into whether the endpoint is used as consumer (from)
-or as a producer (to), or used for both.</p>
+<p>You usually spend more time setting up endpoints because they have many options.
+These options help you customize what you want the endpoint to do.
+The options are also categorized into whether the endpoint is used as a consumer (<em>from</em>), as a producer (<em>to</em>), or  both.</p>
 </div>
 <div class="paragraph">
-<p>Configuring endpoints is most often done directly in the endpoint URI as path and query parameters. You can also use
-the <a href="../../manual/Endpoint-dsl.html" class="xref page">Endpoint DSL</a> and <a href="../../manual/dataformat-dsl.html" class="xref page">DataFormat DSL</a>
+<p>Configuring endpoints is most often done directly in the endpoint URI as <em>path</em> and <em>query</em> parameters.
+You can also use the <a href="../../manual/Endpoint-dsl.html" class="xref page">Endpoint DSL</a> and <a href="../../manual/dataformat-dsl.html" class="xref page">DataFormat DSL</a>
 as a <em>type safe</em> way of configuring endpoints and data formats in Java.</p>
 </div>
 <div class="paragraph">
-<p>A good practice when configuring options is to use <a href="../../manual/using-propertyplaceholder.html" class="xref page">Property Placeholders</a>,
-which allows to not hardcode urls, port numbers, sensitive information, and other settings.
-In other words placeholders allows to externalize the configuration from your code, and gives more flexibility and reuse.</p>
+<p>A good practice when configuring options is to use <a href="../../manual/using-propertyplaceholder.html" class="xref page">Property Placeholders</a>.</p>
 </div>
 <div class="paragraph">
-<p>The following two sections lists all the options, firstly for the component followed by the endpoint.</p>
+<p>Property placeholders provide a few benefits:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>They help prevent using hardcoded urls, port numbers, sensitive information, and other settings.</p>
+</li>
+<li>
+<p>They allow externalizing the configuration from the code.</p>
+</li>
+<li>
+<p>They help the code to become more flexible and reusable.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>The following two sections list all the options, firstly for the component followed by the endpoint.</p>
 </div>
 </div>
 </div>
@@ -2012,7 +2153,7 @@ In other words placeholders allows to externalize the configuration from your co
 <h2 id="_component_options"><a class="anchor" href="#_component_options"></a>Component Options</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>The REST OpenApi component supports 12 options, which are listed below.</p>
+<p>The REST OpenApi component supports 19 options, which are listed below.</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
 <colgroup>
@@ -2032,7 +2173,7 @@ In other words placeholders allows to externalize the configuration from your co
 <tbody>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><a id="_component_option_basePath"></a>
-<a href="#_component_option_basePath" class="anchor"></a><strong>basePath</strong> (producer)</p></td>
+<a href="#_component_option_basePath" class="anchor"></a><strong>basePath</strong> (common)</p></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p>API basePath, for example /v2. Default is unset, if set overrides the value present in OpenApi specification.</p>
 </div></div></td>
@@ -2040,22 +2181,101 @@ In other words placeholders allows to externalize the configuration from your co
 <td class="tableblock halign-left valign-top"><p class="tableblock">String</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><a id="_component_option_componentName"></a>
-<a href="#_component_option_componentName" class="anchor"></a><strong>componentName</strong> (producer)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a id="_component_option_specificationUri"></a>
+<a href="#_component_option_specificationUri" class="anchor"></a><strong>specificationUri</strong> (common)</p></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>Name of the Camel component that will perform the requests. The component must be present in Camel registry and it must implement RestProducerFactory service provider interface. If not set CLASSPATH is searched for single component that implements RestProducerFactory SPI. Can be overridden in endpoint configuration.</p>
+<p>Path to the OpenApi specification file. The scheme, host base path are taken from this specification, but these can be overridden with properties on the component or endpoint level. If not given the component tries to load openapi.json resource. Note that the host defined on the component and endpoint of this Component should contain the scheme, hostname and optionally the port in the URI syntax (i.e. <a href="https://api.example.com:8080" class="bare">https://api.example.com:8080</a>). Can be overridden in endpoint configuration.</p>
+</div></div></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">openapi.json</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">String</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a id="_component_option_apiContextPath"></a>
+<a href="#_component_option_apiContextPath" class="anchor"></a><strong>apiContextPath</strong> (consumer)</p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>Sets the context-path to use for servicing the OpenAPI specification.</p>
 </div></div></td>
 <td class="tableblock halign-center valign-top"></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">String</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><a id="_component_option_consumes"></a>
-<a href="#_component_option_consumes" class="anchor"></a><strong>consumes</strong> (producer)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a id="_component_option_bridgeErrorHandler"></a>
+<a href="#_component_option_bridgeErrorHandler" class="anchor"></a><strong>bridgeErrorHandler</strong> (consumer)</p></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>What payload type this component capable of consuming. Could be one type, like application/json or multiple types as application/json, application/xml; q=0.5 according to the RFC7231. This equates to the value of Accept HTTP header. If set overrides any value found in the OpenApi specification. Can be overridden in endpoint configuration.</p>
+<p>Allows for bridging the consumer to the Camel routing Error Handler, which mean any exceptions (if possible) occurred while the Camel consumer is trying to pickup incoming messages, or the likes, will now be processed as a message and handled by the routing Error Handler. Important: This is only possible if the 3rd party component allows Camel to be alerted if an exception was thrown. Some components handle this internally only, and therefore bridgeErrorHandler is not possible. In other situations we may improve the Camel component to hook into the 3rd party component and make this possible for future releases. By default the consumer will use the org.apache.camel.spi.ExceptionHandler to deal with exceptions, that will be logged at WARN or ERROR level and ignored.</p>
+</div></div></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">false</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">boolean</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a id="_component_option_clientRequestValidation"></a>
+<a href="#_component_option_clientRequestValidation" class="anchor"></a><strong>clientRequestValidation</strong> (consumer)</p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>Whether to enable validation of the client request to check if the incoming request is valid according to the OpenAPI specification.</p>
+</div></div></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">false</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">boolean</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a id="_component_option_missingOperation"></a>
+<a href="#_component_option_missingOperation" class="anchor"></a><strong>missingOperation</strong> (consumer)</p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>Whether the consumer should fail,ignore or return a mock response for OpenAPI operations that are not mapped to a corresponding route.</p>
+</div>
+<div class="paragraph">
+<p>Enum values:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>fail</p>
+</li>
+<li>
+<p>ignore</p>
+</li>
+<li>
+<p>mock</p>
+</li>
+</ul>
+</div></div></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">fail</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">String</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a id="_component_option_bindingPackageScan"></a>
+<a href="#_component_option_bindingPackageScan" class="anchor"></a><strong>bindingPackageScan</strong> (consumer (advanced))</p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>Package name to use as base (offset) for classpath scanning of POJO classes are located when using binding mode is enabled for JSon or XML. Multiple package names can be separated by comma.</p>
 </div></div></td>
 <td class="tableblock halign-center valign-top"></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">String</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a id="_component_option_consumerComponentName"></a>
+<a href="#_component_option_consumerComponentName" class="anchor"></a><strong>consumerComponentName</strong> (consumer (advanced))</p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>Name of the Camel component that will service the requests. The component must be present in Camel registry and it must implement RestOpenApiConsumerFactory service provider interface. If not set CLASSPATH is searched for single component that implements RestOpenApiConsumerFactory SPI. Can be overridden in endpoint configuration.</p>
+</div></div></td>
+<td class="tableblock halign-center valign-top"></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">String</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a id="_component_option_mockIncludePattern"></a>
+<a href="#_component_option_mockIncludePattern" class="anchor"></a><strong>mockIncludePattern</strong> (consumer (advanced))</p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>Used for inclusive filtering of mock data from directories. The pattern is using Ant-path style pattern. Multiple patterns can be specified separated by comma.</p>
+</div></div></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">classpath:camel-mock/**</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">String</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a id="_component_option_restOpenapiProcessorStrategy"></a>
+<a href="#_component_option_restOpenapiProcessorStrategy" class="anchor"></a><strong>restOpenapiProcessorStrategy</strong> (consumer (advanced))</p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>To use a custom strategy for how to process Rest DSL requests.</p>
+</div></div></td>
+<td class="tableblock halign-center valign-top"></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">RestOpenapiProcessorStrategy</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><a id="_component_option_host"></a>
@@ -2076,24 +2296,6 @@ In other words placeholders allows to externalize the configuration from your co
 <td class="tableblock halign-left valign-top"><p class="tableblock">boolean</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><a id="_component_option_produces"></a>
-<a href="#_component_option_produces" class="anchor"></a><strong>produces</strong> (producer)</p></td>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>What payload type this component is producing. For example application/json according to the RFC7231. This equates to the value of Content-Type HTTP header. If set overrides any value present in the OpenApi specification. Can be overridden in endpoint configuration.</p>
-</div></div></td>
-<td class="tableblock halign-center valign-top"></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">String</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><a id="_component_option_requestValidationCustomizer"></a>
-<a href="#_component_option_requestValidationCustomizer" class="anchor"></a><strong>requestValidationCustomizer</strong> (producer)</p></td>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>If request validation is enabled, this option provides the capability to customize the creation of OpenApiInteractionValidator used to validate requests.</p>
-</div></div></td>
-<td class="tableblock halign-center valign-top"><p class="tableblock">org.apache.camel.component.rest.openapi.validator.DefaultRequestValidationCustomizer</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">RequestValidationCustomizer</p></td>
-</tr>
-<tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><a id="_component_option_requestValidationEnabled"></a>
 <a href="#_component_option_requestValidationEnabled" class="anchor"></a><strong>requestValidationEnabled</strong> (producer)</p></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
@@ -2103,13 +2305,31 @@ In other words placeholders allows to externalize the configuration from your co
 <td class="tableblock halign-left valign-top"><p class="tableblock">boolean</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><a id="_component_option_specificationUri"></a>
-<a href="#_component_option_specificationUri" class="anchor"></a><strong>specificationUri</strong> (producer)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a id="_component_option_componentName"></a>
+<a href="#_component_option_componentName" class="anchor"></a><strong>componentName</strong> (producer (advanced))</p></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>Path to the OpenApi specification file. The scheme, host base path are taken from this specification, but these can be overridden with properties on the component or endpoint level. If not given the component tries to load openapi.json resource. Note that the host defined on the component and endpoint of this Component should contain the scheme, hostname and optionally the port in the URI syntax (i.e. <a href="https://api.example.com:8080" class="bare">https://api.example.com:8080</a>). Can be overridden in endpoint configuration.</p>
+<p>Name of the Camel component that will perform the requests. The component must be present in Camel registry and it must implement RestProducerFactory service provider interface. If not set CLASSPATH is searched for single component that implements RestProducerFactory SPI. Can be overridden in endpoint configuration.</p>
 </div></div></td>
-<td class="tableblock halign-center valign-top"><p class="tableblock">openapi.json</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">URI</p></td>
+<td class="tableblock halign-center valign-top"></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">String</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a id="_component_option_consumes"></a>
+<a href="#_component_option_consumes" class="anchor"></a><strong>consumes</strong> (producer (advanced))</p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>What payload type this component capable of consuming. Could be one type, like application/json or multiple types as application/json, application/xml; q=0.5 according to the RFC7231. This equates to the value of Accept HTTP header. If set overrides any value found in the OpenApi specification. Can be overridden in endpoint configuration.</p>
+</div></div></td>
+<td class="tableblock halign-center valign-top"></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">String</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a id="_component_option_produces"></a>
+<a href="#_component_option_produces" class="anchor"></a><strong>produces</strong> (producer (advanced))</p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>What payload type this component is producing. For example application/json according to the RFC7231. This equates to the value of Content-Type HTTP header. If set overrides any value present in the OpenApi specification. Can be overridden in endpoint configuration.</p>
+</div></div></td>
+<td class="tableblock halign-center valign-top"></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">String</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><a id="_component_option_autowiredEnabled"></a>
@@ -2154,7 +2374,7 @@ In other words placeholders allows to externalize the configuration from your co
 </div>
 </div>
 <div class="paragraph">
-<p>with the following path and query parameters:</p>
+<p>With the following <em>path</em> and <em>query</em> parameters:</p>
 </div>
 <div class="sect2">
 <h3 id="_path_parameters_2_parameters"><a class="anchor" href="#_path_parameters_2_parameters"></a>Path Parameters (2 parameters)</h3>
@@ -2176,18 +2396,18 @@ In other words placeholders allows to externalize the configuration from your co
 <tbody>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><a id="_endpoint_path_option_specificationUri"></a>
-<a href="#_endpoint_path_option_specificationUri" class="anchor"></a><strong>specificationUri</strong> (producer)</p></td>
+<a href="#_endpoint_path_option_specificationUri" class="anchor"></a><strong>specificationUri</strong> (common)</p></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p>Path to the OpenApi specification file. The scheme, host base path are taken from this specification, but these can be overridden with properties on the component or endpoint level. If not given the component tries to load openapi.json resource from the classpath. Note that the host defined on the component and endpoint of this Component should contain the scheme, hostname and optionally the port in the URI syntax (i.e. <a href="http://api.example.com:8080" class="bare">http://api.example.com:8080</a>). Overrides component configuration. The OpenApi specification can be loaded from different sources by prefixing with file: classpath: http: https:. Support for https is limited to using the JDK installed UrlHandler, and as such it can be cumbersome to setup TLS/SSL certificates for https (such as setting a number of javax.net.ssl JVM system properties). How to do that consult the JDK documentation for UrlHandler. Default value notice: By default loads openapi.json file.</p>
 </div></div></td>
 <td class="tableblock halign-center valign-top"><p class="tableblock">openapi.json</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">URI</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">String</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><a id="_endpoint_path_option_operationId"></a>
 <a href="#_endpoint_path_option_operationId" class="anchor"></a><strong>operationId</strong> (producer)</p></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p><strong>Required</strong> ID of the operation from the OpenApi specification.</p>
+<p>ID of the operation from the OpenApi specification. This is required when using producer.</p>
 </div></div></td>
 <td class="tableblock halign-center valign-top"></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">String</p></td>
@@ -2196,7 +2416,7 @@ In other words placeholders allows to externalize the configuration from your co
 </table>
 </div>
 <div class="sect2">
-<h3 id="_query_parameters"><a class="anchor" href="#_query_parameters"></a>Query Parameters (9 parameters)</h3>
+<h3 id="_query_parameters"><a class="anchor" href="#_query_parameters"></a>Query Parameters (16 parameters)</h3>
 <table class="tableblock frame-all grid-all stretch">
 <colgroup>
 <col style="width: 20%;">
@@ -2214,28 +2434,129 @@ In other words placeholders allows to externalize the configuration from your co
 </thead>
 <tbody>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><a id="_endpoint_query_option_basePath"></a>
-<a href="#_endpoint_query_option_basePath" class="anchor"></a><strong>basePath</strong> (producer)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a id="_endpoint_query_option_apiContextPath"></a>
+<a href="#_endpoint_query_option_apiContextPath" class="anchor"></a><strong>apiContextPath</strong> (consumer)</p></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>API basePath, for example /v2. Default is unset, if set overrides the value present in OpenApi specification and in the component configuration.</p>
+<p>Sets the context-path to use for servicing the OpenAPI specification.</p>
 </div></div></td>
 <td class="tableblock halign-center valign-top"></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">String</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><a id="_endpoint_query_option_componentName"></a>
-<a href="#_endpoint_query_option_componentName" class="anchor"></a><strong>componentName</strong> (producer)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a id="_endpoint_query_option_clientRequestValidation"></a>
+<a href="#_endpoint_query_option_clientRequestValidation" class="anchor"></a><strong>clientRequestValidation</strong> (consumer)</p></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>Name of the Camel component that will perform the requests. The component must be present in Camel registry and it must implement RestProducerFactory service provider interface. If not set CLASSPATH is searched for single component that implements RestProducerFactory SPI. Overrides component configuration.</p>
+<p>Whether to enable validation of the client request to check if the incoming request is valid according to the OpenAPI specification.</p>
 </div></div></td>
-<td class="tableblock halign-center valign-top"></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">String</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">false</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">boolean</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><a id="_endpoint_query_option_consumes"></a>
-<a href="#_endpoint_query_option_consumes" class="anchor"></a><strong>consumes</strong> (producer)</p></td>
+<a href="#_endpoint_query_option_consumes" class="anchor"></a><strong>consumes</strong> (consumer)</p></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>What payload type this component capable of consuming. Could be one type, like application/json or multiple types as application/json, application/xml; q=0.5 according to the RFC7231. This equates to the value of Accept HTTP header. If set overrides any value found in the OpenApi specification and. in the component configuration.</p>
+<p>What payload type this component capable of consuming. Could be one type, like application/json or multiple types as application/json, application/xml; q=0.5 according to the RFC7231. This equates or multiple types as application/json, application/xml; q=0.5 according to the RFC7231. This equates to the value of Accept HTTP header. If set overrides any value found in the OpenApi specification and. in the component configuration.</p>
+</div></div></td>
+<td class="tableblock halign-center valign-top"></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">String</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a id="_endpoint_query_option_missingOperation"></a>
+<a href="#_endpoint_query_option_missingOperation" class="anchor"></a><strong>missingOperation</strong> (consumer)</p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>Whether the consumer should fail,ignore or return a mock response for OpenAPI operations that are not mapped to a corresponding route.</p>
+</div>
+<div class="paragraph">
+<p>Enum values:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>fail</p>
+</li>
+<li>
+<p>ignore</p>
+</li>
+<li>
+<p>mock</p>
+</li>
+</ul>
+</div></div></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">fail</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">String</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a id="_endpoint_query_option_bridgeErrorHandler"></a>
+<a href="#_endpoint_query_option_bridgeErrorHandler" class="anchor"></a><strong>bridgeErrorHandler</strong> (consumer (advanced))</p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>Allows for bridging the consumer to the Camel routing Error Handler, which mean any exceptions (if possible) occurred while the Camel consumer is trying to pickup incoming messages, or the likes, will now be processed as a message and handled by the routing Error Handler. Important: This is only possible if the 3rd party component allows Camel to be alerted if an exception was thrown. Some components handle this internally only, and therefore bridgeErrorHandler is not possible. In other situations we may improve the Camel component to hook into the 3rd party component and make this possible for future releases. By default the consumer will use the org.apache.camel.spi.ExceptionHandler to deal with exceptions, that will be logged at WARN or ERROR level and ignored.</p>
+</div></div></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">false</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">boolean</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a id="_endpoint_query_option_consumerComponentName"></a>
+<a href="#_endpoint_query_option_consumerComponentName" class="anchor"></a><strong>consumerComponentName</strong> (consumer (advanced))</p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>Name of the Camel component that will service the requests. The component must be present in Camel registry and it must implement RestOpenApiConsumerFactory service provider interface. If not set CLASSPATH is searched for single component that implements RestOpenApiConsumerFactory SPI. Overrides component configuration.</p>
+</div></div></td>
+<td class="tableblock halign-center valign-top"></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">String</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a id="_endpoint_query_option_exceptionHandler"></a>
+<a href="#_endpoint_query_option_exceptionHandler" class="anchor"></a><strong>exceptionHandler</strong> (consumer (advanced))</p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>To let the consumer use a custom ExceptionHandler. Notice if the option bridgeErrorHandler is enabled then this option is not in use. By default the consumer will deal with exceptions, that will be logged at WARN or ERROR level and ignored.</p>
+</div></div></td>
+<td class="tableblock halign-center valign-top"></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">ExceptionHandler</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a id="_endpoint_query_option_exchangePattern"></a>
+<a href="#_endpoint_query_option_exchangePattern" class="anchor"></a><strong>exchangePattern</strong> (consumer (advanced))</p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>Sets the exchange pattern when the consumer creates an exchange.</p>
+</div>
+<div class="paragraph">
+<p>Enum values:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>InOnly</p>
+</li>
+<li>
+<p>InOut</p>
+</li>
+</ul>
+</div></div></td>
+<td class="tableblock halign-center valign-top"></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">ExchangePattern</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a id="_endpoint_query_option_mockIncludePattern"></a>
+<a href="#_endpoint_query_option_mockIncludePattern" class="anchor"></a><strong>mockIncludePattern</strong> (consumer (advanced))</p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>Used for inclusive filtering of mock data from directories. The pattern is using Ant-path style pattern. Multiple patterns can be specified separated by comma.</p>
+</div></div></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">classpath:camel-mock/**</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">String</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a id="_endpoint_query_option_restOpenapiProcessorStrategy"></a>
+<a href="#_endpoint_query_option_restOpenapiProcessorStrategy" class="anchor"></a><strong>restOpenapiProcessorStrategy</strong> (consumer (advanced))</p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>To use a custom strategy for how to process Rest DSL requests.</p>
+</div></div></td>
+<td class="tableblock halign-center valign-top"></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">RestOpenapiProcessorStrategy</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a id="_endpoint_query_option_basePath"></a>
+<a href="#_endpoint_query_option_basePath" class="anchor"></a><strong>basePath</strong> (producer)</p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>API basePath, for example /v3. Default is unset, if set overrides the value present in OpenApi specification and in the component configuration.</p>
 </div></div></td>
 <td class="tableblock halign-center valign-top"></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">String</p></td>
@@ -2259,15 +2580,6 @@ In other words placeholders allows to externalize the configuration from your co
 <td class="tableblock halign-left valign-top"><p class="tableblock">String</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><a id="_endpoint_query_option_requestValidationCustomizer"></a>
-<a href="#_endpoint_query_option_requestValidationCustomizer" class="anchor"></a><strong>requestValidationCustomizer</strong> (producer)</p></td>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>If request validation is enabled, this option provides the capability to customize the creation of OpenApiInteractionValidator used to validate requests.</p>
-</div></div></td>
-<td class="tableblock halign-center valign-top"><p class="tableblock">org.apache.camel.component.rest.openapi.validator.DefaultRequestValidationCustomizer</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">RequestValidationCustomizer</p></td>
-</tr>
-<tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><a id="_endpoint_query_option_requestValidationEnabled"></a>
 <a href="#_endpoint_query_option_requestValidationEnabled" class="anchor"></a><strong>requestValidationEnabled</strong> (producer)</p></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
@@ -2277,13 +2589,13 @@ In other words placeholders allows to externalize the configuration from your co
 <td class="tableblock halign-left valign-top"><p class="tableblock">boolean</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><a id="_endpoint_query_option_requestValidationLevels"></a>
-<a href="#_endpoint_query_option_requestValidationLevels" class="anchor"></a><strong>requestValidationLevels</strong> (producer)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a id="_endpoint_query_option_componentName"></a>
+<a href="#_endpoint_query_option_componentName" class="anchor"></a><strong>componentName</strong> (producer (advanced))</p></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>Levels for specific OpenAPI request validation options. Multiple options can be specified as URI options prefixed by 'validation.'. For example, validation.request.body=ERROR&amp;validation.request.body.unexpected=IGNORED. Supported values are INFO, ERROR, WARN &amp; IGNORE.</p>
+<p>Name of the Camel component that will perform the requests. The component must be present in Camel registry and it must implement RestProducerFactory service provider interface. If not set CLASSPATH is searched for single component that implements RestProducerFactory SPI. Overrides component configuration.</p>
 </div></div></td>
 <td class="tableblock halign-center valign-top"></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Map</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">String</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><a id="_endpoint_query_option_lazyStartProducer"></a>
@@ -2300,18 +2612,64 @@ In other words placeholders allows to externalize the configuration from your co
 </div>
 </div>
 <div class="sect1">
-<h2 id="_example_petstore"><a class="anchor" href="#_example_petstore"></a>Example: PetStore</h2>
+<h2 id="_usage"><a class="anchor" href="#_usage"></a>Usage</h2>
+<div class="sectionbody">
+
+</div>
+</div>
+<div class="sect1">
+<h2 id="_request_validation"><a class="anchor" href="#_request_validation"></a>Request validation</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>Checkout the <code>rest-openapi-simple</code> example project in
-the <a href="https://github.com/apache/camel-spring-boot-examples" class="bare">https://github.com/apache/camel-spring-boot-examples</a> repository.</p>
+<p>API requests can be validated against the configured OpenAPI specification before they are sent by setting the <code>requestValidationEnabled</code> option to <code>true</code>.
+Validation is provided by the <a href="https://bitbucket.org/atlassian/swagger-request-validator/src/master/">swagger-request-validator</a>.</p>
 </div>
 <div class="paragraph">
-<p>For example if you wanted to use the
+<p>The validator checks for the following conditions:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>request body - Checks if the request body is required and whether there is any body on the Camel Exchange.</p>
+</li>
+<li>
+<p>valid json - Checks if the content-type is <code>application/json</code> that the message body can be parsed as valid JSon.</p>
+</li>
+<li>
+<p>content-type - Validates whether the <code>Content-Type</code> header for the request is valid for the API operation.
+The value is taken from the <code>Content-Type</code> Camel message exchange header.</p>
+</li>
+<li>
+<p>request parameters - Validates whether an HTTP header required by the API operation is present. The header is
+expected to be present among the Camel message exchange headers.</p>
+</li>
+<li>
+<p>query parameters - Validates whether an HTTP query parameter required by the API operation is present. The query parameter is
+expected to be present among the Camel message exchange headers.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>If any of the validation checks fail, then a <code>RestOpenApiValidationException</code> is thrown. The exception object
+has a <code>getValidationErrors</code> method that returns the error messages from the validator.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_examples"><a class="anchor" href="#_examples"></a>Examples</h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="_petstore"><a class="anchor" href="#_petstore"></a>PetStore</h3>
+<div class="paragraph">
+<p>Checkout the <code>rest-openapi-simple</code> example project in
+the <a href="https://github.com/apache/camel-spring-boot-examples">camel-spring-boot-examples</a> repository.</p>
+</div>
+<div class="paragraph">
+<p>For example, if you wanted to use the
 <a href="https://petstore3.swagger.io/api/v3/"><em>PetStore</em></a> provided REST API simply
 reference the specification URI and desired operation id from the
 OpenApi specification or download the specification and store it as
-<code>openapi.json</code> (in the root) of CLASSPATH that way it will be
+<code>openapi.json</code> (in the root) of <code><em>CLASSPATH</em></code> that way it will be
 automatically used. Let&#8217;s use the <a href="http-component.html" class="xref page">HTTP</a>
 component to perform all the requests and Camel&#8217;s excellent support for
 Spring Boot.</p>
@@ -2320,6 +2678,7 @@ Spring Boot.</p>
 <p>Here are our dependencies defined in Maven POM file:</p>
 </div>
 <div class="listingblock">
+<div class="title">Example pom.xml</div>
 <div class="content">
 <pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;dependency&gt;
   &lt;groupId&gt;org.apache.camel.springboot&lt;/groupId&gt;
@@ -2333,14 +2692,14 @@ Spring Boot.</p>
 </div>
 </div>
 <div class="paragraph">
-<p>Start by defining a <em>RestOpenApiComponent</em> bean:</p>
+<p>Start by defining a <code>RestOpenApiComponent</code> bean:</p>
 </div>
 <div class="listingblock">
 <div class="content">
 <pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">@Bean
 public Component petstore(CamelContext camelContext) {
     RestOpenApiComponent petstore = new RestOpenApiComponent(camelContext);
-    petstore.setSpecificationUri(new URI("https://petstore3.swagger.io/api/v3/openapi.json"));
+    petstore.setSpecificationUri("https://petstore3.swagger.io/api/v3/openapi.json");
     petstore.setHost("https://petstore3.swagger.io");
     return petstore;
 }</code></pre>
@@ -2358,7 +2717,7 @@ public Component petstore(CamelContext camelContext) {
 <code>HttpComponent</code> Spring bean, and you can configure it using
 <code>application.properties</code> (or <code>application.yml</code>) using prefix
 <code>camel.component.http.</code>. We are defining the <code>petstore</code>
-component here in order to have a named component in the Camel context
+component here to have a named component in the Camel context
 that we can use to interact with the PetStore REST API, if this is the
 only <code>rest-openapi</code> component used we might configure it in the same
 manner (using <code>application.properties</code>).</p>
@@ -2366,7 +2725,7 @@ manner (using <code>application.properties</code>).</p>
 <div class="paragraph">
 <p>In this example, there is no need to explicitly associate the <code>petstore</code>
 component with the <code>HttpComponent</code> as Camel will use the first class on
-the CLASSPATH that implements <code>RestProducerFactory</code>. However, if a different
+the <code><em>CLASSPATH</em></code> that implements <code>RestProducerFactory</code>. However, if a different
 component is required, then calling <code>petstore.setComponentName("http")</code>
 would use the named component from the Camel registry.</p>
 </div>
@@ -2386,113 +2745,6 @@ ProducerTemplate template;
 String getPetJsonById(int petId) {
     return template.requestBodyAndHeader("petstore:getPetById", null, "petId", petId);
 }</code></pre>
-</div>
-</div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="_request_validation"><a class="anchor" href="#_request_validation"></a>Request validation</h2>
-<div class="sectionbody">
-<div class="paragraph">
- <strong>Note:</strong> This functionality is currently in <strong>Technology Preview</strong>.
-</div>
-<div class="paragraph">
-<p>API requests can be validated against the configured OpenAPI specification before they are sent by setting the <code>requestValidationEnabled</code> option to <code>true</code>.
-Validation is provided by the <a href="https://bitbucket.org/atlassian/swagger-request-validator/src/master/">swagger-request-validator</a>.</p>
-</div>
-<div class="paragraph">
-<p>By default, the following checks are enabled and will cause request validation to fail if the requirements are not fulfilled.</p>
-</div>
-<table class="tableblock frame-all grid-all stretch">
-<colgroup>
-<col style="width: 50%;">
-<col style="width: 50%;">
-</colgroup>
-<thead>
-<tr>
-<th class="tableblock halign-left valign-top">Configuration key</th>
-<th class="tableblock halign-left valign-top">Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">validation.request.body</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Validates the request body. If the content type of the request is <code>application/json</code>, the JSON content
-will be validated against the schema defined in the OpenAPI specification.</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">validation.request.contentType.notAllowed</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Validates whether the <code>Content-Type</code> header for the request is valid for the API operation.
-The value is taken from the <code>Content-Type</code> Camel message exchange header.</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">validation.request.path.missing</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Validates whether the resolved request path is valid for the API operation.</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">validation.request.parameter.header.missing</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Validates whether a HTTP header required by the API operation is present. The header is
-expected to be present among the Camel message exchange headers.</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">validation.request.parameter.query.missing</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Validates whether a HTTP query parameter required by the API operation is present. The query parameter is
-expected to be present among the Camel message exchange headers.</p></td>
-</tr>
-</tbody>
-</table>
-<div class="paragraph">
-<p>If any of the validation checks fail, then a <code>RestOpenApiValidationException</code> is thrown. The exception object
-has a <code>getValidationErrors</code> method that returns the error messages from the validator.</p>
-</div>
-<div class="sect2">
-<h3 id="_customizing_validation"><a class="anchor" href="#_customizing_validation"></a>Customizing validation</h3>
-<div class="sect3">
-<h4 id="_validation_levels"><a class="anchor" href="#_validation_levels"></a>Validation levels</h4>
-<div class="paragraph">
-<p>You can override the configuration options mentioned above and configure new ones via the <code>validationLevels</code> option.
-You can configure additional options on the <code>rest-openapi</code> endpoint URI with options prefixed with <code>validation.</code>.</p>
-</div>
-<div class="paragraph">
-<p>For example, to disable the <code>validation.request.body</code> check and enable the <code>validation.request.body.unexpected</code> check.</p>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">.to("rest-openapi#myOperation?validationEnabled=true&amp;validation.request.body=IGNORE&amp;validation.request.body.unexpected=ERROR")</code></pre>
-</div>
-</div>
-<div class="paragraph">
-<p>The full list of validation options can be found <a href="https://bitbucket.org/atlassian/swagger-request-validator/src/master/swagger-request-validator-core/src/main/resources/swagger/validation/messages.properties">here</a>.</p>
-</div>
-</div>
-<div class="sect3">
-<h4 id="_requestvalidationcustomizer"><a class="anchor" href="#_requestvalidationcustomizer"></a>RequestValidationCustomizer</h4>
-<div class="paragraph">
-<p>You can get complete control for the setup of the validation options with a custom <code>RequestValidationCustomizer</code>. For example.</p>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">public class CustomRequestValidationCustomizer implements RequestValidationCustomizer {
-        @Override
-        public void customizeOpenApiInteractionValidator(OpenApiInteractionValidator.Builder builder) {
-            // Apply customizations to the OpenApiInteractionValidator builder
-        }
-
-        @Override
-        public void customizeSimpleRequestBuilder(
-                SimpleRequest.Builder builder, RestOpenApiOperation openApiOperation, Exchange exchange) {
-            // Apply customizations to the SimpleRequest builder
-        }
-}</code></pre>
-</div>
-</div>
-<div class="paragraph">
-<p>Assuming <code>CustomRequestValidationCustomizer</code> is bound to the Camel registry, you can reference it in the endpoint URI.</p>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">.to("rest-openapi#myOperation?requestValidationEnabled=true&amp;requestValidationCustomizer=#customRequestValidationCustomizer")</code></pre>
-</div>
 </div>
 </div>
 </div>

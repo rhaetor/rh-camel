@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>Jira :: Red Hat Camel Reference</title>
+    <title>Jira :: Red Hat build of Apache Camel</title>
     <meta name="description" content="Interact with JIRA issue tracker.">
     <meta name="generator" content="Antora 3.1.4">
     <link rel="stylesheet" href="../../_/css/site.css">
@@ -12,7 +12,7 @@
 <header class="header">
   <nav class="navbar">
     <div class="navbar-brand">
-      <a class="navbar-item" href="../../manual/index.html">Red Hat Apache Build of Apache Camel Manual</a>
+      <a class="navbar-item" href="/">Red Hat build of Apache Camel</a>
       <button class="navbar-burger" data-target="topbar-nav">
         <span></span>
         <span></span>
@@ -27,6 +27,7 @@
     <div class="panels">
 <div class="nav-panel-menu is-active" data-panel="menu">
   <nav class="nav-menu">
+    <button class="nav-menu-toggle" aria-label="Toggle expand/collapse all" style="display: none"></button>
     <h3 class="title"><a href="index.html">Camel Components</a></h3>
 <ul class="nav-list">
   <li class="nav-item" data-depth="0">
@@ -36,7 +37,46 @@
     <a class="nav-link" href="index.html">Components</a>
 <ul class="nav-list">
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="activemq-component.html">ActiveMQ</a>
+    <a class="nav-link" href="activemq-component.html">ActiveMQ 5.x</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="activemq6-component.html">ActiveMQ 6.x</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="ai-summary.html">AI</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="chatscript-component.html">ChatScript</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="djl-component.html">Deep Java Library</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="langchain4j-chat-component.html">LangChain4j Chat</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="langchain4j-embeddings-component.html">LangChain4j Embeddings</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="langchain4j-tokenizer-component.html">LangChain4j Tokenizer</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="langchain4j-tools-component.html">LangChain4j Tools</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="langchain4j-web-search-component.html">LangChain4j Web Search</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="milvus-component.html">Milvus</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="pinecone-component.html">Pinecone</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="qdrant-component.html">Qdrant</a>
+  </li>
+</ul>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="amqp-component.html">AMQP</a>
@@ -65,6 +105,15 @@
 <ul class="nav-list">
   <li class="nav-item" data-depth="3">
     <a class="nav-link" href="aws2-athena-component.html">AWS Athena</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="aws-bedrock-component.html">AWS Bedrock</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="aws-bedrock-agent-component.html">AWS Bedrock Agent</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="aws-bedrock-agent-runtime-component.html">AWS Bedrock Agent Runtime</a>
   </li>
   <li class="nav-item" data-depth="3">
     <a class="nav-link" href="aws-cloudtrail-component.html">AWS Cloudtrail</a>
@@ -169,7 +218,7 @@
     <a class="nav-link" href="azure-storage-blob-component.html">Azure Storage Blob Service</a>
   </li>
   <li class="nav-item" data-depth="3">
-    <a class="nav-link" href="azure-storage-datalake-component.html">Azure Storage Datalake Service</a>
+    <a class="nav-link" href="azure-storage-datalake-component.html">Azure Storage Data Lake Service</a>
   </li>
   <li class="nav-item" data-depth="3">
     <a class="nav-link" href="azure-storage-queue-component.html">Azure Storage Queue Service</a>
@@ -202,9 +251,6 @@
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="cql-component.html">Cassandra CQL</a>
-  </li>
-  <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="chatscript-component.html">ChatScript</a>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="chunk-component.html">Chunk</a>
@@ -277,9 +323,6 @@
     <a class="nav-link" href="debezium-sqlserver-component.html">Debezium SQL Server Connector</a>
   </li>
 </ul>
-  </li>
-  <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="djl-component.html">Deep Java Library</a>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="dhis2-component.html">DHIS2</a>
@@ -395,6 +438,9 @@
   </li>
   <li class="nav-item" data-depth="3">
     <a class="nav-link" href="google-pubsub-component.html">Google Pubsub</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="google-pubsub-lite-component.html">Google PubSub Lite</a>
   </li>
   <li class="nav-item" data-depth="3">
     <a class="nav-link" href="google-secret-manager-component.html">Google Secret Manager</a>
@@ -687,7 +733,7 @@
     <a class="nav-link" href="ldif-component.html">LDIF</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="log-component.html">Log</a>
+    <a class="nav-link" href="log-component.html">Log Data</a>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="lucene-component.html">Lucene</a>
@@ -900,16 +946,49 @@
     <a class="nav-link" href="smb-component.html">SMB</a>
   </li>
   <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="smooks-component.html">Smooks</a>
+  </li>
+  <li class="nav-item" data-depth="2">
     <a class="nav-link" href="smpp-component.html">SMPP</a>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="snmp-component.html">SNMP</a>
   </li>
   <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="solr-component.html">Solr</a>
+  </li>
+  <li class="nav-item" data-depth="2">
     <a class="nav-link" href="splunk-component.html">Splunk</a>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="splunk-hec-component.html">Splunk HEC</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="spring-summary.html">Spring</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="spring-batch-component.html">Spring Batch</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="spring-event-component.html">Spring Event</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="spring-jdbc-component.html">Spring JDBC</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="spring-ldap-component.html">Spring LDAP</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="spring-rabbitmq-component.html">Spring RabbitMQ</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="spring-redis-component.html">Spring Redis</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="spring-ws-component.html">Spring WebService</a>
+  </li>
+</ul>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="sql-component.html">SQL</a>
@@ -937,6 +1016,18 @@
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="stub-component.html">Stub</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="tahu-summary.html">Tahu</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="tahu-edge-component.html">Tahu Edge Node / Device</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="tahu-host-component.html">Tahu Host Application</a>
+  </li>
+</ul>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="telegram-component.html">Telegram</a>
@@ -999,7 +1090,7 @@
     <a class="nav-link" href="whatsapp-component.html">WhatsApp</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="wordpress-component.html">Wordpress</a>
+    <a class="nav-link" href="wordpress-component.html">WordPress</a>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="workday-component.html">Workday</a>
@@ -1392,7 +1483,13 @@
     <a class="nav-link" href="others/openapi-java.html">Openapi Java</a>
   </li>
   <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="others/openapi-validator.html">Openapi Validator</a>
+  </li>
+  <li class="nav-item" data-depth="2">
     <a class="nav-link" href="others/opentelemetry.html">OpenTelemetry</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="others/platform-http-jolokia.html">Platform HTTP Jolokia</a>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="others/platform-http-main.html">Platform Http Main</a>
@@ -1540,7 +1637,7 @@
     <a class="nav-link" href="eips/event-message.html">Event Message</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="eips/failover-eip.html">Failover</a>
+    <a class="nav-link" href="eips/failoverLoadBalancer-eip.html">Failover Load Balancer</a>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="eips/faultToleranceConfiguration-eip.html">Fault Tolerance Configuration</a>
@@ -1570,13 +1667,13 @@
     <a class="nav-link" href="eips/loadBalance-eip.html">Load Balance</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="eips/log-eip.html">Log</a>
+    <a class="nav-link" href="eips/log-eip.html">Logger</a>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="eips/loop-eip.html">Loop</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="eips/marshal-eip.html">Marshal EIP</a>
+    <a class="nav-link" href="eips/marshal-eip.html">Marshal</a>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="eips/message.html">Message</a>
@@ -1633,6 +1730,9 @@
     <a class="nav-link" href="eips/point-to-point-channel.html">Point to Point Channel</a>
   </li>
   <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="eips/poll-eip.html">Poll</a>
+  </li>
+  <li class="nav-item" data-depth="2">
     <a class="nav-link" href="eips/pollEnrich-eip.html">Poll Enrich</a>
   </li>
   <li class="nav-item" data-depth="2">
@@ -1648,7 +1748,7 @@
     <a class="nav-link" href="eips/publish-subscribe-channel.html">Publish Subscribe Channel</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="eips/random-eip.html">Random</a>
+    <a class="nav-link" href="eips/randomLoadBalancer-eip.html">Random Load Balancer</a>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="eips/recipientList-eip.html">Recipient List</a>
@@ -1690,7 +1790,7 @@
     <a class="nav-link" href="eips/rollback-eip.html">Rollback</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="eips/roundRobin-eip.html">Round Robin</a>
+    <a class="nav-link" href="eips/roundRobinLoadBalancer-eip.html">Round Robin Load Balancer</a>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="eips/routingSlip-eip.html">Routing Slip</a>
@@ -1702,7 +1802,7 @@
     <a class="nav-link" href="eips/sample-eip.html">Sample</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="eips/scatter-gather.html">Scatter Gather</a>
+    <a class="nav-link" href="eips/scatter-gather.html">Scatter-Gather</a>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="eips/script-eip.html">Script</a>
@@ -1732,6 +1832,9 @@
     <a class="nav-link" href="eips/setVariable-eip.html">Set Variable</a>
   </li>
   <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="eips/setVariables-eip.html">Set Variables</a>
+  </li>
+  <li class="nav-item" data-depth="2">
     <a class="nav-link" href="eips/sort-eip.html">Sort</a>
   </li>
   <li class="nav-item" data-depth="2">
@@ -1741,7 +1844,7 @@
     <a class="nav-link" href="eips/step-eip.html">Step</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="eips/sticky-eip.html">Sticky</a>
+    <a class="nav-link" href="eips/stickyLoadBalancer-eip.html">Sticky Load Balancer</a>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="eips/stop-eip.html">Stop</a>
@@ -1762,7 +1865,7 @@
     <a class="nav-link" href="eips/toD-eip.html">To D</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="eips/topic-eip.html">Topic</a>
+    <a class="nav-link" href="eips/topicLoadBalancer-eip.html">Topic Load Balancer</a>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="eips/transactional-client.html">Transactional Client</a>
@@ -1771,13 +1874,13 @@
     <a class="nav-link" href="eips/transform-eip.html">Transform</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="eips/unmarshal-eip.html">Unmarshal EIP</a>
+    <a class="nav-link" href="eips/unmarshal-eip.html">Unmarshal</a>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="eips/validate-eip.html">Validate</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="eips/weighted-eip.html">Weighted</a>
+    <a class="nav-link" href="eips/weightedLoadBalancer-eip.html">Weighted Load Balancer</a>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="eips/wireTap-eip.html">Wire Tap</a>
@@ -1796,7 +1899,7 @@
   </div>
   <ul class="components">
     <li class="component is-current">
-      <a class="title" href="index.html">Camel Components</a>
+      <div class="title"><a href="index.html">Camel Components</a></div>
       <ul class="versions">
         <li class="version is-current is-latest">
           <a href="index.html">Next (Pre-release)</a>
@@ -1804,12 +1907,7 @@
       </ul>
     </li>
     <li class="component">
-      <a class="title" href="../../manual/index.html">User manual</a>
-      <ul class="versions">
-        <li class="version is-latest">
-          <a href="../../manual/index.html">default</a>
-        </li>
-      </ul>
+      <div class="title"><a href="../../manual/index.html">User manual</a></div>
     </li>
   </ul>
 </div>
@@ -1827,6 +1925,7 @@
     <li><a href="jira-component.html">Jira</a></li>
   </ul>
 </nav>
+<div class="edit-this-page"><a href="file:///code/jboss/jboss-camel/docs/components/modules/ROOT/pages/jira-component.adoc">Edit this Page</a></div>
 </div>
   <div class="content">
 <aside class="toc sidebar" data-title="Contents" data-levels="2">
@@ -1891,12 +1990,12 @@ for this component:</p>
 </td>
 <td class="content">
 <div class="paragraph">
-<p>Atlassian does not release their JIRA Java client&#8217;s to Maven Central.
+<p>Atlassian does not release their JIRA Java client to Maven Central.
 Therefore, when using <code>camel-jira</code> then the <code>pom.xml</code> has included Maven repository
 to the following URL: <code><a href="https://packages.atlassian.com/maven-external" class="bare">https://packages.atlassian.com/maven-external</a></code>.</p>
 </div>
 <div class="paragraph">
-<p>Just keep this in mind as Maven will then use this repository to download the JIRA client (and potentially other JARs).
+<p>Keep this in mind as Maven will then use this repository to download the JIRA client (and potentially other JARs).
 Which allows Atlassian to track these downloads by their servers.</p>
 </div>
 </td>
@@ -1961,7 +2060,7 @@ Which allows Atlassian to track these downloads by their servers.</p>
 </ul>
 </div>
 <div class="paragraph">
-<p>As Jira is fully customizable, you must assure the fields IDs exists for the project and workflow, as they can change between different Jira servers.</p>
+<p>As Jira is fully customizable, you must ensure the field IDs exist for the project and workflow, as they can change between different Jira servers.</p>
 </div>
 </div>
 </div>
@@ -1984,37 +2083,65 @@ Which allows Atlassian to track these downloads by their servers.</p>
 <div class="sect2">
 <h3 id="_configuring_component_options"><a class="anchor" href="#_configuring_component_options"></a>Configuring Component Options</h3>
 <div class="paragraph">
-<p>The component level is the highest level which holds general and common configurations that are inherited by the endpoints.
-For example a component may have security settings, credentials for authentication, urls for network connection and so forth.</p>
+<p>At the component level, you set general and shared configurations that are, then, inherited by the endpoints. It is the highest configuration level.</p>
 </div>
 <div class="paragraph">
-<p>Some components only have a few options, and others may have many. Because components typically have pre configured defaults
-that are commonly used, then you may often only need to configure a few options on a component; or none at all.</p>
+<p>For example, a component may have security settings, credentials for authentication, urls for network connection and so forth.</p>
 </div>
 <div class="paragraph">
-<p>Configuring components can be done with the <a href="../../manual/component-dsl.html" class="xref page">Component DSL</a>,
-in a configuration file (application.properties|yaml), or directly with Java code.</p>
+<p>Some components only have a few options, and others may have many.
+Because components typically have pre-configured defaults that are commonly used, then you may often only need to configure a few options on a component; or none at all.</p>
+</div>
+<div class="paragraph">
+<p>You can configure components using:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>the <a href="../../manual/component-dsl.html" class="xref page">Component DSL</a>.</p>
+</li>
+<li>
+<p>in a configuration file (<code>application.properties</code>, <code>*.yaml</code> files, etc).</p>
+</li>
+<li>
+<p>directly in the Java code.</p>
+</li>
+</ul>
 </div>
 </div>
 <div class="sect2">
 <h3 id="_configuring_endpoint_options"><a class="anchor" href="#_configuring_endpoint_options"></a>Configuring Endpoint Options</h3>
 <div class="paragraph">
-<p>Where you find yourself configuring the most is on endpoints, as endpoints often have many options, which allows you to
-configure what you need the endpoint to do. The options are also categorized into whether the endpoint is used as consumer (from)
-or as a producer (to), or used for both.</p>
+<p>You usually spend more time setting up endpoints because they have many options.
+These options help you customize what you want the endpoint to do.
+The options are also categorized into whether the endpoint is used as a consumer (<em>from</em>), as a producer (<em>to</em>), or  both.</p>
 </div>
 <div class="paragraph">
-<p>Configuring endpoints is most often done directly in the endpoint URI as path and query parameters. You can also use
-the <a href="../../manual/Endpoint-dsl.html" class="xref page">Endpoint DSL</a> and <a href="../../manual/dataformat-dsl.html" class="xref page">DataFormat DSL</a>
+<p>Configuring endpoints is most often done directly in the endpoint URI as <em>path</em> and <em>query</em> parameters.
+You can also use the <a href="../../manual/Endpoint-dsl.html" class="xref page">Endpoint DSL</a> and <a href="../../manual/dataformat-dsl.html" class="xref page">DataFormat DSL</a>
 as a <em>type safe</em> way of configuring endpoints and data formats in Java.</p>
 </div>
 <div class="paragraph">
-<p>A good practice when configuring options is to use <a href="../../manual/using-propertyplaceholder.html" class="xref page">Property Placeholders</a>,
-which allows to not hardcode urls, port numbers, sensitive information, and other settings.
-In other words placeholders allows to externalize the configuration from your code, and gives more flexibility and reuse.</p>
+<p>A good practice when configuring options is to use <a href="../../manual/using-propertyplaceholder.html" class="xref page">Property Placeholders</a>.</p>
 </div>
 <div class="paragraph">
-<p>The following two sections lists all the options, firstly for the component followed by the endpoint.</p>
+<p>Property placeholders provide a few benefits:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>They help prevent using hardcoded urls, port numbers, sensitive information, and other settings.</p>
+</li>
+<li>
+<p>They allow externalizing the configuration from the code.</p>
+</li>
+<li>
+<p>They help the code to become more flexible and reusable.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>The following two sections list all the options, firstly for the component followed by the endpoint.</p>
 </div>
 </div>
 </div>
@@ -2054,7 +2181,7 @@ In other words placeholders allows to externalize the configuration from your co
 <td class="tableblock halign-left valign-top"><p class="tableblock"><a id="_component_option_jiraUrl"></a>
 <a href="#_component_option_jiraUrl" class="anchor"></a><strong>jiraUrl</strong> (common)</p></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p><strong>Required</strong> The Jira server url, example: <a href="http://my_jira.com:8081" class="bare">http://my_jira.com:8081</a>.</p>
+<p><strong>Required</strong> The Jira server url, for example <a href="http://my_jira.com:8081" class="bare">http://my_jira.com:8081</a>.</p>
 </div></div></td>
 <td class="tableblock halign-center valign-top"></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">String</p></td>
@@ -2183,7 +2310,7 @@ In other words placeholders allows to externalize the configuration from your co
 </div>
 </div>
 <div class="paragraph">
-<p>with the following path and query parameters:</p>
+<p>With the following <em>path</em> and <em>query</em> parameters:</p>
 </div>
 <div class="sect2">
 <h3 id="_path_parameters_1_parameters"><a class="anchor" href="#_path_parameters_1_parameters"></a>Path Parameters (1 parameters)</h3>
@@ -2265,7 +2392,7 @@ In other words placeholders allows to externalize the configuration from your co
 </table>
 </div>
 <div class="sect2">
-<h3 id="_query_parameters"><a class="anchor" href="#_query_parameters"></a>Query Parameters (16 parameters)</h3>
+<h3 id="_query_parameters"><a class="anchor" href="#_query_parameters"></a>Query Parameters (31 parameters)</h3>
 <table class="tableblock frame-all grid-all stretch">
 <colgroup>
 <col style="width: 20%;">
@@ -2295,7 +2422,7 @@ In other words placeholders allows to externalize the configuration from your co
 <td class="tableblock halign-left valign-top"><p class="tableblock"><a id="_endpoint_query_option_jiraUrl"></a>
 <a href="#_endpoint_query_option_jiraUrl" class="anchor"></a><strong>jiraUrl</strong> (common)</p></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p><strong>Required</strong> The Jira server url, example: <a href="http://my_jira.com:8081" class="bare">http://my_jira.com:8081</a>.</p>
+<p><strong>Required</strong> The Jira server url, for example <a href="http://my_jira.com:8081" class="bare">http://my_jira.com:8081</a>.</p>
 </div></div></td>
 <td class="tableblock halign-center valign-top"></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">String</p></td>
@@ -2317,6 +2444,15 @@ In other words placeholders allows to externalize the configuration from your co
 </div></div></td>
 <td class="tableblock halign-center valign-top"><p class="tableblock">50</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Integer</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a id="_endpoint_query_option_sendEmptyMessageWhenIdle"></a>
+<a href="#_endpoint_query_option_sendEmptyMessageWhenIdle" class="anchor"></a><strong>sendEmptyMessageWhenIdle</strong> (consumer)</p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>If the polling consumer did not poll any files, you can enable this option to send an empty message (no body) instead.</p>
+</div></div></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">false</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">boolean</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><a id="_endpoint_query_option_sendOnlyUpdatedField"></a>
@@ -2377,12 +2513,191 @@ In other words placeholders allows to externalize the configuration from your co
 <td class="tableblock halign-left valign-top"><p class="tableblock">ExchangePattern</p></td>
 </tr>
 <tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a id="_endpoint_query_option_pollStrategy"></a>
+<a href="#_endpoint_query_option_pollStrategy" class="anchor"></a><strong>pollStrategy</strong> (consumer (advanced))</p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>A pluggable org.apache.camel.PollingConsumerPollingStrategy allowing you to provide your custom implementation to control error handling usually occurred during the poll operation before an Exchange have been created and being routed in Camel.</p>
+</div></div></td>
+<td class="tableblock halign-center valign-top"></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">PollingConsumerPollStrategy</p></td>
+</tr>
+<tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><a id="_endpoint_query_option_lazyStartProducer"></a>
 <a href="#_endpoint_query_option_lazyStartProducer" class="anchor"></a><strong>lazyStartProducer</strong> (producer (advanced))</p></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p>Whether the producer should be started lazy (on the first message). By starting lazy you can use this to allow CamelContext and routes to startup in situations where a producer may otherwise fail during starting and cause the route to fail being started. By deferring this startup to be lazy then the startup failure can be handled during routing messages via Camel&#8217;s routing error handlers. Beware that when the first message is processed then creating and starting the producer may take a little time and prolong the total processing time of the processing.</p>
 </div></div></td>
 <td class="tableblock halign-center valign-top"><p class="tableblock">false</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">boolean</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a id="_endpoint_query_option_backoffErrorThreshold"></a>
+<a href="#_endpoint_query_option_backoffErrorThreshold" class="anchor"></a><strong>backoffErrorThreshold</strong> (scheduler)</p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>The number of subsequent error polls (failed due some error) that should happen before the backoffMultipler should kick-in.</p>
+</div></div></td>
+<td class="tableblock halign-center valign-top"></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">int</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a id="_endpoint_query_option_backoffIdleThreshold"></a>
+<a href="#_endpoint_query_option_backoffIdleThreshold" class="anchor"></a><strong>backoffIdleThreshold</strong> (scheduler)</p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>The number of subsequent idle polls that should happen before the backoffMultipler should kick-in.</p>
+</div></div></td>
+<td class="tableblock halign-center valign-top"></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">int</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a id="_endpoint_query_option_backoffMultiplier"></a>
+<a href="#_endpoint_query_option_backoffMultiplier" class="anchor"></a><strong>backoffMultiplier</strong> (scheduler)</p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>To let the scheduled polling consumer backoff if there has been a number of subsequent idles/errors in a row. The multiplier is then the number of polls that will be skipped before the next actual attempt is happening again. When this option is in use then backoffIdleThreshold and/or backoffErrorThreshold must also be configured.</p>
+</div></div></td>
+<td class="tableblock halign-center valign-top"></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">int</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a id="_endpoint_query_option_greedy"></a>
+<a href="#_endpoint_query_option_greedy" class="anchor"></a><strong>greedy</strong> (scheduler)</p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>If greedy is enabled, then the ScheduledPollConsumer will run immediately again, if the previous run polled 1 or more messages.</p>
+</div></div></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">false</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">boolean</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a id="_endpoint_query_option_initialDelay"></a>
+<a href="#_endpoint_query_option_initialDelay" class="anchor"></a><strong>initialDelay</strong> (scheduler)</p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>Milliseconds before the first poll starts.</p>
+</div></div></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">1000</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">long</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a id="_endpoint_query_option_repeatCount"></a>
+<a href="#_endpoint_query_option_repeatCount" class="anchor"></a><strong>repeatCount</strong> (scheduler)</p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>Specifies a maximum limit of number of fires. So if you set it to 1, the scheduler will only fire once. If you set it to 5, it will only fire five times. A value of zero or negative means fire forever.</p>
+</div></div></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">0</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">long</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a id="_endpoint_query_option_runLoggingLevel"></a>
+<a href="#_endpoint_query_option_runLoggingLevel" class="anchor"></a><strong>runLoggingLevel</strong> (scheduler)</p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>The consumer logs a start/complete log line when it polls. This option allows you to configure the logging level for that.</p>
+</div>
+<div class="paragraph">
+<p>Enum values:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>TRACE</p>
+</li>
+<li>
+<p>DEBUG</p>
+</li>
+<li>
+<p>INFO</p>
+</li>
+<li>
+<p>WARN</p>
+</li>
+<li>
+<p>ERROR</p>
+</li>
+<li>
+<p>OFF</p>
+</li>
+</ul>
+</div></div></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">TRACE</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">LoggingLevel</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a id="_endpoint_query_option_scheduledExecutorService"></a>
+<a href="#_endpoint_query_option_scheduledExecutorService" class="anchor"></a><strong>scheduledExecutorService</strong> (scheduler)</p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>Allows for configuring a custom/shared thread pool to use for the consumer. By default each consumer has its own single threaded thread pool.</p>
+</div></div></td>
+<td class="tableblock halign-center valign-top"></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">ScheduledExecutorService</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a id="_endpoint_query_option_scheduler"></a>
+<a href="#_endpoint_query_option_scheduler" class="anchor"></a><strong>scheduler</strong> (scheduler)</p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>To use a cron scheduler from either camel-spring or camel-quartz component. Use value spring or quartz for built in scheduler.</p>
+</div></div></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">none</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Object</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a id="_endpoint_query_option_schedulerProperties"></a>
+<a href="#_endpoint_query_option_schedulerProperties" class="anchor"></a><strong>schedulerProperties</strong> (scheduler)</p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>To configure additional properties when using a custom scheduler or any of the Quartz, Spring based scheduler.</p>
+</div></div></td>
+<td class="tableblock halign-center valign-top"></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Map</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a id="_endpoint_query_option_startScheduler"></a>
+<a href="#_endpoint_query_option_startScheduler" class="anchor"></a><strong>startScheduler</strong> (scheduler)</p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>Whether the scheduler should be auto started.</p>
+</div></div></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">true</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">boolean</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a id="_endpoint_query_option_timeUnit"></a>
+<a href="#_endpoint_query_option_timeUnit" class="anchor"></a><strong>timeUnit</strong> (scheduler)</p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>Time unit for initialDelay and delay options.</p>
+</div>
+<div class="paragraph">
+<p>Enum values:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>NANOSECONDS</p>
+</li>
+<li>
+<p>MICROSECONDS</p>
+</li>
+<li>
+<p>MILLISECONDS</p>
+</li>
+<li>
+<p>SECONDS</p>
+</li>
+<li>
+<p>MINUTES</p>
+</li>
+<li>
+<p>HOURS</p>
+</li>
+<li>
+<p>DAYS</p>
+</li>
+</ul>
+</div></div></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">MILLISECONDS</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">TimeUnit</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a id="_endpoint_query_option_useFixedDelay"></a>
+<a href="#_endpoint_query_option_useFixedDelay" class="anchor"></a><strong>useFixedDelay</strong> (scheduler)</p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>Controls if fixed delay or fixed rate is used. See ScheduledExecutorService in JDK for details.</p>
+</div></div></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">true</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">boolean</p></td>
 </tr>
 <tr>
@@ -2661,16 +2976,16 @@ In other words placeholders allows to externalize the configuration from your co
 </div>
 </div>
 <div class="sect1">
-<h2 id="_client_factory"><a class="anchor" href="#_client_factory"></a>Client Factory</h2>
+<h2 id="_usage"><a class="anchor" href="#_usage"></a>Usage</h2>
 <div class="sectionbody">
+<div class="sect2">
+<h3 id="_client_factory"><a class="anchor" href="#_client_factory"></a>Client Factory</h3>
 <div class="paragraph">
 <p>You can bind the <code>JiraRestClientFactory</code> with name <strong>JiraRestClientFactory</strong> in the registry to have it automatically set in the Jira endpoint.</p>
 </div>
 </div>
-</div>
-<div class="sect1">
-<h2 id="_authentication"><a class="anchor" href="#_authentication"></a>Authentication</h2>
-<div class="sectionbody">
+<div class="sect2">
+<h3 id="_authentication"><a class="anchor" href="#_authentication"></a>Authentication</h3>
 <div class="paragraph">
 <p>Camel-jira supports the following forms of authentication:</p>
 </div>
@@ -2688,20 +3003,20 @@ In other words placeholders allows to externalize the configuration from your co
 </ul>
 </div>
 <div class="paragraph">
-<p>We recommend to use OAuth or Personal token whenever possible, as it provides the best security for your users and system.</p>
+<p>We recommend using OAuth or Personal token whenever possible, as it provides the best security for your users and system.</p>
 </div>
-<div class="sect2">
-<h3 id="_basic_authentication_requirements"><a class="anchor" href="#_basic_authentication_requirements"></a>Basic authentication requirements:</h3>
+<div class="sect3">
+<h4 id="_basic_authentication_requirements"><a class="anchor" href="#_basic_authentication_requirements"></a>Basic authentication requirements:</h4>
 <div class="ulist">
 <ul>
 <li>
-<p>An username and a password.</p>
+<p>A username and a password.</p>
 </li>
 </ul>
 </div>
 </div>
-<div class="sect2">
-<h3 id="_oauth_authentication_requirements"><a class="anchor" href="#_oauth_authentication_requirements"></a>OAuth authentication requirements:</h3>
+<div class="sect3">
+<h4 id="_oauth_authentication_requirements"><a class="anchor" href="#_oauth_authentication_requirements"></a>OAuth authentication requirements:</h4>
 <div class="paragraph">
 <p>Follow the tutorial in <a href="https://developer.atlassian.com/cloud/jira/platform/jira-rest-api-oauth-authentication/">Jira OAuth documentation</a>
 to generate the client private key, consumer key, verification code and access token.</p>
@@ -2723,8 +3038,8 @@ to generate the client private key, consumer key, verification code and access t
 </ul>
 </div>
 </div>
-<div class="sect2">
-<h3 id="_personal_access_token_authentication_requirements"><a class="anchor" href="#_personal_access_token_authentication_requirements"></a>Personal access token authentication requirements:</h3>
+<div class="sect3">
+<h4 id="_personal_access_token_authentication_requirements"><a class="anchor" href="#_personal_access_token_authentication_requirements"></a>Personal access token authentication requirements:</h4>
 <div class="paragraph">
 <p>Follow the tutorial to generate the <a href="https://confluence.atlassian.com/enterprise/using-personal-access-tokens-1026032365.html">Personal Token</a>.</p>
 </div>
@@ -2737,13 +3052,11 @@ to generate the client private key, consumer key, verification code and access t
 </div>
 </div>
 </div>
-</div>
-<div class="sect1">
-<h2 id="_jql"><a class="anchor" href="#_jql"></a>JQL:</h2>
-<div class="sectionbody">
+<div class="sect2">
+<h3 id="_jql"><a class="anchor" href="#_jql"></a>JQL</h3>
 <div class="paragraph">
 <p>The JQL URI option is used by both consumer endpoints.  Theoretically,
-items like "project key", etc. could be URI options themselves.
+items like the "project key", etc. could be URI options themselves.
  However, by requiring the use of JQL, the consumers become much more
 flexible and powerful.</p>
 </div>
@@ -2775,11 +3088,11 @@ issue in the project.</p>
 </div>
 <div class="paragraph">
 <p>Another note is that, similarly, the newComments consumer will have to
-index every single issue <strong>and</strong> comment in the project. Therefore, for
+index every single issue <strong>and</strong> comment on the project. Therefore, for
 large projects, it&#8217;s <strong>vital</strong> to optimize the JQL expression as much as
-possible. For example, the JIRA Toolkit Plugin includes a "Number of
-comments" custom field&#8201;&#8212;&#8201;use '"Number of comments" &gt; 0' in your query.
-Also try to minimize based on state (status=Open), increase the polling
+possible. For example, the JIRA Toolkit Plugin includes a <code>"Number of
+comments"</code> custom field use <code>'"Number of comments" &gt; 0'</code> in your query.
+Also try to minimize based on state (<code>status=Open</code>), increase the polling
 delay, etc. Example:</p>
 </div>
 <div class="listingblock">
@@ -2788,24 +3101,20 @@ delay, etc. Example:</p>
 </div>
 </div>
 </div>
-</div>
-<div class="sect1">
-<h2 id="_operations"><a class="anchor" href="#_operations"></a>Operations</h2>
-<div class="sectionbody">
+<div class="sect2">
+<h3 id="_operations"><a class="anchor" href="#_operations"></a>Operations</h3>
 <div class="paragraph">
-<p>See a list of required headers to set when using the Jira operations. The author field for the producers is automatically set to the authenticated user in the Jira side.</p>
+<p>See a list of required headers to set when using the Jira operations. The author field for the producers is automatically set to the authenticated user on the Jira side.</p>
 </div>
 <div class="paragraph">
 <p>If any required field is not set, then an IllegalArgumentException is throw.</p>
 </div>
 <div class="paragraph">
-<p>There are operations that requires <code>id</code> for fields suchs as: issue type, priority, transition. Check the valid <code>id</code> on your jira project as they may differ on a jira installation and project workflow.</p>
+<p>There are operations that requires <code>id</code> for fields such as the issue type, priority, transition. Check the valid <code>id</code> on your jira project as they may differ on a jira installation and project workflow.</p>
 </div>
 </div>
-</div>
-<div class="sect1">
-<h2 id="_addissue"><a class="anchor" href="#_addissue"></a>AddIssue</h2>
-<div class="sectionbody">
+<div class="sect2">
+<h3 id="_addissue"><a class="anchor" href="#_addissue"></a>AddIssue</h3>
 <div class="paragraph">
 <p>Required:</p>
 </div>
@@ -2848,10 +3157,8 @@ delay, etc. Example:</p>
 </ul>
 </div>
 </div>
-</div>
-<div class="sect1">
-<h2 id="_addcomment"><a class="anchor" href="#_addcomment"></a>AddComment</h2>
-<div class="sectionbody">
+<div class="sect2">
+<h3 id="_addcomment"><a class="anchor" href="#_addcomment"></a>AddComment</h3>
 <div class="paragraph">
 <p>Required:</p>
 </div>
@@ -2861,15 +3168,13 @@ delay, etc. Example:</p>
 <p><code>IssueKey</code>: The issue key identifier.</p>
 </li>
 <li>
-<p>body of the exchange is the description.</p>
+<p>the body of the exchange is the description.</p>
 </li>
 </ul>
 </div>
 </div>
-</div>
-<div class="sect1">
-<h2 id="_attach"><a class="anchor" href="#_attach"></a>Attach</h2>
-<div class="sectionbody">
+<div class="sect2">
+<h3 id="_attach"><a class="anchor" href="#_attach"></a>Attach</h3>
 <div class="paragraph">
 <p>Only one file should attach per invocation.</p>
 </div>
@@ -2887,10 +3192,8 @@ delay, etc. Example:</p>
 </ul>
 </div>
 </div>
-</div>
-<div class="sect1">
-<h2 id="_deleteissue"><a class="anchor" href="#_deleteissue"></a>DeleteIssue</h2>
-<div class="sectionbody">
+<div class="sect2">
+<h3 id="_deleteissue"><a class="anchor" href="#_deleteissue"></a>DeleteIssue</h3>
 <div class="paragraph">
 <p>Required:</p>
 </div>
@@ -2902,10 +3205,8 @@ delay, etc. Example:</p>
 </ul>
 </div>
 </div>
-</div>
-<div class="sect1">
-<h2 id="_transitionissue"><a class="anchor" href="#_transitionissue"></a>TransitionIssue</h2>
-<div class="sectionbody">
+<div class="sect2">
+<h3 id="_transitionissue"><a class="anchor" href="#_transitionissue"></a>TransitionIssue</h3>
 <div class="paragraph">
 <p>Required:</p>
 </div>
@@ -2918,15 +3219,13 @@ delay, etc. Example:</p>
 <p><code>IssueTransitionId</code>: The issue transition <code>id</code>.</p>
 </li>
 <li>
-<p>body of the exchange is the description.</p>
+<p>the body of the exchange is the description.</p>
 </li>
 </ul>
 </div>
 </div>
-</div>
-<div class="sect1">
-<h2 id="_updateissue"><a class="anchor" href="#_updateissue"></a>UpdateIssue</h2>
-<div class="sectionbody">
+<div class="sect2">
+<h3 id="_updateissue"><a class="anchor" href="#_updateissue"></a>UpdateIssue</h3>
 <div class="ulist">
 <ul>
 <li>
@@ -2956,10 +3255,8 @@ delay, etc. Example:</p>
 </ul>
 </div>
 </div>
-</div>
-<div class="sect1">
-<h2 id="_watcher"><a class="anchor" href="#_watcher"></a>Watcher</h2>
-<div class="sectionbody">
+<div class="sect2">
+<h3 id="_watcher"><a class="anchor" href="#_watcher"></a>Watcher</h3>
 <div class="ulist">
 <ul>
 <li>
@@ -2974,22 +3271,20 @@ delay, etc. Example:</p>
 </ul>
 </div>
 </div>
-</div>
-<div class="sect1">
-<h2 id="_watchupdates_consumer"><a class="anchor" href="#_watchupdates_consumer"></a>WatchUpdates (consumer)</h2>
-<div class="sectionbody">
+<div class="sect2">
+<h3 id="_watchupdates_consumer"><a class="anchor" href="#_watchupdates_consumer"></a>WatchUpdates (consumer)</h3>
 <div class="ulist">
 <ul>
 <li>
-<p><code>watchedFields</code> Comma separated list of fields to watch for changes i.e <code>Status,Priority,Assignee,Components</code> etc.</p>
+<p><code>watchedFields</code> Comma separated list of fields to watch for changes i.e. <code>Status,Priority,Assignee,Components</code> etc.</p>
 </li>
 <li>
-<p><code>sendOnlyUpdatedField</code> By default only changed field is send as the body.</p>
+<p><code>sendOnlyUpdatedField</code> By default, only the changed field is sent as the body.</p>
 </li>
 </ul>
 </div>
 <div class="paragraph">
-<p>All messages also contain following headers that add additional info about the change:</p>
+<p>All messages also contain the following headers that add additional info about the change:</p>
 </div>
 <div class="ulist">
 <ul>
@@ -2997,12 +3292,16 @@ delay, etc. Example:</p>
 <p><code>issueKey</code>: Key of the updated issue</p>
 </li>
 <li>
-<p><code>changed</code>: name of the updated field (i.e Status)</p>
+<p><code>changed</code>: name of the updated field (i.e., Status)</p>
 </li>
 <li>
 <p><code>watchedIssues</code>: list of all issue keys that are watched in the time of update</p>
 </li>
 </ul>
+</div>
+<div class="paragraph">
+<p>Unresolved include directive in modules/ROOT/pages/jira-component.adoc - include::spring-boot:partial$starter.adoc[]</p>
+</div>
 </div>
 </div>
 </div>

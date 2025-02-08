@@ -3,15 +3,15 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>Configuring Routes Startup Ordering and Autostartup :: Red Hat Apache Build of Apache Camel Manual</title>
-    <meta name="generator" content="Antora 3.0.3">
+    <title>Configuring Routes Startup Ordering and Auto-startup :: Red Hat build of Apache Camel</title>
+    <meta name="generator" content="Antora 3.1.4">
     <link rel="stylesheet" href="../_/css/site.css">
   </head>
   <body class="article">
 <header class="header">
   <nav class="navbar">
     <div class="navbar-brand">
-      <a class="navbar-item" href="../../manual/index.html">Red Hat Apache Build of Apache Camel Manual</a>
+      <a class="navbar-item" href="/">Red Hat build of Apache Camel</a>
       <button class="navbar-burger" data-target="topbar-nav">
         <span></span>
         <span></span>
@@ -26,6 +26,7 @@
     <div class="panels">
 <div class="nav-panel-menu is-active" data-panel="menu">
   <nav class="nav-menu">
+    <button class="nav-menu-toggle" aria-label="Toggle expand/collapse all" style="display: none"></button>
     <h3 class="title"><a href="index.html">User manual</a></h3>
 <ul class="nav-list">
   <li class="nav-item" data-depth="0">
@@ -56,7 +57,16 @@
     <a class="nav-link" href="camel-console.html">Camel Developer Console</a>
   </li>
   <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
     <a class="nav-link" href="camel-jbang.html">Camel JBang</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="camel-jbang-kubernetes.html">Camel Kubernetes plugin</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="camel-jbang-k.html">Camel K plugin</a>
+  </li>
+</ul>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="camel-maven-plugin.html">Camel Maven Plugin</a>
@@ -95,6 +105,9 @@
     <a class="nav-link" href="using-propertyplaceholder.html">How to use Camel property placeholders</a>
   </li>
   <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="variables.html">How to use Variables</a>
+  </li>
+  <li class="nav-item" data-depth="2">
     <button class="nav-item-toggle"></button>
     <a class="nav-link" href="testing.html">Testing</a>
 <ul class="nav-list">
@@ -110,7 +123,13 @@
 </ul>
   </li>
   <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
     <a class="nav-link" href="rest-dsl.html">Working with REST and Rest DSL</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="rest-dsl-openapi.html">Rest DSL contract first</a>
+  </li>
+</ul>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="writing-components.html">Writing Components</a>
@@ -477,9 +496,6 @@
     <a class="nav-link" href="faq/how-should-i-invoke-my-pojos-or-spring-services.html">How should I invoke my POJOs or Spring Services?</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="faq/how-to-avoid-importing-bunch-of-cxf-packages-when-start-up-the-camel-cxf-endpoint-from-osgi-platform-.html">How to avoid importing bunch of cxf packages when start up the camel-cxf endpoint from OSGi platform?</a>
-  </li>
-  <li class="nav-item" data-depth="2">
     <a class="nav-link" href="faq/how-to-avoid-sending-some-or-all-message-headers.html">How to avoid sending some or all message headers?</a>
   </li>
   <li class="nav-item" data-depth="2">
@@ -598,11 +614,11 @@
 <div class="nav-panel-explore" data-panel="explore">
   <div class="context">
     <span class="title">User manual</span>
-    <span class="version">default</span>
+    <span class="version"></span>
   </div>
   <ul class="components">
     <li class="component">
-      <a class="title" href="../components/next/index.html">Camel Components</a>
+      <div class="title"><a href="../components/next/index.html">Camel Components</a></div>
       <ul class="versions">
         <li class="version is-latest">
           <a href="../components/next/index.html">Next (Pre-release)</a>
@@ -610,12 +626,7 @@
       </ul>
     </li>
     <li class="component is-current">
-      <a class="title" href="index.html">User manual</a>
-      <ul class="versions">
-        <li class="version is-current is-latest">
-          <a href="index.html">default</a>
-        </li>
-      </ul>
+      <div class="title"><a href="index.html">User manual</a></div>
     </li>
   </ul>
 </div>
@@ -633,13 +644,14 @@
     <li><a href="configuring-route-startup-ordering-and-autostartup.html">Configuring route startup ordering and autostartup</a></li>
   </ul>
 </nav>
+<div class="edit-this-page"><a href="file:///code/jboss/jboss-camel/docs/user-manual/modules/ROOT/pages/configuring-route-startup-ordering-and-autostartup.adoc">Edit this Page</a></div>
 </div>
   <div class="content">
 <aside class="toc sidebar" data-title="Contents" data-levels="2">
   <div class="toc-menu"></div>
 </aside>
 <article class="doc">
-<h1 class="page">Configuring Routes Startup Ordering and Autostartup</h1>
+<h1 class="page">Configuring Routes Startup Ordering and Auto-startup</h1>
 <div id="preamble">
 <div class="sectionbody">
 <div class="paragraph">
@@ -648,7 +660,7 @@
 <div class="ulist">
 <ul>
 <li>
-<p>auto startup</p>
+<p>auto-startup</p>
 </li>
 <li>
 <p>order of starting routes</p>
@@ -658,7 +670,7 @@
 </div>
 </div>
 <div class="sect1">
-<h2 id="_autostartup"><a class="anchor" href="#_autostartup"></a>Autostartup</h2>
+<h2 id="_auto_startup"><a class="anchor" href="#_auto_startup"></a>Auto-startup</h2>
 <div class="sectionbody">
 <div class="paragraph">
 <p>The <code>autoStartup</code> option allows is to configure
@@ -670,15 +682,15 @@ Camel to <strong>not</strong> auto start routes when Camel starts.</p>
 <div class="ulist">
 <ul>
 <li>
-<p>CamelContext - <em>Globally</em></p>
+<p>Camel context: <em>Globally</em></p>
 </li>
 <li>
-<p>Route - <em>Individually per route</em></p>
+<p>Route: <em>Individually per route</em></p>
 </li>
 </ul>
 </div>
 <div class="paragraph">
-<p>For example the <a href="camelcontext.html" class="xref page">CamelContext</a> below we have configured <code>autoStartup=false</code> to
+<p>For example, the <a href="camelcontext.html" class="xref page">CamelContext</a> below we have configured <code>autoStartup=false</code> to
 prevent Camel starting all the routes on startup.</p>
 </div>
 <div class="listingblock">
@@ -705,7 +717,7 @@ can manually start Camel later by invoking its <code>start</code> method in Java
 below.</p>
 </div>
 <div class="paragraph">
-<p>For example when using Spring, you can get hold of the <code>CamelContext</code> via
+<p>For example, when using Spring, you can get hold of the <code>CamelContext</code> via
 the Spring <code>ApplicationContext</code>:</p>
 </div>
 <div class="listingblock">
@@ -730,13 +742,13 @@ The routes can also be started via JMX (requires <code>camel-management</code> J
 </table>
 </div>
 <div class="sect2">
-<h3 id="_autostartup_per_route_level"><a class="anchor" href="#_autostartup_per_route_level"></a>Autostartup per route level</h3>
+<h3 id="_auto_startup_per_route_level"><a class="anchor" href="#_auto_startup_per_route_level"></a>Auto-startup per route level</h3>
 <div class="paragraph">
 <p>You can also use the <code>autoStartup</code> option to configure if a given route
 should be started when Camel starts. By default, a route is auto started.</p>
 </div>
 <div class="paragraph">
-<p>In XML DSL you disable auto startup as follows:</p>
+<p>In XML DSL, you disable auto startup as follows:</p>
 </div>
 <div class="listingblock">
 <div class="content">
@@ -800,12 +812,15 @@ from("activemq:queue:special").autoStartup("{{startupRouteProperty}}")
 <h2 id="_configuring_starting_order_for_routes"><a class="anchor" href="#_configuring_starting_order_for_routes"></a>Configuring starting order for routes</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>You can also configure the order in which routes are started. Previously
-Camel started the routes in a non-deterministic order. Now you have
-fine-grained control in which order the routes should be started. There is a
+<p>You can also configure the order in which routes are started.
+Previously,
+Camel started the routes in a non-deterministic order.
+Now you have
+fine-grained control in which order the routes should be started.
+There is a
 new attribute <code>startupOrder</code> which is an <code>Integer</code> that states the order.
-Camel then sorts the routes before starting time. The routes with the
-lowest <code>startupOrder</code> are started first and the ones with the highest are
+Camel then sorts the routes before starting time.
+The routes with the lowest <code>startupOrder</code> are started first, and the ones with the highest are
 started last.</p>
 </div>
 <div class="admonitionblock important">
@@ -830,15 +845,16 @@ auto assigned. So view numbers from 1000 upwards as reserved internally
 for Camel itself.</p>
 </div>
 <div class="paragraph">
-<p>However, you can also utilise much higher numbers than 1000
+<p>However, you can also use higher numbers than 1000
 (to avoid collisions with those auto assigned numbers) to specify the last routes
-to start up. Normally the usage of numbers starting from 10000 should be safe
+to start up. Normally, the usage of numbers starting from 10000 should be safe
 for the purpose.</p>
 </div>
 <div class="paragraph">
 <p>In terms of the <code>startupOrder</code> there are no strict rules that it must
-start from 1 and increment by 1. You can for example use: 100, 200, 205,
-89 if you like. Only rule of thumb is that the numbers must be unique.</p>
+start from 1 and increment by 1.
+You can, for example, use: 100, 200, 205, 89 if you like.
+The only rule of thumb is that the numbers must be unique.</p>
 </div>
 <div class="sect2">
 <h3 id="_why_do_you_want_to_control_the_starting_order"><a class="anchor" href="#_why_do_you_want_to_control_the_starting_order"></a>Why do you want to control the starting order?</h3>
@@ -848,7 +864,7 @@ also help with graceful shutting down Camel as Camel can stop the routes
 in the correct order as well.</p>
 </div>
 <div class="paragraph">
-<p>Camel will stop the routes in the <strong>reverse</strong> order that they were started.</p>
+<p>Apache Camel will stop the routes in the <strong>reverse</strong> order that they were started.</p>
 </div>
 <div class="paragraph">
 <p>Let&#8217;s try a couple of examples.</p>
@@ -884,7 +900,7 @@ from("direct:start").startupOrder(2)
 </div>
 </div>
 <div class="paragraph">
-<p>In this example we have two routes in which we have started that the
+<p>In this example, we have two routes in which we have started that the
 direct:start route should be started <strong>after</strong> the seda:foo route.
 Because direct:start is considered the input, and we want seda:foo
 route to be up and running beforehand.</p>
@@ -934,8 +950,8 @@ from("direct:bar")
 <div class="paragraph">
 <p>In the route above we have <strong>not</strong> defined a <code>startupOrder</code> on the last
 route direct:bar in which Camel will auto assign a number for it, in
-which this case will be 1000; therefore the route will be started
-last.</p>
+which this case will be 1000.
+Therefore, the route will be started last.</p>
 </div>
 <div class="paragraph">
 <p>So you can use this to your advantage to only assign a <code>startupOrder</code> on
@@ -963,21 +979,21 @@ from("seda:bar").to("mock:other");</code></pre>
 </div>
 </div>
 <div class="paragraph">
-<p>In the example above the order of startups of routes should be:</p>
+<p>In the example above, the order of route startups should be:</p>
 </div>
 <div class="olist arabic">
 <ol class="arabic">
 <li>
-<p>seda:foo</p>
+<p><code><em>seda:foo</em></code></p>
 </li>
 <li>
-<p>direct:start</p>
+<p><code><em>direct:start</em></code></p>
 </li>
 <li>
-<p>seda:bar</p>
+<p><code><em>seda:bar</em></code></p>
 </li>
 <li>
-<p>direct:bar</p>
+<p><code><em>direct:bar</em></code></p>
 </li>
 </ol>
 </div>
@@ -985,7 +1001,7 @@ from("seda:bar").to("mock:other");</code></pre>
 <div class="sect2">
 <h3 id="_shutting_down_routes"><a class="anchor" href="#_shutting_down_routes"></a>Shutting down routes</h3>
 <div class="paragraph">
-<p>Camel will shut down the routes in the <strong>reverse</strong> order that they were started.</p>
+<p>Apache Camel will shut down the routes in the <strong>reverse</strong> order that they were started.</p>
 </div>
 <div class="paragraph">
 <p>See more at <a href="graceful-shutdown.html" class="xref page">Graceful Shutdown</a>.</p>

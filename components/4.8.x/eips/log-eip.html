@@ -3,8 +3,8 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>Log :: Red Hat Camel Reference</title>
-    <meta name="description" content="Logs the defined message to the logger">
+    <title>Logger :: Red Hat build of Apache Camel</title>
+    <meta name="description" content="Used for printing custom messages to the logger.">
     <meta name="generator" content="Antora 3.1.4">
     <link rel="stylesheet" href="../../../_/css/site.css">
   </head>
@@ -12,7 +12,7 @@
 <header class="header">
   <nav class="navbar">
     <div class="navbar-brand">
-      <a class="navbar-item" href="../../manual/index.html">Red Hat Apache Build of Apache Camel Manual</a>
+      <a class="navbar-item" href="/">Red Hat build of Apache Camel</a>
       <button class="navbar-burger" data-target="topbar-nav">
         <span></span>
         <span></span>
@@ -27,6 +27,7 @@
     <div class="panels">
 <div class="nav-panel-menu is-active" data-panel="menu">
   <nav class="nav-menu">
+    <button class="nav-menu-toggle" aria-label="Toggle expand/collapse all" style="display: none"></button>
     <h3 class="title"><a href="../index.html">Camel Components</a></h3>
 <ul class="nav-list">
   <li class="nav-item" data-depth="0">
@@ -36,7 +37,46 @@
     <a class="nav-link" href="../index.html">Components</a>
 <ul class="nav-list">
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="../activemq-component.html">ActiveMQ</a>
+    <a class="nav-link" href="../activemq-component.html">ActiveMQ 5.x</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../activemq6-component.html">ActiveMQ 6.x</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../ai-summary.html">AI</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../chatscript-component.html">ChatScript</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../djl-component.html">Deep Java Library</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../langchain4j-chat-component.html">LangChain4j Chat</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../langchain4j-embeddings-component.html">LangChain4j Embeddings</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../langchain4j-tokenizer-component.html">LangChain4j Tokenizer</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../langchain4j-tools-component.html">LangChain4j Tools</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../langchain4j-web-search-component.html">LangChain4j Web Search</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../milvus-component.html">Milvus</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../pinecone-component.html">Pinecone</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../qdrant-component.html">Qdrant</a>
+  </li>
+</ul>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="../amqp-component.html">AMQP</a>
@@ -65,6 +105,15 @@
 <ul class="nav-list">
   <li class="nav-item" data-depth="3">
     <a class="nav-link" href="../aws2-athena-component.html">AWS Athena</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../aws-bedrock-component.html">AWS Bedrock</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../aws-bedrock-agent-component.html">AWS Bedrock Agent</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../aws-bedrock-agent-runtime-component.html">AWS Bedrock Agent Runtime</a>
   </li>
   <li class="nav-item" data-depth="3">
     <a class="nav-link" href="../aws-cloudtrail-component.html">AWS Cloudtrail</a>
@@ -169,7 +218,7 @@
     <a class="nav-link" href="../azure-storage-blob-component.html">Azure Storage Blob Service</a>
   </li>
   <li class="nav-item" data-depth="3">
-    <a class="nav-link" href="../azure-storage-datalake-component.html">Azure Storage Datalake Service</a>
+    <a class="nav-link" href="../azure-storage-datalake-component.html">Azure Storage Data Lake Service</a>
   </li>
   <li class="nav-item" data-depth="3">
     <a class="nav-link" href="../azure-storage-queue-component.html">Azure Storage Queue Service</a>
@@ -202,9 +251,6 @@
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="../cql-component.html">Cassandra CQL</a>
-  </li>
-  <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="../chatscript-component.html">ChatScript</a>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="../chunk-component.html">Chunk</a>
@@ -277,9 +323,6 @@
     <a class="nav-link" href="../debezium-sqlserver-component.html">Debezium SQL Server Connector</a>
   </li>
 </ul>
-  </li>
-  <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="../djl-component.html">Deep Java Library</a>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="../dhis2-component.html">DHIS2</a>
@@ -395,6 +438,9 @@
   </li>
   <li class="nav-item" data-depth="3">
     <a class="nav-link" href="../google-pubsub-component.html">Google Pubsub</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../google-pubsub-lite-component.html">Google PubSub Lite</a>
   </li>
   <li class="nav-item" data-depth="3">
     <a class="nav-link" href="../google-secret-manager-component.html">Google Secret Manager</a>
@@ -687,7 +733,7 @@
     <a class="nav-link" href="../ldif-component.html">LDIF</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="../log-component.html">Log</a>
+    <a class="nav-link" href="../log-component.html">Log Data</a>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="../lucene-component.html">Lucene</a>
@@ -900,10 +946,16 @@
     <a class="nav-link" href="../smb-component.html">SMB</a>
   </li>
   <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../smooks-component.html">Smooks</a>
+  </li>
+  <li class="nav-item" data-depth="2">
     <a class="nav-link" href="../smpp-component.html">SMPP</a>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="../snmp-component.html">SNMP</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../solr-component.html">Solr</a>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="../splunk-component.html">Splunk</a>
@@ -966,6 +1018,18 @@
     <a class="nav-link" href="../stub-component.html">Stub</a>
   </li>
   <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../tahu-summary.html">Tahu</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../tahu-edge-component.html">Tahu Edge Node / Device</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../tahu-host-component.html">Tahu Host Application</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
     <a class="nav-link" href="../telegram-component.html">Telegram</a>
   </li>
   <li class="nav-item" data-depth="2">
@@ -1026,7 +1090,7 @@
     <a class="nav-link" href="../whatsapp-component.html">WhatsApp</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="../wordpress-component.html">Wordpress</a>
+    <a class="nav-link" href="../wordpress-component.html">WordPress</a>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="../workday-component.html">Workday</a>
@@ -1419,7 +1483,13 @@
     <a class="nav-link" href="../others/openapi-java.html">Openapi Java</a>
   </li>
   <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../others/openapi-validator.html">Openapi Validator</a>
+  </li>
+  <li class="nav-item" data-depth="2">
     <a class="nav-link" href="../others/opentelemetry.html">OpenTelemetry</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../others/platform-http-jolokia.html">Platform HTTP Jolokia</a>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="../others/platform-http-main.html">Platform Http Main</a>
@@ -1567,7 +1637,7 @@
     <a class="nav-link" href="event-message.html">Event Message</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="failover-eip.html">Failover</a>
+    <a class="nav-link" href="failoverLoadBalancer-eip.html">Failover Load Balancer</a>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="faultToleranceConfiguration-eip.html">Fault Tolerance Configuration</a>
@@ -1597,13 +1667,13 @@
     <a class="nav-link" href="loadBalance-eip.html">Load Balance</a>
   </li>
   <li class="nav-item is-current-page" data-depth="2">
-    <a class="nav-link" href="log-eip.html">Log</a>
+    <a class="nav-link" href="log-eip.html">Logger</a>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="loop-eip.html">Loop</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="marshal-eip.html">Marshal EIP</a>
+    <a class="nav-link" href="marshal-eip.html">Marshal</a>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="message.html">Message</a>
@@ -1660,6 +1730,9 @@
     <a class="nav-link" href="point-to-point-channel.html">Point to Point Channel</a>
   </li>
   <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="poll-eip.html">Poll</a>
+  </li>
+  <li class="nav-item" data-depth="2">
     <a class="nav-link" href="pollEnrich-eip.html">Poll Enrich</a>
   </li>
   <li class="nav-item" data-depth="2">
@@ -1675,7 +1748,7 @@
     <a class="nav-link" href="publish-subscribe-channel.html">Publish Subscribe Channel</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="random-eip.html">Random</a>
+    <a class="nav-link" href="randomLoadBalancer-eip.html">Random Load Balancer</a>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="recipientList-eip.html">Recipient List</a>
@@ -1717,7 +1790,7 @@
     <a class="nav-link" href="rollback-eip.html">Rollback</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="roundRobin-eip.html">Round Robin</a>
+    <a class="nav-link" href="roundRobinLoadBalancer-eip.html">Round Robin Load Balancer</a>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="routingSlip-eip.html">Routing Slip</a>
@@ -1729,7 +1802,7 @@
     <a class="nav-link" href="sample-eip.html">Sample</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="scatter-gather.html">Scatter Gather</a>
+    <a class="nav-link" href="scatter-gather.html">Scatter-Gather</a>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="script-eip.html">Script</a>
@@ -1759,6 +1832,9 @@
     <a class="nav-link" href="setVariable-eip.html">Set Variable</a>
   </li>
   <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="setVariables-eip.html">Set Variables</a>
+  </li>
+  <li class="nav-item" data-depth="2">
     <a class="nav-link" href="sort-eip.html">Sort</a>
   </li>
   <li class="nav-item" data-depth="2">
@@ -1768,7 +1844,7 @@
     <a class="nav-link" href="step-eip.html">Step</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="sticky-eip.html">Sticky</a>
+    <a class="nav-link" href="stickyLoadBalancer-eip.html">Sticky Load Balancer</a>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="stop-eip.html">Stop</a>
@@ -1789,7 +1865,7 @@
     <a class="nav-link" href="toD-eip.html">To D</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="topic-eip.html">Topic</a>
+    <a class="nav-link" href="topicLoadBalancer-eip.html">Topic Load Balancer</a>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="transactional-client.html">Transactional Client</a>
@@ -1798,13 +1874,13 @@
     <a class="nav-link" href="transform-eip.html">Transform</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="unmarshal-eip.html">Unmarshal EIP</a>
+    <a class="nav-link" href="unmarshal-eip.html">Unmarshal</a>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="validate-eip.html">Validate</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="weighted-eip.html">Weighted</a>
+    <a class="nav-link" href="weightedLoadBalancer-eip.html">Weighted Load Balancer</a>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="wireTap-eip.html">Wire Tap</a>
@@ -1823,7 +1899,7 @@
   </div>
   <ul class="components">
     <li class="component is-current">
-      <a class="title" href="../index.html">Camel Components</a>
+      <div class="title"><a href="../index.html">Camel Components</a></div>
       <ul class="versions">
         <li class="version is-current is-latest">
           <a href="../index.html">Next (Pre-release)</a>
@@ -1831,12 +1907,7 @@
       </ul>
     </li>
     <li class="component">
-      <a class="title" href="../../../manual/index.html">User manual</a>
-      <ul class="versions">
-        <li class="version is-latest">
-          <a href="../../../manual/index.html">default</a>
-        </li>
-      </ul>
+      <div class="title"><a href="../../../manual/index.html">User manual</a></div>
     </li>
   </ul>
 </div>
@@ -1851,16 +1922,17 @@
   <ul>
     <li><a href="../index.html">Camel Components</a></li>
     <li><a href="enterprise-integration-patterns.html">Enterprise Integration Patterns</a></li>
-    <li><a href="log-eip.html">Log</a></li>
+    <li><a href="log-eip.html">Logger</a></li>
   </ul>
 </nav>
+<div class="edit-this-page"><a href="file:///code/jboss/jboss-camel/core/camel-core-engine/src/main/docs/modules/eips/pages/log-eip.adoc">Edit this Page</a></div>
 </div>
   <div class="content">
 <aside class="toc sidebar" data-title="Contents" data-levels="2">
   <div class="toc-menu"></div>
 </aside>
 <article class="doc">
-<h1 class="page">Log</h1>
+<h1 class="page">Logger</h1>
 <div id="preamble">
 <div class="sectionbody">
 <div class="paragraph">
@@ -1875,7 +1947,7 @@
 <p>You can use the <a href="../log-component.html" class="xref page">Log</a> component which logs the Message content.</p>
 </li>
 <li>
-<p>You can use the <a href="../../../manual/tracer.html" class="xref page">Tracer</a> which trace logs message flow.</p>
+<p>You can use the <a href="../../../manual/tracer.html" class="xref page">Tracer</a> that traces logs message flow.</p>
 </li>
 <li>
 <p>You can also use a <a href="../../../manual/processor.html" class="xref page">Processor</a> or <a href="../../../manual/bean-binding.html" class="xref page">Bean</a> and log from Java code.</p>
@@ -1891,7 +1963,7 @@
 <h2 id="_options"><a class="anchor" href="#_options"></a>Options</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>The Log eip supports 6 options, which are listed below.</p>
+<p>The Logger eip supports 0 options, which are listed below.</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
 <colgroup>
@@ -1969,7 +2041,7 @@
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong id="_option_logName">logName</strong></p></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>Sets the name of the logger.</p>
+<p>Sets the name of the logger. The name is default the routeId or the source:line if source location is enabled. You can also specify the name using tokens: ${class} - the logger class name (org.apache.camel.processor.LogProcessor) ${contextId} - the camel context id ${routeId} - the route id ${groupId} - the route group id ${nodeId} - the node id ${nodePrefixId} - the node prefix id ${source} - the source:line (source location must be enabled) $\{source.name} - the source filename (source location must be enabled) $\{source.line} - the source line number (source location must be enabled) For example to use the route and node id you can specify the name as: ${routeId}/${nodeId}.</p>
 </div></div></td>
 <td class="tableblock halign-center valign-top"></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">String</p></td>
@@ -1992,6 +2064,14 @@
 </tr>
 </tbody>
 </table>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_exchange_properties"><a class="anchor" href="#_exchange_properties"></a>Exchange properties</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>The Logger eip has no exchange properties.</p>
+</div>
 <div class="sect2">
 <h3 id="_difference_between_log_eip_and_log_component"><a class="anchor" href="#_difference_between_log_eip_and_log_component"></a>Difference between Log EIP and Log component</h3>
 <div class="paragraph">
@@ -1999,7 +2079,7 @@
 It can only log a message based on the <a href="../languages/simple-language.html" class="xref page">Simple</a> language.</p>
 </div>
 <div class="paragraph">
-<p>The <a href="../log-component.html" class="xref page">log</a> component is meant for logging the message content (body, headers, etc.).
+<p>The <a href="../log-component.html" class="xref page">log</a> component is meant for logging the message content (body, headers, etc).
 There are many options on the log component to configure what content to log.</p>
 </div>
 </div>
@@ -2014,6 +2094,19 @@ There are many options on the log component to configure what content to log.</p
 <div class="paragraph">
 <p>For example, you can do</p>
 </div>
+<div id="_tabs_1" class="openblock tabs is-sync is-loading">
+<div class="content">
+<div class="ulist tablist">
+<ul>
+<li id="_tabs_1_java" class="tab">
+<p>Java</p>
+</li>
+<li id="_tabs_1_xml" class="tab">
+<p>XML</p>
+</li>
+</ul>
+</div>
+<div id="_tabs_1_java--panel" class="tabpanel" aria-labelledby="_tabs_1_java">
 <div class="listingblock">
 <div class="content">
 <pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">from("direct:start")
@@ -2021,9 +2114,8 @@ There are many options on the log component to configure what content to log.</p
     .to("bean:foo");</code></pre>
 </div>
 </div>
-<div class="paragraph">
-<p>And in XML:</p>
 </div>
+<div id="_tabs_1_xml--panel" class="tabpanel" aria-labelledby="_tabs_1_xml">
 <div class="listingblock">
 <div class="content">
 <pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;route&gt;
@@ -2033,17 +2125,20 @@ There are many options on the log component to configure what content to log.</p
 &lt;/route&gt;</code></pre>
 </div>
 </div>
+</div>
+</div>
+</div>
 <div class="paragraph">
 <p>This will be evaluated using the <a href="../languages/simple-language.html" class="xref page">Simple</a>
-to construct the <code>String</code> containg the message to be logged.</p>
+to construct the <code>String</code> containing the message to be logged.</p>
 </div>
 <div class="sect2">
 <h3 id="_logging_message_body_with_streaming"><a class="anchor" href="#_logging_message_body_with_streaming"></a>Logging message body with streaming</h3>
 <div class="paragraph">
-<p>If the message body is stream based, then logging the message body, may cause the message body to be empty afterwards. See this <a href="../../../manual/faq/why-is-my-message-body-empty.html" class="xref page">FAQ</a>. For streamed messages you can use Stream caching to allow logging the message body and be able to read the message body afterwards again.</p>
+<p>If the message body is stream based, then logging the message body may cause the message body to be empty afterward. See this <a href="../../../manual/faq/why-is-my-message-body-empty.html" class="xref page">FAQ</a>. For streamed messages, you can use Stream caching to allow logging the message body and be able to read the message body afterward again.</p>
 </div>
 <div class="paragraph">
-<p>The log DSL have overloaded methods to set the logging level and/or name as well.</p>
+<p>The log DSL has overloaded methods to set the logging level and/or name as well.</p>
 </div>
 <div class="listingblock">
 <div class="content">
@@ -2073,7 +2168,7 @@ to construct the <code>String</code> containg the message to be logged.</p>
 </div>
 </div>
 <div class="paragraph">
-<p>For example you can use this to log the file name being processed if you consume files.</p>
+<p>For example, you can use this to log the file name being processed if you consume files.</p>
 </div>
 <div class="listingblock">
 <div class="content">
@@ -2083,7 +2178,7 @@ to construct the <code>String</code> containg the message to be logged.</p>
 </div>
 </div>
 <div class="paragraph">
-<p>In Spring DSL it is also easy to use log DSL as shown below:</p>
+<p>In XML DSL, it is also easy to use log DSL as shown below:</p>
 </div>
 <div class="listingblock">
 <div class="content">
@@ -2131,12 +2226,25 @@ to construct the <code>String</code> containg the message to be logged.</p>
 <div class="sect2">
 <h3 id="_configuring_logging_name"><a class="anchor" href="#_configuring_logging_name"></a>Configuring logging name</h3>
 <div class="paragraph">
-<p>The log message will be logged at <code>INFO</code> level using the route id as the logger name.
-So for example if you have not assigned an id to the route, then Camel will use <code>route-1</code>, <code>route-2</code> as the logger name.</p>
+<p>The log message will be logged at <code>INFO</code> level using the route id as the logger name (or source name:line if source location is enabled, see TIP below).
+So for example, if you have not assigned an id to the route, then Camel will use <code>route-1</code>, <code>route-2</code> as the logger name.</p>
 </div>
 <div class="paragraph">
-<p>For example to use "fooRoute" as the route id, you can do:</p>
+<p>To use "fooRoute" as the route id, you can do:</p>
 </div>
+<div id="_tabs_2" class="openblock tabs is-sync is-loading">
+<div class="content">
+<div class="ulist tablist">
+<ul>
+<li id="_tabs_2_java" class="tab">
+<p>Java</p>
+</li>
+<li id="_tabs_2_xml" class="tab">
+<p>XML</p>
+</li>
+</ul>
+</div>
+<div id="_tabs_2_java--panel" class="tabpanel" aria-labelledby="_tabs_2_java">
 <div class="listingblock">
 <div class="content">
 <pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">from("direct:start").routeId("fooRoute")
@@ -2144,9 +2252,8 @@ So for example if you have not assigned an id to the route, then Camel will use 
     .to("bean:foo");</code></pre>
 </div>
 </div>
-<div class="paragraph">
-<p>And in XML:</p>
 </div>
+<div id="_tabs_2_xml--panel" class="tabpanel" aria-labelledby="_tabs_2_xml">
 <div class="listingblock">
 <div class="content">
 <pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;route id="fooRoute"&gt;
@@ -2156,15 +2263,31 @@ So for example if you have not assigned an id to the route, then Camel will use 
 &lt;/route&gt;</code></pre>
 </div>
 </div>
+</div>
+</div>
+</div>
+<div class="admonitionblock tip">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-tip" title="Tip"></i>
+</td>
+<td class="content">
+If you enable <code>sourceLocationEnabled=true</code> on <code>CamelContext</code> then Camel will use source file:line as logger name,
+instead of the route id. This is for example what <code>camel-jbang</code> do, to make it easy to see where in the source code the log is located.
+</td>
+</tr>
+</table>
+</div>
 <div class="sect3">
 <h4 id="_using_custom_logger_from_the_registry"><a class="anchor" href="#_using_custom_logger_from_the_registry"></a>Using custom logger from the Registry</h4>
 <div class="paragraph">
 <p>If the Log EIP has not been configured with a specific logger to use,
-then Camel will will lookup in the <a href="../../../manual/registry.html" class="xref page">Registry</a>
+then Camel will look up in the <a href="../../../manual/registry.html" class="xref page">Registry</a>
 if there is a single instance of <code>org.slf4j.Logger</code>.</p>
 </div>
 <div class="paragraph">
-<p>If such an instance exists then this logger is used,
+<p>If such an instance exists, then this logger is used
 if not the behavior defaults to creating a new instance of logger.</p>
 </div>
 </div>
@@ -2176,16 +2299,28 @@ if not the behavior defaults to creating a new instance of logger.</p>
 by setting the global option on the <code>CamelContext</code>.</p>
 </div>
 <div class="paragraph">
-<p>In Java you can do:</p>
+<p>In Java, you can do:</p>
 </div>
+<div id="_tabs_3" class="openblock tabs is-sync is-loading">
+<div class="content">
+<div class="ulist tablist">
+<ul>
+<li id="_tabs_3_java" class="tab">
+<p>Java</p>
+</li>
+<li id="_tabs_3_xml" class="tab">
+<p>XML</p>
+</li>
+</ul>
+</div>
+<div id="_tabs_3_java--panel" class="tabpanel" aria-labelledby="_tabs_3_java">
 <div class="listingblock">
 <div class="content">
 <pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">camelContext.getGlobalOptions().put(Exchange.LOG_EIP_NAME, "com.foo.myapp");</code></pre>
 </div>
 </div>
-<div class="paragraph">
-<p>And in XML:</p>
 </div>
+<div id="_tabs_3_xml--panel" class="tabpanel" aria-labelledby="_tabs_3_xml">
 <div class="listingblock">
 <div class="content">
 <pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;camelContext&gt;
@@ -2198,34 +2333,66 @@ by setting the global option on the <code>CamelContext</code>.</p>
 </div>
 </div>
 </div>
+</div>
+</div>
+</div>
 <div class="sect1">
 <h2 id="_masking_sensitive_information_like_password"><a class="anchor" href="#_masking_sensitive_information_like_password"></a>Masking sensitive information like password</h2>
 <div class="sectionbody">
 <div class="paragraph">
 <p>You can enable security masking for logging by setting <code>logMask</code> flag to <code>true</code>.
-Note that this option also affects <a href="../log-component.html" class="xref page">Log</a> component.</p>
+Note that this option also affects the <a href="../log-component.html" class="xref page">Log</a> component.</p>
 </div>
 <div class="paragraph">
 <p>To enable mask in Java DSL at CamelContext level:</p>
 </div>
+<div id="_tabs_4" class="openblock tabs is-sync is-loading">
+<div class="content">
+<div class="ulist tablist">
+<ul>
+<li id="_tabs_4_java" class="tab">
+<p>Java</p>
+</li>
+<li id="_tabs_4_xml" class="tab">
+<p>XML</p>
+</li>
+</ul>
+</div>
+<div id="_tabs_4_java--panel" class="tabpanel" aria-labelledby="_tabs_4_java">
 <div class="listingblock">
 <div class="content">
 <pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">camelContext.setLogMask(true);</code></pre>
 </div>
 </div>
-<div class="paragraph">
-<p>And in XML you set the option on <code>&lt;camelContext&gt;</code>:</p>
 </div>
+<div id="_tabs_4_xml--panel" class="tabpanel" aria-labelledby="_tabs_4_xml">
 <div class="listingblock">
+<div class="title">And in XML you set the option on <code>&lt;camelContext&gt;</code>:</div>
 <div class="content">
 <pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;camelContext logMask="true"&gt;
 
 &lt;/camelContext&gt;</code></pre>
 </div>
 </div>
-<div class="paragraph">
-<p>You can also turn it on|off at route level. To enable mask in Java DSL at route level:</p>
 </div>
+</div>
+</div>
+<div class="paragraph">
+<p>You can also turn it on|off at route level. To enable mask in at route level:</p>
+</div>
+<div id="_tabs_5" class="openblock tabs is-sync is-loading">
+<div class="content">
+<div class="ulist tablist">
+<ul>
+<li id="_tabs_5_java" class="tab">
+<p>Java</p>
+</li>
+<li id="_tabs_5_xml" class="tab">
+<p>XML</p>
+</li>
+</ul>
+</div>
+<div id="_tabs_5_java--panel" class="tabpanel" aria-labelledby="_tabs_5_java">
 <div class="listingblock">
 <div class="content">
 <pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">from("direct:start").logMask()
@@ -2233,14 +2400,16 @@ Note that this option also affects <a href="../log-component.html" class="xref p
     .to("bean:foo");</code></pre>
 </div>
 </div>
-<div class="paragraph">
-<p>And in XML:</p>
 </div>
+<div id="_tabs_5_xml--panel" class="tabpanel" aria-labelledby="_tabs_5_xml">
 <div class="listingblock">
 <div class="content">
 <pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;route logMask="true"&gt;
 
 &lt;/route&gt;</code></pre>
+</div>
+</div>
+</div>
 </div>
 </div>
 <div class="sect2">
@@ -2251,9 +2420,9 @@ If you want to use a custom masking formatter, put it into registry with the nam
 Note that the masking formatter must implement <code>org.apache.camel.spi.MaskingFormatter</code>.</p>
 </div>
 <div class="paragraph">
-<p>The know set of keywords to mask is gathered from all the different component options, that are marked as secret.
+<p>The know set of keywords to mask is gathered from all the different component options that are marked as secret.
 The list is generated into the source code in <code>org.apache.camel.util.SensitiveUtils</code>.
-At this time of writing there is more than 65 different keywords.</p>
+At this time of writing, there are more than 65 different keywords.</p>
 </div>
 <div class="paragraph">
 <p>Custom keywords can be added as shown:</p>

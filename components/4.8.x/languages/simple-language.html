@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>Simple :: Red Hat Camel Reference</title>
+    <title>Simple :: Red Hat build of Apache Camel</title>
     <meta name="description" content="Evaluates a Camel simple expression.">
     <meta name="generator" content="Antora 3.1.4">
     <link rel="stylesheet" href="../../../_/css/site.css">
@@ -12,7 +12,7 @@
 <header class="header">
   <nav class="navbar">
     <div class="navbar-brand">
-      <a class="navbar-item" href="../../manual/index.html">Red Hat Apache Build of Apache Camel Manual</a>
+      <a class="navbar-item" href="/">Red Hat build of Apache Camel</a>
       <button class="navbar-burger" data-target="topbar-nav">
         <span></span>
         <span></span>
@@ -27,6 +27,7 @@
     <div class="panels">
 <div class="nav-panel-menu is-active" data-panel="menu">
   <nav class="nav-menu">
+    <button class="nav-menu-toggle" aria-label="Toggle expand/collapse all" style="display: none"></button>
     <h3 class="title"><a href="../index.html">Camel Components</a></h3>
 <ul class="nav-list">
   <li class="nav-item" data-depth="0">
@@ -36,7 +37,46 @@
     <a class="nav-link" href="../index.html">Components</a>
 <ul class="nav-list">
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="../activemq-component.html">ActiveMQ</a>
+    <a class="nav-link" href="../activemq-component.html">ActiveMQ 5.x</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../activemq6-component.html">ActiveMQ 6.x</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../ai-summary.html">AI</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../chatscript-component.html">ChatScript</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../djl-component.html">Deep Java Library</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../langchain4j-chat-component.html">LangChain4j Chat</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../langchain4j-embeddings-component.html">LangChain4j Embeddings</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../langchain4j-tokenizer-component.html">LangChain4j Tokenizer</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../langchain4j-tools-component.html">LangChain4j Tools</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../langchain4j-web-search-component.html">LangChain4j Web Search</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../milvus-component.html">Milvus</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../pinecone-component.html">Pinecone</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../qdrant-component.html">Qdrant</a>
+  </li>
+</ul>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="../amqp-component.html">AMQP</a>
@@ -65,6 +105,15 @@
 <ul class="nav-list">
   <li class="nav-item" data-depth="3">
     <a class="nav-link" href="../aws2-athena-component.html">AWS Athena</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../aws-bedrock-component.html">AWS Bedrock</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../aws-bedrock-agent-component.html">AWS Bedrock Agent</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../aws-bedrock-agent-runtime-component.html">AWS Bedrock Agent Runtime</a>
   </li>
   <li class="nav-item" data-depth="3">
     <a class="nav-link" href="../aws-cloudtrail-component.html">AWS Cloudtrail</a>
@@ -169,7 +218,7 @@
     <a class="nav-link" href="../azure-storage-blob-component.html">Azure Storage Blob Service</a>
   </li>
   <li class="nav-item" data-depth="3">
-    <a class="nav-link" href="../azure-storage-datalake-component.html">Azure Storage Datalake Service</a>
+    <a class="nav-link" href="../azure-storage-datalake-component.html">Azure Storage Data Lake Service</a>
   </li>
   <li class="nav-item" data-depth="3">
     <a class="nav-link" href="../azure-storage-queue-component.html">Azure Storage Queue Service</a>
@@ -202,9 +251,6 @@
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="../cql-component.html">Cassandra CQL</a>
-  </li>
-  <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="../chatscript-component.html">ChatScript</a>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="../chunk-component.html">Chunk</a>
@@ -277,9 +323,6 @@
     <a class="nav-link" href="../debezium-sqlserver-component.html">Debezium SQL Server Connector</a>
   </li>
 </ul>
-  </li>
-  <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="../djl-component.html">Deep Java Library</a>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="../dhis2-component.html">DHIS2</a>
@@ -395,6 +438,9 @@
   </li>
   <li class="nav-item" data-depth="3">
     <a class="nav-link" href="../google-pubsub-component.html">Google Pubsub</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../google-pubsub-lite-component.html">Google PubSub Lite</a>
   </li>
   <li class="nav-item" data-depth="3">
     <a class="nav-link" href="../google-secret-manager-component.html">Google Secret Manager</a>
@@ -687,7 +733,7 @@
     <a class="nav-link" href="../ldif-component.html">LDIF</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="../log-component.html">Log</a>
+    <a class="nav-link" href="../log-component.html">Log Data</a>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="../lucene-component.html">Lucene</a>
@@ -900,10 +946,16 @@
     <a class="nav-link" href="../smb-component.html">SMB</a>
   </li>
   <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../smooks-component.html">Smooks</a>
+  </li>
+  <li class="nav-item" data-depth="2">
     <a class="nav-link" href="../smpp-component.html">SMPP</a>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="../snmp-component.html">SNMP</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../solr-component.html">Solr</a>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="../splunk-component.html">Splunk</a>
@@ -966,6 +1018,18 @@
     <a class="nav-link" href="../stub-component.html">Stub</a>
   </li>
   <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../tahu-summary.html">Tahu</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../tahu-edge-component.html">Tahu Edge Node / Device</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../tahu-host-component.html">Tahu Host Application</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
     <a class="nav-link" href="../telegram-component.html">Telegram</a>
   </li>
   <li class="nav-item" data-depth="2">
@@ -1026,7 +1090,7 @@
     <a class="nav-link" href="../whatsapp-component.html">WhatsApp</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="../wordpress-component.html">Wordpress</a>
+    <a class="nav-link" href="../wordpress-component.html">WordPress</a>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="../workday-component.html">Workday</a>
@@ -1419,7 +1483,13 @@
     <a class="nav-link" href="../others/openapi-java.html">Openapi Java</a>
   </li>
   <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../others/openapi-validator.html">Openapi Validator</a>
+  </li>
+  <li class="nav-item" data-depth="2">
     <a class="nav-link" href="../others/opentelemetry.html">OpenTelemetry</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../others/platform-http-jolokia.html">Platform HTTP Jolokia</a>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="../others/platform-http-main.html">Platform Http Main</a>
@@ -1567,7 +1637,7 @@
     <a class="nav-link" href="../eips/event-message.html">Event Message</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="../eips/failover-eip.html">Failover</a>
+    <a class="nav-link" href="../eips/failoverLoadBalancer-eip.html">Failover Load Balancer</a>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="../eips/faultToleranceConfiguration-eip.html">Fault Tolerance Configuration</a>
@@ -1597,13 +1667,13 @@
     <a class="nav-link" href="../eips/loadBalance-eip.html">Load Balance</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="../eips/log-eip.html">Log</a>
+    <a class="nav-link" href="../eips/log-eip.html">Logger</a>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="../eips/loop-eip.html">Loop</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="../eips/marshal-eip.html">Marshal EIP</a>
+    <a class="nav-link" href="../eips/marshal-eip.html">Marshal</a>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="../eips/message.html">Message</a>
@@ -1660,6 +1730,9 @@
     <a class="nav-link" href="../eips/point-to-point-channel.html">Point to Point Channel</a>
   </li>
   <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../eips/poll-eip.html">Poll</a>
+  </li>
+  <li class="nav-item" data-depth="2">
     <a class="nav-link" href="../eips/pollEnrich-eip.html">Poll Enrich</a>
   </li>
   <li class="nav-item" data-depth="2">
@@ -1675,7 +1748,7 @@
     <a class="nav-link" href="../eips/publish-subscribe-channel.html">Publish Subscribe Channel</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="../eips/random-eip.html">Random</a>
+    <a class="nav-link" href="../eips/randomLoadBalancer-eip.html">Random Load Balancer</a>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="../eips/recipientList-eip.html">Recipient List</a>
@@ -1717,7 +1790,7 @@
     <a class="nav-link" href="../eips/rollback-eip.html">Rollback</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="../eips/roundRobin-eip.html">Round Robin</a>
+    <a class="nav-link" href="../eips/roundRobinLoadBalancer-eip.html">Round Robin Load Balancer</a>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="../eips/routingSlip-eip.html">Routing Slip</a>
@@ -1729,7 +1802,7 @@
     <a class="nav-link" href="../eips/sample-eip.html">Sample</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="../eips/scatter-gather.html">Scatter Gather</a>
+    <a class="nav-link" href="../eips/scatter-gather.html">Scatter-Gather</a>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="../eips/script-eip.html">Script</a>
@@ -1759,6 +1832,9 @@
     <a class="nav-link" href="../eips/setVariable-eip.html">Set Variable</a>
   </li>
   <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../eips/setVariables-eip.html">Set Variables</a>
+  </li>
+  <li class="nav-item" data-depth="2">
     <a class="nav-link" href="../eips/sort-eip.html">Sort</a>
   </li>
   <li class="nav-item" data-depth="2">
@@ -1768,7 +1844,7 @@
     <a class="nav-link" href="../eips/step-eip.html">Step</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="../eips/sticky-eip.html">Sticky</a>
+    <a class="nav-link" href="../eips/stickyLoadBalancer-eip.html">Sticky Load Balancer</a>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="../eips/stop-eip.html">Stop</a>
@@ -1789,7 +1865,7 @@
     <a class="nav-link" href="../eips/toD-eip.html">To D</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="../eips/topic-eip.html">Topic</a>
+    <a class="nav-link" href="../eips/topicLoadBalancer-eip.html">Topic Load Balancer</a>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="../eips/transactional-client.html">Transactional Client</a>
@@ -1798,13 +1874,13 @@
     <a class="nav-link" href="../eips/transform-eip.html">Transform</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="../eips/unmarshal-eip.html">Unmarshal EIP</a>
+    <a class="nav-link" href="../eips/unmarshal-eip.html">Unmarshal</a>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="../eips/validate-eip.html">Validate</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="../eips/weighted-eip.html">Weighted</a>
+    <a class="nav-link" href="../eips/weightedLoadBalancer-eip.html">Weighted Load Balancer</a>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="../eips/wireTap-eip.html">Wire Tap</a>
@@ -1823,7 +1899,7 @@
   </div>
   <ul class="components">
     <li class="component is-current">
-      <a class="title" href="../index.html">Camel Components</a>
+      <div class="title"><a href="../index.html">Camel Components</a></div>
       <ul class="versions">
         <li class="version is-current is-latest">
           <a href="../index.html">Next (Pre-release)</a>
@@ -1831,12 +1907,7 @@
       </ul>
     </li>
     <li class="component">
-      <a class="title" href="../../../manual/index.html">User manual</a>
-      <ul class="versions">
-        <li class="version is-latest">
-          <a href="../../../manual/index.html">default</a>
-        </li>
-      </ul>
+      <div class="title"><a href="../../../manual/index.html">User manual</a></div>
     </li>
   </ul>
 </div>
@@ -1854,6 +1925,7 @@
     <li><a href="simple-language.html">Simple</a></li>
   </ul>
 </nav>
+<div class="edit-this-page"><a href="file:///code/jboss/jboss-camel/docs/components/modules/languages/pages/simple-language.adoc">Edit this Page</a></div>
 </div>
   <div class="content">
 <aside class="toc sidebar" data-title="Contents" data-levels="2">
@@ -1874,11 +1946,11 @@ being a very small and simple language for evaluating
 or knowledge of other scripting languages such as Groovy.</p>
 </div>
 <div class="paragraph">
-<p>The simple language is designed with intend to cover almost all the common use cases
+<p>The simple language is designed with intent to cover almost all the common use cases
 when little need for scripting in your Camel routes.</p>
 </div>
 <div class="paragraph">
-<p>However, for much more complex use cases then a more powerful language is recommended such as:</p>
+<p>However, for much more complex use cases, then a more powerful language is recommended such as:</p>
 </div>
 <div class="ulist">
 <ul>
@@ -1938,7 +2010,7 @@ At runtime the simple language will then us its built-in OGNL support which requ
 </div>
 <div class="paragraph">
 <p>You can also use the alternative syntax which
-uses <code>$simple{ }</code> as placeholders. This can be used in situations to avoid clashes when using for example
+uses <code>$simple{ }</code> as placeholders. This can be used in situations to avoid clashes when using, for example,
 Spring property placeholder together with Camel.</p>
 </div>
 </td>
@@ -1971,7 +2043,7 @@ Spring property placeholder together with Camel.</p>
 <tbody>
 <tr>
 <td class="tableblock halign-left valign-top"><div class="content"><div id="_language_option_resultType" class="paragraph">
-<p><a href="#_language_option_resultType" class="anchor"></a><strong>resultType</strong></p>
+<p><a href="#_language_option_resultType" class="anchor"></a><strong>resultType</strong> (common)</p>
 </div></div></td>
 <td class="tableblock halign-left valign-top"></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>String</code></p></td>
@@ -1981,7 +2053,7 @@ Spring property placeholder together with Camel.</p>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><div class="content"><div id="_language_option_trim" class="paragraph">
-<p><a href="#_language_option_trim" class="anchor"></a><strong>trim</strong></p>
+<p><a href="#_language_option_trim" class="anchor"></a><strong>trim</strong> (advanced)</p>
 </div></div></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>true</code></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>Boolean</code></p></td>
@@ -2043,14 +2115,14 @@ OGNL expression.</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">messageTimestamp</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">String</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">long</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">the message timestamp (millis since epoc) that this message originates from.
-Some systems like JMS, Kafka, AWS have a timestamp on the event/message, that Camel received. This method returns
-the timestamp, if a timestamp exists.
-The message timestamp and exchange created are not the same. An exchange always have a created timestamp which is the
+Some systems like JMS, Kafka, AWS have a timestamp on the event/message that Camel received. This method returns
+the timestamp if a timestamp exists.
+The message timestamp and exchange created are different. An exchange always has a created timestamp which is the
 local timestamp when Camel created the exchange. The message timestamp is only available in some Camel components
 when the consumer is able to extract the timestamp from the source event.
-If the message has no timestamp then 0 is returned.</p></td>
+If the message has no timestamp, then 0 is returned.</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">body</p></td>
@@ -2078,12 +2150,12 @@ converted body can be null.</p></td>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">bodyOneLine</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">String</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Converts the body to a String and removes all line-breaks so the string is in one line.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Converts the body to a String and removes all line-breaks, so the string is in one line.</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">prettyBody</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">String</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Converts the body to a String, and attempts to pretty print if JSon or XML, otherwise the body is returned as the String value.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Converts the body to a String, and attempts to pretty print if JSon or XML; otherwise the body is returned as the String value.</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">originalBody</p></td>
@@ -2131,7 +2203,7 @@ classname and then invoke methods using a Camel OGNL expression.</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">header.foo[bar]</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Object</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">regard foo header as a map and perform lookup on the
-map with bar as key</p></td>
+map with bar as the key</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">header.foo.<strong>OGNL</strong></p></td>
@@ -2225,7 +2297,7 @@ converted message can be null.</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">exception</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Object</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">refer to the exception object on the exchange, is <strong>null</strong> if
-no exception set on exchange. Will fallback and grab caught exceptions
+no exception set on exchange. Will fall back and grab caught exceptions
 (<code>Exchange.EXCEPTION_CAUGHT</code>) if the Exchange has any.</p></td>
 </tr>
 <tr>
@@ -2237,28 +2309,28 @@ expression object</p></td>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">exception.message</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">String</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">refer to the exception.message on the exchange, is <strong>null</strong> if no
-exception set on exchange. Will fallback and grab caught exceptions
+<td class="tableblock halign-left valign-top"><p class="tableblock">refer to the <code>exception.message</code> on the exchange, is <strong>null</strong> if no
+exception set on exchange. Will fall back and grab caught exceptions
 (<code>Exchange.EXCEPTION_CAUGHT</code>) if the Exchange has any.</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">exception.stacktrace</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">String</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">refer to the exception.stracktrace on the exchange, is
-<strong>null</strong> if no exception set on exchange. Will fallback and grab caught
+<strong>null</strong> if no exception set on exchange. Will fall back and grab caught
 exceptions (<code>Exchange.EXCEPTION_CAUGHT</code>) if the Exchange has any.</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">date:_command_</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Date</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">evaluates to a Date object.
-Supported commands are: <strong>now</strong> for current timestamp,
-<strong>exchangeCreated</strong> for the timestamp when the current exchange was created,
-<strong>header.xxx</strong> to use the Long/Date object in the header with the key xxx.
-<strong>variable.xxx</strong> to use the Long/Date in the variable with the key xxx.
-<strong>exchangeProperty.xxx</strong> to use the Long/Date object in the exchange property with the key xxx.
-<strong>file</strong> for the last modified timestamp of the file (available with a File consumer).
-Command accepts offsets such as: <strong>now-24h</strong> or <strong>header.xxx+1h</strong> or even <strong>now+1h30m-100</strong>.</p></td>
+Supported commands are: <code>now</code> for current timestamp,
+<code>exchangeCreated</code> for the timestamp when the current exchange was created,
+<code>header.xxx</code> to use the Long/Date object in the header with the key xxx.
+<code>variable.xxx</code> to use the Long/Date in the variable with the key xxx.
+<code>exchangeProperty.xxx</code> to use the Long/Date object in the exchange property with the key xxx.
+<code>file</code> for the last modified timestamp of the file (available with a File consumer).
+Command accepts offsets such as: <code>now-24h</code> or <code>header.xxx+1h</code> or even <code>now+1h30m-100</code>.</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">date:_command:pattern_</p></td>
@@ -2274,23 +2346,28 @@ Command accepts offsets such as: <strong>now-24h</strong> or <strong>header.xxx+
 <td class="tableblock halign-left valign-top"><p class="tableblock">bean:_bean expression_</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Object</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Invoking a bean expression using the <a href="../bean-component.html" class="xref page">Bean</a> language.
-Specifying a method name you must use dot as separator. We also support
+Specifying a method name, you must use dot as the separator. We also support
 the ?method=methodname syntax that is used by the <a href="../bean-component.html" class="xref page">Bean</a>
-component. Camel will by default lookup a bean by the given name. However if you need to refer
-to a bean class (such as calling a static method) then you can prefix with type, such as <code>bean:type:fqnClassName</code>.</p></td>
+component. Camel will by default lookup a bean by the given name. However, if you need to refer
+to a bean class (such as calling a static method), then you can prefix with the type, such as <code>bean:type:fqnClassName</code>.</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">properties:key:default</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">String</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Lookup a property with the given key. If the key does
-not exists or has no value, then an optional default value can be
+not exist nor has a value, then an optional default value can be
 specified.</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">propertiesExist:key</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">String</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">boolean</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Checks whether a property placeholder with the given key exists or not.
 The result can be negated by prefixing the key with <code>!</code>.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">fromRouteId</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">String</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Returns the original route id where this exchange was created.</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">routeId</p></td>
@@ -2302,7 +2379,7 @@ Exchange is being routed.</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">routeGroup</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">String</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Returns the route group of the current route the
-Exchange is being routed. Not all routes has a group assigned, so this may be null.</p></td>
+Exchange is being routed. Not all routes have a group assigned, so this may be null.</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">stepId</p></td>
@@ -2314,13 +2391,13 @@ Exchange is being routed.</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">threadId</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">String</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Returns the id of the current thread. Can be used for
-logging purpose.</p></td>
+logging.</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">threadName</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">String</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Returns the name of the current thread. Can be used for
-logging purpose.</p></td>
+logging.</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">hostname</p></td>
@@ -2330,14 +2407,14 @@ logging purpose.</p></td>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">ref:xxx</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Object</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">To lookup a bean from the Registry with
+<td class="tableblock halign-left valign-top"><p class="tableblock">To look up a bean from the Registry with
 the given id.</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">type:name.field</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Object</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">To refer to a type or field by its FQN name. To refer to a
-field you can append .FIELD_NAME. For example, you can refer to the
+ field, you can append .FIELD_NAME. For example, you can refer to the
 constant field from Exchange as: <code>org.apache.camel.Exchange.FILE_NAME</code></p></td>
 </tr>
 <tr>
@@ -2366,6 +2443,39 @@ constant field from Exchange as: <code>org.apache.camel.Exchange.FILE_NAME</code
 <em>max</em> (excluded)</p></td>
 </tr>
 <tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">replace(from,to)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">String</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">replace all the string values in the message body.
+To make it easier to replace single and double quotes, then you can use XML escaped values <code>&amp;quot;</code> as double quote, <code>&amp;apos;</code> as single quote, and <code>&amp;empty;</code> as empty value.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">replace(from,to,exp)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">String</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">replace all the string values in the given expression.
+To make it easier to replace single and double quotes, then you can use XML escaped values <code>&amp;quot;</code> as double quote, <code>&amp;apos;</code> as single quote, and <code>&amp;empty;</code> as empty value.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">substring(num1)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">String</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">returns a substring of the message body.
+If the number is positive, then the returned string is clipped from the beginning.
+If the number is negative, then the returned string is clipped from the ending.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">substring(num1,num2)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">String</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">returns a substring of the message body.
+If the number is positive, then the returned string is clipped from the beginning.
+If the number is negative, then the returned string is clipped from the ending.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">substring(num1,num2,exp)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">String</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">returns a substring of the given expression.
+If the number is positive, then the returned string is clipped from the beginning.
+If the number is negative, then the returned string is clipped from the ending.</p></td>
+</tr>
+<tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">collate(group)</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">List</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">The collate function iterates the message body and groups
@@ -2392,7 +2502,7 @@ source (simple language) such as a header via the exp parameter. For example <co
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">messageHistory</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">String</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">The message history of the current exchange how it has
+<td class="tableblock halign-left valign-top"><p class="tableblock">The message history of the current exchange - how it has
 been routed. This is similar to the route stack-trace message history
 the error handler logs in case of an unhandled exception.</p></td>
 </tr>
@@ -2406,10 +2516,10 @@ log sensitive data from the message itself.</p></td>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">uuid(type)</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">String</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Returns an UUID using the Camel <code>UuidGenerator</code>.
+<td class="tableblock halign-left valign-top"><p class="tableblock">Returns a UUID using the Camel <code>UuidGenerator</code>.
 You can choose between <code>default</code>, <code>classic</code>, <code>short</code> and <code>simple</code> as the type.
-If no type is given the default is used. It is also possible to use a custom <code>UuidGenerator</code>
-and bind the bean to the <a href="../../../manual/registry.html" class="xref page">Registry</a> with an id. For example <code>${uuid(myGenerator}</code>
+If no type is given, the default is used. It is also possible to use a custom <code>UuidGenerator</code>
+and bind the bean to the <a href="../../../manual/registry.html" class="xref page">Registry</a> with an id. For example <code>${uuid(myGenerator)}</code>
 where the ID is <em>myGenerator</em>.</p></td>
 </tr>
 <tr>
@@ -2421,46 +2531,52 @@ The algorithm can be SHA-256 (default) or SHA3-256.</p></td>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">jsonpath(exp)</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Object</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">When working with JSon data, then this allows to use the JsonPath language
-for example to extract data from the message body (in JSon format). This requires having camel-jsonpath JAR on the classpath.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">When working with JSon data, then this allows using the JsonPath language,
+for example, to extract data from the message body (in JSon format). This requires having camel-jsonpath JAR on the classpath.</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">jsonpath(input,exp)</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Object</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">When working with JSon data, then this allows to use the JsonPath language
-for example to extract data from the message body (in JSon format). This requires having camel-jsonpath JAR on the classpath.
-For <em>input</em> you can choose <code>header:key</code>, <code>exchangeProperty:key</code> or <code>variable:key</code> to use as input for the JSon payload instead of the message body.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">When working with JSon data, then this allows using the JsonPath language,
+for example, to extract data from the message body (in JSon format). This requires having camel-jsonpath JAR on the classpath.
+For <em>input</em>, you can choose <code>header:key</code>, <code>exchangeProperty:key</code> or <code>variable:key</code> to use as input for the JSon payload instead of the message body.</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">jq(exp)</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Object</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">When working with JSon data, then this allows to use the JQ language
-for example to extract data from the message body (in JSon format). This requires having camel-jq JAR on the classpath.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">When working with JSon data, then this allows using the JQ language,
+for example, to extract data from the message body (in JSon format). This requires having camel-jq JAR on the classpath.</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">jq(input,exp)</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Object</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">When working with JSon data, then this allows to use the JQ language
-for example to extract data from the message body (in JSon format). This requires having camel-jq JAR on the classpath.
-For <em>input</em> you can choose <code>header:key</code>, <code>exchangeProperty:key</code> or <code>variable:key</code> to use as input for the JSon payload instead of the message body.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">When working with JSon data, then this allows using the JQ language,
+for example, to extract data from the message body (in JSon format). This requires having camel-jq JAR on the classpath.
+For <em>input</em>, you can choose <code>header:key</code>, <code>exchangeProperty:key</code> or <code>variable:key</code> to use as input for the JSon payload instead of the message body.</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">xpath(exp)</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Object</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">When working with XML data, then this allows to use the XPath language
-for example to extract data from the message body (in XML format). This requires having camel-xpath JAR on the classpath.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">When working with XML data, then this allows using the XPath language,
+for example, to extract data from the message body (in XML format). This requires having camel-xpath JAR on the classpath.</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">xpath(input,exp)</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Object</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">When working with XML data, then this allows to use the XPath language
-for example to extract data from the message body (in XML format). This requires having camel-xpath JAR on the classpath.
+<td class="tableblock halign-left valign-top"><p class="tableblock">When working with XML data, then this allows using the XPath language,
+for example, to extract data from the message body (in XML format). This requires having camel-xpath JAR on the classpath.
 For <em>input</em> you can choose <code>header:key</code>, <code>exchangeProperty:key</code> or <code>variable:key</code> to use as input for the JSon payload instead of the message body.</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">pretty(exp)</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">String</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Converts the inlined expression to a String, and attempts to pretty print if JSon or XML, otherwise the expression is returned as the String value.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">iif(predicate, trueExp, falseExp)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Object</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Evaluates the <code>predicate</code> expression and returns the value of <code>trueExp</code> if the predicate is
+true, otherwise the value of <code>falseExp</code> is returned. This function is similar to the ternary operator in Java.</p></td>
 </tr>
 </tbody>
 </table>
@@ -2505,8 +2621,8 @@ simple("${body.doSomething}")</code></pre>
 </div>
 </div>
 <div class="paragraph">
-<p>You can also use the null safe operator (<code>?.</code>) to avoid NPE if for
-example the body does NOT have an address</p>
+<p>You can also use the null safe operator (<code>?.</code>) to avoid NPE if, for
+example, the body does NOT have an address</p>
 </div>
 <div class="listingblock">
 <div class="content">
@@ -2522,12 +2638,12 @@ example the body does NOT have an address</p>
 </div>
 </div>
 <div class="paragraph">
-<p>To assume the body is <code>Map</code> based and lookup the value with <code>foo</code> as
+<p>To assume the body is <code>Map</code> based and look up the value with <code>foo</code> as
 key, and invoke the <code>getName</code> method on that value.</p>
 </div>
 <div class="paragraph">
 <p>If the key has space, then you <strong>must</strong> enclose the key with quotes, for
-example 'foo bar':</p>
+ example, 'foo bar':</p>
 </div>
 <div class="listingblock">
 <div class="content">
@@ -2554,7 +2670,7 @@ safe operator to avoid the NPE as shown:</p>
 </div>
 </div>
 <div class="paragraph">
-<p>You can also access <code>List</code> types, for example to get lines from the
+<p>You can also access <code>List</code> types, for example, to get lines from the
 address you can do:</p>
 </div>
 <div class="listingblock">
@@ -2583,7 +2699,7 @@ value from a list.</p>
 </div>
 </div>
 <div class="paragraph">
-<p>And the 3rd last is of course:</p>
+<p>And the third last is, of course:</p>
 </div>
 <div class="listingblock">
 <div class="content">
@@ -2599,7 +2715,7 @@ value from a list.</p>
 </div>
 </div>
 <div class="paragraph">
-<p>Camel supports the length field for Java arrays as well, eg:</p>
+<p>Camel supports the length field for Java arrays as well, e.g.:</p>
 </div>
 <div class="listingblock">
 <div class="content">
@@ -2610,7 +2726,7 @@ simple("There are ${body.length} lines")</code></pre>
 </div>
 </div>
 <div class="paragraph">
-<p>And yes you can combine this with the operator support as shown below:</p>
+<p>And yes, you can combine this with the operator support as shown below:</p>
 </div>
 <div class="listingblock">
 <div class="content">
@@ -2626,11 +2742,11 @@ simple("There are ${body.length} lines")</code></pre>
 <p>The parser is limited to only support a single operator.</p>
 </div>
 <div class="paragraph">
-<p>To enable it the left value must be enclosed in <code>${ }</code>. The syntax is:</p>
+<p>To enable it, the left value must be enclosed in <code>${ }</code>. The syntax is:</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-none hljs">${leftValue} OP rightValue</code></pre>
+<pre>${leftValue} OP rightValue</pre>
 </div>
 </div>
 <div class="paragraph">
@@ -2651,7 +2767,7 @@ There <strong>must</strong> be spaces around the operator.
 </div>
 <div class="paragraph">
 <p>Camel will automatically type convert the rightValue type to the
-leftValue type, so it is able to eg. convert a string into a numeric, so
+leftValue type, so it is able to e.g., convert a string into a numeric, so
 you can use <code>&gt;</code> comparison for numeric values.</p>
 </div>
 <div class="paragraph">
@@ -2703,19 +2819,19 @@ you can use <code>&gt;</code> comparison for numeric values.</p>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">contains</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">For testing if contains in a string based value</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">For testing if contains in a string-based value</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">!contains</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">For testing if not contains in a string based value</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">For testing if it does not contain in a string-based value</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">~~</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">For testing if contains by ignoring case sensitivity in a string based value</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">For testing if contains by ignoring case sensitivity in a string-based value</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">!~~</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">For testing if not contains by ignoring case sensitivity in a string based value</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">For testing if it does not contain by ignoring case sensitivity in a string-based value</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">regex</p></td>
@@ -2730,37 +2846,37 @@ String value</p></td>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">in</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">For matching if in a set of values, each element must be separated by
-comma. If you want to include an empty value, then it must be defined using double comma, eg ',,bronze,silver,gold', which
+comma. If you want to include an empty value, then it must be defined using double comma, e.g. <code>',, bronze,silver,gold'</code>, which
 is a set of four values with an empty value and then the three medals.</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">!in</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">For matching if not in a set of values, each element must be separated
-by comma. If you want to include an empty value, then it must be defined using double comma, eg ',,bronze,silver,gold', which
+by comma. If you want to include an empty value, then it must be defined using double comma, e.g. <code>',,bronze,silver,gold'</code>, which
 is a set of four values with an empty value and then the three medals.</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">is</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">For matching if the left hand side type is an instance of the value.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">For matching if the left-hand side type is an instance of the value.</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">!is</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">For matching if the left hand side type is not an instance of the value.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">For matching if the left-hand side type is not an instance of the value.</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">range</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">For matching if the left hand side is within a range of values defined
+<td class="tableblock halign-left valign-top"><p class="tableblock">For matching if the left-hand side is within a range of values defined
 as numbers: <code>from..to</code>..</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">!range</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">For matching if the left hand side is not within a range of values
+<td class="tableblock halign-left valign-top"><p class="tableblock">For matching if the left-hand side is not within a range of values
 defined as numbers: <code>from..to</code>. .</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">startsWith</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">For testing if the left hand side string starts
-with the right hand string.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">For testing if the left-hand side string starts
+with the right-hand string.</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">starts with</p></td>
@@ -2768,8 +2884,8 @@ with the right hand string.</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">endsWith</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">For testing if the left hand side string ends with
-the right hand string.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">For testing if the left-hand side string ends with
+the right-hand string.</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">ends with</p></td>
@@ -2794,12 +2910,12 @@ the right hand string.</p></td>
 <tbody>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">++</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">To increment a number by one. The left hand side must be a
+<td class="tableblock halign-left valign-top"><p class="tableblock">To increment a number by one. The left-hand side must be a
 function, otherwise parsed as literal.</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">&#8201;&#8212;&#8201;</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">To decrement a number by one. The left hand side must be a
+<td class="tableblock halign-left valign-top"><p class="tableblock">To decrement a number by one. The left-hand side must be a
 function, otherwise parsed as literal.</p></td>
 </tr>
 <tr>
@@ -2816,7 +2932,7 @@ function, otherwise parsed as literal.</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">\}</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">To use the } character as text. This may be needed when building a JSon structure with the simple language.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">To use the <code>}</code> character as text. This may be needed when building a JSon structure with the simple language.</p></td>
 </tr>
 </tbody>
 </table>
@@ -2869,7 +2985,7 @@ function, otherwise parsed as literal.</p></td>
 <pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">// exact equals match
 simple("${header.foo} == 'foo'")
 
-// ignore case when comparing, so if the header has value FOO this will match
+// ignore case when comparing, so if the header has value FOO, this will match
 simple("${header.foo} =~ 'foo'")
 
 // here Camel will type convert '100' into the type of header.bar and if it is an Integer '100' will also be converter to an Integer
@@ -2877,16 +2993,19 @@ simple("${header.bar} == '100'")
 
 simple("${header.bar} == 100")
 
-// 100 will be converter to the type of header.bar so we can do &gt; comparison
-simple("${header.bar} &gt; 100")</code></pre>
+// 100 will be converter to the type of header.bar, so we can do &gt; comparison
+simple("${header.bar} &gt; 100")
+
+// if the value of header.bar was 100, value returned will be 101. header.bar itself will not be changed.
+simple("${header.bar}++")</code></pre>
 </div>
 </div>
 <div class="sect2">
 <h3 id="_comparing_with_different_types"><a class="anchor" href="#_comparing_with_different_types"></a>Comparing with different types</h3>
 <div class="paragraph">
 <p>When you compare with different types such as String and int, then you
-have to take a bit care. Camel will use the type from the left hand side
-as 1st priority. And fallback to the right hand side type if both values
+have to take a bit of care. Camel will use the type from the left-hand side
+as first priority. And fallback to the right-hand side type if both values
 couldn&#8217;t be compared based on that type.<br>
  This means you can flip the values to enforce a specific type. Suppose
 the bar value above is a String. Then you can flip the equation:</p>
@@ -2897,12 +3016,12 @@ the bar value above is a String. Then you can flip the equation:</p>
 </div>
 </div>
 <div class="paragraph">
-<p>which then ensures the int type is used as 1st priority.</p>
+<p>which then ensures the int type is used as first priority.</p>
 </div>
 <div class="paragraph">
 <p>This may change in the future if the Camel team improves the binary
-comparison operations to prefer numeric types to String based. It&#8217;s
-most often the String type which causes problem when comparing with
+comparison operations to prefer numeric types to String-based. It&#8217;s
+most often the String type which causes problems when comparing with
 numbers.</p>
 </div>
 <div class="listingblock">
@@ -2926,7 +3045,7 @@ simple("${header.type} == ${bean:orderService?method=getOrderType}")</code></pre
 </div>
 </div>
 <div class="paragraph">
-<p>And an example with contains, testing if the title contains the word
+<p>And an example with <code>contains</code>, testing if the title contains the word
 Camel</p>
 </div>
 <div class="listingblock">
@@ -2935,7 +3054,7 @@ Camel</p>
 </div>
 </div>
 <div class="paragraph">
-<p>And an example with regex, testing if the number header is a 4 digit
+<p>And an example with regex, testing if the number header is a 4-digit
 value:</p>
 </div>
 <div class="listingblock">
@@ -2946,8 +3065,8 @@ value:</p>
 <div class="paragraph">
 <p>And finally an example if the header equals any of the values in the
 list. Each element must be separated by comma, and no space around.<br>
- This also works for numbers etc, as Camel will convert each element
-into the type of the left hand side.</p>
+ This also works for numbers etc., as Camel will convert each element
+into the type of the left-hand side.</p>
 </div>
 <div class="listingblock">
 <div class="content">
@@ -2955,7 +3074,7 @@ into the type of the left hand side.</p>
 </div>
 </div>
 <div class="paragraph">
-<p>And for all the last 3 we also support the negate test using not:</p>
+<p>And for all the last 3, we also support the negate test using not:</p>
 </div>
 <div class="listingblock">
 <div class="content">
@@ -2963,7 +3082,7 @@ into the type of the left hand side.</p>
 </div>
 </div>
 <div class="paragraph">
-<p>And you can test if the type is a certain instance, eg for instance a
+<p>And you can test if the type is a certain instance, e.g., for instance a
 String</p>
 </div>
 <div class="listingblock">
@@ -2972,7 +3091,7 @@ String</p>
 </div>
 </div>
 <div class="paragraph">
-<p>We have added a shorthand for all <code>java.lang</code> types so you can write it
+<p>We have added a shorthand for all <code>java.lang</code> types, so you can write it
 as:</p>
 </div>
 <div class="listingblock">
@@ -2982,7 +3101,7 @@ as:</p>
 </div>
 <div class="paragraph">
 <p>Ranges are also supported. The range interval requires numbers and both
-from and end are inclusive. For instance to test whether a value is
+from and end are inclusive. For instance, to test whether a value is
 between 100 and 199:</p>
 </div>
 <div class="listingblock">
@@ -3001,9 +3120,9 @@ syntax as Groovy.</p>
 </div>
 <div class="paragraph">
 <p>As the XML DSL does not have all the power as the Java DSL with all
-its various builder methods, you have to resort to use some other
+its various builder methods, you have to resort to using some other
 languages for testing with simple operators. Now you can do this with the simple
-language. In the sample below we want to test if the header is a widget
+language. In the sample below, we want to test it if the header is a widget
 order:</p>
 </div>
 <div class="listingblock">
@@ -3046,7 +3165,7 @@ operator.</p>
 <h2 id="_examples"><a class="anchor" href="#_examples"></a>Examples</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>In the XML DSL sample below we filter based on a header value:</p>
+<p>In the XML DSL sample below, we filter based on a header value:</p>
 </div>
 <div class="listingblock">
 <div class="content">
@@ -3062,7 +3181,7 @@ operator.</p>
 <p>The Simple language can be used for the predicate test above in the
 Message Filter pattern, where we test if the
 in message has a <code>foo</code> header (a header with the key <code>foo</code> exists). If
-the expression evaluates to <strong>true</strong> then the message is routed to the
+the expression evaluates to <code><strong>true</strong></code>, then the message is routed to the
 <code>mock:fooOrders</code> endpoint, otherwise the message is dropped.</p>
 </div>
 <div class="paragraph">
@@ -3087,7 +3206,7 @@ as:</p>
 </div>
 </div>
 <div class="paragraph">
-<p>Notice that we must use ${ } placeholders in the expression now to
+<p>Notice that we must use <code>${ }</code> placeholders in the expression now to
 allow Camel to parse it correctly.</p>
 </div>
 <div class="paragraph">
@@ -3101,7 +3220,7 @@ allow Camel to parse it correctly.</p>
 </div>
 </div>
 <div class="paragraph">
-<p>And in the sample below we invoke the bean language to invoke a method
+<p>And in the sample below, we invoke the bean language to invoke a method
 on a bean to be included in the returned string:</p>
 </div>
 <div class="listingblock">
@@ -3113,7 +3232,7 @@ on a bean to be included in the returned string:</p>
 </div>
 <div class="paragraph">
 <p>Where <code>orderIdGenerator</code> is the id of the bean registered in the
-Registry. If using Spring then it is the Spring bean
+Registry. If using Spring, then it is the Spring bean
 id.</p>
 </div>
 <div class="paragraph">
@@ -3141,7 +3260,7 @@ bean we must prepend <code>.method name</code> such as below where we invoke the
 </div>
 <div class="paragraph">
 <p>You can also convert the body to a given
-type, for example to ensure that it is a String you can do:</p>
+type, for example, to ensure that it is a String you can do:</p>
 </div>
 <div class="listingblock">
 <div class="content">
@@ -3157,7 +3276,7 @@ type, for example to ensure that it is a String you can do:</p>
 name, e.g. <code>org.w3c.dom.Document</code>.</p>
 </div>
 <div class="paragraph">
-<p>It is also possible to lookup a value from a header <code>Map</code>:</p>
+<p>It is also possible to look up a value from a header <code>Map</code>:</p>
 </div>
 <div class="listingblock">
 <div class="content">
@@ -3167,9 +3286,9 @@ name, e.g. <code>org.w3c.dom.Document</code>.</p>
 </div>
 </div>
 <div class="paragraph">
-<p>In the code above we lookup the header with name <code>type</code> and regard it as
-a <code>java.util.Map</code> and we then lookup with the key <code>gold</code> and return the
-value. If the header is not convertible to Map an exception is thrown. If the
+<p>In the code above we look up the header with name <code>type</code> and regard it as
+a <code>java.util.Map</code> and we then look up with the key <code>gold</code> and return the
+value. If the header is not convertible to Map, an exception is thrown. If the
 header with name <code>type</code> does not exist <code>null</code> is returned.</p>
 </div>
 <div class="paragraph">
@@ -3182,10 +3301,83 @@ header with name <code>type</code> does not exist <code>null</code> is returned.
 &lt;/setHeader&gt;</code></pre>
 </div>
 </div>
+<div class="sect2">
+<h3 id="_substring"><a class="anchor" href="#_substring"></a>Substring</h3>
+<div class="paragraph">
+<p>You can use the <code>substring</code> function to more easily clip the message body.
+For example if the message body contains the following 10 letters <code>ABCDEFGHIJ</code> then:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;setBody&gt;
+  &lt;simple&gt;${substring(3)}&lt;/simple&gt;
+&lt;/setBody&gt;</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Then the message body after the substring will be <code>DEFGHIJ</code>.
+If you want to clip from the end instead, then use negative values such as <code>substring(-3)</code>.</p>
+</div>
+<div class="paragraph">
+<p>You can also clip from both ends at the same time such as <code>substring(1,-1)</code> that will clip the first and last character in the String.</p>
+</div>
+<div class="paragraph">
+<p>If the number is higher than the length of the message body, then an empty string is returned, for example <code>substring(99)</code>.</p>
+</div>
+<div class="paragraph">
+<p>Instead of the message body then a simple expression can be nested as input, for example, using a variable, as shown below:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;setBody&gt;
+  &lt;simple&gt;${substring(1,-1,${variable.foo})}&lt;/simple&gt;
+&lt;/setBody&gt;</code></pre>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_replacing_double_and_single_quotes"><a class="anchor" href="#_replacing_double_and_single_quotes"></a>Replacing double and single quotes</h3>
+<div class="paragraph">
+<p>You can use the <code>replace</code> function to more easily replace all single or double quotes in the message body,
+using the XML escape syntax. This avoids to fiddle with enclosing a double quote or single quotes with outer quotes,
+that can get confusing to be correct as you may need to escape the quotes as well. So instead you can use the XML escape
+syntax where double quote is <code>&amp;quot;</code> and single quote is <code>&amp;apos;</code> (yeah that is the name).</p>
+</div>
+<div class="paragraph">
+<p>For example, to replace all double quotes with single quotes:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">from("direct:order")
+  .transform().simple("${replace(&amp;quot; , &amp;apos;)}")
+  .to("mock:reply");</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>And to replace all single quotes with double quotes:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;setBody&gt;
+  &lt;simple&gt;${replace(&amp;apos; , &amp;quot;)}&lt;/simple&gt;
+&lt;/setBody&gt;</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Or to remove all double quotes:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;setBody&gt;
+  &lt;simple&gt;${replace(&amp;quot; , &amp;empty;)}&lt;/simple&gt;
+&lt;/setBody&gt;</code></pre>
+</div>
+</div>
+</div>
 </div>
 </div>
 <div class="sect1">
-<h2 id="_setting_result_type"><a class="anchor" href="#_setting_result_type"></a>Setting result type</h2>
+<h2 id="_setting_the_result_type"><a class="anchor" href="#_setting_the_result_type"></a>Setting the result type</h2>
 <div class="sectionbody">
 <div class="paragraph">
 <p>You can now provide a result type to the <a href="#">Simple</a>
@@ -3194,7 +3386,7 @@ to the desired type. This is most usable to define types such as
 booleans, integers, etc.</p>
 </div>
 <div class="paragraph">
-<p>For example to set a header as a boolean type you can do:</p>
+<p>For example, to set a header as a boolean type, you can do:</p>
 </div>
 <div class="listingblock">
 <div class="content">
@@ -3255,12 +3447,15 @@ whitespace characters.</p>
 <p>You can externalize the script and have Camel load it from a resource
 such as <code>"classpath:"</code>, <code>"file:"</code>, or <code>"http:"</code>.
 This is done using the following syntax: <code>"resource:scheme:location"</code>,
-e.g. to refer to a file on the classpath you can do:</p>
+e.g., to refer to a file on the classpath you can do:</p>
 </div>
 <div class="listingblock">
 <div class="content">
 <pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">.setHeader("myHeader").simple("resource:classpath:mysimple.txt")</code></pre>
 </div>
+</div>
+<div class="paragraph">
+<p>Unresolved include directive in modules/languages/pages/simple-language.adoc - include::spring-boot:partial$starter.adoc[]</p>
 </div>
 </div>
 </div>

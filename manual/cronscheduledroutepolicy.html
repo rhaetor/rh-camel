@@ -3,15 +3,15 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>CronScheduledRoutePolicy :: Red Hat Apache Build of Apache Camel Manual</title>
-    <meta name="generator" content="Antora 3.0.3">
+    <title>CronScheduledRoutePolicy :: Red Hat build of Apache Camel</title>
+    <meta name="generator" content="Antora 3.1.4">
     <link rel="stylesheet" href="../_/css/site.css">
   </head>
   <body class="article">
 <header class="header">
   <nav class="navbar">
     <div class="navbar-brand">
-      <a class="navbar-item" href="../../manual/index.html">Red Hat Apache Build of Apache Camel Manual</a>
+      <a class="navbar-item" href="/">Red Hat build of Apache Camel</a>
       <button class="navbar-burger" data-target="topbar-nav">
         <span></span>
         <span></span>
@@ -26,6 +26,7 @@
     <div class="panels">
 <div class="nav-panel-menu is-active" data-panel="menu">
   <nav class="nav-menu">
+    <button class="nav-menu-toggle" aria-label="Toggle expand/collapse all" style="display: none"></button>
     <h3 class="title"><a href="index.html">User manual</a></h3>
 <ul class="nav-list">
   <li class="nav-item" data-depth="0">
@@ -56,7 +57,16 @@
     <a class="nav-link" href="camel-console.html">Camel Developer Console</a>
   </li>
   <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
     <a class="nav-link" href="camel-jbang.html">Camel JBang</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="camel-jbang-kubernetes.html">Camel Kubernetes plugin</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="camel-jbang-k.html">Camel K plugin</a>
+  </li>
+</ul>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="camel-maven-plugin.html">Camel Maven Plugin</a>
@@ -95,6 +105,9 @@
     <a class="nav-link" href="using-propertyplaceholder.html">How to use Camel property placeholders</a>
   </li>
   <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="variables.html">How to use Variables</a>
+  </li>
+  <li class="nav-item" data-depth="2">
     <button class="nav-item-toggle"></button>
     <a class="nav-link" href="testing.html">Testing</a>
 <ul class="nav-list">
@@ -110,7 +123,13 @@
 </ul>
   </li>
   <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
     <a class="nav-link" href="rest-dsl.html">Working with REST and Rest DSL</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="rest-dsl-openapi.html">Rest DSL contract first</a>
+  </li>
+</ul>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="writing-components.html">Writing Components</a>
@@ -477,9 +496,6 @@
     <a class="nav-link" href="faq/how-should-i-invoke-my-pojos-or-spring-services.html">How should I invoke my POJOs or Spring Services?</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="faq/how-to-avoid-importing-bunch-of-cxf-packages-when-start-up-the-camel-cxf-endpoint-from-osgi-platform-.html">How to avoid importing bunch of cxf packages when start up the camel-cxf endpoint from OSGi platform?</a>
-  </li>
-  <li class="nav-item" data-depth="2">
     <a class="nav-link" href="faq/how-to-avoid-sending-some-or-all-message-headers.html">How to avoid sending some or all message headers?</a>
   </li>
   <li class="nav-item" data-depth="2">
@@ -598,11 +614,11 @@
 <div class="nav-panel-explore" data-panel="explore">
   <div class="context">
     <span class="title">User manual</span>
-    <span class="version">default</span>
+    <span class="version"></span>
   </div>
   <ul class="components">
     <li class="component">
-      <a class="title" href="../components/next/index.html">Camel Components</a>
+      <div class="title"><a href="../components/next/index.html">Camel Components</a></div>
       <ul class="versions">
         <li class="version is-latest">
           <a href="../components/next/index.html">Next (Pre-release)</a>
@@ -610,12 +626,7 @@
       </ul>
     </li>
     <li class="component is-current">
-      <a class="title" href="index.html">User manual</a>
-      <ul class="versions">
-        <li class="version is-current is-latest">
-          <a href="index.html">default</a>
-        </li>
-      </ul>
+      <div class="title"><a href="index.html">User manual</a></div>
     </li>
   </ul>
 </div>
@@ -632,6 +643,7 @@
     <li><a href="cronscheduledroutepolicy.html">CronScheduledRoutePolicy</a></li>
   </ul>
 </nav>
+<div class="edit-this-page"><a href="file:///code/jboss/jboss-camel/docs/user-manual/modules/ROOT/pages/cronscheduledroutepolicy.adoc">Edit this Page</a></div>
 </div>
   <div class="content">
 <aside class="toc sidebar" data-title="Contents" data-levels="2">
@@ -644,7 +656,7 @@
 <div class="paragraph">
 <p><code>CronScheduledRoutePolicy</code> is a
 <a href="scheduledroutepolicy.html" class="xref page">ScheduledRoutePolicy</a> that facilitates
-route activation, de-activation, suspension and resumption of routes
+route activation, deactivation, suspension and resumption of routes
 based on a <a href="../components/next/quartz-component.html" class="xref page">Quartz</a> cron trigger.</p>
 </div>
 <div class="admonitionblock tip">
@@ -670,12 +682,12 @@ common and consistent way.</p>
 <h2 id="_using_cron_scheduled_route_policy"><a class="anchor" href="#_using_cron_scheduled_route_policy"></a>Using cron scheduled route policy</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>In order to use a <code>CronScheduledRoutePolicy</code> it is
+<p>To use a <code>CronScheduledRoutePolicy</code> it is
 necessary to instantiate an object of the type
 <code>org.apache.camel.routepolicy.quartz.CronScheduledRoutePolicy</code>.</p>
 </div>
 <div class="paragraph">
-<p>In order to perform a route operation at a given time the following
+<p>To perform a route operation at a given time, the following
 information must be provided.</p>
 </div>
 <div class="sect2">
@@ -700,7 +712,7 @@ information must be provided.</p>
 <td class="tableblock halign-left valign-top"><p class="tableblock">routeStartTime</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">String</p></td>
 <td class="tableblock halign-left valign-top"></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">the initial scheduled Date and time as a
+<td class="tableblock halign-left valign-top"><p class="tableblock">the initial scheduled date and time as a
 Cron Expression for route start</p></td>
 </tr>
 </tbody>
@@ -728,7 +740,7 @@ Cron Expression for route start</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">routeStopTime</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">String</p></td>
 <td class="tableblock halign-left valign-top"></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">the initial scheduled Date and time as a Cron
+<td class="tableblock halign-left valign-top"><p class="tableblock">the initial scheduled date and time as a Cron
 Expression for route stop</p></td>
 </tr>
 <tr>
@@ -743,7 +755,7 @@ initiating graceful route stop</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">long</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">TimeUnit.MILLISECONDS</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">the time unit for the
-grace period expressed as java.util.concurrent.TimeUnit</p></td>
+grace period expressed as <code>java.util.concurrent.TimeUnit</code></p></td>
 </tr>
 </tbody>
 </table>
@@ -770,7 +782,7 @@ grace period expressed as java.util.concurrent.TimeUnit</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">routeSuspendTime</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">String</p></td>
 <td class="tableblock halign-left valign-top"></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">the initial scheduled Date and time as a
+<td class="tableblock halign-left valign-top"><p class="tableblock">the initial scheduled date and time as a
 Cron Expression for route suspension</p></td>
 </tr>
 </tbody>
@@ -798,7 +810,7 @@ Cron Expression for route suspension</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">routeResumeTime</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">String</p></td>
 <td class="tableblock halign-left valign-top"></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">the initial scheduled Date and time as a
+<td class="tableblock halign-left valign-top"><p class="tableblock">the initial scheduled date and time as a
 Cron Expression for route resumption</p></td>
 </tr>
 </tbody>
@@ -851,7 +863,7 @@ from("direct:start")
 </td>
 <td class="content">
 Notice how the route to be scheduled <strong>MUST</strong> be configured to not
-<a href="configuring-route-startup-ordering-and-autostartup.html" class="xref page">autostartup</a>, to let
+<a href="configuring-route-startup-ordering-and-autostartup.html" class="xref page">auto-startup</a>, to let
 the route scheduler take control of starting and stopping the route accordingly.
 </td>
 </tr>

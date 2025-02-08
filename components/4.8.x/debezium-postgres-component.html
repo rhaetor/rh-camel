@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>Debezium PostgresSQL Connector :: Red Hat Camel Reference</title>
+    <title>Debezium PostgresSQL Connector :: Red Hat build of Apache Camel</title>
     <meta name="description" content="Capture changes from a PostgresSQL database.">
     <meta name="generator" content="Antora 3.1.4">
     <link rel="stylesheet" href="../../_/css/site.css">
@@ -12,7 +12,7 @@
 <header class="header">
   <nav class="navbar">
     <div class="navbar-brand">
-      <a class="navbar-item" href="../../manual/index.html">Red Hat Apache Build of Apache Camel Manual</a>
+      <a class="navbar-item" href="/">Red Hat build of Apache Camel</a>
       <button class="navbar-burger" data-target="topbar-nav">
         <span></span>
         <span></span>
@@ -27,6 +27,7 @@
     <div class="panels">
 <div class="nav-panel-menu is-active" data-panel="menu">
   <nav class="nav-menu">
+    <button class="nav-menu-toggle" aria-label="Toggle expand/collapse all" style="display: none"></button>
     <h3 class="title"><a href="index.html">Camel Components</a></h3>
 <ul class="nav-list">
   <li class="nav-item" data-depth="0">
@@ -36,7 +37,46 @@
     <a class="nav-link" href="index.html">Components</a>
 <ul class="nav-list">
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="activemq-component.html">ActiveMQ</a>
+    <a class="nav-link" href="activemq-component.html">ActiveMQ 5.x</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="activemq6-component.html">ActiveMQ 6.x</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="ai-summary.html">AI</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="chatscript-component.html">ChatScript</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="djl-component.html">Deep Java Library</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="langchain4j-chat-component.html">LangChain4j Chat</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="langchain4j-embeddings-component.html">LangChain4j Embeddings</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="langchain4j-tokenizer-component.html">LangChain4j Tokenizer</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="langchain4j-tools-component.html">LangChain4j Tools</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="langchain4j-web-search-component.html">LangChain4j Web Search</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="milvus-component.html">Milvus</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="pinecone-component.html">Pinecone</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="qdrant-component.html">Qdrant</a>
+  </li>
+</ul>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="amqp-component.html">AMQP</a>
@@ -65,6 +105,15 @@
 <ul class="nav-list">
   <li class="nav-item" data-depth="3">
     <a class="nav-link" href="aws2-athena-component.html">AWS Athena</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="aws-bedrock-component.html">AWS Bedrock</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="aws-bedrock-agent-component.html">AWS Bedrock Agent</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="aws-bedrock-agent-runtime-component.html">AWS Bedrock Agent Runtime</a>
   </li>
   <li class="nav-item" data-depth="3">
     <a class="nav-link" href="aws-cloudtrail-component.html">AWS Cloudtrail</a>
@@ -169,7 +218,7 @@
     <a class="nav-link" href="azure-storage-blob-component.html">Azure Storage Blob Service</a>
   </li>
   <li class="nav-item" data-depth="3">
-    <a class="nav-link" href="azure-storage-datalake-component.html">Azure Storage Datalake Service</a>
+    <a class="nav-link" href="azure-storage-datalake-component.html">Azure Storage Data Lake Service</a>
   </li>
   <li class="nav-item" data-depth="3">
     <a class="nav-link" href="azure-storage-queue-component.html">Azure Storage Queue Service</a>
@@ -202,9 +251,6 @@
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="cql-component.html">Cassandra CQL</a>
-  </li>
-  <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="chatscript-component.html">ChatScript</a>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="chunk-component.html">Chunk</a>
@@ -277,9 +323,6 @@
     <a class="nav-link" href="debezium-sqlserver-component.html">Debezium SQL Server Connector</a>
   </li>
 </ul>
-  </li>
-  <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="djl-component.html">Deep Java Library</a>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="dhis2-component.html">DHIS2</a>
@@ -395,6 +438,9 @@
   </li>
   <li class="nav-item" data-depth="3">
     <a class="nav-link" href="google-pubsub-component.html">Google Pubsub</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="google-pubsub-lite-component.html">Google PubSub Lite</a>
   </li>
   <li class="nav-item" data-depth="3">
     <a class="nav-link" href="google-secret-manager-component.html">Google Secret Manager</a>
@@ -687,7 +733,7 @@
     <a class="nav-link" href="ldif-component.html">LDIF</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="log-component.html">Log</a>
+    <a class="nav-link" href="log-component.html">Log Data</a>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="lucene-component.html">Lucene</a>
@@ -900,16 +946,49 @@
     <a class="nav-link" href="smb-component.html">SMB</a>
   </li>
   <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="smooks-component.html">Smooks</a>
+  </li>
+  <li class="nav-item" data-depth="2">
     <a class="nav-link" href="smpp-component.html">SMPP</a>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="snmp-component.html">SNMP</a>
   </li>
   <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="solr-component.html">Solr</a>
+  </li>
+  <li class="nav-item" data-depth="2">
     <a class="nav-link" href="splunk-component.html">Splunk</a>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="splunk-hec-component.html">Splunk HEC</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="spring-summary.html">Spring</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="spring-batch-component.html">Spring Batch</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="spring-event-component.html">Spring Event</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="spring-jdbc-component.html">Spring JDBC</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="spring-ldap-component.html">Spring LDAP</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="spring-rabbitmq-component.html">Spring RabbitMQ</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="spring-redis-component.html">Spring Redis</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="spring-ws-component.html">Spring WebService</a>
+  </li>
+</ul>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="sql-component.html">SQL</a>
@@ -937,6 +1016,18 @@
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="stub-component.html">Stub</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="tahu-summary.html">Tahu</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="tahu-edge-component.html">Tahu Edge Node / Device</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="tahu-host-component.html">Tahu Host Application</a>
+  </li>
+</ul>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="telegram-component.html">Telegram</a>
@@ -999,7 +1090,7 @@
     <a class="nav-link" href="whatsapp-component.html">WhatsApp</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="wordpress-component.html">Wordpress</a>
+    <a class="nav-link" href="wordpress-component.html">WordPress</a>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="workday-component.html">Workday</a>
@@ -1392,7 +1483,13 @@
     <a class="nav-link" href="others/openapi-java.html">Openapi Java</a>
   </li>
   <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="others/openapi-validator.html">Openapi Validator</a>
+  </li>
+  <li class="nav-item" data-depth="2">
     <a class="nav-link" href="others/opentelemetry.html">OpenTelemetry</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="others/platform-http-jolokia.html">Platform HTTP Jolokia</a>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="others/platform-http-main.html">Platform Http Main</a>
@@ -1540,7 +1637,7 @@
     <a class="nav-link" href="eips/event-message.html">Event Message</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="eips/failover-eip.html">Failover</a>
+    <a class="nav-link" href="eips/failoverLoadBalancer-eip.html">Failover Load Balancer</a>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="eips/faultToleranceConfiguration-eip.html">Fault Tolerance Configuration</a>
@@ -1570,13 +1667,13 @@
     <a class="nav-link" href="eips/loadBalance-eip.html">Load Balance</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="eips/log-eip.html">Log</a>
+    <a class="nav-link" href="eips/log-eip.html">Logger</a>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="eips/loop-eip.html">Loop</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="eips/marshal-eip.html">Marshal EIP</a>
+    <a class="nav-link" href="eips/marshal-eip.html">Marshal</a>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="eips/message.html">Message</a>
@@ -1633,6 +1730,9 @@
     <a class="nav-link" href="eips/point-to-point-channel.html">Point to Point Channel</a>
   </li>
   <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="eips/poll-eip.html">Poll</a>
+  </li>
+  <li class="nav-item" data-depth="2">
     <a class="nav-link" href="eips/pollEnrich-eip.html">Poll Enrich</a>
   </li>
   <li class="nav-item" data-depth="2">
@@ -1648,7 +1748,7 @@
     <a class="nav-link" href="eips/publish-subscribe-channel.html">Publish Subscribe Channel</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="eips/random-eip.html">Random</a>
+    <a class="nav-link" href="eips/randomLoadBalancer-eip.html">Random Load Balancer</a>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="eips/recipientList-eip.html">Recipient List</a>
@@ -1690,7 +1790,7 @@
     <a class="nav-link" href="eips/rollback-eip.html">Rollback</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="eips/roundRobin-eip.html">Round Robin</a>
+    <a class="nav-link" href="eips/roundRobinLoadBalancer-eip.html">Round Robin Load Balancer</a>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="eips/routingSlip-eip.html">Routing Slip</a>
@@ -1702,7 +1802,7 @@
     <a class="nav-link" href="eips/sample-eip.html">Sample</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="eips/scatter-gather.html">Scatter Gather</a>
+    <a class="nav-link" href="eips/scatter-gather.html">Scatter-Gather</a>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="eips/script-eip.html">Script</a>
@@ -1732,6 +1832,9 @@
     <a class="nav-link" href="eips/setVariable-eip.html">Set Variable</a>
   </li>
   <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="eips/setVariables-eip.html">Set Variables</a>
+  </li>
+  <li class="nav-item" data-depth="2">
     <a class="nav-link" href="eips/sort-eip.html">Sort</a>
   </li>
   <li class="nav-item" data-depth="2">
@@ -1741,7 +1844,7 @@
     <a class="nav-link" href="eips/step-eip.html">Step</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="eips/sticky-eip.html">Sticky</a>
+    <a class="nav-link" href="eips/stickyLoadBalancer-eip.html">Sticky Load Balancer</a>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="eips/stop-eip.html">Stop</a>
@@ -1762,7 +1865,7 @@
     <a class="nav-link" href="eips/toD-eip.html">To D</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="eips/topic-eip.html">Topic</a>
+    <a class="nav-link" href="eips/topicLoadBalancer-eip.html">Topic Load Balancer</a>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="eips/transactional-client.html">Transactional Client</a>
@@ -1771,13 +1874,13 @@
     <a class="nav-link" href="eips/transform-eip.html">Transform</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="eips/unmarshal-eip.html">Unmarshal EIP</a>
+    <a class="nav-link" href="eips/unmarshal-eip.html">Unmarshal</a>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="eips/validate-eip.html">Validate</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="eips/weighted-eip.html">Weighted</a>
+    <a class="nav-link" href="eips/weightedLoadBalancer-eip.html">Weighted Load Balancer</a>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="eips/wireTap-eip.html">Wire Tap</a>
@@ -1796,7 +1899,7 @@
   </div>
   <ul class="components">
     <li class="component is-current">
-      <a class="title" href="index.html">Camel Components</a>
+      <div class="title"><a href="index.html">Camel Components</a></div>
       <ul class="versions">
         <li class="version is-current is-latest">
           <a href="index.html">Next (Pre-release)</a>
@@ -1804,12 +1907,7 @@
       </ul>
     </li>
     <li class="component">
-      <a class="title" href="../../manual/index.html">User manual</a>
-      <ul class="versions">
-        <li class="version is-latest">
-          <a href="../../manual/index.html">default</a>
-        </li>
-      </ul>
+      <div class="title"><a href="../../manual/index.html">User manual</a></div>
     </li>
   </ul>
 </div>
@@ -1828,6 +1926,7 @@
     <li><a href="debezium-postgres-component.html">Debezium PostgresSQL Connector</a></li>
   </ul>
 </nav>
+<div class="edit-this-page"><a href="file:///code/jboss/jboss-camel/docs/components/modules/ROOT/pages/debezium-postgres-component.adoc">Edit this Page</a></div>
 </div>
   <div class="content">
 <aside class="toc sidebar" data-title="Contents" data-levels="2">
@@ -1846,14 +1945,30 @@
 <div class="paragraph">
 <p>The Debezium PostgresSQL component is wrapper around <a href="https://debezium.io/">Debezium</a> using <a href="https://debezium.io/documentation/reference/1.9/development/engine.html">Debezium Engine</a>, which enables Change Data Capture from PostgresSQL database using Debezium without the need for Kafka or Kafka Connect.</p>
 </div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
 <div class="paragraph">
-<p><strong>Note on handling failures:</strong> Per <a href="https://debezium.io/documentation/reference/1.9/development/engine.html#_handling_failures">Debezium Embedded Engine</a> documentation, the engines is actively recording source offsets and periodically flushes these offsets to a persistent storage, so when the application is restarted or crashed, the engine will resume from the last recorded offset.
-Thus, at normal operation, your downstream routes will receive each event exactly once, however in case of an application crash (not having a graceful shutdown), the application will resume from the last recorded offset,
-which may result in receiving duplicate events immediately after the restart. Therefore, your downstream routes should be tolerant enough of such case and deduplicate events if needed.</p>
+<p><strong>Note on handling failures:</strong>
+per <a href="https://debezium.io/documentation/reference/1.9/development/engine.html#_handling_failures">Debezium Embedded Engine</a> documentation,
+the engines are actively recording source offsets and periodically flush these offsets to a persistent storage.
+Therefore, when the application is restarted or crashed, the engine will resume from the last recorded offset.
+This means that, at normal operation, your downstream routes will receive each event exactly once.
+However, in case of an application crash (not having a graceful shutdown),
+the application will resume from the last recorded offset,
+which may result in receiving duplicate events immediately after the restart.
+Therefore, your downstream routes should be tolerant enough of such a case and deduplicate events if needed.</p>
+</div>
+</td>
+</tr>
+</table>
 </div>
 <div class="paragraph">
-<p>Maven users will need to add the following dependency to their <code>pom.xml</code>
-for this component.</p>
+<p>Maven users will need to add the following dependency to their <code>pom.xml</code> for this component.</p>
 </div>
 <div class="listingblock">
 <div class="content">
@@ -1896,37 +2011,65 @@ for this component.</p>
 <div class="sect2">
 <h3 id="_configuring_component_options"><a class="anchor" href="#_configuring_component_options"></a>Configuring Component Options</h3>
 <div class="paragraph">
-<p>The component level is the highest level which holds general and common configurations that are inherited by the endpoints.
-For example a component may have security settings, credentials for authentication, urls for network connection and so forth.</p>
+<p>At the component level, you set general and shared configurations that are, then, inherited by the endpoints. It is the highest configuration level.</p>
 </div>
 <div class="paragraph">
-<p>Some components only have a few options, and others may have many. Because components typically have pre configured defaults
-that are commonly used, then you may often only need to configure a few options on a component; or none at all.</p>
+<p>For example, a component may have security settings, credentials for authentication, urls for network connection and so forth.</p>
 </div>
 <div class="paragraph">
-<p>Configuring components can be done with the <a href="../../manual/component-dsl.html" class="xref page">Component DSL</a>,
-in a configuration file (application.properties|yaml), or directly with Java code.</p>
+<p>Some components only have a few options, and others may have many.
+Because components typically have pre-configured defaults that are commonly used, then you may often only need to configure a few options on a component; or none at all.</p>
+</div>
+<div class="paragraph">
+<p>You can configure components using:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>the <a href="../../manual/component-dsl.html" class="xref page">Component DSL</a>.</p>
+</li>
+<li>
+<p>in a configuration file (<code>application.properties</code>, <code>*.yaml</code> files, etc).</p>
+</li>
+<li>
+<p>directly in the Java code.</p>
+</li>
+</ul>
 </div>
 </div>
 <div class="sect2">
 <h3 id="_configuring_endpoint_options"><a class="anchor" href="#_configuring_endpoint_options"></a>Configuring Endpoint Options</h3>
 <div class="paragraph">
-<p>Where you find yourself configuring the most is on endpoints, as endpoints often have many options, which allows you to
-configure what you need the endpoint to do. The options are also categorized into whether the endpoint is used as consumer (from)
-or as a producer (to), or used for both.</p>
+<p>You usually spend more time setting up endpoints because they have many options.
+These options help you customize what you want the endpoint to do.
+The options are also categorized into whether the endpoint is used as a consumer (<em>from</em>), as a producer (<em>to</em>), or  both.</p>
 </div>
 <div class="paragraph">
-<p>Configuring endpoints is most often done directly in the endpoint URI as path and query parameters. You can also use
-the <a href="../../manual/Endpoint-dsl.html" class="xref page">Endpoint DSL</a> and <a href="../../manual/dataformat-dsl.html" class="xref page">DataFormat DSL</a>
+<p>Configuring endpoints is most often done directly in the endpoint URI as <em>path</em> and <em>query</em> parameters.
+You can also use the <a href="../../manual/Endpoint-dsl.html" class="xref page">Endpoint DSL</a> and <a href="../../manual/dataformat-dsl.html" class="xref page">DataFormat DSL</a>
 as a <em>type safe</em> way of configuring endpoints and data formats in Java.</p>
 </div>
 <div class="paragraph">
-<p>A good practice when configuring options is to use <a href="../../manual/using-propertyplaceholder.html" class="xref page">Property Placeholders</a>,
-which allows to not hardcode urls, port numbers, sensitive information, and other settings.
-In other words placeholders allows to externalize the configuration from your code, and gives more flexibility and reuse.</p>
+<p>A good practice when configuring options is to use <a href="../../manual/using-propertyplaceholder.html" class="xref page">Property Placeholders</a>.</p>
 </div>
 <div class="paragraph">
-<p>The following two sections lists all the options, firstly for the component followed by the endpoint.</p>
+<p>Property placeholders provide a few benefits:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>They help prevent using hardcoded urls, port numbers, sensitive information, and other settings.</p>
+</li>
+<li>
+<p>They allow externalizing the configuration from the code.</p>
+</li>
+<li>
+<p>They help the code to become more flexible and reusable.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>The following two sections list all the options, firstly for the component followed by the endpoint.</p>
 </div>
 </div>
 </div>
@@ -1935,7 +2078,7 @@ In other words placeholders allows to externalize the configuration from your co
 <h2 id="_component_options"><a class="anchor" href="#_component_options"></a>Component Options</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>The Debezium PostgresSQL Connector component supports 98 options, which are listed below.</p>
+<p>The Debezium PostgresSQL Connector component supports 110 options, which are listed below.</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
 <colgroup>
@@ -2176,6 +2319,15 @@ In other words placeholders allows to externalize the configuration from your co
 <p>Port of the database server.</p>
 </div></div></td>
 <td class="tableblock halign-center valign-top"><p class="tableblock">5432</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">int</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a id="_component_option_databaseQueryTimeoutMs"></a>
+<a href="#_component_option_databaseQueryTimeoutMs" class="anchor"></a><strong>databaseQueryTimeoutMs</strong> (postgres)</p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>Time to wait for a query to execute, given in milliseconds. Defaults to 600 seconds (600,000 ms); zero means there is no limit.</p>
+</div></div></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">10m</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">int</p></td>
 </tr>
 <tr>
@@ -2656,15 +2808,6 @@ In other words placeholders allows to externalize the configuration from your co
 <td class="tableblock halign-left valign-top"><p class="tableblock">String</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><a id="_component_option_snapshotCustomClass"></a>
-<a href="#_component_option_snapshotCustomClass" class="anchor"></a><strong>snapshotCustomClass</strong> (postgres)</p></td>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>When 'snapshot.mode' is set as custom, this setting must be set to specify a fully qualified class name to load (via the default class loader). This class must implement the 'Snapshotter' interface and is called on each app boot to determine whether to do a snapshot and how to build queries.</p>
-</div></div></td>
-<td class="tableblock halign-center valign-top"></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">String</p></td>
-</tr>
-<tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><a id="_component_option_snapshotDelayMs"></a>
 <a href="#_component_option_snapshotDelayMs" class="anchor"></a><strong>snapshotDelayMs</strong> (postgres)</p></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
@@ -2687,6 +2830,24 @@ In other words placeholders allows to externalize the configuration from your co
 <a href="#_component_option_snapshotIncludeCollectionList" class="anchor"></a><strong>snapshotIncludeCollectionList</strong> (postgres)</p></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p>This setting must be set to specify a list of tables/collections whose snapshot must be taken on creating or restarting the connector.</p>
+</div></div></td>
+<td class="tableblock halign-center valign-top"></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">String</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a id="_component_option_snapshotLockingMode"></a>
+<a href="#_component_option_snapshotLockingMode" class="anchor"></a><strong>snapshotLockingMode</strong> (postgres)</p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>Controls how the connector holds locks on tables while performing the schema snapshot. The 'shared' which means the connector will hold a table lock that prevents exclusive table access for just the initial portion of the snapshot while the database schemas and other metadata are being read. The remaining work in a snapshot involves selecting all rows from each table, and this is done using a flashback query that requires no locks. However, in some cases it may be desirable to avoid locks entirely which can be done by specifying 'none'. This mode is only safe to use if no schema changes are happening while the snapshot is taken.</p>
+</div></div></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">none</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">String</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a id="_component_option_snapshotLockingModeCustomName"></a>
+<a href="#_component_option_snapshotLockingModeCustomName" class="anchor"></a><strong>snapshotLockingModeCustomName</strong> (postgres)</p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>When 'snapshot.locking.mode' is set as custom, this setting must be set to specify a the name of the custom implementation provided in the 'name()' method. The implementations must implement the 'SnapshotterLocking' interface and is called to determine how to lock tables during schema snapshot.</p>
 </div></div></td>
 <td class="tableblock halign-center valign-top"></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">String</p></td>
@@ -2716,6 +2877,78 @@ In other words placeholders allows to externalize the configuration from your co
 <p>The criteria for running a snapshot upon startup of the connector. Select one of the following snapshot options: 'always': The connector runs a snapshot every time that it starts. After the snapshot completes, the connector begins to stream changes from the transaction log.; 'initial' (default): If the connector does not detect any offsets for the logical server name, it runs a snapshot that captures the current full state of the configured tables. After the snapshot completes, the connector begins to stream changes from the transaction log. 'initial_only': The connector performs a snapshot as it does for the 'initial' option, but after the connector completes the snapshot, it stops, and does not stream changes from the transaction log.; 'never': The connector does not run a snapshot. Upon first startup, the connector immediately begins reading from the beginning of the transaction log. 'exported': This option is deprecated; use 'initial' instead.; 'custom': The connector loads a custom class to specify how the connector performs snapshots. For more information, see Custom snapshotter SPI in the PostgreSQL connector documentation.</p>
 </div></div></td>
 <td class="tableblock halign-center valign-top"><p class="tableblock">initial</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">String</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a id="_component_option_snapshotModeConfigurationBasedSnapshotData"></a>
+<a href="#_component_option_snapshotModeConfigurationBasedSnapshotData" class="anchor"></a><strong>snapshotModeConfigurationBasedSnapshotData</strong> (postgres)</p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>When 'snapshot.mode' is set as configuration_based, this setting permits to specify whenever the data should be snapshotted or not.</p>
+</div></div></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">false</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">boolean</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a id="_component_option_snapshotModeConfigurationBasedSnapshotOnDataError"></a>
+<a href="#_component_option_snapshotModeConfigurationBasedSnapshotOnDataError" class="anchor"></a><strong>snapshotModeConfigurationBasedSnapshotOnDataError</strong> (postgres)</p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>When 'snapshot.mode' is set as configuration_based, this setting permits to specify whenever the data should be snapshotted or not in case of error.</p>
+</div></div></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">false</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">boolean</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a id="_component_option_snapshotModeConfigurationBasedSnapshotOnSchemaError"></a>
+<a href="#_component_option_snapshotModeConfigurationBasedSnapshotOnSchemaError" class="anchor"></a><strong>snapshotModeConfigurationBasedSnapshotOnSchemaError</strong> (postgres)</p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>When 'snapshot.mode' is set as configuration_based, this setting permits to specify whenever the schema should be snapshotted or not in case of error.</p>
+</div></div></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">false</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">boolean</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a id="_component_option_snapshotModeConfigurationBasedSnapshotSchema"></a>
+<a href="#_component_option_snapshotModeConfigurationBasedSnapshotSchema" class="anchor"></a><strong>snapshotModeConfigurationBasedSnapshotSchema</strong> (postgres)</p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>When 'snapshot.mode' is set as configuration_based, this setting permits to specify whenever the schema should be snapshotted or not.</p>
+</div></div></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">false</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">boolean</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a id="_component_option_snapshotModeConfigurationBasedStartStream"></a>
+<a href="#_component_option_snapshotModeConfigurationBasedStartStream" class="anchor"></a><strong>snapshotModeConfigurationBasedStartStream</strong> (postgres)</p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>When 'snapshot.mode' is set as configuration_based, this setting permits to specify whenever the stream should start or not after snapshot.</p>
+</div></div></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">false</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">boolean</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a id="_component_option_snapshotModeCustomName"></a>
+<a href="#_component_option_snapshotModeCustomName" class="anchor"></a><strong>snapshotModeCustomName</strong> (postgres)</p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>When 'snapshot.mode' is set as custom, this setting must be set to specify a the name of the custom implementation provided in the 'name()' method. The implementations must implement the 'Snapshotter' interface and is called on each app boot to determine whether to do a snapshot.</p>
+</div></div></td>
+<td class="tableblock halign-center valign-top"></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">String</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a id="_component_option_snapshotQueryMode"></a>
+<a href="#_component_option_snapshotQueryMode" class="anchor"></a><strong>snapshotQueryMode</strong> (postgres)</p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>Controls query used during the snapshot.</p>
+</div></div></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">select_all</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">String</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a id="_component_option_snapshotQueryModeCustomName"></a>
+<a href="#_component_option_snapshotQueryModeCustomName" class="anchor"></a><strong>snapshotQueryModeCustomName</strong> (postgres)</p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>When 'snapshot.query.mode' is set as custom, this setting must be set to specify a the name of the custom implementation provided in the 'name()' method. The implementations must implement the 'SnapshotterQuery' interface and is called to determine how to build queries during snapshot.</p>
+</div></div></td>
+<td class="tableblock halign-center valign-top"></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">String</p></td>
 </tr>
 <tr>
@@ -2753,6 +2986,15 @@ In other words placeholders allows to externalize the configuration from your co
 </div></div></td>
 <td class="tableblock halign-center valign-top"><p class="tableblock">10s</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">int</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a id="_component_option_streamingDelayMs"></a>
+<a href="#_component_option_streamingDelayMs" class="anchor"></a><strong>streamingDelayMs</strong> (postgres)</p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>A delay period after the snapshot is completed and the streaming begins, given in milliseconds. Defaults to 0 ms.</p>
+</div></div></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">0ms</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">long</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><a id="_component_option_tableExcludeList"></a>
@@ -2818,6 +3060,15 @@ In other words placeholders allows to externalize the configuration from your co
 <td class="tableblock halign-left valign-top"><p class="tableblock">String</p></td>
 </tr>
 <tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a id="_component_option_transactionMetadataFactory"></a>
+<a href="#_component_option_transactionMetadataFactory" class="anchor"></a><strong>transactionMetadataFactory</strong> (postgres)</p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>Class to make transaction context &amp; transaction struct/schemas.</p>
+</div></div></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">io.debezium.pipeline.txmetadata.DefaultTransactionMetadataFactory</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">String</p></td>
+</tr>
+<tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><a id="_component_option_unavailableValuePlaceholder"></a>
 <a href="#_component_option_unavailableValuePlaceholder" class="anchor"></a><strong>unavailableValuePlaceholder</strong> (postgres)</p></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
@@ -2851,7 +3102,7 @@ In other words placeholders allows to externalize the configuration from your co
 </div>
 </div>
 <div class="paragraph">
-<p>with the following path and query parameters:</p>
+<p>With the following <em>path</em> and <em>query</em> parameters:</p>
 </div>
 <div class="sect2">
 <h3 id="_path_parameters_1_parameters"><a class="anchor" href="#_path_parameters_1_parameters"></a>Path Parameters (1 parameters)</h3>
@@ -2884,7 +3135,7 @@ In other words placeholders allows to externalize the configuration from your co
 </table>
 </div>
 <div class="sect2">
-<h3 id="_query_parameters"><a class="anchor" href="#_query_parameters"></a>Query Parameters (98 parameters)</h3>
+<h3 id="_query_parameters"><a class="anchor" href="#_query_parameters"></a>Query Parameters (110 parameters)</h3>
 <table class="tableblock frame-all grid-all stretch">
 <colgroup>
 <col style="width: 20%;">
@@ -3137,6 +3388,15 @@ In other words placeholders allows to externalize the configuration from your co
 <p>Port of the database server.</p>
 </div></div></td>
 <td class="tableblock halign-center valign-top"><p class="tableblock">5432</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">int</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a id="_endpoint_query_option_databaseQueryTimeoutMs"></a>
+<a href="#_endpoint_query_option_databaseQueryTimeoutMs" class="anchor"></a><strong>databaseQueryTimeoutMs</strong> (postgres)</p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>Time to wait for a query to execute, given in milliseconds. Defaults to 600 seconds (600,000 ms); zero means there is no limit.</p>
+</div></div></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">10m</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">int</p></td>
 </tr>
 <tr>
@@ -3617,15 +3877,6 @@ In other words placeholders allows to externalize the configuration from your co
 <td class="tableblock halign-left valign-top"><p class="tableblock">String</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><a id="_endpoint_query_option_snapshotCustomClass"></a>
-<a href="#_endpoint_query_option_snapshotCustomClass" class="anchor"></a><strong>snapshotCustomClass</strong> (postgres)</p></td>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>When 'snapshot.mode' is set as custom, this setting must be set to specify a fully qualified class name to load (via the default class loader). This class must implement the 'Snapshotter' interface and is called on each app boot to determine whether to do a snapshot and how to build queries.</p>
-</div></div></td>
-<td class="tableblock halign-center valign-top"></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">String</p></td>
-</tr>
-<tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><a id="_endpoint_query_option_snapshotDelayMs"></a>
 <a href="#_endpoint_query_option_snapshotDelayMs" class="anchor"></a><strong>snapshotDelayMs</strong> (postgres)</p></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
@@ -3648,6 +3899,24 @@ In other words placeholders allows to externalize the configuration from your co
 <a href="#_endpoint_query_option_snapshotIncludeCollectionList" class="anchor"></a><strong>snapshotIncludeCollectionList</strong> (postgres)</p></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p>This setting must be set to specify a list of tables/collections whose snapshot must be taken on creating or restarting the connector.</p>
+</div></div></td>
+<td class="tableblock halign-center valign-top"></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">String</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a id="_endpoint_query_option_snapshotLockingMode"></a>
+<a href="#_endpoint_query_option_snapshotLockingMode" class="anchor"></a><strong>snapshotLockingMode</strong> (postgres)</p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>Controls how the connector holds locks on tables while performing the schema snapshot. The 'shared' which means the connector will hold a table lock that prevents exclusive table access for just the initial portion of the snapshot while the database schemas and other metadata are being read. The remaining work in a snapshot involves selecting all rows from each table, and this is done using a flashback query that requires no locks. However, in some cases it may be desirable to avoid locks entirely which can be done by specifying 'none'. This mode is only safe to use if no schema changes are happening while the snapshot is taken.</p>
+</div></div></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">none</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">String</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a id="_endpoint_query_option_snapshotLockingModeCustomName"></a>
+<a href="#_endpoint_query_option_snapshotLockingModeCustomName" class="anchor"></a><strong>snapshotLockingModeCustomName</strong> (postgres)</p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>When 'snapshot.locking.mode' is set as custom, this setting must be set to specify a the name of the custom implementation provided in the 'name()' method. The implementations must implement the 'SnapshotterLocking' interface and is called to determine how to lock tables during schema snapshot.</p>
 </div></div></td>
 <td class="tableblock halign-center valign-top"></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">String</p></td>
@@ -3677,6 +3946,78 @@ In other words placeholders allows to externalize the configuration from your co
 <p>The criteria for running a snapshot upon startup of the connector. Select one of the following snapshot options: 'always': The connector runs a snapshot every time that it starts. After the snapshot completes, the connector begins to stream changes from the transaction log.; 'initial' (default): If the connector does not detect any offsets for the logical server name, it runs a snapshot that captures the current full state of the configured tables. After the snapshot completes, the connector begins to stream changes from the transaction log. 'initial_only': The connector performs a snapshot as it does for the 'initial' option, but after the connector completes the snapshot, it stops, and does not stream changes from the transaction log.; 'never': The connector does not run a snapshot. Upon first startup, the connector immediately begins reading from the beginning of the transaction log. 'exported': This option is deprecated; use 'initial' instead.; 'custom': The connector loads a custom class to specify how the connector performs snapshots. For more information, see Custom snapshotter SPI in the PostgreSQL connector documentation.</p>
 </div></div></td>
 <td class="tableblock halign-center valign-top"><p class="tableblock">initial</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">String</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a id="_endpoint_query_option_snapshotModeConfigurationBasedSnapshotData"></a>
+<a href="#_endpoint_query_option_snapshotModeConfigurationBasedSnapshotData" class="anchor"></a><strong>snapshotModeConfigurationBasedSnapshotData</strong> (postgres)</p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>When 'snapshot.mode' is set as configuration_based, this setting permits to specify whenever the data should be snapshotted or not.</p>
+</div></div></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">false</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">boolean</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a id="_endpoint_query_option_snapshotModeConfigurationBasedSnapshotOnDataError"></a>
+<a href="#_endpoint_query_option_snapshotModeConfigurationBasedSnapshotOnDataError" class="anchor"></a><strong>snapshotModeConfigurationBasedSnapshotOnDataError</strong> (postgres)</p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>When 'snapshot.mode' is set as configuration_based, this setting permits to specify whenever the data should be snapshotted or not in case of error.</p>
+</div></div></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">false</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">boolean</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a id="_endpoint_query_option_snapshotModeConfigurationBasedSnapshotOnSchemaError"></a>
+<a href="#_endpoint_query_option_snapshotModeConfigurationBasedSnapshotOnSchemaError" class="anchor"></a><strong>snapshotModeConfigurationBasedSnapshotOnSchemaError</strong> (postgres)</p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>When 'snapshot.mode' is set as configuration_based, this setting permits to specify whenever the schema should be snapshotted or not in case of error.</p>
+</div></div></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">false</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">boolean</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a id="_endpoint_query_option_snapshotModeConfigurationBasedSnapshotSchema"></a>
+<a href="#_endpoint_query_option_snapshotModeConfigurationBasedSnapshotSchema" class="anchor"></a><strong>snapshotModeConfigurationBasedSnapshotSchema</strong> (postgres)</p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>When 'snapshot.mode' is set as configuration_based, this setting permits to specify whenever the schema should be snapshotted or not.</p>
+</div></div></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">false</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">boolean</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a id="_endpoint_query_option_snapshotModeConfigurationBasedStartStream"></a>
+<a href="#_endpoint_query_option_snapshotModeConfigurationBasedStartStream" class="anchor"></a><strong>snapshotModeConfigurationBasedStartStream</strong> (postgres)</p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>When 'snapshot.mode' is set as configuration_based, this setting permits to specify whenever the stream should start or not after snapshot.</p>
+</div></div></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">false</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">boolean</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a id="_endpoint_query_option_snapshotModeCustomName"></a>
+<a href="#_endpoint_query_option_snapshotModeCustomName" class="anchor"></a><strong>snapshotModeCustomName</strong> (postgres)</p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>When 'snapshot.mode' is set as custom, this setting must be set to specify a the name of the custom implementation provided in the 'name()' method. The implementations must implement the 'Snapshotter' interface and is called on each app boot to determine whether to do a snapshot.</p>
+</div></div></td>
+<td class="tableblock halign-center valign-top"></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">String</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a id="_endpoint_query_option_snapshotQueryMode"></a>
+<a href="#_endpoint_query_option_snapshotQueryMode" class="anchor"></a><strong>snapshotQueryMode</strong> (postgres)</p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>Controls query used during the snapshot.</p>
+</div></div></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">select_all</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">String</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a id="_endpoint_query_option_snapshotQueryModeCustomName"></a>
+<a href="#_endpoint_query_option_snapshotQueryModeCustomName" class="anchor"></a><strong>snapshotQueryModeCustomName</strong> (postgres)</p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>When 'snapshot.query.mode' is set as custom, this setting must be set to specify a the name of the custom implementation provided in the 'name()' method. The implementations must implement the 'SnapshotterQuery' interface and is called to determine how to build queries during snapshot.</p>
+</div></div></td>
+<td class="tableblock halign-center valign-top"></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">String</p></td>
 </tr>
 <tr>
@@ -3714,6 +4055,15 @@ In other words placeholders allows to externalize the configuration from your co
 </div></div></td>
 <td class="tableblock halign-center valign-top"><p class="tableblock">10s</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">int</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a id="_endpoint_query_option_streamingDelayMs"></a>
+<a href="#_endpoint_query_option_streamingDelayMs" class="anchor"></a><strong>streamingDelayMs</strong> (postgres)</p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>A delay period after the snapshot is completed and the streaming begins, given in milliseconds. Defaults to 0 ms.</p>
+</div></div></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">0ms</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">long</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><a id="_endpoint_query_option_tableExcludeList"></a>
@@ -3776,6 +4126,15 @@ In other words placeholders allows to externalize the configuration from your co
 <p><strong>Required</strong> Topic prefix that identifies and provides a namespace for the particular database server/cluster is capturing changes. The topic prefix should be unique across all other connectors, since it is used as a prefix for all Kafka topic names that receive events emitted by this connector. Only alphanumeric characters, hyphens, dots and underscores must be accepted.</p>
 </div></div></td>
 <td class="tableblock halign-center valign-top"></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">String</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a id="_endpoint_query_option_transactionMetadataFactory"></a>
+<a href="#_endpoint_query_option_transactionMetadataFactory" class="anchor"></a><strong>transactionMetadataFactory</strong> (postgres)</p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>Class to make transaction context &amp; transaction struct/schemas.</p>
+</div></div></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">io.debezium.pipeline.txmetadata.DefaultTransactionMetadataFactory</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">String</p></td>
 </tr>
 <tr>
@@ -3903,20 +4262,37 @@ In other words placeholders allows to externalize the configuration from your co
 </div>
 </div>
 <div class="sect1">
-<h2 id="_message_body"><a class="anchor" href="#_message_body"></a>Message body</h2>
+<h2 id="_usage"><a class="anchor" href="#_usage"></a>Usage</h2>
 <div class="sectionbody">
+<div class="sect2">
+<h3 id="_message_body"><a class="anchor" href="#_message_body"></a>Message body</h3>
 <div class="paragraph">
-<p>The message body if is not <code>null</code> (in case of tombstones), it contains the state of the row after the event occurred as <code>Struct</code> format or <code>Map</code> format if you use the included Type Converter from <code>Struct</code> to <code>Map</code> (please look below for more explanation).</p>
+<p>The message body if is not <code>null</code> (in case of tombstones), it contains the state of the row after the event occurred as <code>Struct</code> format or <code>Map</code> format if you use the included Type Converter from <code>Struct</code> to <code>Map</code>.</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>Check below for more details.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
 </div>
 </div>
 </div>
 <div class="sect1">
-<h2 id="_samples"><a class="anchor" href="#_samples"></a>Samples</h2>
+<h2 id="_examples"><a class="anchor" href="#_examples"></a>Examples</h2>
 <div class="sectionbody">
 <div class="sect2">
 <h3 id="_consuming_events"><a class="anchor" href="#_consuming_events"></a>Consuming events</h3>
 <div class="paragraph">
-<p>Here is a very simple route that you can use in order to listen to Debezium events from PostgresSQL connector.</p>
+<p>Here is a basic route that you can use to listen to Debezium events from PostgresSQL connector.</p>
 </div>
 <div class="listingblock">
 <div class="content">
@@ -3934,11 +4310,11 @@ In other words placeholders allows to externalize the configuration from your co
 <p>By default, the component will emit the events in the body and <code>CamelDebeziumBefore</code> header as <a href="https://kafka.apache.org/22/javadoc/org/apache/kafka/connect/data/Struct.html"><code>Struct</code></a> data type, the reasoning behind this, is to perceive the schema information in case is needed.
 However, the component as well contains a <a href="../../manual/type-converter.html" class="xref page">Type Converter</a> that converts
 from default output type of <a href="https://kafka.apache.org/22/javadoc/org/apache/kafka/connect/data/Struct.html"><code>Struct</code></a> to <code>Map</code> in order to leverage Camel&#8217;s rich <a href="../../manual/data-format.html" class="xref page">Data Format</a> types which many of them work out of box with <code>Map</code> data type.
-To use it, you can either add <code>Map.class</code> type when you access the message e.g: <code>exchange.getIn().getBody(Map.class)</code>, or you can convert the body always to <code>Map</code> from the route builder by adding <code>.convertBodyTo(Map.class)</code> to your Camel Route DSL after <code>from</code> statement.</p>
+To use it, you can either add <code>Map.class</code> type when you access the message (e.g., <code>exchange.getIn().getBody(Map.class)</code>), or you can convert the body always to <code>Map</code> from the route builder by adding <code>.convertBodyTo(Map.class)</code> to your Camel Route DSL after <code>from</code> statement.</p>
 </div>
 <div class="paragraph">
-<p>We mentioned above about the schema, which can be used in case you need to perform advance data transformation and the schema is needed for that. If you choose not to convert your body to <code>Map</code>,
-you can obtain the schema information as <a href="https://kafka.apache.org/22/javadoc/org/apache/kafka/connect/data/Schema.html"><code>Schema</code></a> type from <code>Struct</code> like this:</p>
+<p>We mentioned above the schema, which can be used in case you need to perform advance data transformation and the schema is needed for that.
+If you choose not to convert your body to <code>Map</code>, you can obtain the schema information as <a href="https://kafka.apache.org/22/javadoc/org/apache/kafka/connect/data/Schema.html"><code>Schema</code></a> type from <code>Struct</code> like this:</p>
 </div>
 <div class="listingblock">
 <div class="content">
@@ -3954,8 +4330,24 @@ you can obtain the schema information as <a href="https://kafka.apache.org/22/ja
     });</code></pre>
 </div>
 </div>
+<div class="admonitionblock important">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-important" title="Important"></i>
+</td>
+<td class="content">
 <div class="paragraph">
-<p><strong>Important Note:</strong> This component is a thin wrapper around Debezium Engine as mentioned, therefore before using this component in production, you need to understand how Debezium works and how configurations can reflect the expected behavior, especially in regards to <a href="https://debezium.io/documentation/reference/1.9/development/engine.html#_handling_failures">handling failures</a>.</p>
+<p>This component is a thin wrapper around Debezium Engine as mentioned.
+Therefore, before using this component in production, you need to understand how Debezium works and how configurations can reflect the expected behavior.
+This is especially true in regard to <a href="https://debezium.io/documentation/reference/1.9/operations/embedded.html#_handling_failures">handling failures</a>.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>Unresolved include directive in modules/ROOT/pages/debezium-postgres-component.adoc - include::spring-boot:partial$starter.adoc[]</p>
 </div>
 </div>
 </div>

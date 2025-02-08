@@ -3,15 +3,15 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>Route Controller :: Red Hat Apache Build of Apache Camel Manual</title>
-    <meta name="generator" content="Antora 3.0.3">
+    <title>Route Controller :: Red Hat build of Apache Camel</title>
+    <meta name="generator" content="Antora 3.1.4">
     <link rel="stylesheet" href="../_/css/site.css">
   </head>
   <body class="article">
 <header class="header">
   <nav class="navbar">
     <div class="navbar-brand">
-      <a class="navbar-item" href="../../manual/index.html">Red Hat Apache Build of Apache Camel Manual</a>
+      <a class="navbar-item" href="/">Red Hat build of Apache Camel</a>
       <button class="navbar-burger" data-target="topbar-nav">
         <span></span>
         <span></span>
@@ -26,6 +26,7 @@
     <div class="panels">
 <div class="nav-panel-menu is-active" data-panel="menu">
   <nav class="nav-menu">
+    <button class="nav-menu-toggle" aria-label="Toggle expand/collapse all" style="display: none"></button>
     <h3 class="title"><a href="index.html">User manual</a></h3>
 <ul class="nav-list">
   <li class="nav-item" data-depth="0">
@@ -56,7 +57,16 @@
     <a class="nav-link" href="camel-console.html">Camel Developer Console</a>
   </li>
   <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
     <a class="nav-link" href="camel-jbang.html">Camel JBang</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="camel-jbang-kubernetes.html">Camel Kubernetes plugin</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="camel-jbang-k.html">Camel K plugin</a>
+  </li>
+</ul>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="camel-maven-plugin.html">Camel Maven Plugin</a>
@@ -95,6 +105,9 @@
     <a class="nav-link" href="using-propertyplaceholder.html">How to use Camel property placeholders</a>
   </li>
   <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="variables.html">How to use Variables</a>
+  </li>
+  <li class="nav-item" data-depth="2">
     <button class="nav-item-toggle"></button>
     <a class="nav-link" href="testing.html">Testing</a>
 <ul class="nav-list">
@@ -110,7 +123,13 @@
 </ul>
   </li>
   <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
     <a class="nav-link" href="rest-dsl.html">Working with REST and Rest DSL</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="rest-dsl-openapi.html">Rest DSL contract first</a>
+  </li>
+</ul>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="writing-components.html">Writing Components</a>
@@ -477,9 +496,6 @@
     <a class="nav-link" href="faq/how-should-i-invoke-my-pojos-or-spring-services.html">How should I invoke my POJOs or Spring Services?</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="faq/how-to-avoid-importing-bunch-of-cxf-packages-when-start-up-the-camel-cxf-endpoint-from-osgi-platform-.html">How to avoid importing bunch of cxf packages when start up the camel-cxf endpoint from OSGi platform?</a>
-  </li>
-  <li class="nav-item" data-depth="2">
     <a class="nav-link" href="faq/how-to-avoid-sending-some-or-all-message-headers.html">How to avoid sending some or all message headers?</a>
   </li>
   <li class="nav-item" data-depth="2">
@@ -598,11 +614,11 @@
 <div class="nav-panel-explore" data-panel="explore">
   <div class="context">
     <span class="title">User manual</span>
-    <span class="version">default</span>
+    <span class="version"></span>
   </div>
   <ul class="components">
     <li class="component">
-      <a class="title" href="../components/next/index.html">Camel Components</a>
+      <div class="title"><a href="../components/next/index.html">Camel Components</a></div>
       <ul class="versions">
         <li class="version is-latest">
           <a href="../components/next/index.html">Next (Pre-release)</a>
@@ -610,12 +626,7 @@
       </ul>
     </li>
     <li class="component is-current">
-      <a class="title" href="index.html">User manual</a>
-      <ul class="versions">
-        <li class="version is-current is-latest">
-          <a href="index.html">default</a>
-        </li>
-      </ul>
+      <div class="title"><a href="index.html">User manual</a></div>
     </li>
   </ul>
 </div>
@@ -633,6 +644,7 @@
     <li><a href="route-controller.html">RouteController</a></li>
   </ul>
 </nav>
+<div class="edit-this-page"><a href="file:///code/jboss/jboss-camel/docs/user-manual/modules/ROOT/pages/route-controller.adoc">Edit this Page</a></div>
 </div>
   <div class="content">
 <aside class="toc sidebar" data-title="Contents" data-levels="2">
@@ -651,7 +663,7 @@ The controller is mainly in use during starting up the routes when Camel startup
 </div>
 <div class="paragraph">
 <p>Camel offers two kinds of controllers. The classic default controller, and a supervising
-controller that can attempt to restarting routes that failed during startup.</p>
+controller that can attempt to restart routes that failed during startup.</p>
 </div>
 </div>
 </div>
@@ -661,18 +673,18 @@ controller that can attempt to restarting routes that failed during startup.</p>
 <div class="paragraph">
 <p>This is the default controller and strategy that has always been in use by Camel.
 The controller works with the <em>fail fast</em> principle, that if any routes fail to
-start, then it gives up and Camel itself fails starting up.</p>
+start, then it gives up and Camel itself fails to start up.</p>
 </div>
 <div class="paragraph">
-<p>The controller also starts the routes sequentially and using a single thread.
-This means there are no concurrent startup, meaning the routes are started
+<p>The controller also starts the routes sequentially and uses a single thread.
+This means there is no concurrent startup, meaning the routes are started
 more reliably without concurrency issues.</p>
 </div>
 <div class="paragraph">
 <p>If a route fails on startup then it is often its <code>Consumer</code> that triggers an error
 in its startup. Some components offer a way to handle this internally and
 attempt to recover from this. However, most components do not offer such a feature
-and therefore in most situations the route would fail to startup and therefore
+and therefore in most situations, the route would fail to startup and therefore
 also Camel itself. The JMS component is an example of a component that can
 recover from startup issues in the <code>Consumer</code> such as failing to connect to the JMS broker.</p>
 </div>
@@ -694,10 +706,10 @@ from("salesforce:cheese")
 </div>
 <div class="paragraph">
 <p>Then the two routes may fail on startup. However, the first route with the file component
-would very likely always startup as it is just using the file system that is reliable.</p>
+would very likely always start up as it is just using the file system that is reliable.</p>
 </div>
 <div class="paragraph">
-<p>The second route however is using Salesforce which can fail starting up if there is no network
+<p>The second route, however, is using Salesforce, which can fail to start up if there is no network
 connecting to Salesforce.</p>
 </div>
 </div>
@@ -708,7 +720,7 @@ connecting to Salesforce.</p>
 <div class="paragraph">
 <p>A supervising capable <code>RouteController</code> that delays the startup of the routes
 after the camel context startup and takes control of starting the routes in a safe manner.
-This controller is able to retry starting failing routes, and have various options to configure
+This controller is able to retry starting failing routes, and has various options to configure
 settings for backoff between restarting routes.</p>
 </div>
 <div class="paragraph">
@@ -743,36 +755,22 @@ src.setThreadPoolSize(2);</code></pre>
 </div>
 </div>
 <div class="paragraph">
-<p>If you use Camel with Spring Boot or Camel Main you can also enable supervising
+<p>If you use Camel with Spring Boot or Camel Main, you can also enable supervising
 from <code>application.properties</code>:</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-properties hljs" data-lang="properties">camel.main.routeControllerSuperviseEnabled = true
+<pre class="highlightjs highlight"><code class="language-properties hljs" data-lang="properties">camel.routecontroller.enabled = true
 
 # and you can configure more options
-camel.main.routeControllerBackoffDelay = 5000
-camel.main.routeControllerBackoffMaxAttempts = 3
-camel.main.routeControllerInitialDelay = 1000
-camel.main.routeControllerThreadPoolSize = 2</code></pre>
+camel.routecontroller.backoffDelay = 5000
+camel.routecontroller.backoffMaxAttempts = 3
+camel.routecontroller.initialDelay = 1000
+camel.routecontroller.threadPoolSize = 2</code></pre>
 </div>
 </div>
 <div class="paragraph">
-<p>And in Spring Boot:</p>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre class="highlightjs highlight"><code class="language-properties hljs" data-lang="properties">camel.springboot.routeControllerSuperviseEnabled = true
-
-# and you can configure more options
-camel.springboot.routeControllerBackoffDelay = 5000
-camel.springboot.routeControllerBackoffMaxAttempts = 3
-camel.springboot.routeControllerInitialDelay = 1000
-camel.springboot.routeControllerThreadPoolSize = 2</code></pre>
-</div>
-</div>
-<div class="paragraph">
-<p>And for users with XML DSL you can do as follows:</p>
+<p>And for users with Spring &lt;beans&gt; you can do as follows:</p>
 </div>
 <div class="listingblock">
 <div class="content">
@@ -814,17 +812,17 @@ camel.springboot.routeControllerThreadPoolSize = 2</code></pre>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Enabled</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>false</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">To enable using supervising route controller which allows Camel to startup and then the controller takes care of starting the routes in a safe manner. This can be used when you want to startup Camel despite a route may otherwise fail fast during startup and cause Camel to fail to startup as well. By delegating the route startup to the supervising route controller then its manages the startup using a background thread. The controller allows to be configured with various settings to attempt to restart failing routes.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">To enable using supervising route controller which allows Camel to start up, and then, the controller takes care of starting the routes in a safe manner. This can be used when you want to startup Camel despite a route may otherwise fail fast during startup and cause Camel to fail to startup as well. By delegating the route startup to the supervising route controller then its manages the startup using a background thread. The controller allows to be configured with various settings to attempt to restart failing routes.</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">InitialDelay</p></td>
 <td class="tableblock halign-left valign-top"></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Initial delay in milli seconds before the route controller starts, after CamelContext has been started.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Initial delay in milliseconds before the route controller starts, after CamelContext has been started.</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">BackOffDelay</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>2000</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Backoff delay in millis when restarting a route that failed to startup.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Backoff delay in milliseconds when restarting a route that failed to startup.</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">BackOffMaxAttempts</p></td>
@@ -834,12 +832,12 @@ camel.springboot.routeControllerThreadPoolSize = 2</code></pre>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">BackOffMaxDelay</p></td>
 <td class="tableblock halign-left valign-top"></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Backoff maximum delay in millis when restarting a route that failed to startup.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Backoff maximum delay in milliseconds when restarting a route that failed to startup.</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">BackOffMaxElapsedTime</p></td>
 <td class="tableblock halign-left valign-top"></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Backoff maximum elapsed time in millis, after which the backoff should be considered exhausted and no more attempts should be made.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Backoff maximum elapsed time in milliseconds, after which the backoff should be considered exhausted and no more attempts should be made.</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">BackOffMultiplier</p></td>
@@ -849,32 +847,54 @@ camel.springboot.routeControllerThreadPoolSize = 2</code></pre>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">IncludeRoutes</p></td>
 <td class="tableblock halign-left valign-top"></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Pattern for filtering routes to be included as supervised. The pattern is matching on route id, and endpoint uri for the route. Multiple patterns can be separated by comma. For example to include all kafka routes, you can say kafka:. And to include routes with specific route ids myRoute,myOtherRoute. The pattern supports wildcards and uses the matcher from org.apache.camel.support.PatternHelper#matchPattern.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Pattern for filtering routes to be included as supervised. The pattern is matched on route id, and endpoint uri for the route. Multiple patterns can be separated by comma. For example, to include all kafka routes, you can say <code>kafka:</code>. And to include routes with specific route ids <code><em>myRoute,myOtherRoute</em></code>. The pattern supports wildcards and uses the matcher from <code>org.apache.camel.support.PatternHelper#matchPattern</code>.</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">ExcludeRoutes</p></td>
 <td class="tableblock halign-left valign-top"></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Pattern for filtering routes to be excluded as supervised. The pattern is matching on route id, and endpoint uri for the route. Multiple patterns can be separated by comma. For example to exclude all JMS routes, you can say jms:. And to exclude routes with specific route ids mySpecialRoute,myOtherSpecialRoute. The pattern supports wildcards and uses the matcher from org.apache.camel.support.PatternHelper#matchPattern.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Pattern for filtering routes to be excluded as supervised. The pattern is matched on route id, and endpoint uri for the route. Multiple patterns can be separated by comma. For example, to exclude all JMS routes, you can say <code>jms:</code>. And to exclude routes with specific route ids <code><em>mySpecialRoute,myOtherSpecialRoute</em></code>. The pattern supports wildcards and uses the matcher from <code>org.apache.camel.support.PatternHelper#matchPattern</code>.</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">ThreadPoolSize</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>1</code></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">The number of threads used by the route controller scheduled thread pool that are used for restarting routes. The pool uses 1 thread by default, but you can increase this to allow the controller to concurrently attempt to restart multiple routes in case more than one route has problems starting.</p></td>
 </tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">UnhealthyOnExhausted</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>true</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Whether to mark the route as unhealthy (down) when all restarting attempts (backoff) have failed and the route is not successfully started and the route manager is giving up. If setting this to <code>false</code> will make health checks ignore this problem and allow to report the Camel application as UP.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">UnhealthyOnRestarting</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>true</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Whether to mark the route as unhealthy (down) when the route failed to initially start, and is being controlled for restarting (backoff). If setting this to false will make health checks ignore this problem and allow reporting the Camel application as UP.</p></td>
+</tr>
 </tbody>
 </table>
+<div class="admonitionblock important">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-important" title="Important"></i>
+</td>
+<td class="content">
+The <code>UnhealthyOnExhausted</code> and <code>UnhealthyOnRestarting</code> options are default <code>false</code> in Camel 4.6 or older.
+</td>
+</tr>
+</table>
+</div>
 </div>
 <div class="sect2">
 <h3 id="_filtering_routes_to_fail_fast"><a class="anchor" href="#_filtering_routes_to_fail_fast"></a>Filtering routes to fail fast</h3>
 <div class="paragraph">
 <p>When using supervising route controller, then all routes would by default be supervised
-and allow Camel to startup successfully; even if one ore more routes would fail to startup.
+and allow Camel to start up successfully; even if one or more routes failed to start up.
 This is because the supervising will handle those failed routes and attempt to restart
 them in the background (with backoff).</p>
 </div>
 <div class="paragraph">
-<p>You may have a critical route which must always startup, and if not, cause Camel itself to fail starting.
-This can be done by filter the route from the supervising with the include/exclude options.</p>
+<p>You may have a critical route which must always start up, and if not, cause Camel itself to fail starting.
+This can be done by filtering the route from the supervising with the include/exclude options.</p>
 </div>
 <div class="paragraph">
 <p>Given the routes below:</p>
@@ -897,7 +917,7 @@ by excluding by pattern <code>aws*</code> (uri or route id)</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">camel.springboot.routeControllerExcludeRoutes = aws*</code></pre>
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">camel.routecontroller.excludeRoutes = aws*</code></pre>
 </div>
 </div>
 </div>
@@ -927,7 +947,7 @@ To use JMX with Camel then <code>camel-management</code> JAR must be included in
 <h2 id="_more_information"><a class="anchor" href="#_more_information"></a>More Information</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>When Camel is shutting down, then its <a href="graceful-shutdown.html" class="xref page">Graceful Shutdown</a>
+<p>When Apache Camel is shutting down, then its <a href="graceful-shutdown.html" class="xref page">Graceful Shutdown</a>
 that handles this to ensure all the routes are shutdown graceful and safely.</p>
 </div>
 </div>

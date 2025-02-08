@@ -3,15 +3,15 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>Apache Camel 2.x to 3.0 Migration Guide :: Red Hat Apache Build of Apache Camel Manual</title>
-    <meta name="generator" content="Antora 3.0.3">
+    <title>Apache Camel 2.x to 3.0 Migration Guide :: Red Hat build of Apache Camel</title>
+    <meta name="generator" content="Antora 3.1.4">
     <link rel="stylesheet" href="../_/css/site.css">
   </head>
   <body class="article">
 <header class="header">
   <nav class="navbar">
     <div class="navbar-brand">
-      <a class="navbar-item" href="../../manual/index.html">Red Hat Apache Build of Apache Camel Manual</a>
+      <a class="navbar-item" href="/">Red Hat build of Apache Camel</a>
       <button class="navbar-burger" data-target="topbar-nav">
         <span></span>
         <span></span>
@@ -26,6 +26,7 @@
     <div class="panels">
 <div class="nav-panel-menu is-active" data-panel="menu">
   <nav class="nav-menu">
+    <button class="nav-menu-toggle" aria-label="Toggle expand/collapse all" style="display: none"></button>
     <h3 class="title"><a href="index.html">User manual</a></h3>
 <ul class="nav-list">
   <li class="nav-item" data-depth="0">
@@ -56,7 +57,16 @@
     <a class="nav-link" href="camel-console.html">Camel Developer Console</a>
   </li>
   <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
     <a class="nav-link" href="camel-jbang.html">Camel JBang</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="camel-jbang-kubernetes.html">Camel Kubernetes plugin</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="camel-jbang-k.html">Camel K plugin</a>
+  </li>
+</ul>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="camel-maven-plugin.html">Camel Maven Plugin</a>
@@ -95,6 +105,9 @@
     <a class="nav-link" href="using-propertyplaceholder.html">How to use Camel property placeholders</a>
   </li>
   <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="variables.html">How to use Variables</a>
+  </li>
+  <li class="nav-item" data-depth="2">
     <button class="nav-item-toggle"></button>
     <a class="nav-link" href="testing.html">Testing</a>
 <ul class="nav-list">
@@ -110,7 +123,13 @@
 </ul>
   </li>
   <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
     <a class="nav-link" href="rest-dsl.html">Working with REST and Rest DSL</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="rest-dsl-openapi.html">Rest DSL contract first</a>
+  </li>
+</ul>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="writing-components.html">Writing Components</a>
@@ -477,9 +496,6 @@
     <a class="nav-link" href="faq/how-should-i-invoke-my-pojos-or-spring-services.html">How should I invoke my POJOs or Spring Services?</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="faq/how-to-avoid-importing-bunch-of-cxf-packages-when-start-up-the-camel-cxf-endpoint-from-osgi-platform-.html">How to avoid importing bunch of cxf packages when start up the camel-cxf endpoint from OSGi platform?</a>
-  </li>
-  <li class="nav-item" data-depth="2">
     <a class="nav-link" href="faq/how-to-avoid-sending-some-or-all-message-headers.html">How to avoid sending some or all message headers?</a>
   </li>
   <li class="nav-item" data-depth="2">
@@ -598,11 +614,11 @@
 <div class="nav-panel-explore" data-panel="explore">
   <div class="context">
     <span class="title">User manual</span>
-    <span class="version">default</span>
+    <span class="version"></span>
   </div>
   <ul class="components">
     <li class="component">
-      <a class="title" href="../components/next/index.html">Camel Components</a>
+      <div class="title"><a href="../components/next/index.html">Camel Components</a></div>
       <ul class="versions">
         <li class="version is-latest">
           <a href="../components/next/index.html">Next (Pre-release)</a>
@@ -610,12 +626,7 @@
       </ul>
     </li>
     <li class="component is-current">
-      <a class="title" href="index.html">User manual</a>
-      <ul class="versions">
-        <li class="version is-current is-latest">
-          <a href="index.html">default</a>
-        </li>
-      </ul>
+      <div class="title"><a href="index.html">User manual</a></div>
     </li>
   </ul>
 </div>
@@ -633,6 +644,7 @@
     <li><a href="camel-3-migration-guide.html">Camel 2.x to 3.0 Migration Guide</a></li>
   </ul>
 </nav>
+<div class="edit-this-page"><a href="file:///code/jboss/jboss-camel/docs/user-manual/modules/ROOT/pages/camel-3-migration-guide.adoc">Edit this Page</a></div>
 </div>
   <div class="content">
 <aside class="toc sidebar" data-title="Contents" data-levels="2">
@@ -665,10 +677,10 @@ If you are upgrading Camel 3.x to 3.y then use the
 <h2 id="_java_versions"><a class="anchor" href="#_java_versions"></a>Java versions</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>Camel 3 supports Java 11. Support for Java 8 is best effort for early versions of Camel 3. However at some time in the 3.x lifeline we will drop support for Java 8.</p>
+<p>Camel 3 supports Java 11. Support for Java 8 is best effort for early versions of Camel 3. However, at some time in the 3.x lifeline we will drop support for Java 8.</p>
 </div>
 <div class="paragraph">
-<p>In Java 11 the JAXB modules have been <strong>removed</strong> from the JDK, therefore you will need to add them as Maven dependencies (if you use JAXB such as when using XML DSL or the camel-jaxb component):</p>
+<p>In Java 11, the JAXB modules have been <strong>removed</strong> from the JDK, therefore, you will need to add them as Maven dependencies (if you use JAXB such as when using XML DSL or the camel-jaxb component):</p>
 </div>
 <div class="listingblock">
 <div class="content">
@@ -742,7 +754,7 @@ In Camel 2.x camel-core was one JAR file, it has now been split up into many JAR
 </div>
 <div class="paragraph">
 <p>Maven users of Apache Camel can keep using the dependency <code>camel-core</code> which has transitive dependencies on all of its modules, except for <code>camel-main</code>, and therefore no migration is needed.
-However, users who want to trim the size of the classes on the classpath, can use fine grained Maven dependencies on only the modules needed.
+However, users who want to trim the size of the classes on the classpath, can use fine-grained Maven dependencies on only the modules needed.
 You may find how to do that in the examples.</p>
 </div>
 <div class="paragraph">
@@ -863,9 +875,9 @@ You may find how to do that in the examples.</p>
 <h2 id="_multiple_camelcontexts_per_application_not_supported"><a class="anchor" href="#_multiple_camelcontexts_per_application_not_supported"></a>Multiple CamelContexts per application not supported</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>Support for multiple CamelContexts has been removed and only 1 CamelContext per deployment is supported.
-The latter was not recommended anyway and was also not 100% implemented (for example in camel-cdi).
-For Camel 3 only 1 CamelContext per deployment is recommended and supported.</p>
+<p>Support for multiple CamelContexts has been removed, and only 1 CamelContext per deployment is supported.
+The latter was not recommended anyway and was also not 100% implemented, for example, in <code>camel-cdi</code>.
+For Camel 3, only 1 <code>CamelContext</code> per deployment is recommended and supported.</p>
 </div>
 <div class="paragraph">
 <p>The <code>context</code> attribute on the various Camel annotations such as <code>@EndpointInject</code>, <code>@Produce</code>, <code>@Consume</code> etc. has therefore been removed.</p>
@@ -930,8 +942,8 @@ For Camel 3 only 1 CamelContext per deployment is recommended and supported.</p>
 <div class="paragraph">
 <p>The <code>properties</code> component no longer support using endpoints, such as <code>properties:myKey</code>. The properties component is now only a property placeholder service.
 You can therefore no longer lookup the properties component via <code>camelContext.getComponent("properties")</code>.
-Instead you can use <code>camelContext.getPropertiesComponent()</code>, which also returns an interface of the properties component as <code>org.apache.camel.spi.PropertiesComponent</code>.
-The implementation is still named <code>org.apache.camel.component.properties.PropertiesComponent</code>, however it should rarely be used, as you should favour using the interface instead.</p>
+Instead, you can use <code>camelContext.getPropertiesComponent()</code>, which also returns an interface of the properties component as <code>org.apache.camel.spi.PropertiesComponent</code>.
+The implementation is still named <code>org.apache.camel.component.properties.PropertiesComponent</code>, however, it should rarely be used, as you should favour using the interface instead.</p>
 </div>
 </div>
 <div class="sect2">
@@ -946,7 +958,7 @@ The implementation is still named <code>org.apache.camel.component.properties.Pr
 <p>We removed <code>camel-boon</code> dataformat which wasn&#8217;t working on JDK 9 and later.</p>
 </div>
 <div class="paragraph">
-<p>We removed the <code>camel-linkedin</code> component as the Linkedin API 1.0 is no longer <a href="https://engineering.linkedin.com/blog/2018/12/developer-program-updates">supported</a>. Support for the new 2.0 API is tracked by <a href="https://issues.apache.org/jira/browse/CAMEL-13813">CAMEL-13813</a>.</p>
+<p>We removed the <code>camel-linkedin</code> component and there is no replacement.</p>
 </div>
 <div class="paragraph">
 <p>The <code>camel-zookeeper</code> has its route policy functionality removed, instead use <code>ZooKeeperClusterService</code> or the <code>camel-zookeeper-master</code> component.</p>
@@ -994,7 +1006,7 @@ The implementation is still named <code>org.apache.camel.component.properties.Pr
 <div class="sect2">
 <h3 id="_hystrix_eip"><a class="anchor" href="#_hystrix_eip"></a>Hystrix EIP</h3>
 <div class="paragraph">
-<p>The Hystrix EIP has been generalized as circuit breaker to allow to plugin other implementations.</p>
+<p>The Hystrix EIP has been generalized as a circuit breaker to allow plugging in other implementations.</p>
 </div>
 <div class="paragraph">
 <p>In the Java DSL you need to migrate from <code>.hystrix()</code> to <code>.circuitBreaker()</code>.
@@ -1075,7 +1087,7 @@ The new tracer logs messages at the <code>org.apache.camel.Tracing</code> logger
 <div class="sect2">
 <h3 id="_aggregate_eip_in_xml_dsl"><a class="anchor" href="#_aggregate_eip_in_xml_dsl"></a>&lt;aggregate&gt; EIP in XML DSL</h3>
 <div class="paragraph">
-<p>The aggregte EIP have renamed the expressions (not the attributes) for setting correlation size/timeout to avoid a name clash, so migrate:</p>
+<p>The aggregate EIP has renamed the expressions (not the attributes) for setting correlation size/timeout to avoid a name clash, so migrate:</p>
 </div>
 <div class="listingblock">
 <div class="content">
@@ -1141,23 +1153,23 @@ are collapsed as a single element like other EIPs.</p>
 <div class="sect3">
 <h4 id="_camel_cdi"><a class="anchor" href="#_camel_cdi"></a>camel-cdi</h4>
 <div class="paragraph">
-<p>Support for multiple CamelContexts has been removed, and therefore <code>@ContextName</code> has been removed. Instead use standard CDI annotations such as <code>@Named</code> and <code>@ApplicationScoped</code>.</p>
+<p>Support for multiple CamelContexts has been removed, and therefore <code>@ContextName</code> has been removed. Instead, use standard CDI annotations such as <code>@Named</code> and <code>@ApplicationScoped</code>.</p>
 </div>
 </div>
 </div>
 <div class="sect2">
 <h3 id="_javax_script"><a class="anchor" href="#_javax_script"></a>javax.script</h3>
 <div class="paragraph">
-<p>The <code>camel-script</code> component has been removed and there is no support for javax.script, which is also deprecated in the JDK and to be removed from Java 11 onwards.</p>
+<p>The <code>camel-script</code> component has been removed, and there is no support for <code>javax.script</code>, which is also deprecated in the JDK and to be removed from Java 11 onwards.</p>
 </div>
 </div>
 <div class="sect2">
 <h3 id="_attachments_api_on_message"><a class="anchor" href="#_attachments_api_on_message"></a>Attachments API on Message</h3>
 <div class="paragraph">
-<p>The attachments API (javax.activation) has been moved out of <code>org.apache.camel.message</code> into an extension <code>org.apache.camel.attachment.AttachmentMessage</code> from the <code>camel-attachments</code> JAR.</p>
+<p>The attachments API (<code>javax.activation</code>) has been moved out of <code>org.apache.camel.message</code> into an extension <code>org.apache.camel.attachment.AttachmentMessage</code> from the <code>camel-attachments</code> JAR.</p>
 </div>
 <div class="paragraph">
-<p>To use this API you can get it via the <code>getMessage</code> method on <code>Exchange</code>:</p>
+<p>To use this API, you can get it via the <code>getMessage</code> method on <code>Exchange</code>:</p>
 </div>
 <div class="literalblock">
 <div class="content">
@@ -1175,14 +1187,15 @@ am.addAttachment("myAtt", new DataHandler(...));</pre>
 <div class="sect2">
 <h3 id="_getout_on_exchange"><a class="anchor" href="#_getout_on_exchange"></a>getOut on Exchange</h3>
 <div class="paragraph">
-<p>The <code>hasOut</code> and <code>getOut</code> methods on <code>Exchange</code> has been deprecated in favour of using <code>getMessage</code> instead. (Side note: Camel-core is still using these methods in a few places to be backwards compatible and relies on this logic as Camel was initially designed with the concept of IN and OUT messages inspired by the JBI and SOAP-WS specifications.)</p>
+<p>The <code>hasOut</code> and <code>getOut</code> methods on <code>Exchange</code> has been deprecated in favour of using <code>getMessage</code> instead.
+(Side note: <code>camel-core</code> is still using these methods in a few places to be backwards compatible and relies on this logic as Camel was initially designed with the concept of IN and OUT messages inspired by the JBI and SOAP-WS specifications.)</p>
 </div>
 </div>
 <div class="sect2">
 <h3 id="_out_message_removed_from_simple_language_and_mock_component"><a class="anchor" href="#_out_message_removed_from_simple_language_and_mock_component"></a>OUT message removed from Simple language and Mock component</h3>
 <div class="paragraph">
 <p>The simple language has removed the OUT message concepts eg <code>${out.body}</code>.
-Also the mock component has removed OUT message from its assertion API, eg</p>
+Also, the mock component has removed OUT message from its assertion API, eg</p>
 </div>
 <div class="literalblock">
 <div class="content">
@@ -1190,7 +1203,7 @@ Also the mock component has removed OUT message from its assertion API, eg</p>
 </div>
 </div>
 <div class="paragraph">
-<p>Also the <code>@OutHeaders</code> annotation for bean parameter binding has been removed, instead use <code>@Headers</code> instead.</p>
+<p>Also, the <code>@OutHeaders</code> annotation for bean parameter binding has been removed, instead use <code>@Headers</code> instead.</p>
 </div>
 </div>
 <div class="sect2">
@@ -1257,14 +1270,14 @@ Also the mock component has removed OUT message from its assertion API, eg</p>
 </ul>
 </div>
 <div class="paragraph">
-<p>So you&#8217;ll have to add explicitly the dependencies for these components. From the OSGi perspective, there is still a <code>camel-aws</code> Karaf feature, which includes all the components features.</p>
+<p>So you&#8217;ll have to explicitly add the dependencies for these components. From the OSGi perspective, there is still a <code>camel-aws</code> Karaf feature, which includes all the components features.</p>
 </div>
 </div>
 <div class="sect2">
 <h3 id="_fhir"><a class="anchor" href="#_fhir"></a>FHIR</h3>
 <div class="paragraph">
 <p>The camel-fhir component has upgraded it&#8217;s hapi-fhir dependency to 4.1.0; Karaf support has been dropped until the hapi-fhir Karaf features are fixed and released.
-The default FHIR version has been changed to R4. Therefore if DSTU3 is desired it has to be explicitly set.</p>
+The default FHIR version has been changed to R4. Therefore, if DSTU3 is desired, it has to be explicitly set.</p>
 </div>
 </div>
 <div class="sect2">
@@ -1401,7 +1414,7 @@ Before the default value was "DES/CBC/PKCS5Padding".</p>
 <div class="sect2">
 <h3 id="_json_dataformat"><a class="anchor" href="#_json_dataformat"></a>JSon DataFormat</h3>
 <div class="paragraph">
-<p>The default JSon library with the JSon dataformat has changed from <code>XStream</code> to <code>Jackson</code>.</p>
+<p>The default JSON library with the JSON dataformat has changed from <code>XStream</code> to <code>Jackson</code>.</p>
 </div>
 </div>
 <div class="sect2">
@@ -1423,8 +1436,8 @@ is now RSA-SHA256 (before it was RSA-SHA1).</p>
 <div class="paragraph">
 <p>The default encryption key for the XML Security DataFormat has been removed,
 so it is now mandatory to supply the key String/bytes if you are using
-symmetric encryption. This means that some of the methods are removed that
-used the XMLSecurityDataFormat without specifying a key.</p>
+symmetric encryption. This means that some methods are removed that
+used the <code>XMLSecurityDataFormat</code> without specifying a key.</p>
 </div>
 <div class="paragraph">
 <p>In addition, the default symmetric encryption algorithm has changed from
@@ -1488,10 +1501,10 @@ Triple DES to AES-256 in GCM mode.</p>
 <div class="sect2">
 <h3 id="_checked_vs_unchecked_exceptions"><a class="anchor" href="#_checked_vs_unchecked_exceptions"></a>Checked vs unchecked exceptions</h3>
 <div class="paragraph">
-<p>Most of the Camel exception classes have been migrated to be unchecked (e.g. extends <code>RuntimeException</code>).</p>
+<p>Most of the Camel exception classes have been migrated to be unchecked (e.g., extends <code>RuntimeException</code>).</p>
 </div>
 <div class="paragraph">
-<p>Also the lifecycle of the <code>start</code>, <code>stop</code> and <code>suspend</code>, <code>resume</code> methods on <code>Service</code> and <code>SuspendableService</code> has been changed to not throw checked exceptions.</p>
+<p>Also, the lifecycle of the <code>start</code>, <code>stop</code> and <code>suspend</code>, <code>resume</code> methods on <code>Service</code> and <code>SuspendableService</code> has been changed to not throw checked exceptions.</p>
 </div>
 <div class="sect3">
 <h4 id="_generic_information"><a class="anchor" href="#_generic_information"></a>Generic Information</h4>
@@ -1592,7 +1605,7 @@ as property placeholders are already supported via Camel Main, Camel Spring Boot
 <h3 id="_camel_test"><a class="anchor" href="#_camel_test"></a>camel-test</h3>
 <div class="paragraph">
 <p>If you are using camel-test and override the <code>createRegistry</code> method, for example to register beans from the <code>JndiRegistry</code> class, then this is no longer necessary, and instead
-you should just use the <code>bind</code> method from the <code>Registry</code> API which you can call directly from <code>CamelContext</code>, such as:</p>
+you should use the <code>bind</code> method from the <code>Registry</code> API which you can call directly from <code>CamelContext</code>, such as:</p>
 </div>
 <div class="literalblock">
 <div class="content">
@@ -1771,7 +1784,7 @@ RouteReifier.adviceWith(mcc.getRouteDefinition("start"), mcc, new AdviceWithRout
 <div class="sect2">
 <h3 id="_removed_jmx_apis_for_explaining_eips_components_etc"><a class="anchor" href="#_removed_jmx_apis_for_explaining_eips_components_etc"></a>Removed JMX APIs for explaining EIPs, components, etc.</h3>
 <div class="paragraph">
-<p>The APIs that could find, and explain EIPs, components, endpoints etc. has been removed. These APIs have little value for production runtimes, and you can obtain this kind of information via the <code>camel-catalog</code>. Also the related Camel Karaf commands that used these APIs has been removed.</p>
+<p>The APIs that could find, and explain EIPs, components, endpoints, etc. have been removed. These APIs have little value for production runtimes, and you can obtain this kind of information via the <code>camel-catalog</code>. Also the related Camel Karaf commands that used these APIs has been removed.</p>
 </div>
 </div>
 <div class="sect2">

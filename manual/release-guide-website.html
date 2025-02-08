@@ -3,15 +3,15 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>Updating the website after a release :: Red Hat Apache Build of Apache Camel Manual</title>
-    <meta name="generator" content="Antora 3.0.3">
+    <title>Updating the website after a release :: Red Hat build of Apache Camel</title>
+    <meta name="generator" content="Antora 3.1.4">
     <link rel="stylesheet" href="../_/css/site.css">
   </head>
   <body class="article">
 <header class="header">
   <nav class="navbar">
     <div class="navbar-brand">
-      <a class="navbar-item" href="../../manual/index.html">Red Hat Apache Build of Apache Camel Manual</a>
+      <a class="navbar-item" href="/">Red Hat build of Apache Camel</a>
       <button class="navbar-burger" data-target="topbar-nav">
         <span></span>
         <span></span>
@@ -26,6 +26,7 @@
     <div class="panels">
 <div class="nav-panel-menu is-active" data-panel="menu">
   <nav class="nav-menu">
+    <button class="nav-menu-toggle" aria-label="Toggle expand/collapse all" style="display: none"></button>
     <h3 class="title"><a href="index.html">User manual</a></h3>
 <ul class="nav-list">
   <li class="nav-item" data-depth="0">
@@ -56,7 +57,16 @@
     <a class="nav-link" href="camel-console.html">Camel Developer Console</a>
   </li>
   <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
     <a class="nav-link" href="camel-jbang.html">Camel JBang</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="camel-jbang-kubernetes.html">Camel Kubernetes plugin</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="camel-jbang-k.html">Camel K plugin</a>
+  </li>
+</ul>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="camel-maven-plugin.html">Camel Maven Plugin</a>
@@ -95,6 +105,9 @@
     <a class="nav-link" href="using-propertyplaceholder.html">How to use Camel property placeholders</a>
   </li>
   <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="variables.html">How to use Variables</a>
+  </li>
+  <li class="nav-item" data-depth="2">
     <button class="nav-item-toggle"></button>
     <a class="nav-link" href="testing.html">Testing</a>
 <ul class="nav-list">
@@ -110,7 +123,13 @@
 </ul>
   </li>
   <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
     <a class="nav-link" href="rest-dsl.html">Working with REST and Rest DSL</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="rest-dsl-openapi.html">Rest DSL contract first</a>
+  </li>
+</ul>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="writing-components.html">Writing Components</a>
@@ -477,9 +496,6 @@
     <a class="nav-link" href="faq/how-should-i-invoke-my-pojos-or-spring-services.html">How should I invoke my POJOs or Spring Services?</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="faq/how-to-avoid-importing-bunch-of-cxf-packages-when-start-up-the-camel-cxf-endpoint-from-osgi-platform-.html">How to avoid importing bunch of cxf packages when start up the camel-cxf endpoint from OSGi platform?</a>
-  </li>
-  <li class="nav-item" data-depth="2">
     <a class="nav-link" href="faq/how-to-avoid-sending-some-or-all-message-headers.html">How to avoid sending some or all message headers?</a>
   </li>
   <li class="nav-item" data-depth="2">
@@ -598,11 +614,11 @@
 <div class="nav-panel-explore" data-panel="explore">
   <div class="context">
     <span class="title">User manual</span>
-    <span class="version">default</span>
+    <span class="version"></span>
   </div>
   <ul class="components">
     <li class="component">
-      <a class="title" href="../components/next/index.html">Camel Components</a>
+      <div class="title"><a href="../components/next/index.html">Camel Components</a></div>
       <ul class="versions">
         <li class="version is-latest">
           <a href="../components/next/index.html">Next (Pre-release)</a>
@@ -610,12 +626,7 @@
       </ul>
     </li>
     <li class="component is-current">
-      <a class="title" href="index.html">User manual</a>
-      <ul class="versions">
-        <li class="version is-current is-latest">
-          <a href="index.html">default</a>
-        </li>
-      </ul>
+      <div class="title"><a href="index.html">User manual</a></div>
     </li>
   </ul>
 </div>
@@ -634,6 +645,7 @@
     <li><a href="release-guide-website.html">Adding doc versions to the website</a></li>
   </ul>
 </nav>
+<div class="edit-this-page"><a href="file:///code/jboss/jboss-camel/docs/user-manual/modules/ROOT/pages/release-guide-website.adoc">Edit this Page</a></div>
 </div>
   <div class="content">
 <aside class="toc sidebar" data-title="Contents" data-levels="2">
@@ -644,7 +656,7 @@
 <div id="preamble">
 <div class="sectionbody">
 <div class="paragraph">
-<p>Most steps are the same for all releases although some details may vary.
+<p>Most steps are the same for all releases, although some details may vary.
 There are several cases:</p>
 </div>
 <div class="ulist">
@@ -656,7 +668,7 @@ There are several cases:</p>
 <p>A set of separately versioned repositories, such as <code>camel-k</code>, <code>camel-k-runtime</code>, and <code>camel-kamelets</code>.</p>
 </li>
 <li>
-<p>The set of main <code>camel</code>, <code>camel-spring-boot</code>, and <code>camel-karaf</code> which are versioned together.</p>
+<p>The set of main <code>camel</code> and <code>camel-spring-boot</code> which are versioned together.</p>
 </li>
 </ul>
 </div>
@@ -670,15 +682,15 @@ For instance, <code>camel:docs/components/antora.yml</code> for the <code>docs/c
 </div>
 </div>
 <div class="sect1">
-<h2 id="_after_new_release_branches_are_created_in_all_affected_content_repositories"><a class="anchor" href="#_after_new_release_branches_are_created_in_all_affected_content_repositories"></a>After new release branches are created in all affected content repositories</h2>
+<h2 id="_after_the_new_release_branches_are_created_in_all_affected_content_repositories"><a class="anchor" href="#_after_the_new_release_branches_are_created_in_all_affected_content_repositories"></a>After the new release, branches are created in all affected content repositories</h2>
 <div class="sectionbody">
 <div class="paragraph">
 <p>These will always be branches from <code>main</code>.
-Changes to all the new branches, e.g. <code>camel-3.13.x</code>, will be needed.
+Changes to all the new branches, e.g. <code>camel-3.13.x</code>, will be necessary.
 The changes are almost the same whether the new branch is LTS or not.</p>
 </div>
 <div class="sect2">
-<h3 id="_changes_to_the_new_branches_e_g_camel_3_13_x_in_affected_content_repositories"><a class="anchor" href="#_changes_to_the_new_branches_e_g_camel_3_13_x_in_affected_content_repositories"></a>Changes to the new branches ( e.g. <code>camel-3.13.x</code>) in affected content repositories</h3>
+<h3 id="_changes_to_the_new_branches_e_g_camel_3_13_x_in_affected_content_repositories"><a class="anchor" href="#_changes_to_the_new_branches_e_g_camel_3_13_x_in_affected_content_repositories"></a>Changes to the new branches (e.g. <code>camel-3.13.x</code>) in affected content repositories</h3>
 <div class="olist arabic">
 <ol class="arabic">
 <li>
@@ -730,7 +742,7 @@ These represent the other camel subprojects this one depends on.</p>
 <p>For subprojects outside the current release set, these will not change on release.</p>
 </li>
 <li>
-<p>For subprojects in the same release set, such as <code>camel</code>, <code>camel-spring-boot</code>, and <code>camel-karaf</code>, these versions will need to be updated to refer to the new version of the other subproject.</p>
+<p>For subprojects in the same release set, such as <code>camel</code> and <code>camel-spring-boot</code>, these versions will need to be updated to refer to the new version of the other subproject.</p>
 </li>
 </ul>
 </div>
@@ -805,35 +817,11 @@ Note that your <code>camel-website</code> PR will definitely need to be merged a
 <div class="sect2">
 <h3 id="_notes_for_specific_projects"><a class="anchor" href="#_notes_for_specific_projects"></a>Notes for specific projects</h3>
 <div class="sect3">
-<h4 id="_camel_karaf"><a class="anchor" href="#_camel_karaf"></a>camel-karaf</h4>
-<div class="dlist">
-<dl>
-<dt class="hdlist1">In <code>camel-karaf:tooling/camel-karaf-docs-maven-plugin/src/main/java/org/apache/camel/karaf/maven/ExtMvelHelper.java</code></dt>
-<dd>
-<p>change</p>
-<div class="listingblock">
-<div class="content">
-<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">private final static String CAMEL_VERSION = "next";`</code></pre>
-</div>
-</div>
-<div class="paragraph">
-<p>to e.g.</p>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">private final static String CAMEL_VERSION = "3.13.x";</code></pre>
-</div>
-</div>
-</dd>
-</dl>
-</div>
-</div>
-<div class="sect3">
 <h4 id="_camel_quarkus"><a class="anchor" href="#_camel_quarkus"></a>camel-quarkus</h4>
 <div class="paragraph">
 <p>Many of the versions in the <code>antora.yml</code> component descriptor are set by the maven build from <code>pom.xml</code> properties.
 Check that these have appropriate values after running the build.
-If the build sets inappropriate values consider fixing or disabling the groovy script.</p>
+If the build sets inappropriate values, consider fixing or disabling the groovy script.</p>
 </div>
 </div>
 </div>
@@ -843,7 +831,7 @@ If the build sets inappropriate values consider fixing or disabling the groovy s
 <h2 id="_removing_obsolete_component_versions"><a class="anchor" href="#_removing_obsolete_component_versions"></a>Removing obsolete component versions</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>After each releease, it may be possible to remove old versions of the subprojects documentation.
+<p>After each release, it may be possible to remove old versions of the documentation from subprojects.
 This depends on whether any current versions of other subprojects depend on the old subproject versions.</p>
 </div>
 <div class="paragraph">
@@ -851,7 +839,8 @@ This depends on whether any current versions of other subprojects depend on the 
 If there are errors from broken xrefs pointing to the removed version, put them back.</p>
 </div>
 <div class="paragraph">
-<p>You can also examine the component descriptors of the older versions of subprojects that depend on the current subproject, but it is not obvious how to determine which these are without looking at all of them.</p>
+<p>You can also examine the component descriptors of older versions of subprojects that depend on the current subproject,
+but it is not obvious how to determine which these are without looking at all of them.</p>
 </div>
 </div>
 </div>

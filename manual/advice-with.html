@@ -3,15 +3,15 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>AdviceWith :: Red Hat Apache Build of Apache Camel Manual</title>
-    <meta name="generator" content="Antora 3.0.3">
+    <title>AdviceWith :: Red Hat build of Apache Camel</title>
+    <meta name="generator" content="Antora 3.1.4">
     <link rel="stylesheet" href="../_/css/site.css">
   </head>
   <body class="article">
 <header class="header">
   <nav class="navbar">
     <div class="navbar-brand">
-      <a class="navbar-item" href="../../manual/index.html">Red Hat Apache Build of Apache Camel Manual</a>
+      <a class="navbar-item" href="/">Red Hat build of Apache Camel</a>
       <button class="navbar-burger" data-target="topbar-nav">
         <span></span>
         <span></span>
@@ -26,6 +26,7 @@
     <div class="panels">
 <div class="nav-panel-menu is-active" data-panel="menu">
   <nav class="nav-menu">
+    <button class="nav-menu-toggle" aria-label="Toggle expand/collapse all" style="display: none"></button>
     <h3 class="title"><a href="index.html">User manual</a></h3>
 <ul class="nav-list">
   <li class="nav-item" data-depth="0">
@@ -56,7 +57,16 @@
     <a class="nav-link" href="camel-console.html">Camel Developer Console</a>
   </li>
   <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
     <a class="nav-link" href="camel-jbang.html">Camel JBang</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="camel-jbang-kubernetes.html">Camel Kubernetes plugin</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="camel-jbang-k.html">Camel K plugin</a>
+  </li>
+</ul>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="camel-maven-plugin.html">Camel Maven Plugin</a>
@@ -95,6 +105,9 @@
     <a class="nav-link" href="using-propertyplaceholder.html">How to use Camel property placeholders</a>
   </li>
   <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="variables.html">How to use Variables</a>
+  </li>
+  <li class="nav-item" data-depth="2">
     <button class="nav-item-toggle"></button>
     <a class="nav-link" href="testing.html">Testing</a>
 <ul class="nav-list">
@@ -110,7 +123,13 @@
 </ul>
   </li>
   <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
     <a class="nav-link" href="rest-dsl.html">Working with REST and Rest DSL</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="rest-dsl-openapi.html">Rest DSL contract first</a>
+  </li>
+</ul>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="writing-components.html">Writing Components</a>
@@ -477,9 +496,6 @@
     <a class="nav-link" href="faq/how-should-i-invoke-my-pojos-or-spring-services.html">How should I invoke my POJOs or Spring Services?</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="faq/how-to-avoid-importing-bunch-of-cxf-packages-when-start-up-the-camel-cxf-endpoint-from-osgi-platform-.html">How to avoid importing bunch of cxf packages when start up the camel-cxf endpoint from OSGi platform?</a>
-  </li>
-  <li class="nav-item" data-depth="2">
     <a class="nav-link" href="faq/how-to-avoid-sending-some-or-all-message-headers.html">How to avoid sending some or all message headers?</a>
   </li>
   <li class="nav-item" data-depth="2">
@@ -598,11 +614,11 @@
 <div class="nav-panel-explore" data-panel="explore">
   <div class="context">
     <span class="title">User manual</span>
-    <span class="version">default</span>
+    <span class="version"></span>
   </div>
   <ul class="components">
     <li class="component">
-      <a class="title" href="../components/next/index.html">Camel Components</a>
+      <div class="title"><a href="../components/next/index.html">Camel Components</a></div>
       <ul class="versions">
         <li class="version is-latest">
           <a href="../components/next/index.html">Next (Pre-release)</a>
@@ -610,12 +626,7 @@
       </ul>
     </li>
     <li class="component is-current">
-      <a class="title" href="index.html">User manual</a>
-      <ul class="versions">
-        <li class="version is-current is-latest">
-          <a href="index.html">default</a>
-        </li>
-      </ul>
+      <div class="title"><a href="index.html">User manual</a></div>
     </li>
   </ul>
 </div>
@@ -634,6 +645,7 @@
     <li><a href="advice-with.html">AdviceWith</a></li>
   </ul>
 </nav>
+<div class="edit-this-page"><a href="file:///code/jboss/jboss-camel/docs/user-manual/modules/ROOT/pages/advice-with.adoc">Edit this Page</a></div>
 </div>
   <div class="content">
 <aside class="toc sidebar" data-title="Contents" data-levels="2">
@@ -754,7 +766,7 @@ the most commonly used methods:</p>
 </ul>
 </div>
 <div class="paragraph">
-<p>For example to match exact you can use <code>weaveById("foo")</code> which will match only the id in the route which has the value foo.
+<p>For example, to match exact, you can use <code>weaveById("foo")</code> which will match only the id in the route which has the value foo.
 The wildcard is when the pattern ends with a <code>*</code> character, such as: <code>weaveById("foo*")</code> which will match any id&#8217;s starting with foo, such as: foo, foobar, foobie and so forth.
 The regular expression is more advanced and allows you to match multiple ids, such as <code>weaveById("(foo|bar)")</code> which will match both foo and bar.</p>
 </div>
@@ -762,7 +774,7 @@ The regular expression is more advanced and allows you to match multiple ids, su
 <p>If you try to match a pattern on an exact endpoint URI, then mind that URI options ordering may influence, and hence it&#8217;s best to match by wildcard.</p>
 </div>
 <div class="paragraph">
-<p>For example using <code>mockEndpointsAndSkip("activemq:queue:foo?*")</code> To match the foo queue and disregard any options.</p>
+<p>For example, using <code>mockEndpointsAndSkip("activemq:queue:foo?*")</code> To match the foo queue and disregard any options.</p>
 </div>
 </div>
 </div>
@@ -772,7 +784,7 @@ The regular expression is more advanced and allows you to match multiple ids, su
 <div class="sectionbody">
 <div class="paragraph">
 <p>To <em>advice</em> you need to use the <code>AdviceWithRouteBuilder</code> for manipulating the route.
-But first you need to select which route to manipulate which you can do by the route ID or the route index.</p>
+But first, you need to select which route to manipulate which you can do by the route ID or the route index.</p>
 </div>
 <div class="listingblock">
 <div class="content">
@@ -788,7 +800,7 @@ But first you need to select which route to manipulate which you can do by the r
 <p>We introduce a more modern API for <em>advicing</em> routes using Java lambda style.</p>
 </div>
 <div class="paragraph">
-<p>Below we are <em>advicing</em> the route with ID myRoute:</p>
+<p>Below, we are <em>advicing</em> the route with ID myRoute:</p>
 </div>
 <div class="listingblock">
 <div class="content">
@@ -844,7 +856,7 @@ This is solved by following the following steps:</p>
 <div class="olist arabic">
 <ol class="arabic">
 <li>
-<p>Tell Camel that routes are being <em>adviced</em>, which will prevent Camel from automatic starting routes.</p>
+<p>Tell Camel that routes are being <em>adviced</em>, which will prevent Apache Camel from automatic starting routes.</p>
 </li>
 <li>
 <p>Advice the routes in your unit test methods</p>
@@ -855,7 +867,7 @@ This is solved by following the following steps:</p>
 </ol>
 </div>
 <div class="paragraph">
-<p>When using <a href="../components/next/others/test-junit5.html" class="xref page">camel-test-junit5</a> for unit testing then you can tell Camel that advice is in use by either
+<p>When using <a href="../components/next/others/test-junit5.html" class="xref page">camel-test-junit5</a> for unit testing, then you can tell Camel that advice is in use by either
 overriding the <code>isUsedAdviceWith</code> method from <code>CamelTestSupport</code> as shown:</p>
 </div>
 <div class="listingblock">
@@ -893,7 +905,7 @@ public void testMockEndpoints() throws Exception {
 </div>
 </div>
 <div class="paragraph">
-<p>In the unit test method above, we first advice the route by ID, where we auto mock all the endpoints.
+<p>In the unit test method above, we first advise the route by ID, where we auto mock all the endpoints.
 After that we start Camel.</p>
 </div>
 </div>
@@ -954,14 +966,14 @@ public void testReplaceFrom() throws Exception {
 </div>
 <div class="paragraph">
 <p>This replaces the input endpoint (from) in the route with ID myRoute, with a direct endpoint, which makes it
-easy to send message to the route when unit testing.</p>
+easy to send a message to the route when unit testing.</p>
 </div>
 </div>
 <div class="sect2">
 <h3 id="_mocking_endpoints"><a class="anchor" href="#_mocking_endpoints"></a>Mocking endpoints</h3>
 <div class="paragraph">
 <p>When using the <code>mockEndpoints</code> methods when <em>advicing</em> routes, then Camel will log during startup
-which endpoints has been <em>adviced</em> and their corresponding mock uri, such as:</p>
+which endpoints have been <em>adviced</em> and their corresponding mock uri, such as:</p>
 </div>
 <div class="listingblock">
 <div class="content">
@@ -983,7 +995,7 @@ INFO  ceptSendToMockEndpointStrategy - Adviced endpoint [seda://other] with mock
 </ul>
 </div>
 <div class="paragraph">
-<p>This allows to use the mock endpoints in your unit tests for testing, such as:</p>
+<p>This allows using the mock endpoints in your unit tests for testing, such as:</p>
 </div>
 <div class="listingblock">
 <div class="content">
@@ -1045,7 +1057,7 @@ of the route manipulation capabilities available. The following section covers h
 </tbody>
 </table>
 <div class="paragraph">
-<p>For example given the following route:</p>
+<p>For example, given the following route:</p>
 </div>
 <div class="listingblock">
 <div class="content">
@@ -1245,10 +1257,10 @@ the selection to a specific node. This can be done by using the select methods:<
 <p><code>selectLast</code> Selects only the last node.</p>
 </li>
 <li>
-<p><code>selectIndex(index)</code> Selects only the nth node. The index is zero based.</p>
+<p><code>selectIndex(index)</code> Selects only the nth node. The index is zero-based.</p>
 </li>
 <li>
-<p><code>selectRange(from, to)</code> Selects the nodes within the given range. The index is zero based.</p>
+<p><code>selectRange(from, to)</code> Selects the nodes within the given range. The index is zero-based.</p>
 </li>
 <li>
 <p><code>maxDeep(level)</code> Limits the selection to at most N levels deep in the Camel route tree. The first level is number 1. So number 2 is the children of the first-level nodes.</p>
@@ -1257,7 +1269,7 @@ the selection to a specific node. This can be done by using the select methods:<
 </div>
 <div class="paragraph">
 <p>Given the following route which has multiple <a href="../components/next/eips/filter-eip.html" class="xref page">Filter</a> EIP,
-then we want to only advice the 2nd filter.</p>
+then we want to only advise the second filter.</p>
 </div>
 <div class="listingblock">
 <div class="content">
@@ -1277,7 +1289,7 @@ then we want to only advice the 2nd filter.</p>
 </div>
 </div>
 <div class="paragraph">
-<p>You can then use <code>weaveByType</code> to match the Filter EIPs and selectIndex to match the 2nd found:</p>
+<p>You can then use <code>weaveByType</code> to match the Filter EIPs and selectIndex to match the second found:</p>
 </div>
 <div class="listingblock">
 <div class="content">

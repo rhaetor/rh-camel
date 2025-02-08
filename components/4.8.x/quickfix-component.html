@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>QuickFix :: Red Hat Camel Reference</title>
+    <title>QuickFix :: Red Hat build of Apache Camel</title>
     <meta name="description" content="Open a Financial Interchange (FIX) session using an embedded QuickFix/J engine.">
     <meta name="generator" content="Antora 3.1.4">
     <link rel="stylesheet" href="../../_/css/site.css">
@@ -12,7 +12,7 @@
 <header class="header">
   <nav class="navbar">
     <div class="navbar-brand">
-      <a class="navbar-item" href="../../manual/index.html">Red Hat Apache Build of Apache Camel Manual</a>
+      <a class="navbar-item" href="/">Red Hat build of Apache Camel</a>
       <button class="navbar-burger" data-target="topbar-nav">
         <span></span>
         <span></span>
@@ -27,6 +27,7 @@
     <div class="panels">
 <div class="nav-panel-menu is-active" data-panel="menu">
   <nav class="nav-menu">
+    <button class="nav-menu-toggle" aria-label="Toggle expand/collapse all" style="display: none"></button>
     <h3 class="title"><a href="index.html">Camel Components</a></h3>
 <ul class="nav-list">
   <li class="nav-item" data-depth="0">
@@ -36,7 +37,46 @@
     <a class="nav-link" href="index.html">Components</a>
 <ul class="nav-list">
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="activemq-component.html">ActiveMQ</a>
+    <a class="nav-link" href="activemq-component.html">ActiveMQ 5.x</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="activemq6-component.html">ActiveMQ 6.x</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="ai-summary.html">AI</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="chatscript-component.html">ChatScript</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="djl-component.html">Deep Java Library</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="langchain4j-chat-component.html">LangChain4j Chat</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="langchain4j-embeddings-component.html">LangChain4j Embeddings</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="langchain4j-tokenizer-component.html">LangChain4j Tokenizer</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="langchain4j-tools-component.html">LangChain4j Tools</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="langchain4j-web-search-component.html">LangChain4j Web Search</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="milvus-component.html">Milvus</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="pinecone-component.html">Pinecone</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="qdrant-component.html">Qdrant</a>
+  </li>
+</ul>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="amqp-component.html">AMQP</a>
@@ -65,6 +105,15 @@
 <ul class="nav-list">
   <li class="nav-item" data-depth="3">
     <a class="nav-link" href="aws2-athena-component.html">AWS Athena</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="aws-bedrock-component.html">AWS Bedrock</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="aws-bedrock-agent-component.html">AWS Bedrock Agent</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="aws-bedrock-agent-runtime-component.html">AWS Bedrock Agent Runtime</a>
   </li>
   <li class="nav-item" data-depth="3">
     <a class="nav-link" href="aws-cloudtrail-component.html">AWS Cloudtrail</a>
@@ -169,7 +218,7 @@
     <a class="nav-link" href="azure-storage-blob-component.html">Azure Storage Blob Service</a>
   </li>
   <li class="nav-item" data-depth="3">
-    <a class="nav-link" href="azure-storage-datalake-component.html">Azure Storage Datalake Service</a>
+    <a class="nav-link" href="azure-storage-datalake-component.html">Azure Storage Data Lake Service</a>
   </li>
   <li class="nav-item" data-depth="3">
     <a class="nav-link" href="azure-storage-queue-component.html">Azure Storage Queue Service</a>
@@ -202,9 +251,6 @@
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="cql-component.html">Cassandra CQL</a>
-  </li>
-  <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="chatscript-component.html">ChatScript</a>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="chunk-component.html">Chunk</a>
@@ -277,9 +323,6 @@
     <a class="nav-link" href="debezium-sqlserver-component.html">Debezium SQL Server Connector</a>
   </li>
 </ul>
-  </li>
-  <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="djl-component.html">Deep Java Library</a>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="dhis2-component.html">DHIS2</a>
@@ -395,6 +438,9 @@
   </li>
   <li class="nav-item" data-depth="3">
     <a class="nav-link" href="google-pubsub-component.html">Google Pubsub</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="google-pubsub-lite-component.html">Google PubSub Lite</a>
   </li>
   <li class="nav-item" data-depth="3">
     <a class="nav-link" href="google-secret-manager-component.html">Google Secret Manager</a>
@@ -687,7 +733,7 @@
     <a class="nav-link" href="ldif-component.html">LDIF</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="log-component.html">Log</a>
+    <a class="nav-link" href="log-component.html">Log Data</a>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="lucene-component.html">Lucene</a>
@@ -900,16 +946,49 @@
     <a class="nav-link" href="smb-component.html">SMB</a>
   </li>
   <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="smooks-component.html">Smooks</a>
+  </li>
+  <li class="nav-item" data-depth="2">
     <a class="nav-link" href="smpp-component.html">SMPP</a>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="snmp-component.html">SNMP</a>
   </li>
   <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="solr-component.html">Solr</a>
+  </li>
+  <li class="nav-item" data-depth="2">
     <a class="nav-link" href="splunk-component.html">Splunk</a>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="splunk-hec-component.html">Splunk HEC</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="spring-summary.html">Spring</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="spring-batch-component.html">Spring Batch</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="spring-event-component.html">Spring Event</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="spring-jdbc-component.html">Spring JDBC</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="spring-ldap-component.html">Spring LDAP</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="spring-rabbitmq-component.html">Spring RabbitMQ</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="spring-redis-component.html">Spring Redis</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="spring-ws-component.html">Spring WebService</a>
+  </li>
+</ul>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="sql-component.html">SQL</a>
@@ -937,6 +1016,18 @@
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="stub-component.html">Stub</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="tahu-summary.html">Tahu</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="tahu-edge-component.html">Tahu Edge Node / Device</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="tahu-host-component.html">Tahu Host Application</a>
+  </li>
+</ul>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="telegram-component.html">Telegram</a>
@@ -999,7 +1090,7 @@
     <a class="nav-link" href="whatsapp-component.html">WhatsApp</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="wordpress-component.html">Wordpress</a>
+    <a class="nav-link" href="wordpress-component.html">WordPress</a>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="workday-component.html">Workday</a>
@@ -1392,7 +1483,13 @@
     <a class="nav-link" href="others/openapi-java.html">Openapi Java</a>
   </li>
   <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="others/openapi-validator.html">Openapi Validator</a>
+  </li>
+  <li class="nav-item" data-depth="2">
     <a class="nav-link" href="others/opentelemetry.html">OpenTelemetry</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="others/platform-http-jolokia.html">Platform HTTP Jolokia</a>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="others/platform-http-main.html">Platform Http Main</a>
@@ -1540,7 +1637,7 @@
     <a class="nav-link" href="eips/event-message.html">Event Message</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="eips/failover-eip.html">Failover</a>
+    <a class="nav-link" href="eips/failoverLoadBalancer-eip.html">Failover Load Balancer</a>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="eips/faultToleranceConfiguration-eip.html">Fault Tolerance Configuration</a>
@@ -1570,13 +1667,13 @@
     <a class="nav-link" href="eips/loadBalance-eip.html">Load Balance</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="eips/log-eip.html">Log</a>
+    <a class="nav-link" href="eips/log-eip.html">Logger</a>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="eips/loop-eip.html">Loop</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="eips/marshal-eip.html">Marshal EIP</a>
+    <a class="nav-link" href="eips/marshal-eip.html">Marshal</a>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="eips/message.html">Message</a>
@@ -1633,6 +1730,9 @@
     <a class="nav-link" href="eips/point-to-point-channel.html">Point to Point Channel</a>
   </li>
   <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="eips/poll-eip.html">Poll</a>
+  </li>
+  <li class="nav-item" data-depth="2">
     <a class="nav-link" href="eips/pollEnrich-eip.html">Poll Enrich</a>
   </li>
   <li class="nav-item" data-depth="2">
@@ -1648,7 +1748,7 @@
     <a class="nav-link" href="eips/publish-subscribe-channel.html">Publish Subscribe Channel</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="eips/random-eip.html">Random</a>
+    <a class="nav-link" href="eips/randomLoadBalancer-eip.html">Random Load Balancer</a>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="eips/recipientList-eip.html">Recipient List</a>
@@ -1690,7 +1790,7 @@
     <a class="nav-link" href="eips/rollback-eip.html">Rollback</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="eips/roundRobin-eip.html">Round Robin</a>
+    <a class="nav-link" href="eips/roundRobinLoadBalancer-eip.html">Round Robin Load Balancer</a>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="eips/routingSlip-eip.html">Routing Slip</a>
@@ -1702,7 +1802,7 @@
     <a class="nav-link" href="eips/sample-eip.html">Sample</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="eips/scatter-gather.html">Scatter Gather</a>
+    <a class="nav-link" href="eips/scatter-gather.html">Scatter-Gather</a>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="eips/script-eip.html">Script</a>
@@ -1732,6 +1832,9 @@
     <a class="nav-link" href="eips/setVariable-eip.html">Set Variable</a>
   </li>
   <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="eips/setVariables-eip.html">Set Variables</a>
+  </li>
+  <li class="nav-item" data-depth="2">
     <a class="nav-link" href="eips/sort-eip.html">Sort</a>
   </li>
   <li class="nav-item" data-depth="2">
@@ -1741,7 +1844,7 @@
     <a class="nav-link" href="eips/step-eip.html">Step</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="eips/sticky-eip.html">Sticky</a>
+    <a class="nav-link" href="eips/stickyLoadBalancer-eip.html">Sticky Load Balancer</a>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="eips/stop-eip.html">Stop</a>
@@ -1762,7 +1865,7 @@
     <a class="nav-link" href="eips/toD-eip.html">To D</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="eips/topic-eip.html">Topic</a>
+    <a class="nav-link" href="eips/topicLoadBalancer-eip.html">Topic Load Balancer</a>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="eips/transactional-client.html">Transactional Client</a>
@@ -1771,13 +1874,13 @@
     <a class="nav-link" href="eips/transform-eip.html">Transform</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="eips/unmarshal-eip.html">Unmarshal EIP</a>
+    <a class="nav-link" href="eips/unmarshal-eip.html">Unmarshal</a>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="eips/validate-eip.html">Validate</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="eips/weighted-eip.html">Weighted</a>
+    <a class="nav-link" href="eips/weightedLoadBalancer-eip.html">Weighted Load Balancer</a>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="eips/wireTap-eip.html">Wire Tap</a>
@@ -1796,7 +1899,7 @@
   </div>
   <ul class="components">
     <li class="component is-current">
-      <a class="title" href="index.html">Camel Components</a>
+      <div class="title"><a href="index.html">Camel Components</a></div>
       <ul class="versions">
         <li class="version is-current is-latest">
           <a href="index.html">Next (Pre-release)</a>
@@ -1804,12 +1907,7 @@
       </ul>
     </li>
     <li class="component">
-      <a class="title" href="../../manual/index.html">User manual</a>
-      <ul class="versions">
-        <li class="version is-latest">
-          <a href="../../manual/index.html">default</a>
-        </li>
-      </ul>
+      <div class="title"><a href="../../manual/index.html">User manual</a></div>
     </li>
   </ul>
 </div>
@@ -1827,6 +1925,7 @@
     <li><a href="quickfix-component.html">QuickFix</a></li>
   </ul>
 </nav>
+<div class="edit-this-page"><a href="file:///code/jboss/jboss-camel/docs/components/modules/ROOT/pages/quickfix-component.adoc">Edit this Page</a></div>
 </div>
   <div class="content">
 <aside class="toc sidebar" data-title="Contents" data-levels="2">
@@ -1844,7 +1943,7 @@
 </div>
 <div class="paragraph">
 <p>The Quickfix component adapts the
-<a href="http://www.quickfixj.org/">QuickFIX/J</a> FIX engine for using in Camel .
+<a href="http://www.quickfixj.org/">QuickFIX/J</a> FIX engine for using in Camel.
 This component uses the standard <a href="http://www.fixprotocol.org/">Financial
 Interchange (FIX) protocol</a> for message transport.</p>
 </div>
@@ -1873,9 +1972,9 @@ for this component:</p>
 </div>
 </div>
 <div class="paragraph">
-<p>The <strong>configFile</strong> is the name of the QuickFIX/J configuration to use for
+<p>The <code>configFile</code> is the name of the QuickFIX/J configuration to use for
 the FIX engine (located as a resource found in your classpath). The
-optional <strong>sessionID</strong> identifies a specific FIX session. The format of
+optional <code>sessionID</code> identifies a specific FIX session. The format of
 the sessionID is:</p>
 </div>
 <div class="listingblock">
@@ -1884,17 +1983,28 @@ the sessionID is:</p>
 </div>
 </div>
 <div class="paragraph">
-<p>The optional <strong>lazyCreateEngine</strong> parameter allows to
-create QuickFIX/J engine on demand. Value <strong>true</strong> means the engine is
-started when first message is send or there&#8217;s consumer configured in
-route definition. When <strong>false</strong> value is used, the engine is started at
-the endpoint creation. When this parameter is missing, the value of
-component&#8217;s property <strong>lazyCreateEngines</strong> is being used.</p>
+<p>The optional <code>lazyCreateEngine</code> parameter allows
+creating QuickFIX/J engine on demand:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>The value <code>true</code> means the engine is
+started when the first message is sent or there&#8217;s consumer configured in
+route definition.</p>
+</li>
+<li>
+<p>When the value <code>false</code> is used, the engine is started at
+the endpoint creation.</p>
+</li>
+</ul>
 </div>
 <div class="paragraph">
-<p>Example URIs:</p>
+<p>When this parameter is missing, the value of
+component&#8217;s property <code>lazyCreateEngines</code> is being used.</p>
 </div>
 <div class="listingblock">
+<div class="title">Example URIs:</div>
 <div class="content">
 <pre>quickfix:config.cfg
 
@@ -1909,19 +2019,19 @@ quickfix:config.cfg?sessionID=FIX.4.2:MyTradingCompany-&gt;SomeExchange&amp;lazy
 <h2 id="_endpoints"><a class="anchor" href="#_endpoints"></a>Endpoints</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>FIX sessions are endpoints for the <strong>quickfix</strong> component. An endpoint URI
+<p>FIX sessions are endpoints for the quickfix component. An endpoint URI
 may specify a single session or all sessions managed by a specific
-QuickFIX/J engine. Typical applications will use only one FIX engine but
+QuickFIX/J engine. Typical applications will use only one FIX engine, but
 advanced users may create multiple FIX engines by referencing different
-configuration files in <strong>quickfix</strong> component endpoint URIs.</p>
+configuration files in quickfix component endpoint URIs.</p>
 </div>
 <div class="paragraph">
 <p>When a consumer does not include a session ID in the endpoint URI, it
 will receive exchanges for all sessions managed by the FIX engine
 associated with the configuration file specified in the URI. If a
-producer does not specify a session in the endpoint URI then it must
+producer does not specify a session in the endpoint URI, then it must
 include the session-related fields in the FIX message being sent. If a
-session is specified in the URI then the component will automatically
+session is specified in the URI, then the component will automatically
 inject the session-related fields into the FIX message.</p>
 </div>
 </div>
@@ -1945,37 +2055,65 @@ inject the session-related fields into the FIX message.</p>
 <div class="sect2">
 <h3 id="_configuring_component_options"><a class="anchor" href="#_configuring_component_options"></a>Configuring Component Options</h3>
 <div class="paragraph">
-<p>The component level is the highest level which holds general and common configurations that are inherited by the endpoints.
-For example a component may have security settings, credentials for authentication, urls for network connection and so forth.</p>
+<p>At the component level, you set general and shared configurations that are, then, inherited by the endpoints. It is the highest configuration level.</p>
 </div>
 <div class="paragraph">
-<p>Some components only have a few options, and others may have many. Because components typically have pre configured defaults
-that are commonly used, then you may often only need to configure a few options on a component; or none at all.</p>
+<p>For example, a component may have security settings, credentials for authentication, urls for network connection and so forth.</p>
 </div>
 <div class="paragraph">
-<p>Configuring components can be done with the <a href="../../manual/component-dsl.html" class="xref page">Component DSL</a>,
-in a configuration file (application.properties|yaml), or directly with Java code.</p>
+<p>Some components only have a few options, and others may have many.
+Because components typically have pre-configured defaults that are commonly used, then you may often only need to configure a few options on a component; or none at all.</p>
+</div>
+<div class="paragraph">
+<p>You can configure components using:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>the <a href="../../manual/component-dsl.html" class="xref page">Component DSL</a>.</p>
+</li>
+<li>
+<p>in a configuration file (<code>application.properties</code>, <code>*.yaml</code> files, etc).</p>
+</li>
+<li>
+<p>directly in the Java code.</p>
+</li>
+</ul>
 </div>
 </div>
 <div class="sect2">
 <h3 id="_configuring_endpoint_options"><a class="anchor" href="#_configuring_endpoint_options"></a>Configuring Endpoint Options</h3>
 <div class="paragraph">
-<p>Where you find yourself configuring the most is on endpoints, as endpoints often have many options, which allows you to
-configure what you need the endpoint to do. The options are also categorized into whether the endpoint is used as consumer (from)
-or as a producer (to), or used for both.</p>
+<p>You usually spend more time setting up endpoints because they have many options.
+These options help you customize what you want the endpoint to do.
+The options are also categorized into whether the endpoint is used as a consumer (<em>from</em>), as a producer (<em>to</em>), or  both.</p>
 </div>
 <div class="paragraph">
-<p>Configuring endpoints is most often done directly in the endpoint URI as path and query parameters. You can also use
-the <a href="../../manual/Endpoint-dsl.html" class="xref page">Endpoint DSL</a> and <a href="../../manual/dataformat-dsl.html" class="xref page">DataFormat DSL</a>
+<p>Configuring endpoints is most often done directly in the endpoint URI as <em>path</em> and <em>query</em> parameters.
+You can also use the <a href="../../manual/Endpoint-dsl.html" class="xref page">Endpoint DSL</a> and <a href="../../manual/dataformat-dsl.html" class="xref page">DataFormat DSL</a>
 as a <em>type safe</em> way of configuring endpoints and data formats in Java.</p>
 </div>
 <div class="paragraph">
-<p>A good practice when configuring options is to use <a href="../../manual/using-propertyplaceholder.html" class="xref page">Property Placeholders</a>,
-which allows to not hardcode urls, port numbers, sensitive information, and other settings.
-In other words placeholders allows to externalize the configuration from your code, and gives more flexibility and reuse.</p>
+<p>A good practice when configuring options is to use <a href="../../manual/using-propertyplaceholder.html" class="xref page">Property Placeholders</a>.</p>
 </div>
 <div class="paragraph">
-<p>The following two sections lists all the options, firstly for the component followed by the endpoint.</p>
+<p>Property placeholders provide a few benefits:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>They help prevent using hardcoded urls, port numbers, sensitive information, and other settings.</p>
+</li>
+<li>
+<p>They allow externalizing the configuration from the code.</p>
+</li>
+<li>
+<p>They help the code to become more flexible and reusable.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>The following two sections list all the options, firstly for the component followed by the endpoint.</p>
 </div>
 </div>
 </div>
@@ -2090,7 +2228,7 @@ In other words placeholders allows to externalize the configuration from your co
 </div>
 </div>
 <div class="paragraph">
-<p>with the following path and query parameters:</p>
+<p>With the following <em>path</em> and <em>query</em> parameters:</p>
 </div>
 <div class="sect2">
 <h3 id="_path_parameters_1_parameters"><a class="anchor" href="#_path_parameters_1_parameters"></a>Path Parameters (1 parameters)</h3>
@@ -2294,6 +2432,11 @@ In other words placeholders allows to externalize the configuration from your co
 </tr>
 </tbody>
 </table>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_usage"><a class="anchor" href="#_usage"></a>Usage</h2>
+<div class="sectionbody">
 <div class="paragraph">
 <p>The DataDictionary header is useful if string messages are being
 received and need to be parsed in a route. QuickFIX/J requires a data
@@ -2301,31 +2444,27 @@ dictionary to parse certain types of messages (with repeating groups,
 for example). By injecting a DataDictionary header in the route after
 receiving a message string, the FIX engine can properly parse the data.</p>
 </div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="_quickfixj_configuration_extensions"><a class="anchor" href="#_quickfixj_configuration_extensions"></a>QuickFIX/J Configuration Extensions</h2>
-<div class="sectionbody">
+<div class="sect2">
+<h3 id="_quickfixj_configuration_extensions"><a class="anchor" href="#_quickfixj_configuration_extensions"></a>QuickFIX/J Configuration Extensions</h3>
 <div class="paragraph">
 <p>When using QuickFIX/J directly, one typically writes code to create
-instances of logging adapters, message stores and communication
-connectors. The <strong>quickfix</strong> component will automatically create instances
+instances of logging adapters, message stores, and communication
+connectors. The quickfix component will automatically create instances
 of these classes based on information in the configuration file. It also
-provides defaults for many of the common required settings and adds
+provides defaults for many of the commonly required settings and adds
 additional capabilities (like the ability to activate JMX support).</p>
 </div>
 <div class="paragraph">
-<p>The following sections describe how the <strong>quickfix</strong> component processes
+<p>The following sections describe how the quickfix component processes
 the QuickFIX/J configuration. For comprehensive information about
 QuickFIX/J configuration, see the
-<a href="http://www.quickfixj.org/quickfixj/usermanual/usage/configuration.html">QFJ
-user manual</a>.</p>
+<a href="http://www.quickfixj.org/quickfixj/usermanual/usage/configuration.html">user manual</a>.</p>
 </div>
-<div class="sect2">
-<h3 id="_communication_connectors"><a class="anchor" href="#_communication_connectors"></a>Communication Connectors</h3>
+<div class="sect3">
+<h4 id="_communication_connectors"><a class="anchor" href="#_communication_connectors"></a>Communication Connectors</h4>
 <div class="paragraph">
 <p>When the component detects an initiator or acceptor session setting in
-the QuickFIX/J configuration file it will automatically create the
+the QuickFIX/J configuration file, it will automatically create the
 corresponding initiator and/or acceptor connector. These settings can be
 in the default or in a specific session section of the configuration
 file.</p>
@@ -2382,8 +2521,8 @@ and must be placed in the settings default section.</p>
 </tbody>
 </table>
 </div>
-<div class="sect2">
-<h3 id="_logging"><a class="anchor" href="#_logging"></a>Logging</h3>
+<div class="sect3">
+<h4 id="_logging"><a class="anchor" href="#_logging"></a>Logging</h4>
 <div class="paragraph">
 <p>The QuickFIX/J logger implementation can be specified by including the
 following settings in the default section of the configuration file. The
@@ -2433,8 +2572,8 @@ will cause this log to be used.</p></td>
 </tbody>
 </table>
 </div>
-<div class="sect2">
-<h3 id="_message_store"><a class="anchor" href="#_message_store"></a>Message Store</h3>
+<div class="sect3">
+<h4 id="_message_store"><a class="anchor" href="#_message_store"></a>Message Store</h4>
 <div class="paragraph">
 <p>The QuickFIX/J message store implementation can be specified by
 including the following settings in the default section of the
@@ -2472,8 +2611,8 @@ QuickFIX/J settings file.</p>
 </tbody>
 </table>
 </div>
-<div class="sect2">
-<h3 id="_message_factory"><a class="anchor" href="#_message_factory"></a>Message Factory</h3>
+<div class="sect3">
+<h4 id="_message_factory"><a class="anchor" href="#_message_factory"></a>Message Factory</h4>
 <div class="paragraph">
 <p>A message factory is used to construct domain objects from raw FIX
 messages. The default message factory is <code>DefaultMessageFactory</code>.
@@ -2481,8 +2620,8 @@ However, advanced applications may require a custom message factory.
 This can be set on the QuickFIX/J component.</p>
 </div>
 </div>
-<div class="sect2">
-<h3 id="_jmx"><a class="anchor" href="#_jmx"></a>JMX</h3>
+<div class="sect3">
+<h4 id="_jmx"><a class="anchor" href="#_jmx"></a>JMX</h4>
 <table class="tableblock frame-all grid-all stretch">
 <colgroup>
 <col style="width: 10%;">
@@ -2502,8 +2641,8 @@ This can be set on the QuickFIX/J component.</p>
 </tbody>
 </table>
 </div>
-<div class="sect2">
-<h3 id="_other_defaults"><a class="anchor" href="#_other_defaults"></a>Other Defaults</h3>
+<div class="sect3">
+<h4 id="_other_defaults"><a class="anchor" href="#_other_defaults"></a>Other Defaults</h4>
 <div class="paragraph">
 <p>The component provides some default settings for what are normally
 required settings in QuickFIX/J configuration files. <code>SessionStartTime</code>
@@ -2512,23 +2651,21 @@ be automatically started and stopped. The <code>HeartBtInt</code> (heartbeat
 interval) defaults to 30 seconds.</p>
 </div>
 </div>
-<div class="sect2">
-<h3 id="_minimal_initiator_configuration_example"><a class="anchor" href="#_minimal_initiator_configuration_example"></a>Minimal Initiator Configuration Example</h3>
+<div class="sect3">
+<h4 id="_minimal_initiator_configuration_example"><a class="anchor" href="#_minimal_initiator_configuration_example"></a>Minimal Initiator Configuration Example</h4>
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-none hljs">[SESSION]
+<pre>[SESSION]
 ConnectionType=initiator
 BeginString=FIX.4.4
 SenderCompID=YOUR_SENDER
-TargetCompID=YOUR_TARGET</code></pre>
+TargetCompID=YOUR_TARGET</pre>
 </div>
 </div>
 </div>
 </div>
-</div>
-<div class="sect1">
-<h2 id="_using_the_inout_message_exchange_pattern"><a class="anchor" href="#_using_the_inout_message_exchange_pattern"></a>Using the InOut Message Exchange Pattern</h2>
-<div class="sectionbody">
+<div class="sect2">
+<h3 id="_using_the_inout_message_exchange_pattern"><a class="anchor" href="#_using_the_inout_message_exchange_pattern"></a>Using the InOut Message Exchange Pattern</h3>
 <div class="paragraph">
 <p>Although the FIX protocol is event-driven and asynchronous, there are
 specific pairs of messages
@@ -2538,10 +2675,10 @@ be a single request message and single reply message to the request.
 Examples include an
 OrderStatusRequest message and UserRequest.</p>
 </div>
-<div class="sect2">
-<h3 id="_implementing_inout_exchanges_for_consumers"><a class="anchor" href="#_implementing_inout_exchanges_for_consumers"></a>Implementing InOut Exchanges for Consumers</h3>
+<div class="sect3">
+<h4 id="_implementing_inout_exchanges_for_consumers"><a class="anchor" href="#_implementing_inout_exchanges_for_consumers"></a>Implementing InOut Exchanges for Consumers</h4>
 <div class="paragraph">
-<p>Add "exchangePattern=InOut" to the QuickFIX/J enpoint URI. The
+<p>Add <code>exchangePattern=InOut</code> to the QuickFIX/J enpoint URI. The
 <code>MessageOrderStatusService</code> in
 the example below is a bean with a synchronous service method. The
 method returns the response
@@ -2556,8 +2693,8 @@ to the requestor session.</p>
 </div>
 </div>
 </div>
-<div class="sect2">
-<h3 id="_implementing_inout_exchanges_for_producers"><a class="anchor" href="#_implementing_inout_exchanges_for_producers"></a>Implementing InOut Exchanges for Producers</h3>
+<div class="sect3">
+<h4 id="_implementing_inout_exchanges_for_producers"><a class="anchor" href="#_implementing_inout_exchanges_for_producers"></a>Implementing InOut Exchanges for Producers</h4>
 <div class="paragraph">
 <p>For producers, sending a message will block until a reply is received or
 a timeout occurs. There
@@ -2585,14 +2722,14 @@ using <code>Exchange</code> properties.</p>
 <tbody>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Correlation Criteria</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">"CorrelationCriteria"</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">QuickfixjProducer.CORRELATION_CRITERIA_KEY</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>CorrelationCriteria</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>QuickfixjProducer.CORRELATION_CRITERIA_KEY</code></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">None</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Correlation Timeout in Milliseconds</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">"CorrelationTimeout"</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">QuickfixjProducer.CORRELATION_TIMEOUT_KEY</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>CorrelationTimeout</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>QuickfixjProducer.CORRELATION_TIMEOUT_KEY</code></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">1000</p></td>
 </tr>
 </tbody>
@@ -2600,7 +2737,7 @@ using <code>Exchange</code> properties.</p>
 <div class="paragraph">
 <p>The correlation criteria is defined with a <code>MessagePredicate</code> object.
 The following example will treat
-a FIX ExecutionReport from the specified session where the transaction
+a FIX <code>ExecutionReport</code> from the specified session where the transaction
 type is STATUS and the Order ID
 matches our request. The session ID should be for the <em>requestor</em>, the
 sender and target CompID fields
@@ -2615,26 +2752,9 @@ will be reversed when looking for the reply.</p>
 </div>
 </div>
 </div>
+</div>
 <div class="sect2">
-<h3 id="_example"><a class="anchor" href="#_example"></a>Example</h3>
-<div class="paragraph">
-<p>The source code contains an example called <code>RequestReplyExample</code> that
-demonstrates the InOut exchanges
-for a consumer and producer. This example creates a simple HTTP server
-endpoint that accepts order
-status requests. The HTTP request is converted to a FIX
-OrderStatusRequestMessage, is augmented with a
-correlation criteria, and is then routed to a quickfix endpoint. The
-response is then converted to a
-JSON-formatted string and sent back to the HTTP server endpoint to be
-provided as the web response.</p>
-</div>
-</div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="_spring_configuration"><a class="anchor" href="#_spring_configuration"></a>Spring Configuration</h2>
-<div class="sectionbody">
+<h3 id="_spring_configuration"><a class="anchor" href="#_spring_configuration"></a>Spring Configuration</h3>
 <div class="paragraph">
 <p>The QuickFIX/J component includes a Spring <code>FactoryBean</code> for configuring
 the session settings within a Spring context. A type converter for
@@ -2773,10 +2893,8 @@ settings for both sessions.</p>
 </div>
 </div>
 </div>
-</div>
-<div class="sect1">
-<h2 id="_exception_handling"><a class="anchor" href="#_exception_handling"></a>Exception handling</h2>
-<div class="sectionbody">
+<div class="sect2">
+<h3 id="_exception_handling"><a class="anchor" href="#_exception_handling"></a>Exception handling</h3>
 <div class="paragraph">
 <p>QuickFIX/J behavior can be modified if certain exceptions are thrown
 during processing of a message. If a <code>RejectLogon</code> exception is thrown
@@ -2788,17 +2906,15 @@ logon will be rejected.</p>
 sometimes an outgoing logon message must be modified to include
 credentials required by a FIX counterparty. If the FIX logon message
 body is modified when sending a logon message
-(EventCategory=<code>AdminMessageSent</code> the modified message will be sent to
+(<code>EventCategory=AdminMessageSent</code> the modified message will be sent to
 the counterparty. It is important that the outgoing logon message is
 being processed <em>synchronously</em>. If it is processed asynchronously (on
 another thread), the FIX engine will immediately send the unmodified
-outgoing message when it&#8217;s callback method returns.</p>
+outgoing message when its callback method returns.</p>
 </div>
 </div>
-</div>
-<div class="sect1">
-<h2 id="_fix_sequence_number_management"><a class="anchor" href="#_fix_sequence_number_management"></a>FIX Sequence Number Management</h2>
-<div class="sectionbody">
+<div class="sect2">
+<h3 id="_fix_sequence_number_management"><a class="anchor" href="#_fix_sequence_number_management"></a>FIX Sequence Number Management</h3>
 <div class="paragraph">
 <p>If an application exception is thrown during <em>synchronous</em> exchange
 processing, this will cause QuickFIX/J to not increment incoming FIX
@@ -2827,9 +2943,12 @@ more details about FIX sequence number management.</p>
 </div>
 </div>
 </div>
+</div>
 <div class="sect1">
-<h2 id="_route_examples"><a class="anchor" href="#_route_examples"></a>Route Examples</h2>
+<h2 id="_examples"><a class="anchor" href="#_examples"></a>Examples</h2>
 <div class="sectionbody">
+<div class="sect2">
+<h3 id="_route_examples"><a class="anchor" href="#_route_examples"></a>Route Examples</h3>
 <div class="paragraph">
 <p>Several examples are included in the QuickFIX/J component source code
 (test subdirectories). One of these examples implements a trival trade
@@ -2866,6 +2985,25 @@ and processes them.</p>
 <pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">from("quickfix:examples/inprocess.qf.cfg?sessionID=FIX.4.2:TRADER-&gt;MARKET").
     filter(header(QuickfixjEndpoint.MESSAGE_TYPE_KEY).isEqualTo(MsgType.EXECUTION_REPORT)).
     bean(new MyTradeExecutionProcessor());</code></pre>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_additional_examples"><a class="anchor" href="#_additional_examples"></a>Additional Examples</h3>
+<div class="paragraph">
+<p>The source code contains an example called <code>RequestReplyExample</code> that
+demonstrates the InOut exchanges
+for a consumer and producer. This example creates a simple HTTP server
+endpoint that accepts order
+status requests. The HTTP request is converted to a FIX
+<code>OrderStatusRequestMessage</code>, is augmented with a
+correlation criteria, and is then routed to a quickfix endpoint. The
+response is then converted to a
+JSON-formatted string and sent back to the HTTP server endpoint to be
+provided as the web response.</p>
+</div>
+<div class="paragraph">
+<p>Unresolved include directive in modules/ROOT/pages/quickfix-component.adoc - include::spring-boot:partial$starter.adoc[]</p>
 </div>
 </div>
 </div>

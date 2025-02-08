@@ -3,15 +3,15 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>Apache Camel 3.x Upgrade Guide :: Red Hat Apache Build of Apache Camel Manual</title>
-    <meta name="generator" content="Antora 3.0.3">
+    <title>Apache Camel 3.x Upgrade Guide :: Red Hat build of Apache Camel</title>
+    <meta name="generator" content="Antora 3.1.4">
     <link rel="stylesheet" href="../_/css/site.css">
   </head>
   <body class="article">
 <header class="header">
   <nav class="navbar">
     <div class="navbar-brand">
-      <a class="navbar-item" href="../../manual/index.html">Red Hat Apache Build of Apache Camel Manual</a>
+      <a class="navbar-item" href="/">Red Hat build of Apache Camel</a>
       <button class="navbar-burger" data-target="topbar-nav">
         <span></span>
         <span></span>
@@ -26,6 +26,7 @@
     <div class="panels">
 <div class="nav-panel-menu is-active" data-panel="menu">
   <nav class="nav-menu">
+    <button class="nav-menu-toggle" aria-label="Toggle expand/collapse all" style="display: none"></button>
     <h3 class="title"><a href="index.html">User manual</a></h3>
 <ul class="nav-list">
   <li class="nav-item" data-depth="0">
@@ -56,7 +57,16 @@
     <a class="nav-link" href="camel-console.html">Camel Developer Console</a>
   </li>
   <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
     <a class="nav-link" href="camel-jbang.html">Camel JBang</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="camel-jbang-kubernetes.html">Camel Kubernetes plugin</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="camel-jbang-k.html">Camel K plugin</a>
+  </li>
+</ul>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="camel-maven-plugin.html">Camel Maven Plugin</a>
@@ -95,6 +105,9 @@
     <a class="nav-link" href="using-propertyplaceholder.html">How to use Camel property placeholders</a>
   </li>
   <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="variables.html">How to use Variables</a>
+  </li>
+  <li class="nav-item" data-depth="2">
     <button class="nav-item-toggle"></button>
     <a class="nav-link" href="testing.html">Testing</a>
 <ul class="nav-list">
@@ -110,7 +123,13 @@
 </ul>
   </li>
   <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
     <a class="nav-link" href="rest-dsl.html">Working with REST and Rest DSL</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="rest-dsl-openapi.html">Rest DSL contract first</a>
+  </li>
+</ul>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="writing-components.html">Writing Components</a>
@@ -477,9 +496,6 @@
     <a class="nav-link" href="faq/how-should-i-invoke-my-pojos-or-spring-services.html">How should I invoke my POJOs or Spring Services?</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="faq/how-to-avoid-importing-bunch-of-cxf-packages-when-start-up-the-camel-cxf-endpoint-from-osgi-platform-.html">How to avoid importing bunch of cxf packages when start up the camel-cxf endpoint from OSGi platform?</a>
-  </li>
-  <li class="nav-item" data-depth="2">
     <a class="nav-link" href="faq/how-to-avoid-sending-some-or-all-message-headers.html">How to avoid sending some or all message headers?</a>
   </li>
   <li class="nav-item" data-depth="2">
@@ -598,11 +614,11 @@
 <div class="nav-panel-explore" data-panel="explore">
   <div class="context">
     <span class="title">User manual</span>
-    <span class="version">default</span>
+    <span class="version"></span>
   </div>
   <ul class="components">
     <li class="component">
-      <a class="title" href="../components/next/index.html">Camel Components</a>
+      <div class="title"><a href="../components/next/index.html">Camel Components</a></div>
       <ul class="versions">
         <li class="version is-latest">
           <a href="../components/next/index.html">Next (Pre-release)</a>
@@ -610,12 +626,7 @@
       </ul>
     </li>
     <li class="component is-current">
-      <a class="title" href="index.html">User manual</a>
-      <ul class="versions">
-        <li class="version is-current is-latest">
-          <a href="index.html">default</a>
-        </li>
-      </ul>
+      <div class="title"><a href="index.html">User manual</a></div>
     </li>
   </ul>
 </div>
@@ -632,6 +643,7 @@
     <li><a href="camel-3x-upgrade-guide-3_7.html">Apache Camel 3.x Upgrade Guide</a></li>
   </ul>
 </nav>
+<div class="edit-this-page"><a href="file:///code/jboss/jboss-camel/docs/user-manual/modules/ROOT/pages/camel-3x-upgrade-guide-3_7.adoc">Edit this Page</a></div>
 </div>
   <div class="content">
 <aside class="toc sidebar" data-title="Contents" data-levels="2">
@@ -643,7 +655,7 @@
 <div class="sectionbody">
 <div class="paragraph">
 <p>This document is for helping you upgrade your Apache Camel application
-from Camel 3.x to 3.y. For example if you are upgrading Camel 3.0 to 3.2, then you should follow the guides
+from Camel 3.x to 3.y. For example, if you are upgrading Camel 3.0 to 3.2, then you should follow the guides
 from both 3.0 to 3.1 and 3.1 to 3.2.</p>
 </div>
 </div>
@@ -717,21 +729,21 @@ The class <code>org.apache.camel.impl.engine.EventNotifierCallback</code> was mo
 <h3 id="_type_converters"><a class="anchor" href="#_type_converters"></a>Type Converters</h3>
 <div class="paragraph">
 <p>Camel 3.7 has optimized its type converter system, which can impact 3rd party components which contain type converters.
-Previously the type converter system would attempt to find a type converter that would be capable of
+Previously, the type converter system would attempt to find a type converter that would be capable of
 converting between two given types (also by walking up the parent classes and super interfaces).
 But this leads to slower performance, and Camel now relies on there being converter methods with the exact combo
 of converting from/to types.</p>
 </div>
 <div class="sect3">
-<h4 id="_converting_to_milli_seconds_from_text"><a class="anchor" href="#_converting_to_milli_seconds_from_text"></a>Converting to milli seconds from text</h4>
+<h4 id="_converting_to_milliseconds_from_text"><a class="anchor" href="#_converting_to_milliseconds_from_text"></a>Converting to milliseconds from text</h4>
 <div class="paragraph">
-<p>When converting to milli seconds using the shorthands for time precision with hours, minutes and seconds, support
+<p>When converting to milliseconds using the shorthands for time precision with hours, minutes and seconds, support
 for fractions was removed. For example <code>delay=0.5m</code> (half minute) is no longer supported, use <code>delay=30s</code> instead.</p>
 </div>
 <div class="paragraph">
 <p>Support for using units as <code>days</code>, <code>hours</code>, <code>minutes</code>, <code>seconds</code>, and <code>millis</code> has been removed.
 Units must now be one of <code>d</code> for days, <code>h</code> for hours, <code>m</code> for minutes, <code>s</code> for seconds, and <code>ms</code> for millis (can be omitted).
-So you can use <code>1h12m37s42ms</code> for 1 hour, 12 minutes, 37 seconds and 42 milli seconds.</p>
+So you can use <code>1h12m37s42ms</code> for 1 hour, 12 minutes, 37 seconds and 42 milliseconds.</p>
 </div>
 </div>
 </div>
@@ -789,8 +801,8 @@ problems for maintenance. <code>toD</code> uses simple language by default, but 
 <div class="sect2">
 <h3 id="_camel_leveldb"><a class="anchor" href="#_camel_leveldb"></a>camel-leveldb</h3>
 <div class="paragraph">
-<p>Component uses different serialization mechanism, which is not backwards compatible with the original one.
-For full compatibility use the camel-leveldb-legacy component (the legacy component will be removed in a future release).</p>
+<p>Component uses a different serialization mechanism, which is not backwards compatible with the original one.
+For full compatibility, use the camel-leveldb-legacy component (the legacy component will be removed in a future release).</p>
 </div>
 </div>
 <div class="sect2">
@@ -816,7 +828,7 @@ The class <code>org.apache.camel.impl.saga.InMemorySagaCoordinator</code> was mo
 <div class="sect2">
 <h3 id="_camel_kafka"><a class="anchor" href="#_camel_kafka"></a>camel-kafka</h3>
 <div class="paragraph">
-<p>We changed some options naming because they were a bit misleading:</p>
+<p>We changed some option&#8217;s naming because they were a bit misleading:</p>
 </div>
 <div class="ulist">
 <ul>
@@ -844,7 +856,7 @@ The class <code>org.apache.camel.impl.saga.InMemorySagaCoordinator</code> was mo
 <p>The Camel Git Commit consumer has been changed a bit.</p>
 </div>
 <div class="paragraph">
-<p>For each exchange now in the body you&#8217;ll get the commit full message as a String and the Commit Object like before.</p>
+<p>For each exchange now in the body, you&#8217;ll get the commit full message as a String and the Commit Object like before.</p>
 </div>
 <div class="paragraph">
 <p>Other information has been stored in headers declared in GitConstants class:</p>
@@ -852,16 +864,16 @@ The class <code>org.apache.camel.impl.saga.InMemorySagaCoordinator</code> was mo
 <div class="ulist">
 <ul>
 <li>
-<p>GIT_COMMIT_ID - "CamelGitCommitId" - The commit Id</p>
+<p><code>GIT_COMMIT_ID</code> - "CamelGitCommitId" - The commit Id</p>
 </li>
 <li>
-<p>GIT_COMMIT_AUTHOR_NAME - "CamelGitAuthorName" - The commit Author name</p>
+<p><code>GIT_COMMIT_AUTHOR_NAME</code> - "CamelGitAuthorName" - The commit Author name</p>
 </li>
 <li>
-<p>GIT_COMMIT_COMMITTER_NAME - "CamelGitCommiterName" - The commit committer name</p>
+<p><code>GIT_COMMIT_COMMITTER_NAME</code> - "CamelGitCommiterName" - The commit committer name</p>
 </li>
 <li>
-<p>GIT_COMMIT_TIME - "CamelGitCommitTime" - The commit time</p>
+<p><code>GIT_COMMIT_TIME</code> - "CamelGitCommitTime" - The commit time</p>
 </li>
 </ul>
 </div>
@@ -869,7 +881,7 @@ The class <code>org.apache.camel.impl.saga.InMemorySagaCoordinator</code> was mo
 <p>The Camel Git Branch consumer has been changed a bit.</p>
 </div>
 <div class="paragraph">
-<p>For each exchange now in the body you&#8217;ll get the branch ref name and not the full ref like before.</p>
+<p>For each exchange now in the body, you&#8217;ll get the branch ref name and not the full ref like before.</p>
 </div>
 <div class="paragraph">
 <p>Other information has been stored in headers declared in <code>GitConstants</code> class:</p>
@@ -877,10 +889,10 @@ The class <code>org.apache.camel.impl.saga.InMemorySagaCoordinator</code> was mo
 <div class="ulist">
 <ul>
 <li>
-<p>GIT_BRANCH_LEAF - "CamelGitBranchLeaf" - Leaf</p>
+<p><code>GIT_BRANCH_LEAF</code> - "CamelGitBranchLeaf" - Leaf</p>
 </li>
 <li>
-<p>GIT_BRANCH_OBJECT_ID - "CamelGitBranchObjectId" - Object Id</p>
+<p><code>GIT_BRANCH_OBJECT_ID</code> - "CamelGitBranchObjectId" - Object Id</p>
 </li>
 </ul>
 </div>
@@ -888,7 +900,7 @@ The class <code>org.apache.camel.impl.saga.InMemorySagaCoordinator</code> was mo
 <p>The Camel Git Tag consumer has been changed a bit.</p>
 </div>
 <div class="paragraph">
-<p>For each exchange now in the body you&#8217;ll get the tag ref name and not the full ref like before.</p>
+<p>For each exchange now in the body, you&#8217;ll get the tag ref name and not the full ref like before.</p>
 </div>
 <div class="paragraph">
 <p>Other information has been stored in headers declared in GitConstants class:</p>
@@ -896,10 +908,10 @@ The class <code>org.apache.camel.impl.saga.InMemorySagaCoordinator</code> was mo
 <div class="ulist">
 <ul>
 <li>
-<p>GIT_TAG_LEAF - "CamelGitTagLeaf" - Leaf</p>
+<p><code>GIT_TAG_LEAF</code> - "CamelGitTagLeaf" - Leaf</p>
 </li>
 <li>
-<p>GIT_TAG_OBJECT_ID - "CamelGitTagObjectId" - Object Id</p>
+<p><code>GIT_TAG_OBJECT_ID</code> - "CamelGitTagObjectId" - Object Id</p>
 </li>
 </ul>
 </div>
@@ -907,7 +919,7 @@ The class <code>org.apache.camel.impl.saga.InMemorySagaCoordinator</code> was mo
 <div class="sect2">
 <h3 id="_camel_github"><a class="anchor" href="#_camel_github"></a>camel-github</h3>
 <div class="paragraph">
-<p>Login using username and password is no longer supported by github and these options have been removed
+<p>Login using username and password is no longer supported by GitHub and these options have been removed
 (<a href="https://developer.github.com/changes/2020-02-14-deprecating-password-auth/" class="bare">https://developer.github.com/changes/2020-02-14-deprecating-password-auth/</a>).</p>
 </div>
 <div class="paragraph">
@@ -917,160 +929,160 @@ The class <code>org.apache.camel.impl.saga.InMemorySagaCoordinator</code> was mo
 <div class="sect2">
 <h3 id="_camel_aws2_s3_autowire_support"><a class="anchor" href="#_camel_aws2_s3_autowire_support"></a>Camel-AWS2-S3 Autowire support</h3>
 <div class="paragraph">
-<p>The camel-aws2-s3 component now has support for autowiring the amazonS3Client option with a S3Client instance coming from the registry.
-In this context, it wasn&#8217;t making sense to maintain the autodiscoverClient option, which has been removed.</p>
+<p>The camel-aws2-s3 component now has support for autowiring the <code>amazonS3Client</code> option with a <code>S3Client</code> instance coming from the registry.
+In this context, it wasn&#8217;t making sense to maintain the <code>autodiscoverClient</code> option, which has been removed.</p>
 </div>
 </div>
 <div class="sect2">
 <h3 id="_camel_aws2_s3_useiamcredentials"><a class="anchor" href="#_camel_aws2_s3_useiamcredentials"></a>Camel-AWS2-S3 UseIamCredentials</h3>
 <div class="paragraph">
-<p>The option useIamCredentials has been renamed to useDefaultCredentialsProvider, since we changed to a DefaultCredentialsProvider approach.</p>
+<p>The option useIamCredentials has been renamed to <code>useDefaultCredentialsProvider</code>, since we changed to a <code>DefaultCredentialsProvider</code> approach.</p>
 </div>
 </div>
 <div class="sect2">
 <h3 id="_camel_aws2_cloudwatch_autowire_support"><a class="anchor" href="#_camel_aws2_cloudwatch_autowire_support"></a>Camel-AWS2-Cloudwatch Autowire support</h3>
 <div class="paragraph">
-<p>The camel-aws2-cw component now has support for autowiring the amazonCwClient option with a CloudWatchClient instance coming from the registry.
-In this context, it wasn&#8217;t making sense to maintain the autodiscoverClient option, which has been removed.</p>
+<p>The camel-aws2-cw component now has support for autowiring the <code>amazonCwClient</code> option with a CloudWatchClient instance coming from the registry.
+In this context, it wasn&#8217;t making sense to maintain the <code>autodiscoverClient</code> option, which has been removed.</p>
 </div>
 </div>
 <div class="sect2">
 <h3 id="_camel_aws2_ddb_autowire_support"><a class="anchor" href="#_camel_aws2_ddb_autowire_support"></a>Camel-AWS2-DDB Autowire support</h3>
 <div class="paragraph">
-<p>The camel-aws2-ddb component now has support for autowiring the amazonDDBClient option with a DynamoDbClient instance coming from the registry.
-In this context, it wasn&#8217;t making sense to maintain the autodiscoverClient option, which has been removed.</p>
+<p>The camel-aws2-ddb component now has support for autowiring the <code>amazonDDBClient</code> option with a DynamoDbClient instance coming from the registry.
+In this context, it wasn&#8217;t making sense to maintain the <code>autodiscoverClient</code> option, which has been removed.</p>
 </div>
 <div class="paragraph">
-<p>The camel-aws2-ddbstreams component now has support for autowiring the amazonDynamoDbStreamsClient option with a DynamoDbStreamsClient instance coming from the registry.
-In this context, it wasn&#8217;t making sense to maintain the autodiscoverClient option, which has been removed.</p>
+<p>The camel-aws2-ddbstreams component now has support for autowiring the <code>amazonDynamoDbStreamsClient</code> option with a DynamoDbStreamsClient instance coming from the registry.
+In this context, it wasn&#8217;t making sense to maintain the <code>autodiscoverClient</code> option, which has been removed.</p>
 </div>
 </div>
 <div class="sect2">
 <h3 id="_camel_aws2_ec2_autowire_support"><a class="anchor" href="#_camel_aws2_ec2_autowire_support"></a>Camel-AWS2-EC2 Autowire support</h3>
 <div class="paragraph">
-<p>The camel-aws2-ec2 component now has support for autowiring the amazonEc2Client option with an Ec2Client instance coming from the registry.
-In this context, it wasn&#8217;t making sense to maintain the autodiscoverClient option, which has been removed.</p>
+<p>The camel-aws2-ec2 component now has support for autowiring the <code>amazonEc2Client</code> option with an Ec2Client instance coming from the registry.
+In this context, it wasn&#8217;t making sense to maintain the <code>autodiscoverClient</code> option, which has been removed.</p>
 </div>
 </div>
 <div class="sect2">
 <h3 id="_camel_aws2_ecs_autowire_support"><a class="anchor" href="#_camel_aws2_ecs_autowire_support"></a>Camel-AWS2-ECS Autowire support</h3>
 <div class="paragraph">
-<p>The camel-aws2-ecs component now has support for autowiring the ecsClient option with an EcsClient instance coming from the registry.
-In this context, it wasn&#8217;t making sense to maintain the autodiscoverClient option, which has been removed.</p>
+<p>The camel-aws2-ecs component now has support for autowiring the <code>ecsClient</code> option with an EcsClient instance coming from the registry.
+In this context, it wasn&#8217;t making sense to maintain the <code>autodiscoverClient</code> option, which has been removed.</p>
 </div>
 </div>
 <div class="sect2">
 <h3 id="_camel_aws2_eks_autowire_support"><a class="anchor" href="#_camel_aws2_eks_autowire_support"></a>Camel-AWS2-EKS Autowire support</h3>
 <div class="paragraph">
-<p>The camel-aws2-eks component now has support for autowiring the eksClient option with an EksClient instance coming from the registry.
-In this context, it wasn&#8217;t making sense to maintain the autodiscoverClient option, which has been removed.</p>
+<p>The camel-aws2-eks component now has support for autowiring the <code>eksClient</code> option with an EksClient instance coming from the registry.
+In this context, it wasn&#8217;t making sense to maintain the <code>autodiscoverClient</code> option, which has been removed.</p>
 </div>
 </div>
 <div class="sect2">
 <h3 id="_camel_aws2_eventbridge_autowire_support"><a class="anchor" href="#_camel_aws2_eventbridge_autowire_support"></a>Camel-AWS2-Eventbridge Autowire support</h3>
 <div class="paragraph">
-<p>The camel-aws2-eventbridge component now has support for autowiring the eventBridgeClient option with an EventBridgeClient instance coming from the registry.
-In this context, it wasn&#8217;t making sense to maintain the autodiscoverClient option, which has been removed.</p>
+<p>The camel-aws2-eventbridge component now has support for autowiring the <code>eventBridgeClient</code> option with an EventBridgeClient instance coming from the registry.
+In this context, it wasn&#8217;t making sense to maintain the <code>autodiscoverClient</code> option, which has been removed.</p>
 </div>
 </div>
 <div class="sect2">
 <h3 id="_camel_aws2_iam_autowire_support"><a class="anchor" href="#_camel_aws2_iam_autowire_support"></a>Camel-AWS2-IAM Autowire support</h3>
 <div class="paragraph">
-<p>The camel-aws2-iam component now has support for autowiring the iamClient option with an IamClient instance coming from the registry.
-In this context, it wasn&#8217;t making sense to maintain the autodiscoverClient option, which has been removed.</p>
+<p>The camel-aws2-iam component now has support for autowiring the <code>iamClient</code> option with an IamClient instance coming from the registry.
+In this context, it wasn&#8217;t making sense to maintain the <code>autodiscoverClient</code> option, which has been removed.</p>
 </div>
 </div>
 <div class="sect2">
 <h3 id="_camel_aws2_kinesis_autowire_support"><a class="anchor" href="#_camel_aws2_kinesis_autowire_support"></a>Camel-AWS2-Kinesis Autowire support</h3>
 <div class="paragraph">
-<p>The camel-aws2-kinesis component now has support for autowiring the amazonKinesisClient option with a KinesisClient instance coming from the registry.
-In this context, it wasn&#8217;t making sense to maintain the autodiscoverClient option, which has been removed.</p>
+<p>The camel-aws2-kinesis component now has support for autowiring the <code>amazonKinesisClient</code> option with a KinesisClient instance coming from the registry.
+In this context, it wasn&#8217;t making sense to maintain the <code>autodiscoverClient</code> option, which has been removed.</p>
 </div>
 <div class="paragraph">
-<p>The camel-aws2-kinesis-firehose component now has support for autowiring the amazonKinesisFirehoseClient option with a FirehoseClient instance coming from the registry.
-In this context, it wasn&#8217;t making sense to maintain the autodiscoverClient option, which has been removed.</p>
+<p>The camel-aws2-kinesis-firehose component now has support for autowiring the <code>amazonKinesisFirehoseClient</code> option with a FirehoseClient instance coming from the registry.
+In this context, it wasn&#8217;t making sense to maintain the <code>autodiscoverClient</code> option, which has been removed.</p>
 </div>
 </div>
 <div class="sect2">
 <h3 id="_camel_aws2_kms_autowire_support"><a class="anchor" href="#_camel_aws2_kms_autowire_support"></a>Camel-AWS2-KMS Autowire support</h3>
 <div class="paragraph">
-<p>The camel-aws2-kms component now has support for autowiring the awsLambdaClient option with a LambdaClient instance coming from the registry.
-In this context, it wasn&#8217;t making sense to maintain the autodiscoverClient option, which has been removed.</p>
+<p>The camel-aws2-kms component now has support for autowiring the <code>awsLambdaClient</code> option with a LambdaClient instance coming from the registry.
+In this context, it wasn&#8217;t making sense to maintain the <code>autodiscoverClient</code> option, which has been removed.</p>
 </div>
 </div>
 <div class="sect2">
 <h3 id="_camel_aws2_lambda_autowire_support"><a class="anchor" href="#_camel_aws2_lambda_autowire_support"></a>Camel-AWS2-Lambda Autowire support</h3>
 <div class="paragraph">
-<p>The camel-aws2-kms component now has support for autowiring the kmsClient option with a KmsClient instance coming from the registry.
-In this context, it wasn&#8217;t making sense to maintain the autodiscoverClient option, which has been removed.</p>
+<p>The camel-aws2-kms component now has support for autowiring the <code>kmsClient</code> option with a KmsClient instance coming from the registry.
+In this context, it wasn&#8217;t making sense to maintain the <code>autodiscoverClient</code> option, which has been removed.</p>
 </div>
 </div>
 <div class="sect2">
 <h3 id="_camel_aws2_mq_autowire_support"><a class="anchor" href="#_camel_aws2_mq_autowire_support"></a>Camel-AWS2-MQ Autowire support</h3>
 <div class="paragraph">
-<p>The camel-aws2-mq component now has support for autowiring the amazonMqClient option with a MqClient instance coming from the registry.
-In this context, it wasn&#8217;t making sense to maintain the autodiscoverClient option, which has been removed.</p>
+<p>The camel-aws2-mq component now has support for autowiring the <code>amazonMqClient</code> option with a MqClient instance coming from the registry.
+In this context, it wasn&#8217;t making sense to maintain the <code>autodiscoverClient</code> option, which has been removed.</p>
 </div>
 </div>
 <div class="sect2">
 <h3 id="_camel_aws2_msk_autowire_support"><a class="anchor" href="#_camel_aws2_msk_autowire_support"></a>Camel-AWS2-MSK Autowire support</h3>
 <div class="paragraph">
-<p>The camel-aws2-msk component now has support for autowiring the mskClient option with a KafkaClient instance coming from the registry.
-In this context, it wasn&#8217;t making sense to maintain the autodiscoverClient option, which has been removed.</p>
+<p>The camel-aws2-msk component now has support for autowiring the <code>mskClient</code> option with a KafkaClient instance coming from the registry.
+In this context, it wasn&#8217;t making sense to maintain the <code>autodiscoverClient</code> option, which has been removed.</p>
 </div>
 </div>
 <div class="sect2">
 <h3 id="_camel_aws2_ses_autowire_support"><a class="anchor" href="#_camel_aws2_ses_autowire_support"></a>Camel-AWS2-SES Autowire support</h3>
 <div class="paragraph">
-<p>The camel-aws2-ses component now has support for autowiring the amazonSESClient option with a SesClient instance coming from the registry.
-In this context, it wasn&#8217;t making sense to maintain the autodiscoverClient option, which has been removed.</p>
+<p>The camel-aws2-ses component now has support for autowiring the <code>amazonSESClient</code> option with a SesClient instance coming from the registry.
+In this context, it wasn&#8217;t making sense to maintain the <code>autodiscoverClient</code> option, which has been removed.</p>
 </div>
 </div>
 <div class="sect2">
 <h3 id="_camel_aws2_sns_autowire_support"><a class="anchor" href="#_camel_aws2_sns_autowire_support"></a>Camel-AWS2-SNS Autowire support</h3>
 <div class="paragraph">
-<p>The camel-aws2-sns component now has support for autowiring the amazonSNSClient option with a SnsClient instance coming from the registry.
-In this context, it wasn&#8217;t making sense to maintain the autodiscoverClient option, which has been removed.</p>
+<p>The camel-aws2-sns component now has support for autowiring the <code>amazonSNSClient</code> option with a SnsClient instance coming from the registry.
+In this context, it wasn&#8217;t making sense to maintain the <code>autodiscoverClient</code> option, which has been removed.</p>
 </div>
 </div>
 <div class="sect2">
 <h3 id="_camel_aws2_sns_useiamcredentials"><a class="anchor" href="#_camel_aws2_sns_useiamcredentials"></a>Camel-AWS2-SNS UseIamCredentials</h3>
 <div class="paragraph">
-<p>The option useIamCredentials has been renamed to useDefaultCredentialsProvider, since we changed to a DefaultCredentialsProvider approach.</p>
+<p>The option useIamCredentials has been renamed to <code>useDefaultCredentialsProvider</code>, since we changed to a DefaultCredentialsProvider approach.</p>
 </div>
 </div>
 <div class="sect2">
 <h3 id="_camel_aws2_sqs_autowire_support"><a class="anchor" href="#_camel_aws2_sqs_autowire_support"></a>Camel-AWS2-SQS Autowire support</h3>
 <div class="paragraph">
-<p>The camel-aws2-sqs component now has support for autowiring the amazonSQSClient option with a SqsClient instance coming from the registry.
-In this context, it wasn&#8217;t making sense to maintain the autodiscoverClient option, which has been removed.</p>
+<p>The camel-aws2-sqs component now has support for autowiring the 1 <code>amazonSQSClient</code> option with a SqsClient instance coming from the registry.
+In this context, it wasn&#8217;t making sense to maintain the <code>autodiscoverClient</code> option, which has been removed.</p>
 </div>
 </div>
 <div class="sect2">
 <h3 id="_camel_aws2_sqs_useiamcredentials"><a class="anchor" href="#_camel_aws2_sqs_useiamcredentials"></a>Camel-AWS2-SQS UseIamCredentials</h3>
 <div class="paragraph">
-<p>The option useIamCredentials has been renamed to useDefaultCredentialsProvider, since we changed to a DefaultCredentialsProvider approach.</p>
+<p>The option useIamCredentials has been renamed to <code>useDefaultCredentialsProvider</code>, since we changed to a <code>DefaultCredentialsProvider</code> approach.</p>
 </div>
 </div>
 <div class="sect2">
 <h3 id="_camel_aws2_sts_autowire_support"><a class="anchor" href="#_camel_aws2_sts_autowire_support"></a>Camel-AWS2-STS Autowire support</h3>
 <div class="paragraph">
-<p>The camel-aws2-sts component now has support for autowiring the stsClient option with a StsClient instance coming from the registry.
-In this context, it wasn&#8217;t making sense to maintain the autodiscoverClient option, which has been removed.</p>
+<p>The camel-aws2-sts component now has support for autowiring the <code>stsClient</code> option with a StsClient instance coming from the registry.
+In this context, it wasn&#8217;t making sense to maintain the <code>autodiscoverClient</code> option, which has been removed.</p>
 </div>
 </div>
 <div class="sect2">
 <h3 id="_camel_aws2_translate_autowire_support"><a class="anchor" href="#_camel_aws2_translate_autowire_support"></a>Camel-AWS2-Translate Autowire support</h3>
 <div class="paragraph">
-<p>The camel-aws2-translate component now has support for autowiring the translateClient option with a TranslateClient instance coming from the registry.
-In this context, it wasn&#8217;t making sense to maintain the autodiscoverClient option, which has been removed.</p>
+<p>The camel-aws2-translate component now has support for autowiring the <code>translateClient</code> option with a TranslateClient instance coming from the registry.
+In this context, it wasn&#8217;t making sense to maintain the <code>autodiscoverClient</code> option, which has been removed.</p>
 </div>
 </div>
 <div class="sect2">
 <h3 id="_camel_aws2_athena_autowire_support"><a class="anchor" href="#_camel_aws2_athena_autowire_support"></a>Camel-AWS2-Athena Autowire support</h3>
 <div class="paragraph">
-<p>The camel-aws2-athena component now has support for autowiring the amazonAthenaClient option with an AthenaClient instance coming from the registry.
-In this context, it wasn&#8217;t making sense to maintain the autodiscoverClient option, which has been removed.</p>
+<p>The camel-aws2-athena component now has support for autowiring the <code>amazonAthenaClient</code> option with an AthenaClient instance coming from the registry.
+In this context, it wasn&#8217;t making sense to maintain the <code>autodiscoverClient</code> option, which has been removed.</p>
 </div>
 </div>
 <div class="sect2">
@@ -1096,7 +1108,7 @@ you may need to have a transformation that explicitly converts spaces to "&#43;"
 </div>
 <div class="paragraph">
 <p>It is no longer possible to provide the service account private key as a String parameter to <code>GoogleBigQueryConnectionFactory</code>. Instead, you should use <code>setCredentialsFileLocation</code> to
-discover the private key from your credentials file. Or use the fallback mechanism for discovering credentials by setting the <code>GOOGLE_APPLICATION_CREDENTIALS</code> environment variable. Refer to the
+discover the private key from your credential&#8217;s file. Or use the fallback mechanism for discovering credentials by setting the <code>GOOGLE_APPLICATION_CREDENTIALS</code> environment variable. Refer to the
 component documentation for more information.</p>
 </div>
 </div>

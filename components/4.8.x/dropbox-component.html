@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>Dropbox :: Red Hat Camel Reference</title>
+    <title>Dropbox :: Red Hat build of Apache Camel</title>
     <meta name="description" content="Upload, download and manage files, folders, groups, collaborations, etc on Dropbox.">
     <meta name="generator" content="Antora 3.1.4">
     <link rel="stylesheet" href="../../_/css/site.css">
@@ -12,7 +12,7 @@
 <header class="header">
   <nav class="navbar">
     <div class="navbar-brand">
-      <a class="navbar-item" href="../../manual/index.html">Red Hat Apache Build of Apache Camel Manual</a>
+      <a class="navbar-item" href="/">Red Hat build of Apache Camel</a>
       <button class="navbar-burger" data-target="topbar-nav">
         <span></span>
         <span></span>
@@ -27,6 +27,7 @@
     <div class="panels">
 <div class="nav-panel-menu is-active" data-panel="menu">
   <nav class="nav-menu">
+    <button class="nav-menu-toggle" aria-label="Toggle expand/collapse all" style="display: none"></button>
     <h3 class="title"><a href="index.html">Camel Components</a></h3>
 <ul class="nav-list">
   <li class="nav-item" data-depth="0">
@@ -36,7 +37,46 @@
     <a class="nav-link" href="index.html">Components</a>
 <ul class="nav-list">
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="activemq-component.html">ActiveMQ</a>
+    <a class="nav-link" href="activemq-component.html">ActiveMQ 5.x</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="activemq6-component.html">ActiveMQ 6.x</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="ai-summary.html">AI</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="chatscript-component.html">ChatScript</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="djl-component.html">Deep Java Library</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="langchain4j-chat-component.html">LangChain4j Chat</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="langchain4j-embeddings-component.html">LangChain4j Embeddings</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="langchain4j-tokenizer-component.html">LangChain4j Tokenizer</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="langchain4j-tools-component.html">LangChain4j Tools</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="langchain4j-web-search-component.html">LangChain4j Web Search</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="milvus-component.html">Milvus</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="pinecone-component.html">Pinecone</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="qdrant-component.html">Qdrant</a>
+  </li>
+</ul>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="amqp-component.html">AMQP</a>
@@ -65,6 +105,15 @@
 <ul class="nav-list">
   <li class="nav-item" data-depth="3">
     <a class="nav-link" href="aws2-athena-component.html">AWS Athena</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="aws-bedrock-component.html">AWS Bedrock</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="aws-bedrock-agent-component.html">AWS Bedrock Agent</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="aws-bedrock-agent-runtime-component.html">AWS Bedrock Agent Runtime</a>
   </li>
   <li class="nav-item" data-depth="3">
     <a class="nav-link" href="aws-cloudtrail-component.html">AWS Cloudtrail</a>
@@ -169,7 +218,7 @@
     <a class="nav-link" href="azure-storage-blob-component.html">Azure Storage Blob Service</a>
   </li>
   <li class="nav-item" data-depth="3">
-    <a class="nav-link" href="azure-storage-datalake-component.html">Azure Storage Datalake Service</a>
+    <a class="nav-link" href="azure-storage-datalake-component.html">Azure Storage Data Lake Service</a>
   </li>
   <li class="nav-item" data-depth="3">
     <a class="nav-link" href="azure-storage-queue-component.html">Azure Storage Queue Service</a>
@@ -202,9 +251,6 @@
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="cql-component.html">Cassandra CQL</a>
-  </li>
-  <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="chatscript-component.html">ChatScript</a>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="chunk-component.html">Chunk</a>
@@ -277,9 +323,6 @@
     <a class="nav-link" href="debezium-sqlserver-component.html">Debezium SQL Server Connector</a>
   </li>
 </ul>
-  </li>
-  <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="djl-component.html">Deep Java Library</a>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="dhis2-component.html">DHIS2</a>
@@ -395,6 +438,9 @@
   </li>
   <li class="nav-item" data-depth="3">
     <a class="nav-link" href="google-pubsub-component.html">Google Pubsub</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="google-pubsub-lite-component.html">Google PubSub Lite</a>
   </li>
   <li class="nav-item" data-depth="3">
     <a class="nav-link" href="google-secret-manager-component.html">Google Secret Manager</a>
@@ -687,7 +733,7 @@
     <a class="nav-link" href="ldif-component.html">LDIF</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="log-component.html">Log</a>
+    <a class="nav-link" href="log-component.html">Log Data</a>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="lucene-component.html">Lucene</a>
@@ -900,16 +946,49 @@
     <a class="nav-link" href="smb-component.html">SMB</a>
   </li>
   <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="smooks-component.html">Smooks</a>
+  </li>
+  <li class="nav-item" data-depth="2">
     <a class="nav-link" href="smpp-component.html">SMPP</a>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="snmp-component.html">SNMP</a>
   </li>
   <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="solr-component.html">Solr</a>
+  </li>
+  <li class="nav-item" data-depth="2">
     <a class="nav-link" href="splunk-component.html">Splunk</a>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="splunk-hec-component.html">Splunk HEC</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="spring-summary.html">Spring</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="spring-batch-component.html">Spring Batch</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="spring-event-component.html">Spring Event</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="spring-jdbc-component.html">Spring JDBC</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="spring-ldap-component.html">Spring LDAP</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="spring-rabbitmq-component.html">Spring RabbitMQ</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="spring-redis-component.html">Spring Redis</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="spring-ws-component.html">Spring WebService</a>
+  </li>
+</ul>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="sql-component.html">SQL</a>
@@ -937,6 +1016,18 @@
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="stub-component.html">Stub</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="tahu-summary.html">Tahu</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="tahu-edge-component.html">Tahu Edge Node / Device</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="tahu-host-component.html">Tahu Host Application</a>
+  </li>
+</ul>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="telegram-component.html">Telegram</a>
@@ -999,7 +1090,7 @@
     <a class="nav-link" href="whatsapp-component.html">WhatsApp</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="wordpress-component.html">Wordpress</a>
+    <a class="nav-link" href="wordpress-component.html">WordPress</a>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="workday-component.html">Workday</a>
@@ -1392,7 +1483,13 @@
     <a class="nav-link" href="others/openapi-java.html">Openapi Java</a>
   </li>
   <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="others/openapi-validator.html">Openapi Validator</a>
+  </li>
+  <li class="nav-item" data-depth="2">
     <a class="nav-link" href="others/opentelemetry.html">OpenTelemetry</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="others/platform-http-jolokia.html">Platform HTTP Jolokia</a>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="others/platform-http-main.html">Platform Http Main</a>
@@ -1540,7 +1637,7 @@
     <a class="nav-link" href="eips/event-message.html">Event Message</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="eips/failover-eip.html">Failover</a>
+    <a class="nav-link" href="eips/failoverLoadBalancer-eip.html">Failover Load Balancer</a>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="eips/faultToleranceConfiguration-eip.html">Fault Tolerance Configuration</a>
@@ -1570,13 +1667,13 @@
     <a class="nav-link" href="eips/loadBalance-eip.html">Load Balance</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="eips/log-eip.html">Log</a>
+    <a class="nav-link" href="eips/log-eip.html">Logger</a>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="eips/loop-eip.html">Loop</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="eips/marshal-eip.html">Marshal EIP</a>
+    <a class="nav-link" href="eips/marshal-eip.html">Marshal</a>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="eips/message.html">Message</a>
@@ -1633,6 +1730,9 @@
     <a class="nav-link" href="eips/point-to-point-channel.html">Point to Point Channel</a>
   </li>
   <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="eips/poll-eip.html">Poll</a>
+  </li>
+  <li class="nav-item" data-depth="2">
     <a class="nav-link" href="eips/pollEnrich-eip.html">Poll Enrich</a>
   </li>
   <li class="nav-item" data-depth="2">
@@ -1648,7 +1748,7 @@
     <a class="nav-link" href="eips/publish-subscribe-channel.html">Publish Subscribe Channel</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="eips/random-eip.html">Random</a>
+    <a class="nav-link" href="eips/randomLoadBalancer-eip.html">Random Load Balancer</a>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="eips/recipientList-eip.html">Recipient List</a>
@@ -1690,7 +1790,7 @@
     <a class="nav-link" href="eips/rollback-eip.html">Rollback</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="eips/roundRobin-eip.html">Round Robin</a>
+    <a class="nav-link" href="eips/roundRobinLoadBalancer-eip.html">Round Robin Load Balancer</a>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="eips/routingSlip-eip.html">Routing Slip</a>
@@ -1702,7 +1802,7 @@
     <a class="nav-link" href="eips/sample-eip.html">Sample</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="eips/scatter-gather.html">Scatter Gather</a>
+    <a class="nav-link" href="eips/scatter-gather.html">Scatter-Gather</a>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="eips/script-eip.html">Script</a>
@@ -1732,6 +1832,9 @@
     <a class="nav-link" href="eips/setVariable-eip.html">Set Variable</a>
   </li>
   <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="eips/setVariables-eip.html">Set Variables</a>
+  </li>
+  <li class="nav-item" data-depth="2">
     <a class="nav-link" href="eips/sort-eip.html">Sort</a>
   </li>
   <li class="nav-item" data-depth="2">
@@ -1741,7 +1844,7 @@
     <a class="nav-link" href="eips/step-eip.html">Step</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="eips/sticky-eip.html">Sticky</a>
+    <a class="nav-link" href="eips/stickyLoadBalancer-eip.html">Sticky Load Balancer</a>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="eips/stop-eip.html">Stop</a>
@@ -1762,7 +1865,7 @@
     <a class="nav-link" href="eips/toD-eip.html">To D</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="eips/topic-eip.html">Topic</a>
+    <a class="nav-link" href="eips/topicLoadBalancer-eip.html">Topic Load Balancer</a>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="eips/transactional-client.html">Transactional Client</a>
@@ -1771,13 +1874,13 @@
     <a class="nav-link" href="eips/transform-eip.html">Transform</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="eips/unmarshal-eip.html">Unmarshal EIP</a>
+    <a class="nav-link" href="eips/unmarshal-eip.html">Unmarshal</a>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="eips/validate-eip.html">Validate</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="eips/weighted-eip.html">Weighted</a>
+    <a class="nav-link" href="eips/weightedLoadBalancer-eip.html">Weighted Load Balancer</a>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="eips/wireTap-eip.html">Wire Tap</a>
@@ -1796,7 +1899,7 @@
   </div>
   <ul class="components">
     <li class="component is-current">
-      <a class="title" href="index.html">Camel Components</a>
+      <div class="title"><a href="index.html">Camel Components</a></div>
       <ul class="versions">
         <li class="version is-current is-latest">
           <a href="index.html">Next (Pre-release)</a>
@@ -1804,12 +1907,7 @@
       </ul>
     </li>
     <li class="component">
-      <a class="title" href="../../manual/index.html">User manual</a>
-      <ul class="versions">
-        <li class="version is-latest">
-          <a href="../../manual/index.html">default</a>
-        </li>
-      </ul>
+      <div class="title"><a href="../../manual/index.html">User manual</a></div>
     </li>
   </ul>
 </div>
@@ -1827,6 +1925,7 @@
     <li><a href="dropbox-component.html">Dropbox</a></li>
   </ul>
 </nav>
+<div class="edit-this-page"><a href="file:///code/jboss/jboss-camel/docs/components/modules/ROOT/pages/dropbox-component.adoc">Edit this Page</a></div>
 </div>
   <div class="content">
 <aside class="toc sidebar" data-title="Contents" data-levels="2">
@@ -1862,7 +1961,7 @@ delete files/dir, upload files and search files by queries</p>
 </ul>
 </div>
 <div class="paragraph">
-<p>In order to work with Dropbox API you need to obtain an <strong>accessToken</strong>,
+<p>To work with Dropbox API, you need to obtain an <strong>accessToken</strong>,
  <strong>expireIn</strong>, <strong>refreshToken</strong>, <strong>apiKey</strong>, <strong>apiSecret</strong> and a <strong>clientIdentifier.</strong><br>
 You can refer to the
 <a href="https://dropbox.tech/developers/migrating-app-permissions-and-access-tokens">Dropbox
@@ -1936,7 +2035,7 @@ perform on Dropbox remote folder.</p>
 </tbody>
 </table>
 <div class="paragraph">
-<p><strong>Operations</strong> require additional options to work, some are mandatory for
+<p><strong>Operations</strong> require additional options to work. Some are mandatory for
 the specific operation.</p>
 </div>
 </div>
@@ -1960,37 +2059,65 @@ the specific operation.</p>
 <div class="sect2">
 <h3 id="_configuring_component_options"><a class="anchor" href="#_configuring_component_options"></a>Configuring Component Options</h3>
 <div class="paragraph">
-<p>The component level is the highest level which holds general and common configurations that are inherited by the endpoints.
-For example a component may have security settings, credentials for authentication, urls for network connection and so forth.</p>
+<p>At the component level, you set general and shared configurations that are, then, inherited by the endpoints. It is the highest configuration level.</p>
 </div>
 <div class="paragraph">
-<p>Some components only have a few options, and others may have many. Because components typically have pre configured defaults
-that are commonly used, then you may often only need to configure a few options on a component; or none at all.</p>
+<p>For example, a component may have security settings, credentials for authentication, urls for network connection and so forth.</p>
 </div>
 <div class="paragraph">
-<p>Configuring components can be done with the <a href="../../manual/component-dsl.html" class="xref page">Component DSL</a>,
-in a configuration file (application.properties|yaml), or directly with Java code.</p>
+<p>Some components only have a few options, and others may have many.
+Because components typically have pre-configured defaults that are commonly used, then you may often only need to configure a few options on a component; or none at all.</p>
+</div>
+<div class="paragraph">
+<p>You can configure components using:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>the <a href="../../manual/component-dsl.html" class="xref page">Component DSL</a>.</p>
+</li>
+<li>
+<p>in a configuration file (<code>application.properties</code>, <code>*.yaml</code> files, etc).</p>
+</li>
+<li>
+<p>directly in the Java code.</p>
+</li>
+</ul>
 </div>
 </div>
 <div class="sect2">
 <h3 id="_configuring_endpoint_options"><a class="anchor" href="#_configuring_endpoint_options"></a>Configuring Endpoint Options</h3>
 <div class="paragraph">
-<p>Where you find yourself configuring the most is on endpoints, as endpoints often have many options, which allows you to
-configure what you need the endpoint to do. The options are also categorized into whether the endpoint is used as consumer (from)
-or as a producer (to), or used for both.</p>
+<p>You usually spend more time setting up endpoints because they have many options.
+These options help you customize what you want the endpoint to do.
+The options are also categorized into whether the endpoint is used as a consumer (<em>from</em>), as a producer (<em>to</em>), or  both.</p>
 </div>
 <div class="paragraph">
-<p>Configuring endpoints is most often done directly in the endpoint URI as path and query parameters. You can also use
-the <a href="../../manual/Endpoint-dsl.html" class="xref page">Endpoint DSL</a> and <a href="../../manual/dataformat-dsl.html" class="xref page">DataFormat DSL</a>
+<p>Configuring endpoints is most often done directly in the endpoint URI as <em>path</em> and <em>query</em> parameters.
+You can also use the <a href="../../manual/Endpoint-dsl.html" class="xref page">Endpoint DSL</a> and <a href="../../manual/dataformat-dsl.html" class="xref page">DataFormat DSL</a>
 as a <em>type safe</em> way of configuring endpoints and data formats in Java.</p>
 </div>
 <div class="paragraph">
-<p>A good practice when configuring options is to use <a href="../../manual/using-propertyplaceholder.html" class="xref page">Property Placeholders</a>,
-which allows to not hardcode urls, port numbers, sensitive information, and other settings.
-In other words placeholders allows to externalize the configuration from your code, and gives more flexibility and reuse.</p>
+<p>A good practice when configuring options is to use <a href="../../manual/using-propertyplaceholder.html" class="xref page">Property Placeholders</a>.</p>
 </div>
 <div class="paragraph">
-<p>The following two sections lists all the options, firstly for the component followed by the endpoint.</p>
+<p>Property placeholders provide a few benefits:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>They help prevent using hardcoded urls, port numbers, sensitive information, and other settings.</p>
+</li>
+<li>
+<p>They allow externalizing the configuration from the code.</p>
+</li>
+<li>
+<p>They help the code to become more flexible and reusable.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>The following two sections list all the options, firstly for the component followed by the endpoint.</p>
 </div>
 </div>
 </div>
@@ -2060,7 +2187,7 @@ In other words placeholders allows to externalize the configuration from your co
 </div>
 </div>
 <div class="paragraph">
-<p>with the following path and query parameters:</p>
+<p>With the following <em>path</em> and <em>query</em> parameters:</p>
 </div>
 <div class="sect2">
 <h3 id="_path_parameters_1_parameters"><a class="anchor" href="#_path_parameters_1_parameters"></a>Path Parameters (1 parameters)</h3>
@@ -2464,13 +2591,15 @@ In other words placeholders allows to externalize the configuration from your co
 </div>
 </div>
 <div class="sect1">
-<h2 id="_del_operation"><a class="anchor" href="#_del_operation"></a>Del operation</h2>
+<h2 id="_usage"><a class="anchor" href="#_usage"></a>Usage</h2>
 <div class="sectionbody">
+<div class="sect2">
+<h3 id="_del_operation"><a class="anchor" href="#_del_operation"></a>Del operation</h3>
 <div class="paragraph">
 <p>Delete files on Dropbox.</p>
 </div>
 <div class="paragraph">
-<p>Works only as Camel producer.</p>
+<p>Works only as a Camel producer.</p>
 </div>
 <div class="paragraph">
 <p>Below are listed the options for this operation:</p>
@@ -2496,9 +2625,8 @@ In other words placeholders allows to externalize the configuration from your co
 </tr>
 </tbody>
 </table>
-<div class="sect2">
-<h3 id="_samples"><a class="anchor" href="#_samples"></a>Samples</h3>
 <div class="listingblock">
+<div class="title">Examples</div>
 <div class="content">
 <pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">from("direct:start")
   .to("dropbox://del?accessToken=XXX&amp;clientIdentifier=XXX&amp;expireIn=1000&amp;refreshToken=XXXX"
@@ -2511,9 +2639,8 @@ from("direct:start")
   .to("mock:result");</code></pre>
 </div>
 </div>
-</div>
-<div class="sect2">
-<h3 id="_result_message_body"><a class="anchor" href="#_result_message_body"></a>Result Message Body</h3>
+<div class="sect3">
+<h4 id="_result_message_body"><a class="anchor" href="#_result_message_body"></a>Result Message Body</h4>
 <div class="paragraph">
 <p>The following objects are set on message body result:</p>
 </div>
@@ -2537,15 +2664,13 @@ from("direct:start")
 </table>
 </div>
 </div>
-</div>
-<div class="sect1">
-<h2 id="_get_download_operation"><a class="anchor" href="#_get_download_operation"></a>Get (download) operation</h2>
-<div class="sectionbody">
+<div class="sect2">
+<h3 id="_get_download_operation"><a class="anchor" href="#_get_download_operation"></a>Get (download) operation</h3>
 <div class="paragraph">
 <p>Download files from Dropbox.</p>
 </div>
 <div class="paragraph">
-<p>Works as Camel producer or Camel consumer.</p>
+<p>Works as a Camel producer or Camel consumer.</p>
 </div>
 <div class="paragraph">
 <p>Below are listed the options for this operation:</p>
@@ -2571,9 +2696,8 @@ from("direct:start")
 </tr>
 </tbody>
 </table>
-<div class="sect2">
-<h3 id="_samples_2"><a class="anchor" href="#_samples_2"></a>Samples</h3>
 <div class="listingblock">
+<div class="title">Examples</div>
 <div class="content">
 <pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">from("direct:start")
   .to("dropbox://get?accessToken=XXX&amp;clientIdentifier=XXX&amp;expireIn=1000&amp;refreshToken=XXXX"
@@ -2590,9 +2714,8 @@ from("dropbox://get?accessToken=XXX&amp;clientIdentifier=XXX&amp;expireIn=1000&a
   .to("file:///home/kermit/");</code></pre>
 </div>
 </div>
-</div>
-<div class="sect2">
-<h3 id="_result_message_body_2"><a class="anchor" href="#_result_message_body_2"></a>Result Message Body</h3>
+<div class="sect3">
+<h4 id="_result_message_body_2"><a class="anchor" href="#_result_message_body_2"></a>Result Message Body</h4>
 <div class="paragraph">
 <p>The following objects are set on message body result:</p>
 </div>
@@ -2610,11 +2733,11 @@ from("dropbox://get?accessToken=XXX&amp;clientIdentifier=XXX&amp;expireIn=1000&a
 <tbody>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>byte[]</code> or <code>CachedOutputStream</code>  if stream caching is enabled</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">in case of single file download, stream representing the file downloaded</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">in case of single file download, stream represents the file downloaded</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>Map&lt;String, byte[]&gt;</code> or <code>Map&lt;String, CachedOutputStream&gt;</code> if stream caching is enabled</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">in case of multiple files download, a map with as key the path of the
+<td class="tableblock halign-left valign-top"><p class="tableblock">in the case of multiple files downloaded, a map with as a key the path of the
 remote file downloaded and as value the stream representing the file
 downloaded</p></td>
 </tr>
@@ -2622,15 +2745,13 @@ downloaded</p></td>
 </table>
 </div>
 </div>
-</div>
-<div class="sect1">
-<h2 id="_move_operation"><a class="anchor" href="#_move_operation"></a>Move operation</h2>
-<div class="sectionbody">
+<div class="sect2">
+<h3 id="_move_operation"><a class="anchor" href="#_move_operation"></a>Move operation</h3>
 <div class="paragraph">
 <p>Move files on Dropbox between one folder to another.</p>
 </div>
 <div class="paragraph">
-<p>Works only as Camel producer.</p>
+<p>Works only as a Camel producer.</p>
 </div>
 <div class="paragraph">
 <p>Below are listed the options for this operation:</p>
@@ -2661,9 +2782,8 @@ downloaded</p></td>
 </tr>
 </tbody>
 </table>
-<div class="sect2">
-<h3 id="_samples_3"><a class="anchor" href="#_samples_3"></a>Samples</h3>
 <div class="listingblock">
+<div class="title">Examples</div>
 <div class="content">
 <pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">from("direct:start")
   .to("dropbox://move?accessToken=XXX&amp;clientIdentifier=XXX&amp;expireIn=1000&amp;refreshToken=XXXX"
@@ -2671,9 +2791,8 @@ downloaded</p></td>
   .to("mock:result");</code></pre>
 </div>
 </div>
-</div>
-<div class="sect2">
-<h3 id="_result_message_body_3"><a class="anchor" href="#_result_message_body_3"></a>Result Message Body</h3>
+<div class="sect3">
+<h4 id="_result_message_body_3"><a class="anchor" href="#_result_message_body_3"></a>Result Message Body</h4>
 <div class="paragraph">
 <p>The following objects are set on message body result:</p>
 </div>
@@ -2697,15 +2816,13 @@ downloaded</p></td>
 </table>
 </div>
 </div>
-</div>
-<div class="sect1">
-<h2 id="_put_upload_operation"><a class="anchor" href="#_put_upload_operation"></a>Put (upload) operation</h2>
-<div class="sectionbody">
+<div class="sect2">
+<h3 id="_put_upload_operation"><a class="anchor" href="#_put_upload_operation"></a>Put (upload) operation</h3>
 <div class="paragraph">
 <p>Upload files on Dropbox.</p>
 </div>
 <div class="paragraph">
-<p>Works as Camel producer.</p>
+<p>Works as a Camel producer.</p>
 </div>
 <div class="paragraph">
 <p>Below are listed the options for this operation:</p>
@@ -2728,16 +2845,16 @@ downloaded</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>uploadMode</code></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>true</code></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">add or force this option specifies how a file should be saved on
-dropbox: in case of "add" the new file will be renamed if a file with the same
-name already exists on dropbox. In case of "force" if a file with the same name already exists on
+dropbox: in the case of <code>add</code>, the new file will be renamed if a file with the same
+name already exists on dropbox. In the case of <code>force</code>, if a file with the same name already exists on
 dropbox, this will be overwritten.</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>localPath</code></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>false</code></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Folder or file to upload on Dropbox from the local filesystem.
-If this option has been configured then it takes precedence over uploading as a single
-file with content from the Camel message body (message body is converted into a byte array).</p></td>
+If this option has been configured, then it takes precedence over uploading as a single
+file with content from the Camel message body (the message body is converted into a byte array).</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>remotePath</code></p></td>
@@ -2751,9 +2868,8 @@ Caused by: java.lang.IllegalArgumentException: 'path': bad path: must start with
 </tr>
 </tbody>
 </table>
-<div class="sect2">
-<h3 id="_samples_4"><a class="anchor" href="#_samples_4"></a>Samples</h3>
 <div class="listingblock">
+<div class="title">Examples</div>
 <div class="content">
 <pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">from("direct:start").to("dropbox://put?accessToken=XXX&amp;clientIdentifier=XXX&amp;expireIn=1000&amp;refreshToken=XXXX"
       +"&amp;apiKey=XXXXX&amp;apiSecret=XXXXXX&amp;uploadMode=add&amp;localPath=/root/folder1")
@@ -2781,9 +2897,8 @@ from("direct:start").to("dropbox://put?accessToken=XXX&amp;clientIdentifier=XXX&
 or <code>Exchange.FILE_NAME</code> in that order of precedence. If no header has been provided then the message id (uuid) is
 used as the file name.</p>
 </div>
-</div>
-<div class="sect2">
-<h3 id="_result_message_body_4"><a class="anchor" href="#_result_message_body_4"></a>Result Message Body</h3>
+<div class="sect3">
+<h4 id="_result_message_body_4"><a class="anchor" href="#_result_message_body_4"></a>Result Message Body</h4>
 <div class="paragraph">
 <p>The following objects are set on message body result:</p>
 </div>
@@ -2805,7 +2920,7 @@ used as the file name.</p>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>Map&lt;String, DropboxResultCode&gt;</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">in case of multiple files upload, a map with as key the path of the
+<td class="tableblock halign-left valign-top"><p class="tableblock">in the case of multiple files upload, a map with as a key the path of the
 remote file uploaded and as value the result of the upload operation, OK
 or KO</p></td>
 </tr>
@@ -2813,12 +2928,10 @@ or KO</p></td>
 </table>
 </div>
 </div>
-</div>
-<div class="sect1">
-<h2 id="_search_operation"><a class="anchor" href="#_search_operation"></a>Search operation</h2>
-<div class="sectionbody">
+<div class="sect2">
+<h3 id="_search_operation"><a class="anchor" href="#_search_operation"></a>Search operation</h3>
 <div class="paragraph">
-<p>Search inside a remote Dropbox folder including its sub directories.</p>
+<p>Search inside a remote Dropbox folder including its subdirectories.</p>
 </div>
 <div class="paragraph">
 <p>Works as Camel producer and as Camel consumer.</p>
@@ -2855,9 +2968,8 @@ or as a header <code>CamelDropboxQuery</code> on the Camel message.</p></td>
 </tr>
 </tbody>
 </table>
-<div class="sect2">
-<h3 id="_samples_5"><a class="anchor" href="#_samples_5"></a>Samples</h3>
 <div class="listingblock">
+<div class="title">Examples</div>
 <div class="content">
 <pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">from("dropbox://search?accessToken=XXX&amp;clientIdentifier=XXX&amp;expireIn=1000&amp;refreshToken=XXXX"
       +"&amp;apiKey=XXXXX&amp;apiSecret=XXXXXX&amp;remotePath=/XXX&amp;query=XXX")
@@ -2870,9 +2982,8 @@ from("direct:start")
   .to("mock:result");</code></pre>
 </div>
 </div>
-</div>
-<div class="sect2">
-<h3 id="_result_message_body_5"><a class="anchor" href="#_result_message_body_5"></a>Result Message Body</h3>
+<div class="sect3">
+<h4 id="_result_message_body_5"><a class="anchor" href="#_result_message_body_5"></a>Result Message Body</h4>
 <div class="paragraph">
 <p>The following objects are set on message body result:</p>
 </div>
@@ -2890,11 +3001,15 @@ from("direct:start")
 <tbody>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>List&lt;com.dropbox.core.v2.files.SearchMatchV2&gt;</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">list of file path founded. For more information on this object refer to
+<td class="tableblock halign-left valign-top"><p class="tableblock">list of the file path found. For more information on this object, refer to
 <a href="https://javadoc.io/doc/com.dropbox.core/dropbox-core-sdk/latest/com/dropbox/core/v2/files/SearchMatchV2.html">Dropbox documentation</a>.</p></td>
 </tr>
 </tbody>
 </table>
+<div class="paragraph">
+<p>Unresolved include directive in modules/ROOT/pages/dropbox-component.adoc - include::spring-boot:partial$starter.adoc[]</p>
+</div>
+</div>
 </div>
 </div>
 </div>

@@ -3,15 +3,15 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>Route Template :: Red Hat Apache Build of Apache Camel Manual</title>
-    <meta name="generator" content="Antora 3.0.3">
+    <title>Route Template :: Red Hat build of Apache Camel</title>
+    <meta name="generator" content="Antora 3.1.4">
     <link rel="stylesheet" href="../_/css/site.css">
   </head>
   <body class="article">
 <header class="header">
   <nav class="navbar">
     <div class="navbar-brand">
-      <a class="navbar-item" href="../../manual/index.html">Red Hat Apache Build of Apache Camel Manual</a>
+      <a class="navbar-item" href="/">Red Hat build of Apache Camel</a>
       <button class="navbar-burger" data-target="topbar-nav">
         <span></span>
         <span></span>
@@ -26,6 +26,7 @@
     <div class="panels">
 <div class="nav-panel-menu is-active" data-panel="menu">
   <nav class="nav-menu">
+    <button class="nav-menu-toggle" aria-label="Toggle expand/collapse all" style="display: none"></button>
     <h3 class="title"><a href="index.html">User manual</a></h3>
 <ul class="nav-list">
   <li class="nav-item" data-depth="0">
@@ -56,7 +57,16 @@
     <a class="nav-link" href="camel-console.html">Camel Developer Console</a>
   </li>
   <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
     <a class="nav-link" href="camel-jbang.html">Camel JBang</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="camel-jbang-kubernetes.html">Camel Kubernetes plugin</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="camel-jbang-k.html">Camel K plugin</a>
+  </li>
+</ul>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="camel-maven-plugin.html">Camel Maven Plugin</a>
@@ -95,6 +105,9 @@
     <a class="nav-link" href="using-propertyplaceholder.html">How to use Camel property placeholders</a>
   </li>
   <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="variables.html">How to use Variables</a>
+  </li>
+  <li class="nav-item" data-depth="2">
     <button class="nav-item-toggle"></button>
     <a class="nav-link" href="testing.html">Testing</a>
 <ul class="nav-list">
@@ -110,7 +123,13 @@
 </ul>
   </li>
   <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
     <a class="nav-link" href="rest-dsl.html">Working with REST and Rest DSL</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="rest-dsl-openapi.html">Rest DSL contract first</a>
+  </li>
+</ul>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="writing-components.html">Writing Components</a>
@@ -477,9 +496,6 @@
     <a class="nav-link" href="faq/how-should-i-invoke-my-pojos-or-spring-services.html">How should I invoke my POJOs or Spring Services?</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="faq/how-to-avoid-importing-bunch-of-cxf-packages-when-start-up-the-camel-cxf-endpoint-from-osgi-platform-.html">How to avoid importing bunch of cxf packages when start up the camel-cxf endpoint from OSGi platform?</a>
-  </li>
-  <li class="nav-item" data-depth="2">
     <a class="nav-link" href="faq/how-to-avoid-sending-some-or-all-message-headers.html">How to avoid sending some or all message headers?</a>
   </li>
   <li class="nav-item" data-depth="2">
@@ -598,11 +614,11 @@
 <div class="nav-panel-explore" data-panel="explore">
   <div class="context">
     <span class="title">User manual</span>
-    <span class="version">default</span>
+    <span class="version"></span>
   </div>
   <ul class="components">
     <li class="component">
-      <a class="title" href="../components/next/index.html">Camel Components</a>
+      <div class="title"><a href="../components/next/index.html">Camel Components</a></div>
       <ul class="versions">
         <li class="version is-latest">
           <a href="../components/next/index.html">Next (Pre-release)</a>
@@ -610,12 +626,7 @@
       </ul>
     </li>
     <li class="component is-current">
-      <a class="title" href="index.html">User manual</a>
-      <ul class="versions">
-        <li class="version is-current is-latest">
-          <a href="index.html">default</a>
-        </li>
-      </ul>
+      <div class="title"><a href="index.html">User manual</a></div>
     </li>
   </ul>
 </div>
@@ -633,6 +644,7 @@
     <li><a href="route-template.html">RouteTemplate</a></li>
   </ul>
 </nav>
+<div class="edit-this-page"><a href="file:///code/jboss/jboss-camel/docs/user-manual/modules/ROOT/pages/route-template.adoc">Edit this Page</a></div>
 </div>
   <div class="content">
 <aside class="toc sidebar" data-title="Contents" data-levels="2">
@@ -651,7 +663,7 @@ route templates are parameterized routes.</p>
 <p><em>Route template</em> + <em>input parameters</em> &#8658; <em>route</em></p>
 </div>
 <div class="paragraph">
-<p>From a route template you can create one or more routes.</p>
+<p>From a route template, you can create one or more routes.</p>
 </div>
 </div>
 </div>
@@ -722,17 +734,17 @@ route templates are parameterized routes.</p>
 </div>
 </div>
 <div class="paragraph">
-<p>In the examples above there was one route template, but you can define as many as you want.
+<p>In the examples above, there was one route template, but you can define as many as you want.
 Each template must have a unique id. The template parameters are used for defining the parameters
-the template accepts. As you can see there are 3 parameters: name, greeting, and myPeriod. The first two
-parameters are mandatory, whereas myPeriod is optional as it has a default value of 3s.</p>
+the template accepts. As you can see, there are three parameters: <code><em>name</em></code>, <code><em>greeting</em></code>, and <code><em>myPeriod</em></code>. The first two
+parameters are mandatory, whereas <code><em>myPeriod</em></code> is optional as it has a default value of 3s.</p>
 </div>
 <div class="paragraph">
 <p>The template parameters are then used in the route as regular property placeholders with the <code>{{ }}</code> syntax.
 Notice how we use <code>{{name}}</code> and <code>{{greeting}}</code> in the timer endpoint and the simple language.</p>
 </div>
 <div class="paragraph">
-<p>The route can of course also use regular property placeholders as well.
+<p>The route can, of course, use regular property placeholders as well.
 Now imagine there was a property placeholder with the name greeting:</p>
 </div>
 <div class="listingblock">
@@ -741,7 +753,7 @@ Now imagine there was a property placeholder with the name greeting:</p>
 </div>
 </div>
 <div class="paragraph">
-<p>Then Camel would normally have used this value <code>Davs</code> when creating the route. However as the route template
+<p>Then Camel would normally have used this value <code>Davs</code> when creating the route. However, as the route template
 has defined a template parameter with the same name <code>greeting</code> then a value must be provided when
 creating routes from the template.</p>
 </div>
@@ -775,7 +787,7 @@ TemplatedRouteBuilder.builder(context, "myTemplate")
 </div>
 </div>
 <div class="paragraph">
-<p>And in Java DSL</p>
+<p>And in Java DSL:</p>
 </div>
 <div class="listingblock">
 <div class="content">
@@ -789,7 +801,7 @@ templatedRoute("myTemplate")
 </div>
 </div>
 <div class="paragraph">
-<p>And in Spring XML DSL</p>
+<p>And in Spring XML DSL:</p>
 </div>
 <div class="listingblock">
 <div class="content">
@@ -807,7 +819,7 @@ templatedRoute("myTemplate")
 </div>
 </div>
 <div class="paragraph">
-<p>And in XML DSL</p>
+<p>And in XML DSL:</p>
 </div>
 <div class="listingblock">
 <div class="content">
@@ -825,7 +837,7 @@ templatedRoute("myTemplate")
 </div>
 </div>
 <div class="paragraph">
-<p>And in YAML DSL</p>
+<p>And in YAML DSL:</p>
 </div>
 <div class="listingblock">
 <div class="content">
@@ -870,7 +882,7 @@ assign route ids such as <code>route1</code>, <code>route2</code> to these route
 </div>
 </div>
 <div class="paragraph">
-<p>And in Java DSL</p>
+<p>And in Java DSL:</p>
 </div>
 <div class="listingblock">
 <div class="content">
@@ -882,7 +894,7 @@ assign route ids such as <code>route1</code>, <code>route2</code> to these route
 </div>
 </div>
 <div class="paragraph">
-<p>And in Spring XML DSL</p>
+<p>And in Spring XML DSL:</p>
 </div>
 <div class="listingblock">
 <div class="content">
@@ -896,7 +908,7 @@ assign route ids such as <code>route1</code>, <code>route2</code> to these route
 </div>
 </div>
 <div class="paragraph">
-<p>And in XML DSL</p>
+<p>And in XML DSL:</p>
 </div>
 <div class="listingblock">
 <div class="content">
@@ -910,7 +922,7 @@ assign route ids such as <code>route1</code>, <code>route2</code> to these route
 </div>
 </div>
 <div class="paragraph">
-<p>And in YAML DSL</p>
+<p>And in YAML DSL:</p>
 </div>
 <div class="listingblock">
 <div class="content">
@@ -929,11 +941,11 @@ assign route ids such as <code>route1</code>, <code>route2</code> to these route
 <div class="sect2">
 <h3 id="_using_template_parameters_with_java_dsl_simple_builder"><a class="anchor" href="#_using_template_parameters_with_java_dsl_simple_builder"></a>Using template parameters with Java DSL simple builder</h3>
 <div class="paragraph">
-<p>When using Java DSL and simple language then beware that you should
+<p>When using Java DSL and simple language, then beware that you should
 not use the <em>simple fluent builder</em> when defining the simple expressions/predicates.</p>
 </div>
 <div class="paragraph">
-<p>For example given the following route template in Java DSL:</p>
+<p>For example, given the following route template in Java DSL:</p>
 </div>
 <div class="listingblock">
 <div class="content">
@@ -971,11 +983,11 @@ This is <strong>not supported</strong> with route templates and would not work w
 <div class="sect2">
 <h3 id="_using_hardcoded_node_ids_in_route_templates"><a class="anchor" href="#_using_hardcoded_node_ids_in_route_templates"></a>Using hardcoded node IDs in route templates</h3>
 <div class="paragraph">
-<p>If route templates contains hardcoded node IDs then routes created from templates will use the same IDs
-and therefore if 2 or more routes are created from the same template, you will have <em>duplicate id detected</em> error.</p>
+<p>If route templates contain hardcoded node IDs, then routes created from templates will use the same IDs.
+Therefore, if two or more routes are created from the same template, you will have <em>duplicate id detected</em> error.</p>
 </div>
 <div class="paragraph">
-<p>Given the route template below, then it has hardcoded ID (<em>new-order</em>) in node calling the http services.</p>
+<p>Given the route template below, then it has hardcoded ID (<code><em>new-order</em></code>) in node calling the http services.</p>
 </div>
 <div class="listingblock">
 <div class="content">
@@ -993,12 +1005,12 @@ and therefore if 2 or more routes are created from the same template, you will h
 </div>
 </div>
 <div class="paragraph">
-<p>When creating routes from templates, you can then provide a <em>prefix</em> which are used for all node IDs.
+<p>When creating routes from templates, you can then provide a <em>prefix</em> which is used for all node IDs.
 This allows to create 2 or more routes without <em>duplicate id</em> errors.</p>
 </div>
 <div class="paragraph">
-<p>For example in the following we create a new route <em>myCoolRoute</em> from the <em>myTemplate</em> template, and
-use a prefix of <em>web</em>.</p>
+<p>For example in the following, we create a new route <code><em>myCoolRoute</em></code> from the <code><em>myTemplate</em></code> template, and
+use a prefix of <code><em>web</em></code>.</p>
 </div>
 <div class="paragraph">
 <p>And in Java DSL</p>
@@ -1023,7 +1035,7 @@ use a prefix of <em>web</em>.</p>
 </div>
 </div>
 <div class="paragraph">
-<p>And in Spring XML DSL</p>
+<p>And in Spring XML DSL:</p>
 </div>
 <div class="listingblock">
 <div class="content">
@@ -1035,7 +1047,7 @@ use a prefix of <em>web</em>.</p>
 </div>
 </div>
 <div class="paragraph">
-<p>And in XML DSL</p>
+<p>And in XML DSL:</p>
 </div>
 <div class="listingblock">
 <div class="content">
@@ -1047,7 +1059,7 @@ use a prefix of <em>web</em>.</p>
 </div>
 </div>
 <div class="paragraph">
-<p>And in YAML DSL</p>
+<p>And in YAML DSL:</p>
 </div>
 <div class="listingblock">
 <div class="content">
@@ -1067,11 +1079,11 @@ use a prefix of <em>web</em>.</p>
 <h2 id="_binding_beans_to_route_template"><a class="anchor" href="#_binding_beans_to_route_template"></a>Binding beans to route template</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>The route template allows to bind beans which is local scoped and only used as part of creating routes from the template.
-This allows to use the same template to create multiple routes, where beans are local (private) for each created route.</p>
+<p>The route template allows binding beans that are locally scoped and only used as part of creating routes from the template.
+This allows using the same template to create multiple routes, where beans are local (private) for each created route.</p>
 </div>
 <div class="paragraph">
-<p>For example given the following route template where we use <code>templateBean</code> to setup the local bean as shown:</p>
+<p>For example, given the following route template where we use <code>templateBean</code> to set up the local bean as shown:</p>
 </div>
 <div class="listingblock">
 <div class="content">
@@ -1088,17 +1100,17 @@ This allows to use the same template to create multiple routes, where beans are 
 </div>
 <div class="paragraph">
 <p>The template has two parameters to specify the AWS region and the S3 bucket. To connect to S3
-then a <code>software.amazon.awssdk.services.s3.S3Client</code> bean is needed.</p>
+then a <code>software.amazon.awssdk.services.s3.S3Client</code> bean is necessary.</p>
 </div>
 <div class="paragraph">
-<p>To create this bean we specify this with the <code>templateBean</code> DSL where we specify the bean id as <code>myClient</code>.
-The type of the bean can be specified (<code>S3Client.class</code>) however it is optional
+<p>To create this bean, we specify this with the <code>templateBean</code> DSL where we specify the bean id as <code>myClient</code>.
+The type of the bean can be specified (<code>S3Client.class</code>), however, it is optional
 (can be used if you need to let beans be discovered by type and not by name).</p>
 </div>
 <div class="paragraph">
-<p>This ensures that the code creating the bean is executed later ( when Camel is creating a route from the template),
+<p>This ensures that the code creating the bean is executed later (when Camel is creating a route from the template),
 then the code must be specified as a <em>supplier</em>. Because we want during creation of the bean access to template parameters,
-we use a Camel <code>BeanSupplier</code> which gives access to <code>RouteTemplateContext</code> that is the <em>rtc</em> variable in the code above.</p>
+we use a Camel <code>BeanSupplier</code> which gives access to <code>RouteTemplateContext</code> that is the <code><em>rtc</em></code> variable in the code above.</p>
 </div>
 <div class="admonitionblock important">
 <table>
@@ -1116,13 +1128,13 @@ of the property placeholder functionality.
 </table>
 </div>
 <div class="paragraph">
-<p>If multiple routes are created from this template, then each of the created routes, have their own
-S3Client bean created.</p>
+<p>If multiple routes are created from this template, then each of the created routes have their own
+<code>S3Client</code> bean created.</p>
 </div>
 <div class="sect2">
 <h3 id="_binding_beans_to_route_templates_from_template_builder"><a class="anchor" href="#_binding_beans_to_route_templates_from_template_builder"></a>Binding beans to route templates from template builder</h3>
 <div class="paragraph">
-<p>The <code>TemplatedRouteBuilder</code> also allows to bind local beans (which allows to specify those beans) when
+<p>The <code>TemplatedRouteBuilder</code> also allows to bind local beans (which allows specifying those beans) when
 creating routes from existing templates.</p>
 </div>
 <div class="paragraph">
@@ -1147,7 +1159,7 @@ creating routes from existing templates.</p>
 </div>
 <div class="paragraph">
 <p>When creating routes form the template via <code>TemplatedRouteBuilder</code> then you can provide the bean binding
-if you desire the bean to be local scoped (not shared with others):</p>
+if you desire the bean to be locally scoped (not shared with others):</p>
 </div>
 <div class="listingblock">
 <div class="content">
@@ -1166,7 +1178,7 @@ if you desire the bean to be local scoped (not shared with others):</p>
 <p>As you can see the binding is similar to when using <code>templateBean</code> directly in the route template.</p>
 </div>
 <div class="paragraph">
-<p>And in Java DSL</p>
+<p>And in Java DSL:</p>
 </div>
 <div class="listingblock">
 <div class="content">
@@ -1189,15 +1201,15 @@ if you desire the bean to be local scoped (not shared with others):</p>
 </table>
 </div>
 <div class="paragraph">
-<p>And in Spring XML DSL</p>
+<p>And in XML DSL:</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;camelContext&gt;
-  &lt;templatedRoute routeTemplateRef="s3template" routeId="mys3route"&gt;
+<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">  &lt;templatedRoute routeTemplateRef="s3template" routeId="mys3route"&gt;
     &lt;parameter name="region" value="US-EAST-1"/&gt;
     &lt;parameter name="bucket" value="myBucket"/&gt;
-    &lt;bean name="myClient" type="groovy"&gt; <i class="conum" data-value="1"></i><b>(1)</b>
+    &lt;bean name="myClient" type="software.amazon.awssdk.services.s3.S3Client"
+          scriptLanguage="groovy"&gt; <i class="conum" data-value="1"></i><b>(1)</b>
         &lt;script&gt;
             import software.amazon.awssdk.services.s3.S3Client
             S3Client.builder()
@@ -1205,8 +1217,7 @@ if you desire the bean to be local scoped (not shared with others):</p>
                 .build()
         &lt;/script&gt;
     &lt;/bean&gt;
-  &lt;/templatedRoute&gt;
-&lt;/camelContext&gt;</code></pre>
+  &lt;/templatedRoute&gt;</code></pre>
 </div>
 </div>
 <div class="colist arabic">
@@ -1218,36 +1229,7 @@ if you desire the bean to be local scoped (not shared with others):</p>
 </table>
 </div>
 <div class="paragraph">
-<p>And in XML DSL</p>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;templatedRoutes xmlns="http://camel.apache.org/schema/spring"&gt;
-  &lt;templatedRoute routeTemplateRef="s3template" routeId="mys3route"&gt;
-    &lt;parameter name="region" value="US-EAST-1"/&gt;
-    &lt;parameter name="bucket" value="myBucket"/&gt;
-    &lt;bean name="myClient" type="groovy"&gt; <i class="conum" data-value="1"></i><b>(1)</b>
-        &lt;script&gt;
-            import software.amazon.awssdk.services.s3.S3Client
-            S3Client.builder()
-                .region(rtc.getProperty("region", Region.class))
-                .build()
-        &lt;/script&gt;
-    &lt;/bean&gt;
-  &lt;/templatedRoute&gt;
-&lt;/templatedRoutes&gt;</code></pre>
-</div>
-</div>
-<div class="colist arabic">
-<table>
-<tr>
-<td><i class="conum" data-value="1"></i><b>1</b></td>
-<td>For non-Java DSL, in case of a complex bean factory, you can still rely on a language like <code>groovy</code> to define your bean factory inside a <code>script</code> element.</td>
-</tr>
-</table>
-</div>
-<div class="paragraph">
-<p>And in YAML DSL</p>
+<p>And in YAML DSL:</p>
 </div>
 <div class="listingblock">
 <div class="content">
@@ -1261,7 +1243,8 @@ if you desire the bean to be local scoped (not shared with others):</p>
         value: "myBucket"
     beans:
       - name: "myClient"
-        type: "groovy"
+        type: "software.amazon.awssdk.services.s3.S3Client"
+        scriptLanguage: "groovy"
         script: | <i class="conum" data-value="1"></i><b>(1)</b>
             import software.amazon.awssdk.services.s3.S3Client
             S3Client.builder()
@@ -1294,7 +1277,7 @@ TemplatedRouteBuilder.builder(context, "s3template")
 </div>
 </div>
 <div class="paragraph">
-<p>And in Java DSL</p>
+<p>And in Java DSL:</p>
 </div>
 <div class="listingblock">
 <div class="content">
@@ -1315,14 +1298,26 @@ a new route is created from the route template. However, the latter gives freedo
 <h3 id="_binding_beans_to_route_templates_using_bean_types"><a class="anchor" href="#_binding_beans_to_route_templates_using_bean_types"></a>Binding beans to route templates using bean types</h3>
 <div class="paragraph">
 <p>You can create a local bean by referring to a fully qualified class name which Camel will use to create
-a new local bean instance. When using this the created bean is created via default constructor of the class.</p>
+a new local bean instance. When using this, the created bean is created via default constructor of the class.</p>
 </div>
 <div class="paragraph">
 <p>The bean instance can be configured with properties via getter/setter style.
 The previous example with creating the AWS S3Client would not support this kind as this uses <em>fluent builder</em> pattern (not getter/setter).</p>
 </div>
+<div class="admonitionblock tip">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-tip" title="Tip"></i>
+</td>
+<td class="content">
+In <strong>Camel 4.6</strong> onwards, you can also use constructor arguments for beans
+</td>
+</tr>
+</table>
+</div>
 <div class="paragraph">
-<p>So suppose we have a class as follows</p>
+<p>So suppose we have a class as follows:</p>
 </div>
 <div class="listingblock">
 <div class="content">
@@ -1356,7 +1351,7 @@ The previous example with creating the AWS S3Client would not support this kind 
 </div>
 </div>
 <div class="paragraph">
-<p>With Java DSL you can also refer to the bean class using type safe way:</p>
+<p>With Java DSL, you can also refer to the bean class using type safe way:</p>
 </div>
 <div class="listingblock">
 <div class="content">
@@ -1377,8 +1372,10 @@ The previous example with creating the AWS S3Client would not support this kind 
         &lt;templateParameter name="bar"/&gt;
         &lt;templateParameter name="street"/&gt;
         &lt;templateBean name="myBean" type="#class:com.foo.MyBar"&gt;
-            &lt;property key="name" value="{{bar}}"/&gt;
-            &lt;property key="address" value="{{street}}"/&gt;
+            &lt;properties&gt;
+                &lt;property key="name" value="{{bar}}"/&gt;
+                &lt;property key="address" value="{{street}}"/&gt;
+            &lt;/properties&gt;
         &lt;/templateBean&gt;
         &lt;route&gt;
             &lt;from uri="direct:going-out"/&gt;
@@ -1392,11 +1389,11 @@ The previous example with creating the AWS S3Client would not support this kind 
 <div class="sect2">
 <h3 id="_binding_beans_to_route_templates_using_scripting_languages"><a class="anchor" href="#_binding_beans_to_route_templates_using_scripting_languages"></a>Binding beans to route templates using scripting languages</h3>
 <div class="paragraph">
-<p>You can use scripting languages like groovy, joor, mvel to create the bean.
-This allows to define route templates with the scripting language built-in (such as groovy).</p>
+<p>You can use scripting languages like groovy, java, mvel to create the bean.
+This allows defining route templates with the scripting language built-in (such as groovy).</p>
 </div>
 <div class="paragraph">
-<p>For example creating the AWS S3 client can be done as shown in Java (with inlined groovy code):</p>
+<p>For example, creating the AWS S3 client can be done as shown in Java (with inlined groovy code):</p>
 </div>
 <div class="listingblock">
 <div class="content">
@@ -1432,10 +1429,10 @@ This allows to define route templates with the scripting language built-in (such
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-groovy hljs" data-lang="groovy">import software.amazon.awssdk.services.s3.S3Client
-S3Client.builder()
+<pre class="highlightjs highlight"><code class="language-groovy hljs" data-lang="groovy"><span class="fold-block is-hidden-folded">import software.amazon.awssdk.services.s3.S3Client
+</span><span class="fold-block">S3Client.builder()
     .region(rtc.getProperty("region", Region.class))
-    .build()</code></pre>
+    .build()</span></code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -1464,7 +1461,7 @@ S3Client.builder()
 </div>
 </div>
 <div class="paragraph">
-<p>Notice how the groovy code can be inlined directly in the route template in XML also. Of course you can also externalize
+<p>Notice how the groovy code can be inlined directly in the route template in XML also. Of course, you can also externalize
 the bean creation code to an external file, by using <code>resource:</code> as prefix:</p>
 </div>
 <div class="listingblock">
@@ -1505,15 +1502,15 @@ the bean creation code to an external file, by using <code>resource:</code> as p
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>groovy</strong></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Using groovy script to create the bean.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Using a groovy script to create the bean.</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>joor</strong></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Using joor (Java code which are runtime compiled) to create the bean.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>java</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Java code which is runtime compiled (using jOOR library) to create the bean.</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>mvel</strong></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">To use Mvel template script to create the bean.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">To use a Mvel template script to create the bean.</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>ognl</strong></p></td>
@@ -1521,7 +1518,7 @@ the bean creation code to an external file, by using <code>resource:</code> as p
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong><em>name</em></strong></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">To use a 3rd party language by the given <em>name</em> to create the bean.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">To use a third-party language by the given <code><em>name</em></code> to create the bean.</p></td>
 </tr>
 </tbody>
 </table>
@@ -1546,11 +1543,11 @@ This means you can get access to all the information from <code>RouteTemplateCon
 </div>
 </div>
 <div class="paragraph">
-<p>The most powerful languages to use are groovy and joor. The other languages are limited in flexibility
+<p>The most powerful languages to use are groovy and java. The other languages are limited in flexibility
 as they are not complete programming languages, but are more suited for templating needs.</p>
 </div>
 <div class="paragraph">
-<p>It is recommended to either use groovy or joor, if creating the local bean requires coding,
+<p>It is recommended to either use groovy or java, if creating the local bean requires coding,
 and the route templates are not defined using Java code.</p>
 </div>
 <div class="paragraph">
@@ -1579,7 +1576,7 @@ then you can call this method from the route template in XML DSL:</p>
 </div>
 </div>
 <div class="paragraph">
-<p>The method signature of createS3Client must then have 1 parameter for the <code>RouteTemplateContext</code> as shown:</p>
+<p>The method signature of createS3Client must then have one parameter for the <code>RouteTemplateContext</code> as shown:</p>
 </div>
 <div class="listingblock">
 <div class="content">
@@ -1597,12 +1594,7 @@ then you can create the local bean using Java lambda style as previously documen
 <div class="sect3">
 <h4 id="_configuring_the_type_of_the_created_bean"><a class="anchor" href="#_configuring_the_type_of_the_created_bean"></a>Configuring the type of the created bean</h4>
 <div class="paragraph">
-<p>When using scripting languages to create the local bean, then Camel would not know what type (fully qualified class name)
-the created bean is. The type is therefore unassigned (is set as <code>java.lang.Object</code>) which is a slight limitation.</p>
-</div>
-<div class="paragraph">
-<p>If you use dependency injection by type, or have the need for looking up the local bean from the Camel <code>Registry</code> via its type,
-then you must provide this information in the route template with <code>beanType</code> as shown:</p>
+<p>The <code>type</code> must be set to define what FQN class the created bean.</p>
 </div>
 <div class="listingblock">
 <div class="content">
@@ -1610,7 +1602,7 @@ then you must provide this information in the route template with <code>beanType
   &lt;routeTemplate id="s3template"&gt;
     &lt;templateParameter name="region"/&gt;
     &lt;templateParameter name="bucket"/&gt;
-    &lt;templateBean name="myClient" type="bean" beanType="software.amazon.awssdk.services.s3.S3Client"&gt;
+    &lt;templateBean name="myClient" scriptLanguage="bean" type="software.amazon.awssdk.services.s3.S3Client"&gt;
         &lt;script&gt;com.foo.MyAwsHelper?method=createS3Client&lt;/script&gt;
     &lt;/templateBean&gt;
     &lt;route&gt;
@@ -1669,13 +1661,13 @@ where you can specify the code to execute as show:</p>
 </div>
 </div>
 <div class="sect1">
-<h2 id="_creating_routes_from_properties_file"><a class="anchor" href="#_creating_routes_from_properties_file"></a>Creating routes from properties file</h2>
+<h2 id="_creating_routes_from_a_properties_file"><a class="anchor" href="#_creating_routes_from_a_properties_file"></a>Creating routes from a properties file</h2>
 <div class="sectionbody">
 <div class="paragraph">
 <p>When using <code>camel-main</code> you can specify the parameters for route templates in <code>application.properties</code> file.</p>
 </div>
 <div class="paragraph">
-<p>For example given the route template below (from a <code>RouteBuilder</code> class):</p>
+<p>For example, given the route template below (from a <code>RouteBuilder</code> class):</p>
 </div>
 <div class="listingblock">
 <div class="content">
@@ -1710,11 +1702,12 @@ camel.route-template[1].result=cheese</code></pre>
 are used during startup of Camel to create routes via the templates with parameters from the custom source(s).</p>
 </div>
 <div class="paragraph">
-<p>For example a custom source can be implemented to read parameters from a shared database that Camel uses during startup
-to create routes. This allows to externalize these parameters and as well to easily add more routes with varying parameters.</p>
+<p>For example, a custom source can be implemented to read parameters from a shared database that Camel uses during startup
+to create routes.
+This allows externalizing these parameters and as well to easily add more routes with varying parameters.</p>
 </div>
 <div class="paragraph">
-<p>To let Camel discover custom sources then register the source into the Camel registry.</p>
+<p>To let Camel discover custom sources, then register the source into the Camel registry.</p>
 </div>
 </div>
 </div>
@@ -1722,7 +1715,7 @@ to create routes. This allows to externalize these parameters and as well to eas
 <h2 id="_see_also"><a class="anchor" href="#_see_also"></a>See Also</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>See the example <a href="https://github.com/apache/camel-examples/tree/main/examples/routetemplate">camel-examples/examples/routetemplate/</a>.</p>
+<p>See the example <a href="https://github.com/apache/camel-examples/tree/main/routetemplate">camel-examples/examples/routetemplate/</a>.</p>
 </div>
 </div>
 </div>

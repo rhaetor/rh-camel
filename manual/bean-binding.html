@@ -3,15 +3,15 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>Bean Binding :: Red Hat Apache Build of Apache Camel Manual</title>
-    <meta name="generator" content="Antora 3.0.3">
+    <title>Bean Binding :: Red Hat build of Apache Camel</title>
+    <meta name="generator" content="Antora 3.1.4">
     <link rel="stylesheet" href="../_/css/site.css">
   </head>
   <body class="article">
 <header class="header">
   <nav class="navbar">
     <div class="navbar-brand">
-      <a class="navbar-item" href="../../manual/index.html">Red Hat Apache Build of Apache Camel Manual</a>
+      <a class="navbar-item" href="/">Red Hat build of Apache Camel</a>
       <button class="navbar-burger" data-target="topbar-nav">
         <span></span>
         <span></span>
@@ -26,6 +26,7 @@
     <div class="panels">
 <div class="nav-panel-menu is-active" data-panel="menu">
   <nav class="nav-menu">
+    <button class="nav-menu-toggle" aria-label="Toggle expand/collapse all" style="display: none"></button>
     <h3 class="title"><a href="index.html">User manual</a></h3>
 <ul class="nav-list">
   <li class="nav-item" data-depth="0">
@@ -56,7 +57,16 @@
     <a class="nav-link" href="camel-console.html">Camel Developer Console</a>
   </li>
   <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
     <a class="nav-link" href="camel-jbang.html">Camel JBang</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="camel-jbang-kubernetes.html">Camel Kubernetes plugin</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="camel-jbang-k.html">Camel K plugin</a>
+  </li>
+</ul>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="camel-maven-plugin.html">Camel Maven Plugin</a>
@@ -95,6 +105,9 @@
     <a class="nav-link" href="using-propertyplaceholder.html">How to use Camel property placeholders</a>
   </li>
   <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="variables.html">How to use Variables</a>
+  </li>
+  <li class="nav-item" data-depth="2">
     <button class="nav-item-toggle"></button>
     <a class="nav-link" href="testing.html">Testing</a>
 <ul class="nav-list">
@@ -110,7 +123,13 @@
 </ul>
   </li>
   <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
     <a class="nav-link" href="rest-dsl.html">Working with REST and Rest DSL</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="rest-dsl-openapi.html">Rest DSL contract first</a>
+  </li>
+</ul>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="writing-components.html">Writing Components</a>
@@ -477,9 +496,6 @@
     <a class="nav-link" href="faq/how-should-i-invoke-my-pojos-or-spring-services.html">How should I invoke my POJOs or Spring Services?</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="faq/how-to-avoid-importing-bunch-of-cxf-packages-when-start-up-the-camel-cxf-endpoint-from-osgi-platform-.html">How to avoid importing bunch of cxf packages when start up the camel-cxf endpoint from OSGi platform?</a>
-  </li>
-  <li class="nav-item" data-depth="2">
     <a class="nav-link" href="faq/how-to-avoid-sending-some-or-all-message-headers.html">How to avoid sending some or all message headers?</a>
   </li>
   <li class="nav-item" data-depth="2">
@@ -598,11 +614,11 @@
 <div class="nav-panel-explore" data-panel="explore">
   <div class="context">
     <span class="title">User manual</span>
-    <span class="version">default</span>
+    <span class="version"></span>
   </div>
   <ul class="components">
     <li class="component">
-      <a class="title" href="../components/next/index.html">Camel Components</a>
+      <div class="title"><a href="../components/next/index.html">Camel Components</a></div>
       <ul class="versions">
         <li class="version is-latest">
           <a href="../components/next/index.html">Next (Pre-release)</a>
@@ -610,12 +626,7 @@
       </ul>
     </li>
     <li class="component is-current">
-      <a class="title" href="index.html">User manual</a>
-      <ul class="versions">
-        <li class="version is-current is-latest">
-          <a href="index.html">default</a>
-        </li>
-      </ul>
+      <div class="title"><a href="index.html">User manual</a></div>
     </li>
   </ul>
 </div>
@@ -633,6 +644,7 @@
     <li><a href="bean-binding.html">Bean Binding</a></li>
   </ul>
 </nav>
+<div class="edit-this-page"><a href="file:///code/jboss/jboss-camel/docs/user-manual/modules/ROOT/pages/bean-binding.adoc">Edit this Page</a></div>
 </div>
   <div class="content">
 <aside class="toc sidebar" data-title="Contents" data-levels="2">
@@ -700,7 +712,7 @@ that method is selected.</p>
 <li>
 <p>if the bean can be converted to a <a href="processor.html" class="xref page">Processor</a> using
 the <a href="type-converter.html" class="xref page">Type Converter</a> mechanism, then this is
-used to process the message. The ActiveMQ (not yet compatible with Camel 4) component
+used to process the message. The ActiveMQ component
 used this mechanism (in Camel 3) to allow any JMS MessageListener to be invoked
 directly by Camel without having to write any integration glue code. You
 can use the same mechanism to integrate Camel into any other
@@ -831,8 +843,8 @@ body to the <code>body</code> parameter and convert it to a <code>String</code>.
 </div>
 </div>
 <div class="paragraph">
-<p>In the following sample we got one of the automatically-bound types as
-well - for instance, a <code>Registry</code> that we can use to lookup beans.</p>
+<p>In the following sample we got one of the automatically bound types as
+well. For instance, a <code>Registry</code> that we can use to lookup beans.</p>
 </div>
 <div class="listingblock">
 <div class="content">
@@ -865,14 +877,13 @@ exception <code>InvalidOrderException</code> - we can then bind that as well:</p
 </div>
 </div>
 <div class="paragraph">
-<p>Notice that we can bind to it even if we use a sub type of
+<p>Notice that we can bind to it even if we use a subtype of
 <code>java.lang.Exception</code> as Camel still knows it&#8217;s an exception and can
 bind the cause (if any exists).</p>
 </div>
 <div class="paragraph">
-<p>So what about headers and other stuff? Well now it gets a bit tricky -
-so we can use annotations to help us, or specify the binding in the
-method name option.</p>
+<p>So what about headers and other stuff? Well, now it gets a bit tricky.
+We can use annotations to help us or specify the binding in the method name option.</p>
 </div>
 <div class="paragraph">
 <p>See the following sections for more detail.</p>
@@ -987,9 +998,10 @@ specific method by providing the method name:</p>
 </div>
 </div>
 <div class="paragraph">
-<p>Here we tell Camel to invoke the doSomething method - Camel handles the
-parameters' binding. Now suppose the method has 2 parameters, and the
-2nd parameter is a boolean where we want to pass in a true value:</p>
+<p>Here we tell Camel to invoke the <code><em>doSomething</em></code> method.
+Camel handles the parameters' binding.
+Now suppose the method has 2 parameters, and the
+second parameter is a boolean where we want to pass in a true value:</p>
 </div>
 <div class="listingblock">
 <div class="content">
@@ -1009,8 +1021,8 @@ parameters' binding. Now suppose the method has 2 parameters, and the
 <div class="paragraph">
 <p>In the example above, we defined the first parameter using the wild card
 symbol <code>*</code>, which tells Camel to bind this parameter to any type, and let
-Camel figure this out. The 2nd parameter has a fixed value of <code>true</code>.
-Instead of the wildcard symbol we can instruct Camel to use the message
+Camel figure this out. The second parameter has a fixed value of <code>true</code>.
+Instead of the wildcard symbol, we can instruct Camel to use the message
 body as shown:</p>
 </div>
 <div class="listingblock">
@@ -1024,7 +1036,7 @@ language so we have to use <code>${ }</code> placeholders in the body to
 refer to the message body.</p>
 </div>
 <div class="paragraph">
-<p>If you want to pass in a <code>null</code> value, then you can explicit define this
+<p>If you want to pass in a <code>null</code> value, then you can explicitly define this
 in the method option as shown below:</p>
 </div>
 <div class="listingblock">
@@ -1056,7 +1068,7 @@ you can pass in a String and an integer:</p>
 </div>
 <div class="paragraph">
 <p>In the example above, we invoke the echo method with two parameters. The
-first has the content 'World' (without quotes), and the 2nd has the
+first has the content 'World' (without quotes), and the second has the
 value of 5. Camel will automatically convert these values to the parameters' types.</p>
 </div>
 <div class="paragraph">
@@ -1070,7 +1082,7 @@ bind to message headers and other values such as:</p>
 </div>
 <div class="paragraph">
 <p>You can also use the OGNL support of the <a href="../components/next/languages/simple-language.html" class="xref page">Simple</a>
-expression language. Now suppose the message body is an object which has
+expression language. Now suppose the message body is an object that has
 a method named <code>asXml</code>. To invoke the <code>asXml</code> method we can do as
 follows:</p>
 </div>
@@ -1092,7 +1104,7 @@ use <code>.to</code> instead as shown:</p>
 <h3 id="_using_type_qualifiers_to_select_among_overloaded_methods"><a class="anchor" href="#_using_type_qualifiers_to_select_among_overloaded_methods"></a>Using type qualifiers to select among overloaded methods</h3>
 <div class="paragraph">
 <p>If you have a <a href="../components/next/eips/bean-eip.html" class="xref page">Bean</a> with overloaded methods, you can now
-specify parameter types (must use <code>.class</code> style, eg <code>com.foo.MyClass.class</code>) in the method name so Camel can match the method
+specify parameter types (must use <code>.class</code> style, e.g. <code>com.foo.MyClass.class</code>) in the method name so Camel can match the method
 you intend to use.</p>
 </div>
 <div class="paragraph">
@@ -1107,7 +1119,7 @@ you intend to use.</p>
 </div>
 <div class="paragraph">
 <p>Then the <code>MyBean</code> has 2 overloaded methods with the names <code>hello</code> and
-<code>times</code>. So if we want to use the method which has 2 parameters we can
+<code>times</code>. So if we want to use the method which has two parameters, we can
 do as follows in the Camel route:</p>
 </div>
 <div class="listingblock">
@@ -1119,7 +1131,7 @@ do as follows in the Camel route:</p>
 </div>
 <div class="paragraph">
 <p>We can also use a <code>*</code> as wildcard, so we can just say we want to execute
-the method with 2 parameters we do:</p>
+the method with two parameters we do:</p>
 </div>
 <div class="listingblock">
 <div class="content">
@@ -1129,7 +1141,7 @@ the method with 2 parameters we do:</p>
 </div>
 </div>
 <div class="paragraph">
-<p>By default, Camel will match the type name using the simple name, e.g.
+<p>By default, Camel will match the type name using the simple name, e.g.,
 any leading package name will be disregarded. However, if you want to
 match using the FQN, then specify the FQN type and Camel will leverage
 that. So if you have a parameter of type <code>com.foo.MyOrder</code> and you want to match against
@@ -1166,7 +1178,7 @@ where you can declare both using <em>name.class value</em> syntax as shown:</p>
 </div>
 </div>
 <div class="paragraph">
-<p>Notice that you <strong>MUST</strong> use <code>name.class</code> when declaring the type, also for String, int, boolean etc.</p>
+<p>Notice that you <strong>MUST</strong> use <code>name.class</code> when declaring the type, also for String, int, boolean, etc.</p>
 </div>
 </div>
 </div>

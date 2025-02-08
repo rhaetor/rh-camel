@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>Spring :: Red Hat Camel Reference</title>
+    <title>Spring :: Red Hat build of Apache Camel</title>
     <meta name="generator" content="Antora 3.1.4">
     <link rel="stylesheet" href="../../_/css/site.css">
   </head>
@@ -11,7 +11,7 @@
 <header class="header">
   <nav class="navbar">
     <div class="navbar-brand">
-      <a class="navbar-item" href="../../manual/index.html">Red Hat Apache Build of Apache Camel Manual</a>
+      <a class="navbar-item" href="/">Red Hat build of Apache Camel</a>
       <button class="navbar-burger" data-target="topbar-nav">
         <span></span>
         <span></span>
@@ -26,6 +26,7 @@
     <div class="panels">
 <div class="nav-panel-menu is-active" data-panel="menu">
   <nav class="nav-menu">
+    <button class="nav-menu-toggle" aria-label="Toggle expand/collapse all" style="display: none"></button>
     <h3 class="title"><a href="index.html">Camel Components</a></h3>
 <ul class="nav-list">
   <li class="nav-item" data-depth="0">
@@ -35,7 +36,46 @@
     <a class="nav-link" href="index.html">Components</a>
 <ul class="nav-list">
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="activemq-component.html">ActiveMQ</a>
+    <a class="nav-link" href="activemq-component.html">ActiveMQ 5.x</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="activemq6-component.html">ActiveMQ 6.x</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="ai-summary.html">AI</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="chatscript-component.html">ChatScript</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="djl-component.html">Deep Java Library</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="langchain4j-chat-component.html">LangChain4j Chat</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="langchain4j-embeddings-component.html">LangChain4j Embeddings</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="langchain4j-tokenizer-component.html">LangChain4j Tokenizer</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="langchain4j-tools-component.html">LangChain4j Tools</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="langchain4j-web-search-component.html">LangChain4j Web Search</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="milvus-component.html">Milvus</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="pinecone-component.html">Pinecone</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="qdrant-component.html">Qdrant</a>
+  </li>
+</ul>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="amqp-component.html">AMQP</a>
@@ -64,6 +104,15 @@
 <ul class="nav-list">
   <li class="nav-item" data-depth="3">
     <a class="nav-link" href="aws2-athena-component.html">AWS Athena</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="aws-bedrock-component.html">AWS Bedrock</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="aws-bedrock-agent-component.html">AWS Bedrock Agent</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="aws-bedrock-agent-runtime-component.html">AWS Bedrock Agent Runtime</a>
   </li>
   <li class="nav-item" data-depth="3">
     <a class="nav-link" href="aws-cloudtrail-component.html">AWS Cloudtrail</a>
@@ -168,7 +217,7 @@
     <a class="nav-link" href="azure-storage-blob-component.html">Azure Storage Blob Service</a>
   </li>
   <li class="nav-item" data-depth="3">
-    <a class="nav-link" href="azure-storage-datalake-component.html">Azure Storage Datalake Service</a>
+    <a class="nav-link" href="azure-storage-datalake-component.html">Azure Storage Data Lake Service</a>
   </li>
   <li class="nav-item" data-depth="3">
     <a class="nav-link" href="azure-storage-queue-component.html">Azure Storage Queue Service</a>
@@ -201,9 +250,6 @@
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="cql-component.html">Cassandra CQL</a>
-  </li>
-  <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="chatscript-component.html">ChatScript</a>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="chunk-component.html">Chunk</a>
@@ -276,9 +322,6 @@
     <a class="nav-link" href="debezium-sqlserver-component.html">Debezium SQL Server Connector</a>
   </li>
 </ul>
-  </li>
-  <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="djl-component.html">Deep Java Library</a>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="dhis2-component.html">DHIS2</a>
@@ -394,6 +437,9 @@
   </li>
   <li class="nav-item" data-depth="3">
     <a class="nav-link" href="google-pubsub-component.html">Google Pubsub</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="google-pubsub-lite-component.html">Google PubSub Lite</a>
   </li>
   <li class="nav-item" data-depth="3">
     <a class="nav-link" href="google-secret-manager-component.html">Google Secret Manager</a>
@@ -686,7 +732,7 @@
     <a class="nav-link" href="ldif-component.html">LDIF</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="log-component.html">Log</a>
+    <a class="nav-link" href="log-component.html">Log Data</a>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="lucene-component.html">Lucene</a>
@@ -899,10 +945,16 @@
     <a class="nav-link" href="smb-component.html">SMB</a>
   </li>
   <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="smooks-component.html">Smooks</a>
+  </li>
+  <li class="nav-item" data-depth="2">
     <a class="nav-link" href="smpp-component.html">SMPP</a>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="snmp-component.html">SNMP</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="solr-component.html">Solr</a>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="splunk-component.html">Splunk</a>
@@ -965,6 +1017,18 @@
     <a class="nav-link" href="stub-component.html">Stub</a>
   </li>
   <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="tahu-summary.html">Tahu</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="tahu-edge-component.html">Tahu Edge Node / Device</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="tahu-host-component.html">Tahu Host Application</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
     <a class="nav-link" href="telegram-component.html">Telegram</a>
   </li>
   <li class="nav-item" data-depth="2">
@@ -1025,7 +1089,7 @@
     <a class="nav-link" href="whatsapp-component.html">WhatsApp</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="wordpress-component.html">Wordpress</a>
+    <a class="nav-link" href="wordpress-component.html">WordPress</a>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="workday-component.html">Workday</a>
@@ -1418,7 +1482,13 @@
     <a class="nav-link" href="others/openapi-java.html">Openapi Java</a>
   </li>
   <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="others/openapi-validator.html">Openapi Validator</a>
+  </li>
+  <li class="nav-item" data-depth="2">
     <a class="nav-link" href="others/opentelemetry.html">OpenTelemetry</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="others/platform-http-jolokia.html">Platform HTTP Jolokia</a>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="others/platform-http-main.html">Platform Http Main</a>
@@ -1566,7 +1636,7 @@
     <a class="nav-link" href="eips/event-message.html">Event Message</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="eips/failover-eip.html">Failover</a>
+    <a class="nav-link" href="eips/failoverLoadBalancer-eip.html">Failover Load Balancer</a>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="eips/faultToleranceConfiguration-eip.html">Fault Tolerance Configuration</a>
@@ -1596,13 +1666,13 @@
     <a class="nav-link" href="eips/loadBalance-eip.html">Load Balance</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="eips/log-eip.html">Log</a>
+    <a class="nav-link" href="eips/log-eip.html">Logger</a>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="eips/loop-eip.html">Loop</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="eips/marshal-eip.html">Marshal EIP</a>
+    <a class="nav-link" href="eips/marshal-eip.html">Marshal</a>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="eips/message.html">Message</a>
@@ -1659,6 +1729,9 @@
     <a class="nav-link" href="eips/point-to-point-channel.html">Point to Point Channel</a>
   </li>
   <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="eips/poll-eip.html">Poll</a>
+  </li>
+  <li class="nav-item" data-depth="2">
     <a class="nav-link" href="eips/pollEnrich-eip.html">Poll Enrich</a>
   </li>
   <li class="nav-item" data-depth="2">
@@ -1674,7 +1747,7 @@
     <a class="nav-link" href="eips/publish-subscribe-channel.html">Publish Subscribe Channel</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="eips/random-eip.html">Random</a>
+    <a class="nav-link" href="eips/randomLoadBalancer-eip.html">Random Load Balancer</a>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="eips/recipientList-eip.html">Recipient List</a>
@@ -1716,7 +1789,7 @@
     <a class="nav-link" href="eips/rollback-eip.html">Rollback</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="eips/roundRobin-eip.html">Round Robin</a>
+    <a class="nav-link" href="eips/roundRobinLoadBalancer-eip.html">Round Robin Load Balancer</a>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="eips/routingSlip-eip.html">Routing Slip</a>
@@ -1728,7 +1801,7 @@
     <a class="nav-link" href="eips/sample-eip.html">Sample</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="eips/scatter-gather.html">Scatter Gather</a>
+    <a class="nav-link" href="eips/scatter-gather.html">Scatter-Gather</a>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="eips/script-eip.html">Script</a>
@@ -1758,6 +1831,9 @@
     <a class="nav-link" href="eips/setVariable-eip.html">Set Variable</a>
   </li>
   <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="eips/setVariables-eip.html">Set Variables</a>
+  </li>
+  <li class="nav-item" data-depth="2">
     <a class="nav-link" href="eips/sort-eip.html">Sort</a>
   </li>
   <li class="nav-item" data-depth="2">
@@ -1767,7 +1843,7 @@
     <a class="nav-link" href="eips/step-eip.html">Step</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="eips/sticky-eip.html">Sticky</a>
+    <a class="nav-link" href="eips/stickyLoadBalancer-eip.html">Sticky Load Balancer</a>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="eips/stop-eip.html">Stop</a>
@@ -1788,7 +1864,7 @@
     <a class="nav-link" href="eips/toD-eip.html">To D</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="eips/topic-eip.html">Topic</a>
+    <a class="nav-link" href="eips/topicLoadBalancer-eip.html">Topic Load Balancer</a>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="eips/transactional-client.html">Transactional Client</a>
@@ -1797,13 +1873,13 @@
     <a class="nav-link" href="eips/transform-eip.html">Transform</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="eips/unmarshal-eip.html">Unmarshal EIP</a>
+    <a class="nav-link" href="eips/unmarshal-eip.html">Unmarshal</a>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="eips/validate-eip.html">Validate</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="eips/weighted-eip.html">Weighted</a>
+    <a class="nav-link" href="eips/weightedLoadBalancer-eip.html">Weighted Load Balancer</a>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="eips/wireTap-eip.html">Wire Tap</a>
@@ -1822,7 +1898,7 @@
   </div>
   <ul class="components">
     <li class="component is-current">
-      <a class="title" href="index.html">Camel Components</a>
+      <div class="title"><a href="index.html">Camel Components</a></div>
       <ul class="versions">
         <li class="version is-current is-latest">
           <a href="index.html">Next (Pre-release)</a>
@@ -1830,12 +1906,7 @@
       </ul>
     </li>
     <li class="component">
-      <a class="title" href="../../manual/index.html">User manual</a>
-      <ul class="versions">
-        <li class="version is-latest">
-          <a href="../../manual/index.html">default</a>
-        </li>
-      </ul>
+      <div class="title"><a href="../../manual/index.html">User manual</a></div>
     </li>
   </ul>
 </div>
@@ -1853,6 +1924,7 @@
     <li><a href="spring-summary.html">Spring</a></li>
   </ul>
 </nav>
+<div class="edit-this-page"><a href="file:///code/jboss/jboss-camel/docs/components/modules/ROOT/pages/spring-summary.adoc">Edit this Page</a></div>
 </div>
   <div class="content">
 <aside class="toc sidebar" data-title="Contents" data-levels="2">
@@ -1886,7 +1958,7 @@
 </dd>
 <dt class="hdlist1"><a href="spring-rabbitmq-component.html" class="xref page">Spring RabbitMQ</a></dt>
 <dd>
-<p>Send and receive messages from RabbitMQ using Spring RabbitMQ client.</p>
+<p>Send and receive messages from RabbitMQ using the Spring RabbitMQ client.</p>
 </dd>
 <dt class="hdlist1"><a href="spring-redis-component.html" class="xref page">Spring Redis</a></dt>
 <dd>
@@ -1925,7 +1997,7 @@ components like <a href="jms-component.html" class="xref page">JMS</a> and <a hr
 </li>
 <li>
 <p>Camel integrates with various Spring helper classes; such as providing
-Type Converter support for Spring Resources etc</p>
+Type Converter support for Spring Resources, etc.</p>
 </li>
 <li>
 <p>Allows you to reuse the Spring Testing
@@ -2057,8 +2129,8 @@ discovery and initialization of routes in given packages. This is
 configured by adding tags to the camel context in your spring context
 definition, specifying the packages to be recursively searched for
 <code>RouteBuilder</code> implementations. To use this feature, requires a
-<code>&lt;package&gt;&lt;/package&gt;</code> tag specifying a comma
-separated list of packages that should be searched e.g.</p>
+<code>&lt;package&gt;&lt;/package&gt;</code> tag specifying a comma-separated list of
+packages that should be searched e.g.</p>
 </div>
 <div class="listingblock">
 <div class="content">
@@ -2075,8 +2147,9 @@ separated list of packages that should be searched e.g.</p>
 </td>
 <td class="content">
 Use caution when specifying the package name as <code>org.apache.camel</code> or a
-sub package of this. This causes Camel to search in its own packages for
-your routes which could cause problems.
+subpackage of this.
+This causes Camel to search in its own packages for
+your routes, which could cause problems.
 </td>
 </tr>
 </table>
@@ -2092,9 +2165,9 @@ your routes which could cause problems.
 <p><strong>Will ignore already instantiated classes</strong></p>
 </div>
 <div class="paragraph">
-<p>The <code>&lt;package&gt;</code> and <code>&lt;packageScan&gt;</code> will skip all classes which have already
-been created by Spring etc. So if you define a route builder as a spring
-bean tag then that class will be skipped. You can include those beans
+<p>The <code>&lt;package&gt;</code> and <code>&lt;packageScan&gt;</code> will skip all classes that Spring has already
+created etc. So if you define a route builder as a spring
+bean tag, then that class will be skipped. You can include those beans
 using <code>&lt;routeBuilder ref="theBeanId"/&gt;</code> or the <code>&lt;contextScan&gt;</code> feature.</p>
 </div>
 </td>
@@ -2125,7 +2198,7 @@ applied to the fully qualified names of the discovered classes. e.g.</p>
 </div>
 <div class="paragraph">
 <p>Exclude patterns are applied before the include patterns. If no include
-or exclude patterns are defined then all the Route classes discovered in
+or exclude patterns are defined, then all the Route classes discovered in
 the packages will be returned.</p>
 </div>
 <div class="paragraph">
@@ -2156,18 +2229,18 @@ initializing it.</p>
 <p>For example:</p>
 </div>
 <div class="paragraph">
-<p><strong>*.*Excluded</strong> would match org.simple.Excluded,
-org.apache.camel.SomeExcludedRoute or org.example.RouteWhichIsExcluded</p>
+<p><code><strong>*.*Excluded</strong></code> would match <code>org.simple.Excluded</code>,
+<code>org.apache.camel.SomeExcludedRoute</code> or <code>org.example.RouteWhichIsExcluded</code></p>
 </div>
 <div class="paragraph">
-<p><strong>*.??cluded</strong> would match org.simple.IncludedRoute, org.simple.Excluded
-but not match org.simple.PrecludedRoute</p>
+<p><code><strong>*.??cluded</strong></code> would match <code>org.simple.IncludedRoute</code>, <code>org.simple.Excluded</code>
+but not match <code>org.simple.PrecludedRoute</code></p>
 </div>
 </div>
 <div class="sect2">
 <h3 id="_using_contextscan"><a class="anchor" href="#_using_contextscan"></a>Using contextScan</h3>
 <div class="paragraph">
-<p>You can allow Camel to scan the container context, e.g. the Spring
+<p>You can allow Camel to scan the container context, e.g., the Spring
 <code>ApplicationContext</code> for route builder instances. This allows you to use
 the Spring <code>&lt;component-scan&gt;</code> feature and have Camel pickup any
 <code>RouteBuilder</code> instances which were created by Spring in its scan process.</p>
@@ -2196,14 +2269,14 @@ above in the <code>&lt;packageScan&gt;</code> documentation.</p>
 </div>
 </div>
 <div class="sect1">
-<h2 id="_how_do_i_import_routes_from_other_xml_files"><a class="anchor" href="#_how_do_i_import_routes_from_other_xml_files"></a>How do I import routes from other XML files</h2>
+<h2 id="_how_do_i_import_routes_from_other_xml_files"><a class="anchor" href="#_how_do_i_import_routes_from_other_xml_files"></a>How do I import routes from other XML files?</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>When defining routes in Camel using Spring XML you may want to define some routes in other XML files.
+<p>When defining routes in Camel using Spring XML, you may want to define some routes in other XML files.
 For example, you may have many routes, and it may help to maintain the
 application if some routes are in separate XML files. You may
 also want to store common and reusable routes in other XML files, which
-you can simply import when needed.</p>
+you can import when needed.</p>
 </div>
 <div class="paragraph">
 <p>It is possible to define routes outside
@@ -2245,7 +2318,7 @@ a couple of routes as shown:</p>
             &lt;from uri="direct:start"/&gt;
             &lt;to uri="mock:result"/&gt;
         &lt;/route&gt;
-        &lt;!-- and another route, you can have as many your like --&gt;
+        &lt;!-- and another route, you can have as many you like --&gt;
         &lt;route id="bar"&gt;
             &lt;from uri="direct:bar"/&gt;
             &lt;to uri="mock:bar"/&gt;
@@ -2256,8 +2329,8 @@ a couple of routes as shown:</p>
 </div>
 <div class="paragraph">
 <p>Then in your XML file which contains the CamelContext you can use Spring
-to import the <code>myCoolRoute.xml</code> file.<br>
- And then inside <code>&lt;camelContext/&gt;</code> you can refer to the
+to import the <code>myCoolRoute.xml</code> file.
+And then inside <code>&lt;camelContext/&gt;</code> you can refer to the
 <code>&lt;routeContext/&gt;</code> by its id as shown below:</p>
 </div>
 <div class="listingblock">
@@ -2270,7 +2343,7 @@ to import the <code>myCoolRoute.xml</code> file.<br>
      &lt;!-- refer to a given route to be used --&gt;
      &lt;routeContextRef ref="myCoolRoutes"/&gt;
 
-     &lt;!-- we can of course still use routes inside camelContext --&gt;
+     &lt;!-- we can still use routes inside camelContext --&gt;
      &lt;route id="inside"&gt;
          &lt;from uri="direct:inside"/&gt;
          &lt;to uri="mock:inside"/&gt;
@@ -2280,7 +2353,7 @@ to import the <code>myCoolRoute.xml</code> file.<br>
 </div>
 <div class="paragraph">
 <p>Also notice that you can mix and match, having routes inside
-CamelContext and also externalized in RouteContext.</p>
+<code>CamelContext</code> and also externalized in <code>RouteContext</code>.</p>
 </div>
 <div class="paragraph">
 <p>You can have as many <code>&lt;routeContextRef/&gt;</code> as you like.</p>
@@ -2290,14 +2363,15 @@ CamelContext and also externalized in RouteContext.</p>
 </div>
 <div class="paragraph">
 <p>The routes defined in <code>&lt;routeContext/&gt;</code> can be reused by multiple
-<code>&lt;camelContext/&gt;</code>. However, it is only the definition which is reused. At
-runtime each CamelContext will create its own instance of the route
+<code>&lt;camelContext/&gt;</code>.
+However, it is only the definition that is reused.
+At runtime, each CamelContext will create its own instance of the route
 based on the definition.</p>
 </div>
 <div class="sect2">
 <h3 id="_test_time_exclusion"><a class="anchor" href="#_test_time_exclusion"></a>Test time exclusion.</h3>
 <div class="paragraph">
-<p>At test time it is often desirable to be able to selectively exclude
+<p>At test time, it is often desirable to be able to selectively exclude
 matching routes from being initialized that are not applicable or useful
 to the test scenario. For instance, you might have a spring context file
 <code>routes-context.xml</code> and three Route builders <code>RouteA</code>, <code>RouteB</code> and <code>RouteC</code> in
@@ -2323,7 +2397,7 @@ array of classes.</p>
 </div>
 </div>
 <div class="paragraph">
-<p>In order to hook into the camelContext initialization by spring to
+<p>To hook into the camelContext initialization by spring to
 exclude the class <code>MyExcludedRouteBuilder</code>, we need to intercept the spring
 context creation. When overriding createApplicationContext to create the
 spring context, we call the <code>getRouteExcludingApplicationContext()</code> method
@@ -2412,7 +2486,7 @@ SpringCamelContext lazily fetching components from the spring context
 for the scheme name you use for Endpoint URIs.</p>
 </div>
 <div class="paragraph">
-<p>For more detail see <a href="../../manual/faq/how-do-i-configure-endpoints.html" class="xref page">Configuring
+<p>For more details, see <a href="../../manual/faq/how-do-i-configure-endpoints.html" class="xref page">Configuring
 Endpoints and Components</a>.</p>
 </div>
 </div>
@@ -2432,7 +2506,7 @@ Integration</a> for further injections.</p>
 <h2 id="_integration_testing"><a class="anchor" href="#_integration_testing"></a>Integration Testing</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>To avoid a hung route when testing using Spring Transactions see the
+<p>To avoid a hung route when testing using Spring Transactions, see the
 note about Spring Integration Testing under Transactional Client.</p>
 </div>
 </div>
@@ -2466,6 +2540,9 @@ note about Spring Integration Testing under Transactional Client.</p>
   &lt;to uri="log:info"/&gt;
 &lt;/route&gt;</code></pre>
 </div>
+</div>
+<div class="paragraph">
+<p>Unresolved include directive in modules/ROOT/pages/spring-summary.adoc - include::spring-boot:partial$starter.adoc[]</p>
 </div>
 </div>
 </div>

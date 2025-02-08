@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>SOAP :: Red Hat Camel Reference</title>
+    <title>SOAP :: Red Hat build of Apache Camel</title>
     <meta name="description" content="Marshal Java objects to SOAP messages and back.">
     <meta name="generator" content="Antora 3.1.4">
     <link rel="stylesheet" href="../../../_/css/site.css">
@@ -12,7 +12,7 @@
 <header class="header">
   <nav class="navbar">
     <div class="navbar-brand">
-      <a class="navbar-item" href="../../manual/index.html">Red Hat Apache Build of Apache Camel Manual</a>
+      <a class="navbar-item" href="/">Red Hat build of Apache Camel</a>
       <button class="navbar-burger" data-target="topbar-nav">
         <span></span>
         <span></span>
@@ -27,6 +27,7 @@
     <div class="panels">
 <div class="nav-panel-menu is-active" data-panel="menu">
   <nav class="nav-menu">
+    <button class="nav-menu-toggle" aria-label="Toggle expand/collapse all" style="display: none"></button>
     <h3 class="title"><a href="../index.html">Camel Components</a></h3>
 <ul class="nav-list">
   <li class="nav-item" data-depth="0">
@@ -36,7 +37,46 @@
     <a class="nav-link" href="../index.html">Components</a>
 <ul class="nav-list">
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="../activemq-component.html">ActiveMQ</a>
+    <a class="nav-link" href="../activemq-component.html">ActiveMQ 5.x</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../activemq6-component.html">ActiveMQ 6.x</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../ai-summary.html">AI</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../chatscript-component.html">ChatScript</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../djl-component.html">Deep Java Library</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../langchain4j-chat-component.html">LangChain4j Chat</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../langchain4j-embeddings-component.html">LangChain4j Embeddings</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../langchain4j-tokenizer-component.html">LangChain4j Tokenizer</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../langchain4j-tools-component.html">LangChain4j Tools</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../langchain4j-web-search-component.html">LangChain4j Web Search</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../milvus-component.html">Milvus</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../pinecone-component.html">Pinecone</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../qdrant-component.html">Qdrant</a>
+  </li>
+</ul>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="../amqp-component.html">AMQP</a>
@@ -65,6 +105,15 @@
 <ul class="nav-list">
   <li class="nav-item" data-depth="3">
     <a class="nav-link" href="../aws2-athena-component.html">AWS Athena</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../aws-bedrock-component.html">AWS Bedrock</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../aws-bedrock-agent-component.html">AWS Bedrock Agent</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../aws-bedrock-agent-runtime-component.html">AWS Bedrock Agent Runtime</a>
   </li>
   <li class="nav-item" data-depth="3">
     <a class="nav-link" href="../aws-cloudtrail-component.html">AWS Cloudtrail</a>
@@ -169,7 +218,7 @@
     <a class="nav-link" href="../azure-storage-blob-component.html">Azure Storage Blob Service</a>
   </li>
   <li class="nav-item" data-depth="3">
-    <a class="nav-link" href="../azure-storage-datalake-component.html">Azure Storage Datalake Service</a>
+    <a class="nav-link" href="../azure-storage-datalake-component.html">Azure Storage Data Lake Service</a>
   </li>
   <li class="nav-item" data-depth="3">
     <a class="nav-link" href="../azure-storage-queue-component.html">Azure Storage Queue Service</a>
@@ -202,9 +251,6 @@
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="../cql-component.html">Cassandra CQL</a>
-  </li>
-  <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="../chatscript-component.html">ChatScript</a>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="../chunk-component.html">Chunk</a>
@@ -277,9 +323,6 @@
     <a class="nav-link" href="../debezium-sqlserver-component.html">Debezium SQL Server Connector</a>
   </li>
 </ul>
-  </li>
-  <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="../djl-component.html">Deep Java Library</a>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="../dhis2-component.html">DHIS2</a>
@@ -395,6 +438,9 @@
   </li>
   <li class="nav-item" data-depth="3">
     <a class="nav-link" href="../google-pubsub-component.html">Google Pubsub</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../google-pubsub-lite-component.html">Google PubSub Lite</a>
   </li>
   <li class="nav-item" data-depth="3">
     <a class="nav-link" href="../google-secret-manager-component.html">Google Secret Manager</a>
@@ -687,7 +733,7 @@
     <a class="nav-link" href="../ldif-component.html">LDIF</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="../log-component.html">Log</a>
+    <a class="nav-link" href="../log-component.html">Log Data</a>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="../lucene-component.html">Lucene</a>
@@ -900,10 +946,16 @@
     <a class="nav-link" href="../smb-component.html">SMB</a>
   </li>
   <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../smooks-component.html">Smooks</a>
+  </li>
+  <li class="nav-item" data-depth="2">
     <a class="nav-link" href="../smpp-component.html">SMPP</a>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="../snmp-component.html">SNMP</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../solr-component.html">Solr</a>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="../splunk-component.html">Splunk</a>
@@ -966,6 +1018,18 @@
     <a class="nav-link" href="../stub-component.html">Stub</a>
   </li>
   <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../tahu-summary.html">Tahu</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../tahu-edge-component.html">Tahu Edge Node / Device</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../tahu-host-component.html">Tahu Host Application</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
     <a class="nav-link" href="../telegram-component.html">Telegram</a>
   </li>
   <li class="nav-item" data-depth="2">
@@ -1026,7 +1090,7 @@
     <a class="nav-link" href="../whatsapp-component.html">WhatsApp</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="../wordpress-component.html">Wordpress</a>
+    <a class="nav-link" href="../wordpress-component.html">WordPress</a>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="../workday-component.html">Workday</a>
@@ -1419,7 +1483,13 @@
     <a class="nav-link" href="../others/openapi-java.html">Openapi Java</a>
   </li>
   <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../others/openapi-validator.html">Openapi Validator</a>
+  </li>
+  <li class="nav-item" data-depth="2">
     <a class="nav-link" href="../others/opentelemetry.html">OpenTelemetry</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../others/platform-http-jolokia.html">Platform HTTP Jolokia</a>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="../others/platform-http-main.html">Platform Http Main</a>
@@ -1567,7 +1637,7 @@
     <a class="nav-link" href="../eips/event-message.html">Event Message</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="../eips/failover-eip.html">Failover</a>
+    <a class="nav-link" href="../eips/failoverLoadBalancer-eip.html">Failover Load Balancer</a>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="../eips/faultToleranceConfiguration-eip.html">Fault Tolerance Configuration</a>
@@ -1597,13 +1667,13 @@
     <a class="nav-link" href="../eips/loadBalance-eip.html">Load Balance</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="../eips/log-eip.html">Log</a>
+    <a class="nav-link" href="../eips/log-eip.html">Logger</a>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="../eips/loop-eip.html">Loop</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="../eips/marshal-eip.html">Marshal EIP</a>
+    <a class="nav-link" href="../eips/marshal-eip.html">Marshal</a>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="../eips/message.html">Message</a>
@@ -1660,6 +1730,9 @@
     <a class="nav-link" href="../eips/point-to-point-channel.html">Point to Point Channel</a>
   </li>
   <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../eips/poll-eip.html">Poll</a>
+  </li>
+  <li class="nav-item" data-depth="2">
     <a class="nav-link" href="../eips/pollEnrich-eip.html">Poll Enrich</a>
   </li>
   <li class="nav-item" data-depth="2">
@@ -1675,7 +1748,7 @@
     <a class="nav-link" href="../eips/publish-subscribe-channel.html">Publish Subscribe Channel</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="../eips/random-eip.html">Random</a>
+    <a class="nav-link" href="../eips/randomLoadBalancer-eip.html">Random Load Balancer</a>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="../eips/recipientList-eip.html">Recipient List</a>
@@ -1717,7 +1790,7 @@
     <a class="nav-link" href="../eips/rollback-eip.html">Rollback</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="../eips/roundRobin-eip.html">Round Robin</a>
+    <a class="nav-link" href="../eips/roundRobinLoadBalancer-eip.html">Round Robin Load Balancer</a>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="../eips/routingSlip-eip.html">Routing Slip</a>
@@ -1729,7 +1802,7 @@
     <a class="nav-link" href="../eips/sample-eip.html">Sample</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="../eips/scatter-gather.html">Scatter Gather</a>
+    <a class="nav-link" href="../eips/scatter-gather.html">Scatter-Gather</a>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="../eips/script-eip.html">Script</a>
@@ -1759,6 +1832,9 @@
     <a class="nav-link" href="../eips/setVariable-eip.html">Set Variable</a>
   </li>
   <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../eips/setVariables-eip.html">Set Variables</a>
+  </li>
+  <li class="nav-item" data-depth="2">
     <a class="nav-link" href="../eips/sort-eip.html">Sort</a>
   </li>
   <li class="nav-item" data-depth="2">
@@ -1768,7 +1844,7 @@
     <a class="nav-link" href="../eips/step-eip.html">Step</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="../eips/sticky-eip.html">Sticky</a>
+    <a class="nav-link" href="../eips/stickyLoadBalancer-eip.html">Sticky Load Balancer</a>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="../eips/stop-eip.html">Stop</a>
@@ -1789,7 +1865,7 @@
     <a class="nav-link" href="../eips/toD-eip.html">To D</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="../eips/topic-eip.html">Topic</a>
+    <a class="nav-link" href="../eips/topicLoadBalancer-eip.html">Topic Load Balancer</a>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="../eips/transactional-client.html">Transactional Client</a>
@@ -1798,13 +1874,13 @@
     <a class="nav-link" href="../eips/transform-eip.html">Transform</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="../eips/unmarshal-eip.html">Unmarshal EIP</a>
+    <a class="nav-link" href="../eips/unmarshal-eip.html">Unmarshal</a>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="../eips/validate-eip.html">Validate</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="../eips/weighted-eip.html">Weighted</a>
+    <a class="nav-link" href="../eips/weightedLoadBalancer-eip.html">Weighted Load Balancer</a>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="../eips/wireTap-eip.html">Wire Tap</a>
@@ -1823,7 +1899,7 @@
   </div>
   <ul class="components">
     <li class="component is-current">
-      <a class="title" href="../index.html">Camel Components</a>
+      <div class="title"><a href="../index.html">Camel Components</a></div>
       <ul class="versions">
         <li class="version is-current is-latest">
           <a href="../index.html">Next (Pre-release)</a>
@@ -1831,12 +1907,7 @@
       </ul>
     </li>
     <li class="component">
-      <a class="title" href="../../../manual/index.html">User manual</a>
-      <ul class="versions">
-        <li class="version is-latest">
-          <a href="../../../manual/index.html">default</a>
-        </li>
-      </ul>
+      <div class="title"><a href="../../../manual/index.html">User manual</a></div>
     </li>
   </ul>
 </div>
@@ -1854,6 +1925,7 @@
     <li><a href="soap-dataformat.html">SOAP</a></li>
   </ul>
 </nav>
+<div class="edit-this-page"><a href="file:///code/jboss/jboss-camel/docs/components/modules/dataformats/pages/soap-dataformat.adoc">Edit this Page</a></div>
 </div>
   <div class="content">
 <aside class="toc sidebar" data-title="Contents" data-levels="2">
@@ -1869,7 +1941,7 @@
 <div class="paragraph">
 <p>SOAP is a Data Format which uses JAXB2 and JAX-WS
 annotations to marshal and unmarshal SOAP payloads. It provides the
-basic features of Apache CXF without need for the CXF Stack.</p>
+basic features of Apache CXF without the need for the CXF Stack.</p>
 </div>
 <div class="paragraph">
 <p><strong>Namespace prefix mapping</strong></p>
@@ -1904,7 +1976,7 @@ prefix mappings when marshalling using SOAP data format.</p>
 <tbody>
 <tr>
 <td class="tableblock halign-left valign-top"><div class="content"><div id="_dataformat_option_contextPath" class="paragraph">
-<p><a href="#_dataformat_option_contextPath" class="anchor"></a><strong>contextPath</strong></p>
+<p><a href="#_dataformat_option_contextPath" class="anchor"></a><strong>contextPath</strong> (common)</p>
 </div></div></td>
 <td class="tableblock halign-left valign-top"></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>String</code></p></td>
@@ -1914,7 +1986,7 @@ prefix mappings when marshalling using SOAP data format.</p>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><div class="content"><div id="_dataformat_option_encoding" class="paragraph">
-<p><a href="#_dataformat_option_encoding" class="anchor"></a><strong>encoding</strong></p>
+<p><a href="#_dataformat_option_encoding" class="anchor"></a><strong>encoding</strong> (common)</p>
 </div></div></td>
 <td class="tableblock halign-left valign-top"></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>String</code></p></td>
@@ -1924,7 +1996,7 @@ prefix mappings when marshalling using SOAP data format.</p>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><div class="content"><div id="_dataformat_option_elementNameStrategyRef" class="paragraph">
-<p><a href="#_dataformat_option_elementNameStrategyRef" class="anchor"></a><strong>elementNameStrategyRef</strong></p>
+<p><a href="#_dataformat_option_elementNameStrategyRef" class="anchor"></a><strong>elementNameStrategyRef</strong> (advanced)</p>
 </div></div></td>
 <td class="tableblock halign-left valign-top"></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>String</code></p></td>
@@ -1934,7 +2006,7 @@ prefix mappings when marshalling using SOAP data format.</p>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><div class="content"><div id="_dataformat_option_version" class="paragraph">
-<p><a href="#_dataformat_option_version" class="anchor"></a><strong>version</strong></p>
+<p><a href="#_dataformat_option_version" class="anchor"></a><strong>version</strong> (common)</p>
 </div></div></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>1.1</code></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>Enum</code></p></td>
@@ -1957,7 +2029,7 @@ prefix mappings when marshalling using SOAP data format.</p>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><div class="content"><div id="_dataformat_option_namespacePrefixRef" class="paragraph">
-<p><a href="#_dataformat_option_namespacePrefixRef" class="anchor"></a><strong>namespacePrefixRef</strong></p>
+<p><a href="#_dataformat_option_namespacePrefixRef" class="anchor"></a><strong>namespacePrefixRef</strong> (advanced)</p>
 </div></div></td>
 <td class="tableblock halign-left valign-top"></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>String</code></p></td>
@@ -1967,7 +2039,7 @@ prefix mappings when marshalling using SOAP data format.</p>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><div class="content"><div id="_dataformat_option_schema" class="paragraph">
-<p><a href="#_dataformat_option_schema" class="anchor"></a><strong>schema</strong></p>
+<p><a href="#_dataformat_option_schema" class="anchor"></a><strong>schema</strong> (common)</p>
 </div></div></td>
 <td class="tableblock halign-left valign-top"></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>String</code></p></td>
@@ -1984,7 +2056,7 @@ prefix mappings when marshalling using SOAP data format.</p>
 <div class="sectionbody">
 <div class="paragraph">
 <p>An element name strategy is used for two purposes. The first is to find
-a xml element name for a given object and soap action when marshaling
+ an XML element name for a given object and soap action when marshaling
 the object into a SOAP message. The second is to find an Exception class
 for a given soap fault name.</p>
 </div>
@@ -2001,18 +2073,18 @@ for a given soap fault name.</p>
 </thead>
 <tbody>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">QNameStrategy</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>QNameStrategy</code></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Uses a fixed qName that is configured on instantiation. Exception lookup
 is not supported</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">TypeNameStrategy</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Uses the name and namespace from the @XMLType annotation of the given
-type. If no namespace is set then package-info is used. Exception lookup
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>TypeNameStrategy</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Uses the name and namespace from the <code>@XMLType</code> annotation of the given
+type. If no namespace is set, then package-info is used. Exception lookup
 is not supported</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">ServiceInterfaceStrategy</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>ServiceInterfaceStrategy</code></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Uses information from a webservice interface to determine the type name
 and to find the exception class for a SOAP fault</p></td>
 </tr>
@@ -2020,9 +2092,9 @@ and to find the exception class for a SOAP fault</p></td>
 </table>
 <div class="paragraph">
 <p>If you have generated the web service stub code with cxf-codegen or a
-similar tool then you probably will want to use the
-ServiceInterfaceStrategy. In the case you have no annotated service
-interface you should use QNameStrategy or TypeNameStrategy.</p>
+similar tool, then you probably will want to use the
+<code>ServiceInterfaceStrategy</code>. In the case you have no annotated service
+interface you should use <code>QNameStrategy</code> or <code>TypeNameStrategy</code>.</p>
 </div>
 </div>
 </div>
@@ -2030,16 +2102,29 @@ interface you should use QNameStrategy or TypeNameStrategy.</p>
 <h2 id="_using_the_java_dsl"><a class="anchor" href="#_using_the_java_dsl"></a>Using the Java DSL</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>The following example uses a named DataFormat of <em>soap</em> which is
-configured with the package com.example.customerservice to initialize
+<p>The following example uses a named <code>DataFormat</code> of <em>soap</em> which is
+configured with the package <code>com.example.customerservice</code> to initialize
 the
 <a href="http://java.sun.com/javase/6/docs/api/javax/xml/bind/JAXBContext.html">JAXBContext</a>.
-The second parameter is the ElementNameStrategy. The route is able to
-marshal normal objects as well as exceptions. (Note the below just sends
-a SOAP Envelope to a queue. A web service provider would actually need
-to be listening to the queue for a SOAP call to actually occur, in which
-case it would be a one way SOAP request. If you need request reply then
-you should look at the next example.)</p>
+The second parameter is the <code>ElementNameStrategy</code>. The route is able to
+marshal normal objects as well as exceptions.</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>The below just sends a SOAP Envelope to a queue.
+A web service provider would actually need to be listening to the queue for a SOAP call to actually occur, in which
+case it would be a one way SOAP request.
+If you need to request a reply, then you should look at the next example.</p>
+</div>
+</td>
+</tr>
+</table>
 </div>
 <div class="listingblock">
 <div class="content">
@@ -2060,7 +2145,7 @@ from("direct:start")
 <p><strong>See also</strong></p>
 </div>
 <div class="paragraph">
-<p>As the SOAP dataformat inherits from the <a href="jaxb-dataformat.html" class="xref page">JAXB</a> dataformat
+<p>As the SOAP dataformat inherits from the <a href="jaxb-dataformat.html" class="xref page">JAXB</a> dataformat,
 most settings apply here as well</p>
 </div>
 </td>
@@ -2082,7 +2167,7 @@ from("direct:start")
 </div>
 </div>
 <div class="paragraph">
-<p>When using XML DSL there is a version attribute you can set on the
+<p>When using XML DSL, there is a version attribute you can set on the
 &lt;soap&gt; element.</p>
 </div>
 <div class="listingblock">
@@ -2118,18 +2203,18 @@ from("direct:start")
 <p><strong>Since Camel 2.8.1</strong></p>
 </div>
 <div class="paragraph">
-<p>Multi-part SOAP messages are supported by the ServiceInterfaceStrategy.
-The ServiceInterfaceStrategy must be initialized with a service
+<p>Multipart SOAP messages are supported by the <code>ServiceInterfaceStrategy</code>.
+The <code>ServiceInterfaceStrategy</code> must be initialized with a service
 interface definition that is annotated in accordance with JAX-WS 2.2 and
 meets the requirements of the Document Bare style. The target method
 must meet the following criteria, as per the JAX-WS specification:
 1. it must have at most one <code>in</code> or <code>in/out</code> non-header parameter,
 2. if it has a return type other than <code>void</code> it must have no <code>in/out</code> or <code>out</code>
 non-header parameters,
-3. if it it has a return type of <code>void</code> it must have at most one <code>in/out</code> or <code>out</code> non-header parameter.</p>
+3. if it has a return type of <code>void</code> it must have at most one <code>in/out</code> or <code>out</code> non-header parameter.</p>
 </div>
 <div class="paragraph">
-<p>The ServiceInterfaceStrategy should be initialized with a boolean
+<p>The <code>ServiceInterfaceStrategy</code> should be initialized with a boolean
 parameter that indicates whether the mapping strategy applies to the
 request parameters or response parameters.</p>
 </div>
@@ -2196,10 +2281,10 @@ GetCustomersByNameResponse response = proxy.getCustomersByName(new GetCustomersB
 <div class="sect2">
 <h3 id="_webservice_server"><a class="anchor" href="#_webservice_server"></a>Webservice Server</h3>
 <div class="paragraph">
-<p>Using the following route sets up a webservice server that listens on
-jms queue customerServiceQueue and processes requests using the class
-CustomerServiceImpl. The customerServiceImpl of course should implement
-the interface CustomerService. Instead of directly instantiating the
+<p>Using the following route sets up a webservice server that consumes from the
+jms queue <code>customerServiceQueue</code> and processes requests using the class
+<code>CustomerServiceImpl</code>. The <code>customerServiceImpl</code> should implement
+the interface <code>CustomerService</code>. Instead of directly instantiating the
 server class it could be defined in a spring context as a regular bean.</p>
 </div>
 <div class="listingblock">
@@ -2223,8 +2308,8 @@ from("jms://queue:customerServiceQueue")
 <h2 id="_dependencies"><a class="anchor" href="#_dependencies"></a>Dependencies</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>To use the SOAP dataformat in your camel routes you need to add the
-following dependency to your pom.</p>
+<p>To use the SOAP dataformat in your Camel routes, you need to add the
+following dependency to your <code>pom.xml</code>.</p>
 </div>
 <div class="listingblock">
 <div class="content">
@@ -2234,6 +2319,9 @@ following dependency to your pom.</p>
   &lt;version&gt;x.y.z&lt;/version&gt;
 &lt;/dependency&gt;</code></pre>
 </div>
+</div>
+<div class="paragraph">
+<p>Unresolved include directive in modules/dataformats/pages/soap-dataformat.adoc - include::spring-boot:partial$starter.adoc[]</p>
 </div>
 </div>
 </div>

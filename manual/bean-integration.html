@@ -3,15 +3,15 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>Bean Integration :: Red Hat Apache Build of Apache Camel Manual</title>
-    <meta name="generator" content="Antora 3.0.3">
+    <title>Bean Integration :: Red Hat build of Apache Camel</title>
+    <meta name="generator" content="Antora 3.1.4">
     <link rel="stylesheet" href="../_/css/site.css">
   </head>
   <body class="article">
 <header class="header">
   <nav class="navbar">
     <div class="navbar-brand">
-      <a class="navbar-item" href="../../manual/index.html">Red Hat Apache Build of Apache Camel Manual</a>
+      <a class="navbar-item" href="/">Red Hat build of Apache Camel</a>
       <button class="navbar-burger" data-target="topbar-nav">
         <span></span>
         <span></span>
@@ -26,6 +26,7 @@
     <div class="panels">
 <div class="nav-panel-menu is-active" data-panel="menu">
   <nav class="nav-menu">
+    <button class="nav-menu-toggle" aria-label="Toggle expand/collapse all" style="display: none"></button>
     <h3 class="title"><a href="index.html">User manual</a></h3>
 <ul class="nav-list">
   <li class="nav-item" data-depth="0">
@@ -56,7 +57,16 @@
     <a class="nav-link" href="camel-console.html">Camel Developer Console</a>
   </li>
   <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
     <a class="nav-link" href="camel-jbang.html">Camel JBang</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="camel-jbang-kubernetes.html">Camel Kubernetes plugin</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="camel-jbang-k.html">Camel K plugin</a>
+  </li>
+</ul>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="camel-maven-plugin.html">Camel Maven Plugin</a>
@@ -95,6 +105,9 @@
     <a class="nav-link" href="using-propertyplaceholder.html">How to use Camel property placeholders</a>
   </li>
   <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="variables.html">How to use Variables</a>
+  </li>
+  <li class="nav-item" data-depth="2">
     <button class="nav-item-toggle"></button>
     <a class="nav-link" href="testing.html">Testing</a>
 <ul class="nav-list">
@@ -110,7 +123,13 @@
 </ul>
   </li>
   <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
     <a class="nav-link" href="rest-dsl.html">Working with REST and Rest DSL</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="rest-dsl-openapi.html">Rest DSL contract first</a>
+  </li>
+</ul>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="writing-components.html">Writing Components</a>
@@ -477,9 +496,6 @@
     <a class="nav-link" href="faq/how-should-i-invoke-my-pojos-or-spring-services.html">How should I invoke my POJOs or Spring Services?</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="faq/how-to-avoid-importing-bunch-of-cxf-packages-when-start-up-the-camel-cxf-endpoint-from-osgi-platform-.html">How to avoid importing bunch of cxf packages when start up the camel-cxf endpoint from OSGi platform?</a>
-  </li>
-  <li class="nav-item" data-depth="2">
     <a class="nav-link" href="faq/how-to-avoid-sending-some-or-all-message-headers.html">How to avoid sending some or all message headers?</a>
   </li>
   <li class="nav-item" data-depth="2">
@@ -598,11 +614,11 @@
 <div class="nav-panel-explore" data-panel="explore">
   <div class="context">
     <span class="title">User manual</span>
-    <span class="version">default</span>
+    <span class="version"></span>
   </div>
   <ul class="components">
     <li class="component">
-      <a class="title" href="../components/next/index.html">Camel Components</a>
+      <div class="title"><a href="../components/next/index.html">Camel Components</a></div>
       <ul class="versions">
         <li class="version is-latest">
           <a href="../components/next/index.html">Next (Pre-release)</a>
@@ -610,12 +626,7 @@
       </ul>
     </li>
     <li class="component is-current">
-      <a class="title" href="index.html">User manual</a>
-      <ul class="versions">
-        <li class="version is-current is-latest">
-          <a href="index.html">default</a>
-        </li>
-      </ul>
+      <div class="title"><a href="index.html">User manual</a></div>
     </li>
   </ul>
 </div>
@@ -633,6 +644,7 @@
     <li><a href="bean-integration.html">Bean Integration</a></li>
   </ul>
 </nav>
+<div class="edit-this-page"><a href="file:///code/jboss/jboss-camel/docs/user-manual/modules/ROOT/pages/bean-integration.adoc">Edit this Page</a></div>
 </div>
   <div class="content">
 <aside class="toc sidebar" data-title="Contents" data-levels="2">
@@ -684,7 +696,7 @@ producing, consuming or routing messages.</p>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>@BeanConfigInject</code></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">To inject a configuration bean obtained from the <a href="registry.html" class="xref page">Registry</a>. The bean is a POJO that represents
-a set of configuration options, which is automatic configured with values loaded via Camel <a href="using-propertyplaceholder.html" class="xref page">Property Placeholders</a>.</p></td>
+a set of configuration options, which is automatically configured with values loaded via Camel <a href="using-propertyplaceholder.html" class="xref page">Property Placeholders</a>.</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>@PropertyInject</code></p></td>
@@ -692,7 +704,7 @@ a set of configuration options, which is automatic configured with values loaded
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>@Produce</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">To inject a producer to send message to an endpoint. See <a href="pojo-producing.html" class="xref page">POJO Producing</a>.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">To inject a producer to send a message to an endpoint. See <a href="pojo-producing.html" class="xref page">POJO Producing</a>.</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>@Consume</code></p></td>
@@ -701,7 +713,7 @@ a set of configuration options, which is automatic configured with values loaded
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>@BindToRegistry</code></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Used for binding a bean to the registry.
-  If no name is specified then the bean will have its name auto computed based on the class name,
+  If no name is specified, then the bean will have its name auto computed based on the class name,
  field name, or method name where the annotation is configured.</p></td>
 </tr>
 <tr>
@@ -744,7 +756,7 @@ the behaviour of method invocations with Spring Remoting or POJO Producing</p>
 <p><strong>Example</strong></p>
 </div>
 <div class="paragraph">
-<p>See the <a href="https://github.com/apache/camel-examples/tree/main/examples/pojo-messaging">POJO Messaging Example</a>
+<p>See the <a href="https://github.com/apache/camel-examples/tree/main/pojo-messaging">POJO Messaging Example</a>
 for how to use the annotations for routing and messaging.</p>
 </div>
 </div>
@@ -799,6 +811,90 @@ private String greeting;</code></pre>
 <div class="content">
 <pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">@PropertyInject(value = "myTimeout", defaultValue = "5000")
 private int timeout;</code></pre>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_using_propertyinject_with_arrays_lists_sets_or_maps"><a class="anchor" href="#_using_propertyinject_with_arrays_lists_sets_or_maps"></a>Using @PropertyInject with arrays, lists, sets or maps</h3>
+<div class="paragraph">
+<p>You can also use <code>@PropertyInject</code> to inject an array of values. For example, you may configure multiple hostnames
+in the configuration file, and need to inject this into an <code>String[]</code> or <code>List&lt;String&gt;</code> field.
+To do this, you need to tell Camel that the property value should be split using a separator, as follows:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">@PropertyInject(value = "myHostnames", separator = ",")
+private String[] servers;</code></pre>
+</div>
+</div>
+<div class="admonitionblock tip">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-tip" title="Tip"></i>
+</td>
+<td class="content">
+You can also use list/set types, such as <code>List&lt;String&gt;</code> or <code>Set&lt;String&gt;</code> instead of array.
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>Then in the <code>application.properties</code> file you can define the servers:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-properties hljs" data-lang="properties">myHostnames = serverA, serverB, serverC</code></pre>
+</div>
+</div>
+<div class="admonitionblock tip">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-tip" title="Tip"></i>
+</td>
+<td class="content">
+This also works for fields that are not String based, such as <code>int[]</code> for numeric values.
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>For <code>Map</code> types then the values are expected to be in <code><em>key=value</em></code> format, such as:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-properties hljs" data-lang="properties">myServers = serverA=http://coolstore:4444,serverB=http://megastore:5555</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>You can then inject this into a <code>Map</code> as follows:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">@PropertyInject(value = "myServers", separator = ",")
+private Map servers;</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>You can use generic types in the Map such as the values should be <code>Integer</code> values:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">@PropertyInject(value = "ports", separator = ",")
+private Map&lt;String, Integer&gt; ports;</code></pre>
+</div>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+The generic type can only be a single class type, and cannot be a nested complex type such as <code>Map&lt;String,Map&lt;Kind,Priority&gt;&gt;</code>.
+</td>
+</tr>
+</table>
 </div>
 </div>
 </div>

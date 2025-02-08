@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>Reactive Streams :: Red Hat Camel Reference</title>
+    <title>Reactive Streams :: Red Hat build of Apache Camel</title>
     <meta name="description" content="Exchange messages with reactive stream processing libraries compatible with the reactive streams standard.">
     <meta name="generator" content="Antora 3.1.4">
     <link rel="stylesheet" href="../../_/css/site.css">
@@ -12,7 +12,7 @@
 <header class="header">
   <nav class="navbar">
     <div class="navbar-brand">
-      <a class="navbar-item" href="../../manual/index.html">Red Hat Apache Build of Apache Camel Manual</a>
+      <a class="navbar-item" href="/">Red Hat build of Apache Camel</a>
       <button class="navbar-burger" data-target="topbar-nav">
         <span></span>
         <span></span>
@@ -27,6 +27,7 @@
     <div class="panels">
 <div class="nav-panel-menu is-active" data-panel="menu">
   <nav class="nav-menu">
+    <button class="nav-menu-toggle" aria-label="Toggle expand/collapse all" style="display: none"></button>
     <h3 class="title"><a href="index.html">Camel Components</a></h3>
 <ul class="nav-list">
   <li class="nav-item" data-depth="0">
@@ -36,7 +37,46 @@
     <a class="nav-link" href="index.html">Components</a>
 <ul class="nav-list">
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="activemq-component.html">ActiveMQ</a>
+    <a class="nav-link" href="activemq-component.html">ActiveMQ 5.x</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="activemq6-component.html">ActiveMQ 6.x</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="ai-summary.html">AI</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="chatscript-component.html">ChatScript</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="djl-component.html">Deep Java Library</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="langchain4j-chat-component.html">LangChain4j Chat</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="langchain4j-embeddings-component.html">LangChain4j Embeddings</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="langchain4j-tokenizer-component.html">LangChain4j Tokenizer</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="langchain4j-tools-component.html">LangChain4j Tools</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="langchain4j-web-search-component.html">LangChain4j Web Search</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="milvus-component.html">Milvus</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="pinecone-component.html">Pinecone</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="qdrant-component.html">Qdrant</a>
+  </li>
+</ul>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="amqp-component.html">AMQP</a>
@@ -65,6 +105,15 @@
 <ul class="nav-list">
   <li class="nav-item" data-depth="3">
     <a class="nav-link" href="aws2-athena-component.html">AWS Athena</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="aws-bedrock-component.html">AWS Bedrock</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="aws-bedrock-agent-component.html">AWS Bedrock Agent</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="aws-bedrock-agent-runtime-component.html">AWS Bedrock Agent Runtime</a>
   </li>
   <li class="nav-item" data-depth="3">
     <a class="nav-link" href="aws-cloudtrail-component.html">AWS Cloudtrail</a>
@@ -169,7 +218,7 @@
     <a class="nav-link" href="azure-storage-blob-component.html">Azure Storage Blob Service</a>
   </li>
   <li class="nav-item" data-depth="3">
-    <a class="nav-link" href="azure-storage-datalake-component.html">Azure Storage Datalake Service</a>
+    <a class="nav-link" href="azure-storage-datalake-component.html">Azure Storage Data Lake Service</a>
   </li>
   <li class="nav-item" data-depth="3">
     <a class="nav-link" href="azure-storage-queue-component.html">Azure Storage Queue Service</a>
@@ -202,9 +251,6 @@
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="cql-component.html">Cassandra CQL</a>
-  </li>
-  <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="chatscript-component.html">ChatScript</a>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="chunk-component.html">Chunk</a>
@@ -277,9 +323,6 @@
     <a class="nav-link" href="debezium-sqlserver-component.html">Debezium SQL Server Connector</a>
   </li>
 </ul>
-  </li>
-  <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="djl-component.html">Deep Java Library</a>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="dhis2-component.html">DHIS2</a>
@@ -395,6 +438,9 @@
   </li>
   <li class="nav-item" data-depth="3">
     <a class="nav-link" href="google-pubsub-component.html">Google Pubsub</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="google-pubsub-lite-component.html">Google PubSub Lite</a>
   </li>
   <li class="nav-item" data-depth="3">
     <a class="nav-link" href="google-secret-manager-component.html">Google Secret Manager</a>
@@ -687,7 +733,7 @@
     <a class="nav-link" href="ldif-component.html">LDIF</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="log-component.html">Log</a>
+    <a class="nav-link" href="log-component.html">Log Data</a>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="lucene-component.html">Lucene</a>
@@ -900,16 +946,49 @@
     <a class="nav-link" href="smb-component.html">SMB</a>
   </li>
   <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="smooks-component.html">Smooks</a>
+  </li>
+  <li class="nav-item" data-depth="2">
     <a class="nav-link" href="smpp-component.html">SMPP</a>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="snmp-component.html">SNMP</a>
   </li>
   <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="solr-component.html">Solr</a>
+  </li>
+  <li class="nav-item" data-depth="2">
     <a class="nav-link" href="splunk-component.html">Splunk</a>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="splunk-hec-component.html">Splunk HEC</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="spring-summary.html">Spring</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="spring-batch-component.html">Spring Batch</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="spring-event-component.html">Spring Event</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="spring-jdbc-component.html">Spring JDBC</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="spring-ldap-component.html">Spring LDAP</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="spring-rabbitmq-component.html">Spring RabbitMQ</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="spring-redis-component.html">Spring Redis</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="spring-ws-component.html">Spring WebService</a>
+  </li>
+</ul>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="sql-component.html">SQL</a>
@@ -937,6 +1016,18 @@
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="stub-component.html">Stub</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="tahu-summary.html">Tahu</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="tahu-edge-component.html">Tahu Edge Node / Device</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="tahu-host-component.html">Tahu Host Application</a>
+  </li>
+</ul>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="telegram-component.html">Telegram</a>
@@ -999,7 +1090,7 @@
     <a class="nav-link" href="whatsapp-component.html">WhatsApp</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="wordpress-component.html">Wordpress</a>
+    <a class="nav-link" href="wordpress-component.html">WordPress</a>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="workday-component.html">Workday</a>
@@ -1392,7 +1483,13 @@
     <a class="nav-link" href="others/openapi-java.html">Openapi Java</a>
   </li>
   <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="others/openapi-validator.html">Openapi Validator</a>
+  </li>
+  <li class="nav-item" data-depth="2">
     <a class="nav-link" href="others/opentelemetry.html">OpenTelemetry</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="others/platform-http-jolokia.html">Platform HTTP Jolokia</a>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="others/platform-http-main.html">Platform Http Main</a>
@@ -1540,7 +1637,7 @@
     <a class="nav-link" href="eips/event-message.html">Event Message</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="eips/failover-eip.html">Failover</a>
+    <a class="nav-link" href="eips/failoverLoadBalancer-eip.html">Failover Load Balancer</a>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="eips/faultToleranceConfiguration-eip.html">Fault Tolerance Configuration</a>
@@ -1570,13 +1667,13 @@
     <a class="nav-link" href="eips/loadBalance-eip.html">Load Balance</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="eips/log-eip.html">Log</a>
+    <a class="nav-link" href="eips/log-eip.html">Logger</a>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="eips/loop-eip.html">Loop</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="eips/marshal-eip.html">Marshal EIP</a>
+    <a class="nav-link" href="eips/marshal-eip.html">Marshal</a>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="eips/message.html">Message</a>
@@ -1633,6 +1730,9 @@
     <a class="nav-link" href="eips/point-to-point-channel.html">Point to Point Channel</a>
   </li>
   <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="eips/poll-eip.html">Poll</a>
+  </li>
+  <li class="nav-item" data-depth="2">
     <a class="nav-link" href="eips/pollEnrich-eip.html">Poll Enrich</a>
   </li>
   <li class="nav-item" data-depth="2">
@@ -1648,7 +1748,7 @@
     <a class="nav-link" href="eips/publish-subscribe-channel.html">Publish Subscribe Channel</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="eips/random-eip.html">Random</a>
+    <a class="nav-link" href="eips/randomLoadBalancer-eip.html">Random Load Balancer</a>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="eips/recipientList-eip.html">Recipient List</a>
@@ -1690,7 +1790,7 @@
     <a class="nav-link" href="eips/rollback-eip.html">Rollback</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="eips/roundRobin-eip.html">Round Robin</a>
+    <a class="nav-link" href="eips/roundRobinLoadBalancer-eip.html">Round Robin Load Balancer</a>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="eips/routingSlip-eip.html">Routing Slip</a>
@@ -1702,7 +1802,7 @@
     <a class="nav-link" href="eips/sample-eip.html">Sample</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="eips/scatter-gather.html">Scatter Gather</a>
+    <a class="nav-link" href="eips/scatter-gather.html">Scatter-Gather</a>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="eips/script-eip.html">Script</a>
@@ -1732,6 +1832,9 @@
     <a class="nav-link" href="eips/setVariable-eip.html">Set Variable</a>
   </li>
   <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="eips/setVariables-eip.html">Set Variables</a>
+  </li>
+  <li class="nav-item" data-depth="2">
     <a class="nav-link" href="eips/sort-eip.html">Sort</a>
   </li>
   <li class="nav-item" data-depth="2">
@@ -1741,7 +1844,7 @@
     <a class="nav-link" href="eips/step-eip.html">Step</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="eips/sticky-eip.html">Sticky</a>
+    <a class="nav-link" href="eips/stickyLoadBalancer-eip.html">Sticky Load Balancer</a>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="eips/stop-eip.html">Stop</a>
@@ -1762,7 +1865,7 @@
     <a class="nav-link" href="eips/toD-eip.html">To D</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="eips/topic-eip.html">Topic</a>
+    <a class="nav-link" href="eips/topicLoadBalancer-eip.html">Topic Load Balancer</a>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="eips/transactional-client.html">Transactional Client</a>
@@ -1771,13 +1874,13 @@
     <a class="nav-link" href="eips/transform-eip.html">Transform</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="eips/unmarshal-eip.html">Unmarshal EIP</a>
+    <a class="nav-link" href="eips/unmarshal-eip.html">Unmarshal</a>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="eips/validate-eip.html">Validate</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="eips/weighted-eip.html">Weighted</a>
+    <a class="nav-link" href="eips/weightedLoadBalancer-eip.html">Weighted Load Balancer</a>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="eips/wireTap-eip.html">Wire Tap</a>
@@ -1796,7 +1899,7 @@
   </div>
   <ul class="components">
     <li class="component is-current">
-      <a class="title" href="index.html">Camel Components</a>
+      <div class="title"><a href="index.html">Camel Components</a></div>
       <ul class="versions">
         <li class="version is-current is-latest">
           <a href="index.html">Next (Pre-release)</a>
@@ -1804,12 +1907,7 @@
       </ul>
     </li>
     <li class="component">
-      <a class="title" href="../../manual/index.html">User manual</a>
-      <ul class="versions">
-        <li class="version is-latest">
-          <a href="../../manual/index.html">default</a>
-        </li>
-      </ul>
+      <div class="title"><a href="../../manual/index.html">User manual</a></div>
     </li>
   </ul>
 </div>
@@ -1827,6 +1925,7 @@
     <li><a href="reactive-streams-component.html">Reactive Streams</a></li>
   </ul>
 </nav>
+<div class="edit-this-page"><a href="file:///code/jboss/jboss-camel/docs/components/modules/ROOT/pages/reactive-streams-component.adoc">Edit this Page</a></div>
 </div>
   <div class="content">
 <aside class="toc sidebar" data-title="Contents" data-levels="2">
@@ -1910,37 +2009,65 @@ external stream processing systems.</p>
 <div class="sect2">
 <h3 id="_configuring_component_options"><a class="anchor" href="#_configuring_component_options"></a>Configuring Component Options</h3>
 <div class="paragraph">
-<p>The component level is the highest level which holds general and common configurations that are inherited by the endpoints.
-For example a component may have security settings, credentials for authentication, urls for network connection and so forth.</p>
+<p>At the component level, you set general and shared configurations that are, then, inherited by the endpoints. It is the highest configuration level.</p>
 </div>
 <div class="paragraph">
-<p>Some components only have a few options, and others may have many. Because components typically have pre configured defaults
-that are commonly used, then you may often only need to configure a few options on a component; or none at all.</p>
+<p>For example, a component may have security settings, credentials for authentication, urls for network connection and so forth.</p>
 </div>
 <div class="paragraph">
-<p>Configuring components can be done with the <a href="../../manual/component-dsl.html" class="xref page">Component DSL</a>,
-in a configuration file (application.properties|yaml), or directly with Java code.</p>
+<p>Some components only have a few options, and others may have many.
+Because components typically have pre-configured defaults that are commonly used, then you may often only need to configure a few options on a component; or none at all.</p>
+</div>
+<div class="paragraph">
+<p>You can configure components using:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>the <a href="../../manual/component-dsl.html" class="xref page">Component DSL</a>.</p>
+</li>
+<li>
+<p>in a configuration file (<code>application.properties</code>, <code>*.yaml</code> files, etc).</p>
+</li>
+<li>
+<p>directly in the Java code.</p>
+</li>
+</ul>
 </div>
 </div>
 <div class="sect2">
 <h3 id="_configuring_endpoint_options"><a class="anchor" href="#_configuring_endpoint_options"></a>Configuring Endpoint Options</h3>
 <div class="paragraph">
-<p>Where you find yourself configuring the most is on endpoints, as endpoints often have many options, which allows you to
-configure what you need the endpoint to do. The options are also categorized into whether the endpoint is used as consumer (from)
-or as a producer (to), or used for both.</p>
+<p>You usually spend more time setting up endpoints because they have many options.
+These options help you customize what you want the endpoint to do.
+The options are also categorized into whether the endpoint is used as a consumer (<em>from</em>), as a producer (<em>to</em>), or  both.</p>
 </div>
 <div class="paragraph">
-<p>Configuring endpoints is most often done directly in the endpoint URI as path and query parameters. You can also use
-the <a href="../../manual/Endpoint-dsl.html" class="xref page">Endpoint DSL</a> and <a href="../../manual/dataformat-dsl.html" class="xref page">DataFormat DSL</a>
+<p>Configuring endpoints is most often done directly in the endpoint URI as <em>path</em> and <em>query</em> parameters.
+You can also use the <a href="../../manual/Endpoint-dsl.html" class="xref page">Endpoint DSL</a> and <a href="../../manual/dataformat-dsl.html" class="xref page">DataFormat DSL</a>
 as a <em>type safe</em> way of configuring endpoints and data formats in Java.</p>
 </div>
 <div class="paragraph">
-<p>A good practice when configuring options is to use <a href="../../manual/using-propertyplaceholder.html" class="xref page">Property Placeholders</a>,
-which allows to not hardcode urls, port numbers, sensitive information, and other settings.
-In other words placeholders allows to externalize the configuration from your code, and gives more flexibility and reuse.</p>
+<p>A good practice when configuring options is to use <a href="../../manual/using-propertyplaceholder.html" class="xref page">Property Placeholders</a>.</p>
 </div>
 <div class="paragraph">
-<p>The following two sections lists all the options, firstly for the component followed by the endpoint.</p>
+<p>Property placeholders provide a few benefits:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>They help prevent using hardcoded urls, port numbers, sensitive information, and other settings.</p>
+</li>
+<li>
+<p>They allow externalizing the configuration from the code.</p>
+</li>
+<li>
+<p>They help the code to become more flexible and reusable.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>The following two sections list all the options, firstly for the component followed by the endpoint.</p>
 </div>
 </div>
 </div>
@@ -2080,7 +2207,7 @@ In other words placeholders allows to externalize the configuration from your co
 </div>
 </div>
 <div class="paragraph">
-<p>with the following path and query parameters:</p>
+<p>With the following <em>path</em> and <em>query</em> parameters:</p>
 </div>
 <div class="sect2">
 <h3 id="_path_parameters_1_parameters"><a class="anchor" href="#_path_parameters_1_parameters"></a>Path Parameters (1 parameters)</h3>
@@ -2322,13 +2449,10 @@ In other words placeholders allows to externalize the configuration from your co
 </li>
 </ul>
 </div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="_getting_data_from_camel"><a class="anchor" href="#_getting_data_from_camel"></a>Getting data from Camel</h2>
-<div class="sectionbody">
+<div class="sect2">
+<h3 id="_getting_data_from_camel"><a class="anchor" href="#_getting_data_from_camel"></a>Getting data from Camel</h3>
 <div class="paragraph">
-<p>In order to subscribe to data flowing from a Camel route, exchanges should be redirected to
+<p>To subscribe to data flowing from a Camel route, exchanges should be redirected to
 a named stream, like in the following snippet:</p>
 </div>
 <div class="listingblock">
@@ -2371,8 +2495,8 @@ Here is an example of how to use it with <a href="https://github.com/ReactiveX/R
 <div class="paragraph">
 <p>The example prints all numbers generated by Camel into <code>System.out</code>.</p>
 </div>
-<div class="sect2">
-<h3 id="_getting_data_from_camel_using_the_direct_api"><a class="anchor" href="#_getting_data_from_camel_using_the_direct_api"></a>Getting data from Camel using the direct API</h3>
+<div class="sect3">
+<h4 id="_getting_data_from_camel_using_the_direct_api"><a class="anchor" href="#_getting_data_from_camel_using_the_direct_api"></a>Getting data from Camel using the direct API</h4>
 <div class="paragraph">
 <p>For short Camel routes and for users that prefer defining the whole processing flow
 using functional constructs of the reactive framework (without using the Camel DSL at all),
@@ -2393,10 +2517,8 @@ Flowable.fromPublisher(files)
 </div>
 </div>
 </div>
-</div>
-<div class="sect1">
-<h2 id="_sending_data_to_camel"><a class="anchor" href="#_sending_data_to_camel"></a>Sending data to Camel</h2>
-<div class="sectionbody">
+<div class="sect2">
+<h3 id="_sending_data_to_camel"><a class="anchor" href="#_sending_data_to_camel"></a>Sending data to Camel</h3>
 <div class="paragraph">
 <p>When an external library needs to push events into a Camel route, the Reactive Streams
 endpoint must be set as consumer.</p>
@@ -2432,10 +2554,10 @@ Subscriber&lt;String&gt; elements = camel.streamSubscriber("elements", String.cl
 </div>
 </div>
 <div class="paragraph">
-<p>String items are generated every second by RxJava in the example and they are pushed into the Camel route defined above.</p>
+<p>String items are generated every second by RxJava in the example, and they are pushed into the Camel route defined above.</p>
 </div>
-<div class="sect2">
-<h3 id="_sending_data_to_camel_using_the_direct_api"><a class="anchor" href="#_sending_data_to_camel_using_the_direct_api"></a>Sending data to Camel using the direct API</h3>
+<div class="sect3">
+<h4 id="_sending_data_to_camel_using_the_direct_api"><a class="anchor" href="#_sending_data_to_camel_using_the_direct_api"></a>Sending data to Camel using the direct API</h4>
 <div class="paragraph">
 <p>Also in this case, the direct API can be used to obtain a Camel subscriber from an endpoint URI.</p>
 </div>
@@ -2450,13 +2572,12 @@ Flowable.just("hello", "world")
 </div>
 </div>
 </div>
-</div>
-<div class="sect1">
-<h2 id="_request_a_transformation_to_camel"><a class="anchor" href="#_request_a_transformation_to_camel"></a>Request a transformation to Camel</h2>
-<div class="sectionbody">
+<div class="sect2">
+<h3 id="_request_a_transformation_to_camel"><a class="anchor" href="#_request_a_transformation_to_camel"></a>Request a transformation to Camel</h3>
 <div class="paragraph">
 <p>Routes defined in some Camel DSL can be used within a reactive stream framework to perform a
-specific transformation (the same mechanism can be also used to eg. just send data to a <em>http</em> endpoint and continue).</p>
+specific transformation.
+The same mechanism can be also used to e.g., send data to an <em>http</em> endpoint and continue.</p>
 </div>
 <div class="paragraph">
 <p>The following snippet shows how RxJava functional code can request the task of loading and marshalling files to Camel.</p>
@@ -2482,10 +2603,10 @@ Flowable.just(new File("file1.txt"), new File("file2.txt"))
 .marshal() // ... other details</code></pre>
 </div>
 </div>
-<div class="sect2">
-<h3 id="_request_a_transformation_to_camel_using_the_direct_api"><a class="anchor" href="#_request_a_transformation_to_camel_using_the_direct_api"></a>Request a transformation to Camel using the direct API</h3>
+<div class="sect3">
+<h4 id="_request_a_transformation_to_camel_using_the_direct_api"><a class="anchor" href="#_request_a_transformation_to_camel_using_the_direct_api"></a>Request a transformation to Camel using the direct API</h4>
 <div class="paragraph">
-<p>An alternative approach consists in using the URI endpoints directly in the reactive flow:</p>
+<p>An alternative approach consists of using the URI endpoints directly in the reactive flow:</p>
 </div>
 <div class="listingblock">
 <div class="content">
@@ -2500,8 +2621,8 @@ Flowable.just(new File("file1.txt"), new File("file2.txt"))
 </div>
 </div>
 <div class="paragraph">
-<p>When using the <em>to()</em> method instead of the <em>toStream</em>, there is no need to define the
-route using "reactive-streams:" endpoints (although they are used under the hood).</p>
+<p>When using the <code>to()</code> method instead of the <code>toStream</code>, there is no need to define the
+route using <code>reactive-streams:</code> endpoints (although they are used under the hood).</p>
 </div>
 <div class="paragraph">
 <p>In this case, the Camel transformation can be just:</p>
@@ -2514,13 +2635,11 @@ route using "reactive-streams:" endpoints (although they are used under the hood
 </div>
 </div>
 </div>
-</div>
-<div class="sect1">
-<h2 id="_process_camel_data_into_the_reactive_framework"><a class="anchor" href="#_process_camel_data_into_the_reactive_framework"></a>Process Camel data into the reactive framework</h2>
-<div class="sectionbody">
+<div class="sect2">
+<h3 id="_process_camel_data_into_the_reactive_framework"><a class="anchor" href="#_process_camel_data_into_the_reactive_framework"></a>Process Camel data into the reactive framework</h3>
 <div class="paragraph">
 <p>While a reactive streams <em>Publisher</em> allows exchanging data in a unidirectional way,
-Camel routes often use a in-out exchange pattern (eg. to define REST endpoints and, in general,
+Camel routes often use an in-out exchange pattern (e.g., to define REST endpoints and, in general,
 where a reply is needed for each request).</p>
 </div>
 <div class="paragraph">
@@ -2539,7 +2658,7 @@ define the entire transformation using the reactive framework.</p>
 </div>
 </div>
 <div class="paragraph">
-<p>A reactive processing step can be associated to the "direct:reactive" endpoint:</p>
+<p>A reactive processing step can be associated with the "direct:reactive" endpoint:</p>
 </div>
 <div class="listingblock">
 <div class="content">
@@ -2572,16 +2691,14 @@ camel.process("rest:get:orders", exchange -&gt;
 <p>See Camel examples (<strong>camel-example-reactive-streams</strong>) for details.</p>
 </div>
 </div>
-</div>
-<div class="sect1">
-<h2 id="_advanced_topics"><a class="anchor" href="#_advanced_topics"></a>Advanced Topics</h2>
-<div class="sectionbody">
 <div class="sect2">
-<h3 id="_controlling_backpressure_producer_side"><a class="anchor" href="#_controlling_backpressure_producer_side"></a>Controlling Backpressure (producer side)</h3>
+<h3 id="_advanced_topics"><a class="anchor" href="#_advanced_topics"></a>Advanced Topics</h3>
+<div class="sect3">
+<h4 id="_controlling_backpressure_producer_side"><a class="anchor" href="#_controlling_backpressure_producer_side"></a>Controlling Backpressure (producer side)</h4>
 <div class="paragraph">
 <p>When routing Camel exchanges to an external subscriber, backpressure is handled by an internal buffer that caches exchanges
 before delivering them.
-If the subscriber is slower than the exchange rate, the buffer may become too big. In many circumstances this must be avoided.</p>
+If the subscriber is slower than the exchange rate, the buffer may become too big. In many circumstances, this must be avoided.</p>
 </div>
 <div class="paragraph">
 <p>Considering the following route:</p>
@@ -2594,7 +2711,7 @@ If the subscriber is slower than the exchange rate, the buffer may become too bi
 </div>
 <div class="paragraph">
 <p>If the JMS queue contains a high number of messages and the Subscriber associated with the <code>flow</code> stream is too slow,
-messages are dequeued from JMS and appended to the buffer, possibly causing a "out of memory" error.
+messages are dequeued from JMS and appended to the buffer, possibly causing an <em>"out of memory"</em> error.
 To avoid such problems, a <code>ThrottlingInflightRoutePolicy</code> can be set in the route.</p>
 </div>
 <div class="listingblock">
@@ -2617,9 +2734,9 @@ When more than <code>10</code> messages are in flight, the route is suspended, w
 When multiple subscribers are consuming items from the same stream, the slowest one controls the route status automatically.</p>
 </div>
 <div class="paragraph">
-<p>In other circumstances, eg. when using a <code>http</code> consumer, the route suspension makes the http service unavailable, so
+<p>In other circumstances, e.g., when using a <code>http</code> consumer, the route suspension makes the http service unavailable, so
 using the default configuration (no policy, unbounded buffer) should be preferable. Users should try to avoid memory issues
-by limiting the number of requests to the http service (eg. scaling out).</p>
+by limiting the number of requests to the http service (e.g., scaling out).</p>
 </div>
 <div class="paragraph">
 <p>In contexts where a certain amount of data loss is acceptable, setting a backpressure strategy other than <code>BUFFER</code> can
@@ -2632,13 +2749,13 @@ by limiting the number of requests to the http service (eg. scaling out).</p>
 </div>
 </div>
 <div class="paragraph">
-<p>When the <code>LATEST</code> backpressure strategy is used, only the last exchange received from the route is kept by the publisher, while older data is discarded (other options are available).</p>
+<p>When the <code>LATEST</code> backpressure strategy is used, the publisher keeps only the last exchange received from the route, while older data is discarded (other options are available).</p>
 </div>
 </div>
-<div class="sect2">
-<h3 id="_controlling_backpressure_consumer_side"><a class="anchor" href="#_controlling_backpressure_consumer_side"></a>Controlling Backpressure (consumer side)</h3>
+<div class="sect3">
+<h4 id="_controlling_backpressure_consumer_side"><a class="anchor" href="#_controlling_backpressure_consumer_side"></a>Controlling Backpressure (consumer side)</h4>
 <div class="paragraph">
-<p>When Camel consumes items from a reactive-streams publisher, the maximum number of inflight exchanges can be set as endpoint option.</p>
+<p>When Camel consumes items from a reactive-streams publisher, the maximum number of in-flight exchanges can be set as an endpoint option.</p>
 </div>
 <div class="paragraph">
 <p>The subscriber associated with the consumer interacts with the publisher to keep the number of messages in the route lower than the threshold.</p>
@@ -2660,6 +2777,10 @@ is always lower than <code>10</code>. Messages are processed by a single thread 
 <p>The number of concurrent consumers (threads) can also be set as endpoint option (<code>concurrentConsumers</code>).
 When using 1 consumer (the default), the order of items in the source stream is maintained.
 When this value is increased, items will be processed concurrently by multiple threads (so not preserving the order).</p>
+</div>
+<div class="paragraph">
+<p>Unresolved include directive in modules/ROOT/pages/reactive-streams-component.adoc - include::spring-boot:partial$starter.adoc[]</p>
+</div>
 </div>
 </div>
 </div>

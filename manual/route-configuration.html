@@ -3,15 +3,15 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>Route Configuration :: Red Hat Apache Build of Apache Camel Manual</title>
-    <meta name="generator" content="Antora 3.0.3">
+    <title>Route Configuration :: Red Hat build of Apache Camel</title>
+    <meta name="generator" content="Antora 3.1.4">
     <link rel="stylesheet" href="../_/css/site.css">
   </head>
   <body class="article">
 <header class="header">
   <nav class="navbar">
     <div class="navbar-brand">
-      <a class="navbar-item" href="../../manual/index.html">Red Hat Apache Build of Apache Camel Manual</a>
+      <a class="navbar-item" href="/">Red Hat build of Apache Camel</a>
       <button class="navbar-burger" data-target="topbar-nav">
         <span></span>
         <span></span>
@@ -26,6 +26,7 @@
     <div class="panels">
 <div class="nav-panel-menu is-active" data-panel="menu">
   <nav class="nav-menu">
+    <button class="nav-menu-toggle" aria-label="Toggle expand/collapse all" style="display: none"></button>
     <h3 class="title"><a href="index.html">User manual</a></h3>
 <ul class="nav-list">
   <li class="nav-item" data-depth="0">
@@ -56,7 +57,16 @@
     <a class="nav-link" href="camel-console.html">Camel Developer Console</a>
   </li>
   <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
     <a class="nav-link" href="camel-jbang.html">Camel JBang</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="camel-jbang-kubernetes.html">Camel Kubernetes plugin</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="camel-jbang-k.html">Camel K plugin</a>
+  </li>
+</ul>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="camel-maven-plugin.html">Camel Maven Plugin</a>
@@ -95,6 +105,9 @@
     <a class="nav-link" href="using-propertyplaceholder.html">How to use Camel property placeholders</a>
   </li>
   <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="variables.html">How to use Variables</a>
+  </li>
+  <li class="nav-item" data-depth="2">
     <button class="nav-item-toggle"></button>
     <a class="nav-link" href="testing.html">Testing</a>
 <ul class="nav-list">
@@ -110,7 +123,13 @@
 </ul>
   </li>
   <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
     <a class="nav-link" href="rest-dsl.html">Working with REST and Rest DSL</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="rest-dsl-openapi.html">Rest DSL contract first</a>
+  </li>
+</ul>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="writing-components.html">Writing Components</a>
@@ -477,9 +496,6 @@
     <a class="nav-link" href="faq/how-should-i-invoke-my-pojos-or-spring-services.html">How should I invoke my POJOs or Spring Services?</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="faq/how-to-avoid-importing-bunch-of-cxf-packages-when-start-up-the-camel-cxf-endpoint-from-osgi-platform-.html">How to avoid importing bunch of cxf packages when start up the camel-cxf endpoint from OSGi platform?</a>
-  </li>
-  <li class="nav-item" data-depth="2">
     <a class="nav-link" href="faq/how-to-avoid-sending-some-or-all-message-headers.html">How to avoid sending some or all message headers?</a>
   </li>
   <li class="nav-item" data-depth="2">
@@ -598,11 +614,11 @@
 <div class="nav-panel-explore" data-panel="explore">
   <div class="context">
     <span class="title">User manual</span>
-    <span class="version">default</span>
+    <span class="version"></span>
   </div>
   <ul class="components">
     <li class="component">
-      <a class="title" href="../components/next/index.html">Camel Components</a>
+      <div class="title"><a href="../components/next/index.html">Camel Components</a></div>
       <ul class="versions">
         <li class="version is-latest">
           <a href="../components/next/index.html">Next (Pre-release)</a>
@@ -610,12 +626,7 @@
       </ul>
     </li>
     <li class="component is-current">
-      <a class="title" href="index.html">User manual</a>
-      <ul class="versions">
-        <li class="version is-current is-latest">
-          <a href="index.html">default</a>
-        </li>
-      </ul>
+      <div class="title"><a href="index.html">User manual</a></div>
     </li>
   </ul>
 </div>
@@ -633,6 +644,7 @@
     <li><a href="route-configuration.html">RouteConfiguration</a></li>
   </ul>
 </nav>
+<div class="edit-this-page"><a href="file:///code/jboss/jboss-camel/docs/user-manual/modules/ROOT/pages/route-configuration.adoc">Edit this Page</a></div>
 </div>
   <div class="content">
 <aside class="toc sidebar" data-title="Contents" data-levels="2">
@@ -645,7 +657,7 @@
 <div class="paragraph">
 <p>Camel 3.12 introduces route configuration which is used for separating configurations
 from the routes. This can be used in situations such as configuring different error handling across a set of routes.
-In previous versions of Camel this was more cumbersome to do, as you would either have
+In previous versions of Camel, this was more cumbersome to do, as you would either have
 to copy the same configuration to a set of routes or rely on global error handling configuration.</p>
 </div>
 <div class="paragraph">
@@ -653,10 +665,10 @@ to copy the same configuration to a set of routes or rely on global error handli
 which configuration to use (you can use match by ids, wildcards, and regular expression).</p>
 </div>
 <div class="paragraph">
-<p>The route configuration is supported by all DSL&#8217;s, so useable by: Java, XML, Groovy, Kotlin and so forth.</p>
+<p>The route configuration is supported by all DSLs, so usable by: Java, XML, Groovy, Kotlin and so forth.</p>
 </div>
 <div class="paragraph">
-<p>In the route configuration you can setup common strategies for:</p>
+<p>In the route configuration, you can set up common strategies for:</p>
 </div>
 <div class="ulist">
 <ul>
@@ -704,14 +716,14 @@ The builder is similar to <code>RouteBuilder</code> so its use is familiar.</p>
 </td>
 <td class="content">
 The <code>RouteConfigurationBuilder</code> uses <code>configuration</code> as the method where the configuration is coded.
-This is on purpose not to use the <code>configure</code> method which the regular Java DSL <code>RouteBuilder</code>
+This is on purpose, so as not to use the <code>configure</code> method which the regular Java DSL <code>RouteBuilder</code>
 uses for coding Camel routes.
 </td>
 </tr>
 </table>
 </div>
 <div class="paragraph">
-<p>In the example above, then there is only one route configuration which has been assigned the ID <em>javaError</em>.
+<p>In the example above, then there is only one route configuration that has been assigned the ID <code><em>javaError</em></code>.
 This ID allows us to refer to this configuration later when you want to assign which routes are using the configuration.</p>
 </div>
 <div class="paragraph">
@@ -744,7 +756,7 @@ This ID allows us to refer to this configuration later when you want to assign w
 </div>
 </div>
 <div class="paragraph">
-<p>In the <code>routeConfigurationId</code> the configuration to use is specified by the ID, eg <em>javaError</em>.</p>
+<p>In the <code>routeConfigurationId</code> the configuration to use is specified by the ID, eg <code><em>javaError</em></code>.</p>
 </div>
 <div class="paragraph">
 <p>Multiple configurations can be assigned (separated by comma), such as:</p>
@@ -755,7 +767,7 @@ This ID allows us to refer to this configuration later when you want to assign w
 </div>
 </div>
 <div class="paragraph">
-<p>The route configurations supports matching by:</p>
+<p>The route configuration supports matching by:</p>
 </div>
 <div class="ulist">
 <ul>
@@ -771,7 +783,9 @@ This ID allows us to refer to this configuration later when you want to assign w
 </ul>
 </div>
 <div class="paragraph">
-<p>Wildcards are text ending with a *; they are matched when the configuration ID starts with the specified text followed by any characters. For instance, you can do:</p>
+<p>Wildcards are text ending with a <code>*</code>.
+They are matched when the configuration ID starts with the specified text followed by any characters.
+For instance, you can do:</p>
 </div>
 <div class="listingblock">
 <div class="content">
@@ -779,7 +793,7 @@ This ID allows us to refer to this configuration later when you want to assign w
 </div>
 </div>
 <div class="paragraph">
-<p>Here we use wildcard in <em>java*</em> which means any configuration whose ID starts with java is a match.</p>
+<p>Here we use wildcard in <code><em>java*</em></code> which means any configuration whose ID starts with java is a match.</p>
 </div>
 <div class="paragraph">
 <p>Match by regular expression is just like match by wildcard but using regex instead.</p>
@@ -790,7 +804,7 @@ This ID allows us to refer to this configuration later when you want to assign w
 </div>
 </div>
 <div class="paragraph">
-<p>Here we want to match any configuration whose ID contains <em>error</em>.</p>
+<p>Here we want to match any configuration whose ID contains <code><em>error</em></code>.</p>
 </div>
 </div>
 <div class="sect2">
@@ -836,7 +850,7 @@ A <em>nameless</em> configuration is used as default/fallback configuration, for
 been explicitly assigned route configurations.</p>
 </div>
 <div class="paragraph">
-<p>Suppose you have one <em>nameless</em> configuration and another named <em>retryError</em>:</p>
+<p>Suppose you have one <em>nameless</em> configuration and another named <code><em>retryError</em></code>:</p>
 </div>
 <div class="listingblock">
 <div class="content">
@@ -868,16 +882,16 @@ been explicitly assigned route configurations.</p>
 </div>
 </div>
 <div class="paragraph">
-<p>In the example above, the <em>cheese</em> route has no route configurations assigned, so the route
+<p>In the example above, the <code><em>cheese</em></code> route has no route configurations assigned, so the route
 will use the default configuration, which in case of an exception will log a warning.</p>
 </div>
 <div class="paragraph">
-<p>The <em>beer</em> route on the other hand has the route configuration <em>retryError</em> assigned, and this
-configuration will in case of an exception retry up to 5 times and then if still an error
+<p>The <code><em>beer</em></code> route on the other hand has the route configuration <code><em>retryError</em></code> assigned, and this
+configuration will in case of an exception retry up to five times and then if still an error
 then fail and rollback.</p>
 </div>
 <div class="paragraph">
-<p>If you add more routes, then those routes can also be assigned the <em>retryError</em> configuration
+<p>If you add more routes, then those routes can also be assigned the <code><em>retryError</em></code> configuration
 if they should also retry in case of error.</p>
 </div>
 <div class="sect2">
@@ -901,10 +915,10 @@ if they should also retry in case of error.</p>
 </div>
 </div>
 <div class="paragraph">
-<p>In the example above, the <em>nameless</em> configuration has an error handler with a dead letter queue.
-And the route configuration with id <em>retryError</em> does not, and instead it will attempt
-to retry the failing message up till 5 times before giving up (exhausted). Because this
-route configuration does not have any error handler assigned, then Camel will use the default error handler.</p>
+<p>In the example above, the <code><em>nameless</em></code> configuration has an error handler with a dead letter queue.
+And the route configuration with id <code><em>retryError</em></code> does not, and instead it will attempt
+to retry the failing message up till five times before giving up (exhausted).
+Because this route configuration does not have any error handler assigned, then Camel will use the default error handler.</p>
 </div>
 <div class="admonitionblock important">
 <table>
@@ -914,7 +928,7 @@ route configuration does not have any error handler assigned, then Camel will us
 </td>
 <td class="content">
 Routes that have a local error handler defined, will always use this error handler,
-instead of the error handler from route configurations. A route can only have 1 error handler.
+instead of the error handler from route configurations. A route can only have one error handler.
 </td>
 </tr>
 </table>
@@ -926,7 +940,7 @@ instead of the error handler from route configurations. A route can only have 1 
 <h2 id="_route_configuration_in_xml"><a class="anchor" href="#_route_configuration_in_xml"></a>Route Configuration in XML</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>When using XML DSL then you can code your route configurations in XML files as shown below:</p>
+<p>When using XML DSL, then you can code your route configurations in XML files as shown below:</p>
 </div>
 <div class="listingblock">
 <div class="content">
@@ -952,7 +966,7 @@ instead of the error handler from route configurations. A route can only have 1 
 </div>
 </div>
 <div class="paragraph">
-<p>In this example the route is assigned the <em>xmlError</em> route configuration by the exact ID.</p>
+<p>In this example, the route is assigned the <code><em>xmlError</em></code> route configuration by the exact ID.</p>
 </div>
 </div>
 </div>
@@ -960,7 +974,7 @@ instead of the error handler from route configurations. A route can only have 1 
 <h2 id="_route_configuration_in_yaml"><a class="anchor" href="#_route_configuration_in_yaml"></a>Route Configuration in YAML</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>When using YAML DSL then you can code your route configurations in YAML files as shown below:</p>
+<p>When using YAML DSL, then you can code your route configurations in YAML files as shown below:</p>
 </div>
 <div class="listingblock">
 <div class="content">
@@ -1001,7 +1015,7 @@ instead of the error handler from route configurations. A route can only have 1 
 </div>
 </div>
 <div class="paragraph">
-<p>In this example the route is assigned the <em>yamlError</em> route configuration by the exact ID.</p>
+<p>In this example, the route is assigned the <code><em>yamlError</em></code> route configuration by the exact ID.</p>
 </div>
 </div>
 </div>
@@ -1015,11 +1029,10 @@ route configurations in Java, and then use XML DSL for the routes, and they woul
 </div>
 </div>
 <div class="sect1">
-<h2 id="_route_configuration_in_classic_springblueprint_xml"><a class="anchor" href="#_route_configuration_in_classic_springblueprint_xml"></a>Route Configuration in classic Spring/Blueprint XML</h2>
+<h2 id="_route_configuration_in_classic_spring_xml"><a class="anchor" href="#_route_configuration_in_classic_spring_xml"></a>Route Configuration in classic Spring XML</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>When using XML DSL with <code>camel-spring-xml</code> or <code>camel-blueprint</code>
-then you can code your route configurations in <code>&lt;routeConfigurationContext&gt;</code> snippets
+<p>When using XML DSL with <code>camel-spring-xml</code> then you can code your route configurations in <code>&lt;routeConfigurationContext&gt;</code> snippets
 in separate XML files as shown below:</p>
 </div>
 <div class="listingblock">
@@ -1055,7 +1068,7 @@ in separate XML files as shown below:</p>
 </div>
 </div>
 <div class="paragraph">
-<p>In this example the route is assigned the <em>xmlError</em> route configuration by the exact ID.</p>
+<p>In this example, the route is assigned the <code><em>xmlError</em></code> route configuration by the exact ID.</p>
 </div>
 </div>
 </div>
@@ -1067,7 +1080,7 @@ in separate XML files as shown below:</p>
 your Camel applications, by adding the JARs as dependencies to the classpath (such as in Maven pom.xml file).</p>
 </div>
 <div class="paragraph">
-<p>This allows for example to use a <em>common practice</em> among your Camel applications.</p>
+<p>This allows, for example, to use a <em>common practice</em> among your Camel applications.</p>
 </div>
 </div>
 </div>
@@ -1165,7 +1178,7 @@ your Camel applications, by adding the JARs as dependencies to the classpath (su
 <div class="ulist">
 <ul>
 <li>
-<p><a href="https://github.com/apache/camel-examples/tree/main/examples/routes-configuration">camel-examples/examples/routes-configuration</a></p>
+<p><a href="https://github.com/apache/camel-examples/tree/main/routes-configuration">camel-examples/examples/routes-configuration</a></p>
 </li>
 <li>
 <p><a href="https://github.com/apache/camel-spring-boot-examples/tree/main/routes-configuration">camel-spring-boot-examples/routes-configuration/</a></p>

@@ -3,15 +3,15 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>Camel JBang :: Red Hat Apache Build of Apache Camel Manual</title>
-    <meta name="generator" content="Antora 3.0.3">
+    <title>Camel JBang :: Red Hat build of Apache Camel</title>
+    <meta name="generator" content="Antora 3.1.4">
     <link rel="stylesheet" href="../_/css/site.css">
   </head>
   <body class="article">
 <header class="header">
   <nav class="navbar">
     <div class="navbar-brand">
-      <a class="navbar-item" href="../../manual/index.html">Red Hat Apache Build of Apache Camel Manual</a>
+      <a class="navbar-item" href="/">Red Hat build of Apache Camel</a>
       <button class="navbar-burger" data-target="topbar-nav">
         <span></span>
         <span></span>
@@ -26,6 +26,7 @@
     <div class="panels">
 <div class="nav-panel-menu is-active" data-panel="menu">
   <nav class="nav-menu">
+    <button class="nav-menu-toggle" aria-label="Toggle expand/collapse all" style="display: none"></button>
     <h3 class="title"><a href="index.html">User manual</a></h3>
 <ul class="nav-list">
   <li class="nav-item" data-depth="0">
@@ -56,7 +57,16 @@
     <a class="nav-link" href="camel-console.html">Camel Developer Console</a>
   </li>
   <li class="nav-item is-current-page" data-depth="2">
+    <button class="nav-item-toggle"></button>
     <a class="nav-link" href="camel-jbang.html">Camel JBang</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="camel-jbang-kubernetes.html">Camel Kubernetes plugin</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="camel-jbang-k.html">Camel K plugin</a>
+  </li>
+</ul>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="camel-maven-plugin.html">Camel Maven Plugin</a>
@@ -95,6 +105,9 @@
     <a class="nav-link" href="using-propertyplaceholder.html">How to use Camel property placeholders</a>
   </li>
   <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="variables.html">How to use Variables</a>
+  </li>
+  <li class="nav-item" data-depth="2">
     <button class="nav-item-toggle"></button>
     <a class="nav-link" href="testing.html">Testing</a>
 <ul class="nav-list">
@@ -110,7 +123,13 @@
 </ul>
   </li>
   <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
     <a class="nav-link" href="rest-dsl.html">Working with REST and Rest DSL</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="rest-dsl-openapi.html">Rest DSL contract first</a>
+  </li>
+</ul>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="writing-components.html">Writing Components</a>
@@ -477,9 +496,6 @@
     <a class="nav-link" href="faq/how-should-i-invoke-my-pojos-or-spring-services.html">How should I invoke my POJOs or Spring Services?</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="faq/how-to-avoid-importing-bunch-of-cxf-packages-when-start-up-the-camel-cxf-endpoint-from-osgi-platform-.html">How to avoid importing bunch of cxf packages when start up the camel-cxf endpoint from OSGi platform?</a>
-  </li>
-  <li class="nav-item" data-depth="2">
     <a class="nav-link" href="faq/how-to-avoid-sending-some-or-all-message-headers.html">How to avoid sending some or all message headers?</a>
   </li>
   <li class="nav-item" data-depth="2">
@@ -598,11 +614,11 @@
 <div class="nav-panel-explore" data-panel="explore">
   <div class="context">
     <span class="title">User manual</span>
-    <span class="version">default</span>
+    <span class="version"></span>
   </div>
   <ul class="components">
     <li class="component">
-      <a class="title" href="../components/next/index.html">Camel Components</a>
+      <div class="title"><a href="../components/next/index.html">Camel Components</a></div>
       <ul class="versions">
         <li class="version is-latest">
           <a href="../components/next/index.html">Next (Pre-release)</a>
@@ -610,12 +626,7 @@
       </ul>
     </li>
     <li class="component is-current">
-      <a class="title" href="index.html">User manual</a>
-      <ul class="versions">
-        <li class="version is-current is-latest">
-          <a href="index.html">default</a>
-        </li>
-      </ul>
+      <div class="title"><a href="index.html">User manual</a></div>
     </li>
   </ul>
 </div>
@@ -633,6 +644,7 @@
     <li><a href="camel-jbang.html">Camel JBang</a></li>
   </ul>
 </nav>
+<div class="edit-this-page"><a href="file:///code/jboss/jboss-camel/docs/user-manual/modules/ROOT/pages/camel-jbang.adoc">Edit this Page</a></div>
 </div>
   <div class="content">
 <aside class="toc sidebar" data-title="Contents" data-levels="2">
@@ -651,11 +663,11 @@
 <h2 id="_installation"><a class="anchor" href="#_installation"></a>Installation</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>First you must install <a href="https://www.jbang.dev/">JBang</a> which is used for launching Camel.
+<p>First, you must install <a href="https://www.jbang.dev/">JBang</a>, which is used for launching Camel.
 See instructions on <a href="https://www.jbang.dev/download/">JBang</a> how to download and install.</p>
 </div>
 <div class="paragraph">
-<p>After JBang is installed you can verify JBang is working by executing the following command from a command shell:</p>
+<p>After JBang is installed, you can verify JBang is working by executing the following command from a command shell:</p>
 </div>
 <div class="listingblock">
 <div class="content">
@@ -666,7 +678,7 @@ See instructions on <a href="https://www.jbang.dev/download/">JBang</a> how to d
 <p>Which should output the version of JBang.</p>
 </div>
 <div class="paragraph">
-<p>To make it easier to use Camel JBang then install the following:</p>
+<p>To make it easier to use Camel JBang, then install the following:</p>
 </div>
 <div class="listingblock">
 <div class="content">
@@ -677,17 +689,22 @@ See instructions on <a href="https://www.jbang.dev/download/">JBang</a> how to d
 <p>This will install Apache Camel as the <code>camel</code> command within JBang, meaning that you can run Camel from the command line
 by just executing <code>camel</code> (see more next).</p>
 </div>
+<div class="paragraph">
+<p>Note: It requires access to the internet, in case of using a proxy, please ensure that the proxy is configured for your system.
+If Camel JBang is not working with your current configuration,
+please look to <a href="https://www.jbang.dev/documentation/guide/latest/configuration.html#proxy-configuration">Proxy configuration in JBang documentation</a>.</p>
+</div>
 </div>
 </div>
 <div class="sect1">
 <h2 id="_container_image"><a class="anchor" href="#_container_image"></a>Container Image</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>There is also a container image availabe in <a href="https://hub.docker.com/r/apache/camel-jbang/">Dockerhub</a></p>
+<p>There is also a container image available in <a href="https://hub.docker.com/r/apache/camel-jbang/">Dockerhub</a></p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-bash hljs" data-lang="bash">docker pull apache/camel-jbang:3.20.5</code></pre>
+<pre class="highlightjs highlight"><code class="language-bash hljs" data-lang="bash">docker pull apache/camel-jbang:4.4.0</code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -695,15 +712,15 @@ by just executing <code>camel</code> (see more next).</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-bash hljs" data-lang="bash">podman pull apache/camel-jbang:3.20.5</code></pre>
+<pre class="highlightjs highlight"><code class="language-bash hljs" data-lang="bash">podman pull apache/camel-jbang:4.4.0</code></pre>
 </div>
 </div>
 <div class="paragraph">
-<p>Once you have the image in your local registry you can run all the command listed below by simple doing:</p>
+<p>Once you have the image in your local registry, you can run all the commands listed below by simple doing:</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-bash hljs" data-lang="bash">docker run apache/camel-jbang:3.20.5 version</code></pre>
+<pre class="highlightjs highlight"><code class="language-bash hljs" data-lang="bash">docker run apache/camel-jbang:4.4.0 version</code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -711,7 +728,7 @@ by just executing <code>camel</code> (see more next).</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-bash hljs" data-lang="bash">podman run apache/camel-jbang:3.20.5 version</code></pre>
+<pre class="highlightjs highlight"><code class="language-bash hljs" data-lang="bash">podman run apache/camel-jbang:4.4.0 version</code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -719,7 +736,7 @@ by just executing <code>camel</code> (see more next).</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-bash hljs" data-lang="bash">Camel JBang version: 3.20.5</code></pre>
+<pre class="highlightjs highlight"><code class="language-bash hljs" data-lang="bash">Camel JBang version: 4.4.0</code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -727,7 +744,7 @@ by just executing <code>camel</code> (see more next).</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-bash hljs" data-lang="bash">docker run apache/camel-jbang:3.20.5 run example.yaml</code></pre>
+<pre class="highlightjs highlight"><code class="language-bash hljs" data-lang="bash">docker run -v .:/integrations apache/camel-jbang:4.4.0 run /integrations/example.yaml</code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -735,7 +752,7 @@ by just executing <code>camel</code> (see more next).</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-bash hljs" data-lang="bash">podman run apache/camel-jbang:3.20.5 run example.yaml</code></pre>
+<pre class="highlightjs highlight"><code class="language-bash hljs" data-lang="bash">podman run -v .:/integrations apache/camel-jbang:4.4.0 run /integrations/example.yaml</code></pre>
 </div>
 </div>
 </div>
@@ -744,7 +761,7 @@ by just executing <code>camel</code> (see more next).</p>
 <h2 id="_using_camel_jbang"><a class="anchor" href="#_using_camel_jbang"></a>Using Camel JBang</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>The Camel JBang supports multiple commands. Running the command below, will print all of them:</p>
+<p>The Camel JBang supports multiple commands. Running the command below will print all of them:</p>
 </div>
 <div class="listingblock">
 <div class="content">
@@ -794,7 +811,7 @@ The first time you run this command, it may cause dependencies to be cached, the
 <p>You can create a new basic routes with the <code>init</code> command.</p>
 </div>
 <div class="paragraph">
-<p>For example to create an XML route you do:</p>
+<p>For example, to create an XML route, you can run:</p>
 </div>
 <div class="listingblock">
 <div class="content">
@@ -805,7 +822,7 @@ The first time you run this command, it may cause dependencies to be cached, the
 <p>Which creates the file <code>cheese.xml</code> (in the current directory) with a sample route.</p>
 </div>
 <div class="paragraph">
-<p>To run the file, you simply do:</p>
+<p>To run the file, you do:</p>
 </div>
 <div class="listingblock">
 <div class="content">
@@ -833,31 +850,21 @@ You can create and run any of the supported <a href="dsl.html" class="xref page"
 </div>
 </div>
 <div class="paragraph">
-<p>When using the init command then Camel will by default create the file in the current directory. However, you can use
-the <code>--directory</code> option to create the file in the specified directory. For example to create in a folder
-named <em>foobar</em> you can do:</p>
+<p>When using the init command, then Camel will by default create the file in the current directory.
+However, you can use
+the <code>--directory</code> option to create the file in the specified directory.
+For example, to create in a folder
+named <code><em>foobar</em></code> you can do:</p>
 </div>
 <div class="listingblock">
 <div class="content">
 <pre class="highlightjs highlight"><code class="language-bash hljs" data-lang="bash">camel init foo.java --directory=foobar</code></pre>
 </div>
 </div>
-<div class="admonitionblock important">
-<table>
-<tr>
-<td class="icon">
-<i class="fa icon-important" title="Important"></i>
-</td>
-<td class="content">
-When using <code>--directory</code> then Camel will automatically clean this directory if already exists.
-</td>
-</tr>
-</table>
-</div>
 <div class="sect2">
 <h3 id="_running_routes_from_multiple_files"><a class="anchor" href="#_running_routes_from_multiple_files"></a>Running Routes from multiple files</h3>
 <div class="paragraph">
-<p>You can run more than 1 file, for example to run two YAML files you can do:</p>
+<p>You can run more than one file, for example, to run two YAML files you can do:</p>
 </div>
 <div class="listingblock">
 <div class="content">
@@ -865,7 +872,7 @@ When using <code>--directory</code> then Camel will automatically clean this dir
 </div>
 </div>
 <div class="paragraph">
-<p>You can also mix different <a href="dsl.html" class="xref page">DSLs</a> such as yaml and Java:</p>
+<p>You can also mix different <a href="dsl.html" class="xref page">DSLs</a> such as YAML and Java:</p>
 </div>
 <div class="listingblock">
 <div class="content">
@@ -873,7 +880,7 @@ When using <code>--directory</code> then Camel will automatically clean this dir
 </div>
 </div>
 <div class="paragraph">
-<p>You can also use wildcards (i.e. <code>*</code>) to match multiple files, such as running all the yaml files:</p>
+<p>You can also use wildcards (i.e. <code>*</code>) to match multiple files, such as running all the YAML files:</p>
 </div>
 <div class="listingblock">
 <div class="content">
@@ -907,6 +914,118 @@ The run goal can also detect files that are <code>properties</code>, such as <co
 </td>
 </tr>
 </table>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_running_a_maven_or_gradle_based_project"><a class="anchor" href="#_running_a_maven_or_gradle_based_project"></a>Running a Maven or Gradle based project</h3>
+<div class="paragraph">
+<p>Camel JBang is intended for flat-file-based projects, where you run small integrations.
+However, Camel JBang may be used as a tool for migrating existing Maven or Gradle based projects.
+To make the migration easier, then JBang can do <em>best effort</em> to run, export, or transform these projects.</p>
+</div>
+<div class="paragraph">
+<p>For example, if you have a Maven-based project, you can execute</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-bash hljs" data-lang="bash">camel run pom.xml</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>or for a Gradle project</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-bash hljs" data-lang="bash">camel run build.gradle</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Camel JBang will then scan in <code>src/main/java</code> and <code>src/main/resources</code> for files to include (recursive).</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+Using <code>camel run pom.xml</code> is not intended as a fully compatible way of running an existing Maven-based project.
+</td>
+</tr>
+</table>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_running_route_with_user_interactive_prompt_for_placeholder_values"><a class="anchor" href="#_running_route_with_user_interactive_prompt_for_placeholder_values"></a>Running Route with user interactive prompt for placeholder values</h3>
+<div class="paragraph">
+<p>You can create Camel integrations that makes it possible for the user to quickly enter placeholder values from command prompt.</p>
+</div>
+<div class="paragraph">
+<p>For example, given the following route:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java"><span class="fold-block is-hidden-folded">import org.apache.camel.builder.RouteBuilder;
+
+</span><span class="fold-block">public class foo extends RouteBuilder {
+
+    @Override
+    public void configure() throws Exception {
+        from("timer:java?period={{time:1000}}")
+            .setBody()
+                .simple("Hello Camel from {{you}}")
+            .log("${body}");
+    }
+}</span></code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Then if you run this with:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-bash hljs" data-lang="bash">camel run foo.java</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>You will have an exception on startup about the missing value</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-text hljs" data-lang="text">Caused by: java.lang.IllegalArgumentException: Property with key [you] not found in properties from text: Hello Camel from {{you}}`</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>However, you can then run in prompt mode as follows:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-bash hljs" data-lang="bash">camel run foo.java --prompt</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>And Camel will now prompt in the terminal for you to enter values for the placeholders:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-bash hljs" data-lang="bash">2023-12-15 21:46:44.218  INFO 15033 --- [           main] org.apache.camel.main.MainSupport   : Apache Camel (JBang) 4.7.0 is starting
+2023-12-15 21:46:44.331  INFO 15033 --- [           main] org.apache.camel.main.MainSupport   : Using Java 17.0.5 with PID 15033. Started by davsclaus in /Users/davsclaus/workspace/deleteme/prompt
+2023-12-15 21:46:45.360  INFO 15033 --- [           main] mel.cli.connector.LocalCliConnector : Management from Camel JBang enabled
+Enter optional value for time (1000):
+Enter required value for you: Jack
+2023-12-15 21:46:55.239  INFO 15033 --- [           main] el.impl.engine.AbstractCamelContext : Apache Camel 4.7.0 (foo) is starting
+2023-12-15 21:46:55.323  INFO 15033 --- [           main] g.apache.camel.main.BaseMainSupport : Property-placeholders summary
+2023-12-15 21:46:55.323  INFO 15033 --- [           main] g.apache.camel.main.BaseMainSupport :     [prompt]                       you=Jack
+2023-12-15 21:46:55.341  INFO 15033 --- [           main] el.impl.engine.AbstractCamelContext : Routes startup (started:1)</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>From the snippet above, Camel JBang had two prompts. First for the <code>time</code> which has a default value of <code>1000</code> so you can just press ENTER to accept the default value.
+And for <code>you</code> a value must be entered, and we entered <code>Jack</code> in this example.</p>
+</div>
+<div class="paragraph">
+<p>You may want to use this for Camel prototypes where you want the user to be able to enter custom values quickly.
+Those values can of course be pre-configured in <code>application.properties</code> as well.</p>
 </div>
 </div>
 <div class="sect2">
@@ -950,6 +1069,39 @@ Using <code>--code</code> is only usable for very quick and small prototypes.
 </tr>
 </table>
 </div>
+<div class="paragraph">
+<p>From <strong>Camel 4.7</strong> onwards the <code>--code</code> parameter can also refer to a <code>.java</code> source file,
+that are not wrapped in a <code>public class</code> which makes it possible to quickly try a prototype
+with some Camel java based routes such as the following stored in a file named <code>quick.java</code>:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">from("timer:java?period=1000")
+    .setBody()
+        .simple("Hello Quick Camel from ${routeId}")
+    .log("${body}");</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Then you can run this route via:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-bash hljs" data-lang="bash">camel run --code=quick.java</code></pre>
+</div>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+You cannot use <code>--dev</code> to hot-reload this on code changes.
+</td>
+</tr>
+</table>
+</div>
 </div>
 <div class="sect2">
 <h3 id="_running_routes_from_source_directory"><a class="anchor" href="#_running_routes_from_source_directory"></a>Running Routes from source directory</h3>
@@ -962,7 +1114,93 @@ Using <code>--code</code> is only usable for very quick and small prototypes.
 </div>
 </div>
 <div class="paragraph">
-<p>This starts Camel where it will load the files from the <em>source dir</em> (also sub folders).</p>
+<p>This starts Camel where it will load the files from the <em>source dir</em> (also subfolders).</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_stub_components_that_should_not_be_active"><a class="anchor" href="#_stub_components_that_should_not_be_active"></a>Stub components that should not be active</h3>
+<div class="paragraph">
+<p>Sometimes you need to troubleshoot an existing integration and is given some Camel code (routes).
+These routes may use different components, and those components may be tricky to run as they are configured
+in a custom way, or need connection to servers you may not have access to.</p>
+</div>
+<div class="paragraph">
+<p>You can run Camel JBang by stubbing those components (or all of them).</p>
+</div>
+<div class="paragraph">
+<p>For example, suppose you need access to a JMS broker in the given route below.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">from("jms:inbox")
+  .log("Incoming order")
+  .to("bean:transform")
+  .log("After transformation")
+  .to("jms:process");</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Then you can run this by stub the <code>jms</code> component by:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-bash hljs" data-lang="bash">camel run syncToDatabase.java --stub=jms</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Then Camel will not start up the JMS component but replace it with the <code>stub</code> component, but keep the actual endpoint URIs.</p>
+</div>
+<div class="paragraph">
+<p>You can then simulate sending messages to Camel with the <code>cmd send</code> command:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-bash hljs" data-lang="bash">camel cmd send --body='Something here'</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Which then will send the message to the incoming endpoint in the route, i.e. <code>jms:inbox</code> which has been stubbed.</p>
+</div>
+<div class="paragraph">
+<p>You can also stub a specific endpoint by providing the full uri, such as:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-bash hljs" data-lang="bash">camel run syncToDatabase.java --stub=jms:inbox</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Then only the <code>jms:inbox</code> endpoint is stubbed.</p>
+</div>
+<div class="admonitionblock tip">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-tip" title="Tip"></i>
+</td>
+<td class="content">
+You can stub multiple components separated by comma, such as <code>--stub=jms,sql</code>
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>Camel JBang comes with the <code>camel cmd stub</code> command that allows to list all endpoints that
+has been stubbed, and also browse any messages that are currently present in their internal queues.
+A stub endpoint is based on the <code>seda</code> component.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-bash hljs" data-lang="bash">camel cmd stub</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>And to browse the messages:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-bash hljs" data-lang="bash">camel cmd stub --browse</code></pre>
+</div>
 </div>
 </div>
 <div class="sect2">
@@ -977,10 +1215,10 @@ using the <code>--dev</code> options as shown:</p>
 </div>
 </div>
 <div class="paragraph">
-<p>Then while the Camel integration is running, you can update the YAML route and update when saving.</p>
+<p>Then, while the Camel integration is running, you can update the YAML route and update when saving.</p>
 </div>
 <div class="paragraph">
-<p>This works for all DLS even java, so you can do:</p>
+<p>This works for all DSLs, even java, so you can do:</p>
 </div>
 <div class="listingblock">
 <div class="content">
@@ -995,7 +1233,8 @@ using the <code>--dev</code> options as shown:</p>
 </td>
 <td class="content">
 The live reload is meant for development purposes, and if you encounter problems with reloading
-such as JVM class loading issues, then you may need to restart the integration.
+such as JVM class loading issues, then you may need to restart the integration. Java files cannot
+be supported in Spring Boot runtime since they have to be recompiled to trigger a restart.
 </td>
 </tr>
 </table>
@@ -1009,7 +1248,7 @@ such as JVM class loading issues, then you may need to restart the integration.
 </div>
 </div>
 <div class="paragraph">
-<p>This starts Camel where it will load the files from the <em>source dir</em> (also sub folders).
+<p>This starts Camel where it will load the files from the <em>source dir</em> (also subfolders).
 And in <em>dev mode</em> then you can add new files, update existing files, and delete files, and Camel
 will automatically hot-reload on the fly.</p>
 </div>
@@ -1022,9 +1261,9 @@ will automatically hot-reload on the fly.</p>
 </div>
 </div>
 <div class="paragraph">
-<p>In this situation then Camel will only watch and reload these two files (foo.java and bar.java).
-So for example if you add a new file cheese.xml, then this file is not reloaded. On the other hand
-if you use <code>--source-dir</code> then any files in this directory (and sub folders) are automatic detected
+<p>In this situation, then Camel will only watch and reload these two files (foo.java and bar.java).
+So, for example, if you add a new file cheese.xml, then this file is not reloaded. On the other hand,
+if you use <code>--source-dir</code> then any files in this directory (and subfolders) are automatic detected
 and reloaded. You can also delete files to remove routes.</p>
 </div>
 <div class="admonitionblock note">
@@ -1044,13 +1283,13 @@ The following is not allowed: <code>camel run abc.java --source-dir=mycode</code
 <h4 id="_uploading_files_to_source_directory_via_http"><a class="anchor" href="#_uploading_files_to_source_directory_via_http"></a>Uploading files to source directory via HTTP</h4>
 <div class="paragraph">
 <p>When running Camel JBang with <code>--source-dir</code>, <code>--console</code> and <code>--dev</code> (reloading) then you can
-change the source files on-the-fly by copying,modifying or deleting the files in the source directory.</p>
+change the source files on-the-fly by copying, modifying or deleting the files in the source directory.</p>
 </div>
 <div class="paragraph">
 <p>This can also be done via HTTP using the <code>q/upload/:filename</code> HTTP endpoint using PUT and DELETE verbs.</p>
 </div>
 <div class="paragraph">
-<p>Given you run Camel JBang with:</p>
+<p>Suppose that you run Camel JBang with:</p>
 </div>
 <div class="listingblock">
 <div class="content">
@@ -1074,10 +1313,10 @@ change the source files on-the-fly by copying,modifying or deleting the files in
 </div>
 </div>
 <div class="paragraph">
-<p>To send the data via PUT then the file body can be included when using <code>Content-Type: application/x-www-form-urlencoded</code>:</p>
+<p>To send the data via PUT, then the file body can be included when using <code>Content-Type: application/x-www-form-urlencoded</code>:</p>
 </div>
 <div class="paragraph">
-<p>For example from a CURL <code>--ascii-trace</code>:</p>
+<p>For example, from a CURL <code>--ascii-trace</code>:</p>
 </div>
 <div class="listingblock">
 <div class="content">
@@ -1107,7 +1346,7 @@ change the source files on-the-fly by copying,modifying or deleting the files in
 </div>
 </div>
 <div class="paragraph">
-<p>To delete one or more files you use the DELETE verb, such as:</p>
+<p>To delete one or more files, you use the DELETE verb, such as:</p>
 </div>
 <div class="listingblock">
 <div class="content">
@@ -1148,15 +1387,15 @@ The link is also shown in the log when Camel is starting up.</p>
 </div>
 <div class="paragraph">
 <p>The console can give you insights into your running Camel integration, such as reporting the top
-routes that takes the longest time to process messages. You can then drill down to pin-point, exactly
+routes that takes the longest time to process messages. You can then drill down to pinpoint exactly
 which individual EIPs in these routes are the slowest.</p>
 </div>
 <div class="paragraph">
-<p>The developer console can also output the data in JSon format, which for example can be used by 3rd-party tooling
+<p>The developer console can also output the data in JSON format, which, for example, can be used by 3rd-party tooling
 to scrape the information.</p>
 </div>
 <div class="paragraph">
-<p>For example to output the top routes via curl, you can execute:</p>
+<p>For example, to output the top routes via curl, you can execute:</p>
 </div>
 <div class="listingblock">
 <div class="content">
@@ -1164,7 +1403,7 @@ to scrape the information.</p>
 </div>
 </div>
 <div class="paragraph">
-<p>And if you have <code>jq</code> installed which can format and output the JSon data in colour, then do:</p>
+<p>And if you have <code>jq</code> installed which can format and output the JSON data in color, then do:</p>
 </div>
 <div class="listingblock">
 <div class="content">
@@ -1175,61 +1414,56 @@ to scrape the information.</p>
 <div class="sect2">
 <h3 id="_using_profiles"><a class="anchor" href="#_using_profiles"></a>Using profiles</h3>
 <div class="paragraph">
-<p>Camel JBang have the concept of profiles. A <em>profile</em> is essentially a name (id) that refers
-to which configuration to automatic load with Camel JBang. The default profile is named <code>application</code>
-which is a (smart default) to let Camel JBang automatic load <code>application.properties</code> (if present).</p>
+<p><strong>Available from Camel 4.5</strong></p>
 </div>
 <div class="paragraph">
-<p>This means that creating profiles matching to a properties file with the same name.</p>
+<p>Camel JBang comes with three sets of profiles</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>dev</code>:for development (default)</p>
+</li>
+<li>
+<p><code>test</code>:for testing (currently same as production)</p>
+</li>
+<li>
+<p><code>prod</code>:for production</p>
+</li>
+</ul>
 </div>
 <div class="paragraph">
-<p>For example having a profile named <code>local</code>, means that Camel JBang will load <code>local.properties</code> instead
-of <code>application.properties</code>.</p>
+<p>The developer profile will pre-configure Camel JBang with a number of developer assisted features when
+running Camel. For example, tracing messages during routing, additional metrics collected, and more.
+This is useful during development and also enhanced the Camel JBang CLI tool.</p>
 </div>
 <div class="paragraph">
-<p>To use a profile, you specify as command line option <code>--profile</code> such as:</p>
+<p>However, you may want to run Camel JBang in a production-like scenario, which you can do with:</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-bash hljs" data-lang="bash">camel run hello.java --profile=local</code></pre>
+<pre class="highlightjs highlight"><code class="language-bash hljs" data-lang="bash">camel run hello.java --profile=prod</code></pre>
 </div>
 </div>
 <div class="paragraph">
-<p>You can only specify one profile name, i.e. <code>--profile=local,two</code> is not valid.</p>
+<p>You can have profile-specific configuration in configuration files using the naming style <code>application-&lt;profile&gt;.properties</code>,
+such as in the following:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>application.properties</code>: common configuration that is always in use (default).</p>
+</li>
+<li>
+<p><code>application-dev.properties</code>: developer specific configuration for  the <code>dev</code> profile.</p>
+</li>
+<li>
+<p><code>application-prod.properties</code>: developer specific configuration for  the <code>prod</code> profile.</p>
+</li>
+</ul>
 </div>
 <div class="paragraph">
-<p>In the <code>properties</code> files you can configure all
-the configurations from <a href="../components/next/others/main.html" class="xref page">Camel Main</a>.</p>
-</div>
-<div class="paragraph">
-<p>For example to turn off <a href="stream-caching.html" class="xref page">Stream Caching</a> and enable log masking you can specify:</p>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre class="highlightjs highlight"><code class="language-properties hljs" data-lang="properties">camel.main.streamCaching=false
-camel.main.logMask=true</code></pre>
-</div>
-</div>
-<div class="paragraph">
-<p>And you can also configure Camel components such as camel-kafka to declare the URL to the brokers:</p>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre class="highlightjs highlight"><code class="language-properties hljs" data-lang="properties">camel.component.kafka.brokers=broker1:9092,broker2:9092,broker3:9092</code></pre>
-</div>
-</div>
-<div class="admonitionblock note">
-<table>
-<tr>
-<td class="icon">
-<i class="fa icon-note" title="Note"></i>
-</td>
-<td class="content">
-Keys starting with <code>camel.jbang</code> are reserved keys that are used by Camel JBang internally,
-and as well allow for pre-configuring arguments for Camel JBang commands.
-</td>
-</tr>
-</table>
+<p>The profile-specific configuration will override values in the common configuration.</p>
 </div>
 </div>
 <div class="sect2">
@@ -1237,7 +1471,7 @@ and as well allow for pre-configuring arguments for Camel JBang commands.
 <div class="paragraph">
 <p>By default, Camel JBang will automatically resolve dependencies needed to run Camel, which is done
 by JBang and Camel respectively. Camel itself detects at runtime if a component has a need for JARs that
-are not currently available on the classpath, and can then automatic download the JARs (incl transitive).</p>
+are not currently available on the classpath, and can then automatically download the JARs (incl transitive).</p>
 </div>
 <div class="paragraph">
 <p>Camel will download these JARs in the following order:</p>
@@ -1248,10 +1482,10 @@ are not currently available on the classpath, and can then automatic download th
 <p>from local disk in <code>~/.m2/repository</code></p>
 </li>
 <li>
-<p>from internet in Maven Central</p>
+<p>from the internet in Maven Central</p>
 </li>
 <li>
-<p>from internet in custom 3rd-party Maven repositories</p>
+<p>from the internet from custom third-party Maven repositories</p>
 </li>
 <li>
 <p>from all the repositories found in active profiles of <code>~/.m2/settings.xml</code> or a settings file specified using
@@ -1283,7 +1517,7 @@ are not currently available on the classpath, and can then automatic download th
 from its own release. This means you often do not have to specify which JARs to use.</p>
 </div>
 <div class="paragraph">
-<p>However, if you need to add 3rd-party custom JARs then you can specify these with <code>--deps</code> as CLI argument in Maven
+<p>However, if you need to add 3rd-party custom JARs, then you can specify these with <code>--deps</code> as CLI argument in Maven
 GAV syntax (<code>groupId:artifactId:version</code>), such as:</p>
 </div>
 <div class="listingblock">
@@ -1335,11 +1569,11 @@ Multiple repositories can be separated by comma
 </div>
 <div class="paragraph">
 <p>The configuration for the 3rd-party Maven repositories can also be configured in <code>application.properties</code>
-with the key <code>camel.jbang.repos</code> as shown:</p>
+with the key <code>camel.jbang.repositories</code> as shown:</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-properties hljs" data-lang="properties">camel.jbang.repos=https://packages.atlassian.com/maven-external</code></pre>
+<pre class="highlightjs highlight"><code class="language-properties hljs" data-lang="properties">camel.jbang.repositories=https://packages.atlassian.com/maven-external</code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -1351,7 +1585,7 @@ with the key <code>camel.jbang.repos</code> as shown:</p>
 </div>
 </div>
 <div class="paragraph">
-<p>However, you can also explicit specify the properties file to use:</p>
+<p>However, you can also explicitly specify the properties file to use:</p>
 </div>
 <div class="listingblock">
 <div class="content">
@@ -1375,7 +1609,7 @@ with the key <code>camel.jbang.repos</code> as shown:</p>
 <div class="paragraph">
 <p>By default, existing <code>~/.m2/settings.xml</code> file is loaded, so it is possible to alter the behaviour of Maven resolution
 process. Maven settings file can provide information about Maven mirrors, credential configuration (potentially
-encrypted) or active profiles and additional repositories.</p>
+encrypted) or active profiles, and additional repositories.</p>
 </div>
 <div class="paragraph">
 <p>Maven repositories can use authentication and the Maven-way to configure credentials is through <code>&lt;server&gt;</code> elements,
@@ -1422,11 +1656,11 @@ Password: camel
 </div>
 </div>
 <div class="paragraph">
-<p>Finally, such password can be used in <code>&lt;server&gt;/&lt;password&gt;</code> configuration.</p>
+<p>Finally, such passwords can be used in <code>&lt;server&gt;/&lt;password&gt;</code> configuration.</p>
 </div>
 <div class="paragraph">
 <p>By default, Maven reads the master password from <code>~/.m2/settings-security.xml</code> file, but we can override it.
-Location of the settings.xml file itself can be specified as well:</p>
+The location of the <code>settings.xml</code> file itself can be specified as well:</p>
 </div>
 <div class="listingblock">
 <div class="content">
@@ -1445,10 +1679,10 @@ Location of the settings.xml file itself can be specified as well:</p>
 <div class="sect2">
 <h3 id="_running_routes_hosted_on_github"><a class="anchor" href="#_running_routes_hosted_on_github"></a>Running routes hosted on GitHub</h3>
 <div class="paragraph">
-<p>You can run a route that is hosted on GitHub using Camels <a href="../components/next/others/resourceresolver-github.html" class="xref page">github</a> resource loader.</p>
+<p>You can run a route hosted on GitHub using Camels <a href="../components/next/others/resourceresolver-github.html" class="xref page">GitHub</a> resource loader.</p>
 </div>
 <div class="paragraph">
-<p>For example to run one of the Camel K examples you can do:</p>
+<p>For example, to run one of the Camel K examples, you can do:</p>
 </div>
 <div class="listingblock">
 <div class="content">
@@ -1486,7 +1720,7 @@ then copy the URL from the browser window and run the example with Camel JBang:<
 <p>Using gists from GitHub is a quick way to share small Camel routes that you can easily run.</p>
 </div>
 <div class="paragraph">
-<p>For example to run a gist you simply do:</p>
+<p>For example, to run a gist, you can execute:</p>
 </div>
 <div class="listingblock">
 <div class="content">
@@ -1515,7 +1749,7 @@ For example, you can download the <em>dependency injection</em> example by:</p>
 </div>
 </div>
 <div class="paragraph">
-<p>Then the files (not sub folders) are downloaded to the current directory.
+<p>Then the files (not subfolders) are downloaded to the current directory.
 The example can then be run locally with:</p>
 </div>
 <div class="listingblock">
@@ -1524,25 +1758,13 @@ The example can then be run locally with:</p>
 </div>
 </div>
 <div class="paragraph">
-<p>You can also download to a new folder using the <code>--directory</code> option, for example to download to a folder named <em>myproject</em>,
+<p>You can also download to a new folder using the <code>--directory</code> option, for example, to download to a folder named <em>myproject</em>,
 you would do:</p>
 </div>
 <div class="listingblock">
 <div class="content">
 <pre class="highlightjs highlight"><code class="language-bash hljs" data-lang="bash">camel init https://github.com/apache/camel-kamelets-examples/tree/main/jbang/dependency-injection --directory=myproject</code></pre>
 </div>
-</div>
-<div class="admonitionblock important">
-<table>
-<tr>
-<td class="icon">
-<i class="fa icon-important" title="Important"></i>
-</td>
-<td class="content">
-When using <code>--directory</code> then Camel will automatically clean this directory if already exists.
-</td>
-</tr>
-</table>
 </div>
 <div class="paragraph">
 <p>You can also run in dev mode, to hot-deploy on source code changes.</p>
@@ -1579,7 +1801,7 @@ When using <code>--directory</code> then Camel will automatically clean this dir
 </div>
 </div>
 <div class="paragraph">
-<p>This will then download the files to local disk, which you can run afterwards:</p>
+<p>This will then download the files to local disk, which you can run afterward:</p>
 </div>
 <div class="listingblock">
 <div class="content">
@@ -1587,25 +1809,13 @@ When using <code>--directory</code> then Camel will automatically clean this dir
 </div>
 </div>
 <div class="paragraph">
-<p>You can also download to a new folder using the <code>--directory</code> option, for example to download to a folder named <em>foobar</em>,
+<p>You can also download to a new folder using the <code>--directory</code> option, for example, to download to a folder named <em>foobar</em>,
 you would do:</p>
 </div>
 <div class="listingblock">
 <div class="content">
 <pre class="highlightjs highlight"><code class="language-bash hljs" data-lang="bash">camel init https://gist.github.com/davsclaus/477ddff5cdeb1ae03619aa544ce47e92 --directory=foobar</code></pre>
 </div>
-</div>
-<div class="admonitionblock important">
-<table>
-<tr>
-<td class="icon">
-<i class="fa icon-important" title="Important"></i>
-</td>
-<td class="content">
-When using <code>--directory</code> then Camel will automatically clean this directory if already exists.
-</td>
-</tr>
-</table>
 </div>
 </div>
 </div>
@@ -1627,7 +1837,7 @@ When using <code>--directory</code> then Camel will automatically clean this dir
 </td>
 <td class="content">
 Older versions of Camel may not work as well with Camel JBang as the newest versions.
-Starting from Camel 3.20 onwards is the versions that are recommended to be used onwards.
+Starting from Camel 3.20 onwards are the versions that are recommended to be used onwards.
 </td>
 </tr>
 </table>
@@ -1646,7 +1856,7 @@ In Camel <strong>3.20.3</strong> onwards there is a <code>version</code> command
 </div>
 <div class="paragraph">
 <p>In <strong>Camel 3.20.2</strong> onwards the <code>run</code> command has built-in support, using <code>--camel-version</code>,
-for specifying Camel version to use for the running Camel integration.</p>
+for specifying the Camel version to use for the running Camel integration.</p>
 </div>
 <div class="listingblock">
 <div class="content">
@@ -1660,14 +1870,14 @@ for specifying Camel version to use for the running Camel integration.</p>
 <i class="fa icon-tip" title="Tip"></i>
 </td>
 <td class="content">
-This makes it easy to try different Camel versions, for example when you need to reproduce an issue,
-and find out how it works in different Camel version.
+This makes it easy to try different Camel versions, for example, when you need to reproduce an issue,
+and find out how it works in a different Camel version.
 </td>
 </tr>
 </table>
 </div>
 <div class="paragraph">
-<p>You can also try bleeding edge development by using SNAPSHOT such as:</p>
+<p>You can also try bleeding-edge development by using SNAPSHOT such as:</p>
 </div>
 <div class="listingblock">
 <div class="content">
@@ -1708,7 +1918,7 @@ User configuration:
 </div>
 </div>
 <div class="paragraph">
-<p>And when running an integration, then Camel JBang will show you the <em>version override</em> when starting.</p>
+<p>And when running an integration, then Camel JBang will show you the <em>overridden version</em> when starting.</p>
 </div>
 <div class="listingblock">
 <div class="content">
@@ -1717,6 +1927,25 @@ Running integration with the following configuration:
     --camel-version=3.18.2
 2023-03-17 13:35:13.876  INFO 28451 --- [           main] org.apache.camel.main.MainSupport        : Apache Camel (JBang) 3.18.2 is starting
 ...</code></pre>
+</div>
+</div>
+<div class="admonitionblock important">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-important" title="Important"></i>
+</td>
+<td class="content">
+You cannot use both a set version via <code>camel version set</code> and also a version specified via <code>--camel-version</code> option,
+i.e., the following is not possible:
+</td>
+</tr>
+</table>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-bash hljs" data-lang="bash">camel version set 4.0.1
+camel run * --camel-version=4.3.0</code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -1818,12 +2047,72 @@ See more options with <code>camel version list --help</code>.
 </div>
 </div>
 <div class="sect2">
-<h3 id="_running_camel_k_integrations_or_pipes"><a class="anchor" href="#_running_camel_k_integrations_or_pipes"></a>Running Camel K integrations or pipes</h3>
+<h3 id="_manage_plugins"><a class="anchor" href="#_manage_plugins"></a>Manage plugins</h3>
 <div class="paragraph">
-<p>Camel also supports running Camel K integrations and binding files, which are in CRD format (Kubernetes Custom Resource Definitions).</p>
+<p>Camel JBang uses a plugin concept for some of the subcommands so users can add functionality on demand.
+Each provided plugin adds a list of commands to the Camel JBang command line tool.</p>
 </div>
 <div class="paragraph">
-<p>For example a pipe file named <code>joke.yaml</code>:</p>
+<p>You can list the supported plugins with</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-bash hljs" data-lang="bash">camel plugin get --all</code></pre>
+</div>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-text hljs" data-lang="text">Supported plugins:
+
+ NAME        COMMAND     DEPENDENCY                                      DESCRIPTION
+ kubernetes  kubernetes  org.apache.camel:camel-jbang-plugin-kubernetes  Run Camel applications on Kubernetes
+ camel-k     k           org.apache.camel:camel-jbang-plugin-k           Managed Camel integrations on Kubernetes
+ generate    generate    org.apache.camel:camel-jbang-plugin-generate    Generate code such as DTOs</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>In case you want to enable a plugin and its functionality, you can add it as follows:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-bash hljs" data-lang="bash">camel plugin add &lt;plugin-name&gt;</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>For example to install <code>generate</code> you execute:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-bash hljs" data-lang="bash">camel plugin add generate</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>This adds the plugin, and all subcommands are now available for execution.</p>
+</div>
+<div class="paragraph">
+<p>You can list the currently installed plugins with:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-bash hljs" data-lang="bash">camel plugin get</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>To remove a plugin from the current Camel JBang command line tooling, you can use the <code>plugin delete</code> command.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-bash hljs" data-lang="bash">camel plugin delete &lt;plugin-name&gt;</code></pre>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_running_camel_k_integrations_or_pipes"><a class="anchor" href="#_running_camel_k_integrations_or_pipes"></a>Running Camel K integrations or pipes</h3>
+<div class="paragraph">
+<p>Camel also supports running Camel K integrations and pipes, which represent Kubernetes custom resources following a specific CRD format (Kubernetes Custom Resource Definitions).</p>
+</div>
+<div class="paragraph">
+<p>For example, a pipe file named <code>joke.yaml</code>:</p>
 </div>
 <div class="listingblock">
 <div class="content">
@@ -1857,11 +2146,210 @@ spec:
 <pre class="highlightjs highlight"><code class="language-bash hljs" data-lang="bash">camel run joke.yaml</code></pre>
 </div>
 </div>
+<div class="sect3">
+<h4 id="_binding_kamelets_in_a_pipe"><a class="anchor" href="#_binding_kamelets_in_a_pipe"></a>Binding Kamelets in a pipe</h4>
+<div class="paragraph">
+<p>Camel JBang is able to create the Pipe custom resource for you.
+You can use the <code>bind</code> command to specify a source and a sink that should be set in the pipe.
+As a result, Camel JBang will create a proper Pipe custom resource for you.</p>
+</div>
+<div class="paragraph">
+<p>The command expects a file name as command argument and provides several options to define the source and the sink that should be used in the pipe.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-bash hljs" data-lang="bash">camel bind joke.yaml --source chuck-norris-source --sink log-sink</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>This creates the <code>joke.yaml</code> file that represents the Pipe resource.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-yaml hljs" data-lang="yaml">apiVersion: camel.apache.org/v1
+kind: Pipe
+metadata:
+  name: joke
+spec:
+  source:
+    ref:
+      kind: Kamelet
+      apiVersion: camel.apache.org/v1
+      name: chuck-norris-source
+    properties:
+      period: 5000
+  sink:
+    ref:
+      kind: Kamelet
+      apiVersion: camel.apache.org/v1
+      name: log-sink</code></pre>
+</div>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+The bind command is able to inspect the Kamelets being used as a source and sink in order to automatically set all required properties.
+In case the Kamelet defines a required property, and the user has not specified such, the command will automatically set this property with an example value.
+Once the pipe resource file is generated, you can review and set the properties as you wish.
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>The bind command supports the following options:</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 25%;">
+<col style="width: 75%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Option</th>
+<th class="tableblock halign-left valign-top">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>--source</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Source (from) such as a Kamelet or Camel endpoint uri that provides data.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>--sink</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Sink (to) such as a Kamelet or Camel endpoint uri where data should be sent to.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>--step</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Add optional 1-n steps to the pipe processing. Each step represents a reference to a Kamelet of type action.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>--property</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Add a pipe property in the form of <code>[source,sink,error-handler,step-&lt;n&gt;].&lt;key&gt;=&lt;value&gt;</code> where <code>&lt;n&gt;</code> is the step number starting from 1.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>--error-handler</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Add error handler (none,log,sink:&lt;endpoint&gt;). Sink endpoints are expected in the format [[apigroup/]version:]kind:[namespace/]name, plain Camel URIs or Kamelet name.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>--output</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Output format generated by this command (supports: file, YAML or JSON). Default is "file".</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="sect3">
+<h4 id="_binding_explicit_camel_uris"><a class="anchor" href="#_binding_explicit_camel_uris"></a>Binding explicit Camel URIs</h4>
+<div class="paragraph">
+<p>Usually, the source and sink reference a Kamelet by its name as shown in the previous section.
+As an alternative, you can also just use an arbitrary Camel endpoint URI that acts as a source or sink in the pipe.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-bash hljs" data-lang="bash">camel bind joke.yaml --source chuck-norris-source --sink https://mycompany.com/the-service</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>As a result, the Pipe resource uses the Camel endpoints as source and sink.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-yaml hljs" data-lang="yaml">apiVersion: camel.apache.org/v1
+kind: Pipe
+metadata:
+  name: my-pipe
+spec:
+  source:
+# ...
+  sink:
+    uri: https://mycompany.com/the-service <i class="conum" data-value="1"></i><b>(1)</b></code></pre>
+</div>
+</div>
+<div class="colist arabic">
+<table>
+<tr>
+<td><i class="conum" data-value="1"></i><b>1</b></td>
+<td>Pipe with explicit Camel endpoint URI as sink where the data gets pushed to</td>
+</tr>
+</table>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_advanced_binding_options"><a class="anchor" href="#_advanced_binding_options"></a>Advanced binding options</h4>
+<div class="paragraph">
+<p>The Camel K JBang plugin also provides the bind command. It enhances the arbitrary bind command with the option to directly create this resource on the
+Kubernetes cluster. Please refer to the plugin documentation for more complex examples and a full description on how to use the bind command options.</p>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_creating_a_new_kamelet"><a class="anchor" href="#_creating_a_new_kamelet"></a>Creating a new Kamelet</h3>
+<div class="paragraph">
+<p>You can create a new kamelet with the <code>init</code> command by using kamelet naming convention.</p>
+</div>
+<div class="paragraph">
+<p>For example, to create a new kamelet source, you can do:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-bash hljs" data-lang="bash">camel init cheese-source.kamelet.yaml</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>This will create a basic kamelet (based on the timer source).</p>
+</div>
+<div class="paragraph">
+<p>And to use the kamelet, you could create the following route:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-yaml hljs" data-lang="yaml">- from:
+    uri: "kamelet:cheese-source"
+    parameters:
+      period: "2000"
+      message: "Hello World"
+    steps:
+      - log: "${body}"</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>If you want to create a sink kamelet, then you just name it with sink as follows (based on log sink):</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-bash hljs" data-lang="bash">camel init wine-sink.kamelet.yaml</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>You can then change the route to use the wine kamelet as follows:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-yaml hljs" data-lang="yaml">- from:
+    uri: "kamelet:cheese-source"
+    parameters:
+      period: "2000"
+      message: "Hello World"
+    steps:
+      - to: "kamelet:wine-sink"</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>If you want to create a new Kamelet based on an existing Kamelet, for example, to create a new sink based on the existing MySQL:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-bash hljs" data-lang="bash">camel init orderdb-sink.kamelet.yaml --from-kamelet=mysql-sink</code></pre>
+</div>
+</div>
 </div>
 <div class="sect2">
 <h3 id="_run_from_clipboard"><a class="anchor" href="#_run_from_clipboard"></a>Run from clipboard</h3>
 <div class="paragraph">
-<p>You can also run Camel routes directly from the OS clipboard. This allows to copy some code,
+<p>You can also run Camel routes directly from the OS clipboard. This allows copying some code,
 and then quickly run this.</p>
 </div>
 <div class="paragraph">
@@ -1876,7 +2364,7 @@ and then quickly run this.</p>
 <p>Where <code>&lt;extension&gt;</code> is what kind of file the content of the clipboard is, such as <code>java</code>, <code>xml</code>, or <code>yaml</code> etc.</p>
 </div>
 <div class="paragraph">
-<p>For example. you can copy this to your clipboard and then run it afterwards:</p>
+<p>For example, you can copy this to your clipboard and then run it afterward:</p>
 </div>
 <div class="listingblock">
 <div class="content">
@@ -1891,6 +2379,23 @@ and then quickly run this.</p>
 <pre class="highlightjs highlight"><code class="language-bash hljs" data-lang="bash">camel run clipboard.xml</code></pre>
 </div>
 </div>
+<div class="sect3">
+<h4 id="_run_and_reload_from_clipboard"><a class="anchor" href="#_run_and_reload_from_clipboard"></a>Run and reload from clipboard</h4>
+<div class="paragraph">
+<p><strong>Available since Camel 4.2</strong></p>
+</div>
+<div class="paragraph">
+<p>It is also possible to run from clipboard in <em>reload</em> mode as shown:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-bash hljs" data-lang="bash">camel run clipboard.xml --dev</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Then you can quickly make changes and copy to clipboard, and Camel JBang will update while running.</p>
+</div>
+</div>
 </div>
 <div class="sect2">
 <h3 id="_sending_messages_via_camel"><a class="anchor" href="#_sending_messages_via_camel"></a>Sending messages via Camel</h3>
@@ -1900,13 +2405,13 @@ and then quickly run this.</p>
 <div class="paragraph">
 <p>When building integrations with Camel JBang, you may find yourself in need of being able
 to send messages into Camel, to test your Camel routes. This can be challenging when the
-Camel routes are connecting to external systems using different protocols.</p>
+Camel routes are connected to external systems using different protocols.</p>
 </div>
 <div class="paragraph">
-<p>The best approach is to send messages into these external systems using standard tools provided,
+<p>The best approach is to send messages into these external systems using standard tools provided
 by these systems, which often can be done using CLI tools. However, in some situations, where you
 may not be familiar with these tools, you can try to let Camel send the message. Note that this
-can only be possible in some scenarious, and should only be used as <em>quick way</em>.</p>
+can only be possible in some scenarios, and should only be used as a <em>quick way</em>.</p>
 </div>
 <div class="paragraph">
 <p>Suppose you have a Camel route that consumes messages from an external MQTT broker:</p>
@@ -1933,7 +2438,7 @@ can only be possible in some scenarious, and should only be used as <em>quick wa
 </div>
 <div class="paragraph">
 <p>The idea with the <code>camel cmd send</code> command is to <em>tap into</em> an existing running Camel integration,
-and reuse an existing endpoint (if possible). In this example we want to use the existing configuration
+and reuse an existing endpoint (if possible). In this example, we want to use the existing configuration
 to avoid having to configure this again.</p>
 </div>
 <div class="paragraph">
@@ -1945,8 +2450,8 @@ to avoid having to configure this again.</p>
 </div>
 </div>
 <div class="paragraph">
-<p>We can send a message, where the payload is loaded from a file (payload.json). You can also specify the payload in the CLI
-argument, but it&#8217;s cumbersome to specify JSon structure so often its better to refer to a local file.</p>
+<p>We can send a message where the payload is loaded from a file (<code><em>payload.json</em></code>). You can also specify the payload in the CLI
+argument, but it&#8217;s cumbersome to specify JSON structure so often it&#8217;s better to refer to a local file.</p>
 </div>
 <div class="listingblock">
 <div class="content">
@@ -1960,12 +2465,12 @@ argument, but it&#8217;s cumbersome to specify JSon structure so often its bette
 So what happens is that Camel will let the existing integration send the message.</p>
 </div>
 <div class="paragraph">
-<p>Because the existing integration only have 1 route, then the <code>send</code> command will automatic pick
-the <em>from</em> endpoint, i.e. <code>kamelet:mqtt5-source</code> with all its configuration. If there are multiple routes,
+<p>Because the existing integration only has one route, then the <code>send</code> command will automatically pick
+the <code><em>from</em></code> endpoint, i.e. <code>kamelet:mqtt5-source</code> with all its configuration. If there are multiple routes,
 then you can filter which route/endpoint by the <code>--endpoint</code> option:</p>
 </div>
 <div class="paragraph">
-<p>For example to pick the first route by <em>route id</em>:</p>
+<p>For example, to pick the first route by <em>route id</em>:</p>
 </div>
 <div class="listingblock">
 <div class="content">
@@ -1999,18 +2504,42 @@ See more options with <code>camel cmd send --help</code>.
 <div class="paragraph">
 <p>The source for this example is provided on GitHub at <a href="https://github.com/apache/camel-kamelets-examples/tree/main/jbang/mqtt)">camel-jbang MQTT example</a>.</p>
 </div>
+<div class="sect3">
+<h4 id="_poll_messages_via_camel"><a class="anchor" href="#_poll_messages_via_camel"></a>Poll messages via Camel</h4>
+<div class="paragraph">
+<p><strong>Available since Camel 4.8</strong></p>
+</div>
+<div class="paragraph">
+<p>The <code>camel cmd send</code> command has been improved to also <em>poll</em> messages from Camel. This is needed
+if you want to poll the latest messages from a Kafka topic, JMS queue, or download a file from FTP etc.</p>
+</div>
+<div class="paragraph">
+<p>The poll uses Camel consumer to poll the message (timeout if no message received) instead of producer.</p>
+</div>
+<div class="paragraph">
+<p>For example to poll a message from a ActiveMQ queue named cheese you can do:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-bash hljs" data-lang="bash">$ camel cmd send --poll --endpoint=activemq:cheese</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>When you poll then you do not send any payload (body or headers).</p>
+</div>
+</div>
 </div>
 <div class="sect2">
 <h3 id="_controlling_local_camel_integrations"><a class="anchor" href="#_controlling_local_camel_integrations"></a>Controlling local Camel integrations</h3>
 <div class="paragraph">
-<p>To list the currently running Camel integrations you use the <code>ps</code> command:</p>
+<p>To list the currently running Camel integrations, you use the <code>ps</code> command:</p>
 </div>
 <div class="listingblock">
 <div class="content">
 <pre class="highlightjs highlight"><code class="language-bash hljs" data-lang="bash">camel ps
-  PID   NAME                          READY  STATUS    AGE
- 61818  sample.camel.MyCamelApplica…   1/1   Running  26m38s
- 62506  dude                           1/1   Running   4m34s</code></pre>
+  PID   NAME                             READY  STATUS    AGE
+ 61818  sample.camel.MyCamelApplica...   1/1   Running  26m38s
+ 62506  dude                             1/1   Running   4m34s</code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -2018,7 +2547,7 @@ See more options with <code>camel cmd send --help</code>.
 </div>
 <div class="paragraph">
 <p>You can use the <code>stop</code> command to stop any of these running Camel integrations.
-For example to stop dude, you can do</p>
+For example, to stop dude, you can do</p>
 </div>
 <div class="listingblock">
 <div class="content">
@@ -2043,7 +2572,7 @@ Stopping running Camel integration (pid: 62506)</code></pre>
 </td>
 <td class="content">
 You do not have to type the full name, as the stop command will match using integrations
-that starts with the input, for example you can do <code>camel stop d</code> to stop all integrations
+that start with the input, for example, you can do <code>camel stop d</code> to stop all integrations
 starting with d.
 </td>
 </tr>
@@ -2068,9 +2597,9 @@ This is done using the <code>--watch</code> parameter as follows:</p>
 <div class="listingblock">
 <div class="content">
 <pre class="highlightjs highlight"><code class="language-bash hljs" data-lang="bash">camel ps --watch
-  PID   NAME                          READY  STATUS    AGE
- 61818  sample.camel.MyCamelApplica…   1/1   Running  26m38s
- 62506  dude                           1/1   Running   4m34s</code></pre>
+  PID   NAME                             READY  STATUS    AGE
+ 61818  sample.camel.MyCamelApplica...   1/1   Running  26m38s
+ 62506  dude                             1/1   Running   4m34s</code></pre>
 </div>
 </div>
 </div>
@@ -2084,7 +2613,7 @@ This is done using the <code>--watch</code> parameter as follows:</p>
 to these projects to integrate with Camel CLI.</p>
 </div>
 <div class="paragraph">
-<p>In Spring Boot you add the following dependency:</p>
+<p>In Spring Boot, you add the following dependency:</p>
 </div>
 <div class="listingblock">
 <div class="content">
@@ -2095,7 +2624,7 @@ to these projects to integrate with Camel CLI.</p>
 </div>
 </div>
 <div class="paragraph">
-<p>In Quarkus you need to add the following dependency:</p>
+<p>In Quarkus, you need to add the following dependency:</p>
 </div>
 <div class="listingblock">
 <div class="content">
@@ -2125,8 +2654,8 @@ or all of the running Camel integrations.</p>
 </div>
 </div>
 <div class="paragraph">
-<p>The <code>camel get</code> command will default display integrations, which is equivalent to
-typing <code>camel get integrations</code> or <code>camel get int</code>.</p>
+<p>The <code>camel get</code> command will default display Camel application (context), which is equivalent to
+typing <code>camel get context</code>.</p>
 </div>
 <div class="paragraph">
 <p>This displays overall information for every Camel integration, where you can see
@@ -2136,7 +2665,7 @@ shows how long time ago the last processed message for 3 stages (started/complet
 <div class="paragraph">
 <p>The value of <code>0s/0s/-</code> means that the last started and completed message just happened (0 seconds ago),
 and  that there has not been any failed message yet. And this example <code>9s/9s/1h3m</code> means that last started and
-completed message is 9 seconds ago, and last failed is 1 hour and 3 minutes ago.</p>
+completed message is 9 seconds ago, and last failed were 1 hour and 3 minutes ago.</p>
 </div>
 <div class="admonitionblock tip">
 <table>
@@ -2151,7 +2680,23 @@ You can run in <em>watch</em> mode using: <code>camel get --watch</code>
 </table>
 </div>
 <div class="paragraph">
-<p>You can also see the status of every routes, from all the local Camel integrations with <code>camel get route</code>:</p>
+<p>From <strong>Camel 4.7</strong> onwards, two numbers will be displayed for <em>TOTAL</em>, <em>FAILED</em>, and <em>INFLIGHT</em> columns.
+The first number is messages received from external systems (databases, cloud systems), and the second
+number is the total number (as in earlier versions).</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-bash hljs" data-lang="bash">camel get
+  PID   NAME    CAMEL  PLATFORM        PROFILE  READY  STATUS   RELOAD  AGE   ROUTE  MSG/S  TOTAL  FAIL  INFLIGHT  LAST  DELTA  SINCE-LAST
+ 42240  cheese  4.7.0  JBang v0.116.0  dev       1/1   Running       0  1m8s    2/2   1.01   1/65   0/0       0/0     0     -1     1s/1s/-</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>The <em>TOTAL</em> column above shows <code>1/65</code> which mean that 1 message was from an external source, and 65 in total; which means that
+64 are from internal sources (such as timer, seda).</p>
+</div>
+<div class="paragraph">
+<p>You can also see the status of every route, from all the local Camel integrations with <code>camel get route</code>:</p>
 </div>
 <div class="listingblock">
 <div class="content">
@@ -2193,11 +2738,11 @@ of the running Camel integrations.</p>
 <div class="paragraph">
 <p>The <em>HEAP</em> column shows the heap memory (used/committed/max) and the non-heap (used/committed).
 The <em>GC</em> column shows garbage collection information (time and total runs).
-The <em>CLASSES</em> column shows number of classes (loaded/total).</p>
+The <em>CLASSES</em> column shows the number of classes (loaded/total).</p>
 </div>
 <div class="paragraph">
 <p>You can also see the top performing routes (highest to lowest mean processing time)
-of every routes, from all the local Camel integrations with <code>camel top route</code>:</p>
+of every route, from all the local Camel integrations with <code>camel top route</code>:</p>
 </div>
 <div class="listingblock">
 <div class="content">
@@ -2226,7 +2771,7 @@ Use <code>camel top --help</code> to display all the available commands as addit
 <div class="sect3">
 <h4 id="_tailing_logs"><a class="anchor" href="#_tailing_logs"></a>Tailing logs</h4>
 <div class="paragraph">
-<p>When you run Camel integrations then they will by default run in the foreground and output logs.</p>
+<p>When you run Camel integrations, then they will by default run in the foreground and output logs.</p>
 </div>
 <div class="paragraph">
 <p>You can from another terminal access the logs from any Camel integration with the <code>log</code> command, as follows:</p>
@@ -2268,7 +2813,7 @@ chuck     | 2023-01-04 17:59:19.395  INFO 44619 --- [           main] org.apache
 </div>
 <div class="paragraph">
 <p>The log command will by default tail the logs for new lines. If you want to exit the command immediately, you
-can turn off following as shown:</p>
+can turn off the following as shown:</p>
 </div>
 <div class="listingblock">
 <div class="content">
@@ -2287,29 +2832,75 @@ command but only display message tracing information. This allows you to see eve
 </div>
 <div class="paragraph">
 <p>The <code>trace</code> command has many options and can be used to <em>filter</em>, <em>grep</em> or output on different detail <em>levels`.
-The _exchange id</em> is logged (and grouped by colour), so you can use that to correlate the events, when traces are interleaved.</p>
+The _exchange id</em> is logged (and grouped by colour), so you can use that to correlate the events when traces are interleaved.</p>
 </div>
 <div class="paragraph">
-<p>For example if an existing integration is running named chuck, you can trace it as follows:</p>
+<p>The trace command will by default list the status of whether tracing is enabled or not in the integrations:</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-bash hljs" data-lang="bash">camel trace chuck</code></pre>
+<pre class="highlightjs highlight"><code class="language-bash hljs" data-lang="bash">camel trace
+ PID   NAME   AGE  STATUS   TOTAL  QUEUE  FILTER  PATTERN
+ 6911  chuck   5s  Standby      0      0</code></pre>
 </div>
 </div>
 <div class="paragraph">
-<p>You can also trace all running integrations</p>
+<p>Here we can see that the tracer is in standby mode, and you need to start the tracer before Camel will capture messages:</p>
+</div>
+<div class="admonitionblock tip">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-tip" title="Tip"></i>
+</td>
+<td class="content">
+Camel 4.8 onwards has tracing in standby mode (when using dev profile). You can enable tracing on startup by setting the configuration <code>camel.trace.enabled=true</code> in <code>application.properties</code>.
+</td>
+</tr>
+</table>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-bash hljs" data-lang="bash">camel trace</code></pre>
+<pre class="highlightjs highlight"><code class="language-bash hljs" data-lang="bash">camel trace --action=start</code></pre>
 </div>
+</div>
+<div class="paragraph">
+<p>And if you run <code>camel trace</code> again you can see the tracer is started:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-bash hljs" data-lang="bash">camel trace
+PID   NAME   AGE   STATUS   TOTAL  QUEUE  FILTER  PATTERN
+6911  chuck  1m5s  Started     16      4</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>And to show the traces you need to use the <code>dump</code> action as follows:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-bash hljs" data-lang="bash">camel trace chuck --action=dump</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>You can also dump traces from all running integrations:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-bash hljs" data-lang="bash">camel trace --action=dump</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>To stop tracing use <code>--action=stop</code>.</p>
+</div>
+<div class="paragraph">
+<p>And you can also clear the already traced messages with <code>--action=clear</code>.</p>
 </div>
 </div>
 <div class="sect3">
 <h4 id="_running_camel_integrations_in_background"><a class="anchor" href="#_running_camel_integrations_in_background"></a>Running Camel integrations in background</h4>
 <div class="paragraph">
-<p>The <code>run</code> command allows to run Camel in the background with the <code>--background</code> option.
+<p>The <code>run</code> command allows running Camel in the background with the <code>--background</code> option.
 Therefore, to see and understand what happens then the management commands
 cane be used, such as <code>camel ps</code>, <code>camel get</code>, and <code>camel log</code>.</p>
 </div>
@@ -2348,7 +2939,7 @@ Shutting down Camel integration (pid: 80093)</code></pre>
 <h4 id="_starting_and_stopping_routes"><a class="anchor" href="#_starting_and_stopping_routes"></a>Starting and Stopping routes</h4>
 <div class="paragraph">
 <p>The <code>camel cmd</code> is intended for executing miscellaneous commands in the running Camel integrations.
-For example there are commands to start and stop routes.</p>
+For example, there are commands to start and stop routes.</p>
 </div>
 <div class="paragraph">
 <p>To stop all the routes in the chuck integration, you execute:</p>
@@ -2381,11 +2972,11 @@ For example there are commands to start and stop routes.</p>
 </div>
 </div>
 <div class="paragraph">
-<p>To stop <em>all</em> routes in every Camel integration you need to use the <code>--all</code> flag as follows:</p>
+<p>To stop <em>all</em> routes in every Camel integration:</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-bash hljs" data-lang="bash">camel cmd stop-route --all</code></pre>
+<pre class="highlightjs highlight"><code class="language-bash hljs" data-lang="bash">camel cmd stop-route</code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -2393,7 +2984,24 @@ For example there are commands to start and stop routes.</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-bash hljs" data-lang="bash">camel cmd start-route --all</code></pre>
+<pre class="highlightjs highlight"><code class="language-bash hljs" data-lang="bash">camel cmd start-route</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>To start a specific route, you need to use <code>--id</code> parameter such as the following,
+which will start routes named <code>route1</code> in all running integrations:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-bash hljs" data-lang="bash">camel cmd start-route --id=route1</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>If you want to do this in a specific integration, you must include the name or pid:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-bash hljs" data-lang="bash">camel cmd start-route bar --id=route1</code></pre>
 </div>
 </div>
 <div class="admonitionblock tip">
@@ -2404,10 +3012,32 @@ For example there are commands to start and stop routes.</p>
 </td>
 <td class="content">
 You can stop one or more route by their ids by separating using
-comma such as: camel cmd start-route --id=route1,hello. Use <code>camel cmd start-route --help</code> for more details.
+comma such as <code>camel cmd start-route --id=route1,hello</code>.
+Use <code>camel cmd start-route --help</code> for more details.
 </td>
 </tr>
 </table>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_running_camel_integrations_on_kubernetes"><a class="anchor" href="#_running_camel_integrations_on_kubernetes"></a>Running Camel integrations on Kubernetes</h4>
+<div class="paragraph">
+<p>After developing the Camel routes locally with JBang, you may want to run these also on the Kubernetes platform at some point.</p>
+</div>
+<div class="paragraph">
+<p>Camel JBang provides a plugin for managing and easily running Camel applications on Kubernetes.
+The plugin uses the project export functionality to build and deploy the application on Kubernetes with Quarkus or SpringBoot.</p>
+</div>
+<div class="paragraph">
+<p>Read about it in the <a href="camel-jbang-kubernetes.html" class="xref page">Camel Kubernetes plugin</a> documentation.</p>
+</div>
+<div class="paragraph">
+<p>In addition to that, you can also leverage the Camel K plugin commands that interact with the Camel K operator on Kubernetes.
+Camel K gets you started with the journey of running Camel integrations on Kubernetes in a declarative way.
+The container image build, push to registry as well as the ownership of deployments is all taken care of by the Camel K operator.</p>
+</div>
+<div class="paragraph">
+<p>Read about it in <a href="camel-jbang-k.html" class="xref page">Camel K plugin</a>.</p>
 </div>
 </div>
 <div class="sect3">
@@ -2424,7 +3054,7 @@ comma such as: camel cmd start-route --id=route1,hello. Use <code>camel cmd star
 </div>
 </div>
 <div class="paragraph">
-<p>The logging level can be change at runtime, for example to change foo to DEBUG you execute:</p>
+<p>The logging level can be changed at runtime, for example, to change foo to DEBUG you execute:</p>
 </div>
 <div class="listingblock">
 <div class="content">
@@ -2442,6 +3072,56 @@ You can use <code>--all</code> to change logging levels for all running integrat
 </td>
 </tr>
 </table>
+</div>
+<div class="sect4">
+<h5 id="_configuring_individual_logging_levels"><a class="anchor" href="#_configuring_individual_logging_levels"></a>Configuring individual logging levels</h5>
+<div class="paragraph">
+<p>From <strong>Camel 4.6</strong> onwards you can easily configure different logging levels from CLI and <code>application.properties</code>.</p>
+</div>
+<div class="paragraph">
+<p>For example from CLI, you can specify using the <code>--logging-category</code> option.
+For example, to enable DEBUG logging if using Kafka:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-bash hljs" data-lang="bash">$ camel run myapp.yaml --logging-category=org.apache.kafka=DEBUG</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>You can specify multiple categories by repeating the CLI option as shown:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-bash hljs" data-lang="bash">$ camel run myapp.yaml --logging-category=org.apache.kafka=DEBUG --logging-category=com.foo.something=TRACE</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>You can also configure logging levels in <code>application.properties</code> using two styles</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>logging.level.</code> it is the default style used by Camel and Spring Boot</p>
+</li>
+<li>
+<p><code>quarkus.log.category.</code> is used by Quarkus</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>For example, you can declare as follows:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-properties hljs" data-lang="properties"># make it easy to configure individual logging levels
+logging.level.org.apache.kafka = DEBUG
+logging.level.com.foo.something = TRACE
+
+# you can also use quarkus style naming
+quarkus.log.category."org.apache.kafka".level = DEBUG
+quarkus.log.category."com.foo.something".level = TRACE</code></pre>
+</div>
+</div>
 </div>
 </div>
 <div class="sect3">
@@ -2480,10 +3160,56 @@ For a service to be listed then Camel components must be able to advertise the s
 </div>
 </div>
 <div class="sect3">
+<h4 id="_observability_with_metrics"><a class="anchor" href="#_observability_with_metrics"></a>Observability with metrics</h4>
+<div class="paragraph">
+<p>Camel JBang comes with support for using Micrometer for metrics that easily can be made available.</p>
+</div>
+<div class="paragraph">
+<p>You simply either run with <code>--metrics</code> option, or enable and have more control of the configuration in the <code>application.properties</code> file as shown below:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-properties hljs" data-lang="properties"># enable HTTP server with metrics
+camel.server.enabled=true
+camel.server.metricsEnabled=true
+
+# turn on micrometer metrics
+camel.metrics.enabled=true
+# include more camel details
+camel.metrics.enableMessageHistory=true
+# include additional out-of-the-box micrometer metrics for cpu, jvm and used file descriptors
+camel.metrics.binders=processor,jvm-info,file-descriptor</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Then you can access metrics from the web browser at: <a href="http://localhost:8080/q/metrics">http://localhost:8080/q/metrics</a></p>
+</div>
+<div class="paragraph">
+<p>You can also see metrics from the CLI as shown below:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-bash hljs" data-lang="bash">$ camel get metric
+  PID   NAME         TYPE   METRIC                         ROUTE                  VALUE  MEAN  MAX  TOTAL
+ 11562  MyCoolCamel  timer  camel.exchange.event.notifier                             3    12   27     35
+ 11562  MyCoolCamel  timer  camel.exchange.event.notifier                             3     1    2      3
+ 11562  MyCoolCamel  gauge  camel.routes.added                                        3
+ 11562  MyCoolCamel  gauge  camel.routes.running                                      3
+ 11562  MyCoolCamel  gauge  jvm.info                                                  1
+ 11562  MyCoolCamel  gauge  process.cpu.usage                     0.0045185067010171795
+ 11562  MyCoolCamel  gauge  process.files.max                                     10240
+ 11562  MyCoolCamel  gauge  process.files.open                                      288
+ 11562  MyCoolCamel  gauge  system.cpu.count                                          8
+ 11562  MyCoolCamel  gauge  system.cpu.usage                        0.15222772277227722
+ 11562  MyCoolCamel  gauge  system.load.average.1m                        3.58935546875</code></pre>
+</div>
+</div>
+</div>
+<div class="sect3">
 <h4 id="_listing_state_of_circuit_breakers"><a class="anchor" href="#_listing_state_of_circuit_breakers"></a>Listing state of Circuit Breakers</h4>
 <div class="paragraph">
-<p>If your Camel integration uses <a href="../components/next/eips/circuitBreaker-eip.html" class="xref page">Circuit Breaker</a> then
-you can output the status of the breakers with Camel JBang as follows:</p>
+<p>If your Camel integration uses <a href="../components/next/eips/circuitBreaker-eip.html" class="xref page">Circuit Breaker</a>,
+then you can output the status of the breakers with Camel JBang as follows:</p>
 </div>
 <div class="listingblock">
 <div class="content">
@@ -2493,8 +3219,8 @@ you can output the status of the breakers with Camel JBang as follows:</p>
 </div>
 </div>
 <div class="paragraph">
-<p>Here we can see the circuit breaker is in <em>half open</em> state, i.e. a state where the breaker is attempting
-to transition back to closed, if the failures start to drop.</p>
+<p>Here we can see the circuit breaker is in <em>half-open</em> state, i.e., a state where the breaker is attempting
+to transition back to closed if the failures start to drop.</p>
 </div>
 <div class="admonitionblock tip">
 <table>
@@ -2525,9 +3251,9 @@ must be installed in the running integration, this can be done, either explicit 
 <div class="listingblock">
 <div class="content">
 <pre class="highlightjs highlight"><code class="language-bash hljs" data-lang="bash">camel ps
-  PID   NAME                          READY  STATUS    AGE
- 61818  sample.camel.MyCamelApplica…   1/1   Running  26m38s
- 62506  dude.java                      1/1   Running   4m34s</code></pre>
+  PID   NAME                             READY  STATUS    AGE
+ 61818  sample.camel.MyCamelApplica...   1/1   Running  26m38s
+ 62506  dude.java                        1/1   Running   4m34s</code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -2541,7 +3267,8 @@ http://127.0.0.1:8778/jolokia/</code></pre>
 </div>
 </div>
 <div class="paragraph">
-<p>Instead of using PID you can also attach by name pattern. In this example because the
+<p>Instead of using PID, you can also attach by name pattern.
+In this example, because the
 two Camel integrations have unique names (foo and dude), then you can also attach Jolokia
 without knowing the PID as follows:</p>
 </div>
@@ -2602,7 +3329,7 @@ Stopped Jolokia for PID 62506</code></pre>
 </div>
 <div class="paragraph">
 <p>Where <em>dude</em> is the name of the running Camel integration. When you stop Hawtio (using <code>ctrl</code> + <code>c</code>)
-then Camel will attempt to uninstall the Jolokia JVM Agent, however this may not be
+then Camel will attempt to uninstall the Jolokia JVM Agent. However, this may not be
 able to do this always, because the JVM is being terminated which can prevent camel-jbang
 from doing JVM process communication to the running Camel integration.</p>
 </div>
@@ -2619,15 +3346,17 @@ from doing JVM process communication to the running Camel integration.</p>
 <i class="fa icon-note" title="Note"></i>
 </td>
 <td class="content">
-Every time the script is executed a JVM is started with Camel. This is not very fast or low on memory usage,
-so use Camel JBang terminal scripting where using Camel makes sense. For example to use the
-many Camel components or Kamelets to more easily send or receive data from disparate IT systems.
+Every time the script is executed, a JVM is started with Camel.
+This is not very fast or low on memory usage,
+so use Camel JBang terminal scripting where using Camel makes sense.
+For example, to use
+many Camel components or Kamelets, to more easily send or receive data from disparate IT systems.
 </td>
 </tr>
 </table>
 </div>
 <div class="paragraph">
-<p>This requires to add the following line in top of the file, for example as in the <code>upper.yaml</code> file below:</p>
+<p>This requires adding the following line in top of the file, for example, as in the <code>upper.yaml</code> file below:</p>
 </div>
 <div class="listingblock">
 <div class="content">
@@ -2677,7 +3406,7 @@ The name of the logging file cannot be configured.</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="_using_streamin_with_line_vs_raw_mode"><a class="anchor" href="#_using_streamin_with_line_vs_raw_mode"></a>Using stream:in with line vs raw mode</h4>
+<h4 id="_using_streamin_with_line_vs_raw_mode"><a class="anchor" href="#_using_streamin_with_line_vs_raw_mode"></a>Using stream:in with line vs. raw mode</h4>
 <div class="paragraph">
 <p>When using <code>stream:in</code> to read data from <em>System in</em> then the <a href="../components/next/stream-component.html" class="xref page">Stream component</a>
 works in two modes:</p>
@@ -2685,11 +3414,11 @@ works in two modes:</p>
 <div class="ulist">
 <ul>
 <li>
-<p>line mode (default) - reads input as single lines (separated by line breaks).
+<p>line mode (default): reads input as single lines (separated by line breaks).
 Message body is a <code>String</code>.</p>
 </li>
 <li>
-<p>raw mode - reads the entire stream until <em>end of stream</em>.
+<p>raw mode: reads the entire stream until the <em>end of stream</em>.
 Message body is a <code>byte[]</code>.</p>
 </li>
 </ul>
@@ -2726,7 +3455,7 @@ Therefore, you may want to set <code>stream:in?readLine=false</code> to use raw 
 <i class="fa icon-tip" title="Tip"></i>
 </td>
 <td class="content">
-When the kamelets are from local file system, then they can be live reloaded, if they are updated, when you run
+When the kamelets are from local file system, then they can be live reloaded if they are updated, when you run
 Camel JBang in <code>--dev</code> mode.
 </td>
 </tr>
@@ -2734,7 +3463,7 @@ Camel JBang in <code>--dev</code> mode.
 </div>
 <div class="paragraph">
 <p>You can also point to a folder in a GitHub repository. For example, we have provided some custom Kamelets
-at <a href="https://github.com/apache/camel-kamelets-examples/tree/main/custom-kamelets" class="bare">https://github.com/apache/camel-kamelets-examples/tree/main/custom-kamelets</a> which can be used easily:</p>
+at <a href="https://github.com/apache/camel-kamelets-examples/tree/main/custom-kamelets" class="bare">https://github.com/apache/camel-kamelets-examples/tree/main/custom-kamelets</a>, which can be used easily:</p>
 </div>
 <div class="listingblock">
 <div class="content">
@@ -2755,10 +3484,10 @@ If a kamelet is loaded from GitHub, then they cannot be live reloaded.
 </div>
 </div>
 <div class="sect2">
-<h3 id="_using_platform_http_component"><a class="anchor" href="#_using_platform_http_component"></a>Using platform-http component</h3>
+<h3 id="_using_the_platform_http_component"><a class="anchor" href="#_using_the_platform_http_component"></a>Using the platform-http component</h3>
 <div class="paragraph">
 <p>When a route is started from <code>platform-http</code> then Camel JBang will automatically include a VertX HTTP server
-running on port 8080. For example the following route in a file named <code>server.yaml</code>:</p>
+running on port 8080. For example, the following route in a file named <code>server.yaml</code>:</p>
 </div>
 <div class="listingblock">
 <div class="content">
@@ -2794,25 +3523,13 @@ Hello World%</code></pre>
 and let Camel JBang runtime compile the Java source. This means you can include smaller utility
 classes, POJOs, Camel Processors and whatnot that the application needs.</p>
 </div>
-<div class="admonitionblock important">
-<table>
-<tr>
-<td class="icon">
-<i class="fa icon-important" title="Important"></i>
-</td>
-<td class="content">
-The Java source files cannot use package names. This may change in the future.
-</td>
-</tr>
-</table>
-</div>
 </div>
 <div class="sect2">
 <h3 id="_dependency_injection_in_java_classes"><a class="anchor" href="#_dependency_injection_in_java_classes"></a>Dependency Injection in Java classes</h3>
 <div class="paragraph">
 <p>When running Camel integrations with camel-jbang, then the runtime is <code>camel-main</code> based. This means
-there is no Spring Boot, or Quarkus available. However, we have added support for using annotation
-based dependency injection in Java classes.</p>
+there is no Spring Boot or Quarkus available.
+However, we have added support for using annotation-based dependency injection in Java classes.</p>
 </div>
 <div class="sect3">
 <h4 id="_using_camel_dependency_injection"><a class="anchor" href="#_using_camel_dependency_injection"></a>Using Camel dependency injection</h4>
@@ -2856,7 +3573,7 @@ based dependency injection in Java classes.</p>
 <i class="fa icon-important" title="Important"></i>
 </td>
 <td class="content">
-You can use <code>@BeanInject</code> annotation to refer to existing bean annotated with <code>@BindToRegistry</code>, however this is possibe if the dependency is registered before the dependant.
+You can use <code>@BeanInject</code> annotation to refer to existing bean annotated with <code>@BindToRegistry</code>, however, this is possible if the dependency is registered before the dependant.
 </td>
 </tr>
 </table>
@@ -2909,7 +3626,9 @@ You can use <code>@BeanInject</code> annotation to refer to existing bean annota
 <div class="sect3">
 <h4 id="_using_beans_in_camel_xml_dsl"><a class="anchor" href="#_using_beans_in_camel_xml_dsl"></a>Using beans in Camel XML DSL</h4>
 <div class="paragraph">
-<p>Since Camel <strong>4.0.0</strong>, when using <a href="../components/next/others/java-xml-io-dsl.html" class="xref page">XML DSL</a> we can declare additional beans in similar way as in <a href="../components/next/others/yaml-dsl.html" class="xref page">YAML DSL</a>. Such beans will be added to <a href="registry.html" class="xref page">Registry</a> and can be referred to for example from routes.</p>
+<p>Since Camel <strong>4.0.0</strong>, when using <a href="../components/next/others/java-xml-io-dsl.html" class="xref page">XML DSL</a>,
+we can declare additional beans in a similar way as in <a href="../components/next/others/yaml-dsl.html" class="xref page">YAML DSL</a>.
+Such beans will be added to the <a href="registry.html" class="xref page">Registry</a> and can be referred to, for example, from routes.</p>
 </div>
 <div class="listingblock">
 <div class="content">
@@ -2962,7 +3681,8 @@ You can use <code>@BeanInject</code> annotation to refer to existing bean annota
 <div class="sect3">
 <h4 id="_using_spring_beans_in_camel_xml_dsl"><a class="anchor" href="#_using_spring_beans_in_camel_xml_dsl"></a>Using Spring beans in Camel XML DSL</h4>
 <div class="paragraph">
-<p>Since Camel <strong>4.0.0</strong>, when using <a href="../components/next/others/java-xml-io-dsl.html" class="xref page">XML DSL</a>, we can also declare <em>beans</em> using Spring Beans XML namespace. All these beans will be added to <a href="registry.html" class="xref page">Registry</a>.</p>
+<p>Since Camel <strong>4.0.0</strong>, when using <a href="../components/next/others/java-xml-io-dsl.html" class="xref page">XML DSL</a>, we can also declare <em>beans</em> using Spring Beans XML namespace.
+All these beans will be added to the <a href="registry.html" class="xref page">Registry</a>.</p>
 </div>
 <div class="paragraph">
 <p>This will not make the application managed by Spring Framework / Spring Boot. Simply Camel will leverage existing support for generic bean definition including:</p>
@@ -2984,7 +3704,7 @@ You can use <code>@BeanInject</code> annotation to refer to existing bean annota
 </ul>
 </div>
 <div class="paragraph">
-<p><a href="../components/next/others/java-xml-io-dsl.html" class="xref page">XML DSL</a> allows to use XML documents that define routes, rests and route templates. Since Camel <strong>4.0.0</strong> these documents may use new root XML element (either <code>&lt;camel&gt;</code> or <code>&lt;beans&gt;</code> to resemble Spring XML DSL), where other Camel elements (like <code>&lt;routes&gt;</code>) are contained.</p>
+<p><a href="../components/next/others/java-xml-io-dsl.html" class="xref page">XML DSL</a> allows using XML documents that define routes, rests and route templates. Since Camel <strong>4.0.0</strong> these documents may use a new root XML element (either <code>&lt;camel&gt;</code> or <code>&lt;beans&gt;</code> to resemble Spring XML DSL), where other Camel elements (like <code>&lt;routes&gt;</code>) are contained.</p>
 </div>
 <div class="paragraph">
 <p>Here&#8217;s an example <code>camel.xml</code> file, which defines both the routes and beans used (referred to) by the route definition:</p>
@@ -3022,15 +3742,16 @@ You can use <code>@BeanInject</code> annotation to refer to existing bean annota
 <p>This document contains embedded <code>&lt;beans&gt;</code> element using Spring Beans XML namespace (<code><a href="http://www.springframework.org/schema/beans" class="bare">http://www.springframework.org/schema/beans</a></code>) - Camel passes this element directly to Spring <code>org.springframework.beans.factory.xml.XmlBeanDefinitionReader</code> and all read beans are used to populate <a href="registry.html" class="xref page">Camel Registry</a>.</p>
 </div>
 <div class="paragraph">
-<p>The beans declared this way may use references to some predefined Camel beans. Currently these are handled:</p>
+<p>The beans declared this way may use references to some predefined Camel beans.
+Currently, these are handled:</p>
 </div>
 <div class="ulist">
 <ul>
 <li>
-<p>"CamelContext" - an instance of current <code>org.apache.camel.CamelContext</code></p>
+<p><code><em>CamelContext</em></code>: an instance of current <code>org.apache.camel.CamelContext</code></p>
 </li>
 <li>
-<p>"MainConfiguration" - an instance of <code>org.apache.camel.main.MainConfigurationProperties</code> used for <code>org.apache.camel.main.KameletMain</code></p>
+<p><code><em>MainConfiguration</em></code>: an instance of <code>org.apache.camel.main.MainConfigurationProperties</code> used for <code>org.apache.camel.main.KameletMain</code></p>
 </li>
 </ul>
 </div>
@@ -3061,7 +3782,7 @@ You can use <code>@BeanInject</code> annotation to refer to existing bean annota
 <p>What&#8217;s more, we can declare some additional beans that can affect internal mechanics of <code>CamelContext</code> being run. <code>org.apache.camel.main.DefaultConfigurationConfigurer</code> is used by <a href="../components/next/others/main.html" class="xref page">Camel Main</a> to configure <code>CamelContext</code> using beans found in <a href="registry.html" class="xref page">Camel Registry</a>.</p>
 </div>
 <div class="paragraph">
-<p>For example we can customize used <code>org.apache.camel.spi.UuidGenerator</code> with this XML fragment to replace UUID generator used by Camel (which defaults to <code>org.apache.camel.support.DefaultUuidGenerator</code>):</p>
+<p>For example, we can customize used <code>org.apache.camel.spi.UuidGenerator</code> with this XML fragment to replace UUID generator used by Camel (which defaults to <code>org.apache.camel.support.DefaultUuidGenerator</code>):</p>
 </div>
 <div class="listingblock">
 <div class="content">
@@ -3080,6 +3801,100 @@ You can use <code>@BeanInject</code> annotation to refer to existing bean annota
 </div>
 </div>
 <div class="sect2">
+<h3 id="_configuring_jdbc_datasources"><a class="anchor" href="#_configuring_jdbc_datasources"></a>Configuring JDBC DataSources</h3>
+<div class="paragraph">
+<p>When using SQL databases, then you would often need to configure a JDBC connection pool. You can do this:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Manually by adding 3rd party JAR dependency for the data source (and connection pool), and configure this from Java or XML/YAML DSL.</p>
+</li>
+<li>
+<p><strong>Camel 4.6</strong> Spring Boot style with <code>spring.datasource.</code> configuration in <code>application.properties</code> (uses Hikari connection-pool)</p>
+</li>
+</ul>
+</div>
+<div class="sect3">
+<h4 id="_defining_datasource_in_yaml_dsl_as_a_bean"><a class="anchor" href="#_defining_datasource_in_yaml_dsl_as_a_bean"></a>Defining datasource in YAML DSL as a bean</h4>
+<div class="paragraph">
+<p>Here is a snippet how you can declare a bean as the <code>DataSource</code> for a Postgres database in YAML DSL:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-yaml hljs" data-lang="yaml">- beans:
+    - name: PostgresqlDataSource
+      properties:
+        databaseName: "postgres"
+        password: "postgres"
+        portNumber: "5432"
+        serverName: localhost
+        user: postgres
+      type: org.postgresql.ds.PGSimpleDataSource</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>You would then also need to add the JAR dependency with Maven coordinates: <code>org.postgresql:postgresql:42.7.3</code>.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_using_a_spring_boot_jdbc_data_source"><a class="anchor" href="#_using_a_spring_boot_jdbc_data_source"></a>Using a Spring Boot JDBC data source</h4>
+<div class="paragraph">
+<p>In <code>application.properties</code> you can set up the datasource such as:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-properties hljs" data-lang="properties">spring.datasource.url= jdbc:sqlserver://db.example.net:1433;databaseName=test_db
+spring.datasource.username=user
+spring.datasource.password=password
+spring.datasource.driverClassName=com.microsoft.sqlserver.jdbc.SQLServerDriver</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>The name of the <code>DataSource</code> will be registered with <code>springDataSource</code>, however you can configure the name via:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-properties hljs" data-lang="properties">spring.datasource.name=myDataSourceNameHere</code></pre>
+</div>
+</div>
+<div class="admonitionblock tip">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-tip" title="Tip"></i>
+</td>
+<td class="content">
+Some JDBC drivers are automatic detected by camel-jbang.
+If not, then you need to add the JAR dependency manually.
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>And you can configure the Hikari connection-pool (if needed), such as:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-properties hljs" data-lang="properties">spring.datasource.hikari.connection-timeout=30000
+spring.datasource.hikari.maximum-pool-size=10
+spring.datasource.hikari.minimum-idle=5
+spring.datasource.hikari.idle-timeout=600000
+spring.datasource.hikari.max-lifetime=1800000
+spring.datasource.hikari.pool-name=collection-pool</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>And you can set logging to DEBUG on hikari to see the actual configuration:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-properties hljs" data-lang="properties">logging.level.com.zaxxer.hikari = DEBUG</code></pre>
+</div>
+</div>
+</div>
+</div>
+<div class="sect2">
 <h3 id="_debugging"><a class="anchor" href="#_debugging"></a>Debugging</h3>
 <div class="paragraph">
 <p>There are two kinds of debugging:</p>
@@ -3087,23 +3902,21 @@ You can use <code>@BeanInject</code> annotation to refer to existing bean annota
 <div class="ulist">
 <ul>
 <li>
-<p><em>Java debugging</em> - Java code debugging (Standard Java)</p>
+<p><em>Java debugging</em>: Java code debugging (Standard Java)</p>
 </li>
 <li>
-<p><em>Camel route debugging</em> - Debugging Camel routes (requires Camel tooling plugins)</p>
+<p><em>Camel route debugging</em>: Debugging Camel routes (requires Camel tooling plugins)</p>
 </li>
 </ul>
 </div>
 <div class="sect3">
 <h4 id="_java_debugging"><a class="anchor" href="#_java_debugging"></a>Java debugging</h4>
 <div class="paragraph">
-<p>You can debug your integration scripts by making use of the <code>--debug</code> flag provided by JBang.
-However, due to Java debugging must be enabled when starting the JVM, then you must do this
-using the <code>jbang</code> command, instead of <code>camel</code> as shown:</p>
+<p>Camel JBang makes it easy to do <em>Java debugging</em> when you run your integration with the <code>--jvm-debug</code> option as shown below:</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-bash hljs" data-lang="bash">jbang --debug  camel@apache/camel run hello.yaml
+<pre class="highlightjs highlight"><code class="language-bash hljs" data-lang="bash">camel run hello.yaml --jmv-debug
 Listening for transport dt_socket at address: 4004</code></pre>
 </div>
 </div>
@@ -3113,17 +3926,274 @@ Listening for transport dt_socket at address: 4004</code></pre>
 <div class="paragraph">
 <p>This is a standard Java debug socket. You can then use the IDE of your choice. For instance, see the generic documentation for <a href="https://www.jetbrains.com/help/idea/attaching-to-local-process.html#create-rc">IntelliJ</a>, <a href="https://code.visualstudio.com/docs/java/java-debugging#_attach">VS Code</a> and <a href="https://www.vogella.com/tutorials/EclipseDebugging/article.html#remote-debugging">Eclipse Desktop</a>. You will surely want to add <code>Processor</code> to be able to put breakpoints hit during route execution (as opposed to route definition creation).</p>
 </div>
+<div class="sect4">
+<h5 id="_standard_jbang_debugging"><a class="anchor" href="#_standard_jbang_debugging"></a>Standard JBang debugging</h5>
+<div class="paragraph">
+<p>You can debug your integration scripts by making use of the <code>--debug</code> flag provided by JBang.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-bash hljs" data-lang="bash">jbang --debug  camel@apache/camel run hello.yaml
+Listening for transport dt_socket at address: 4004</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>This makes it possible to debug any of the Camel JBang commands, not only the <code>run</code> command as shown above.</p>
+</div>
+</div>
 </div>
 <div class="sect3">
 <h4 id="_camel_route_debugging"><a class="anchor" href="#_camel_route_debugging"></a>Camel route debugging</h4>
 <div class="paragraph">
+<p>With <strong>Camel 4.2</strong> onwards you can now easily debug Camel routes from the command shell with the <code>debug</code> command as shown below:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-bash hljs" data-lang="bash">camel debug hello.yaml</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>This will run the integration (in background), and the current shell running in foreground will act as a CLI based debugger.
+You can see snippets from the log (in the top), the middle section shown the current breakpoint.
+And in the bottom you can see content of the message (similar to the <code>camel trace</code> command)</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-text hljs" data-lang="text">2023-11-03 18:15:06.715  INFO 33384 --- [           main] g.apache.camel.main.BaseMainSupport :     [Command Line]                 camel.debug.loggingLevel=DEBUG
+2023-11-03 18:15:06.715  INFO 33384 --- [           main] g.apache.camel.main.BaseMainSupport :     [Command Line]                 camel.debug.singleStepIncludeStartEnd=true
+2023-11-03 18:15:06.787  INFO 33384 --- [           main] mel.cli.connector.LocalCliConnector : Camel CLI enabled (local)
+2023-11-03 18:15:06.833  INFO 33384 --- [           main] el.impl.engine.AbstractCamelContext : Apache Camel 4.7.0 (foo) is starting
+2023-11-03 18:15:06.906  INFO 33384 --- [           main] g.apache.camel.main.BaseMainSupport : Property-placeholders summary
+2023-11-03 18:15:06.906  INFO 33384 --- [           main] g.apache.camel.main.BaseMainSupport :     [application.properties]       my-name=Donald Duck
+2023-11-03 18:15:06.924  INFO 33384 --- [           main] el.impl.engine.AbstractCamelContext : Routes startup (started:1)
+2023-11-03 18:15:06.924  INFO 33384 --- [           main] el.impl.engine.AbstractCamelContext :     Started route-07a6 (timer://yaml)
+2023-11-03 18:15:06.924  INFO 33384 --- [           main] el.impl.engine.AbstractCamelContext : Apache Camel 4.7.0 (foo) started in 91ms (build:0ms init:0ms start:91ms)
+2023-11-03 18:15:11.951  INFO 33384 --- [ - timer://yaml] foo.camel.yaml:10                   : Before:
+
+Source: foo.camel.yaml:13                                                         History
+--------------------------------------------------------------------------------  ------------------------------------------------------------------------------------------
+  10:              - log:                                                         route-07a6/from-c041           (0ms)    4:       uri: timer
+  11:                  message: 'Before: ${body}'                                 route-07a6/log1                (1ms)   10:         - log:
+  12:                  id: log1
+  13: ---&gt;         - setProperty:
+  14:                  name: myProp
+  15:                  expression:
+  16:                    constant:
+  17:                      expression: '123'
+  18:                      id: constant-4004
+
+
+2023-11-03 18:15:11.951  33384 --- [ thread #4 - timer://yaml]              route-07a6/setProperty-321c :     3 - Breakpoint (4ms)
+ Exchange  (DefaultExchange)  InOnly  D48642E54410AF9-0000000000000000
+ Message   (DefaultMessage)
+ Body      (null)
+
+
+    Breakpoint suspended. Press ENTER to continue.</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>This is <em>basic</em> but yet powerful, as you have this debugger always readily available, without having to start up VSCode or IDEA tooling.</p>
+</div>
+<div class="admonitionblock tip">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-tip" title="Tip"></i>
+</td>
+<td class="content">
+The <code>camel debug</code> can debug almost all the DSLs (there is a problem with groovy).
+</td>
+</tr>
+</table>
+</div>
+<div class="sect4">
+<h5 id="_configuring_breakpoints"><a class="anchor" href="#_configuring_breakpoints"></a>Configuring breakpoints</h5>
+<div class="paragraph">
+<p>When using <code>camel debug</code> then breakpoints are by default added to every route.
+However, you can specify which breakpoints to use instead with the <code>--breakpoint</code> option.
+This parameter is able to match the Camel routes using a pattern style:</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Exact match by node ids</p>
+</li>
+<li>
+<p>Match node ids by pattern (wildcard and regular expression)</p>
+</li>
+<li>
+<p>Match by EIP kind (setHeader, setBody, choice, split, etc.)</p>
+</li>
+<li>
+<p>Match by source and line number</p>
+</li>
+<li>
+<p>Match by line number</p>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p>Multiple breakpoints can be separated by comma.</p>
+</div>
+<div class="paragraph">
+<p>For example, to set a breakpoint at the setHeader EIP, you do:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-bash hljs" data-lang="bash">camel debug hello.yaml --breakpoint=setHeader</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>To set a breakpoint at line 18:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-bash hljs" data-lang="bash">camel debug hello.yaml --breakpoint=18</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>To set a breakpoint at line 18 and 34</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-bash hljs" data-lang="bash">camel debug hello.yaml --breakpoint=18,34</code></pre>
+</div>
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_editing_code_using_vscode_or_idea_editors"><a class="anchor" href="#_editing_code_using_vscode_or_idea_editors"></a>Editing code using VSCode or IDEA editors</h4>
+<div class="paragraph">
+<p>You can use JBang to edit the source code by using the <code>jbang</code> CLI to download dependencies,
+and set up a project for being ready to load into an IDE of choice, such as IDEA, VSCode, or Eclipse.</p>
+</div>
+<div class="paragraph">
+<p>This is typically in use when you use Java DSL and have Camel routes in .java source code.
+To let JBang understand which dependencies are in use, then you need to use JBang style for specifying
+dependencies by using <code>//DEPS</code> code comments in Java code.</p>
+</div>
+<div class="paragraph">
+<p>Given the following source file in <code>foo.java</code> file:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java"><span class="fold-block">//DEPS org.apache.camel:camel-bom:4.3.0@pom
+//DEPS org.apache.camel:camel-endpointdsl
+//DEPS org.apache.camel:camel-netty-http
+//DEPS org.apache.camel:camel-stream
+
+// add more dependencies here
+
+</span><span class="fold-block is-hidden-folded">import org.apache.camel.builder.endpoint.EndpointRouteBuilder;
+import org.apache.camel.component.netty.http.NettyHttpMessage;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
+</span><span class="fold-block">public class foo extends EndpointRouteBuilder {
+
+    private static final Logger LOG = LoggerFactory.getLogger(foo.class);
+
+    @Override
+    public void configure() {
+        from(timer("trigger").period(5000).repeatCount(3))
+                .to(nettyHttp("https://random-data-api.com/api/v2/banks").keepAlive(true))
+                .process(e -&gt; {
+                    // use classes from camel-netty-http dependency in the source code
+                    // and have jbang able to generate project with the dependencies ready
+                    // to use in your IDE of choice
+                    NettyHttpMessage msg = e.getMessage(NettyHttpMessage.class);
+                    LOG.info("Netty HTTP response:\n\n\n{}\n\n\n", msg.getHttpResponse());
+                })
+                .log("Found bank:")
+          .to(stream("out"));
+    }
+}</span></code></pre>
+</div>
+</div>
+<div class="admonitionblock tip">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-tip" title="Tip"></i>
+</td>
+<td class="content">
+You can use <code>camel dependency update --source=foo.java</code> to update the dependencies.
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>Notice how we specify <a href="https://www.jbang.dev/documentation/guide/latest/dependencies.html">JBang dependencies</a> at the top of the file.
+We want JBang to know and prepare for the IDE of choice.
+The first <code>//DEPS</code> is the <code>@pom</code> which set up the Camel version to use.
+The following <code>//DEPS</code> declares the Camel component we use.</p>
+</div>
+<div class="paragraph">
+<p>You can now open this source file for editing in your IDE of choice by using jbang CLI as follows:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-bash hljs" data-lang="bash">$ jbang edit -b foo.java</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>You can find this example at: <a href="https://github.com/apache/camel-kamelets-examples/tree/main/jbang/jbang-edit" class="bare">https://github.com/apache/camel-kamelets-examples/tree/main/jbang/jbang-edit</a></p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_updating_dependencies_in_source_code"><a class="anchor" href="#_updating_dependencies_in_source_code"></a>Updating dependencies in source code</h4>
+<div class="paragraph">
+<p>When working with Java source code, then you can keep the JBang dependencies up to date using the following command:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-bash hljs" data-lang="bash">$ camel dependency update --source=foo.java</code></pre>
+</div>
+</div>
+<div class="admonitionblock tip">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-tip" title="Tip"></i>
+</td>
+<td class="content">
+You can use <code>--clean</code> to not keep any existing dependencies and generate a clean fresh list.
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>This will then automatic insert or update the JBang dependencies (<code>//DEPS</code>) in the top of the source file.</p>
+</div>
+<div class="paragraph">
+<p>You may want to use this for making it easier to load the source into an IDE editor to do coding.
+See the previous section for more details.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_camel_route_debugging_using_vscode_or_idea_editors"><a class="anchor" href="#_camel_route_debugging_using_vscode_or_idea_editors"></a>Camel route debugging using VSCode or IDEA editors</h4>
+<div class="paragraph">
 <p>The Camel route debugger is available by default (the <code>camel-debug</code> component is automatically added to the classpath). By default, it can be reached through JMX at the URL <code>service:jmx:rmi:///jndi/rmi://localhost:1099/jmxrmi/camel</code>.</p>
 </div>
 <div class="paragraph">
-<p>You can then use the Integrated Development Environment (IDE) of your choice. For instance <a href="https://plugins.jetbrains.com/plugin/9371-apache-camel">IntelliJ</a>, <a href="https://marketplace.visualstudio.com/items?itemName=redhat.vscode-debug-adapter-apache-camel">VS Code</a> or <a href="https://marketplace.eclipse.org/content/textual-debugging-apache-camel">Eclipse Desktop</a>.</p>
+<p>You can then use the Integrated Development Environment (IDE) of your choice. For instance, <a href="https://plugins.jetbrains.com/plugin/9371-apache-camel">IntelliJ</a>, <a href="https://marketplace.visualstudio.com/items?itemName=redhat.vscode-debug-adapter-apache-camel">VS Code</a> or <a href="https://marketplace.eclipse.org/content/textual-debugging-apache-camel">Eclipse Desktop</a>.</p>
 </div>
 <div class="paragraph">
-<p>A specific how-to is available for VS Code, see this <a href="https://youtu.be/owNhWxf42qk">video</a> or this /blog/2022/05/start-camel-quarkus-application-with-camel-textual-debug-in-vscode/[blogpost].</p>
+<p>A specific how-to is available for VS Code, see this <a href="https://youtu.be/owNhWxf42qk">video</a>.</p>
+</div>
+<div class="admonitionblock tip">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-tip" title="Tip"></i>
+</td>
+<td class="content">
+When exporting to Maven projects, then you can use the maven profile <code>camel.debug</code> that will include the <code>camel-debug</code> JAR
+to make it possible for Camel IDE tools to do Camel route debugging.
+</td>
+</tr>
+</table>
 </div>
 </div>
 <div class="sect3">
@@ -3139,8 +4209,8 @@ Listening for transport dt_socket at address: 4004</code></pre>
 </div>
 </div>
 <div class="paragraph">
-<p>Here we can see the Camel is <em>UP</em>. The application has just been running for 8 seconds, and the
-has been 2 health checks invoked.</p>
+<p>Here we can see the Camel is <em>UP</em>. The application has just been running for 8 seconds, and there
+ have been two health checks invoked.</p>
 </div>
 <div class="paragraph">
 <p>The output is showing the <em>default</em> level of checks as:</p>
@@ -3151,20 +4221,20 @@ has been 2 health checks invoked.</p>
 <p><code>CamelContext</code> health check</p>
 </li>
 <li>
-<p>Component specific health checks (such as from <code>camel-kafka</code> or <code>camel-aws</code>, &#8230;&#8203;)</p>
+<p>Component-specific health checks (such as from <code>camel-kafka</code> or <code>camel-aws</code>, &#8230;&#8203;)</p>
 </li>
 <li>
 <p>Custom health checks</p>
 </li>
 <li>
-<p>Any check which are not UP</p>
+<p>Any check that are not UP</p>
 </li>
 </ul>
 </div>
 <div class="paragraph">
-<p>The <em>RATE</em> column shows 3 numbers separated by <code>/</code>. So <code>2/2/-</code> means 2 checks in total, 2 success, - no failures.
+<p>The <em>RATE</em> column shows 3 numbers separated by <code>/</code>. So <code>2/2/-</code> means two checks in total, two successes, and no failures.
 The two last columns will reset when a health check changes state as this number is the number of consecutive
-checks that was successful or failure. So if the health check starts to fail then the numbers could be:</p>
+checks that was successful or failure. So if the health check starts to fail, then the numbers could be:</p>
 </div>
 <div class="listingblock">
 <div class="content">
@@ -3174,12 +4244,12 @@ checks that was successful or failure. So if the health check starts to fail the
 </div>
 </div>
 <div class="paragraph">
-<p>Here we can see the numbers is changed to <code>77/-/3</code>. This means the total is 77. There is no success, but
-the check has been failing 3 times in a row. The <em>SINCE</em> column corresponds to the <em>RATE</em>. So in this
-case we can see the last check was 1 second ago, and that the check has been failing for 17 second in a row.</p>
+<p>Here we can see the numbers are changed to <code>77/-/3</code>. This means the total is 77. There is no success, but
+the check has been failing three times in a row. The <em>SINCE</em> column corresponds to the <em>RATE</em>. So in this
+ case, we can see the last check was 1 second ago, and that the check has been failing for 17 seconds in a row.</p>
 </div>
 <div class="paragraph">
-<p>You can use <code>--level=full</code> to output every health checks; which will include consumer and route level checks
+<p>You can use <code>--level=full</code> to output every health check, that will include consumer and route level checks
 as well.</p>
 </div>
 <div class="paragraph">
@@ -3188,9 +4258,9 @@ as well.</p>
 <div class="listingblock">
 <div class="content">
 <pre class="highlightjs highlight"><code class="language-bash hljs" data-lang="bash">camel get health --trace
-  PID   NAME      AGE   ID                                      RL  STATE    RATE       SINCE     MESSAGE
- 61038  mykafka  6m19s  camel/context                            R   UP    187/187/-  1s/6m16s/-
- 61038  mykafka  6m19s  camel/kafka-consumer-kafka-not-secure…   R  DOWN   187/-/187  1s/-/6m16s  KafkaConsumer is not ready - Error: Invalid url in bootstrap.servers: value
+  PID   NAME      AGE   ID                                        RL  STATE    RATE       SINCE     MESSAGE
+ 61038  mykafka  6m19s  camel/context                             R   UP    187/187/-  1s/6m16s/-
+ 61038  mykafka  6m19s  camel/kafka-consumer-kafka-not-secure...  R  DOWN   187/-/187  1s/-/6m16s  KafkaConsumer is not ready - Error: Invalid url in bootstrap.servers: value
 
 
 ------------------------------------------------------------------------------------------------------------------------
@@ -3252,7 +4322,678 @@ Use <code>camel get health --help</code> to see all the various options.
 </div>
 </div>
 <div class="sect1">
-<h2 id="_listing_what_camel_components_is_available"><a class="anchor" href="#_listing_what_camel_components_is_available"></a>Listing what Camel components is available</h2>
+<h2 id="_running_with_spring_boot_or_quarkus"><a class="anchor" href="#_running_with_spring_boot_or_quarkus"></a>Running with Spring Boot or Quarkus</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Camel JBang is <em>primary</em> intended to be Camel standalone only. In <strong>Camel 4.6</strong> onwards, we added limited
+support for running with Spring Boot or Quarkus, but there are some limitations.</p>
+</div>
+<div class="paragraph">
+<p>You use the <code>--runtime</code> option to specify which platform to use, as shown below:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-bash hljs" data-lang="bash">camel run foo.camel.yaml --runtime=spring-boot</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>And for Quarkus:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-bash hljs" data-lang="bash">camel run foo.camel.yaml --runtime=quarkus</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>When running this way, then Camel JBang is <em>essentially</em> doing an <em>export</em> to a temporary folder,
+and then running Spring Boot or Quarkus using Maven.</p>
+</div>
+<div class="paragraph">
+<p>You can do changes to the source file and have Quarkus and Spring Boot reload the routes, just as <code>camel run --dev</code> can do,
+but uses the natural Spring Boot <em>dev-tools</em> and Quarkus <em>dev mode</em> functionality.</p>
+</div>
+<div class="paragraph">
+<p>There are several limitations, one would be that Spring Boot and Quarkus cannot automatically detect new components and download JARs.
+(you can stop and run again to update dependencies).</p>
+</div>
+<div class="paragraph">
+<p>When using Quarkus, then you can only select the Quarkus version to run. That is locked to a specific Camel version.
+You can see the versions by <code>camel version list --runtime=quarkus</code>. On the other hand Spring Boot is more flexible
+where you can choose different Spring Boot and Camel versions (within reasonable range).</p>
+</div>
+<div class="paragraph">
+<p>For example:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-bash hljs" data-lang="bash">camel run foo.camel.yaml --runtime=spring-boot --spring-boot-version=3.2.3 --camel-version=4.4.1</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>And for Quarkus:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-bash hljs" data-lang="bash">camel run foo.camel.yaml --runtime=quarkus --quarkus-version=3.9.4</code></pre>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_transforming_message_data_mapping"><a class="anchor" href="#_transforming_message_data_mapping"></a>Transforming message (data mapping)</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>When integrating a system, you often need to transform messages from one system to another. Camel has a rich set
+of capabilities for this such as various data formats, templating languages, and much more. However, for basic
+data mapping such as taking an existing incoming JSON document and transforming this to a smaller JSON document,
+you may want to do this quickly with Camel.</p>
+</div>
+<div class="paragraph">
+<p>The <code>camel transform message</code> command can be used for such tasks, where it can take an existing source file as input,
+and then a template that defines how to transform the data, and then show the output (in real time).</p>
+</div>
+<div class="paragraph">
+<p>For example, given this JSon document (in a file named <code>random.json</code>), we want to combine the name, and select a few fields:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-json hljs" data-lang="json">{
+  "id": 9914,
+  "uid": "eb5fa603-1db6-45f9-912a-431a6ed59b18",
+  "password": "ei7gvYKdnN",
+  "first_name": "Khalilah",
+  "last_name": "Monahan",
+  "username": "khalilah.monahan",
+  "email": "khalilah.monahan@email.com",
+  "avatar": "https://robohash.org/utnumquamexcepturi.png?size=300x300&amp;set=set1",
+  "gender": "Agender",
+  "phone_number": "+54 (421) 591-5640 x333",
+  "social_insurance_number": "268418308",
+  "date_of_birth": "1975-03-11",
+  "employment": {
+    "title": "Product Design Director",
+    "key_skill": "Work under pressure"
+  },
+  "address": {
+    "city": "New Fritzchester",
+    "street_name": "Patrick Common",
+    "street_address": "4538 Reggie Inlet",
+    "zip_code": "16282-7045",
+    "state": "New York",
+    "country": "United States",
+    "coordinates": {
+      "lat": -1.9868753435474673,
+      "lng": 39.09763956726292
+    }
+  },
+  "credit_card": {
+    "cc_number": "4493983042212"
+  },
+  "subscription": {
+    "plan": "Student",
+    "status": "Active",
+    "payment_method": "Debit card",
+    "term": "Monthly"
+  }
+}</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Then we can have a <code>transform.json</code> file as the beginning of the template, with the structure of the desired output:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-json hljs" data-lang="json">{
+    "sid": 123,
+	"name": "TODO",
+	"country": "TODO",
+	"phone": "TODO",
+	"student": false
+}</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>We can then run <code>camel transform message</code> and have it update (in real time) the output every time we change the template.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-bash hljs" data-lang="bash">$ camel transform message --body=file:random.json --language=simple --template=file:transform.json --pretty --watch</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>What happens is then Camel will output on the console as you go:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-bash hljs" data-lang="bash"> Exchange  (DefaultExchange)  InOut   23F5DD4CE6C260B-0000000000000002
+ Message   (DefaultMessage)
+ Body      (String) (bytes: 118)
+ {
+   "sid": 123,
+   "name": "TODO",
+   "country": "TODO",
+   "phone": "TODO",
+   "student": false
+ }</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Then you can update the <code>transform.json</code> file and save it and see the generated output:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-json hljs" data-lang="json">{
+   "sid": ${jq(.id)},
+   "name": "${jq(.first_name)} ${jq(.last_name)}",
+   "country": "TODO",
+   "phone": "TODO",
+   "student": false
+}</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>And the output:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-bash hljs" data-lang="bash"> Exchange  (DefaultExchange)  InOut   23F5DD4CE6C260B-0000000000000018
+ Message   (DefaultMessage)
+ Body      (String) (bytes: 158)
+ {
+   "sid": 9914,
+   "name": "Khalilah Monahan",
+   "country": "TODO",
+   "phone": "TODO",
+   "student": false
+ }</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Then you can continue to update the <code>transform.json</code> until you have the desired result.
+And if you make a mistake, then you see an error (in red) with stacktrace that hopefully can help you out how to fix this.</p>
+</div>
+<div class="sect2">
+<h3 id="_transforming_directly_from_the_camel_dsl_source"><a class="anchor" href="#_transforming_directly_from_the_camel_dsl_source"></a>Transforming directly from the Camel DSL source</h3>
+<div class="paragraph">
+<p>In the example above we externalize the transformation into a template file named <code>transform.json</code>.
+However, it&#8217;s possible to transform directly in the Camel DSL route.</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+Currently Java DSL is not working in --watch mode (reload on change)
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>In the following, we cover the json-transform example from: <a href="https://github.com/apache/camel-kamelets-examples/tree/main/jbang/json-transform" class="bare">https://github.com/apache/camel-kamelets-examples/tree/main/jbang/json-transform</a></p>
+</div>
+<div class="paragraph">
+<p>In this example, a random beer is fetched via the beer-source kamelet. The beer data is as follows:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-json hljs" data-lang="json"> {
+   "id": 2104,
+   "uid": "cefb36e1-e42f-4083-8f97-fc4ff85e56fb",
+   "brand": "Pabst Blue Ribbon",
+   "name": "St. Bernardus Abt 12",
+   "style": "Belgian Strong Ale",
+   "hop": "Amarillo",
+   "yeast": "1388 - Belgian Strong Ale",
+   "malts": "Caramel",
+   "ibu": "43 IBU",
+   "alcohol": "3.8%",
+   "blg": "16.0°Blg"
+ }</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>We save this beer into a file named <code>sample.json</code> as we want to use this as source for message transformation.</p>
+</div>
+<div class="paragraph">
+<p>Now suppose we want to transform this to a smaller JSON document with only a few elements, then we can do this
+directly in the route:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-yaml hljs" data-lang="yaml">- route:
+    nodePrefixId: route-c38
+    id: route-66b0
+    from:
+      uri: kamelet:beer-source
+      id: from-3996
+      steps:
+        - setBody:
+            expression:
+              simple:
+                expression: &gt;-
+                  TODO
+                id: simple-b320
+            id: setBody-fa01
+        - log:
+            message: ${body}
+            id: log-0c79</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>As we can see the route has a <code>setBody</code> where we want to transform the message, which we can do with the simple
+language combined with JQ (or JSonPath). At first, we just write TODO to get started:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-bash hljs" data-lang="bash">camel transform message --body=file:sample.json --source=beer-jq.yaml  --watch --pretty</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>And the output from the transformation is:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-text hljs" data-lang="text"> Exchange  (DefaultExchange)  InOut   D9F909701338607-0000000000000004
+ Message   (DefaultMessage)
+ Body      (String) (bytes: 4)
+ TODO</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>We can now do live updates in the Camel route, and when we save the file, the transform command will output the changes in the terminal.
+So we modify the DSL to grab the details we want, such as:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-yaml hljs" data-lang="yaml">    expression: &gt;-
+      {
+        "kind": "${jq(.brand)}",
+        "beer": "${jq(.name)}"
+      }
+    id: simple-b320</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Notice how we use inlined JQ expressions to grab the desired data from the sample, and when saving the file, we have
+the result shown in the terminal:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-text hljs" data-lang="text"> Exchange  (DefaultExchange)  InOut   D9F909701338607-000000000000003E
+ Message   (DefaultMessage)
+ Body      (String) (bytes: 78)
+ {
+   "kind": "Pabst Blue Ribbon",
+   "beer": "St. Bernardus Abt 12"
+ }</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>And when we are done with the transformation we can stop by <code>ctrl + c</code> to exit the command.</p>
+</div>
+<div class="paragraph">
+<p>When transforming messages directly from the DSL (using the <code>--source</code> option), then by default
+Camel will pick the last expression in the route. If you only have one expression like in this example,
+then that is easy. But when you have many, then you need to tell which one to use.</p>
+</div>
+<div class="paragraph">
+<p>You can do this either by referring to the line number in the source code of the EIP / expression, or
+by its id (if specified).</p>
+</div>
+<div class="paragraph">
+<p>So suppose the example had many expressions, and the one we want to use is on line 11, then we can do as follows:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-bash hljs" data-lang="bash">camel transform message --body=file:sample.json --source=beer-jq.yaml:11  --watch --pretty</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Notice how we specify the line number in the source file name, by prefixing with <code>:line-number</code>.
+The line number does not have to be 100% accurate, as long the number is within range of the EIP, until
+the next EIP in the route. In the example, this means you can pick number in range 8-17.</p>
+</div>
+<div class="paragraph">
+<p>If we want to use the id of the expression/EIP, we can do the same as shown below:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-bash hljs" data-lang="bash">camel transform message --body=file:sample.json --source=beer-jq.yaml:setBody-fa01  --watch --pretty</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>You can also transform the message from JSON to XML as shown (or any other kind of fixed structure):</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-yaml hljs" data-lang="yaml">- setBody:
+    expression:
+      simple:
+        expression: &gt;-
+          &lt;beer id="${jq(.id)}"&gt;
+            &lt;name&gt;${jq(.name)}&lt;/name&gt;
+            &lt;kind&gt;${jq(.brand)}&lt;/kind&gt;
+          &lt;/beer&gt;
+        id: simple-b320
+    id: setBody-fa01</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>You can configure options that the language format should use, such as shown below:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-bash hljs" data-lang="bash">$ camel transform message --body=file:sample.json --language=jsonpath --template="beer.unknown" --option=suppressExceptions=true</code></pre>
+</div>
+</div>
+<div class="admonitionblock tip">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-tip" title="Tip"></i>
+</td>
+<td class="content">
+You can specify multiple options by repeating the <code>--option</code> argument.
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>Pay attention that we now use JSONPath as the language, and the template is a tiny JSON path expression.
+Because the sample does not have a <code>beer.unknown</code> path, then JSonPath would normally throw an exception.
+This can be suppressed by setting the option <code>suppressExceptions</code> to <code>true</code> as shown above. Then the output is as follows:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-text hljs" data-lang="text">2023-12-04 13:02:50.923  66291 --- Message transformed (success) (239ms)
+ Exchange  (DefaultExchange)  InOut   6118686CA3995FF-0000000000000000
+ Message   (DefaultMessage)
+ Body      (null) (bytes: 14)
+ [Body is null]</code></pre>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_transforming_the_message_using_components"><a class="anchor" href="#_transforming_the_message_using_components"></a>Transforming the message using Components</h3>
+<div class="paragraph">
+<p>Some components can also be used for message transformation such as FlatPack, Velocity, FreeMarker, Thymeleaf, and good old XSLT.</p>
+</div>
+<div class="admonitionblock tip">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-tip" title="Tip"></i>
+</td>
+<td class="content">
+You can use <code>camel catalog component --filter=transform</code> to see which components can be transformation.
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>Given the below XML in the <code>sample.xml</code> file:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;hash&gt;
+  &lt;id type="integer"&gt;1369&lt;/id&gt;
+  &lt;uid&gt;8c946e1a-fdc5-40d3-9098-44271bdfad65&lt;/uid&gt;
+  &lt;account-number&gt;8673088731&lt;/account-number&gt;
+  &lt;iban&gt;GB38EFUA27474531363797&lt;/iban&gt;
+  &lt;bank-name&gt;ABN AMRO MEZZANINE (UK) LIMITED&lt;/bank-name&gt;
+  &lt;routing-number&gt;053228004&lt;/routing-number&gt;
+  &lt;swift-bic&gt;AACCGB21&lt;/swift-bic&gt;
+&lt;/hash&gt;</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Then you can transform this using an XSLT named <code>mystyle.xsl</code>:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;?xml version = "1.0"?&gt;
+&lt;xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform"&gt;
+
+  &lt;xsl:template match="/"&gt;
+    &lt;bank&gt;
+    	&lt;name&gt;&lt;xsl:value-of select="/hash/bank-name/text()"/&gt;&lt;/name&gt;
+    	&lt;bic&gt;&lt;xsl:value-of select="/hash/swift-bic/text()"/&gt;&lt;/bic&gt;
+    &lt;/bank&gt;
+  &lt;/xsl:template&gt;
+
+&lt;/xsl:stylesheet&gt;</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Then you can do live changes to the stylesheet and see the output in real-time with Camel JBang by running:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-bash hljs" data-lang="bash">$ camel transform message --body=file:sample.xml --component=xslt --template=file:mystyle.xsl --pretty --watch</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>You can then edit the <code>mystyle.xsl</code> file, and save the file, and watch the terminal for the updated result.</p>
+</div>
+<div class="paragraph">
+<p>You can find this example at: <a href="https://github.com/apache/camel-kamelets-examples/tree/main/jbang/xslt-transform" class="bare">https://github.com/apache/camel-kamelets-examples/tree/main/jbang/xslt-transform</a></p>
+</div>
+<div class="paragraph">
+<p>You can configure options that the XSLT component format should use, such as shown below:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-bash hljs" data-lang="bash">$ camel transform message --body=file:sample.xml --component=xslt --template=file:mystyle.xsl --option=output=bytes --pretty --watch</code></pre>
+</div>
+</div>
+<div class="admonitionblock tip">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-tip" title="Tip"></i>
+</td>
+<td class="content">
+You can specify multiple options by repeating the <code>--option</code> argument.
+</td>
+</tr>
+</table>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+The transform message with the component is limited as some components require configuring complex options that cannot be set from command line.
+</td>
+</tr>
+</table>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_transforming_a_message_using_data_formats"><a class="anchor" href="#_transforming_a_message_using_data_formats"></a>Transforming a message using Data Formats</h3>
+<div class="paragraph">
+<p>Some data formats can also be used for message transformation such as Base64, Csv, FlatPack.</p>
+</div>
+<div class="admonitionblock tip">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-tip" title="Tip"></i>
+</td>
+<td class="content">
+You can use <code>camel catalog dataformat --filter=transform</code> to see which components can be transformation.
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>Given the below CSV file in the <code>daltons.csv</code>:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-text hljs" data-lang="text">Jack Dalton, 115, mad at Averell
+Joe Dalton, 105, calming Joe
+William Dalton, 105, keeping Joe from killing Averell
+Averell Dalton, 80, playing with Rantanplan
+Lucky Luke, 120, capturing the Daltons</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Then you can transform this via Camel CSV dataformat from its form into Java objects (unmarshal).
+This will NOT transform the CSV into another format such as XML, but allows you to quickly try out the dataformat,
+and be able to inspect the Java object inside Camel.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-bash hljs" data-lang="bash">$ camel transform message --body=file:daltons.csv --dataformat=csv</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>This will then output:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-text hljs" data-lang="text">2023-12-04 10:53:45.578  55793 --- Message transformed (success) (176ms)
+ Exchange  (DefaultExchange)  InOut   6673987D34F3B54-0000000000000000
+ Message   (DefaultMessage)
+ Body      (ArrayList) (size: 5 bytes: 224)
+ [[Jack Dalton,  115,  mad at Averell], [Joe Dalton,  105,  calming Joe], [William Dalton,  105,  keeping Joe from killing Averell], [Averell Dalton,  80,
+ playing with Rantanplan], [Lucky Luke,  120,  capturing the Daltons]]</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>As you can see Camel CSV dataformat will then unmarshal the input (from CSV file) to a <code>java.util.ArrayList</code> object
+with 5 elements (one per row), and each row is another List of the columns.</p>
+</div>
+<div class="paragraph">
+<p>You can configure options that the CSV data format should use, such as shown below:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-bash hljs" data-lang="bash">$ camel transform message --body=file:daltons.csv --dataformat=csv --option=captureHeaderRecord=true</code></pre>
+</div>
+</div>
+<div class="admonitionblock tip">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-tip" title="Tip"></i>
+</td>
+<td class="content">
+You can specify multiple options by repeating the <code>--option</code> argument.
+</td>
+</tr>
+</table>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+The transform message with dataformat is limited as some dataformat requires configuring complex options that cannot be set from the command line.
+</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_transforming_routes_dsl"><a class="anchor" href="#_transforming_routes_dsl"></a>Transforming routes DSL</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Camel offers different DSLs, such as Java, XML, YAML, and more. Many graphical editors and code generators use XML and YAML Camel DSL, therefore, for some use cases it may be required to use one DSL or the other.
+The <code>camel transform route</code> command can be used to transform a YAML route into an XML and vice versa, the command takes a list of files as input and transforms the DSL.</p>
+</div>
+<div class="paragraph">
+<p>For example, given the following YAML content, in a file named route.yaml</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>- route:
+    id: route-b785
+    nodePrefixId: route-14b
+    from:
+      id: from-959e
+      uri: direct
+      parameters:
+        name: start
+      steps:
+        - choice:
+            id: choice-52fe
+            when:
+              - id: when-b126
+                expression:
+                  simple:
+                    id: simple-576d
+                    expression: ${header.foo} == 'bar'
+                steps:
+                  - to:
+                      id: to-65f9
+                      uri: jms
+                      parameters:
+                        destinationName: queue
+            otherwise:
+              id: otherwise-c07f
+              steps:
+                - to:
+                    id: to-dc76
+                    uri: log
+                    parameters:
+                      loggerName: default</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>The following command</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>camel transform route --format=xml /path/to/route.yaml</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Automatically transform the route in XML DSL (Camel XML IO DSL)</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>&lt;camel&gt;
+    &lt;route id="route-b785" nodePrefixId="route-14b"&gt;
+        &lt;from id="from-959e" uri="direct:start"/&gt;
+        &lt;choice id="choice-52fe"&gt;
+            &lt;when id="when-b126"&gt;
+                &lt;simple&gt;${header.foo} == 'bar'&lt;/simple&gt;
+                &lt;to id="to-65f9" uri="jms:queue"/&gt;
+            &lt;/when&gt;
+            &lt;otherwise id="otherwise-c07f"&gt;
+                &lt;to id="to-dc76" uri="log:default"/&gt;
+            &lt;/otherwise&gt;
+        &lt;/choice&gt;
+    &lt;/route&gt;
+&lt;/camel&gt;</pre>
+</div>
+</div>
+<div class="admonitionblock tip">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-tip" title="Tip"></i>
+</td>
+<td class="content">
+If all the input files have the same extension and are written with the same DSL, for example, <code>.yaml</code>, the transformation will default to the XML DSL and vice versa.
+</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_listing_what_camel_components_are_available"><a class="anchor" href="#_listing_what_camel_components_are_available"></a>Listing what Camel components are available</h2>
 <div class="sectionbody">
 <div class="paragraph">
 <p>Camel comes with a lot of artifacts out of the box which comes as:</p>
@@ -3278,11 +5019,11 @@ Use <code>camel get health --help</code> to see all the various options.
 </div>
 <div class="paragraph">
 <p>You can use the Camel CLI to list what Camel provides via the <code>camel catalog</code> command.
-For example to list all the components</p>
+For example, to list all the components</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-bash hljs" data-lang="bash">camel catalog components</code></pre>
+<pre class="highlightjs highlight"><code class="language-bash hljs" data-lang="bash">camel catalog component</code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -3290,7 +5031,7 @@ For example to list all the components</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-bash hljs" data-lang="bash">camel catalog kamelets</code></pre>
+<pre class="highlightjs highlight"><code class="language-bash hljs" data-lang="bash">camel catalog kamelet</code></pre>
 </div>
 </div>
 <div class="admonitionblock tip">
@@ -3309,7 +5050,7 @@ Use <code>camel catalog --help</code> to see all possible commands.
 <h3 id="_displaying_component_documentation"><a class="anchor" href="#_displaying_component_documentation"></a>Displaying component documentation</h3>
 <div class="paragraph">
 <p>The <code>doc</code> goal can show quick documentation for every component, dataformat, kamelets etc.
-For example to see the kafka component you run:</p>
+For example, to see the kafka component you run:</p>
 </div>
 <div class="listingblock">
 <div class="content">
@@ -3340,7 +5081,7 @@ configuration option.
 </div>
 <div class="paragraph">
 <p>In some rare cases then there may be a component and dataformat with the same name, and the <code>doc</code> goal prioritizes
-components. In such a situation you can prefix the name with dataformat, i.e:</p>
+components. In such a situation you can prefix the name with dataformat, i.e.:</p>
 </div>
 <div class="listingblock">
 <div class="content">
@@ -3359,7 +5100,7 @@ components. In such a situation you can prefix the name with dataformat, i.e:</p
 <h4 id="_browsing_online_documentation_from_the_camel_website"><a class="anchor" href="#_browsing_online_documentation_from_the_camel_website"></a>Browsing online documentation from the Camel website</h4>
 <div class="paragraph">
 <p>You can use the <code>doc</code> command to quickly open the url in the web browser for the online documentation.
-For example to browse the kafka component, you use <code>--open-url</code>:</p>
+For example, to browse the kafka component, you use <code>--open-url</code>:</p>
 </div>
 <div class="listingblock">
 <div class="content">
@@ -3391,10 +5132,10 @@ To just get the link to the online documentation, then use <code>camel doc kafka
 <h4 id="_filtering_options_listed_in_the_tables"><a class="anchor" href="#_filtering_options_listed_in_the_tables"></a>Filtering options listed in the tables</h4>
 <div class="paragraph">
 <p>Some components may have many options, and in such cases you may use <code>--filter</code> to only list options that match the filter
-in either name, description, or the group (producer, security, advanced etc).</p>
+in either name, description, or the group (producer, security, advanced, etc).</p>
 </div>
 <div class="paragraph">
-<p>For example to list only security related options:</p>
+<p>For example, to list only security related options:</p>
 </div>
 <div class="listingblock">
 <div class="content">
@@ -3417,11 +5158,11 @@ in either name, description, or the group (producer, security, advanced etc).</p
 <h2 id="_open_api"><a class="anchor" href="#_open_api"></a>Open API</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>Camel JBang allows to quickly expose an Open API service using <em>contract first</em> approach,
+<p>Camel JBang allows quickly exposing an Open API service using <em>contract-first</em> approach,
 where you have an existing OpenAPI specification file.</p>
 </div>
 <div class="paragraph">
-<p>Then Camel JBang is able to bridge each API endpoints from the OpenAPI specification to
+<p>Then Camel JBang is able to bridge each API endpoint from the OpenAPI specification to
 a Camel route with the naming convention <code>direct:&lt;operationId&gt;</code>.</p>
 </div>
 <div class="paragraph">
@@ -3436,8 +5177,8 @@ a Camel route with the naming convention <code>direct:&lt;operationId&gt;</code>
 <h2 id="_gathering_list_of_dependencies"><a class="anchor" href="#_gathering_list_of_dependencies"></a>Gathering list of dependencies</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>When working with Camel JBang then dependencies are automatically resolved. This means that
-you do not have to use a build system like Maven or Gradle to add every Camel components
+<p>When working with Camel JBang, then dependencies are automatically resolved. This means that
+you do not have to use a build system like Maven or Gradle to add every Camel component
 as a dependency.</p>
 </div>
 <div class="paragraph">
@@ -3550,11 +5291,69 @@ org.apache.camel.kamelets:camel-kamelets-utils:0.9.3
 org.apache.camel.kamelets:camel-kamelets:0.9.3</code></pre>
 </div>
 </div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_generating_sbom_report"><a class="anchor" href="#_generating_sbom_report"></a>Generating SBOM report</h2>
+<div class="sectionbody">
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-bash hljs" data-lang="bash">You can generate a SBOM report of your integration by running the following command</code></pre>
+</div>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>camel sbom</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>By default, it will generate a file named <code>sbom.json</code> in <code>cyclonedx</code> format.</p>
+</div>
+<div class="paragraph">
+<p>You can also choose to use an <code>spdx</code> format with the following command</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>camel sbom --sbom-format=spdx</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>You can also choose the target runtime as either <em>quarkus</em> or <em>spring-boot</em> as shown:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>camel sbom --runtime=quarkus</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>or</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>camel sbom --runtime=spring-boot</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>by default <code>camel-main</code> will be used</p>
+</div>
 <div class="sect2">
 <h3 id="_copying_dependency_jars_to_a_specific_directory"><a class="anchor" href="#_copying_dependency_jars_to_a_specific_directory"></a>Copying dependency JARs to a specific directory</h3>
 <div class="paragraph">
-<p>You can use the <code>camel dependency copy</code> command to copy the required JARs to a specific folder.
-This command reuses Maven by invoking the <code>mvn dependency:copy-dependencies</code> command.</p>
+<p>You can use the <code>camel dependency copy</code> command to copy the required JARs to a specific folder.</p>
+</div>
+<div class="admonitionblock important">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-important" title="Important"></i>
+</td>
+<td class="content">
+The <code>camel dependency copy</code> and <code>camel dependency list</code> uses Apache Maven,
+This requires having Apache Maven installed, and <code>mvn</code> command in PATH environment, so Camel JBang
+can invoke <code>mvn</code> command.
+</td>
+</tr>
+</table>
 </div>
 <div class="paragraph">
 <p>By default, the JARs are copied to <code>lib</code> folder:</p>
@@ -3581,22 +5380,22 @@ camel-dsl-support-3.21.0.jar            camel-util-json-3.21.0.jar</code></pre>
 <h2 id="_creating_projects"><a class="anchor" href="#_creating_projects"></a>Creating Projects</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>You can <em>export</em> your Camel JBang integration to a traditional Java based project such as Spring Boot or Quarkus.</p>
+<p>You can <em>export</em> your Camel JBang integration to a traditional Java-based project such as Spring Boot or Quarkus.</p>
 </div>
 <div class="paragraph">
 <p>You may want to do this after you have built a prototype using Camel JBang, and are in need
-of a traditional Java based project with more need for Java coding, or wanting to use the powerful
+of a traditional Java-based project with more need for Java coding, or wanting to use the powerful
 runtimes of Spring Boot, Quarkus or vanilla Camel Main.</p>
 </div>
 <div class="sect2">
 <h3 id="_exporting_to_camel_spring_boot"><a class="anchor" href="#_exporting_to_camel_spring_boot"></a>Exporting to Camel Spring Boot</h3>
 <div class="paragraph">
-<p>The command <code>export --runtime=spring-boot</code> will export your current Camel JBang file(s) to a Maven based
+<p>The command <code>export --runtime=spring-boot</code> will export your current Camel JBang file(s) to a Maven-based
 Spring Boot project with files organized in <code>src/main/</code> folder structure.</p>
 </div>
 <div class="paragraph">
-<p>For example to export to Spring Boot using the Maven groupId <em>com.foo</em> and the artifactId <em>acme</em>
-and with version <em>1.0-SNAPSHOT</em> you simply execute:</p>
+<p>For example, to export to Spring Boot using the Maven groupId <code><em>com.foo</em></code> and the artifactId <em>acme</em>
+and with version <em>1.0-SNAPSHOT</em> you execute:</p>
 </div>
 <div class="listingblock">
 <div class="content">
@@ -3616,7 +5415,7 @@ This will export to the <em>current</em> directory, meaning that files are moved
 </table>
 </div>
 <div class="paragraph">
-<p>To export to another directly (copies the files) you execute:</p>
+<p>To export to another directly (copies the files), you execute:</p>
 </div>
 <div class="listingblock">
 <div class="content">
@@ -3648,11 +5447,11 @@ See the possible options by running: <code>camel export --help</code> for more d
 <div class="sect2">
 <h3 id="_exporting_to_camel_quarkus"><a class="anchor" href="#_exporting_to_camel_quarkus"></a>Exporting to Camel Quarkus</h3>
 <div class="paragraph">
-<p>The command <code>export --runtime=quarkus</code> will export your current Camel JBang file(s) to a Maven based
+<p>The command <code>export --runtime=quarkus</code> will export your current Camel JBang file(s) to a Maven-based
 Quarkus project with files organized in <code>src/main/</code> folder structure.</p>
 </div>
 <div class="paragraph">
-<p>For example to export to Quarkus using the Maven groupId <em>com.foo</em> and the artifactId <em>acme</em>
+<p>For example, to export to Quarkus using the Maven groupId <code><em>com.foo</em></code> and the artifactId <em>acme</em>
 and with version <em>1.0-SNAPSHOT</em> you simply execute:</p>
 </div>
 <div class="listingblock">
@@ -3667,7 +5466,7 @@ and with version <em>1.0-SNAPSHOT</em> you simply execute:</p>
 <i class="fa icon-note" title="Note"></i>
 </td>
 <td class="content">
-This will export to the <em>current</em> directory, meaning that files are moved into the needed folder structure.
+This will export to the <em>current</em> directory, meaning that files are moved into the necessary folder structure.
 </td>
 </tr>
 </table>
@@ -3692,15 +5491,27 @@ See the possible options by running: <code>camel export --help</code> for more d
 </tr>
 </table>
 </div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+You cannot use <code>--profile</code> option when exporting to Camel Quarkus.
+</td>
+</tr>
+</table>
+</div>
 </div>
 <div class="sect2">
 <h3 id="_exporting_to_camel_main"><a class="anchor" href="#_exporting_to_camel_main"></a>Exporting to Camel Main</h3>
 <div class="paragraph">
-<p>The command <code>export --runtime=camel-main</code> will export your current Camel JBang file(s) to a Maven based
+<p>The command <code>export --runtime=camel-main</code> will export your current Camel JBang file(s) to a Maven-based
 vanilla Camel Main project with files organized in <code>src/main/</code> folder structure.</p>
 </div>
 <div class="paragraph">
-<p>For example to export to Camel Main using the Maven groupId <em>com.foo</em> and the artifactId <em>acme</em>
+<p>For example, to export to Camel Main using the Maven groupId <em>com.foo</em> and the artifactId <em>acme</em>
 and with version <em>1.0-SNAPSHOT</em> you simply execute:</p>
 </div>
 <div class="listingblock">
@@ -3721,7 +5532,7 @@ This will export to the <em>current</em> directory, meaning that files are moved
 </table>
 </div>
 <div class="paragraph">
-<p>To export to another directly (copies the files) you execute:</p>
+<p>To export to another directly (copies the files), you execute:</p>
 </div>
 <div class="listingblock">
 <div class="content">
@@ -3741,82 +5552,49 @@ See the possible options by running: <code>camel export --help</code> for more d
 </table>
 </div>
 <div class="sect3">
-<h4 id="_exporting_to_camel_main_for_kubernetes"><a class="anchor" href="#_exporting_to_camel_main_for_kubernetes"></a>Exporting to Camel Main for Kubernetes</h4>
+<h4 id="_exporting_with_java_agent_included"><a class="anchor" href="#_exporting_with_java_agent_included"></a>Exporting with Java Agent included</h4>
 <div class="paragraph">
-<p>If your want to run Camel Main on Kubernetes, then it&#8217;s possible to export to Maven based project
-that are pre-configured to build for Kubernetes (with JKube and JIB).</p>
+<p>The Camel Main runtime allows exporting with Java Agents that makes it easier to run your Camel integration
+with Java Agents such as OpenTelemetry Agent.</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+Only <code>camel-main</code> as runtime supports exporting with Java Agents included.
+</td>
+</tr>
+</table>
 </div>
 <div class="paragraph">
-<p>To use this, then <code>application.properties</code> must contain JKube configurations that are to be used for generating
-Kubernetes YAML manifest files.</p>
-</div>
-<div class="paragraph">
-<p>Camel JBang will export and copy every entry from <code>application.properties</code> that start with the following keys:</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p><code>jkube.xxx</code></p>
-</li>
-<li>
-<p><code>jib.xxx</code></p>
-</li>
-<li>
-<p><code>label.xxx</code></p>
-</li>
-</ul>
-</div>
-<div class="paragraph">
-<p>For example, the following can be used for a general Camel based application to run in Kubernetes:</p>
+<p>This requires specifying the agent as a dependency with <code>agent:</code> as prefix as shown below in <code>application.properties</code>:</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-properties hljs" data-lang="properties">label.runtime=app.kubernetes.io/runtime
-jib.to.image=demo/myapp:1.0
-jkube.version=1.13.1
-jkube.build.strategy=jib
-jkube.skip.build=true
-jkube.namespace=my-namespace
-jkube.imagePullPolicy=IfNotPresent
-jkube.enricher.jkube-project-label.group=my-company
-jkube.enricher.jkube-project-label.provider=my-company
-jkube.enricher.jkube-controller.type=Deployment
-jkube.enricher.jkube-controller.replicaCount=1
-jkube.enricher.jkube-service.port=8080
-jkube.recreate=true</code></pre>
+<pre class="highlightjs highlight"><code class="language-properties hljs" data-lang="properties">camel.jbang.dependencies=camel:opentelemetry,agent:io.opentelemetry.javaagent:opentelemetry-javaagent:1.31.0
+camel.opentelemetry.enabled=true</code></pre>
 </div>
 </div>
 <div class="paragraph">
-<p>You can find more details in the <a href="https://eclipse.dev/jkube/docs/">Eclipse JKube</a> and <a href="https://github.com/GoogleContainerTools/jib/tree/master/jib-maven-plugin">Jib</a> documentations.</p>
-</div>
-<div class="sect4">
-<h5 id="_resource_fragments"><a class="anchor" href="#_resource_fragments"></a>Resource fragments</h5>
-<div class="paragraph">
-<p>Resource fragments allows to store external configuration in YAML resource descriptions, which
-will be exported to <code>src/main/jkube</code> directory.</p>
-</div>
-<div class="paragraph">
-<p>Camel JBang will export files that ends with <code>jkube.yaml</code> or <code>jkube.yml</code> into <code>src/main/jkube</code> directory.</p>
-</div>
-<div class="paragraph">
-<p>For example having the following file named <code>configmap.jkube.yaml</code>:</p>
+<p>Then you can export to <code>--runtime=camel-main</code> as follows:</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-yaml hljs" data-lang="yaml">metadata:
-  name: ${project.artifactId}
-data:
-  application.properties: |
-    # spring application properties file
-    welcome = Hello from Kubernetes ConfigMap!!!
-    dummy = some value</code></pre>
+<pre class="highlightjs highlight"><code class="language-bash hljs" data-lang="bash">camel export --runtime=camel-main --gav=com.foo:acme:1.0-SNAPSHOT --directory=../myproject</code></pre>
 </div>
 </div>
 <div class="paragraph">
-<p>Will let Camel JBang export this into as <code>src/main/jkube/configmap.yaml</code>.</p>
+<p>Then Camel JBang will detect the <code>agent:</code> dependency and download this from Maven and save to a <code>../myproject/agent</code> folder.
+You can then start the Camel integration from Java via:</p>
 </div>
-<div class="paragraph">
-<p>You can find more information about resource fragments at the <a href="https://eclipse.dev/jkube/docs/kubernetes-maven-plugin/#_resource_fragments">Eclipse JKube</a> website.</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-bash hljs" data-lang="bash">cd ../myproject
+mvn clean package
+java -javaagent:agent/opentelemetry-javaagent-1.31.0.jar -jar target/acme-1.0-SNAPSHOT.jar</code></pre>
 </div>
 </div>
 </div>
@@ -3825,7 +5603,7 @@ data:
 <h3 id="_exporting_with_selected_files"><a class="anchor" href="#_exporting_with_selected_files"></a>Exporting with selected files</h3>
 <div class="paragraph">
 <p>By default, Camel will export what was last run, or all files from the current directory.
-You can also explicit specify which files should be exported.</p>
+You can also explicitly specify which files should be exported.</p>
 </div>
 <div class="paragraph">
 <p>For example, you may have 3 files in a folder:</p>
@@ -3871,7 +5649,7 @@ If you have <code>application.properties</code> in the folder as well, then this
 <div class="sect2">
 <h3 id="_exporting_as_gradle_project"><a class="anchor" href="#_exporting_as_gradle_project"></a>Exporting as Gradle Project</h3>
 <div class="paragraph">
-<p>Camel JBang exports by default as a Maven based project. To use Gradle instead, you can
+<p>Camel JBang exports by default as a Maven-based project. To use Gradle instead, you can
 specify the <code>--build-tool=gradle</code> when exporting, such as:</p>
 </div>
 <div class="listingblock">
@@ -3902,26 +5680,6 @@ To be able to continue to use Camel CLI (i.e. <code>camel</code>), you need to a
 <div class="content">
 <pre class="highlightjs highlight"><code class="language-bash hljs" data-lang="bash">camel export --runtime=quarkus --gav=com.foo:acme:1.0-SNAPSHOT --deps=camel:cli-connector --directory=../myproject</code></pre>
 </div>
-</div>
-</div>
-<div class="sect2">
-<h3 id="_exporting_with_camel_secret_refresh_parameters_and_dependencies_included"><a class="anchor" href="#_exporting_with_camel_secret_refresh_parameters_and_dependencies_included"></a>Exporting with Camel Secret Refresh parameters and dependencies included</h3>
-<div class="paragraph">
-<p>In Camel we have introduce the ability of refreshing secrets automatically when an update operation happens.</p>
-</div>
-<div class="paragraph">
-<p>In the camel-jbang cli we introduced the options to prepare the exported project to be able to use this feature.</p>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre class="highlightjs highlight"><code class="language-bash hljs" data-lang="bash">camel export --secrets-refresh --secrets-refresh-providers=aws,gcp,azure --runtime=quarkus --gav=com.foo:acme:1.0-SNAPSHOT  --directory=../myproject</code></pre>
-</div>
-</div>
-<div class="paragraph">
-<p>This command will automatically add the Camel-Quarkus extensions for AWS Secrets Manager, Google Secret Manager and Azure Key Vault to the exported POM and also it will add the required options (to be set) in the application.properties file.</p>
-</div>
-<div class="paragraph">
-<p>These options will work for Quarkus, Spring-Boot and Camel-main runtime.</p>
 </div>
 </div>
 <div class="sect2">
@@ -3958,16 +5716,20 @@ which also can be used to specific parameters for export such as selecting the r
 <td class="tableblock halign-left valign-top"><p class="tableblock">Additional dependencies (Use commas to separate multiple dependencies). See more details at <a href="#_adding_custom_jars">Adding custom JARs</a>.</p></td>
 </tr>
 <tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>camel.jbang.excludes</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Exclude files by name or pattern. Multiple names can be separated by comma.</p></td>
+</tr>
+<tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>camel.jbang.classpathFiles</code></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Additional files to add to classpath (Use commas to separate multiple files). See more details at <a href="#_adding_custom_jars">Adding custom JARs</a>.</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>camel.jbang.jkubeFiles</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Resource fragments for Kubernetes (Use commas to separate multiple files). See more details at <a href="#_exporting_to_camel_main_for_kubernetes">Exporting to Camel Main for Kubernetes</a>.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Resource fragments for Kubernetes (Use commas to separate multiple files).</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>camel.jbang.javaVersion</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Java version (11 or 17)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Java version (17 or 21). Java 17 is default.</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>camel.jbang.kameletsVersion</code></p></td>
@@ -3999,27 +5761,35 @@ which also can be used to specific parameters for export such as selecting the r
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>camel.jbang.mavenWrapper</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Include Maven Wrapper files in exported project</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Include Maven Wrapper files in the exported project</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>camel.jbang.gradleWrapper</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Include Gradle Wrapper files in exported project</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Include Gradle Wrapper files in the exported project</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>camel.jbang.buildTool</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Build tool to use (maven or gradle)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Build tool to use (Maven or Gradle)</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>camel.jbang.repos</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>camel.jbang.repositories</code></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Additional maven repositories for download on-demand (Use commas to separate multiple repositories)</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>camel.jbang.mavenSettings</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Optional location of maven setting.xml file to configure servers, repositories, mirrors and proxies. If set to false, not even the default ~/.m2/settings.xml will be used.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Optional location of Maven settings.xml file to configure servers, repositories, mirrors, and proxies. If set to false, not even the default ~/.m2/settings.xml will be used.</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>camel.jbang.mavenSettingsSecurity</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Optional location of maven settings-security.xml file to decrypt settings.xml</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Optional location of Maven settings-security.xml file to decrypt settings.xml</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>camel.jbang.mavenCentralEnabled</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Whether downloading JARs from Maven Central repository is enabled</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>camel.jbang.mavenApacheSnapshotEnabled</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Whether downloading JARs from ASF Maven Snapshot repository is enabled</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>camel.jbang.exportDir</code></p></td>
@@ -4034,8 +5804,28 @@ which also can be used to specific parameters for export such as selecting the r
 <td class="tableblock halign-left valign-top"><p class="tableblock">Developer console at /q/dev on local HTTP server (port 8080 by default) when running standalone Camel</p></td>
 </tr>
 <tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>camel.jbang.info</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Info console at /q/info on local HTTP server (port 8080 by default) when running standalone Camel</p></td>
+</tr>
+<tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>camel.jbang.health</code></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Health check at /q/health on local HTTP server (port 8080 by default) when running standalone Camel</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>camel.jbang.metrics</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Metrics (Micrometer and Prometheus) at /q/metrics on local HTTP server (port 8080 by default) when running standalone Camel</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>camel.jbang.open-api</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">File name of open-api spec file (JSON or YAML) that are used when using <code>--open-api</code> to generate routes from the swagger/openapi API spec file.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>camel.jbang.ignoreLoadingError</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Whether to ignore route loading and compilation errors (use this with care!)</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>camel.jbang.jib-maven-plugin-version</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Version to use for jib-maven-plugin if exporting to camel-main and have Kubernetes enabled (jkube.xxx options).</p></td>
 </tr>
 </tbody>
 </table>
@@ -4046,7 +5836,7 @@ which also can be used to specific parameters for export such as selecting the r
 <i class="fa icon-note" title="Note"></i>
 </td>
 <td class="content">
-These are options from the export command, so you can see mor details and default values using <code>camel export --help</code>.
+These are options from the export command, so you can see more details and default values using <code>camel export --help</code>.
 </td>
 </tr>
 </table>
@@ -4084,6 +5874,25 @@ These are options from the export command, so you can see mor details and defaul
 <div class="paragraph">
 <p>The user configuration file is stored in <code>~/.camel-jbang-user.properties</code></p>
 </div>
+<div class="admonitionblock important">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-important" title="Important"></i>
+</td>
+<td class="content">
+You cannot use both a set version via <code>camel config set</code> and also a version specified via <code>--camel-version</code> option,
+i.e., the following is not possible:
+</td>
+</tr>
+</table>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-bash hljs" data-lang="bash">camel config set camel-version=4.0.1
+camel run * --camel-version=4.3.0</code></pre>
+</div>
+</div>
 <div class="sect2">
 <h3 id="_set_and_unset_configuration"><a class="anchor" href="#_set_and_unset_configuration"></a>Set and unset configuration</h3>
 <div class="paragraph">
@@ -4120,7 +5929,7 @@ camel export</code></pre>
 </div>
 </div>
 <div class="paragraph">
-<p>Following is the output for the above mentioned configuration.</p>
+<p>Following is the output for the above-mentioned configuration.</p>
 </div>
 <div class="listingblock">
 <div class="content">
@@ -4141,7 +5950,7 @@ com.foo:acme:1.0-SNAPSHOT</code></pre>
 </div>
 </div>
 <div class="sect2">
-<h3 id="_placeholders_substitutes"><a class="anchor" href="#_placeholders_substitutes"></a>Placeholders substitutes</h3>
+<h3 id="_placeholders_substitutes"><a class="anchor" href="#_placeholders_substitutes"></a>Placeholders' substitutes</h3>
 <div class="paragraph">
 <p>User configuration values can be used as placeholder substitutes with command line properties, for example:</p>
 </div>
@@ -4185,7 +5994,7 @@ are downloaded to your local Maven repository <code>~/.m2</code>.</p>
 </div>
 <div class="paragraph">
 <p>So if you find problems with running Camel JBang using what is seems like an outdated JAR, then you can
-try to delete these directories, or parts of it.</p>
+try to delete these directories or parts of it.</p>
 </div>
 </div>
 </div>

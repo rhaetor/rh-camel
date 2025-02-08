@@ -3,15 +3,15 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>Camel Report Maven Plugin :: Red Hat Apache Build of Apache Camel Manual</title>
-    <meta name="generator" content="Antora 3.0.3">
+    <title>Camel Report Maven Plugin :: Red Hat build of Apache Camel</title>
+    <meta name="generator" content="Antora 3.1.4">
     <link rel="stylesheet" href="../_/css/site.css">
   </head>
   <body class="article">
 <header class="header">
   <nav class="navbar">
     <div class="navbar-brand">
-      <a class="navbar-item" href="../../manual/index.html">Red Hat Apache Build of Apache Camel Manual</a>
+      <a class="navbar-item" href="/">Red Hat build of Apache Camel</a>
       <button class="navbar-burger" data-target="topbar-nav">
         <span></span>
         <span></span>
@@ -26,6 +26,7 @@
     <div class="panels">
 <div class="nav-panel-menu is-active" data-panel="menu">
   <nav class="nav-menu">
+    <button class="nav-menu-toggle" aria-label="Toggle expand/collapse all" style="display: none"></button>
     <h3 class="title"><a href="index.html">User manual</a></h3>
 <ul class="nav-list">
   <li class="nav-item" data-depth="0">
@@ -56,7 +57,16 @@
     <a class="nav-link" href="camel-console.html">Camel Developer Console</a>
   </li>
   <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
     <a class="nav-link" href="camel-jbang.html">Camel JBang</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="camel-jbang-kubernetes.html">Camel Kubernetes plugin</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="camel-jbang-k.html">Camel K plugin</a>
+  </li>
+</ul>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="camel-maven-plugin.html">Camel Maven Plugin</a>
@@ -95,6 +105,9 @@
     <a class="nav-link" href="using-propertyplaceholder.html">How to use Camel property placeholders</a>
   </li>
   <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="variables.html">How to use Variables</a>
+  </li>
+  <li class="nav-item" data-depth="2">
     <button class="nav-item-toggle"></button>
     <a class="nav-link" href="testing.html">Testing</a>
 <ul class="nav-list">
@@ -110,7 +123,13 @@
 </ul>
   </li>
   <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
     <a class="nav-link" href="rest-dsl.html">Working with REST and Rest DSL</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="rest-dsl-openapi.html">Rest DSL contract first</a>
+  </li>
+</ul>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="writing-components.html">Writing Components</a>
@@ -477,9 +496,6 @@
     <a class="nav-link" href="faq/how-should-i-invoke-my-pojos-or-spring-services.html">How should I invoke my POJOs or Spring Services?</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="faq/how-to-avoid-importing-bunch-of-cxf-packages-when-start-up-the-camel-cxf-endpoint-from-osgi-platform-.html">How to avoid importing bunch of cxf packages when start up the camel-cxf endpoint from OSGi platform?</a>
-  </li>
-  <li class="nav-item" data-depth="2">
     <a class="nav-link" href="faq/how-to-avoid-sending-some-or-all-message-headers.html">How to avoid sending some or all message headers?</a>
   </li>
   <li class="nav-item" data-depth="2">
@@ -598,11 +614,11 @@
 <div class="nav-panel-explore" data-panel="explore">
   <div class="context">
     <span class="title">User manual</span>
-    <span class="version">default</span>
+    <span class="version"></span>
   </div>
   <ul class="components">
     <li class="component">
-      <a class="title" href="../components/next/index.html">Camel Components</a>
+      <div class="title"><a href="../components/next/index.html">Camel Components</a></div>
       <ul class="versions">
         <li class="version is-latest">
           <a href="../components/next/index.html">Next (Pre-release)</a>
@@ -610,12 +626,7 @@
       </ul>
     </li>
     <li class="component is-current">
-      <a class="title" href="index.html">User manual</a>
-      <ul class="versions">
-        <li class="version is-current is-latest">
-          <a href="index.html">default</a>
-        </li>
-      </ul>
+      <div class="title"><a href="index.html">User manual</a></div>
     </li>
   </ul>
 </div>
@@ -633,6 +644,7 @@
     <li><a href="camel-report-maven-plugin.html">Camel Maven Report Plugin</a></li>
   </ul>
 </nav>
+<div class="edit-this-page"><a href="file:///code/jboss/jboss-camel/docs/user-manual/modules/ROOT/pages/camel-report-maven-plugin.adoc">Edit this Page</a></div>
 </div>
   <div class="content">
 <aside class="toc sidebar" data-title="Contents" data-levels="2">
@@ -658,10 +670,10 @@
 </div>
 </div>
 <div class="sect1">
-<h2 id="_camelvalidate"><a class="anchor" href="#_camelvalidate"></a>camel:validate</h2>
+<h2 id="_camel_reportvalidate"><a class="anchor" href="#_camel_reportvalidate"></a>camel-report:validate</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>For validating the source code for mis configured Camel:</p>
+<p>For validating the source code for mis-configured Camel:</p>
 </div>
 <div class="ulist">
 <ul>
@@ -683,7 +695,7 @@
 </ul>
 </div>
 <div class="paragraph">
-<p>Then you can run the validate goal from the command line or from within your Java editor such as IDEA or Eclipse.</p>
+<p>Then you can run the <code>validate</code> goal from the command line or from within your Java editor such as IDEA or Eclipse.</p>
 </div>
 <div class="listingblock">
 <div class="content">
@@ -691,7 +703,7 @@
 </div>
 </div>
 <div class="paragraph">
-<p>You can also enable the plugin to automatic run as part of the build to catch these errors.</p>
+<p>You can also enable the plugin to run automatically as part of the build to catch these errors.</p>
 </div>
 <div class="listingblock">
 <div class="content">
@@ -737,6 +749,77 @@ changed accordingly to <code>process-test-classes</code> as shown below:</p>
 </div>
 </div>
 <div class="sect2">
+<h3 id="_running_the_goal_on_any_maven_project"><a class="anchor" href="#_running_the_goal_on_any_maven_project"></a>Running the goal on any Maven project</h3>
+<div class="paragraph">
+<p>You can also run the validate goal on any Maven project without having to add the plugin to the <code>pom.xml</code> file.
+Doing so requires to specify the plugin using its fully qualified name. For example to run the goal on
+the <code>camel-example-cdi</code> from Apache Camel you can run</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>$cd camel-example-cdi
+$mvn org.apache.camel:camel-report-maven-plugin:2.20.0:validate</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>which then runs and outputs the following:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>[INFO] ------------------------------------------------------------------------
+[INFO] Building Camel :: Example :: CDI 3.0.0
+[INFO] ------------------------------------------------------------------------
+[INFO]
+[INFO] --- camel-report-maven-plugin:3.0.0:validate (default-cli) @ camel-example-cdi ---
+[INFO] Endpoint validation success: (4 = passed, 0 = invalid, 0 = incapable, 0 = unknown components)
+[INFO] Simple validation success: (0 = passed, 0 = invalid)
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>The validation passed, and 4 endpoints was validated. Now suppose we made a typo in one of the Camel endpoint uris in the source code, such as:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">@Uri("timer:foo?period=5000")</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>is changed to include a typo error in the <code>period</code> option</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">@Uri("timer:foo?perid=5000")</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>And when running the <code>validate</code> goal again reports the following:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>[INFO] ------------------------------------------------------------------------
+[INFO] Building Camel :: Example :: CDI 3.0.0
+[INFO] ------------------------------------------------------------------------
+[INFO]
+[INFO] --- camel-report-maven-plugin:3.0.0:validate (default-cli) @ camel-example-cdi ---
+[WARNING] Endpoint validation error at: org.apache.camel.example.cdi.MyRoutes(MyRoutes.java:32)
+
+	timer:foo?perid=5000
+
+	                   perid    Unknown option. Did you mean: [period]
+
+
+[WARNING] Endpoint validation error: (3 = passed, 1 = invalid, 0 = incapable, 0 = unknown components)
+[INFO] Simple validation success: (0 = passed, 0 = invalid)
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------</pre>
+</div>
+</div>
+</div>
+<div class="sect2">
 <h3 id="_options"><a class="anchor" href="#_options"></a>Options</h3>
 <div class="paragraph">
 <p>The maven plugin <strong>validate</strong> goal supports the following options which can be configured from the command line (use <code>-D</code> syntax), or defined in the <code>pom.xml</code> file in the <code>&lt;configuration&gt;</code> tag.</p>
@@ -752,6 +835,11 @@ changed accordingly to <code>process-test-classes</code> as shown below:</p>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Parameter</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Default Value</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Description</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">skip</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">false</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Whether to skip the plugin execution.</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">downloadVersion</p></td>
@@ -843,10 +931,25 @@ changed accordingly to <code>process-test-classes</code> as shown below:</p>
 <td class="tableblock halign-left valign-top"><p class="tableblock">false</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Whether to show all endpoints and simple expressions (both invalid and valid).</p></td>
 </tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">downloadTransitiveArtifacts</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">false</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">When sourcesArtifacts are declared, this flag can be used to download transitive dependencies, carefully enable this flag since it will try to download the whole dependency tree.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">sourcesArtifacts</p></td>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">List of sources transitive dependencies that contain camel routes, this option can be used to download extra dependencies that contain camel route that your project may depend on.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">extraMavenRepositories</p></td>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">List of extra maven repositories.</p></td>
+</tr>
 </tbody>
 </table>
 <div class="paragraph">
-<p>For example to turn off ignoring usage of deprecated options from the command line, you can run:</p>
+<p>For example to turn on ignoring usage of deprecated options from the command line, you can run:</p>
 </div>
 <div class="listingblock">
 <div class="content">
@@ -870,18 +973,62 @@ $mvn org.apache.camel:camel-report-maven-plugin:3.0.0:validate -Dcamel.includeTe
 </div>
 </div>
 </div>
+<div class="sect2">
+<h3 id="_validate_apache_camel_routes_in_transitive_dependencies"><a class="anchor" href="#_validate_apache_camel_routes_in_transitive_dependencies"></a>Validate Apache Camel routes in transitive dependencies</h3>
+<div class="paragraph">
+<p>If your routes use <code>direct</code> or <code>seda</code> endpoints that are not present in the current project, but the routes are declared into a dependency of your project, you can edit the plugin configuration accordingly so that these routes can be taken into account by the Camel validate plugin.
+In particular, in order to use the validate plugin with transitive dependencies, <strong>sources jars are needed</strong>, for example:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Given the following Camel route <code>from("direct:in").to("direct:out")</code> defined in the current project</p>
+</li>
+<li>
+<p>The route <code>from("direct:out")</code> is declared into a dependency of your project, for example <code>my.company:routes-dependency:1.0</code></p>
+</li>
+<li>
+<p>If <code>routes-dependency</code> sources are released into a maven repository, the following plugin configuration can be used:</p>
+</li>
+</ul>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;plugin&gt;
+  &lt;groupId&gt;org.apache.camel&lt;/groupId&gt;
+  &lt;artifactId&gt;camel-report-maven-plugin&lt;/artifactId&gt;
+  &lt;executions&gt;
+    &lt;execution&gt;
+      &lt;phase&gt;package&lt;/phase&gt;
+      &lt;goals&gt;
+        &lt;goal&gt;validate&lt;/goal&gt;
+      &lt;/goals&gt;
+      &lt;configuration&gt;
+        &lt;sourcesArtifacts&gt;
+          &lt;sourcesArtifact&gt;my.company:routes-dependency:jar:sources:1.0&lt;/sourcesArtifact&gt;
+        &lt;/sourcesArtifacts&gt;
+        &lt;extraMavenRepositories&gt;
+          &lt;extraMavenRepository&gt;http://internal.repo:8080/maven&lt;/extraMavenRepository&gt;
+        &lt;/extraMavenRepositories&gt;
+      &lt;/configuration&gt;
+    &lt;/execution&gt;
+  &lt;/executions&gt;
+&lt;/plugin&gt;</code></pre>
+</div>
+</div>
+</div>
 </div>
 </div>
 <div class="sect1">
-<h2 id="_camelroute_coverage"><a class="anchor" href="#_camelroute_coverage"></a>camel:route-coverage</h2>
+<h2 id="_camel_reportroute_coverage"><a class="anchor" href="#_camel_reportroute_coverage"></a>camel-report:route-coverage</h2>
 <div class="sectionbody">
 <div class="paragraph">
 <p>For generating a report of the coverage of your Camel routes from unit testing.
 In the same manner you can generate Java code coverage reports, then this is the same but for Camel routes.
-You can therefore use this to know which parts of your Camel routes has been used or not.</p>
+You can therefore use this to know which parts of your Camel routes have been used or not.</p>
 </div>
 <div class="paragraph">
-<p>Camel uses JMX to capture metrics during tests which is used for calculating route coverage.
+<p>Camel uses JMX to capture metrics during tests which are used for calculating route coverage.
 You must have <code>camel-management</code> JAR on the classpath (can be test scoped)
 such as by declaring the following Maven dependency in your pom.xml file:</p>
 </div>
@@ -1062,6 +1209,11 @@ We can also see that this is one line 34 in the source code file, which is in th
 <td class="tableblock halign-left valign-top"><p class="tableblock">Description</p></td>
 </tr>
 <tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">skip</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">false</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Whether to skip the plugin execution.</p></td>
+</tr>
+<tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">failOnError</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">false</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Whether to fail if any of the routes has not 100% coverage.</p></td>
@@ -1087,14 +1239,19 @@ We can also see that this is one line 34 in the source code file, which is in th
 <td class="tableblock halign-left valign-top"><p class="tableblock">anonymousRoutes</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">false</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Whether to allow anonymous routes (routes without any route id assigned).
- By using route id&#8217;s then its safer to match the route cover data with the route source code.
+ By using route id&#8217;s then it is safer to match the route cover data with the route source code.
  Anonymous routes are less safe to use for route coverage as its harder to know exactly which route
  that was tested corresponds to which of the routes from the source code.</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">generateJacocoXmlReport</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">false</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Whether to generate a coverage-report in Jacoco XML format, when enabled it will generate a file: <code>target/site/jacoco/xmlJacoco.xml</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Whether to generate a coverage-report in Jacoco XML format. When enabled it will generate the file: <code>target/site/jacoco/xmlJacoco.xml</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">generateHtmlReport</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">false</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Whether to generate a coverage-report in HTML format. When enabled it will generate the file: <code>target/site/route-coverage/html/index.html</code></p></td>
 </tr>
 </tbody>
 </table>

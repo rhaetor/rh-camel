@@ -3,15 +3,15 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>Debugger :: Red Hat Apache Build of Apache Camel Manual</title>
-    <meta name="generator" content="Antora 3.0.3">
+    <title>Debugger :: Red Hat build of Apache Camel</title>
+    <meta name="generator" content="Antora 3.1.4">
     <link rel="stylesheet" href="../_/css/site.css">
   </head>
   <body class="article">
 <header class="header">
   <nav class="navbar">
     <div class="navbar-brand">
-      <a class="navbar-item" href="../../manual/index.html">Red Hat Apache Build of Apache Camel Manual</a>
+      <a class="navbar-item" href="/">Red Hat build of Apache Camel</a>
       <button class="navbar-burger" data-target="topbar-nav">
         <span></span>
         <span></span>
@@ -26,6 +26,7 @@
     <div class="panels">
 <div class="nav-panel-menu is-active" data-panel="menu">
   <nav class="nav-menu">
+    <button class="nav-menu-toggle" aria-label="Toggle expand/collapse all" style="display: none"></button>
     <h3 class="title"><a href="index.html">User manual</a></h3>
 <ul class="nav-list">
   <li class="nav-item" data-depth="0">
@@ -56,7 +57,16 @@
     <a class="nav-link" href="camel-console.html">Camel Developer Console</a>
   </li>
   <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
     <a class="nav-link" href="camel-jbang.html">Camel JBang</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="camel-jbang-kubernetes.html">Camel Kubernetes plugin</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="camel-jbang-k.html">Camel K plugin</a>
+  </li>
+</ul>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="camel-maven-plugin.html">Camel Maven Plugin</a>
@@ -95,6 +105,9 @@
     <a class="nav-link" href="using-propertyplaceholder.html">How to use Camel property placeholders</a>
   </li>
   <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="variables.html">How to use Variables</a>
+  </li>
+  <li class="nav-item" data-depth="2">
     <button class="nav-item-toggle"></button>
     <a class="nav-link" href="testing.html">Testing</a>
 <ul class="nav-list">
@@ -110,7 +123,13 @@
 </ul>
   </li>
   <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
     <a class="nav-link" href="rest-dsl.html">Working with REST and Rest DSL</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="rest-dsl-openapi.html">Rest DSL contract first</a>
+  </li>
+</ul>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="writing-components.html">Writing Components</a>
@@ -477,9 +496,6 @@
     <a class="nav-link" href="faq/how-should-i-invoke-my-pojos-or-spring-services.html">How should I invoke my POJOs or Spring Services?</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="faq/how-to-avoid-importing-bunch-of-cxf-packages-when-start-up-the-camel-cxf-endpoint-from-osgi-platform-.html">How to avoid importing bunch of cxf packages when start up the camel-cxf endpoint from OSGi platform?</a>
-  </li>
-  <li class="nav-item" data-depth="2">
     <a class="nav-link" href="faq/how-to-avoid-sending-some-or-all-message-headers.html">How to avoid sending some or all message headers?</a>
   </li>
   <li class="nav-item" data-depth="2">
@@ -598,11 +614,11 @@
 <div class="nav-panel-explore" data-panel="explore">
   <div class="context">
     <span class="title">User manual</span>
-    <span class="version">default</span>
+    <span class="version"></span>
   </div>
   <ul class="components">
     <li class="component">
-      <a class="title" href="../components/next/index.html">Camel Components</a>
+      <div class="title"><a href="../components/next/index.html">Camel Components</a></div>
       <ul class="versions">
         <li class="version is-latest">
           <a href="../components/next/index.html">Next (Pre-release)</a>
@@ -610,12 +626,7 @@
       </ul>
     </li>
     <li class="component is-current">
-      <a class="title" href="index.html">User manual</a>
-      <ul class="versions">
-        <li class="version is-current is-latest">
-          <a href="index.html">default</a>
-        </li>
-      </ul>
+      <div class="title"><a href="index.html">User manual</a></div>
     </li>
   </ul>
 </div>
@@ -633,6 +644,7 @@
     <li><a href="debugger.html">Debugger</a></li>
   </ul>
 </nav>
+<div class="edit-this-page"><a href="file:///code/jboss/jboss-camel/docs/user-manual/modules/ROOT/pages/debugger.adoc">Edit this Page</a></div>
 </div>
   <div class="content">
 <aside class="toc sidebar" data-title="Contents" data-levels="2">
@@ -643,11 +655,11 @@
 <div id="preamble">
 <div class="sectionbody">
 <div class="paragraph">
-<p>The Camel Debugger is intended for 3rd party tooling to make it possible to
+<p>The Camel Debugger is intended for third party tooling to make it possible to
 debug routes, trace messages and to use breakpoints with the EIP patterns in the Camel routes.</p>
 </div>
 <div class="paragraph">
-<p>The Debugger allows tooling or the likes to attach breakpoints which is
+<p>The Debugger allows tooling or the likes to attach breakpoints which are
 being invoked when <a href="exchange.html" class="xref page">Exchanges</a> are routed.</p>
 </div>
 </div>
@@ -791,7 +803,9 @@ which can be used to extend for custom implementations.</p>
 <div class="sect2">
 <h3 id="_camel_route_debugger_through_jmx"><a class="anchor" href="#_camel_route_debugger_through_jmx"></a>Camel Route debugger through JMX</h3>
 <div class="paragraph">
-<p>There is also a <a href="backlog-debugger.html" class="xref page">Backlog Debugger</a> which allows debugging from JMX. It is automatically provided when <code>camel-debug</code> is on the classpath (since 3.16) or when using the <code>camel:debug</code> Maven goal (since 3.18).</p>
+<p>There is also a <a href="backlog-debugger.html" class="xref page">Backlog Debugger</a> that allows debugging from JMX.
+It is automatically provided when <code>camel-debug</code> is on the classpath (since 3.16) or when
+using the <code>camel:debug</code> Maven goal (since 3.18).</p>
 </div>
 <div class="paragraph">
 <p>To be able to have enough time to add your breakpoints, since 3.18, you could need to suspend the message processing of Camel to make sure
@@ -801,12 +815,12 @@ that you won&#8217;t miss any messages. For this kind of need, you have to set e
 <p>In case the environment variable and the system property are both set, the value of the environment variable is used.</p>
 </div>
 <div class="paragraph">
-<p>Several 3rd party tooling are using it:</p>
+<p>Several third-party tools are using it:</p>
 </div>
 <div class="ulist">
 <ul>
 <li>
-<p><a href="https://hawt.io/">hawtio</a> uses this for its web based debugging functionality</p>
+<p><a href="https://hawt.io/">hawtio</a> uses this for its web-based debugging functionality</p>
 </li>
 <li>
 <p><a href="https://marketplace.visualstudio.com/items?itemName=redhat.vscode-debug-adapter-apache-camel">VS Code Debug Adapter for Camel</a></p>

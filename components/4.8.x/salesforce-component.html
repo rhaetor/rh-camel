@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>Salesforce :: Red Hat Camel Reference</title>
+    <title>Salesforce :: Red Hat build of Apache Camel</title>
     <meta name="description" content="Communicate with Salesforce using Java DTOs.">
     <meta name="generator" content="Antora 3.1.4">
     <link rel="stylesheet" href="../../_/css/site.css">
@@ -12,7 +12,7 @@
 <header class="header">
   <nav class="navbar">
     <div class="navbar-brand">
-      <a class="navbar-item" href="../../manual/index.html">Red Hat Apache Build of Apache Camel Manual</a>
+      <a class="navbar-item" href="/">Red Hat build of Apache Camel</a>
       <button class="navbar-burger" data-target="topbar-nav">
         <span></span>
         <span></span>
@@ -27,6 +27,7 @@
     <div class="panels">
 <div class="nav-panel-menu is-active" data-panel="menu">
   <nav class="nav-menu">
+    <button class="nav-menu-toggle" aria-label="Toggle expand/collapse all" style="display: none"></button>
     <h3 class="title"><a href="index.html">Camel Components</a></h3>
 <ul class="nav-list">
   <li class="nav-item" data-depth="0">
@@ -36,7 +37,46 @@
     <a class="nav-link" href="index.html">Components</a>
 <ul class="nav-list">
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="activemq-component.html">ActiveMQ</a>
+    <a class="nav-link" href="activemq-component.html">ActiveMQ 5.x</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="activemq6-component.html">ActiveMQ 6.x</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="ai-summary.html">AI</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="chatscript-component.html">ChatScript</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="djl-component.html">Deep Java Library</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="langchain4j-chat-component.html">LangChain4j Chat</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="langchain4j-embeddings-component.html">LangChain4j Embeddings</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="langchain4j-tokenizer-component.html">LangChain4j Tokenizer</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="langchain4j-tools-component.html">LangChain4j Tools</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="langchain4j-web-search-component.html">LangChain4j Web Search</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="milvus-component.html">Milvus</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="pinecone-component.html">Pinecone</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="qdrant-component.html">Qdrant</a>
+  </li>
+</ul>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="amqp-component.html">AMQP</a>
@@ -65,6 +105,15 @@
 <ul class="nav-list">
   <li class="nav-item" data-depth="3">
     <a class="nav-link" href="aws2-athena-component.html">AWS Athena</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="aws-bedrock-component.html">AWS Bedrock</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="aws-bedrock-agent-component.html">AWS Bedrock Agent</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="aws-bedrock-agent-runtime-component.html">AWS Bedrock Agent Runtime</a>
   </li>
   <li class="nav-item" data-depth="3">
     <a class="nav-link" href="aws-cloudtrail-component.html">AWS Cloudtrail</a>
@@ -169,7 +218,7 @@
     <a class="nav-link" href="azure-storage-blob-component.html">Azure Storage Blob Service</a>
   </li>
   <li class="nav-item" data-depth="3">
-    <a class="nav-link" href="azure-storage-datalake-component.html">Azure Storage Datalake Service</a>
+    <a class="nav-link" href="azure-storage-datalake-component.html">Azure Storage Data Lake Service</a>
   </li>
   <li class="nav-item" data-depth="3">
     <a class="nav-link" href="azure-storage-queue-component.html">Azure Storage Queue Service</a>
@@ -202,9 +251,6 @@
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="cql-component.html">Cassandra CQL</a>
-  </li>
-  <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="chatscript-component.html">ChatScript</a>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="chunk-component.html">Chunk</a>
@@ -277,9 +323,6 @@
     <a class="nav-link" href="debezium-sqlserver-component.html">Debezium SQL Server Connector</a>
   </li>
 </ul>
-  </li>
-  <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="djl-component.html">Deep Java Library</a>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="dhis2-component.html">DHIS2</a>
@@ -395,6 +438,9 @@
   </li>
   <li class="nav-item" data-depth="3">
     <a class="nav-link" href="google-pubsub-component.html">Google Pubsub</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="google-pubsub-lite-component.html">Google PubSub Lite</a>
   </li>
   <li class="nav-item" data-depth="3">
     <a class="nav-link" href="google-secret-manager-component.html">Google Secret Manager</a>
@@ -687,7 +733,7 @@
     <a class="nav-link" href="ldif-component.html">LDIF</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="log-component.html">Log</a>
+    <a class="nav-link" href="log-component.html">Log Data</a>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="lucene-component.html">Lucene</a>
@@ -900,16 +946,49 @@
     <a class="nav-link" href="smb-component.html">SMB</a>
   </li>
   <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="smooks-component.html">Smooks</a>
+  </li>
+  <li class="nav-item" data-depth="2">
     <a class="nav-link" href="smpp-component.html">SMPP</a>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="snmp-component.html">SNMP</a>
   </li>
   <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="solr-component.html">Solr</a>
+  </li>
+  <li class="nav-item" data-depth="2">
     <a class="nav-link" href="splunk-component.html">Splunk</a>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="splunk-hec-component.html">Splunk HEC</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="spring-summary.html">Spring</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="spring-batch-component.html">Spring Batch</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="spring-event-component.html">Spring Event</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="spring-jdbc-component.html">Spring JDBC</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="spring-ldap-component.html">Spring LDAP</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="spring-rabbitmq-component.html">Spring RabbitMQ</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="spring-redis-component.html">Spring Redis</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="spring-ws-component.html">Spring WebService</a>
+  </li>
+</ul>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="sql-component.html">SQL</a>
@@ -937,6 +1016,18 @@
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="stub-component.html">Stub</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="tahu-summary.html">Tahu</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="tahu-edge-component.html">Tahu Edge Node / Device</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="tahu-host-component.html">Tahu Host Application</a>
+  </li>
+</ul>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="telegram-component.html">Telegram</a>
@@ -999,7 +1090,7 @@
     <a class="nav-link" href="whatsapp-component.html">WhatsApp</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="wordpress-component.html">Wordpress</a>
+    <a class="nav-link" href="wordpress-component.html">WordPress</a>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="workday-component.html">Workday</a>
@@ -1392,7 +1483,13 @@
     <a class="nav-link" href="others/openapi-java.html">Openapi Java</a>
   </li>
   <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="others/openapi-validator.html">Openapi Validator</a>
+  </li>
+  <li class="nav-item" data-depth="2">
     <a class="nav-link" href="others/opentelemetry.html">OpenTelemetry</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="others/platform-http-jolokia.html">Platform HTTP Jolokia</a>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="others/platform-http-main.html">Platform Http Main</a>
@@ -1540,7 +1637,7 @@
     <a class="nav-link" href="eips/event-message.html">Event Message</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="eips/failover-eip.html">Failover</a>
+    <a class="nav-link" href="eips/failoverLoadBalancer-eip.html">Failover Load Balancer</a>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="eips/faultToleranceConfiguration-eip.html">Fault Tolerance Configuration</a>
@@ -1570,13 +1667,13 @@
     <a class="nav-link" href="eips/loadBalance-eip.html">Load Balance</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="eips/log-eip.html">Log</a>
+    <a class="nav-link" href="eips/log-eip.html">Logger</a>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="eips/loop-eip.html">Loop</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="eips/marshal-eip.html">Marshal EIP</a>
+    <a class="nav-link" href="eips/marshal-eip.html">Marshal</a>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="eips/message.html">Message</a>
@@ -1633,6 +1730,9 @@
     <a class="nav-link" href="eips/point-to-point-channel.html">Point to Point Channel</a>
   </li>
   <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="eips/poll-eip.html">Poll</a>
+  </li>
+  <li class="nav-item" data-depth="2">
     <a class="nav-link" href="eips/pollEnrich-eip.html">Poll Enrich</a>
   </li>
   <li class="nav-item" data-depth="2">
@@ -1648,7 +1748,7 @@
     <a class="nav-link" href="eips/publish-subscribe-channel.html">Publish Subscribe Channel</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="eips/random-eip.html">Random</a>
+    <a class="nav-link" href="eips/randomLoadBalancer-eip.html">Random Load Balancer</a>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="eips/recipientList-eip.html">Recipient List</a>
@@ -1690,7 +1790,7 @@
     <a class="nav-link" href="eips/rollback-eip.html">Rollback</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="eips/roundRobin-eip.html">Round Robin</a>
+    <a class="nav-link" href="eips/roundRobinLoadBalancer-eip.html">Round Robin Load Balancer</a>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="eips/routingSlip-eip.html">Routing Slip</a>
@@ -1702,7 +1802,7 @@
     <a class="nav-link" href="eips/sample-eip.html">Sample</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="eips/scatter-gather.html">Scatter Gather</a>
+    <a class="nav-link" href="eips/scatter-gather.html">Scatter-Gather</a>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="eips/script-eip.html">Script</a>
@@ -1732,6 +1832,9 @@
     <a class="nav-link" href="eips/setVariable-eip.html">Set Variable</a>
   </li>
   <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="eips/setVariables-eip.html">Set Variables</a>
+  </li>
+  <li class="nav-item" data-depth="2">
     <a class="nav-link" href="eips/sort-eip.html">Sort</a>
   </li>
   <li class="nav-item" data-depth="2">
@@ -1741,7 +1844,7 @@
     <a class="nav-link" href="eips/step-eip.html">Step</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="eips/sticky-eip.html">Sticky</a>
+    <a class="nav-link" href="eips/stickyLoadBalancer-eip.html">Sticky Load Balancer</a>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="eips/stop-eip.html">Stop</a>
@@ -1762,7 +1865,7 @@
     <a class="nav-link" href="eips/toD-eip.html">To D</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="eips/topic-eip.html">Topic</a>
+    <a class="nav-link" href="eips/topicLoadBalancer-eip.html">Topic Load Balancer</a>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="eips/transactional-client.html">Transactional Client</a>
@@ -1771,13 +1874,13 @@
     <a class="nav-link" href="eips/transform-eip.html">Transform</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="eips/unmarshal-eip.html">Unmarshal EIP</a>
+    <a class="nav-link" href="eips/unmarshal-eip.html">Unmarshal</a>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="eips/validate-eip.html">Validate</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="eips/weighted-eip.html">Weighted</a>
+    <a class="nav-link" href="eips/weightedLoadBalancer-eip.html">Weighted Load Balancer</a>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="eips/wireTap-eip.html">Wire Tap</a>
@@ -1796,7 +1899,7 @@
   </div>
   <ul class="components">
     <li class="component is-current">
-      <a class="title" href="index.html">Camel Components</a>
+      <div class="title"><a href="index.html">Camel Components</a></div>
       <ul class="versions">
         <li class="version is-current is-latest">
           <a href="index.html">Next (Pre-release)</a>
@@ -1804,12 +1907,7 @@
       </ul>
     </li>
     <li class="component">
-      <a class="title" href="../../manual/index.html">User manual</a>
-      <ul class="versions">
-        <li class="version is-latest">
-          <a href="../../manual/index.html">default</a>
-        </li>
-      </ul>
+      <div class="title"><a href="../../manual/index.html">User manual</a></div>
     </li>
   </ul>
 </div>
@@ -1827,6 +1925,7 @@
     <li><a href="salesforce-component.html">Salesforce</a></li>
   </ul>
 </nav>
+<div class="edit-this-page"><a href="file:///code/jboss/jboss-camel/docs/components/modules/ROOT/pages/salesforce-component.adoc">Edit this Page</a></div>
 </div>
   <div class="content">
 <aside class="toc sidebar" data-title="Contents" data-levels="2">
@@ -1857,7 +1956,7 @@ generates these DTOs.</p>
 <div class="paragraph">
 <p>Developers wishing to contribute to the component are instructed
 to look at the <a href="https://github.com/apache/camel/tree/main/components/camel-salesforce/camel-salesforce-component/README.md">README.md</a> file on instructions on how to get started and
-setup your environment for running integration tests.</p>
+set up your environment for running integration tests.</p>
 </div>
 </td>
 </tr>
@@ -1908,7 +2007,7 @@ setup your environment for running integration tests.</p>
 <p><strong>Generate DTOs</strong>. Optionally, generate Java DTOs to represent your salesforce objects. This step isn&#8217;t a hard requirement per se, but most use cases will benefit from the type safety and auto-completion. Use the <a href="#MavenPlugin">maven plugin</a> to generate DTOs for the salesforce objects you&#8217;ll be working with.</p>
 </li>
 <li>
-<p><strong>Configure authentication</strong>. Using the OAuth key and secret you generated previously, configure salesforce <a href="#AuthenticatingToSalesforce">authentication</a>.</p>
+<p><strong>Configure authentication</strong>. Using the OAuth key and secret, you generated previously, configure salesforce <a href="#AuthenticatingToSalesforce">authentication</a>.</p>
 </li>
 <li>
 <p><strong>Create routes</strong>. Starting creating routes that interact with salesforce!</p>
@@ -1936,37 +2035,65 @@ setup your environment for running integration tests.</p>
 <div class="sect2">
 <h3 id="_configuring_component_options"><a class="anchor" href="#_configuring_component_options"></a>Configuring Component Options</h3>
 <div class="paragraph">
-<p>The component level is the highest level which holds general and common configurations that are inherited by the endpoints.
-For example a component may have security settings, credentials for authentication, urls for network connection and so forth.</p>
+<p>At the component level, you set general and shared configurations that are, then, inherited by the endpoints. It is the highest configuration level.</p>
 </div>
 <div class="paragraph">
-<p>Some components only have a few options, and others may have many. Because components typically have pre configured defaults
-that are commonly used, then you may often only need to configure a few options on a component; or none at all.</p>
+<p>For example, a component may have security settings, credentials for authentication, urls for network connection and so forth.</p>
 </div>
 <div class="paragraph">
-<p>Configuring components can be done with the <a href="../../manual/component-dsl.html" class="xref page">Component DSL</a>,
-in a configuration file (application.properties|yaml), or directly with Java code.</p>
+<p>Some components only have a few options, and others may have many.
+Because components typically have pre-configured defaults that are commonly used, then you may often only need to configure a few options on a component; or none at all.</p>
+</div>
+<div class="paragraph">
+<p>You can configure components using:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>the <a href="../../manual/component-dsl.html" class="xref page">Component DSL</a>.</p>
+</li>
+<li>
+<p>in a configuration file (<code>application.properties</code>, <code>*.yaml</code> files, etc).</p>
+</li>
+<li>
+<p>directly in the Java code.</p>
+</li>
+</ul>
 </div>
 </div>
 <div class="sect2">
 <h3 id="_configuring_endpoint_options"><a class="anchor" href="#_configuring_endpoint_options"></a>Configuring Endpoint Options</h3>
 <div class="paragraph">
-<p>Where you find yourself configuring the most is on endpoints, as endpoints often have many options, which allows you to
-configure what you need the endpoint to do. The options are also categorized into whether the endpoint is used as consumer (from)
-or as a producer (to), or used for both.</p>
+<p>You usually spend more time setting up endpoints because they have many options.
+These options help you customize what you want the endpoint to do.
+The options are also categorized into whether the endpoint is used as a consumer (<em>from</em>), as a producer (<em>to</em>), or  both.</p>
 </div>
 <div class="paragraph">
-<p>Configuring endpoints is most often done directly in the endpoint URI as path and query parameters. You can also use
-the <a href="../../manual/Endpoint-dsl.html" class="xref page">Endpoint DSL</a> and <a href="../../manual/dataformat-dsl.html" class="xref page">DataFormat DSL</a>
+<p>Configuring endpoints is most often done directly in the endpoint URI as <em>path</em> and <em>query</em> parameters.
+You can also use the <a href="../../manual/Endpoint-dsl.html" class="xref page">Endpoint DSL</a> and <a href="../../manual/dataformat-dsl.html" class="xref page">DataFormat DSL</a>
 as a <em>type safe</em> way of configuring endpoints and data formats in Java.</p>
 </div>
 <div class="paragraph">
-<p>A good practice when configuring options is to use <a href="../../manual/using-propertyplaceholder.html" class="xref page">Property Placeholders</a>,
-which allows to not hardcode urls, port numbers, sensitive information, and other settings.
-In other words placeholders allows to externalize the configuration from your code, and gives more flexibility and reuse.</p>
+<p>A good practice when configuring options is to use <a href="../../manual/using-propertyplaceholder.html" class="xref page">Property Placeholders</a>.</p>
 </div>
 <div class="paragraph">
-<p>The following two sections lists all the options, firstly for the component followed by the endpoint.</p>
+<p>Property placeholders provide a few benefits:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>They help prevent using hardcoded urls, port numbers, sensitive information, and other settings.</p>
+</li>
+<li>
+<p>They allow externalizing the configuration from the code.</p>
+</li>
+<li>
+<p>They help the code to become more flexible and reusable.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>The following two sections list all the options, firstly for the component followed by the endpoint.</p>
 </div>
 </div>
 </div>
@@ -2718,7 +2845,7 @@ In other words placeholders allows to externalize the configuration from your co
 <td class="tableblock halign-left valign-top"><p class="tableblock"><a id="_component_option_eventSchemaFormat"></a>
 <a href="#_component_option_eventSchemaFormat" class="anchor"></a><strong>eventSchemaFormat</strong> (producer)</p></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>EXPANDED: Apache Avro format but doesnt strictly adhere to the record complex type. COMPACT: Apache Avro, adheres to the specification for the record complex type. This parameter is available in API version 43.0 and later.</p>
+<p>EXPANDED: Apache Avro format but doesn&#8217;t strictly adhere to the record complex type. COMPACT: Apache Avro, adheres to the specification for the record complex type. This parameter is available in API version 43.0 and later.</p>
 </div>
 <div class="paragraph">
 <p>Enum values:</p>
@@ -2848,7 +2975,7 @@ In other words placeholders allows to externalize the configuration from your co
 <td class="tableblock halign-left valign-top"><p class="tableblock"><a id="_component_option_authenticationType"></a>
 <a href="#_component_option_authenticationType" class="anchor"></a><strong>authenticationType</strong> (security)</p></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>Explicit authentication method to be used, one of USERNAME_PASSWORD, REFRESH_TOKEN or JWT. Salesforce component can auto-determine the authentication method to use from the properties set, set this property to eliminate any ambiguity.</p>
+<p>Explicit authentication method to be used, one of USERNAME_PASSWORD, REFRESH_TOKEN, CLIENT_CREDENTIALS, or JWT. Salesforce component can auto-determine the authentication method to use from the properties set, set this property to eliminate any ambiguity.</p>
 </div>
 <div class="paragraph">
 <p>Enum values:</p>
@@ -2860,6 +2987,9 @@ In other words placeholders allows to externalize the configuration from your co
 </li>
 <li>
 <p>REFRESH_TOKEN</p>
+</li>
+<li>
+<p>CLIENT_CREDENTIALS</p>
 </li>
 <li>
 <p>JWT</p>
@@ -3074,7 +3204,7 @@ In other words placeholders allows to externalize the configuration from your co
 </div>
 </div>
 <div class="paragraph">
-<p>with the following path and query parameters:</p>
+<p>With the following <em>path</em> and <em>query</em> parameters:</p>
 </div>
 <div class="sect2">
 <h3 id="_path_parameters_2_parameters"><a class="anchor" href="#_path_parameters_2_parameters"></a>Path Parameters (2 parameters)</h3>
@@ -4022,7 +4152,7 @@ In other words placeholders allows to externalize the configuration from your co
 <td class="tableblock halign-left valign-top"><p class="tableblock"><a id="_endpoint_query_option_eventSchemaFormat"></a>
 <a href="#_endpoint_query_option_eventSchemaFormat" class="anchor"></a><strong>eventSchemaFormat</strong> (producer)</p></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>EXPANDED: Apache Avro format but doesnt strictly adhere to the record complex type. COMPACT: Apache Avro, adheres to the specification for the record complex type. This parameter is available in API version 43.0 and later.</p>
+<p>EXPANDED: Apache Avro format but doesn&#8217;t strictly adhere to the record complex type. COMPACT: Apache Avro, adheres to the specification for the record complex type. This parameter is available in API version 43.0 and later.</p>
 </div>
 <div class="paragraph">
 <p>Enum values:</p>
@@ -4326,8 +4456,10 @@ In other words placeholders allows to externalize the configuration from your co
 </div>
 </div>
 <div class="sect1">
-<h2 id="AuthenticatingToSalesforce"><a class="anchor" href="#AuthenticatingToSalesforce"></a>Authenticating to Salesforce</h2>
+<h2 id="_usage"><a class="anchor" href="#_usage"></a>Usage</h2>
 <div class="sectionbody">
+<div class="sect2">
+<h3 id="AuthenticatingToSalesforce"><a class="anchor" href="#AuthenticatingToSalesforce"></a>Authenticating to Salesforce</h3>
 <div class="paragraph">
 <p>The component supports three OAuth authentication flows:</p>
 </div>
@@ -4345,7 +4477,7 @@ In other words placeholders allows to externalize the configuration from your co
 </ul>
 </div>
 <div class="paragraph">
-<p>For each of the flows, different sets of properties needs to be set:</p>
+<p>For each of the flows, different sets of properties need to be set:</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
 <caption class="title">Table 1. Properties to set for each authentication flow</caption>
@@ -4363,32 +4495,32 @@ In other words placeholders allows to externalize the configuration from your co
 </thead>
 <tbody>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">clientId</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>clientId</code></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Connected App, Consumer Key</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">All flows</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">clientSecret</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>clientSecret</code></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Connected App, Consumer Secret</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Username-Password, Refresh Token</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Username-Password, Refresh Token, Client Credentials</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">userName</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>userName</code></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Salesforce user username</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Username-Password, JWT Bearer Token</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">password</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>password</code></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Salesforce user password</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Username-Password</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">refreshToken</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>refreshToken</code></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">From OAuth flow callback</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Refresh Token</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">keystore</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>keystore</code></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Connected App, Digital Certificate</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">JWT Bearer Token</p></td>
 </tr>
@@ -4422,19 +4554,17 @@ In other words placeholders allows to externalize the configuration from your co
 <div class="paragraph">
 <p>The certificate used in JWT Bearer Token Flow can be a self-signed
 certificate. The KeyStore holding the certificate and the private key
-must contain only single certificate-private key entry.</p>
+must contain only a single certificate-private key entry.</p>
 </div>
 </td>
 </tr>
 </table>
 </div>
 </div>
-</div>
-<div class="sect1">
-<h2 id="_general_usage"><a class="anchor" href="#_general_usage"></a>General Usage</h2>
-<div class="sectionbody">
 <div class="sect2">
-<h3 id="_uri_format"><a class="anchor" href="#_uri_format"></a>URI format</h3>
+<h3 id="_general_usage"><a class="anchor" href="#_general_usage"></a>General Usage</h3>
+<div class="sect3">
+<h4 id="_uri_format"><a class="anchor" href="#_uri_format"></a>URI format</h4>
 <div class="paragraph">
 <p>When used as a consumer, receiving streaming events, the URI scheme is:</p>
 </div>
@@ -4463,6 +4593,7 @@ The request message body should be an SObject DTO generated using the maven plug
 </div>
 </div>
 </div>
+</div>
 <div class="sect2">
 <h3 id="_passing_in_salesforce_headers_and_fetching_salesforce_response_headers"><a class="anchor" href="#_passing_in_salesforce_headers_and_fetching_salesforce_response_headers"></a>Passing in Salesforce headers and fetching Salesforce response headers</h3>
 <div class="paragraph">
@@ -4473,7 +4604,7 @@ response headers that start with <code>Sforce</code> will be present in the outb
 message headers.</p>
 </div>
 <div class="paragraph">
-<p>For example to fetch API limits you can specify:</p>
+<p>For example, to fetch API limits, you can specify:</p>
 </div>
 <div class="listingblock">
 <div class="content">
@@ -4497,9 +4628,8 @@ class MyProcessor implements Processor {
 <p>In addition, HTTP response status code and text are available as headers <code>Exchange.HTTP_RESPONSE_CODE</code> and
 <code>Exchange.HTTP_RESPONSE_TEXT</code>.</p>
 </div>
-</div>
-<div class="sect2">
-<h3 id="_sending_null_values_to_salesforce"><a class="anchor" href="#_sending_null_values_to_salesforce"></a>Sending null values to salesforce</h3>
+<div class="sect3">
+<h4 id="_sending_null_values_to_salesforce"><a class="anchor" href="#_sending_null_values_to_salesforce"></a>Sending null values to salesforce</h4>
 <div class="paragraph">
 <p>By default, SObject fields with null values are not sent to salesforce. In order to
 send null values to salesforce, use the <code>fieldsToNull</code> property, as follows:</p>
@@ -4511,10 +4641,8 @@ send null values to salesforce, use the <code>fieldsToNull</code> property, as f
 </div>
 </div>
 </div>
-</div>
-<div class="sect1">
-<h2 id="_supported_salesforce_apis"><a class="anchor" href="#_supported_salesforce_apis"></a>Supported Salesforce APIs</h2>
-<div class="sectionbody">
+<div class="sect2">
+<h3 id="_supported_salesforce_apis"><a class="anchor" href="#_supported_salesforce_apis"></a>Supported Salesforce APIs</h3>
 <div class="paragraph">
 <p>Camel supports the following Salesforce APIs:</p>
 </div>
@@ -4543,8 +4671,8 @@ send null values to salesforce, use the <code>fieldsToNull</code> property, as f
 </li>
 </ul>
 </div>
-<div class="sect2">
-<h3 id="RESTAPI"><a class="anchor" href="#RESTAPI"></a>REST API</h3>
+<div class="sect3">
+<h4 id="RESTAPI"><a class="anchor" href="#RESTAPI"></a>REST API</h4>
 <div class="paragraph">
 <p>The following operations are supported:</p>
 </div>
@@ -4599,8 +4727,8 @@ send null values to salesforce, use the <code>fieldsToNull</code> property, as f
 <p><a href="#query">query</a> - Runs a Salesforce SOQL query.</p>
 </li>
 <li>
-<p><a href="#queryMore">queryMore</a> - Retrieves more results (in case of large number of
-results) using result link returned from the 'query' API.</p>
+<p><a href="#queryMore">queryMore</a> - Retrieves more results (in case of a large number of
+results) using the result link returned from the 'query' API.</p>
 </li>
 <li>
 <p><a href="#queryAll">queryAll</a> - Runs a SOQL query. Unlike the query operation, queryAll returns records that are deleted because of a merge or delete. queryAll also returns information about archived task and event records.</p>
@@ -4650,8 +4778,8 @@ request as the input to a subsequent request.</p>
 <div class="paragraph">
 <p>Unless otherwise specified, DTO types for the following options are from  <code>org.apache.camel.component.salesforce.api.dto</code> or one if its sub-packages.</p>
 </div>
-<div class="sect3">
-<h4 id="getVersions"><a class="anchor" href="#getVersions"></a>Versions</h4>
+<div class="sect4">
+<h5 id="getVersions"><a class="anchor" href="#getVersions"></a>Versions</h5>
 <div class="paragraph">
 <p><code>getVersions</code></p>
 </div>
@@ -4665,8 +4793,8 @@ request as the input to a subsequent request.</p>
 <p>Type:  <code>List&lt;Version&gt;</code></p>
 </div>
 </div>
-<div class="sect3">
-<h4 id="getResources"><a class="anchor" href="#getResources"></a>Resources by Version</h4>
+<div class="sect4">
+<h5 id="getResources"><a class="anchor" href="#getResources"></a>Resources by Version</h5>
 <div class="paragraph">
 <p><code>getResources</code></p>
 </div>
@@ -4680,8 +4808,8 @@ request as the input to a subsequent request.</p>
 <p>Type: <code>Map&lt;String, String&gt;</code></p>
 </div>
 </div>
-<div class="sect3">
-<h4 id="limits"><a class="anchor" href="#limits"></a>Limits</h4>
+<div class="sect4">
+<h5 id="limits"><a class="anchor" href="#limits"></a>Limits</h5>
 <div class="paragraph">
 <p><code>limits</code></p>
 </div>
@@ -4727,8 +4855,8 @@ with either <code>0</code> (some API limits consumed) or <code>1</code> (no API 
 </div>
 </div>
 </div>
-<div class="sect3">
-<h4 id="recent"><a class="anchor" href="#recent"></a>Recently Viewed Items</h4>
+<div class="sect4">
+<h5 id="recent"><a class="anchor" href="#recent"></a>Recently Viewed Items</h5>
 <div class="paragraph">
 <p><code>recent</code></p>
 </div>
@@ -4790,8 +4918,8 @@ by specifying <code>limit</code> parameter set to maximum number of records to r
 </div>
 </div>
 </div>
-<div class="sect3">
-<h4 id="getGlobalObjects"><a class="anchor" href="#getGlobalObjects"></a>Describe Global</h4>
+<div class="sect4">
+<h5 id="getGlobalObjects"><a class="anchor" href="#getGlobalObjects"></a>Describe Global</h5>
 <div class="paragraph">
 <p><code>getGlobalObjects</code></p>
 </div>
@@ -4806,8 +4934,8 @@ as well as the maximum batch size permitted in queries.</p>
 <p>Type: <code>GlobalObjects</code></p>
 </div>
 </div>
-<div class="sect3">
-<h4 id="getBasicInfo"><a class="anchor" href="#getBasicInfo"></a>sObject Basic Information</h4>
+<div class="sect4">
+<h5 id="getBasicInfo"><a class="anchor" href="#getBasicInfo"></a>sObject Basic Information</h5>
 <div class="paragraph">
 <p><code>getBasicInfo</code></p>
 </div>
@@ -4848,8 +4976,8 @@ as well as the maximum batch size permitted in queries.</p>
 <p>Type: <code>SObjectBasicInfo</code></p>
 </div>
 </div>
-<div class="sect3">
-<h4 id="getDescription"><a class="anchor" href="#getDescription"></a>sObject Describe</h4>
+<div class="sect4">
+<h5 id="getDescription"><a class="anchor" href="#getDescription"></a>sObject Describe</h5>
 <div class="paragraph">
 <p><code>getDescription</code></p>
 </div>
@@ -4890,8 +5018,8 @@ as well as the maximum batch size permitted in queries.</p>
 <p>Type: <code>SObjectDescription</code></p>
 </div>
 </div>
-<div class="sect3">
-<h4 id="getSObject"><a class="anchor" href="#getSObject"></a>Retrieve SObject</h4>
+<div class="sect4">
+<h5 id="getSObject"><a class="anchor" href="#getSObject"></a>Retrieve SObject</h5>
 <div class="paragraph">
 <p><code>getSObject</code></p>
 </div>
@@ -4954,8 +5082,8 @@ overrides <code>sObjectName</code> and <code>sObjectId</code> parameters.</p></t
 <p>Type: Subclass of <code>AbstractSObjectBase</code></p>
 </div>
 </div>
-<div class="sect3">
-<h4 id="getSObjectWithId"><a class="anchor" href="#getSObjectWithId"></a>Retrieve SObject by External Id</h4>
+<div class="sect4">
+<h5 id="getSObjectWithId"><a class="anchor" href="#getSObjectWithId"></a>Retrieve SObject by External Id</h5>
 <div class="paragraph">
 <p><code>getSObjectWithId</code></p>
 </div>
@@ -5018,8 +5146,8 @@ overrides <code>sObjectName</code> and <code>sObjectIdValue</code> parameters.</
 <p>Type: Subclass of <code>AbstractSObjectBase</code></p>
 </div>
 </div>
-<div class="sect3">
-<h4 id="getBlobField"><a class="anchor" href="#getBlobField"></a>sObject Blob Retrieve</h4>
+<div class="sect4">
+<h5 id="getBlobField"><a class="anchor" href="#getBlobField"></a>sObject Blob Retrieve</h5>
 <div class="paragraph">
 <p><code>getBlobField</code></p>
 </div>
@@ -5054,7 +5182,7 @@ overrides <code>sObjectName</code> and <code>sObjectIdValue</code> parameters.</
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>sObjectName</code></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>String</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Name of SObject, e.g. Account</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Name of SObject, e.g., Account</p></td>
 <td class="tableblock halign-left valign-top"></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Required if SObject not supplied in body</p></td>
 </tr>
@@ -5083,8 +5211,8 @@ and <code>sObjectName</code> are not supplied</p></td>
 <p>Type: <code>InputStream</code></p>
 </div>
 </div>
-<div class="sect3">
-<h4 id="createSObject"><a class="anchor" href="#createSObject"></a>Create SObject</h4>
+<div class="sect4">
+<h5 id="createSObject"><a class="anchor" href="#createSObject"></a>Create SObject</h5>
 <div class="paragraph">
 <p><code>createSObject</code></p>
 </div>
@@ -5132,8 +5260,8 @@ and <code>sObjectName</code> are not supplied</p></td>
 <p>Type: <code>CreateSObjectResult</code></p>
 </div>
 </div>
-<div class="sect3">
-<h4 id="updateSObject"><a class="anchor" href="#updateSObject"></a>Update SObject</h4>
+<div class="sect4">
+<h5 id="updateSObject"><a class="anchor" href="#updateSObject"></a>Update SObject</h5>
 <div class="paragraph">
 <p><code>updateSObject</code></p>
 </div>
@@ -5182,8 +5310,8 @@ and <code>sObjectName</code> are not supplied</p></td>
 </tbody>
 </table>
 </div>
-<div class="sect3">
-<h4 id="upsertSObject"><a class="anchor" href="#upsertSObject"></a>Upsert SObject</h4>
+<div class="sect4">
+<h5 id="upsertSObject"><a class="anchor" href="#upsertSObject"></a>Upsert SObject</h5>
 <div class="paragraph">
 <p><code>upsertSObject</code></p>
 </div>
@@ -5245,8 +5373,8 @@ and <code>sObjectName</code> are not supplied</p></td>
 <p>Type: <code>UpsertSObjectResult</code></p>
 </div>
 </div>
-<div class="sect3">
-<h4 id="deleteSObject"><a class="anchor" href="#deleteSObject"></a>Delete SObject</h4>
+<div class="sect4">
+<h5 id="deleteSObject"><a class="anchor" href="#deleteSObject"></a>Delete SObject</h5>
 <div class="paragraph">
 <p><code>deleteSObject</code></p>
 </div>
@@ -5295,8 +5423,8 @@ and <code>sObjectName</code> are not supplied</p></td>
 </tbody>
 </table>
 </div>
-<div class="sect3">
-<h4 id="deleteSObjectWithId"><a class="anchor" href="#deleteSObjectWithId"></a>Delete SObject by External Id</h4>
+<div class="sect4">
+<h5 id="deleteSObjectWithId"><a class="anchor" href="#deleteSObjectWithId"></a>Delete SObject by External Id</h5>
 <div class="paragraph">
 <p><code>deleteSObjectWithId</code></p>
 </div>
@@ -5352,8 +5480,8 @@ and <code>sObjectName</code> are not supplied</p></td>
 </tbody>
 </table>
 </div>
-<div class="sect3">
-<h4 id="query"><a class="anchor" href="#query"></a>Query</h4>
+<div class="sect4">
+<h5 id="query"><a class="anchor" href="#query"></a>Query</h5>
 <div class="paragraph">
 <p><code>query</code></p>
 </div>
@@ -5416,8 +5544,8 @@ the correct <code>AbstractQueryRecordsBase</code> sublcass based on the response
 <p>Type: Instance of class supplied in <code>sObjectClass</code>, or <code>Iterator&lt;SomeSObject&gt;</code> if <code>streamQueryResult</code> is true. If <code>streamQueryResult</code> is true, the header <code>CamelSalesforceQueryResultTotalSize</code> is set to the number of records that matched the query.</p>
 </div>
 </div>
-<div class="sect3">
-<h4 id="queryMore"><a class="anchor" href="#queryMore"></a>Query More</h4>
+<div class="sect4">
+<h5 id="queryMore"><a class="anchor" href="#queryMore"></a>Query More</h5>
 <div class="paragraph">
 <p><code>queryMore</code></p>
 </div>
@@ -5474,8 +5602,8 @@ operations. If neither <code>sObjectClass</code> nor <code>sObjectName</code> ar
 <p>Type: Instance of class supplied in <code>sObjectClass</code></p>
 </div>
 </div>
-<div class="sect3">
-<h4 id="queryAll"><a class="anchor" href="#queryAll"></a>Query All</h4>
+<div class="sect4">
+<h5 id="queryAll"><a class="anchor" href="#queryAll"></a>Query All</h5>
 <div class="paragraph">
 <p><code>queryAll</code></p>
 </div>
@@ -5540,8 +5668,8 @@ response.</p>
 <p>Type: Instance of class supplied in <code>sObjectClass</code>, or <code>Iterator&lt;SomeSObject&gt;</code> if <code>streamQueryResult</code> is true.</p>
 </div>
 </div>
-<div class="sect3">
-<h4 id="sosl_search"><a class="anchor" href="#sosl_search"></a>Search</h4>
+<div class="sect4">
+<h5 id="sosl_search"><a class="anchor" href="#sosl_search"></a>Search</h5>
 <div class="paragraph">
 <p><code>search</code></p>
 </div>
@@ -5582,8 +5710,8 @@ response.</p>
 <p>Type: <code>SearchResult2</code></p>
 </div>
 </div>
-<div class="sect3">
-<h4 id="approval"><a class="anchor" href="#approval"></a>Submit Approval</h4>
+<div class="sect4">
+<h5 id="approval"><a class="anchor" href="#approval"></a>Submit Approval</h5>
 <div class="paragraph">
 <p><code>approval</code></p>
 </div>
@@ -5663,7 +5791,7 @@ a batch.</p>
 </ol>
 </div>
 <div class="paragraph">
-<p>For example to send one record for approval using values in headers use:</p>
+<p>For example, to send one record for approval using values in headers use:</p>
 </div>
 <div class="paragraph">
 <p>Given a route:</p>
@@ -5693,8 +5821,8 @@ final ApprovalResult result = template.requestBody("direct:example1", body, Appr
 </div>
 </div>
 </div>
-<div class="sect3">
-<h4 id="approvals"><a class="anchor" href="#approvals"></a>Get Approvals</h4>
+<div class="sect4">
+<h5 id="approvals"><a class="anchor" href="#approvals"></a>Get Approvals</h5>
 <div class="paragraph">
 <p><code>approvals</code></p>
 </div>
@@ -5708,8 +5836,8 @@ final ApprovalResult result = template.requestBody("direct:example1", body, Appr
 <p>Type: <code>Approvals</code></p>
 </div>
 </div>
-<div class="sect3">
-<h4 id="composite"><a class="anchor" href="#composite"></a>Composite</h4>
+<div class="sect4">
+<h5 id="composite"><a class="anchor" href="#composite"></a>Composite</h5>
 <div class="paragraph">
 <p><code>composite</code></p>
 </div>
@@ -5791,7 +5919,7 @@ by the route</p></td>
 <div class="paragraph">
 <p>As with the batch API, the results can vary from API to API so the body of each <code>SObjectCompositeResult</code> instance is given as a
 <code>java.lang.Object</code>. In most cases the result will be a <code>java.util.Map</code> with string keys and values or other
-<code>java.util.Map</code> as value. Requests are made in JSON format hold some type information (i.e. it is known what values are
+<code>java.util.Map</code> as value. Requests are made in JSON format hold some type information (i.e., it is known what values are
 strings and what values are numbers).</p>
 </div>
 </td>
@@ -5799,7 +5927,7 @@ strings and what values are numbers).</p>
 </table>
 </div>
 <div class="paragraph">
-<p>Lets look at an example:</p>
+<p>Let&#8217;s look at an example:</p>
 </div>
 <div class="listingblock">
 <div class="content">
@@ -5863,7 +5991,7 @@ final SObjectCompositeResult contactCreationResult = results.stream().filter(r -
 <p>The route directly creates the body as JSON and directly submit to salesforce endpoint using <code>rawPayload=true</code> option.</p>
 </div>
 <div class="paragraph">
-<p>With this approach, you have the complete control on the Salesforce request.</p>
+<p>With this approach, you have complete control on the Salesforce request.</p>
 </div>
 <div class="paragraph">
 <p><code>POST</code> is the default HTTP method used to send raw Composite requests to salesforce. Use the
@@ -5871,8 +5999,8 @@ final SObjectCompositeResult contactCreationResult = results.stream().filter(r -
 other available composite resources.</p>
 </div>
 </div>
-<div class="sect3">
-<h4 id="composite-tree"><a class="anchor" href="#composite-tree"></a>Composite Tree</h4>
+<div class="sect4">
+<h5 id="composite-tree"><a class="anchor" href="#composite-tree"></a>Composite Tree</h5>
 <div class="paragraph">
 <p><code>composite-tree</code></p>
 </div>
@@ -5924,12 +6052,12 @@ the identifier values (<code>Id</code> property) or their corresponding
 <p>Note that for some records operation can succeed and for some it can fail&#8201;&#8212;&#8201;so you need to manually check for errors.</p>
 </div>
 <div class="paragraph">
-<p>Easiest way to use this functionality is to use the DTOs generated by the <code>camel-salesforce-maven-plugin</code>, but you
-also have the option of customizing the references that identify the each object in the tree, for instance primary keys
+<p>The easiest way to use this functionality is to use the DTOs generated by the <code>camel-salesforce-maven-plugin</code>, but you
+also have the option of customizing the references that identify each object in the tree, for instance primary keys
 from your database.</p>
 </div>
 <div class="paragraph">
-<p>Lets look at an example:</p>
+<p>Let&#8217;s look at an example:</p>
 </div>
 <div class="listingblock">
 <div class="content">
@@ -5957,8 +6085,8 @@ final String firstId = succeeded.get(0).getId();</code></pre>
 </div>
 </div>
 </div>
-<div class="sect3">
-<h4 id="composite-batch"><a class="anchor" href="#composite-batch"></a>Composite Batch</h4>
+<div class="sect4">
+<h5 id="composite-batch"><a class="anchor" href="#composite-batch"></a>Composite Batch</h5>
 <div class="paragraph">
 <p><code>composite-batch</code></p>
 </div>
@@ -6012,14 +6140,14 @@ list of responses with the order preserved, so that the n-th requests response i
 <td class="content">
 <div class="paragraph">
 <p>The results can vary from API to API so the result of each sub-request (<code>SObjectBatchResult.result</code>) is given as a <code>java.lang.Object</code>. In most cases
-the result will be a <code>java.util.Map</code> with string keys and values or other <code>java.util.Map</code> as value. Requests are made in JSON format and hold some type information (i.e. it is known what values are strings and what values are numbers).</p>
+the result will be a <code>java.util.Map</code> with string keys and values or other <code>java.util.Map</code> as value. Requests are made in JSON format and hold some type information (i.e., it is known what values are strings and what values are numbers).</p>
 </div>
 </td>
 </tr>
 </table>
 </div>
 <div class="paragraph">
-<p>Lets look at an example:</p>
+<p>Let&#8217;s look at an example:</p>
 </div>
 <div class="listingblock">
 <div class="content">
@@ -6062,8 +6190,8 @@ final Object updateResultData = deleteResult.getResult(); // probably null</code
 </div>
 </div>
 </div>
-<div class="sect3">
-<h4 id="compositeRetrieveSObjectCollections"><a class="anchor" href="#compositeRetrieveSObjectCollections"></a>Retrieve Multiple Records with Fewer Round-Trips</h4>
+<div class="sect4">
+<h5 id="compositeRetrieveSObjectCollections"><a class="anchor" href="#compositeRetrieveSObjectCollections"></a>Retrieve Multiple Records with Fewer Round-Trips</h5>
 <div class="paragraph">
 <p><code>compositeRetrieveSObjectCollections</code></p>
 </div>
@@ -6112,7 +6240,7 @@ final Object updateResultData = deleteResult.getResult(); // probably null</code
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">sObjectClass</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">String</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Fully-qualified class name of DTO class to use for deserializing the response.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Fully qualified class name of DTO class to use for deserializing the response.</p></td>
 <td class="tableblock halign-left valign-top"></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Required if <code>sObjectName</code> parameter does not resolve to a class that exists in the package specified by the <code>package</code> option.</p></td>
 </tr>
@@ -6125,8 +6253,8 @@ final Object updateResultData = deleteResult.getResult(); // probably null</code
 <p>Type: <code>List</code> of class determined by <code>sObjectName</code> or <code>sObjectClass</code> header</p>
 </div>
 </div>
-<div class="sect3">
-<h4 id="compositeCreateSObjectCollections"><a class="anchor" href="#compositeCreateSObjectCollections"></a>Create SObject Collections</h4>
+<div class="sect4">
+<h5 id="compositeCreateSObjectCollections"><a class="anchor" href="#compositeCreateSObjectCollections"></a>Create SObject Collections</h5>
 <div class="paragraph">
 <p><code>compositeCreateSObjectCollections</code></p>
 </div>
@@ -6174,8 +6302,8 @@ final Object updateResultData = deleteResult.getResult(); // probably null</code
 <p>Type: <code>List&lt;SaveSObjectResult&gt;</code></p>
 </div>
 </div>
-<div class="sect3">
-<h4 id="compositeUpdateSObjectCollections"><a class="anchor" href="#compositeUpdateSObjectCollections"></a>Update SObject Collections</h4>
+<div class="sect4">
+<h5 id="compositeUpdateSObjectCollections"><a class="anchor" href="#compositeUpdateSObjectCollections"></a>Update SObject Collections</h5>
 <div class="paragraph">
 <p><code>compositeUpdateSObjectCollections</code></p>
 </div>
@@ -6223,8 +6351,8 @@ final Object updateResultData = deleteResult.getResult(); // probably null</code
 <p>Type: <code>List&lt;SaveSObjectResult&gt;</code></p>
 </div>
 </div>
-<div class="sect3">
-<h4 id="compositeUpsertSObjectCollections"><a class="anchor" href="#compositeUpsertSObjectCollections"></a>Upsert SObject Collections</h4>
+<div class="sect4">
+<h5 id="compositeUpsertSObjectCollections"><a class="anchor" href="#compositeUpsertSObjectCollections"></a>Upsert SObject Collections</h5>
 <div class="paragraph">
 <p><code>compositeUpsertSObjectCollections</code></p>
 </div>
@@ -6286,8 +6414,8 @@ final Object updateResultData = deleteResult.getResult(); // probably null</code
 <p>Type: <code>List&lt;UpsertSObjectResult&gt;</code></p>
 </div>
 </div>
-<div class="sect3">
-<h4 id="compositeDeleteSObjectCollections"><a class="anchor" href="#compositeDeleteSObjectCollections"></a>Delete SObject Collections</h4>
+<div class="sect4">
+<h5 id="compositeDeleteSObjectCollections"><a class="anchor" href="#compositeDeleteSObjectCollections"></a>Delete SObject Collections</h5>
 <div class="paragraph">
 <p><code>compositeDeleteSObjectCollections</code></p>
 </div>
@@ -6335,8 +6463,8 @@ final Object updateResultData = deleteResult.getResult(); // probably null</code
 <p>Type: <code>List&lt;DeleteSObjectResult&gt;</code></p>
 </div>
 </div>
-<div class="sect3">
-<h4 id="getEventSchema"><a class="anchor" href="#getEventSchema"></a>Get Event Schema</h4>
+<div class="sect4">
+<h5 id="getEventSchema"><a class="anchor" href="#getEventSchema"></a>Get Event Schema</h5>
 <div class="paragraph">
 <p><code>getEventSchema</code></p>
 </div>
@@ -6392,10 +6520,10 @@ final Object updateResultData = deleteResult.getResult(); // probably null</code
 </div>
 </div>
 </div>
-<div class="sect2">
-<h3 id="ApexRESTAPI"><a class="anchor" href="#ApexRESTAPI"></a>Apex REST API</h3>
 <div class="sect3">
-<h4 id="apexCall"><a class="anchor" href="#apexCall"></a>Invoke an Apex REST Web Service method</h4>
+<h4 id="ApexRESTAPI"><a class="anchor" href="#ApexRESTAPI"></a>Apex REST API</h4>
+<div class="sect4">
+<h5 id="apexCall"><a class="anchor" href="#apexCall"></a>Invoke an Apex REST Web Service method</h5>
 <div class="paragraph">
 <p><code>apexCall</code></p>
 </div>
@@ -6496,8 +6624,8 @@ is transformed into query parameters. For other HTTP methods, the body is used f
 </div>
 </div>
 </div>
-<div class="sect2">
-<h3 id="Bulk2API"><a class="anchor" href="#Bulk2API"></a>Bulk 2.0 API</h3>
+<div class="sect3">
+<h4 id="Bulk2API"><a class="anchor" href="#Bulk2API"></a>Bulk 2.0 API</h4>
 <div class="paragraph">
 <p>The Bulk 2.0 API has a simplified model over the original Bulk API. Use it to quickly load a large
 amount of data into salesforce, or query a large amount of data out of salesforce. Data must be
@@ -6557,8 +6685,8 @@ is v41.0. The minimum API version for Bulk Queries is v47.0. DTO classes mention
 </li>
 </ul>
 </div>
-<div class="sect3">
-<h4 id="bulk2CreateJob"><a class="anchor" href="#bulk2CreateJob"></a>Create a Job</h4>
+<div class="sect4">
+<h5 id="bulk2CreateJob"><a class="anchor" href="#bulk2CreateJob"></a>Create a Job</h5>
 <div class="paragraph">
 <p><code>bulk2CreateJob</code>
 Creates a bulk ingest job.</p>
@@ -6597,8 +6725,8 @@ Creates a bulk ingest job.</p>
 <p>Type: <code>Job</code></p>
 </div>
 </div>
-<div class="sect3">
-<h4 id="bulk2CreateBatch"><a class="anchor" href="#bulk2CreateBatch"></a>Upload a Batch of Job Data</h4>
+<div class="sect4">
+<h5 id="bulk2CreateBatch"><a class="anchor" href="#bulk2CreateBatch"></a>Upload a Batch of Job Data</h5>
 <div class="paragraph">
 <p><code>bulk2CreateBatch</code></p>
 </div>
@@ -6640,8 +6768,8 @@ Creates a bulk ingest job.</p>
 </tbody>
 </table>
 </div>
-<div class="sect3">
-<h4 id="bulk2CloseJob"><a class="anchor" href="#bulk2CloseJob"></a>Close a Job</h4>
+<div class="sect4">
+<h5 id="bulk2CloseJob"><a class="anchor" href="#bulk2CloseJob"></a>Close a Job</h5>
 <div class="paragraph">
 <p><code>bulk2CloseJob</code></p>
 </div>
@@ -6683,8 +6811,8 @@ aborted/deleted.</p>
 <p>Type: <code>Job</code></p>
 </div>
 </div>
-<div class="sect3">
-<h4 id="bulk2AbortJob"><a class="anchor" href="#bulk2AbortJob"></a>Abort a Job</h4>
+<div class="sect4">
+<h5 id="bulk2AbortJob"><a class="anchor" href="#bulk2AbortJob"></a>Abort a Job</h5>
 <div class="paragraph">
 <p><code>bulk2AbortJob</code></p>
 </div>
@@ -6725,8 +6853,8 @@ aborted/deleted.</p>
 <p>Type: <code>Job</code></p>
 </div>
 </div>
-<div class="sect3">
-<h4 id="bulk2DeleteJob"><a class="anchor" href="#bulk2DeleteJob"></a>Delete a Job</h4>
+<div class="sect4">
+<h5 id="bulk2DeleteJob"><a class="anchor" href="#bulk2DeleteJob"></a>Delete a Job</h5>
 <div class="paragraph">
 <p><code>bulk2DeleteJob</code></p>
 </div>
@@ -6761,8 +6889,8 @@ aborted/deleted.</p>
 </tbody>
 </table>
 </div>
-<div class="sect3">
-<h4 id="bulk2GetSuccessfulResults"><a class="anchor" href="#bulk2GetSuccessfulResults"></a>Get Job Successful Record Results</h4>
+<div class="sect4">
+<h5 id="bulk2GetSuccessfulResults"><a class="anchor" href="#bulk2GetSuccessfulResults"></a>Get Job Successful Record Results</h5>
 <div class="paragraph">
 <p><code>bulk2GetSuccessfulResults</code></p>
 </div>
@@ -6804,8 +6932,8 @@ aborted/deleted.</p>
 Contents: CSV data</p>
 </div>
 </div>
-<div class="sect3">
-<h4 id="bulk2GetFailedResults"><a class="anchor" href="#bulk2GetFailedResults"></a>Get Job Failed Record Results</h4>
+<div class="sect4">
+<h5 id="bulk2GetFailedResults"><a class="anchor" href="#bulk2GetFailedResults"></a>Get Job Failed Record Results</h5>
 <div class="paragraph">
 <p><code>bulk2GetFailedResults</code></p>
 </div>
@@ -6847,8 +6975,8 @@ Contents: CSV data</p>
 Contents: CSV data</p>
 </div>
 </div>
-<div class="sect3">
-<h4 id="bulk2GetUnprocessedRecords"><a class="anchor" href="#bulk2GetUnprocessedRecords"></a>Get Job Unprocessed Record Results</h4>
+<div class="sect4">
+<h5 id="bulk2GetUnprocessedRecords"><a class="anchor" href="#bulk2GetUnprocessedRecords"></a>Get Job Unprocessed Record Results</h5>
 <div class="paragraph">
 <p><code>bulk2GetUnprocessedRecords</code></p>
 </div>
@@ -6890,8 +7018,8 @@ Contents: CSV data</p>
 Contents: CSV data</p>
 </div>
 </div>
-<div class="sect3">
-<h4 id="bulk2GetJob"><a class="anchor" href="#bulk2GetJob"></a>Get Job Info</h4>
+<div class="sect4">
+<h5 id="bulk2GetJob"><a class="anchor" href="#bulk2GetJob"></a>Get Job Info</h5>
 <div class="paragraph">
 <p><code>bulk2GetJob</code></p>
 </div>
@@ -6939,8 +7067,8 @@ Contents: CSV data</p>
 <p>Type: <code>Job</code></p>
 </div>
 </div>
-<div class="sect3">
-<h4 id="bulk2GetAllJobs"><a class="anchor" href="#bulk2GetAllJobs"></a>Get All Jobs</h4>
+<div class="sect4">
+<h5 id="bulk2GetAllJobs"><a class="anchor" href="#bulk2GetAllJobs"></a>Get All Jobs</h5>
 <div class="paragraph">
 <p><code>bulk2GetAllJobs</code></p>
 </div>
@@ -6986,8 +7114,8 @@ is false, there are additional pages to fetch, and the <code>nextRecordsUrl</cod
 to be set in the <code>queryLocator</code> parameter on subsequent calls.</p>
 </div>
 </div>
-<div class="sect3">
-<h4 id="bulk2CreateQueryJob"><a class="anchor" href="#bulk2CreateQueryJob"></a>Create a Query Job</h4>
+<div class="sect4">
+<h5 id="bulk2CreateQueryJob"><a class="anchor" href="#bulk2CreateQueryJob"></a>Create a Query Job</h5>
 <div class="paragraph">
 <p><code>bulk2CreateQueryJob</code></p>
 </div>
@@ -7028,8 +7156,8 @@ to be set in the <code>queryLocator</code> parameter on subsequent calls.</p>
 <p>Type: <code>QueryJob</code></p>
 </div>
 </div>
-<div class="sect3">
-<h4 id="bulk2GetQueryJobResults"><a class="anchor" href="#bulk2GetQueryJobResults"></a>Get Results for a Query Job</h4>
+<div class="sect4">
+<h5 id="bulk2GetQueryJobResults"><a class="anchor" href="#bulk2GetQueryJobResults"></a>Get Results for a Query Job</h5>
 <div class="paragraph">
 <p><code>bulk2GetQueryJobResults</code></p>
 </div>
@@ -7092,8 +7220,8 @@ Contents: CSV data</p>
 <code>locator</code> parameter.</p>
 </div>
 </div>
-<div class="sect3">
-<h4 id="bulk2AbortQueryJob"><a class="anchor" href="#bulk2AbortQueryJob"></a>Abort a Query Job</h4>
+<div class="sect4">
+<h5 id="bulk2AbortQueryJob"><a class="anchor" href="#bulk2AbortQueryJob"></a>Abort a Query Job</h5>
 <div class="paragraph">
 <p><code>bulk2AbortQueryJob</code></p>
 </div>
@@ -7134,8 +7262,8 @@ Contents: CSV data</p>
 <p>Type: <code>QueryJob</code></p>
 </div>
 </div>
-<div class="sect3">
-<h4 id="bulk2DeleteQueryJob"><a class="anchor" href="#bulk2DeleteQueryJob"></a>Delete a Query Job</h4>
+<div class="sect4">
+<h5 id="bulk2DeleteQueryJob"><a class="anchor" href="#bulk2DeleteQueryJob"></a>Delete a Query Job</h5>
 <div class="paragraph">
 <p><code>bulk2DeleteQueryJob</code></p>
 </div>
@@ -7170,8 +7298,8 @@ Contents: CSV data</p>
 </tbody>
 </table>
 </div>
-<div class="sect3">
-<h4 id="bulk2GetQueryJob"><a class="anchor" href="#bulk2GetQueryJob"></a>Get Information About a Query Job</h4>
+<div class="sect4">
+<h5 id="bulk2GetQueryJob"><a class="anchor" href="#bulk2GetQueryJob"></a>Get Information About a Query Job</h5>
 <div class="paragraph">
 <p><code>bulk2GetQueryJob</code></p>
 </div>
@@ -7212,8 +7340,8 @@ Contents: CSV data</p>
 <p>Type: <code>QueryJob</code></p>
 </div>
 </div>
-<div class="sect3">
-<h4 id="bulk2GetAllQueryJobs"><a class="anchor" href="#bulk2GetAllQueryJobs"></a>Get Information About All Query Jobs</h4>
+<div class="sect4">
+<h5 id="bulk2GetAllQueryJobs"><a class="anchor" href="#bulk2GetAllQueryJobs"></a>Get Information About All Query Jobs</h5>
 <div class="paragraph">
 <p><code>bulk2GetAllQueryJobs</code></p>
 </div>
@@ -7260,8 +7388,8 @@ to be set in the <code>queryLocator</code> parameter on subsequent calls.</p>
 </div>
 </div>
 </div>
-<div class="sect2">
-<h3 id="BulkAPI"><a class="anchor" href="#BulkAPI"></a>Bulk (original) API</h3>
+<div class="sect3">
+<h4 id="BulkAPI"><a class="anchor" href="#BulkAPI"></a>Bulk (original) API</h4>
 <div class="paragraph">
 <p>Producer endpoints can use the following APIs. All Job data formats,
 i.e. xml, csv, zip/xml, and zip/csv are supported.<br>
@@ -7313,8 +7441,8 @@ request.</p>
 </li>
 </ul>
 </div>
-<div class="sect3">
-<h4 id="createJob"><a class="anchor" href="#createJob"></a>Create a Job</h4>
+<div class="sect4">
+<h5 id="createJob"><a class="anchor" href="#createJob"></a>Create a Job</h5>
 <div class="paragraph">
 <p><code>createJob</code></p>
 </div>
@@ -7384,8 +7512,8 @@ is supported via the pkChunking* options. See an explanation <a href="https://de
 <p>Type: <code>JobInfo</code></p>
 </div>
 </div>
-<div class="sect3">
-<h4 id="getJob"><a class="anchor" href="#getJob"></a>Get Job Details</h4>
+<div class="sect4">
+<h5 id="getJob"><a class="anchor" href="#getJob"></a>Get Job Details</h5>
 <div class="paragraph">
 <p><code>getJob</code></p>
 </div>
@@ -7433,8 +7561,8 @@ is supported via the pkChunking* options. See an explanation <a href="https://de
 <p>Type: <code>JobInfo</code></p>
 </div>
 </div>
-<div class="sect3">
-<h4 id="closeJob"><a class="anchor" href="#closeJob"></a>Close a Job</h4>
+<div class="sect4">
+<h5 id="closeJob"><a class="anchor" href="#closeJob"></a>Close a Job</h5>
 <div class="paragraph">
 <p><code>closeJob</code></p>
 </div>
@@ -7482,8 +7610,8 @@ is supported via the pkChunking* options. See an explanation <a href="https://de
 <p>Type: <code>JobInfo</code></p>
 </div>
 </div>
-<div class="sect3">
-<h4 id="abortJob"><a class="anchor" href="#abortJob"></a>Abort a Job</h4>
+<div class="sect4">
+<h5 id="abortJob"><a class="anchor" href="#abortJob"></a>Abort a Job</h5>
 <div class="paragraph">
 <p><code>abortJob</code></p>
 </div>
@@ -7531,8 +7659,8 @@ is supported via the pkChunking* options. See an explanation <a href="https://de
 <p>Type: <code>JobInfo</code></p>
 </div>
 </div>
-<div class="sect3">
-<h4 id="createBatch"><a class="anchor" href="#createBatch"></a>Add a Batch to a Job</h4>
+<div class="sect4">
+<h5 id="createBatch"><a class="anchor" href="#createBatch"></a>Add a Batch to a Job</h5>
 <div class="paragraph">
 <p><code>createBatch</code></p>
 </div>
@@ -7587,8 +7715,8 @@ is supported via the pkChunking* options. See an explanation <a href="https://de
 <p>Type: <code>BatchInfo</code></p>
 </div>
 </div>
-<div class="sect3">
-<h4 id="getBatch"><a class="anchor" href="#getBatch"></a>Get Information for a Batch</h4>
+<div class="sect4">
+<h5 id="getBatch"><a class="anchor" href="#getBatch"></a>Get Information for a Batch</h5>
 <div class="paragraph">
 <p><code>getBatch</code></p>
 </div>
@@ -7643,8 +7771,8 @@ is supported via the pkChunking* options. See an explanation <a href="https://de
 <p>Type: <code>BatchInfo</code></p>
 </div>
 </div>
-<div class="sect3">
-<h4 id="getAllBatches"><a class="anchor" href="#getAllBatches"></a>Get Information for All Batches in a Job</h4>
+<div class="sect4">
+<h5 id="getAllBatches"><a class="anchor" href="#getAllBatches"></a>Get Information for All Batches in a Job</h5>
 <div class="paragraph">
 <p><code>getAllBatches</code></p>
 </div>
@@ -7692,8 +7820,8 @@ is supported via the pkChunking* options. See an explanation <a href="https://de
 <p>Type: <code>List&lt;JobInfo&gt;</code></p>
 </div>
 </div>
-<div class="sect3">
-<h4 id="getRequest"><a class="anchor" href="#getRequest"></a>Get a Batch Request</h4>
+<div class="sect4">
+<h5 id="getRequest"><a class="anchor" href="#getRequest"></a>Get a Batch Request</h5>
 <div class="paragraph">
 <p><code>getRequest</code></p>
 </div>
@@ -7748,8 +7876,8 @@ is supported via the pkChunking* options. See an explanation <a href="https://de
 <p>Type: <code>InputStream</code></p>
 </div>
 </div>
-<div class="sect3">
-<h4 id="getResults"><a class="anchor" href="#getResults"></a>Get Batch Results</h4>
+<div class="sect4">
+<h5 id="getResults"><a class="anchor" href="#getResults"></a>Get Batch Results</h5>
 <div class="paragraph">
 <p><code>getResults</code></p>
 </div>
@@ -7804,8 +7932,8 @@ is supported via the pkChunking* options. See an explanation <a href="https://de
 <p>Type: <code>InputStream</code></p>
 </div>
 </div>
-<div class="sect3">
-<h4 id="createBatchQuery"><a class="anchor" href="#createBatchQuery"></a>Create Bulk Query Batch</h4>
+<div class="sect4">
+<h5 id="createBatchQuery"><a class="anchor" href="#createBatchQuery"></a>Create Bulk Query Batch</h5>
 <div class="paragraph">
 <p><code>createBatchQuery</code></p>
 </div>
@@ -7867,8 +7995,8 @@ is supported via the pkChunking* options. See an explanation <a href="https://de
 <p>Type: <code>BatchInfo</code></p>
 </div>
 </div>
-<div class="sect3">
-<h4 id="getQueryResultIds"><a class="anchor" href="#getQueryResultIds"></a>Get Batch Results</h4>
+<div class="sect4">
+<h5 id="getQueryResultIds"><a class="anchor" href="#getQueryResultIds"></a>Get Batch Results</h5>
 <div class="paragraph">
 <p><code>getQueryResultIds</code></p>
 </div>
@@ -7923,8 +8051,8 @@ is supported via the pkChunking* options. See an explanation <a href="https://de
 <p>Type: <code>List&lt;String&gt;</code></p>
 </div>
 </div>
-<div class="sect3">
-<h4 id="getQueryResult"><a class="anchor" href="#getQueryResult"></a>Get Bulk Query Results</h4>
+<div class="sect4">
+<h5 id="getQueryResult"><a class="anchor" href="#getQueryResult"></a>Get Bulk Query Results</h5>
 <div class="paragraph">
 <p><code>getQueryResult</code></p>
 </div>
@@ -7974,7 +8102,7 @@ is supported via the pkChunking* options. See an explanation <a href="https://de
 <td class="tableblock halign-left valign-top"><p class="tableblock">Body</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>BatchInfo</code> or <code>String</code></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>JobInfo</code> instance from which <code>jobId</code> and <code>batchId</code> will be used.
-Otherwise can be a <code>String</code> containing the <code>resultId</code></p></td>
+Otherwise, can be a <code>String</code> containing the <code>resultId</code></p></td>
 <td class="tableblock halign-left valign-top"></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>BatchInfo</code> Required if <code>jobId</code> and <code>BatchId</code> not supplied</p></td>
 </tr>
@@ -8002,15 +8130,15 @@ error.</p>
 </div>
 </div>
 </div>
-<div class="sect2">
-<h3 id="PubSubAPI"><a class="anchor" href="#PubSubAPI"></a>Pub/Sub API</h3>
+<div class="sect3">
+<h4 id="PubSubAPI"><a class="anchor" href="#PubSubAPI"></a>Pub/Sub API</h4>
 <div class="paragraph">
 <p>The Pub/Sub API allows you to publish and subscribe to platform events, including real-time event
 monitoring events, and change data capture events. This API is based on gRPC and HTTP/2, and event
 payloads are delivered in Apache Avro format.</p>
 </div>
-<div class="sect3">
-<h4 id="_publishing_events"><a class="anchor" href="#_publishing_events"></a>Publishing Events</h4>
+<div class="sect4">
+<h5 id="_publishing_events"><a class="anchor" href="#_publishing_events"></a>Publishing Events</h5>
 <div class="paragraph">
 <p>The URI format for publishing events is:</p>
 </div>
@@ -8028,8 +8156,8 @@ payloads are delivered in Apache Avro format.</p>
 </div>
 </div>
 </div>
-<div class="sect3">
-<h4 id="pubSubPublish"><a class="anchor" href="#pubSubPublish"></a>Publish an Event</h4>
+<div class="sect4">
+<h5 id="pubSubPublish"><a class="anchor" href="#pubSubPublish"></a>Publish an Event</h5>
 <div class="paragraph">
 <p><code>pubSubPublish</code></p>
 </div>
@@ -8089,7 +8217,7 @@ field names must match event field names exactly, including case.</p>
 </li>
 <li>
 <p><code>com.salesforce.eventbus.protobuf.ProducerEvent</code>. Providing a <code>ProducerEvent</code> allows full control,
-e.g. setting the <code>id</code> property, which can be tied back to the <code>PublishResult.CorrelationKey</code>.</p>
+e.g., setting the <code>id</code> property, which can be tied back to the <code>PublishResult.CorrelationKey</code>.</p>
 </li>
 </ul>
 </div>
@@ -8103,8 +8231,8 @@ e.g. setting the <code>id</code> property, which can be tied back to the <code>P
 <p>The order of the items in the returned <code>List</code> correlates to the order of the items in the input <code>List</code>.</p>
 </div>
 </div>
-<div class="sect3">
-<h4 id="_subscribing"><a class="anchor" href="#_subscribing"></a>Subscribing</h4>
+<div class="sect4">
+<h5 id="_subscribing"><a class="anchor" href="#_subscribing"></a>Subscribing</h5>
 <div class="paragraph">
 <p>The URI format for subscribing to a Pub/Sub topic is:</p>
 </div>
@@ -8189,16 +8317,16 @@ subscribing to a topic.</p></td>
 </div>
 </div>
 </div>
-<div class="sect2">
-<h3 id="StreamingAPI"><a class="anchor" href="#StreamingAPI"></a>Streaming API</h3>
+<div class="sect3">
+<h4 id="StreamingAPI"><a class="anchor" href="#StreamingAPI"></a>Streaming API</h4>
 <div class="paragraph">
 <p>The Streaming API enables streaming of events using push technology and provides a subscription
 mechanism for receiving events in near real time. The Streaming API subscription mechanism supports
 multiple types of events, including PushTopic events, generic events, platform events, and Change
 Data Capture events.</p>
 </div>
-<div class="sect3">
-<h4 id="_push_topics"><a class="anchor" href="#_push_topics"></a>Push Topics</h4>
+<div class="sect4">
+<h5 id="_push_topics"><a class="anchor" href="#_push_topics"></a>Push Topics</h5>
 <div class="paragraph">
 <p>The URI format for consuming Push Topics is:</p>
 </div>
@@ -8334,8 +8462,8 @@ Data Capture events.</p>
 <p>Type: Class passed via <code>sObjectName</code> parameter</p>
 </div>
 </div>
-<div class="sect3">
-<h4 id="_platform_events"><a class="anchor" href="#_platform_events"></a>Platform Events</h4>
+<div class="sect4">
+<h5 id="_platform_events"><a class="anchor" href="#_platform_events"></a>Platform Events</h5>
 <div class="paragraph">
 <p>To emit a platform event use the <a href="#createSObject">createSObject</a> operation, passing an instance of a platform event, e.g. <code>Order_Event__e</code>.</p>
 </div>
@@ -8410,10 +8538,10 @@ Data Capture events.</p>
 <p>Type: <code>PlatformEvent</code> or <code>org.cometd.bayeux.Message</code></p>
 </div>
 </div>
-<div class="sect3">
-<h4 id="_change_data_capture_events"><a class="anchor" href="#_change_data_capture_events"></a>Change Data Capture Events</h4>
+<div class="sect4">
+<h5 id="_change_data_capture_events"><a class="anchor" href="#_change_data_capture_events"></a>Change Data Capture Events</h5>
 <div class="paragraph">
-<p>Change Data Capture (CDC) allows you to receive near-real-time changes of Salesforce records, and synchronize corresponding records in an external data store. Change Data Capture publishes change events, which represent changes to Salesforce records. Changes include creation of a new record, updates to an existing record, deletion of a record, and undeletion of a record.</p>
+<p>Change Data Capture (CDC) allows you to receive near-real-time changes of Salesforce records, and synchronize corresponding records in an external data store. Change Data Capture publishes change events, which represent changes to Salesforce records. Changes include the creation of a new record, updates to an existing record, deletion of a record, and undeletion of a record.</p>
 </div>
 <div class="paragraph">
 <p>The URI format to consume CDC events is as follows:</p>
@@ -8536,8 +8664,8 @@ The dynamic nature of change event body fields, high level replication steps as 
 </table>
 </div>
 </div>
-<div class="sect2">
-<h3 id="ReportsAPI"><a class="anchor" href="#ReportsAPI"></a>Reports API</h3>
+<div class="sect3">
+<h4 id="ReportsAPI"><a class="anchor" href="#ReportsAPI"></a>Reports API</h4>
 <div class="ulist">
 <ul>
 <li>
@@ -8560,8 +8688,8 @@ The dynamic nature of change event body fields, high level replication steps as 
 </li>
 </ul>
 </div>
-<div class="sect3">
-<h4 id="getRecentReports"><a class="anchor" href="#getRecentReports"></a>Report List</h4>
+<div class="sect4">
+<h5 id="getRecentReports"><a class="anchor" href="#getRecentReports"></a>Report List</h5>
 <div class="paragraph">
 <p><code>getRecentReports</code></p>
 </div>
@@ -8575,8 +8703,8 @@ The dynamic nature of change event body fields, high level replication steps as 
 <p>Type: <code>List&lt;RecentReport&gt;</code></p>
 </div>
 </div>
-<div class="sect3">
-<h4 id="getReportDescription"><a class="anchor" href="#getReportDescription"></a>Describe Report</h4>
+<div class="sect4">
+<h5 id="getReportDescription"><a class="anchor" href="#getReportDescription"></a>Describe Report</h5>
 <div class="paragraph">
 <p><code>getReportDescription</code></p>
 </div>
@@ -8624,8 +8752,8 @@ The dynamic nature of change event body fields, high level replication steps as 
 <p>Type: <code>ReportDescription</code></p>
 </div>
 </div>
-<div class="sect3">
-<h4 id="executeSyncReport"><a class="anchor" href="#executeSyncReport"></a>Execute Sync</h4>
+<div class="sect4">
+<h5 id="executeSyncReport"><a class="anchor" href="#executeSyncReport"></a>Execute Sync</h5>
 <div class="paragraph">
 <p><code>executeSyncReport</code></p>
 </div>
@@ -8687,8 +8815,8 @@ The dynamic nature of change event body fields, high level replication steps as 
 <p>Type: <code>AbstractReportResultsBase</code></p>
 </div>
 </div>
-<div class="sect3">
-<h4 id="executeAsyncReport"><a class="anchor" href="#executeAsyncReport"></a>Execute Async</h4>
+<div class="sect4">
+<h5 id="executeAsyncReport"><a class="anchor" href="#executeAsyncReport"></a>Execute Async</h5>
 <div class="paragraph">
 <p><code>executeAsyncReport</code></p>
 </div>
@@ -8750,8 +8878,8 @@ The dynamic nature of change event body fields, high level replication steps as 
 <p>Type: <code>ReportInstance</code></p>
 </div>
 </div>
-<div class="sect3">
-<h4 id="getReportInstances"><a class="anchor" href="#getReportInstances"></a>Instances List</h4>
+<div class="sect4">
+<h5 id="getReportInstances"><a class="anchor" href="#getReportInstances"></a>Instances List</h5>
 <div class="paragraph">
 <p><code>getReportInstances</code></p>
 </div>
@@ -8799,8 +8927,8 @@ The dynamic nature of change event body fields, high level replication steps as 
 <p>Type: <code>List&lt;ReportInstance&gt;</code></p>
 </div>
 </div>
-<div class="sect3">
-<h4 id="getReportResults"><a class="anchor" href="#getReportResults"></a>Instance Results</h4>
+<div class="sect4">
+<h5 id="getReportResults"><a class="anchor" href="#getReportResults"></a>Instance Results</h5>
 <div class="paragraph">
 <p><code>getReportResults</code></p>
 </div>
@@ -8857,10 +8985,8 @@ The dynamic nature of change event body fields, high level replication steps as 
 </div>
 </div>
 </div>
-</div>
-<div class="sect1">
-<h2 id="_miscellaneous_operations"><a class="anchor" href="#_miscellaneous_operations"></a>Miscellaneous Operations</h2>
-<div class="sectionbody">
+<div class="sect2">
+<h3 id="_miscellaneous_operations"><a class="anchor" href="#_miscellaneous_operations"></a>Miscellaneous Operations</h3>
 <div class="ulist">
 <ul>
 <li>
@@ -8868,8 +8994,8 @@ The dynamic nature of change event body fields, high level replication steps as 
 </li>
 </ul>
 </div>
-<div class="sect2">
-<h3 id="raw"><a class="anchor" href="#raw"></a>Raw</h3>
+<div class="sect3">
+<h4 id="raw"><a class="anchor" href="#raw"></a>Raw</h4>
 <div class="paragraph">
 <p><code>raw</code></p>
 </div>
@@ -8938,8 +9064,8 @@ header will be automatically set based on the <code>format</code> option, but th
 <div class="paragraph">
 <p>Type: <code>InputStream</code></p>
 </div>
-<div class="sect3">
-<h4 id="_query_example"><a class="anchor" href="#_query_example"></a>Query example</h4>
+<div class="sect4">
+<h5 id="_query_example"><a class="anchor" href="#_query_example"></a>Query example</h5>
 <div class="paragraph">
 <p>In this example we&#8217;ll send a query to the REST API. The query must be passed in a URL parameter called "q", so we&#8217;ll create a message header called q and tell the
 raw operation to include that message header as a URL parameter:</p>
@@ -8953,8 +9079,8 @@ raw operation to include that message header as a URL parameter:</p>
 </div>
 </div>
 </div>
-<div class="sect3">
-<h4 id="_sobject_example"><a class="anchor" href="#_sobject_example"></a>SObject example</h4>
+<div class="sect4">
+<h5 id="_sobject_example"><a class="anchor" href="#_sobject_example"></a>SObject example</h5>
 <div class="paragraph">
 <p>In this example, we&#8217;ll pass a Contact the REST API in a <code>create</code> operation. Since the <code>raw</code> operation does not perform any serialization,
 we make sure to pass XML in the message body</p>
@@ -8981,10 +9107,8 @@ we make sure to pass XML in the message body</p>
 </div>
 </div>
 </div>
-</div>
-<div class="sect1">
-<h2 id="_uploading_a_document_to_a_contentworkspace"><a class="anchor" href="#_uploading_a_document_to_a_contentworkspace"></a>Uploading a document to a ContentWorkspace</h2>
-<div class="sectionbody">
+<div class="sect2">
+<h3 id="_uploading_a_document_to_a_contentworkspace"><a class="anchor" href="#_uploading_a_document_to_a_contentworkspace"></a>Uploading a document to a ContentWorkspace</h3>
 <div class="paragraph">
 <p>Create the ContentVersion in Java, using a Processor instance:</p>
 </div>
@@ -9026,14 +9150,12 @@ we make sure to pass XML in the message body</p>
 </div>
 </div>
 </div>
-</div>
-<div class="sect1">
-<h2 id="_generating_soql_query_strings"><a class="anchor" href="#_generating_soql_query_strings"></a>Generating SOQL query strings</h2>
-<div class="sectionbody">
+<div class="sect2">
+<h3 id="_generating_soql_query_strings"><a class="anchor" href="#_generating_soql_query_strings"></a>Generating SOQL query strings</h3>
 <div class="paragraph">
 <p><code>org.apache.camel.component.salesforce.api.utils.QueryHelper</code> contains helper
-methods to generate SOQL queries. For instance to fetch all custom fields from
-<em>Account</em> SObject you can simply generate the SOQL SELECT by invoking:</p>
+methods to generate SOQL queries. For instance, to fetch all custom fields from
+<em>Account</em> SObject, you can generate the SOQL SELECT by invoking:</p>
 </div>
 <div class="listingblock">
 <div class="content">
@@ -9041,10 +9163,8 @@ methods to generate SOQL queries. For instance to fetch all custom fields from
 </div>
 </div>
 </div>
-</div>
-<div class="sect1">
-<h2 id="MavenPlugin"><a class="anchor" href="#MavenPlugin"></a>Camel Salesforce Maven Plugin</h2>
-<div class="sectionbody">
+<div class="sect2">
+<h3 id="MavenPlugin"><a class="anchor" href="#MavenPlugin"></a>Camel Salesforce Maven Plugin</h3>
 <div class="paragraph">
 <p>The Maven plugin generates Java DTOs to represent salesforce objects.</p>
 </div>
@@ -9052,6 +9172,10 @@ methods to generate SOQL queries. For instance to fetch all custom fields from
 <p>Please refer to
 <a href="https://github.com/apache/camel/tree/main/components/camel-salesforce/camel-salesforce-maven-plugin">README.md</a>
 for details on how to use the plugin.</p>
+</div>
+<div class="paragraph">
+<p>Unresolved include directive in modules/ROOT/pages/salesforce-component.adoc - include::spring-boot:partial$starter.adoc[]</p>
+</div>
 </div>
 </div>
 </div>

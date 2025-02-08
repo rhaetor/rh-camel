@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>PGP :: Red Hat Camel Reference</title>
+    <title>PGP :: Red Hat build of Apache Camel</title>
     <meta name="description" content="Encrypt and decrypt messages using Java Cryptographic Extension (JCE) and PGP.">
     <meta name="generator" content="Antora 3.1.4">
     <link rel="stylesheet" href="../../../_/css/site.css">
@@ -12,7 +12,7 @@
 <header class="header">
   <nav class="navbar">
     <div class="navbar-brand">
-      <a class="navbar-item" href="../../manual/index.html">Red Hat Apache Build of Apache Camel Manual</a>
+      <a class="navbar-item" href="/">Red Hat build of Apache Camel</a>
       <button class="navbar-burger" data-target="topbar-nav">
         <span></span>
         <span></span>
@@ -27,6 +27,7 @@
     <div class="panels">
 <div class="nav-panel-menu is-active" data-panel="menu">
   <nav class="nav-menu">
+    <button class="nav-menu-toggle" aria-label="Toggle expand/collapse all" style="display: none"></button>
     <h3 class="title"><a href="../index.html">Camel Components</a></h3>
 <ul class="nav-list">
   <li class="nav-item" data-depth="0">
@@ -36,7 +37,46 @@
     <a class="nav-link" href="../index.html">Components</a>
 <ul class="nav-list">
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="../activemq-component.html">ActiveMQ</a>
+    <a class="nav-link" href="../activemq-component.html">ActiveMQ 5.x</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../activemq6-component.html">ActiveMQ 6.x</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../ai-summary.html">AI</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../chatscript-component.html">ChatScript</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../djl-component.html">Deep Java Library</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../langchain4j-chat-component.html">LangChain4j Chat</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../langchain4j-embeddings-component.html">LangChain4j Embeddings</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../langchain4j-tokenizer-component.html">LangChain4j Tokenizer</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../langchain4j-tools-component.html">LangChain4j Tools</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../langchain4j-web-search-component.html">LangChain4j Web Search</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../milvus-component.html">Milvus</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../pinecone-component.html">Pinecone</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../qdrant-component.html">Qdrant</a>
+  </li>
+</ul>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="../amqp-component.html">AMQP</a>
@@ -65,6 +105,15 @@
 <ul class="nav-list">
   <li class="nav-item" data-depth="3">
     <a class="nav-link" href="../aws2-athena-component.html">AWS Athena</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../aws-bedrock-component.html">AWS Bedrock</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../aws-bedrock-agent-component.html">AWS Bedrock Agent</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../aws-bedrock-agent-runtime-component.html">AWS Bedrock Agent Runtime</a>
   </li>
   <li class="nav-item" data-depth="3">
     <a class="nav-link" href="../aws-cloudtrail-component.html">AWS Cloudtrail</a>
@@ -169,7 +218,7 @@
     <a class="nav-link" href="../azure-storage-blob-component.html">Azure Storage Blob Service</a>
   </li>
   <li class="nav-item" data-depth="3">
-    <a class="nav-link" href="../azure-storage-datalake-component.html">Azure Storage Datalake Service</a>
+    <a class="nav-link" href="../azure-storage-datalake-component.html">Azure Storage Data Lake Service</a>
   </li>
   <li class="nav-item" data-depth="3">
     <a class="nav-link" href="../azure-storage-queue-component.html">Azure Storage Queue Service</a>
@@ -202,9 +251,6 @@
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="../cql-component.html">Cassandra CQL</a>
-  </li>
-  <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="../chatscript-component.html">ChatScript</a>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="../chunk-component.html">Chunk</a>
@@ -277,9 +323,6 @@
     <a class="nav-link" href="../debezium-sqlserver-component.html">Debezium SQL Server Connector</a>
   </li>
 </ul>
-  </li>
-  <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="../djl-component.html">Deep Java Library</a>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="../dhis2-component.html">DHIS2</a>
@@ -395,6 +438,9 @@
   </li>
   <li class="nav-item" data-depth="3">
     <a class="nav-link" href="../google-pubsub-component.html">Google Pubsub</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../google-pubsub-lite-component.html">Google PubSub Lite</a>
   </li>
   <li class="nav-item" data-depth="3">
     <a class="nav-link" href="../google-secret-manager-component.html">Google Secret Manager</a>
@@ -687,7 +733,7 @@
     <a class="nav-link" href="../ldif-component.html">LDIF</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="../log-component.html">Log</a>
+    <a class="nav-link" href="../log-component.html">Log Data</a>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="../lucene-component.html">Lucene</a>
@@ -900,10 +946,16 @@
     <a class="nav-link" href="../smb-component.html">SMB</a>
   </li>
   <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../smooks-component.html">Smooks</a>
+  </li>
+  <li class="nav-item" data-depth="2">
     <a class="nav-link" href="../smpp-component.html">SMPP</a>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="../snmp-component.html">SNMP</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../solr-component.html">Solr</a>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="../splunk-component.html">Splunk</a>
@@ -966,6 +1018,18 @@
     <a class="nav-link" href="../stub-component.html">Stub</a>
   </li>
   <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../tahu-summary.html">Tahu</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../tahu-edge-component.html">Tahu Edge Node / Device</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../tahu-host-component.html">Tahu Host Application</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
     <a class="nav-link" href="../telegram-component.html">Telegram</a>
   </li>
   <li class="nav-item" data-depth="2">
@@ -1026,7 +1090,7 @@
     <a class="nav-link" href="../whatsapp-component.html">WhatsApp</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="../wordpress-component.html">Wordpress</a>
+    <a class="nav-link" href="../wordpress-component.html">WordPress</a>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="../workday-component.html">Workday</a>
@@ -1419,7 +1483,13 @@
     <a class="nav-link" href="../others/openapi-java.html">Openapi Java</a>
   </li>
   <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../others/openapi-validator.html">Openapi Validator</a>
+  </li>
+  <li class="nav-item" data-depth="2">
     <a class="nav-link" href="../others/opentelemetry.html">OpenTelemetry</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../others/platform-http-jolokia.html">Platform HTTP Jolokia</a>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="../others/platform-http-main.html">Platform Http Main</a>
@@ -1567,7 +1637,7 @@
     <a class="nav-link" href="../eips/event-message.html">Event Message</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="../eips/failover-eip.html">Failover</a>
+    <a class="nav-link" href="../eips/failoverLoadBalancer-eip.html">Failover Load Balancer</a>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="../eips/faultToleranceConfiguration-eip.html">Fault Tolerance Configuration</a>
@@ -1597,13 +1667,13 @@
     <a class="nav-link" href="../eips/loadBalance-eip.html">Load Balance</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="../eips/log-eip.html">Log</a>
+    <a class="nav-link" href="../eips/log-eip.html">Logger</a>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="../eips/loop-eip.html">Loop</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="../eips/marshal-eip.html">Marshal EIP</a>
+    <a class="nav-link" href="../eips/marshal-eip.html">Marshal</a>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="../eips/message.html">Message</a>
@@ -1660,6 +1730,9 @@
     <a class="nav-link" href="../eips/point-to-point-channel.html">Point to Point Channel</a>
   </li>
   <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../eips/poll-eip.html">Poll</a>
+  </li>
+  <li class="nav-item" data-depth="2">
     <a class="nav-link" href="../eips/pollEnrich-eip.html">Poll Enrich</a>
   </li>
   <li class="nav-item" data-depth="2">
@@ -1675,7 +1748,7 @@
     <a class="nav-link" href="../eips/publish-subscribe-channel.html">Publish Subscribe Channel</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="../eips/random-eip.html">Random</a>
+    <a class="nav-link" href="../eips/randomLoadBalancer-eip.html">Random Load Balancer</a>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="../eips/recipientList-eip.html">Recipient List</a>
@@ -1717,7 +1790,7 @@
     <a class="nav-link" href="../eips/rollback-eip.html">Rollback</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="../eips/roundRobin-eip.html">Round Robin</a>
+    <a class="nav-link" href="../eips/roundRobinLoadBalancer-eip.html">Round Robin Load Balancer</a>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="../eips/routingSlip-eip.html">Routing Slip</a>
@@ -1729,7 +1802,7 @@
     <a class="nav-link" href="../eips/sample-eip.html">Sample</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="../eips/scatter-gather.html">Scatter Gather</a>
+    <a class="nav-link" href="../eips/scatter-gather.html">Scatter-Gather</a>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="../eips/script-eip.html">Script</a>
@@ -1759,6 +1832,9 @@
     <a class="nav-link" href="../eips/setVariable-eip.html">Set Variable</a>
   </li>
   <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../eips/setVariables-eip.html">Set Variables</a>
+  </li>
+  <li class="nav-item" data-depth="2">
     <a class="nav-link" href="../eips/sort-eip.html">Sort</a>
   </li>
   <li class="nav-item" data-depth="2">
@@ -1768,7 +1844,7 @@
     <a class="nav-link" href="../eips/step-eip.html">Step</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="../eips/sticky-eip.html">Sticky</a>
+    <a class="nav-link" href="../eips/stickyLoadBalancer-eip.html">Sticky Load Balancer</a>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="../eips/stop-eip.html">Stop</a>
@@ -1789,7 +1865,7 @@
     <a class="nav-link" href="../eips/toD-eip.html">To D</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="../eips/topic-eip.html">Topic</a>
+    <a class="nav-link" href="../eips/topicLoadBalancer-eip.html">Topic Load Balancer</a>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="../eips/transactional-client.html">Transactional Client</a>
@@ -1798,13 +1874,13 @@
     <a class="nav-link" href="../eips/transform-eip.html">Transform</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="../eips/unmarshal-eip.html">Unmarshal EIP</a>
+    <a class="nav-link" href="../eips/unmarshal-eip.html">Unmarshal</a>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="../eips/validate-eip.html">Validate</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="../eips/weighted-eip.html">Weighted</a>
+    <a class="nav-link" href="../eips/weightedLoadBalancer-eip.html">Weighted Load Balancer</a>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="../eips/wireTap-eip.html">Wire Tap</a>
@@ -1823,7 +1899,7 @@
   </div>
   <ul class="components">
     <li class="component is-current">
-      <a class="title" href="../index.html">Camel Components</a>
+      <div class="title"><a href="../index.html">Camel Components</a></div>
       <ul class="versions">
         <li class="version is-current is-latest">
           <a href="../index.html">Next (Pre-release)</a>
@@ -1831,12 +1907,7 @@
       </ul>
     </li>
     <li class="component">
-      <a class="title" href="../../../manual/index.html">User manual</a>
-      <ul class="versions">
-        <li class="version is-latest">
-          <a href="../../../manual/index.html">default</a>
-        </li>
-      </ul>
+      <div class="title"><a href="../../../manual/index.html">User manual</a></div>
     </li>
   </ul>
 </div>
@@ -1854,6 +1925,7 @@
     <li><a href="pgp-dataformat.html">PGP</a></li>
   </ul>
 </nav>
+<div class="edit-this-page"><a href="file:///code/jboss/jboss-camel/docs/components/modules/dataformats/pages/pgp-dataformat.adoc">Edit this Page</a></div>
 </div>
   <div class="content">
 <aside class="toc sidebar" data-title="Contents" data-levels="2">
@@ -1901,7 +1973,7 @@ the original plaintext. This data format implements only symmetric
 <tbody>
 <tr>
 <td class="tableblock halign-left valign-top"><div class="content"><div id="_dataformat_option_keyUserid" class="paragraph">
-<p><a href="#_dataformat_option_keyUserid" class="anchor"></a><strong>keyUserid</strong></p>
+<p><a href="#_dataformat_option_keyUserid" class="anchor"></a><strong>keyUserid</strong> (common)</p>
 </div></div></td>
 <td class="tableblock halign-left valign-top"></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>String</code></p></td>
@@ -1911,7 +1983,7 @@ the original plaintext. This data format implements only symmetric
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><div class="content"><div id="_dataformat_option_signatureKeyUserid" class="paragraph">
-<p><a href="#_dataformat_option_signatureKeyUserid" class="anchor"></a><strong>signatureKeyUserid</strong></p>
+<p><a href="#_dataformat_option_signatureKeyUserid" class="anchor"></a><strong>signatureKeyUserid</strong> (common)</p>
 </div></div></td>
 <td class="tableblock halign-left valign-top"></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>String</code></p></td>
@@ -1921,7 +1993,7 @@ the original plaintext. This data format implements only symmetric
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><div class="content"><div id="_dataformat_option_password" class="paragraph">
-<p><a href="#_dataformat_option_password" class="anchor"></a><strong>password</strong></p>
+<p><a href="#_dataformat_option_password" class="anchor"></a><strong>password</strong> (common)</p>
 </div></div></td>
 <td class="tableblock halign-left valign-top"></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>String</code></p></td>
@@ -1931,7 +2003,7 @@ the original plaintext. This data format implements only symmetric
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><div class="content"><div id="_dataformat_option_signaturePassword" class="paragraph">
-<p><a href="#_dataformat_option_signaturePassword" class="anchor"></a><strong>signaturePassword</strong></p>
+<p><a href="#_dataformat_option_signaturePassword" class="anchor"></a><strong>signaturePassword</strong> (common)</p>
 </div></div></td>
 <td class="tableblock halign-left valign-top"></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>String</code></p></td>
@@ -1941,7 +2013,7 @@ the original plaintext. This data format implements only symmetric
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><div class="content"><div id="_dataformat_option_keyFileName" class="paragraph">
-<p><a href="#_dataformat_option_keyFileName" class="anchor"></a><strong>keyFileName</strong></p>
+<p><a href="#_dataformat_option_keyFileName" class="anchor"></a><strong>keyFileName</strong> (common)</p>
 </div></div></td>
 <td class="tableblock halign-left valign-top"></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>String</code></p></td>
@@ -1951,7 +2023,7 @@ the original plaintext. This data format implements only symmetric
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><div class="content"><div id="_dataformat_option_signatureKeyFileName" class="paragraph">
-<p><a href="#_dataformat_option_signatureKeyFileName" class="anchor"></a><strong>signatureKeyFileName</strong></p>
+<p><a href="#_dataformat_option_signatureKeyFileName" class="anchor"></a><strong>signatureKeyFileName</strong> (common)</p>
 </div></div></td>
 <td class="tableblock halign-left valign-top"></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>String</code></p></td>
@@ -1961,7 +2033,7 @@ the original plaintext. This data format implements only symmetric
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><div class="content"><div id="_dataformat_option_signatureKeyRing" class="paragraph">
-<p><a href="#_dataformat_option_signatureKeyRing" class="anchor"></a><strong>signatureKeyRing</strong></p>
+<p><a href="#_dataformat_option_signatureKeyRing" class="anchor"></a><strong>signatureKeyRing</strong> (common)</p>
 </div></div></td>
 <td class="tableblock halign-left valign-top"></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>String</code></p></td>
@@ -1971,7 +2043,7 @@ the original plaintext. This data format implements only symmetric
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><div class="content"><div id="_dataformat_option_armored" class="paragraph">
-<p><a href="#_dataformat_option_armored" class="anchor"></a><strong>armored</strong></p>
+<p><a href="#_dataformat_option_armored" class="anchor"></a><strong>armored</strong> (common)</p>
 </div></div></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>false</code></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>Boolean</code></p></td>
@@ -1981,7 +2053,7 @@ the original plaintext. This data format implements only symmetric
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><div class="content"><div id="_dataformat_option_integrity" class="paragraph">
-<p><a href="#_dataformat_option_integrity" class="anchor"></a><strong>integrity</strong></p>
+<p><a href="#_dataformat_option_integrity" class="anchor"></a><strong>integrity</strong> (common)</p>
 </div></div></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>true</code></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>Boolean</code></p></td>
@@ -1991,7 +2063,7 @@ the original plaintext. This data format implements only symmetric
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><div class="content"><div id="_dataformat_option_provider" class="paragraph">
-<p><a href="#_dataformat_option_provider" class="anchor"></a><strong>provider</strong></p>
+<p><a href="#_dataformat_option_provider" class="anchor"></a><strong>provider</strong> (common)</p>
 </div></div></td>
 <td class="tableblock halign-left valign-top"></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>String</code></p></td>
@@ -2001,7 +2073,7 @@ the original plaintext. This data format implements only symmetric
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><div class="content"><div id="_dataformat_option_algorithm" class="paragraph">
-<p><a href="#_dataformat_option_algorithm" class="anchor"></a><strong>algorithm</strong></p>
+<p><a href="#_dataformat_option_algorithm" class="anchor"></a><strong>algorithm</strong> (common)</p>
 </div></div></td>
 <td class="tableblock halign-left valign-top"></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>Integer</code></p></td>
@@ -2011,7 +2083,7 @@ the original plaintext. This data format implements only symmetric
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><div class="content"><div id="_dataformat_option_compressionAlgorithm" class="paragraph">
-<p><a href="#_dataformat_option_compressionAlgorithm" class="anchor"></a><strong>compressionAlgorithm</strong></p>
+<p><a href="#_dataformat_option_compressionAlgorithm" class="anchor"></a><strong>compressionAlgorithm</strong> (common)</p>
 </div></div></td>
 <td class="tableblock halign-left valign-top"></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>Integer</code></p></td>
@@ -2021,7 +2093,7 @@ the original plaintext. This data format implements only symmetric
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><div class="content"><div id="_dataformat_option_hashAlgorithm" class="paragraph">
-<p><a href="#_dataformat_option_hashAlgorithm" class="anchor"></a><strong>hashAlgorithm</strong></p>
+<p><a href="#_dataformat_option_hashAlgorithm" class="anchor"></a><strong>hashAlgorithm</strong> (common)</p>
 </div></div></td>
 <td class="tableblock halign-left valign-top"></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>Integer</code></p></td>
@@ -2031,7 +2103,7 @@ the original plaintext. This data format implements only symmetric
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><div class="content"><div id="_dataformat_option_signatureVerificationOption" class="paragraph">
-<p><a href="#_dataformat_option_signatureVerificationOption" class="anchor"></a><strong>signatureVerificationOption</strong></p>
+<p><a href="#_dataformat_option_signatureVerificationOption" class="anchor"></a><strong>signatureVerificationOption</strong> (common)</p>
 </div></div></td>
 <td class="tableblock halign-left valign-top"></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>String</code></p></td>
@@ -2146,13 +2218,13 @@ setting directly on the PGPDataFormat.</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>CamelPGPDataFormatNumberOfEncryptionKeys</code></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>Integer</code></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">number of public keys used for encrypting the
-symmectric key, set by PGPDataFormat during encryptiion process</p></td>
+symmetric key, set by PGPDataFormat during the encryption process</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>CamelPGPDataFormatNumberOfSigningKeys</code></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>Integer</code></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">number of private keys used for creating
-signatures, set by PGPDataFormat during signing process</p></td>
+signatures, set by PGPDataFormat during the signing process</p></td>
 </tr>
 </tbody>
 </table>
@@ -2171,6 +2243,19 @@ encrypting/decrypting files using the
 verification + decryption. It uses the same keyring for both signing and
 encryption, but you can obviously use different keys:</p>
 </div>
+<div id="_tabs_1" class="openblock tabs is-sync is-loading">
+<div class="content">
+<div class="ulist tablist">
+<ul>
+<li id="_tabs_1_java" class="tab">
+<p>Java</p>
+</li>
+<li id="_tabs_1_spring_xml" class="tab">
+<p>Spring XML</p>
+</li>
+</ul>
+</div>
+<div id="_tabs_1_java--panel" class="tabpanel" aria-labelledby="_tabs_1_java">
 <div class="listingblock">
 <div class="content">
 <pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">from("direct:pgp-encrypt")
@@ -2178,9 +2263,8 @@ encryption, but you can obviously use different keys:</p>
     .unmarshal().pgp("file:secring.gpg", "alice@example.com", "letmein");</code></pre>
 </div>
 </div>
-<div class="paragraph">
-<p>Or using Spring:</p>
 </div>
+<div id="_tabs_1_spring_xml--panel" class="tabpanel" aria-labelledby="_tabs_1_spring_xml">
 <div class="listingblock">
 <div class="content">
 <pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;route&gt;
@@ -2190,8 +2274,11 @@ encryption, but you can obviously use different keys:</p>
 &lt;/route&gt;</code></pre>
 </div>
 </div>
+</div>
+</div>
+</div>
 <div class="sect2">
-<h3 id="_to_work_with_the_previous_example_you_need_the_following"><a class="anchor" href="#_to_work_with_the_previous_example_you_need_the_following"></a>To work with the previous example you need the following</h3>
+<h3 id="_working_with_the_previous_example"><a class="anchor" href="#_working_with_the_previous_example"></a>Working with the previous example</h3>
 <div class="ulist">
 <ul>
 <li>
@@ -2212,7 +2299,7 @@ data</p>
 <h3 id="_managing_your_keyring"><a class="anchor" href="#_managing_your_keyring"></a>Managing your keyring</h3>
 <div class="paragraph">
 <p>To manage the keyring, I use the command line tools, I find this to be
-the simplest approach in managing the keys. There are also Java
+the simplest approach to managing the keys. There are also Java
 libraries available from
 <a href="http://www.bouncycastle.org/java.html">http://www.bouncycastle.org/java.html</a>
 if you would prefer to do it that way.</p>
@@ -2234,7 +2321,7 @@ if you would prefer to do it that way.</p>
 </div>
 </div>
 <div class="paragraph">
-<p>If you need to import someone elses public key so that you can encrypt a file for them.</p>
+<p>If you need to import someone else&#8217;s public key so that you can encrypt a file for them.</p>
 </div>
 <div class="listingblock">
 <div class="content">
@@ -2242,7 +2329,7 @@ if you would prefer to do it that way.</p>
 </div>
 </div>
 <div class="paragraph">
-<p>If you are using GnuPG versions prior to 2.1, the key formats are stored in different files that can be used for the example. You can check if the required files exist by running the following command:</p>
+<p>If you are using GnuPG versions prior to 2.1, the key formats are stored in different files that can be used, for example. You can check if the required files exist by running the following command:</p>
 </div>
 <div class="listingblock">
 <div class="content">
@@ -2273,7 +2360,7 @@ gpg --export-secret-keys &gt; secring.gpg</code></pre>
 <div class="paragraph">
 <p>A PGP Data Formatter can decrypt/verify messages which have been
 encrypted by different public keys or signed by different private keys.
-Just provide the corresponding private keys in the secret keyring, the
+Provide the corresponding private keys in the secret keyring, the
 corresponding public keys in the public keyring, and the passphrases in
 the passphrase accessor.</p>
 </div>
@@ -2287,11 +2374,11 @@ PGPPassphraseAccessor passphraseAccessor = new PGPPassphraseAccessorDefault(user
 
 PGPDataFormat pgpVerifyAndDecrypt = new PGPDataFormat();
 pgpVerifyAndDecrypt.setPassphraseAccessor(passphraseAccessor);
-// the method getSecKeyRing() provides the secret keyring as byte array containing the private keys
-pgpVerifyAndDecrypt.setEncryptionKeyRing(getSecKeyRing()); // alternatively you can use setKeyFileName(keyfileName)
-// the method getPublicKeyRing() provides the public keyring as byte array containing the public keys
-pgpVerifyAndDecrypt.setSignatureKeyRing((getPublicKeyRing());  // alternatively you can use setSignatureKeyFileName(signatgureKeyfileName)
-// it is not necessary to specify the encryption or signer  User Id
+// the method getSecKeyRing() provides the secret keyring as a byte array containing the private keys
+pgpVerifyAndDecrypt.setEncryptionKeyRing(getSecKeyRing()); // alternatively, you can use setKeyFileName(keyfileName)
+// the method getPublicKeyRing() provides the public keyring as a byte array containing the public keys
+pgpVerifyAndDecrypt.setSignatureKeyRing((getPublicKeyRing());  // alternatively, you can use setSignatureKeyFileName(signatgureKeyfileName)
+// it is not necessary to specify the encryption or signer User Id
 
 from("direct:start")
          ...
@@ -2303,7 +2390,7 @@ from("direct:start")
 <ul>
 <li>
 <p>The functionality is especially useful to support the key exchange. If
-you want to exchange the private key for decrypting you can accept for a
+you want to exchange the private key for decrypting, you can accept for a
 period of time messages which are either encrypted with the old or new
 corresponding public key. Or if the sender wants to exchange his signer
 private key, you can accept for a period of time, the old or new signer
@@ -2314,8 +2401,8 @@ key.</p>
 public key which was used to encrypt the data. This Key ID can be used
 to locate the private key in the secret keyring to decrypt the data. The
 same mechanism is also used to locate the public key for verifying a
-signature. Therefore you no longer must specify User IDs for the
-unmarshaling.</p>
+signature. Therefore, you no longer must specify User IDs for the
+unmarshalling.</p>
 </li>
 </ul>
 </div>
@@ -2325,9 +2412,9 @@ unmarshaling.</p>
 <h2 id="_restricting_the_signer_identities_during_pgp_signature_verification"><a class="anchor" href="#_restricting_the_signer_identities_during_pgp_signature_verification"></a>Restricting the Signer Identities during PGP Signature Verification</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>If you verify a signature you not only want to verify the correctness of
-the signature but you also want check that the signature comes from a
-certain identity or a specific set of identities. Therefore it is
+<p>If you verify a signature, you not only want to verify the correctness of
+the signature, but you also want to check that the signature comes from a
+certain identity or a specific set of identities. Therefore, it is
 possible to restrict the number of public keys from the public keyring
 which can be used for the verification of a signature.</p>
 </div>
@@ -2345,7 +2432,7 @@ which can be used for the verification of a signature.</p>
  pgpVerifyWithSpecificKeysAndDecrypt.setPassword("my password"); // for decrypting with private key
  pgpVerifyWithSpecificKeysAndDecrypt.setKeyFileName(keyfileName);
  pgpVerifyWithSpecificKeysAndDecrypt.setSignatureKeyFileName(signatgureKeyfileName);
- pgpVerifyWithSpecificKeysAndDecrypt.setSignatureKeyUserids(expectedSigUserIds); // if you have only one signer identity then you can also use setSignatureKeyUserid("expected Signer")
+ pgpVerifyWithSpecificKeysAndDecrypt.setSignatureKeyUserids(expectedSigUserIds); // if you have only one signer identity, then you can also use setSignatureKeyUserid("expected Signer")
 
 from("direct:start")
          ...
@@ -2356,12 +2443,12 @@ from("direct:start")
 <div class="ulist">
 <ul>
 <li>
-<p>If the PGP content has several signatures the verification is
+<p>If the PGP content has several signatures, the verification is
 successful as soon as one signature can be verified.</p>
 </li>
 <li>
-<p>If you do not want to restrict the signer identities for verification
-then do not specify the signature key User IDs. In this case all public
+<p>If you do not want to restrict the signer identities for verification,
+then do not specify the signature key User IDs. In this case, all public
 keys in the public keyring are taken into account.</p>
 </li>
 </ul>
@@ -2373,7 +2460,7 @@ keys in the public keyring are taken into account.</p>
 <div class="sectionbody">
 <div class="paragraph">
 <p>The PGP specification allows that one PGP data format can contain
-several signatures from different keys. Since Camel 2.13.3 it is
+several signatures from different keys. Since Camel 2.13.3, it&#8217;s been
 possible to create such kind of PGP content via specifying signature
 User IDs which relate to several private keys in the secret keyring.</p>
 </div>
@@ -2386,7 +2473,7 @@ User IDs which relate to several private keys in the secret keyring.</p>
  pgpSignAndEncryptSeveralSignerKeys.setKeyUserid(keyUserid); // for encrypting, you can also use setKeyUserids if you want to encrypt with several keys
  pgpSignAndEncryptSeveralSignerKeys.setKeyFileName(keyfileName);
  pgpSignAndEncryptSeveralSignerKeys.setSignatureKeyFileName(signatgureKeyfileName);
- pgpSignAndEncryptSeveralSignerKeys.setSignaturePassword("sdude"); // here we assume that all private keys have the same password, if this is not the case then you can use setPassphraseAccessor
+ pgpSignAndEncryptSeveralSignerKeys.setSignaturePassword("sdude"); // here we assume that all private keys have the same password, if this is not the case, then you can use setPassphraseAccessor
 
  List&lt;String&gt; signerUserIds = new ArrayList&lt;String&gt;();
  signerUserIds.add("company old key");
@@ -2402,12 +2489,12 @@ from("direct:start")
 </div>
 </div>
 <div class="sect1">
-<h2 id="_support_of_sub_keys_and_key_flags_in_pgp_data_format_marshaler"><a class="anchor" href="#_support_of_sub_keys_and_key_flags_in_pgp_data_format_marshaler"></a>Support of Sub-Keys and Key Flags in PGP Data Format Marshaler</h2>
+<h2 id="_support_for_sub_keys_and_key_flags_in_pgp_data_format_marshaller"><a class="anchor" href="#_support_for_sub_keys_and_key_flags_in_pgp_data_format_marshaller"></a>Support for Sub-Keys and Key Flags in PGP Data Format Marshaller</h2>
 <div class="sectionbody">
 <div class="paragraph">
 <p>An <a href="https://tools.ietf.org/html/rfc4880#section-12.1">OpenPGP V4 key</a> can
 have a primary key and sub-keys. The usage of the keys is indicated by
-the so called <a href="https://tools.ietf.org/html/rfc4880#section-5.2.3.21">Key
+the so-called <a href="https://tools.ietf.org/html/rfc4880#section-5.2.3.21">Key
 Flags</a>. For example, you can have a primary key with two sub-keys; the
 primary key shall only be used for certifying other keys (Key Flag
 0x01), the first sub-key  shall only be used for signing (Key Flag
@@ -2420,13 +2507,13 @@ primary key and its sub-keys have the same User IDs.</p>
 </div>
 </div>
 <div class="sect1">
-<h2 id="_support_of_custom_key_accessors"><a class="anchor" href="#_support_of_custom_key_accessors"></a>Support of Custom Key Accessors</h2>
+<h2 id="_support_for_custom_key_accessors"><a class="anchor" href="#_support_for_custom_key_accessors"></a>Support for Custom Key Accessors</h2>
 <div class="sectionbody">
 <div class="paragraph">
 <p>You can implement custom key accessors for encryption/signing. The
 above PGPDataFormat class selects in a certain predefined way the keys
 which should be used for signing/encryption or verifying/decryption. If
-you have special requirements how your keys should be selected you
+you have special requirements for how your keys should be selected, you
 should use the
 <a href="https://github.com/apache/camel/blob/main/components/camel-crypto/src/main/java/org/apache/camel/converter/crypto/PGPKeyAccessDataFormat.java">PGPKeyAccessDataFormat</a>
 class instead and implement the interfaces
@@ -2463,6 +2550,9 @@ need to add the following dependency to your pom.</p>
   &lt;!-- use the same version as your Camel core version --&gt;
 &lt;/dependency&gt;</code></pre>
 </div>
+</div>
+<div class="paragraph">
+<p>Unresolved include directive in modules/dataformats/pages/pgp-dataformat.adoc - include::spring-boot:partial$starter.adoc[]</p>
 </div>
 </div>
 </div>

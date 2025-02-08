@@ -3,15 +3,15 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>REST DSL :: Red Hat Apache Build of Apache Camel Manual</title>
-    <meta name="generator" content="Antora 3.0.3">
+    <title>REST DSL :: Red Hat build of Apache Camel</title>
+    <meta name="generator" content="Antora 3.1.4">
     <link rel="stylesheet" href="../_/css/site.css">
   </head>
   <body class="article">
 <header class="header">
   <nav class="navbar">
     <div class="navbar-brand">
-      <a class="navbar-item" href="../../manual/index.html">Red Hat Apache Build of Apache Camel Manual</a>
+      <a class="navbar-item" href="/">Red Hat build of Apache Camel</a>
       <button class="navbar-burger" data-target="topbar-nav">
         <span></span>
         <span></span>
@@ -26,6 +26,7 @@
     <div class="panels">
 <div class="nav-panel-menu is-active" data-panel="menu">
   <nav class="nav-menu">
+    <button class="nav-menu-toggle" aria-label="Toggle expand/collapse all" style="display: none"></button>
     <h3 class="title"><a href="index.html">User manual</a></h3>
 <ul class="nav-list">
   <li class="nav-item" data-depth="0">
@@ -56,7 +57,16 @@
     <a class="nav-link" href="camel-console.html">Camel Developer Console</a>
   </li>
   <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
     <a class="nav-link" href="camel-jbang.html">Camel JBang</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="camel-jbang-kubernetes.html">Camel Kubernetes plugin</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="camel-jbang-k.html">Camel K plugin</a>
+  </li>
+</ul>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="camel-maven-plugin.html">Camel Maven Plugin</a>
@@ -95,6 +105,9 @@
     <a class="nav-link" href="using-propertyplaceholder.html">How to use Camel property placeholders</a>
   </li>
   <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="variables.html">How to use Variables</a>
+  </li>
+  <li class="nav-item" data-depth="2">
     <button class="nav-item-toggle"></button>
     <a class="nav-link" href="testing.html">Testing</a>
 <ul class="nav-list">
@@ -110,7 +123,13 @@
 </ul>
   </li>
   <li class="nav-item is-current-page" data-depth="2">
+    <button class="nav-item-toggle"></button>
     <a class="nav-link" href="rest-dsl.html">Working with REST and Rest DSL</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="rest-dsl-openapi.html">Rest DSL contract first</a>
+  </li>
+</ul>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="writing-components.html">Writing Components</a>
@@ -477,9 +496,6 @@
     <a class="nav-link" href="faq/how-should-i-invoke-my-pojos-or-spring-services.html">How should I invoke my POJOs or Spring Services?</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="faq/how-to-avoid-importing-bunch-of-cxf-packages-when-start-up-the-camel-cxf-endpoint-from-osgi-platform-.html">How to avoid importing bunch of cxf packages when start up the camel-cxf endpoint from OSGi platform?</a>
-  </li>
-  <li class="nav-item" data-depth="2">
     <a class="nav-link" href="faq/how-to-avoid-sending-some-or-all-message-headers.html">How to avoid sending some or all message headers?</a>
   </li>
   <li class="nav-item" data-depth="2">
@@ -598,11 +614,11 @@
 <div class="nav-panel-explore" data-panel="explore">
   <div class="context">
     <span class="title">User manual</span>
-    <span class="version">default</span>
+    <span class="version"></span>
   </div>
   <ul class="components">
     <li class="component">
-      <a class="title" href="../components/next/index.html">Camel Components</a>
+      <div class="title"><a href="../components/next/index.html">Camel Components</a></div>
       <ul class="versions">
         <li class="version is-latest">
           <a href="../components/next/index.html">Next (Pre-release)</a>
@@ -610,12 +626,7 @@
       </ul>
     </li>
     <li class="component is-current">
-      <a class="title" href="index.html">User manual</a>
-      <ul class="versions">
-        <li class="version is-current is-latest">
-          <a href="index.html">default</a>
-        </li>
-      </ul>
+      <div class="title"><a href="index.html">User manual</a></div>
     </li>
   </ul>
 </div>
@@ -633,6 +644,7 @@
     <li><a href="rest-dsl.html">Working with REST and Rest DSL</a></li>
   </ul>
 </nav>
+<div class="edit-this-page"><a href="file:///code/jboss/jboss-camel/docs/user-manual/modules/ROOT/pages/rest-dsl.adoc">Edit this Page</a></div>
 </div>
   <div class="content">
 <aside class="toc sidebar" data-title="Contents" data-levels="2">
@@ -647,7 +659,21 @@
 </div>
 <div class="paragraph">
 <p>The intention is to allow end users to define REST services (hosted by Camel) using a
-REST style with verbs such as get, post, delete etc.</p>
+REST style with verbs such as get, post, delete, etc.</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+From <strong>Camel 4.6</strong> onwards, the Rest DSL has been improved with a <em>contract-first</em> approach using vanilla OpenAPI specification
+files. This is documented in the <a href="rest-dsl-openapi.html" class="xref page">Rest DSL with OpenAPI contract first</a> page. This current page documents the
+<em>code-first</em> Rest DSL that Camel provides for a long time.
+</td>
+</tr>
+</table>
 </div>
 </div>
 </div>
@@ -659,7 +685,7 @@ REST style with verbs such as get, post, delete etc.</p>
 consumers for Camel routes. The actual REST transport is leveraged by
 using Camel REST components such
 as <a href="../components/next/netty-http-component.html" class="xref page">Netty HTTP</a>, <a href="../components/next/servlet-component.html" class="xref page">Servlet</a>, and
-others that has native REST integration.</p>
+others that have native REST integration.</p>
 </div>
 </div>
 </div>
@@ -667,7 +693,7 @@ others that has native REST integration.</p>
 <h2 id="_components_supporting_rest_dsl"><a class="anchor" href="#_components_supporting_rest_dsl"></a>Components supporting Rest DSL</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>The following Camel components supports the Rest DSL:</p>
+<p>The following Camel components support the Rest DSL:</p>
 </div>
 <div class="ulist">
 <ul>
@@ -697,7 +723,7 @@ others that has native REST integration.</p>
 <h2 id="_rest_dsl_with_java_dsl"><a class="anchor" href="#_rest_dsl_with_java_dsl"></a>Rest DSL with Java DSL</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>To use the Rest DSL in Java DSL then just do as with regular Camel routes by
+<p>To use the Rest DSL in Java DSL, then just do as with regular Camel routes by
 extending the <code>RouteBuilder</code> and define the routes in the <code>configure</code>
 method.</p>
 </div>
@@ -742,28 +768,28 @@ public void configure() throws Exception {
 </thead>
 <tbody>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">/say</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">/hello</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">get</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code><em>/say</em></code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code><em>/hello</em></code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>get</code></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><em>all</em></p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">/say</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">/bye</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">get</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">application/json</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code><em>/say</em></code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code><em>/bye</em></code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>get</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>application/json</code></p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">/say</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">/bye</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">post</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code><em>/say</em></code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code><em>/bye</em></code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>post</code></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><em>all</em></p></td>
 </tr>
 </tbody>
 </table>
 <div class="paragraph">
 <p>Notice that in the REST service we route directly to a Camel endpoint
-using <code>to()</code>. This is because the Rest DSL has a short-hand for
+using <code>to()</code>. This is because the Rest DSL has a shorthand for
 routing directly to an endpoint using <code>to()</code>.</p>
 </div>
 </div>
@@ -806,11 +832,11 @@ routing directly to an endpoint using <code>to()</code>.</p>
 </div>
 </div>
 <div class="sect1">
-<h2 id="_using_base_path"><a class="anchor" href="#_using_base_path"></a>Using base path</h2>
+<h2 id="_using_a_base_path"><a class="anchor" href="#_using_a_base_path"></a>Using a base path</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>The REST DSL allows defining base path to make the DSL a bit more DRY.
-For example to define a customer path, we can set the base path in
+<p>The REST DSL allows defining a base path to help applying the <em>"don&#8217;t repeat yourself"</em> (DRY) practice.
+For example, to define a customer path, we can set the base path in
 <code>rest("/customer")</code> and then provide the uri templates in the verbs, as
 shown below:</p>
 </div>
@@ -823,7 +849,7 @@ shown below:</p>
 </div>
 </div>
 <div class="paragraph">
-<p>And using XML DSL it becomes:</p>
+<p>And using XML DSL, it becomes:</p>
 </div>
 <div class="listingblock">
 <div class="content">
@@ -892,10 +918,12 @@ For example:</p>
 <h2 id="_managing_rest_services"><a class="anchor" href="#_managing_rest_services"></a>Managing Rest services</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>Each of the rest services becomes a Camel route, so in the first example
-we have 2 x get and 1 x post REST service, which each become a Camel
-route. This makes it <em>the same</em> from Camel to manage and run these
-services - as they are just Camel routes. This means any tooling and API
+<p>Each of the rest services becomes a Camel route, so in the first example,
+we have 2 x get and 1 x post REST service, which each becomes a Camel
+route.
+This makes it <em>the same</em> from Apache Camel to manage and run these
+services, as they are just Camel routes.
+This means any tooling and API
 today that deals with Camel routes, also work with the REST services.</p>
 </div>
 <div class="admonitionblock note">
@@ -912,34 +940,46 @@ To use JMX with Camel then <code>camel-management</code> JAR must be included in
 </div>
 <div class="paragraph">
 <p>This means you can use JMX to stop/start routes, and also get the JMX
-metrics about the routes, such as number of message processed, and their
+metrics about the routes, such as the number of messages processed, and their
 performance statistics.</p>
 </div>
 <div class="paragraph">
 <p>There is also a Rest Registry JMX MBean that contains a registry of all
-REST services which has been defined.</p>
+REST services that has been defined.</p>
 </div>
 </div>
 </div>
 <div class="sect1">
 <h2 id="_inline_rest_dsl_as_a_single_route"><a class="anchor" href="#_inline_rest_dsl_as_a_single_route"></a>Inline Rest DSL as a single route</h2>
 <div class="sectionbody">
+<div class="admonitionblock important">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-important" title="Important"></i>
+</td>
+<td class="content">
+Camel 4.4 or older has inline-routes disabled by default. Camel 4.5 or newer has inline-routes enabled by default.
+</td>
+</tr>
+</table>
+</div>
 <div class="paragraph">
 <p>Each of the rest services becomes a Camel route, and this means, that if the rest
-service is calling another Camel route via <code>direct</code>, which is a very common practice.
-This means that each rest service then becomes 2 routes. This can become harder to manage
+service is calling another Camel route via <code>direct</code>, which is a widespread practice.
+This means that each rest service then becomes two routes. This can become harder to manage
 if you have many rest services.</p>
 </div>
 <div class="paragraph">
 <p>When you use <code>direct</code> endpoints then you can enable Rest DSL to automatically <em>inline</em> the direct
-route in the rest route, meaning that there is only 1 route per rest service.</p>
+route in the rest route, meaning that there is only one route per rest service.</p>
 </div>
 <div class="paragraph">
 <p>To do this you <strong>MUST</strong> use <code>direct</code> endpoints, and each endpoint must be unique name per service.
 And the option <code>inlineRoutes</code> must be enabled.</p>
 </div>
 <div class="paragraph">
-<p>For example in the Java DSL below we have enabled inline routes and each rest service
+<p>For example, in the Java DSL below we have enabled inline routes and each rest service
 uses <code>direct</code> endpoints with unique names.</p>
 </div>
 <div class="listingblock">
@@ -973,7 +1013,7 @@ rest("/customers/")
 </div>
 </div>
 <div class="paragraph">
-<p>If you use Camel Main / Spring Boot / Quarkus / or Camel JBang you can also enable this in <code>application.properties</code> such as:</p>
+<p>If you use Camel Main, Camel Spring Boot, Camel Quarkus or Camel JBang, you can also enable this in <code>application.properties</code> such as:</p>
 </div>
 <div class="listingblock">
 <div class="content">
@@ -1018,7 +1058,7 @@ which you can do using <code>disabled</code> as shown in the following.</p>
 <div class="paragraph">
 <p>In this example the last two REST endpoints are configured with <code>disabled</code>.
 You can use <a href="using-propertyplaceholder.html" class="xref page">Property Placeholder</a> to
-let a external configuration determine if the REST endpoint is disabled or not.
+let an external configuration determine if the REST endpoint is disabled or not.
 In this example the <code>/customers/{id}/orders</code> endpoint is disabled via a placeholder.
 The last REST endpoint is hardcoded to be disabled.</p>
 </div>
@@ -1029,7 +1069,8 @@ The last REST endpoint is hardcoded to be disabled.</p>
 <div class="sectionbody">
 <div class="paragraph">
 <p>The Rest DSL supports automatic binding json/xml contents to/from POJOs
-using Camels Data Format. By default, the binding
+using data formats.
+By default, the binding
 mode is off, meaning there is no automatic binding happening for
 incoming and outgoing messages.</p>
 </div>
@@ -1054,36 +1095,36 @@ work with the POJOs in Java code.</p>
 </thead>
 <tbody>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">off</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>off</code></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Binding is turned off. This is the default option.</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">auto</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Binding is enabled and Camel is relaxed and support json, xml or both if
-the needed data formats are included in the classpath. Notice that if
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>auto</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Binding is enabled, and Camel is relaxed and supports JSON, XML or both if
+the necessary data formats are included in the classpath. Notice that if
 for example <code>camel-jaxb</code> is not on the classpath, then XML binding is
 not enabled.</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">json</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Binding to/from json is enabled, and requires a json capable data
-format on the classpath. By default Camel will use <code>jackson</code> as the
-data format. See the INFO box below for more details.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>json</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Binding to/from JSON is enabled, and requires a JSON capable data
+format on the classpath. By default, Camel will use <code>jackson</code> as the
+data format.</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">xml</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Binding to/from xml is enabled, and requires <code>camel-jaxb</code> on the
-classpath. See the INFO box below for more details.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>xm</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Binding to/from XML is enabled, and requires <code>camel-jaxb</code> on the
+classpath.</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">json_xml</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Binding to/from json and xml is enabled and requires both data formats to
-be on the classpath. See the INFO box below for more details.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>json_xml</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Binding to/from JSON and XML is enabled and requires both data formats to
+be on the classpath.</p></td>
 </tr>
 </tbody>
 </table>
 <div class="paragraph">
-<p>When using camel-jaxb for xml bindings, then
+<p>When using camel-jaxb for XML bindings, then
 you can use the option <code>mustBeJAXBElement</code> to relax the output message
 body must be a class with JAXB annotations. You can use this in
 situations where the message body is already in XML format, and you want
@@ -1095,11 +1136,12 @@ value.</p>
 <p>The binding from POJO to JSon/JAXB will only happen if the <code>content-type</code>
 header includes the word <code>json</code> or <code>xml</code> representatively. This allows you
 to specify a custom content-type if the message body should not attempt to be
-marshalled using the binding. For example if the message body is a
-custom binary payload etc.</p>
+marshalled using the binding. For example, if the message body is a
+custom binary payload, etc.</p>
 </div>
 <div class="paragraph">
-<p>When automatic binding from POJO to JSon/JAXB takes place the existing <code>content-type</code> header will by default be replaced with either <code>application/json</code> or <code>application/xml</code>. To disable the default behavior and be able to produce JSon/JAXB responses with custom <code>content-type</code> headers (e.g. <code>application/user.v2+json</code>) you configure this in Java DSL as shown below:</p>
+<p>When automatic binding from POJO to JSON/JAXB takes place the existing <code>content-type</code> header will by default be replaced with either <code>application/json</code> or <code>application/xml</code>.
+To disable the default behavior and be able to produce JSON/JAXB responses with custom <code>content-type</code> headers (e.g. <code>application/user.v2+json</code>) you configure this in Java DSL as shown below:</p>
 </div>
 <div class="listingblock">
 <div class="content">
@@ -1113,7 +1155,7 @@ the binding mode. You can configure the binding mode globally on the
 rest configuration, and then override per rest service as well.</p>
 </div>
 <div class="paragraph">
-<p>To enable binding you configure this in Java DSL as shown below:</p>
+<p>To enable binding, you configure this in Java DSL as shown below:</p>
 </div>
 <div class="listingblock">
 <div class="content">
@@ -1129,10 +1171,10 @@ rest configuration, and then override per rest service as well.</p>
 </div>
 </div>
 <div class="paragraph">
-<p>When binding is enabled Camel will bind the incoming and outgoing
+<p>When binding is enabled, Camel will bind the incoming and outgoing
 messages automatic, accordingly to the content type of the message. If
-the message is json, then json binding happens; and so if the message is
-xml then xml binding happens. The binding happens for incoming and reply
+the message is JSON, then JSON binding happens; and so if the message is
+ XML, then XML binding happens. The binding happens for incoming and reply
 messages. The table below summaries what binding occurs for incoming and
 reply messages.</p>
 </div>
@@ -1155,42 +1197,49 @@ reply messages.</p>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">XML</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Incoming</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">auto,
-xml,
-json_xml</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">auto,xml,json_xml</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">POJO</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">POJO</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Outgoing</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">auto,
-xml, json_xml</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">auto,xml, json_xml</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">XML</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">JSON</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Incoming</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">auto,
-json,
-json_xml</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">auto,json,json_xml</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">POJO</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">POJO</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Outgoing</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">auto,
-json,
-json_xml</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">auto,json,json_xml</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">JSON</p></td>
 </tr>
 </tbody>
 </table>
 <div class="paragraph">
-<p>When using binding you must also configure what POJO type to map to.
+<p>When using binding, you must also configure what POJO type to map to.
 This is mandatory for incoming messages, and optional for outgoing.</p>
 </div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+When using binding mode <code>json</code>, <code>xml</code> or <code>json_xml</code> then Camel will automatically set <code>consumers</code> and <code>produces</code>
+on the rest endpoint (according to the mode), if not already explicit configured. For example, with binding mode <code>json</code>
+and setting the outType as <code>UserPojo</code> then Camel will define this rest endpoint as producing <code>application/json</code>.
+</td>
+</tr>
+</table>
+</div>
 <div class="paragraph">
-<p>For example to map from xml/json to a pojo class <code>UserPojo</code> you do this
+<p>For example, to map from xml/json to a pojo class <code>UserPojo</code> you do this
 in Java DSL as shown below:</p>
 </div>
 <div class="listingblock">
@@ -1276,7 +1325,7 @@ rest("/users/")
 </div>
 </div>
 <div class="paragraph">
-<p>The <code>UserPojo</code> only supports json, as XML requires to use JAXB
+<p>The <code>UserPojo</code> only supports JSON, as XML requires using JAXB
 annotations, so we can add those annotations if we want to support XML
 also</p>
 </div>
@@ -1305,7 +1354,7 @@ public class UserPojo {
 </div>
 </div>
 <div class="paragraph">
-<p>By having the JAXB annotations the POJO supports both json and xml
+<p>By having the JAXB annotations, the POJO supports both JSON and XML
 bindings.</p>
 </div>
 <div class="sect2">
@@ -1355,7 +1404,7 @@ bindings.</p>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>apiVendorExtension</strong></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Whether vendor extension is enabled in the Rest APIs. If enabled then Camel will include additional information as vendor extension (eg keys starting with x-) such as route ids, class names etc. Not all 3rd party API gateways and tools supports vendor-extensions when importing your API docs.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Whether a vendor extension is enabled in the Rest APIs. If enabled, then Camel will include additional information as a vendor extension (e.g., keys starting with <code><em>x-</em></code>) such as route ids, class names etc. Not all third party API gateways and tools support vendor-extensions when importing your API docs.</p></td>
 <td class="tableblock halign-center valign-top"><p class="tableblock">false</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">boolean</p></td>
 </tr>
@@ -1367,7 +1416,7 @@ bindings.</p>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>clientRequestValidation</strong></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Whether to enable validation of the client request to check: 1) Content-Type header matches what the Rest DSL consumes; returns HTTP Status 415 if validation error. 2) Accept header matches what the Rest DSL produces; returns HTTP Status 406 if validation error. 3) Missing required data (query parameters, HTTP headers, body); returns HTTP Status 400 if validation error. 4) Parsing error of the message body (JSon, XML or Auto binding mode must be enabled); returns HTTP Status 400 if validation error.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Whether to enable validation of the client request to check: 1) Content-Type header matches what the Rest DSL consumes; returns HTTP Status 415 if validation error. 2) Accept header matches what the Rest DSL produces; returns HTTP Status 406 if validation error. 3) Missing required data (query parameters, HTTP headers, body); returns HTTP Status 400 if validation error. 4) Parsing error of the message body (JSON, XML or Auto binding mode must be enabled); returns HTTP Status 400 if validation error.</p></td>
 <td class="tableblock halign-center valign-top"><p class="tableblock">false</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">boolean</p></td>
 </tr>
@@ -1409,7 +1458,13 @@ bindings.</p>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>enableCORS</strong></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">To specify whether to enable CORS which means Camel will automatic include CORS in the HTTP headers in the response. This option is default false</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">To specify whether to enable CORS, which means Camel will automatically include CORS in the HTTP headers in the response. This option is default false</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">false</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">boolean</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>enableNoContentResponse</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">To specify whether to return HTTP 204 with an empty body when a response contains an empty JSON object or XML root object.</p></td>
 <td class="tableblock halign-center valign-top"><p class="tableblock">false</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">boolean</p></td>
 </tr>
@@ -1433,13 +1488,13 @@ bindings.</p>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>inlineRoutes</strong></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Inline routes in rest-dsl which are linked using direct endpoints. By default, each service in Rest DSL is an individual route, meaning that you would have at least two routes per service (rest-dsl, and the route linked from rest-dsl). Enabling this allows Camel to optimize and inline this as a single route, however this requires to use direct endpoints, which must be unique per service. This option is default false.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Inline routes in rest-dsl which are linked using direct endpoints. By default, each service in Rest DSL is an individual route, meaning that you would have at least two routes per service (rest-dsl, and the route linked from rest-dsl). Enabling this allows Camel to optimize and inline this as a single route. However, this requires using direct endpoints, which must be unique per service. This option is default false.</p></td>
 <td class="tableblock halign-center valign-top"><p class="tableblock">false</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">boolean</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>jsonDataFormat</strong></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Sets a custom json data format to be used Important: This option is only for setting a custom name of the data format, not to refer to an existing data format instance.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Sets a custom JSON data format to be used Important: This option is only for setting a custom name of the data format, not to refer to an existing data format instance.</p></td>
 <td class="tableblock halign-center valign-top"></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">String</p></td>
 </tr>
@@ -1481,14 +1536,14 @@ bindings.</p>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>xmlDataFormat</strong></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Sets a custom xml data format to be used. Important: This option is only for setting a custom name of the data format, not to refer to an existing data format instance.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Sets a custom XML data format to be used. Important: This option is only for setting a custom name of the data format, not to refer to an existing data format instance.</p></td>
 <td class="tableblock halign-center valign-top"></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">String</p></td>
 </tr>
 </tbody>
 </table>
 <div class="paragraph">
-<p>For example to configure to use the jetty component on port 9091, then we can do as follows:</p>
+<p>For example, to configure to use the jetty component on port 9091, then we can do as follows:</p>
 </div>
 <div class="listingblock">
 <div class="content">
@@ -1506,7 +1561,10 @@ bindings.</p>
 </div>
 </div>
 <div class="paragraph">
-<p>If no component has been explicit configured, then Camel will lookup if there is a Camel component that integrates with the Rest DSL, or if a org.apache.camel.spi.RestConsumerFactory is registered in the registry. If either one is found, then that is being used.</p>
+<p>If no component has been explicitly configured,
+then Camel will look up if there is a Camel component that integrates with the Rest DSL,
+or if a <code>org.apache.camel.spi.RestConsumerFactory</code> is registered in the registry.
+If either one is found, then that is being used.</p>
 </div>
 <div class="paragraph">
 <p>You can configure properties on these levels.</p>
@@ -1526,7 +1584,7 @@ Camel components has many options you can set on endpoint level.</p>
 </li>
 <li>
 <p>data format - Is used to set any option on the data formats. For
-example to enable pretty print in the json data format.</p>
+example, to enable pretty print in the JSON data format.</p>
 </li>
 <li>
 <p>cors headers - If cors is enabled, then custom CORS headers can be
@@ -1536,8 +1594,8 @@ header is set then that value takes precedence over the default value.</p>
 </ul>
 </div>
 <div class="paragraph">
-<p>You can set multiple options of the same level, so you can for
-example configure 2 component options, and 3 endpoint options etc.</p>
+<p>You can set multiple options of the same level, so you can, for
+example, configure two component options, and three endpoint options, etc.</p>
 </div>
 </div>
 </div>
@@ -1546,10 +1604,11 @@ example configure 2 component options, and 3 endpoint options etc.</p>
 <h2 id="_enabling_or_disabling_jackson_json_features"><a class="anchor" href="#_enabling_or_disabling_jackson_json_features"></a>Enabling or disabling Jackson JSON features</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>When using JSON binding you may want to turn specific Jackson features
-on or off. For example to disable failing on unknown properties (eg json
+<p>When using JSON binding, you may want to turn specific Jackson features
+on or off.
+For example, to disable failing on unknown properties (e.g., JSON
 input has a property which cannot be mapped to a POJO) then configure
-this using the dataFormatProperty as shown below:</p>
+this using the <code>dataFormatProperty</code> as shown below:</p>
 </div>
 <div class="listingblock">
 <div class="content">
@@ -1567,7 +1626,7 @@ as:</p>
 </div>
 </div>
 <div class="paragraph">
-<p>Likewise you can enable features using the enableFeatures such as:</p>
+<p>Likewise, you can enable features using the enableFeatures such as:</p>
 </div>
 <div class="listingblock">
 <div class="content">
@@ -1584,18 +1643,18 @@ classes</p>
 <div class="ulist">
 <ul>
 <li>
-<p>com.fasterxml.jackson.databind.SerializationFeature</p>
+<p><code>com.fasterxml.jackson.databind.SerializationFeature</code></p>
 </li>
 <li>
-<p>com.fasterxml.jackson.databind.DeserializationFeature</p>
+<p><code>com.fasterxml.jackson.databind.DeserializationFeature</code></p>
 </li>
 <li>
-<p>com.fasterxml.jackson.databind.MapperFeature</p>
+<p><code>com.fasterxml.jackson.databind.MapperFeature</code></p>
 </li>
 </ul>
 </div>
 <div class="paragraph">
-<p>The rest configuration is of course also possible using XML DSL:</p>
+<p>The rest configuration is, of course, also possible using XML DSL:</p>
 </div>
 <div class="listingblock">
 <div class="content">
@@ -1611,8 +1670,8 @@ classes</p>
 <h2 id="_default_cors_headers"><a class="anchor" href="#_default_cors_headers"></a>Default CORS headers</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>If CORS is enabled then the follow headers is in use by default. You can
-configure custom CORS headers which takes precedence over the default
+<p>If CORS is enabled, then the <em>"follow headers"</em> is in use by default.
+You can configure custom CORS headers that take precedence over the default
 value.</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
@@ -1628,19 +1687,19 @@ value.</p>
 </thead>
 <tbody>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Access-Control-Allow-Origin</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>Access-Control-Allow-Origin</code></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">*</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Access-Control-Allow-Methods</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>Access-Control-Allow-Methods</code></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">GET, HEAD, POST, PUT, DELETE, TRACE, OPTIONS, CONNECT, PATCH</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Access-Control-Allow-Headers</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>Access-Control-Allow-Headers</code></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Origin, Accept, X-Requested-With, Content-Type, Access-Control-Request-Method, Access-Control-Request-Headers</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Access-Control-Max-Age</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>Access-Control-Max-Age</code></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">3600</p></td>
 </tr>
 </tbody>
@@ -1652,8 +1711,8 @@ value.</p>
 <div class="sectionbody">
 <div class="paragraph">
 <p>If you want to define custom error messages to be sent back to the
-client with a HTTP error code (eg such as 400, 404 etc.)
-then you just set a header with the key <code>Exchange.HTTP_RESPONSE_CODE</code>
+client with a HTTP error code (e.g., such as 400, 404 etc.)
+then you set a header with the key <code>Exchange.HTTP_RESPONSE_CODE</code>
 to the error code (must be 300+) such as 404.
 And then the message body with any reply message, and optionally
 set the content-type header as well. There is a little example shown
@@ -1676,7 +1735,7 @@ from("direct:users-lives")
 </div>
 </div>
 <div class="paragraph">
-<p>In this example if the input id is a number that is below 100, we want
+<p>In this example, if the input id is a number that is below 100, we want
 to send back a custom error message, using the UserErrorService bean,
 which is implemented as shown:</p>
 </div>
@@ -1692,10 +1751,10 @@ which is implemented as shown:</p>
 </div>
 </div>
 <div class="paragraph">
-<p>In the UserErrorService bean we build our custom error message, and set
+<p>In the <code><em>UserErrorService</em></code> bean, we build our custom error message, and set
 the HTTP error code to 400. This is important, as that tells rest-dsl
 that this is a custom error message, and the message should not use the
-output pojo binding (eg would otherwise bind to CountryPojo).</p>
+output pojo binding (e.g., would otherwise bind to <code><em>CountryPojo</em></code>).</p>
 </div>
 <div class="sect2">
 <h3 id="_catching_jsonparserexception_and_returning_a_custom_error_message"><a class="anchor" href="#_catching_jsonparserexception_and_returning_a_custom_error_message"></a>Catching JsonParserException and returning a custom error message</h3>
@@ -1703,7 +1762,8 @@ output pojo binding (eg would otherwise bind to CountryPojo).</p>
 <p>You can return a custom message as-is (see previous section).
 So we can leverage this with Camel error handler to
 catch <code>JsonParserException</code>, handle that exception and build our custom
-response message. For example to return a HTTP error code 400 with a
+response message.
+For example, to return a HTTP error code 400 with a
 hardcoded message, we can do as shown below:</p>
 </div>
 <div class="listingblock">
@@ -1738,7 +1798,7 @@ the verbose parameter below:</p>
 <div class="paragraph">
 <p>The default value is automatic set as
 header on the incoming Camel <code>Message</code>. So if the call
-the <code>/customers/id/orders</code> do not include a query parameter with
+to <code>/customers/id/orders</code> do not include a query parameter with
 key <code>verbose</code> then Camel will now include a header with key <code>verbose</code>
 and the value <code>false</code> because it was declared as the default value. This
 functionality is only applicable for query parameters.
@@ -1775,12 +1835,15 @@ The validation checks for the following:</p>
 <p>Missing required data (query parameters, HTTP headers, body). (Returns HTTP Status 400)</p>
 </li>
 <li>
-<p>Parsing error of the message body (JSon, XML or Auto binding mode must be enabled). (Returns HTTP Status 400)</p>
+<p>Checking if query parameters or HTTP headers has not-allowed values. (Returns HTTP Status 400)</p>
+</li>
+<li>
+<p>Parsing error of the message body (JSON, XML or Auto binding mode must be enabled). (Returns HTTP Status 400)</p>
 </li>
 </ul>
 </div>
 <div class="paragraph">
-<p>If the validation fails then Rest DSL will return a response
+<p>If the validation fails, then Rest DSL will return a response
 with an HTTP error code.</p>
 </div>
 <div class="paragraph">
@@ -1805,7 +1868,8 @@ the <code>camel-openapi-java</code> modules.</p>
 <div class="paragraph">
 <p>You can define each parameter fine-grained
 with details such as name, description, data type, parameter type and so
-on, using the <code>param</code>. For example to define the id path parameter you
+on, using the <code>param</code>.
+For example, to define the id path parameter, you
 can do as shown below:</p>
 </div>
 <div class="listingblock">
@@ -1830,7 +1894,7 @@ can do as shown below:</p>
 </div>
 <div class="paragraph">
 <p>The body parameter type requires to use body as well for the name. For
-example a REST PUT operation to create/update an user could be done as:</p>
+example, a REST PUT operation to create/update an user could be done as:</p>
 </div>
 <div class="listingblock">
 <div class="content">
@@ -1857,7 +1921,7 @@ example a REST PUT operation to create/update an user could be done as:</p>
 <div class="paragraph">
 <p>The generated API documentation can be configured to include vendor extensions (<a href="https://swagger.io/specification/#specificationExtensions" class="bare">https://swagger.io/specification/#specificationExtensions</a>)
 which document the operations and definitions with additional information, such as class name of model classes, camel context id and route id&#8217;s.
-This information can be very helpful for developers especially during troubleshooting. However, at production usage you may wish to not have this turned
+This information can be very helpful for developers, especially during troubleshooting. However, at production usage you may wish to not have this turned
 on to avoid leaking implementation details into your API docs.</p>
 </div>
 <div class="paragraph">
@@ -1870,7 +1934,7 @@ on to avoid leaking implementation details into your API docs.</p>
 <i class="fa icon-note" title="Note"></i>
 </td>
 <td class="content">
-Not all 3rd party API gateways and tools supports vendor-extensions when importing your API docs.
+Not all third party API gateways and tools support vendor-extensions when importing your API docs.
 </td>
 </tr>
 </table>

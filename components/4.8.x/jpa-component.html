@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>JPA :: Red Hat Camel Reference</title>
+    <title>JPA :: Red Hat build of Apache Camel</title>
     <meta name="description" content="Store and retrieve Java objects from databases using Java Persistence API (JPA).">
     <meta name="generator" content="Antora 3.1.4">
     <link rel="stylesheet" href="../../_/css/site.css">
@@ -12,7 +12,7 @@
 <header class="header">
   <nav class="navbar">
     <div class="navbar-brand">
-      <a class="navbar-item" href="../../manual/index.html">Red Hat Apache Build of Apache Camel Manual</a>
+      <a class="navbar-item" href="/">Red Hat build of Apache Camel</a>
       <button class="navbar-burger" data-target="topbar-nav">
         <span></span>
         <span></span>
@@ -27,6 +27,7 @@
     <div class="panels">
 <div class="nav-panel-menu is-active" data-panel="menu">
   <nav class="nav-menu">
+    <button class="nav-menu-toggle" aria-label="Toggle expand/collapse all" style="display: none"></button>
     <h3 class="title"><a href="index.html">Camel Components</a></h3>
 <ul class="nav-list">
   <li class="nav-item" data-depth="0">
@@ -36,7 +37,46 @@
     <a class="nav-link" href="index.html">Components</a>
 <ul class="nav-list">
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="activemq-component.html">ActiveMQ</a>
+    <a class="nav-link" href="activemq-component.html">ActiveMQ 5.x</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="activemq6-component.html">ActiveMQ 6.x</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="ai-summary.html">AI</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="chatscript-component.html">ChatScript</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="djl-component.html">Deep Java Library</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="langchain4j-chat-component.html">LangChain4j Chat</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="langchain4j-embeddings-component.html">LangChain4j Embeddings</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="langchain4j-tokenizer-component.html">LangChain4j Tokenizer</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="langchain4j-tools-component.html">LangChain4j Tools</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="langchain4j-web-search-component.html">LangChain4j Web Search</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="milvus-component.html">Milvus</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="pinecone-component.html">Pinecone</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="qdrant-component.html">Qdrant</a>
+  </li>
+</ul>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="amqp-component.html">AMQP</a>
@@ -65,6 +105,15 @@
 <ul class="nav-list">
   <li class="nav-item" data-depth="3">
     <a class="nav-link" href="aws2-athena-component.html">AWS Athena</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="aws-bedrock-component.html">AWS Bedrock</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="aws-bedrock-agent-component.html">AWS Bedrock Agent</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="aws-bedrock-agent-runtime-component.html">AWS Bedrock Agent Runtime</a>
   </li>
   <li class="nav-item" data-depth="3">
     <a class="nav-link" href="aws-cloudtrail-component.html">AWS Cloudtrail</a>
@@ -169,7 +218,7 @@
     <a class="nav-link" href="azure-storage-blob-component.html">Azure Storage Blob Service</a>
   </li>
   <li class="nav-item" data-depth="3">
-    <a class="nav-link" href="azure-storage-datalake-component.html">Azure Storage Datalake Service</a>
+    <a class="nav-link" href="azure-storage-datalake-component.html">Azure Storage Data Lake Service</a>
   </li>
   <li class="nav-item" data-depth="3">
     <a class="nav-link" href="azure-storage-queue-component.html">Azure Storage Queue Service</a>
@@ -202,9 +251,6 @@
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="cql-component.html">Cassandra CQL</a>
-  </li>
-  <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="chatscript-component.html">ChatScript</a>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="chunk-component.html">Chunk</a>
@@ -277,9 +323,6 @@
     <a class="nav-link" href="debezium-sqlserver-component.html">Debezium SQL Server Connector</a>
   </li>
 </ul>
-  </li>
-  <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="djl-component.html">Deep Java Library</a>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="dhis2-component.html">DHIS2</a>
@@ -395,6 +438,9 @@
   </li>
   <li class="nav-item" data-depth="3">
     <a class="nav-link" href="google-pubsub-component.html">Google Pubsub</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="google-pubsub-lite-component.html">Google PubSub Lite</a>
   </li>
   <li class="nav-item" data-depth="3">
     <a class="nav-link" href="google-secret-manager-component.html">Google Secret Manager</a>
@@ -687,7 +733,7 @@
     <a class="nav-link" href="ldif-component.html">LDIF</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="log-component.html">Log</a>
+    <a class="nav-link" href="log-component.html">Log Data</a>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="lucene-component.html">Lucene</a>
@@ -900,16 +946,49 @@
     <a class="nav-link" href="smb-component.html">SMB</a>
   </li>
   <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="smooks-component.html">Smooks</a>
+  </li>
+  <li class="nav-item" data-depth="2">
     <a class="nav-link" href="smpp-component.html">SMPP</a>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="snmp-component.html">SNMP</a>
   </li>
   <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="solr-component.html">Solr</a>
+  </li>
+  <li class="nav-item" data-depth="2">
     <a class="nav-link" href="splunk-component.html">Splunk</a>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="splunk-hec-component.html">Splunk HEC</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="spring-summary.html">Spring</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="spring-batch-component.html">Spring Batch</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="spring-event-component.html">Spring Event</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="spring-jdbc-component.html">Spring JDBC</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="spring-ldap-component.html">Spring LDAP</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="spring-rabbitmq-component.html">Spring RabbitMQ</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="spring-redis-component.html">Spring Redis</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="spring-ws-component.html">Spring WebService</a>
+  </li>
+</ul>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="sql-component.html">SQL</a>
@@ -937,6 +1016,18 @@
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="stub-component.html">Stub</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="tahu-summary.html">Tahu</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="tahu-edge-component.html">Tahu Edge Node / Device</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="tahu-host-component.html">Tahu Host Application</a>
+  </li>
+</ul>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="telegram-component.html">Telegram</a>
@@ -999,7 +1090,7 @@
     <a class="nav-link" href="whatsapp-component.html">WhatsApp</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="wordpress-component.html">Wordpress</a>
+    <a class="nav-link" href="wordpress-component.html">WordPress</a>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="workday-component.html">Workday</a>
@@ -1392,7 +1483,13 @@
     <a class="nav-link" href="others/openapi-java.html">Openapi Java</a>
   </li>
   <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="others/openapi-validator.html">Openapi Validator</a>
+  </li>
+  <li class="nav-item" data-depth="2">
     <a class="nav-link" href="others/opentelemetry.html">OpenTelemetry</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="others/platform-http-jolokia.html">Platform HTTP Jolokia</a>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="others/platform-http-main.html">Platform Http Main</a>
@@ -1540,7 +1637,7 @@
     <a class="nav-link" href="eips/event-message.html">Event Message</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="eips/failover-eip.html">Failover</a>
+    <a class="nav-link" href="eips/failoverLoadBalancer-eip.html">Failover Load Balancer</a>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="eips/faultToleranceConfiguration-eip.html">Fault Tolerance Configuration</a>
@@ -1570,13 +1667,13 @@
     <a class="nav-link" href="eips/loadBalance-eip.html">Load Balance</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="eips/log-eip.html">Log</a>
+    <a class="nav-link" href="eips/log-eip.html">Logger</a>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="eips/loop-eip.html">Loop</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="eips/marshal-eip.html">Marshal EIP</a>
+    <a class="nav-link" href="eips/marshal-eip.html">Marshal</a>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="eips/message.html">Message</a>
@@ -1633,6 +1730,9 @@
     <a class="nav-link" href="eips/point-to-point-channel.html">Point to Point Channel</a>
   </li>
   <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="eips/poll-eip.html">Poll</a>
+  </li>
+  <li class="nav-item" data-depth="2">
     <a class="nav-link" href="eips/pollEnrich-eip.html">Poll Enrich</a>
   </li>
   <li class="nav-item" data-depth="2">
@@ -1648,7 +1748,7 @@
     <a class="nav-link" href="eips/publish-subscribe-channel.html">Publish Subscribe Channel</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="eips/random-eip.html">Random</a>
+    <a class="nav-link" href="eips/randomLoadBalancer-eip.html">Random Load Balancer</a>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="eips/recipientList-eip.html">Recipient List</a>
@@ -1690,7 +1790,7 @@
     <a class="nav-link" href="eips/rollback-eip.html">Rollback</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="eips/roundRobin-eip.html">Round Robin</a>
+    <a class="nav-link" href="eips/roundRobinLoadBalancer-eip.html">Round Robin Load Balancer</a>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="eips/routingSlip-eip.html">Routing Slip</a>
@@ -1702,7 +1802,7 @@
     <a class="nav-link" href="eips/sample-eip.html">Sample</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="eips/scatter-gather.html">Scatter Gather</a>
+    <a class="nav-link" href="eips/scatter-gather.html">Scatter-Gather</a>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="eips/script-eip.html">Script</a>
@@ -1732,6 +1832,9 @@
     <a class="nav-link" href="eips/setVariable-eip.html">Set Variable</a>
   </li>
   <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="eips/setVariables-eip.html">Set Variables</a>
+  </li>
+  <li class="nav-item" data-depth="2">
     <a class="nav-link" href="eips/sort-eip.html">Sort</a>
   </li>
   <li class="nav-item" data-depth="2">
@@ -1741,7 +1844,7 @@
     <a class="nav-link" href="eips/step-eip.html">Step</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="eips/sticky-eip.html">Sticky</a>
+    <a class="nav-link" href="eips/stickyLoadBalancer-eip.html">Sticky Load Balancer</a>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="eips/stop-eip.html">Stop</a>
@@ -1762,7 +1865,7 @@
     <a class="nav-link" href="eips/toD-eip.html">To D</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="eips/topic-eip.html">Topic</a>
+    <a class="nav-link" href="eips/topicLoadBalancer-eip.html">Topic Load Balancer</a>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="eips/transactional-client.html">Transactional Client</a>
@@ -1771,13 +1874,13 @@
     <a class="nav-link" href="eips/transform-eip.html">Transform</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="eips/unmarshal-eip.html">Unmarshal EIP</a>
+    <a class="nav-link" href="eips/unmarshal-eip.html">Unmarshal</a>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="eips/validate-eip.html">Validate</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="eips/weighted-eip.html">Weighted</a>
+    <a class="nav-link" href="eips/weightedLoadBalancer-eip.html">Weighted Load Balancer</a>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="eips/wireTap-eip.html">Wire Tap</a>
@@ -1796,7 +1899,7 @@
   </div>
   <ul class="components">
     <li class="component is-current">
-      <a class="title" href="index.html">Camel Components</a>
+      <div class="title"><a href="index.html">Camel Components</a></div>
       <ul class="versions">
         <li class="version is-current is-latest">
           <a href="index.html">Next (Pre-release)</a>
@@ -1804,12 +1907,7 @@
       </ul>
     </li>
     <li class="component">
-      <a class="title" href="../../manual/index.html">User manual</a>
-      <ul class="versions">
-        <li class="version is-latest">
-          <a href="../../manual/index.html">default</a>
-        </li>
-      </ul>
+      <div class="title"><a href="../../manual/index.html">User manual</a></div>
     </li>
   </ul>
 </div>
@@ -1827,6 +1925,7 @@
     <li><a href="jpa-component.html">JPA</a></li>
   </ul>
 </nav>
+<div class="edit-this-page"><a href="file:///code/jboss/jboss-camel/docs/components/modules/ROOT/pages/jpa-component.adoc">Edit this Page</a></div>
 </div>
   <div class="content">
 <aside class="toc sidebar" data-title="Contents" data-levels="2">
@@ -1844,8 +1943,8 @@
 </div>
 <div class="paragraph">
 <p>The JPA component enables you to store and retrieve Java objects from
-persistent storage using EJB 3&#8217;s Java Persistence Architecture (JPA),
-which is a standard interface layer that wraps Object/Relational Mapping
+persistent storage using EJB 3&#8217;s Java Persistence Architecture (JPA).
+JPA is a standard interface layer that wraps Object/Relational Mapping
 (ORM) products such as OpenJPA, Hibernate, TopLink, and so on.</p>
 </div>
 <div class="paragraph">
@@ -1861,71 +1960,6 @@ for this component:</p>
     &lt;!-- use the same version as your Camel core version --&gt;
 &lt;/dependency&gt;</code></pre>
 </div>
-</div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="_sending_to_the_endpoint"><a class="anchor" href="#_sending_to_the_endpoint"></a>Sending to the endpoint</h2>
-<div class="sectionbody">
-<div class="paragraph">
-<p>You can store a Java entity bean in a database by sending it to a JPA
-producer endpoint. The body of the <em>In</em> message is assumed to be an
-entity bean (that is, a POJO with an
-<a href="https://jakarta.ee/specifications/persistence/2.2/apidocs/javax/persistence/entity">@Entity</a>
-annotation on it) or a collection or array of entity beans.</p>
-</div>
-<div class="paragraph">
-<p>If the body is a List of entities, make sure to use
-<strong>entityType=java.util.List</strong> as a configuration passed to the
-producer endpoint.</p>
-</div>
-<div class="paragraph">
-<p>If the body does not contain one of the previous listed types, put a
-Message Translator in front of the
-endpoint to perform the necessary conversion first.</p>
-</div>
-<div class="paragraph">
-<p>You can use <code>query</code>, <code>namedQuery</code> or <code>nativeQuery</code>
-for the producer as well. Also in the value of the <code>parameters</code>, you can use
-Simple expression which allows you to retrieve parameter values from Message body, header
-and etc. Those query can be used for retrieving a set of data with using <code>SELECT</code>
-JPQL/SQL statement as well as executing bulk update/delete with using <code>UPDATE</code>/<code>DELETE</code>
-JPQL/SQL statement. Please note that you need to specify <code>useExecuteUpdate</code> to <code>true</code>
-if you execute <code>UPDATE</code>/<code>DELETE</code> with <code>namedQuery</code> as camel don&#8217;t look into the
-named query unlike <code>query</code> and <code>nativeQuery</code>.</p>
-</div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="_consuming_from_the_endpoint"><a class="anchor" href="#_consuming_from_the_endpoint"></a>Consuming from the endpoint</h2>
-<div class="sectionbody">
-<div class="paragraph">
-<p>Consuming messages from a JPA consumer endpoint removes (or updates)
-entity beans in the database. This allows you to use a database table as
-a logical queue: consumers take messages from the queue and then
-delete/update them to logically remove them from the queue.</p>
-</div>
-<div class="paragraph">
-<p>If you do not wish to delete the entity bean when it has been processed
-(and when routing is done), you can specify <code>consumeDelete=false</code> on the
-URI. This will result in the entity being processed each poll.</p>
-</div>
-<div class="paragraph">
-<p>If you would rather perform some update on the entity to mark it as
-processed (such as to exclude it from a future query) then you can
-annotate a method with
-<a href="https://www.javadoc.io/doc/org.apache.camel/camel-jpa/current/org/apache/camel/component/jpa/Consumed.html">@Consumed</a>
-which will be invoked on your entity bean when the entity bean when it
-has been processed (and when routing is done).</p>
-</div>
-<div class="paragraph">
-<p>You can use <a href="https://www.javadoc.io/doc/org.apache.camel/camel-jpa/current/org/apache/camel/component/jpa/PreConsumed.html">@PreConsumed</a>
-which will be invoked on your entity bean before it has been processed
-(before routing).</p>
-</div>
-<div class="paragraph">
-<p>If you are consuming a lot (100K+) of rows and experience OutOfMemory
-problems you should set the maximumResults to sensible value.</p>
 </div>
 </div>
 </div>
@@ -1966,37 +2000,65 @@ ensure the body is of the correct type.</p>
 <div class="sect2">
 <h3 id="_configuring_component_options"><a class="anchor" href="#_configuring_component_options"></a>Configuring Component Options</h3>
 <div class="paragraph">
-<p>The component level is the highest level which holds general and common configurations that are inherited by the endpoints.
-For example a component may have security settings, credentials for authentication, urls for network connection and so forth.</p>
+<p>At the component level, you set general and shared configurations that are, then, inherited by the endpoints. It is the highest configuration level.</p>
 </div>
 <div class="paragraph">
-<p>Some components only have a few options, and others may have many. Because components typically have pre configured defaults
-that are commonly used, then you may often only need to configure a few options on a component; or none at all.</p>
+<p>For example, a component may have security settings, credentials for authentication, urls for network connection and so forth.</p>
 </div>
 <div class="paragraph">
-<p>Configuring components can be done with the <a href="../../manual/component-dsl.html" class="xref page">Component DSL</a>,
-in a configuration file (application.properties|yaml), or directly with Java code.</p>
+<p>Some components only have a few options, and others may have many.
+Because components typically have pre-configured defaults that are commonly used, then you may often only need to configure a few options on a component; or none at all.</p>
+</div>
+<div class="paragraph">
+<p>You can configure components using:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>the <a href="../../manual/component-dsl.html" class="xref page">Component DSL</a>.</p>
+</li>
+<li>
+<p>in a configuration file (<code>application.properties</code>, <code>*.yaml</code> files, etc).</p>
+</li>
+<li>
+<p>directly in the Java code.</p>
+</li>
+</ul>
 </div>
 </div>
 <div class="sect2">
 <h3 id="_configuring_endpoint_options"><a class="anchor" href="#_configuring_endpoint_options"></a>Configuring Endpoint Options</h3>
 <div class="paragraph">
-<p>Where you find yourself configuring the most is on endpoints, as endpoints often have many options, which allows you to
-configure what you need the endpoint to do. The options are also categorized into whether the endpoint is used as consumer (from)
-or as a producer (to), or used for both.</p>
+<p>You usually spend more time setting up endpoints because they have many options.
+These options help you customize what you want the endpoint to do.
+The options are also categorized into whether the endpoint is used as a consumer (<em>from</em>), as a producer (<em>to</em>), or  both.</p>
 </div>
 <div class="paragraph">
-<p>Configuring endpoints is most often done directly in the endpoint URI as path and query parameters. You can also use
-the <a href="../../manual/Endpoint-dsl.html" class="xref page">Endpoint DSL</a> and <a href="../../manual/dataformat-dsl.html" class="xref page">DataFormat DSL</a>
+<p>Configuring endpoints is most often done directly in the endpoint URI as <em>path</em> and <em>query</em> parameters.
+You can also use the <a href="../../manual/Endpoint-dsl.html" class="xref page">Endpoint DSL</a> and <a href="../../manual/dataformat-dsl.html" class="xref page">DataFormat DSL</a>
 as a <em>type safe</em> way of configuring endpoints and data formats in Java.</p>
 </div>
 <div class="paragraph">
-<p>A good practice when configuring options is to use <a href="../../manual/using-propertyplaceholder.html" class="xref page">Property Placeholders</a>,
-which allows to not hardcode urls, port numbers, sensitive information, and other settings.
-In other words placeholders allows to externalize the configuration from your code, and gives more flexibility and reuse.</p>
+<p>A good practice when configuring options is to use <a href="../../manual/using-propertyplaceholder.html" class="xref page">Property Placeholders</a>.</p>
 </div>
 <div class="paragraph">
-<p>The following two sections lists all the options, firstly for the component followed by the endpoint.</p>
+<p>Property placeholders provide a few benefits:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>They help prevent using hardcoded urls, port numbers, sensitive information, and other settings.</p>
+</li>
+<li>
+<p>They allow externalizing the configuration from the code.</p>
+</li>
+<li>
+<p>They help the code to become more flexible and reusable.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>The following two sections list all the options, firstly for the component followed by the endpoint.</p>
 </div>
 </div>
 </div>
@@ -2129,7 +2191,7 @@ In other words placeholders allows to externalize the configuration from your co
 </div>
 </div>
 <div class="paragraph">
-<p>with the following path and query parameters:</p>
+<p>With the following <em>path</em> and <em>query</em> parameters:</p>
 </div>
 <div class="sect2">
 <h3 id="_path_parameters_1_parameters"><a class="anchor" href="#_path_parameters_1_parameters"></a>Path Parameters (1 parameters)</h3>
@@ -2183,7 +2245,7 @@ In other words placeholders allows to externalize the configuration from your co
 <td class="tableblock halign-left valign-top"><p class="tableblock"><a id="_endpoint_query_option_joinTransaction"></a>
 <a href="#_endpoint_query_option_joinTransaction" class="anchor"></a><strong>joinTransaction</strong> (common)</p></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>The camel-jpa component will join transaction by default. You can use this option to turn this off, for example if you use LOCAL_RESOURCE and join transaction doesn&#8217;t work with your JPA provider. This option can also be set globally on the JpaComponent, instead of having to set it on all endpoints.</p>
+<p>The camel-jpa component will join transaction by default. You can use this option to turn this off, for example, if you use LOCAL_RESOURCE and join transaction doesn&#8217;t work with your JPA provider. This option can also be set globally on the JpaComponent, instead of having to set it on all endpoints.</p>
 </div></div></td>
 <td class="tableblock halign-center valign-top"><p class="tableblock">true</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">boolean</p></td>
@@ -2237,7 +2299,7 @@ In other words placeholders allows to externalize the configuration from your co
 <td class="tableblock halign-left valign-top"><p class="tableblock"><a id="_endpoint_query_option_resultClass"></a>
 <a href="#_endpoint_query_option_resultClass" class="anchor"></a><strong>resultClass</strong> (common)</p></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>Defines the type of the returned payload (we will call entityManager.createNativeQuery(nativeQuery, resultClass) instead of entityManager.createNativeQuery(nativeQuery)). Without this option, we will return an object array. Only has an affect when using in conjunction with native query when consuming data.</p>
+<p>Defines the type of the returned payload (we will call entityManager.createNativeQuery(nativeQuery, resultClass) instead of entityManager.createNativeQuery(nativeQuery)). Without this option, we will return an object array. Only has an effect when using in conjunction with a native query when consuming data.</p>
 </div></div></td>
 <td class="tableblock halign-center valign-top"></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Class</p></td>
@@ -2255,7 +2317,7 @@ In other words placeholders allows to externalize the configuration from your co
 <td class="tableblock halign-left valign-top"><p class="tableblock"><a id="_endpoint_query_option_consumeLockEntity"></a>
 <a href="#_endpoint_query_option_consumeLockEntity" class="anchor"></a><strong>consumeLockEntity</strong> (consumer)</p></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>Specifies whether or not to set an exclusive lock on each entity bean while processing the results from polling.</p>
+<p>Specifies whether to set an exclusive lock on each entity bean while processing the results from polling.</p>
 </div></div></td>
 <td class="tableblock halign-center valign-top"><p class="tableblock">true</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">boolean</p></td>
@@ -2313,7 +2375,7 @@ In other words placeholders allows to externalize the configuration from your co
 <td class="tableblock halign-left valign-top"><p class="tableblock"><a id="_endpoint_query_option_maxMessagesPerPoll"></a>
 <a href="#_endpoint_query_option_maxMessagesPerPoll" class="anchor"></a><strong>maxMessagesPerPoll</strong> (consumer)</p></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>An integer value to define the maximum number of messages to gather per poll. By default, no maximum is set. Can be used to avoid polling many thousands of messages when starting up the server. Set a value of 0 or negative to disable.</p>
+<p>An integer value to define the maximum number of messages to gather per poll. By default, no maximum is set. It can be used to avoid polling many thousands of messages when starting up the server. Set a value of 0 or negative to disable.</p>
 </div></div></td>
 <td class="tableblock halign-center valign-top"></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">int</p></td>
@@ -2349,7 +2411,7 @@ In other words placeholders allows to externalize the configuration from your co
 <td class="tableblock halign-left valign-top"><p class="tableblock"><a id="_endpoint_query_option_transacted"></a>
 <a href="#_endpoint_query_option_transacted" class="anchor"></a><strong>transacted</strong> (consumer)</p></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>Whether to run the consumer in transacted mode, by which all messages will either commit or rollback, when the entire batch has been processed. The default behavior (false) is to commit all the previously successfully processed messages, and only rollback the last failed message.</p>
+<p>Whether to run the consumer in transacted mode, by which all messages will either commit or rollback, when the entire batch has been processed. The default behavior (false) is to commit all the previously successfully processed messages, and only roll back the last failed message.</p>
 </div></div></td>
 <td class="tableblock halign-center valign-top"><p class="tableblock">false</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">boolean</p></td>
@@ -2416,7 +2478,7 @@ In other words placeholders allows to externalize the configuration from your co
 <td class="tableblock halign-left valign-top"><p class="tableblock"><a id="_endpoint_query_option_findEntity"></a>
 <a href="#_endpoint_query_option_findEntity" class="anchor"></a><strong>findEntity</strong> (producer)</p></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>If enabled then the producer will find a single entity by using the message body as key and entityType as the class type. This can be used instead of a query to find a single entity.</p>
+<p>If enabled, then the producer will find a single entity by using the message body as a key and entityType as the class type. This can be used instead of a query to find a single entity.</p>
 </div></div></td>
 <td class="tableblock halign-center valign-top"><p class="tableblock">false</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">boolean</p></td>
@@ -2470,7 +2532,7 @@ In other words placeholders allows to externalize the configuration from your co
 <td class="tableblock halign-left valign-top"><p class="tableblock"><a id="_endpoint_query_option_useExecuteUpdate"></a>
 <a href="#_endpoint_query_option_useExecuteUpdate" class="anchor"></a><strong>useExecuteUpdate</strong> (producer)</p></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>To configure whether to use executeUpdate() when producer executes a query. When you use INSERT, UPDATE or DELETE statement as a named query, you need to specify this option to 'true'.</p>
+<p>To configure whether to use executeUpdate() when producer executes a query. When you use INSERT, UPDATE or a DELETE statement as a named query, you need to specify this option to 'true'.</p>
 </div></div></td>
 <td class="tableblock halign-center valign-top"></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Boolean</p></td>
@@ -2515,7 +2577,7 @@ In other words placeholders allows to externalize the configuration from your co
 <td class="tableblock halign-left valign-top"><p class="tableblock"><a id="_endpoint_query_option_sharedEntityManager"></a>
 <a href="#_endpoint_query_option_sharedEntityManager" class="anchor"></a><strong>sharedEntityManager</strong> (advanced)</p></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>Whether to use Spring&#8217;s SharedEntityManager for the consumer/producer. Note in most cases joinTransaction should be set to false as this is not an EXTENDED EntityManager.</p>
+<p>Whether to use Spring&#8217;s SharedEntityManager for the consumer/producer. Note in most cases, joinTransaction should be set to false as this is not an EXTENDED EntityManager.</p>
 </div></div></td>
 <td class="tableblock halign-center valign-top"><p class="tableblock">false</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">boolean</p></td>
@@ -2771,10 +2833,72 @@ In other words placeholders allows to externalize the configuration from your co
 </div>
 </div>
 <div class="sect1">
-<h2 id="_configuring_entitymanagerfactory"><a class="anchor" href="#_configuring_entitymanagerfactory"></a>Configuring EntityManagerFactory</h2>
+<h2 id="_usage"><a class="anchor" href="#_usage"></a>Usage</h2>
 <div class="sectionbody">
+<div class="sect2">
+<h3 id="_sending_to_the_endpoint"><a class="anchor" href="#_sending_to_the_endpoint"></a>Sending to the endpoint</h3>
 <div class="paragraph">
-<p>Its strongly advised to configure the JPA component to use a specific
+<p>You can store a Java entity bean in a database by sending it to a JPA
+producer endpoint. The body of the <em>In</em> message is assumed to be an
+entity bean (that is a POJO with an
+<a href="https://jakarta.ee/specifications/persistence/2.2/apidocs/javax/persistence/entity">@Entity</a>
+annotation on it) or a collection or array of entity beans.</p>
+</div>
+<div class="paragraph">
+<p>If the body is a List of entities, make sure to use
+<strong>entityType=java.util.List</strong> as a configuration passed to the
+producer endpoint.</p>
+</div>
+<div class="paragraph">
+<p>If the body does not contain one of the previous listed types, put a
+Message Translator in front of the
+endpoint to perform the necessary conversion first.</p>
+</div>
+<div class="paragraph">
+<p>You can use <code>query</code>, <code>namedQuery</code> or <code>nativeQuery</code>
+for the producer as well. Also in the value of the <code>parameters</code>, you can use
+Simple expression which allows you to retrieve parameter values from Message body, header,
+etc. Those query can be used for retrieving a set of data with using <code>SELECT</code>
+JPQL/SQL statement as well as executing bulk update/delete with using <code>UPDATE</code>/<code>DELETE</code>
+JPQL/SQL statement. Please note that you need to specify <code>useExecuteUpdate</code> to <code>true</code>
+if you execute <code>UPDATE</code>/<code>DELETE</code> with <code>namedQuery</code> as Camel doesn&#8217;t look into the
+named query unlike <code>query</code> and <code>nativeQuery</code>.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_consuming_from_the_endpoint"><a class="anchor" href="#_consuming_from_the_endpoint"></a>Consuming from the endpoint</h3>
+<div class="paragraph">
+<p>Consuming messages from a JPA consumer endpoint removes (or updates)
+entity beans in the database. This allows you to use a database table as
+a logical queue: consumers take messages from the queue and then
+delete/update them to logically remove them from the queue.</p>
+</div>
+<div class="paragraph">
+<p>If you do not wish to delete the entity bean when it has been processed
+(and when routing is done), you can specify <code>consumeDelete=false</code> on the
+URI. This will result in the entity being processed in each poll.</p>
+</div>
+<div class="paragraph">
+<p>If you would rather perform some update on the entity to mark it as
+processed (such as to exclude it from a future query), then you can
+annotate a method with
+<a href="https://www.javadoc.io/doc/org.apache.camel/camel-jpa/current/org/apache/camel/component/jpa/Consumed.html">@Consumed</a>.
+It will be invoked on your entity bean when the entity bean has been processed (and when routing is done).</p>
+</div>
+<div class="paragraph">
+<p>You can use <a href="https://www.javadoc.io/doc/org.apache.camel/camel-jpa/current/org/apache/camel/component/jpa/PreConsumed.html">@PreConsumed</a>
+which will be invoked on your entity bean before it has been processed
+(before routing).</p>
+</div>
+<div class="paragraph">
+<p>If you are consuming a lot of rows (100K+) and experience <code>OutOfMemory</code>
+problems, you should set the <code>maximumResults</code> to a sensible value.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_configuring_entitymanagerfactory"><a class="anchor" href="#_configuring_entitymanagerfactory"></a>Configuring EntityManagerFactory</h3>
+<div class="paragraph">
+<p>It&#8217;s strongly advised to configure the JPA component to use a specific
 <code>EntityManagerFactory</code> instance. If failed to do so each <code>JpaEndpoint</code>
 will auto create their own instance of <code>EntityManagerFactory</code> which most
 often is not what you want.</p>
@@ -2798,13 +2922,11 @@ You only need to do so if there is ambiguity, in which case Camel will
 log a WARN.</p>
 </div>
 </div>
-</div>
-<div class="sect1">
-<h2 id="_configuring_transactionstrategy"><a class="anchor" href="#_configuring_transactionstrategy"></a>Configuring TransactionStrategy</h2>
-<div class="sectionbody">
+<div class="sect2">
+<h3 id="_configuring_transactionstrategy"><a class="anchor" href="#_configuring_transactionstrategy"></a>Configuring TransactionStrategy</h3>
 <div class="paragraph">
 <p>The <code>TransactionStrategy</code> is a vendor neutral abstraction that allows <code>camel-jpa</code>
-to easily plugin and work with Spring <code>TransactionManager</code> or Quarkus Transaction API.</p>
+to easily plug in and work with Spring <code>TransactionManager</code> or Quarkus Transaction API.</p>
 </div>
 <div class="paragraph">
 <p>The <code>JpaComponent</code> looks up automatically the
@@ -2833,10 +2955,8 @@ explicitly configure a JPA component that references the
 </div>
 </div>
 </div>
-</div>
-<div class="sect1">
-<h2 id="_using_a_consumer_with_a_named_query"><a class="anchor" href="#_using_a_consumer_with_a_named_query"></a>Using a consumer with a named query</h2>
-<div class="sectionbody">
+<div class="sect2">
+<h3 id="_using_a_consumer_with_a_named_query"><a class="anchor" href="#_using_a_consumer_with_a_named_query"></a>Using a consumer with a named query</h3>
 <div class="paragraph">
 <p>For consuming only selected entities, you can use the
 <code>namedQuery</code> URI query option. First, you have to define the
@@ -2852,7 +2972,7 @@ public class MultiSteps {
 </div>
 </div>
 <div class="paragraph">
-<p>After that you can define a consumer uri like this one:</p>
+<p>After that, you can define a consumer uri like this one:</p>
 </div>
 <div class="listingblock">
 <div class="content">
@@ -2861,10 +2981,8 @@ public class MultiSteps {
 </div>
 </div>
 </div>
-</div>
-<div class="sect1">
-<h2 id="_using_a_consumer_with_a_query"><a class="anchor" href="#_using_a_consumer_with_a_query"></a>Using a consumer with a query</h2>
-<div class="sectionbody">
+<div class="sect2">
+<h3 id="_using_a_consumer_with_a_query"><a class="anchor" href="#_using_a_consumer_with_a_query"></a>Using a consumer with a query</h3>
 <div class="paragraph">
 <p>For consuming only selected entities, you can use the <code>query</code>
 URI query option. You only have to define the query option:</p>
@@ -2876,10 +2994,8 @@ URI query option. You only have to define the query option:</p>
 </div>
 </div>
 </div>
-</div>
-<div class="sect1">
-<h2 id="_using_a_consumer_with_a_native_query"><a class="anchor" href="#_using_a_consumer_with_a_native_query"></a>Using a consumer with a native query</h2>
-<div class="sectionbody">
+<div class="sect2">
+<h3 id="_using_a_consumer_with_a_native_query"><a class="anchor" href="#_using_a_consumer_with_a_native_query"></a>Using a consumer with a native query</h3>
 <div class="paragraph">
 <p>For consuming only selected entities, you can use the
 <code>nativeQuery</code> URI query option. You only have to define the
@@ -2896,10 +3012,8 @@ native query option:</p>
 the message body.</p>
 </div>
 </div>
-</div>
-<div class="sect1">
-<h2 id="_using_a_producer_with_a_named_query"><a class="anchor" href="#_using_a_producer_with_a_named_query"></a>Using a producer with a named query</h2>
-<div class="sectionbody">
+<div class="sect2">
+<h3 id="_using_a_producer_with_a_named_query"><a class="anchor" href="#_using_a_producer_with_a_named_query"></a>Using a producer with a named query</h3>
 <div class="paragraph">
 <p>For retrieving selected entities or execute bulk update/delete, you can use the
 <code>namedQuery</code> URI query option. First, you have to define the
@@ -2915,7 +3029,7 @@ public class MultiSteps {
 </div>
 </div>
 <div class="paragraph">
-<p>After that you can define a producer uri like this one:</p>
+<p>After that, you can define a producer uri like this one:</p>
 </div>
 <div class="listingblock">
 <div class="content">
@@ -2928,10 +3042,8 @@ public class MultiSteps {
 as a named query.</p>
 </div>
 </div>
-</div>
-<div class="sect1">
-<h2 id="_using_a_producer_with_a_query"><a class="anchor" href="#_using_a_producer_with_a_query"></a>Using a producer with a query</h2>
-<div class="sectionbody">
+<div class="sect2">
+<h3 id="_using_a_producer_with_a_query"><a class="anchor" href="#_using_a_producer_with_a_query"></a>Using a producer with a query</h3>
 <div class="paragraph">
 <p>For retrieving selected entities or execute bulk update/delete, you can use the <code>query</code>
 URI query option. You only have to define the query option:</p>
@@ -2943,10 +3055,8 @@ URI query option. You only have to define the query option:</p>
 </div>
 </div>
 </div>
-</div>
-<div class="sect1">
-<h2 id="_using_a_producer_with_a_native_query"><a class="anchor" href="#_using_a_producer_with_a_native_query"></a>Using a producer with a native query</h2>
-<div class="sectionbody">
+<div class="sect2">
+<h3 id="_using_a_producer_with_a_native_query"><a class="anchor" href="#_using_a_producer_with_a_native_query"></a>Using a producer with a native query</h3>
 <div class="paragraph">
 <p>For retrieving selected entities or execute bulk update/delete, you can use the
 <code>nativeQuery</code> URI query option. You only have to define the
@@ -2963,10 +3073,8 @@ native query option:</p>
 the message body.</p>
 </div>
 </div>
-</div>
-<div class="sect1">
-<h2 id="_using_the_jpa_based_idempotent_repository"><a class="anchor" href="#_using_the_jpa_based_idempotent_repository"></a>Using the JPA-Based Idempotent Repository</h2>
-<div class="sectionbody">
+<div class="sect2">
+<h3 id="_using_the_jpa_based_idempotent_repository"><a class="anchor" href="#_using_the_jpa_based_idempotent_repository"></a>Using the JPA-Based Idempotent Repository</h3>
 <div class="paragraph">
 <p>The Idempotent Consumer from the <a href="http://camel.apache.org/enterprise-integration-patterns.html">EIP patterns</a> is used to filter out duplicate messages. A JPA-based idempotent repository is provided.</p>
 </div>
@@ -3010,14 +3118,16 @@ Index: 20, Size: 20</p>
 &lt;/camelContext&gt;</code></pre>
 </div>
 </div>
-<div class="paragraph">
-<p><strong>When running this Camel component tests inside your IDE</strong></p>
 </div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_important_development_notes"><a class="anchor" href="#_important_development_notes"></a>Important Development Notes</h2>
+<div class="sectionbody">
 <div class="paragraph">
 <p>If you run the
-<a href="https://svn.apache.org/repos/asf/camel/trunk/components/camel-jpa/src/test">tests
-of this component</a> directly inside your IDE, and not through
-Maven, then you could see exceptions like these:</p>
+<a href="https://github.com/apache/camel/tree/main/components/camel-jpa/src/test">tests of this component</a>
+directly inside your IDE, and not through Maven, then you could see exceptions like these:</p>
 </div>
 <div class="listingblock">
 <div class="content">
@@ -3036,18 +3146,21 @@ but the following listed types were not enhanced at build time or at class load 
 <div class="paragraph">
 <p>The problem here is that the source has been compiled or recompiled through
 your IDE and not through Maven, which would
-<a href="https://svn.apache.org/repos/asf/camel/trunk/components/camel-jpa/pom.xml">enhance
-the byte-code at build time</a>. To overcome this you need to enable
+<a href="https://github.com/apache/camel/blob/main/components/camel-jpa/pom.xml">enhance
+the byte-code at build time</a>. To overcome this, you need to enable
 <a href="http://openjpa.apache.org/entity-enhancement.html#dynamic-enhancement">dynamic
 byte-code enhancement of OpenJPA</a>. For example, assuming the current
 OpenJPA version being used in Camel is 2.2.1, to run the
-tests inside your IDE you would need to pass the following
+tests inside your IDE, you would need to pass the following
 argument to the JVM:</p>
 </div>
 <div class="listingblock">
 <div class="content">
 <pre>-javaagent:&lt;path_to_your_local_m2_cache&gt;/org/apache/openjpa/openjpa/2.2.1/openjpa-2.2.1.jar</pre>
 </div>
+</div>
+<div class="paragraph">
+<p>Unresolved include directive in modules/ROOT/pages/jpa-component.adoc - include::spring-boot:partial$starter.adoc[]</p>
 </div>
 </div>
 </div>
