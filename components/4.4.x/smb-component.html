@@ -2358,11 +2358,10 @@ In other words placeholders allows to externalize the configuration from your co
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">private void process(Exchange exchange) throws IOException {
-    final File file = exchange.getMessage().getBody(File.class);
-    try (InputStream inputStream = file.getInputStream()) {
-        LOG.debug("Read exchange: {}, with contents: {}", file.getFileInformation(), new String(inputStream.readAllBytes()));
-    }
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">
+  private void process(Exchange exchange) throws IOException {
+    final org.apache.camel.component.smb.SmbFile file = exchange.getMessage().getBody(org.apache.camel.component.smb.SmbFile.class);
+    LOG.debug("Read exchange: {}, with contents: {}", file.getFile(), new String((byte[]) file.getBody()));
 }
 
 public void configure() {
@@ -2380,7 +2379,7 @@ public void configure() {
 </td>
 <td class="content">
 <div class="paragraph">
-<p>Beware that the File object provided is not a <code>java.io.File</code> instance, but, instead a <code>com.hierynomus.smbj.share.File</code> instance.</p>
+<p>Beware that the File object provided is not a <code>java.io.File</code> instance, but, instead a <code>org.apache.camel.component.smb.SmbFile</code> instance that extends Camel's </code>GenericFile`</code>.</p>
 </div>
 </td>
 </tr>
