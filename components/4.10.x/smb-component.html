@@ -2979,21 +2979,21 @@
                             files</h3>
                             <div class="paragraph"><p>For instance, polling all the files from an SMB file share and
                                 reading their contents would look like this:</p></div>
-<div class="listingblock">
-<div class="content">
-<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">
-  private void process(Exchange exchange) throws IOException {
-    final org.apache.camel.component.smb.SmbFile file = exchange.getMessage().getBody(org.apache.camel.component.smb.SmbFile.class);
-    LOG.debug("Read exchange: {}, with contents: {}", file.getFile(), new String((byte[]) file.getBody()));
-}
+                            <div class="listingblock">
+                                <div class="content">
+                                <pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">
+                                  private void process(Exchange exchange) throws IOException {
+                                    final org.apache.camel.component.smb.SmbFile file = exchange.getMessage().getBody(org.apache.camel.component.smb.SmbFile.class);
+                                    LOG.debug("Read exchange: {}, with contents: {}", file.getFile(), new String((byte[]) file.getBody()));
+                                    }
 
-public void configure() {
-    fromF("smb:%s/%s?username=%s&amp;password=%s&amp;path=/", service.address(), service.shareName(), service.userName(), service.password())
-        .process(this::process)
-        .to("mock:result");
-}</code></pre>
-</div>
-</div>
+                                    public void configure() {
+                                        fromF("smb:%s/%s?username=%s&amp;password=%s&amp;path=/", service.address(), service.shareName(), service.userName(), service.password())
+                                            .process(this::process)
+                                            .to("mock:result");
+                                    }</code></pre>
+                                </div>
+                            </div>
                             <div class="admonitionblock note">
                                 <div class="table-wrapper">
                                     <table>

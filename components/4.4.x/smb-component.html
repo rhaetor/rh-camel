@@ -2362,13 +2362,13 @@ In other words placeholders allows to externalize the configuration from your co
   private void process(Exchange exchange) throws IOException {
     final org.apache.camel.component.smb.SmbFile file = exchange.getMessage().getBody(org.apache.camel.component.smb.SmbFile.class);
     LOG.debug("Read exchange: {}, with contents: {}", file.getFile(), new String((byte[]) file.getBody()));
-}
+  }
 
-public void configure() {
+  public void configure() {
     fromF("smb:%s/%s?username=%s&amp;password=%s&amp;path=/", service.address(), service.shareName(), service.userName(), service.password())
         .process(this::process)
         .to("mock:result");
-}</code></pre>
+  }</code></pre>
 </div>
 </div>
 <div class="admonitionblock note">

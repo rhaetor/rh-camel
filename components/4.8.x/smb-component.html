@@ -3016,27 +3016,18 @@ public void configure() {
                                 implementation provided by Camel. In that case, polling all the files from an SMB file
                                 share and reading their contents would look like this:</p></div>
                             <div class="listingblock">
-                                <div class="content"> <pre class="highlightjs highlight"><code
-                                        class="language-java hljs" data-lang="java"><span
-                                        class="hljs-keyword">private</span> <span class="hljs-keyword">void</span> <span
-                                        class="hljs-title function_">process</span><span class="hljs-params">(Exchange exchange)</span> <span
-                                        class="hljs-keyword">throws</span> IOException {
-    <span class="hljs-keyword">final</span> com.hierynomus.smbj.share.<span class="hljs-type">File</span> <span
-                                            class="hljs-variable">file</span> <span class="hljs-operator">=</span> exchange.getMessage().getBody(com.hierynomus.smbj.share.File.class);
-    <span class="hljs-keyword">try</span> (<span class="hljs-type">InputStream</span> <span class="hljs-variable">inputStream</span> <span
-                                            class="hljs-operator">=</span> file.getInputStream()) {
-        LOG.debug(<span class="hljs-string">"Read exchange: {}, with contents: {}"</span>, file.getFileInformation(), <span
-                                            class="hljs-keyword">new</span> <span
-                                            class="hljs-title class_">String</span>(inputStream.readAllBytes()));
-    }
-}
+                                <div class="content">
+                                <pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">
+                                  private void process(Exchange exchange) throws IOException {
+                                    final org.apache.camel.component.smb.SmbFile file = exchange.getMessage().getBody(org.apache.camel.component.smb.SmbFile.class);
+                                    LOG.debug("Read exchange: {}, with contents: {}", file.getFile(), new String((byte[]) file.getBody()));
+                                    }
 
-<span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title function_">configure</span><span
-                                            class="hljs-params">()</span> {
-    fromF(<span class="hljs-string">"smb:%s/%s?username=%s&amp;password=%s&amp;path=/"</span>, service.address(), service.shareName(), service.userName(), service.password())
-        .process(<span class="hljs-built_in">this</span>::process)
-        .to(<span class="hljs-string">"mock:result"</span>);
-}</code></pre>
+                                    public void configure() {
+                                        fromF("smb:%s/%s?username=%s&amp;password=%s&amp;path=/", service.address(), service.shareName(), service.userName(), service.password())
+                                            .process(this::process)
+                                            .to("mock:result");
+                                    }</code></pre>
                                 </div>
                             </div>
                             <div class="admonitionblock note">
