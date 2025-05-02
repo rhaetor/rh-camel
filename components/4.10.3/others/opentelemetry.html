@@ -2083,6 +2083,101 @@ you will need to check the SDK manual to configure according to your specific ne
 </div>
 </div>
 <div class="sect1">
+<h2 id="_spring_boot"><a class="anchor" href="#_spring_boot"></a>Spring Boot</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>When running on Spring Boot, add the <code>camel-opentelemetry-starter</code> dependency to get started.</p>
+</div>
+<div class="paragraph">
+<p>There are several ways to configure instrumentation of your Camel application running on Spring Boot with OpenTelemetry.
+The first and easiest one is by using the <a href="https://opentelemetry.io/docs/zero-code/java/agent/">OpenTelemetry Java agent</a>.
+The other one is through Spring Boot&#8217;s Actuator. We&#8217;ll cover both.</p>
+</div>
+<div class="sect2">
+<h3 id="OpenTelemetry-JavaAgent"><a class="anchor" href="#OpenTelemetry-JavaAgent"></a>Java Agent</h3>
+<div class="paragraph">
+<p>Download the <a href="https://github.com/open-telemetry/opentelemetry-java-instrumentation/releases/">latest version</a>.</p>
+</div>
+<div class="paragraph">
+<p>This package includes the instrumentation agent as well as instrumentation for all supported libraries and all available data exporters.
+The package provides a completely automatic, out-of-the-box experience.</p>
+</div>
+<div class="paragraph">
+<p>Enable the instrumentation agent using the <code>-javaagent</code> flag to the JVM.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-bash hljs" data-lang="bash">java -javaagent:path/to/opentelemetry-javaagent.jar \
+     -jar myapp.jar</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>By default, the OpenTelemetry Java agent uses <a href="https://github.com/open-telemetry/opentelemetry-java/tree/main/exporters/otlp">OTLP exporter</a> configured to send data to <a href="https://github.com/open-telemetry/opentelemetry-collector/blob/main/receiver/otlpreceiver/README.md">OpenTelemetry collector</a> at <code><a href="http://localhost:4318" class="bare">http://localhost:4318</a></code>.</p>
+</div>
+<div class="paragraph">
+<p>Configuration parameters are passed as Java system properties (<code>-D</code> flags) or as environment variables. See <a href="https://github.com/open-telemetry/opentelemetry-java-instrumentation/blob/main/docs/agent-config.md">the configuration documentation</a> for the full list of configuration items. For example:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-bash hljs" data-lang="bash">java -javaagent:path/to/opentelemetry-javaagent.jar \
+     -Dotel.service.name=your-service-name \
+     -Dotel.traces.exporter=otlp \
+     -jar myapp.jar</code></pre>
+</div>
+</div>
+
+</div>
+<div class="sect2">
+<h3 id="_spring_boots_actuator"><a class="anchor" href="#_spring_boots_actuator"></a>Spring Boot&#8217;s Actuator</h3>
+<div class="paragraph">
+<p>To have Spring Boot&#8217;s Actuator configure OpenTelemetry, you need to add
+<code>org.springframework.boot:spring-boot-starter-actuator</code> and <code>io.micrometer:micrometer-tracing-bridge-otel</code> to your project.
+OpenTelemetry&#8217;s <code>Tracer</code> will then be
+<a href="https://docs.spring.io/spring-boot/reference/actuator/tracing.html">configured</a> through <code>spring-boot-starter-actuator</code> unless a <code>Tracer</code> is already defined.</p>
+</div>
+<div class="paragraph">
+<p><strong>Noteworthy</strong>: by default, this will sample only 10% of requests to prevent overwhelming the trace backend.
+Set the property <code>management.tracing.sampling.probability</code> to <code>1.0</code> if you want to see all traces.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_spanexporters"><a class="anchor" href="#_spanexporters"></a>SpanExporters</h3>
+<div class="paragraph">
+<p>You&#8217;ll probably want to configure at least one <a href="https://opentelemetry.io/docs/languages/java/sdk/#spanexporter">SpanExporter</a>
+as they allow you to export your traces to various backends (e.g., Zipkin and Jaeger), or log them. For example, to export your traces to Jaeger using OTLP via gRPC,
+add <code>io.opentelemetry:opentelemetry-exporter-otlp</code> as a dependency to your project. To configure it, you can
+use the <code>management.otlp.tracing</code> properties or register a new <code>SpanExporter</code> bean yourself:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">@Bean
+public SpanExporter OtlpGrpcSpanExporter(@Value("${tracing.url}") String url) {
+    return OtlpGrpcSpanExporter.builder().setEndpoint(url).build();
+}</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Spring Boot&#8217;s Actuator will take care of the wiring for you.</p>
+</div>
+<div class="paragraph">
+<p>Alternatively if you just want to log your traces in OTLP JSON format,
+add <code>io.opentelemetry:opentelemetry-exporter-logging-otlp</code> as a dependency to your project and also register a new <code>SpanExporter</code> bean:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">@Bean
+public SpanExporter logTraces() {
+    return OtlpJsonLoggingSpanExporter.create();
+}</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Multiple <code>SpanExporters</code> can be used at the same time.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
 <h2 id="_mdc_logging"><a class="anchor" href="#_mdc_logging"></a>MDC Logging</h2>
 <div class="sectionbody">
 <div class="paragraph">
@@ -2130,8 +2225,6 @@ or bind it to the Camel registry, where it will be automatically resolved by the
 </main>
 </div>
 <footer class="footer">
-  <p>This page was built using the Antora default UI.</p>
-  <p>The source code for this UI is licensed under the terms of the MPL-2.0 license.</p>
 </footer>
 <script id="site-script" src="../../../_/js/site.js" data-ui-root-path="../../../_"></script>
 <script async src="../../../_/js/vendor/highlight.js"></script>
