@@ -3460,7 +3460,8 @@ as a <em>type safe</em> way of configuring endpoints and data formats in Java.</
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">private void process(Exchange exchange) throws IOException {
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">
+private void process(Exchange exchange) throws IOException {
     final byte[] data = exchange.getMessage().getBody(byte[].class);
     LOG.debug("Read exchange as bytes with contents: {}", new String(data));
 }
@@ -3469,7 +3470,8 @@ public void configure() {
     fromF("smb:%s/%s?username=%s&amp;password=%s&amp;path=/", service.address(), service.shareName(), service.userName(), service.password())
         .process(this::process)
         .to("mock:result");
-}</code></pre>
+}
+</code></pre>
 </div>
 </div>
 <div class="admonitionblock note">
