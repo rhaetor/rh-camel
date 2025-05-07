@@ -2254,7 +2254,7 @@
                                                 otherwise fail during starting and cause the route to fail being
                                                 started. By deferring this startup to be lazy then the startup failure
                                                 can be handled during routing messages via Camel’s routing error
-                                                handlers. Beware that when the first message is processed then creating
+                                                handlers. Be aware that when the first message is processed then creating
                                                 and starting the producer may take a little time and prolong the total
                                                 processing time of the processing.</p></div>
                                         </div>
@@ -2608,7 +2608,7 @@
                                                     may otherwise fail during starting and cause the route to fail being
                                                     started. By deferring this startup to be lazy then the startup
                                                     failure can be handled during routing messages via Camel’s routing
-                                                    error handlers. Beware that when the first message is processed then
+                                                    error handlers. Be aware that when the first message is processed then
                                                     creating and starting the producer may take a little time and
                                                     prolong the total processing time of the processing.</p></div>
                                             </div>
@@ -3019,8 +3019,8 @@ public void configure() {
                                 <div class="content">
                                 <pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">
                                   private void process(Exchange exchange) throws IOException {
-                                    final org.apache.camel.component.smb.SmbFile file = exchange.getMessage().getBody(org.apache.camel.component.smb.SmbFile.class);
-                                    LOG.debug("Read exchange: {}, with contents: {}", file.getFile(), new String((byte[]) file.getBody()));
+                                        final org.apache.camel.component.smb.SmbFile file = exchange.getMessage().getBody(org.apache.camel.component.smb.SmbFile.class);
+                                        LOG.debug("Read exchange: {}, with contents: {}", file.getFile(), new String((byte[]) file.getBody()));
                                     }
 
                                     public void configure() {
@@ -3037,12 +3037,9 @@ public void configure() {
                                         <tr>
                                             <td class="icon"><i class="fa icon-note" title="Note"></i></td>
                                             <td class="content">
-                                               <div class="paragraph"><p>Beware that the File object provided is not a <code>java.io.File</code> instance,
-                                                    but a <code>org.apache.camel.component.smb.SmbFile</code> instance
-                                                    that extends Camel's <code>GenericFile</code>.</p>
-                                                    Relying on the underlying implementation may make your
-                                                    code more susceptible to problems between version upgrades of the
-                                                    library used to implement this component.</p></div>
+                                               <div class="paragraph"><p>Be aware that the File object provided is not a <code>java.io.File</code> instance, but a <code>org.apache.camel.component.smb.SmbFile</code> instance that extends Camel's <code>GenericFile</code>.
+Relying on the underlying implementation may make your code more susceptible to problems between version upgrades of the library
+used to implement this component.</p></div>
                                             </td>
                                         </tr>
                                         </tbody>
@@ -3146,7 +3143,7 @@ public void configure() {
                                         use this to allow CamelContext and routes to startup in situations where a
                                         producer may otherwise fail during starting and cause the route to fail being
                                         started. By deferring this startup to be lazy then the startup failure can be
-                                        handled during routing messages via Camel’s routing error handlers. Beware that
+                                        handled during routing messages via Camel’s routing error handlers. Be aware that
                                         when the first message is processed then creating and starting the producer may
                                         take a little time and prolong the total processing time of the processing.</p>
                                     </td>

@@ -2098,7 +2098,7 @@ as a <em>type safe</em> way of configuring endpoints and data formats in Java.</
 <td class="tableblock halign-left valign-top"><p class="tableblock"><a id="_component_option_lazyStartProducer"></a>
 <a href="#_component_option_lazyStartProducer" class="anchor"></a><strong>lazyStartProducer</strong> (producer)</p></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>Whether the producer should be started lazy (on the first message). By starting lazy you can use this to allow CamelContext and routes to startup in situations where a producer may otherwise fail during starting and cause the route to fail being started. By deferring this startup to be lazy then the startup failure can be handled during routing messages via Camel&#8217;s routing error handlers. Beware that when the first message is processed then creating and starting the producer may take a little time and prolong the total processing time of the processing.</p>
+<p>Whether the producer should be started lazy (on the first message). By starting lazy you can use this to allow CamelContext and routes to startup in situations where a producer may otherwise fail during starting and cause the route to fail being started. By deferring this startup to be lazy then the startup failure can be handled during routing messages via Camel&#8217;s routing error handlers. Be aware that when the first message is processed then creating and starting the producer may take a little time and prolong the total processing time of the processing.</p>
 </div></div></td>
 <td class="tableblock halign-center valign-top"><p class="tableblock">false</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">boolean</p></td>
@@ -2617,7 +2617,7 @@ as a <em>type safe</em> way of configuring endpoints and data formats in Java.</
 <td class="tableblock halign-left valign-top"><p class="tableblock"><a id="_endpoint_query_option_lazyStartProducer"></a>
 <a href="#_endpoint_query_option_lazyStartProducer" class="anchor"></a><strong>lazyStartProducer</strong> (producer (advanced))</p></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>Whether the producer should be started lazy (on the first message). By starting lazy you can use this to allow CamelContext and routes to startup in situations where a producer may otherwise fail during starting and cause the route to fail being started. By deferring this startup to be lazy then the startup failure can be handled during routing messages via Camel&#8217;s routing error handlers. Beware that when the first message is processed then creating and starting the producer may take a little time and prolong the total processing time of the processing.</p>
+<p>Whether the producer should be started lazy (on the first message). By starting lazy you can use this to allow CamelContext and routes to startup in situations where a producer may otherwise fail during starting and cause the route to fail being started. By deferring this startup to be lazy then the startup failure can be handled during routing messages via Camel&#8217;s routing error handlers. Be aware that when the first message is processed then creating and starting the producer may take a little time and prolong the total processing time of the processing.</p>
 </div></div></td>
 <td class="tableblock halign-center valign-top"><p class="tableblock">false</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">boolean</p></td>
@@ -3488,23 +3488,23 @@ you may also get the file contents as an InputStream using <code>exchange.getMes
 <div class="sect2">
 <h3 id="_polling_files_advanced"><a class="anchor" href="#_polling_files_advanced"></a>Polling files (advanced)</h3>
 <div class="paragraph">
-<p>You can also get access to the file using the underlying <code>File</code> implementation provided by smbj. In that case, polling all the
+<p>You can also get access to the file using the underlying <code>File</code> implementation provided by Camel. In that case, polling all the
 files from an SMB file share and reading their contents would look like this:</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">private void process(Exchange exchange) throws IOException {
-    final com.hierynomus.smbj.share.File file = exchange.getMessage().getBody(com.hierynomus.smbj.share.File.class);
-    try (InputStream inputStream = file.getInputStream()) {
-        LOG.debug("Read exchange: {}, with contents: {}", file.getFileInformation(), new String(inputStream.readAllBytes()));
-    }
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">
+  private void process(Exchange exchange) throws IOException {
+    final org.apache.camel.component.smb.SmbFile file = exchange.getMessage().getBody(org.apache.camel.component.smb.SmbFile.class);
+    LOG.debug("Read exchange: {}, with contents: {}", file.getFile(), new String((byte[]) file.getBody()));
 }
 
 public void configure() {
-    fromF("smb:%s/%s?username=%s&amp;password=%s&amp;path=/", service.address(), service.shareName(), service.userName(), service.password())
+    fromF("smb:%s/%s?username=%s&password=%s&path=/", service.address(), service.shareName(), service.userName(), service.password())
         .process(this::process)
         .to("mock:result");
-}</code></pre>
+}
+</code></pre>
 </div>
 </div>
 <div class="admonitionblock note">
@@ -3515,7 +3515,7 @@ public void configure() {
 </td>
 <td class="content">
 <div class="paragraph">
-<p>Beware that the File object provided is not a <code>java.io.File</code> instance, but, instead a <code>com.hierynomus.smbj.share.File</code> instance.
+<p>Be aware that the File object provided is not a <code>java.io.File</code> instance, but a <code>org.apache.camel.component.smb.SmbFile</code> instance that extends Camel's <code>GenericFile</code>.
 Relying on the underlying implementation may make your code more susceptible to problems between version upgrades of the library
 used to implement this component.</p>
 </div>
