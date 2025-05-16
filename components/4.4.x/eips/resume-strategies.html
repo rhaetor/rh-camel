@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>Resume Strategies :: Red Hat Camel Reference</title>
+    <title>Resume Strategies :: Red Hat build of Apache Camel</title>
     <meta name="description" content="Provide strategies to allow consuming data from specific offsets">
     <meta name="generator" content="Antora 3.1.4">
     <link rel="stylesheet" href="../../../_/css/site.css">
@@ -12,7 +12,7 @@
 <header class="header">
   <nav class="navbar">
     <div class="navbar-brand">
-      <a class="navbar-item" href="../../manual/index.html">Red Hat build of Apache Camel manual</a>
+      <a class="navbar-item" href="/">Red Hat build of Apache Camel</a>
       <button class="navbar-burger" data-target="topbar-nav">
         <span></span>
         <span></span>
@@ -22,11 +22,12 @@
   </nav>
 </header>
 <div class="body">
-<div class="nav-container" data-component="components" data-version="next">
+<div class="nav-container" data-component="components" data-version="4.4.x">
   <aside class="nav">
     <div class="panels">
 <div class="nav-panel-menu is-active" data-panel="menu">
   <nav class="nav-menu">
+    <button class="nav-menu-toggle" aria-label="Toggle expand/collapse all" style="display: none"></button>
     <h3 class="title"><a href="../index.html">Camel Components</a></h3>
 <ul class="nav-list">
   <li class="nav-item" data-depth="0">
@@ -1819,22 +1820,40 @@
 <div class="nav-panel-explore" data-panel="explore">
   <div class="context">
     <span class="title">Camel Components</span>
-    <span class="version">Next (Pre-release)</span>
+    <span class="version">4.4.x</span>
   </div>
   <ul class="components">
     <li class="component is-current">
-      <a class="title" href="../index.html">Camel Components</a>
+      <div class="title"><a href="../../4.10.x/index.html">Camel Components</a></div>
       <ul class="versions">
-        <li class="version is-current is-latest">
-          <a href="../index.html">Next (Pre-release)</a>
+        <li class="version is-latest">
+          <a href="../../4.10.x/index.html">4.10.x (LTS)</a>
+        </li>
+        <li class="version">
+          <a href="../../4.8.x/index.html">4.8.x</a>
+        </li>
+        <li class="version is-current">
+          <a href="../index.html">4.4.x</a>
+        </li>
+        <li class="version">
+          <a href="../../4.0.x/index.html">4.0.x</a>
         </li>
       </ul>
     </li>
     <li class="component">
-      <a class="title" href="../../../manual/index.html">User manual</a>
+      <div class="title"><a href="../../../manual/4.10.x/index.html">User manual</a></div>
       <ul class="versions">
         <li class="version is-latest">
-          <a href="../../../manual/index.html">default</a>
+          <a href="../../../manual/4.10.x/index.html">4.10.x</a>
+        </li>
+        <li class="version">
+          <a href="../../../manual/4.8.x/index.html">4.8.x</a>
+        </li>
+        <li class="version">
+          <a href="../../../manual/4.4.x/index.html">4.4.x</a>
+        </li>
+        <li class="version">
+          <a href="../../../manual/4.0.x/index.html">4.0.x</a>
         </li>
       </ul>
     </li>
@@ -1846,7 +1865,7 @@
 <main class="article">
 <div class="toolbar" role="navigation">
 <button class="nav-toggle"></button>
-  <a href="../../../manual/index.html" class="home-link"></a>
+  <a href="../../../manual/4.10.x/index.html" class="home-link"></a>
 <nav class="breadcrumbs" aria-label="breadcrumbs">
   <ul>
     <li><a href="../index.html">Camel Components</a></li>
@@ -1854,6 +1873,16 @@
     <li><a href="resume-strategies.html">Resume Strategies</a></li>
   </ul>
 </nav>
+<div class="page-versions">
+  <button class="version-menu-toggle" title="Show other versions of page">4.4.x</button>
+  <div class="version-menu">
+    <a class="version" href="../../4.10.x/eips/resume-strategies.html">4.10.x (LTS)</a>
+    <a class="version" href="../../4.8.x/eips/resume-strategies.html">4.8.x</a>
+    <a class="version is-current" href="resume-strategies.html">4.4.x</a>
+    <a class="version" href="../../4.0.x/eips/resume-strategies.html">4.0.x</a>
+  </div>
+</div>
+<div class="edit-this-page"><a href="https://github.com/rhaetor/rh-camel-jboss/edit/camel-4.4.0-branch/core/camel-core-engine/src/main/docs/modules/eips/pages/resume-strategies.adoc">Edit this Page</a></div>
 </div>
   <div class="content">
 <aside class="toc sidebar" data-title="Contents" data-levels="2">
@@ -1867,7 +1896,12 @@
 <p>The resume strategies allow users to implement strategies that point the consumer part of the routes to the last point of consumption. This allows Camel to skip reading and processing data that has already been consumed.</p>
 </div>
 <div class="paragraph">
-<p>The resume strategies can be used to allow quicker stop and resume operations when consuming large data sources. For instance, imagine a scenario where the file consumer is reading a large file. Without a resume strategy, stopping and starting Camel would cause the consumer in the File component to read all the bytes of the given file at the initial offset (offset 0). The resume strategy allow integrations can point the consumer to the exact offset to resume the operations.</p>
+<p>The resume strategies can be used to allow quicker stop and resume operations when consuming large data sources.
+For instance, imagine a scenario where the file consumer is reading a large file.
+Without a resume strategy,
+stopping and starting Camel would cause the consumer in the File component
+to read all the bytes of the given file at the initial offset (that is,
+offset 0). The resume strategy allows integrations can point the consumer to the exact offset to resume the operations.</p>
 </div>
 <div class="paragraph">
 <p>Support for resume varies according to the component. Initially, the support is available for the following components:</p>
@@ -1875,33 +1909,33 @@
 <div class="ulist">
 <ul>
 <li>
-<p><a href="../atom-component.html" class="xref page">camel-atom</a></p>
+<p><a href="../../4.10.x/atom-component.html" class="xref page">camel-atom</a></p>
 </li>
 <li>
-<p><a href="../aws2-kinesis-component.html" class="xref page">camel-aws2-kinesis</a></p>
+<p><a href="../../4.10.x/aws2-kinesis-component.html" class="xref page">camel-aws2-kinesis</a></p>
 </li>
 <li>
-<p><a href="../cql-component.html" class="xref page">camel-cassandracql</a></p>
+<p><a href="../../4.10.x/cql-component.html" class="xref page">camel-cassandracql</a></p>
 </li>
 <li>
-<p><a href="../couchbase-component.html" class="xref page">camel-couchbase</a></p>
+<p><a href="../../4.10.x/couchbase-component.html" class="xref page">camel-couchbase</a></p>
 </li>
 <li>
-<p><a href="../couchdb-component.html" class="xref page">camel-couchdb</a></p>
+<p><a href="../../4.10.x/couchdb-component.html" class="xref page">camel-couchdb</a></p>
 </li>
 <li>
-<p><a href="../file-component.html" class="xref page">camel-file</a></p>
+<p><a href="../../4.10.x/file-component.html" class="xref page">camel-file</a></p>
 </li>
 <li>
-<p><a href="../kafka-component.html" class="xref page">camel-kafka</a></p>
+<p><a href="../../4.10.x/kafka-component.html" class="xref page">camel-kafka</a></p>
 </li>
 <li>
-<p><a href="../rss-component.html" class="xref page">camel-rss</a></p>
+<p><a href="../../4.10.x/rss-component.html" class="xref page">camel-rss</a></p>
 </li>
 </ul>
 </div>
 <div class="paragraph">
-<p>The resume strategies comes in 3 parts:</p>
+<p>The resume strategies comes in three parts:</p>
 </div>
 <div class="ulist">
 <ul>
@@ -1909,7 +1943,7 @@
 <p>A DSL method that marks the route as supporting resume operations and points to an instance of a strategy implementation.</p>
 </li>
 <li>
-<p>A set of core infrastructure that allow integrations to implement different types of strategies</p>
+<p>A set of core infrastructure that allows integrations to implement different types of strategies</p>
 </li>
 <li>
 <p>Basic strategies implementations that can be extended to implement the specific resume strategies required by the integrations</p>
@@ -1989,7 +2023,8 @@ from("some:component")
 <div class="sect2">
 <h3 id="_intermittent_mode"><a class="anchor" href="#_intermittent_mode"></a>Intermittent Mode</h3>
 <div class="paragraph">
-<p>In some cases it may be necessary to avoid updating the offset for every exchange. You can enable the intermittent mode to modify the route behavior so that missing offsets will not cause an exception:</p>
+<p>In some cases, it may be necessary to avoid updating the offset for every exchange.
+You can enable the intermittent mode to modify the route behavior so that missing offsets will not cause an exception:</p>
 </div>
 <div class="listingblock">
 <div class="content">
@@ -2010,10 +2045,10 @@ from("some:component")
 <div class="ulist">
 <ul>
 <li>
-<p><code>SingleNodeKafkaResumeStrategy</code> - a resume strategy from the <code>camel-kafka</code> component that uses Kafka as the store for the offsets and is suitable for single node integrations.</p>
+<p><code>SingleNodeKafkaResumeStrategy</code>: a resume strategy from the <code>camel-kafka</code> component that uses Kafka as the store for the offsets and is suitable for single node integrations.</p>
 </li>
 <li>
-<p><code>MultiNodeKafkaResumeStrategy</code> - a resume strategy from the <code>camel-kafka</code> component that uses Kafka as the store for the offsets and is suitable for multi node integrations (i.e.: integrations running on clusters using the <a href="../master-component.html" class="xref page">camel-master</a> component.</p>
+<p><code>MultiNodeKafkaResumeStrategy</code>: a resume strategy from the <code>camel-kafka</code> component that uses Kafka as the store for the offsets and is suitable for multi node integrations (that is:  integrations running on clusters using the <a href="../../4.10.x/master-component.html" class="xref page">camel-master</a> component.</p>
 </li>
 </ul>
 </div>
@@ -2074,7 +2109,7 @@ available for each strategy. For instance, to configure either one of the Kafka 
 </div>
 </div>
 <div class="paragraph">
-<p>Is different from the behavior of:</p>
+<p>It is different from the behavior of:</p>
 </div>
 <div class="listingblock">
 <div class="content">
@@ -2094,7 +2129,7 @@ available for each strategy. For instance, to configure either one of the Kafka 
 <div class="sectionbody">
 <div class="paragraph">
 <p>The Pausable consumers API is a subset of the resume API that provides pause and resume features for supported components.
-With this API it is possible to implement logic that controls the behavior of the consumer based on conditions that are
+With this API, it is possible to implement logic that controls the behavior of the consumer based on conditions that are
 external to the component. For instance, it makes it possible to pause the consumer if an external system becomes unavailable.</p>
 </div>
 <div class="paragraph">
@@ -2103,7 +2138,7 @@ external to the component. For instance, it makes it possible to pause the consu
 <div class="ulist">
 <ul>
 <li>
-<p><a href="../kafka-component.html" class="xref page">camel-kafka</a></p>
+<p><a href="../../4.10.x/kafka-component.html" class="xref page">camel-kafka</a></p>
 </li>
 </ul>
 </div>
@@ -2113,7 +2148,7 @@ external to the component. For instance, it makes it possible to pause the consu
 <div class="ulist">
 <ul>
 <li>
-<p><code>org.apache.camel.resume.ConsumerListener</code> - the consumer listener interface. Camel already comes with pre-built consumer listeners, but users in need of more complex behaviors can create their own listeners.</p>
+<p><code>org.apache.camel.resume.ConsumerListener</code>: the consumer listener interface. Camel already comes with pre-built consumer listeners, but users in need of more complex behaviors can create their own listeners.</p>
 </li>
 <li>
 <p>a predicate that returns true if data consumption should resume or false if consumption should be put on pause</p>
@@ -2137,7 +2172,9 @@ possible to configure the circuit breaker so that it can manipulate the state of
 error conditions on the circuit.</p>
 </div>
 <div class="paragraph">
-<p>One example, would be to create a event watcher that checks for a downstream system availability. It watches for error events and, when they happen, it triggers a scheduled check. On success, it shuts down the scheduled check.</p>
+<p>One example would be to create an event watcher that checks for a downstream system availability.
+It watches for error events and, when they happen, it triggers a scheduled check.
+On success, it shuts down the scheduled check.</p>
 </div>
 <div class="paragraph">
 <p>An example implementation of this approach would be similar to this:</p>
@@ -2186,6 +2223,8 @@ from(from)
 </main>
 </div>
 <footer class="footer">
+  <p>This page was built using the Antora default UI.</p>
+  <p>The source code for this UI is licensed under the terms of the MPL-2.0 license.</p>
 </footer>
 <script id="site-script" src="../../../_/js/site.js" data-ui-root-path="../../../_"></script>
 <script async src="../../../_/js/vendor/highlight.js"></script>

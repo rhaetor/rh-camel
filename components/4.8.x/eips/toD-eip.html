@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>To D :: Red Hat Camel Reference</title>
+    <title>To D :: Red Hat build of Apache Camel</title>
     <meta name="description" content="Sends the message to a dynamic endpoint">
     <meta name="generator" content="Antora 3.1.4">
     <link rel="stylesheet" href="../../../_/css/site.css">
@@ -12,7 +12,7 @@
 <header class="header">
   <nav class="navbar">
     <div class="navbar-brand">
-      <a class="navbar-item" href="../../manual/index.html">Red Hat build of Apache Camel manual</a>
+      <a class="navbar-item" href="/">Red Hat build of Apache Camel</a>
       <button class="navbar-burger" data-target="topbar-nav">
         <span></span>
         <span></span>
@@ -22,11 +22,12 @@
   </nav>
 </header>
 <div class="body">
-<div class="nav-container" data-component="components" data-version="next">
+<div class="nav-container" data-component="components" data-version="4.8.x">
   <aside class="nav">
     <div class="panels">
 <div class="nav-panel-menu is-active" data-panel="menu">
   <nav class="nav-menu">
+    <button class="nav-menu-toggle" aria-label="Toggle expand/collapse all" style="display: none"></button>
     <h3 class="title"><a href="../index.html">Camel Components</a></h3>
 <ul class="nav-list">
   <li class="nav-item" data-depth="0">
@@ -36,7 +37,46 @@
     <a class="nav-link" href="../index.html">Components</a>
 <ul class="nav-list">
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="../activemq-component.html">ActiveMQ</a>
+    <a class="nav-link" href="../activemq-component.html">ActiveMQ 5.x</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../activemq6-component.html">ActiveMQ 6.x</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../ai-summary.html">AI</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../chatscript-component.html">ChatScript</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../djl-component.html">Deep Java Library</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../langchain4j-chat-component.html">LangChain4j Chat</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../langchain4j-embeddings-component.html">LangChain4j Embeddings</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../langchain4j-tokenizer-component.html">LangChain4j Tokenizer</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../langchain4j-tools-component.html">LangChain4j Tools</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../langchain4j-web-search-component.html">LangChain4j Web Search</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../milvus-component.html">Milvus</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../pinecone-component.html">Pinecone</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../qdrant-component.html">Qdrant</a>
+  </li>
+</ul>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="../amqp-component.html">AMQP</a>
@@ -65,6 +105,15 @@
 <ul class="nav-list">
   <li class="nav-item" data-depth="3">
     <a class="nav-link" href="../aws2-athena-component.html">AWS Athena</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../aws-bedrock-component.html">AWS Bedrock</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../aws-bedrock-agent-component.html">AWS Bedrock Agent</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../aws-bedrock-agent-runtime-component.html">AWS Bedrock Agent Runtime</a>
   </li>
   <li class="nav-item" data-depth="3">
     <a class="nav-link" href="../aws-cloudtrail-component.html">AWS Cloudtrail</a>
@@ -169,7 +218,7 @@
     <a class="nav-link" href="../azure-storage-blob-component.html">Azure Storage Blob Service</a>
   </li>
   <li class="nav-item" data-depth="3">
-    <a class="nav-link" href="../azure-storage-datalake-component.html">Azure Storage Datalake Service</a>
+    <a class="nav-link" href="../azure-storage-datalake-component.html">Azure Storage Data Lake Service</a>
   </li>
   <li class="nav-item" data-depth="3">
     <a class="nav-link" href="../azure-storage-queue-component.html">Azure Storage Queue Service</a>
@@ -202,9 +251,6 @@
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="../cql-component.html">Cassandra CQL</a>
-  </li>
-  <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="../chatscript-component.html">ChatScript</a>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="../chunk-component.html">Chunk</a>
@@ -277,9 +323,6 @@
     <a class="nav-link" href="../debezium-sqlserver-component.html">Debezium SQL Server Connector</a>
   </li>
 </ul>
-  </li>
-  <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="../djl-component.html">Deep Java Library</a>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="../dhis2-component.html">DHIS2</a>
@@ -395,6 +438,9 @@
   </li>
   <li class="nav-item" data-depth="3">
     <a class="nav-link" href="../google-pubsub-component.html">Google Pubsub</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../google-pubsub-lite-component.html">Google PubSub Lite</a>
   </li>
   <li class="nav-item" data-depth="3">
     <a class="nav-link" href="../google-secret-manager-component.html">Google Secret Manager</a>
@@ -687,7 +733,7 @@
     <a class="nav-link" href="../ldif-component.html">LDIF</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="../log-component.html">Log</a>
+    <a class="nav-link" href="../log-component.html">Log Data</a>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="../lucene-component.html">Lucene</a>
@@ -900,10 +946,16 @@
     <a class="nav-link" href="../smb-component.html">SMB</a>
   </li>
   <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../smooks-component.html">Smooks</a>
+  </li>
+  <li class="nav-item" data-depth="2">
     <a class="nav-link" href="../smpp-component.html">SMPP</a>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="../snmp-component.html">SNMP</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../solr-component.html">Solr</a>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="../splunk-component.html">Splunk</a>
@@ -966,6 +1018,18 @@
     <a class="nav-link" href="../stub-component.html">Stub</a>
   </li>
   <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../tahu-summary.html">Tahu</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../tahu-edge-component.html">Tahu Edge Node / Device</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../tahu-host-component.html">Tahu Host Application</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
     <a class="nav-link" href="../telegram-component.html">Telegram</a>
   </li>
   <li class="nav-item" data-depth="2">
@@ -1026,7 +1090,7 @@
     <a class="nav-link" href="../whatsapp-component.html">WhatsApp</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="../wordpress-component.html">Wordpress</a>
+    <a class="nav-link" href="../wordpress-component.html">WordPress</a>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="../workday-component.html">Workday</a>
@@ -1419,7 +1483,13 @@
     <a class="nav-link" href="../others/openapi-java.html">Openapi Java</a>
   </li>
   <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../others/openapi-validator.html">Openapi Validator</a>
+  </li>
+  <li class="nav-item" data-depth="2">
     <a class="nav-link" href="../others/opentelemetry.html">OpenTelemetry</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../others/platform-http-jolokia.html">Platform HTTP Jolokia</a>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="../others/platform-http-main.html">Platform Http Main</a>
@@ -1567,7 +1637,7 @@
     <a class="nav-link" href="event-message.html">Event Message</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="failover-eip.html">Failover</a>
+    <a class="nav-link" href="failoverLoadBalancer-eip.html">Failover Load Balancer</a>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="faultToleranceConfiguration-eip.html">Fault Tolerance Configuration</a>
@@ -1597,13 +1667,13 @@
     <a class="nav-link" href="loadBalance-eip.html">Load Balance</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="log-eip.html">Log</a>
+    <a class="nav-link" href="log-eip.html">Logger</a>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="loop-eip.html">Loop</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="marshal-eip.html">Marshal EIP</a>
+    <a class="nav-link" href="marshal-eip.html">Marshal</a>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="message.html">Message</a>
@@ -1660,6 +1730,9 @@
     <a class="nav-link" href="point-to-point-channel.html">Point to Point Channel</a>
   </li>
   <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="poll-eip.html">Poll</a>
+  </li>
+  <li class="nav-item" data-depth="2">
     <a class="nav-link" href="pollEnrich-eip.html">Poll Enrich</a>
   </li>
   <li class="nav-item" data-depth="2">
@@ -1675,7 +1748,7 @@
     <a class="nav-link" href="publish-subscribe-channel.html">Publish Subscribe Channel</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="random-eip.html">Random</a>
+    <a class="nav-link" href="randomLoadBalancer-eip.html">Random Load Balancer</a>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="recipientList-eip.html">Recipient List</a>
@@ -1717,7 +1790,7 @@
     <a class="nav-link" href="rollback-eip.html">Rollback</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="roundRobin-eip.html">Round Robin</a>
+    <a class="nav-link" href="roundRobinLoadBalancer-eip.html">Round Robin Load Balancer</a>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="routingSlip-eip.html">Routing Slip</a>
@@ -1729,7 +1802,7 @@
     <a class="nav-link" href="sample-eip.html">Sample</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="scatter-gather.html">Scatter Gather</a>
+    <a class="nav-link" href="scatter-gather.html">Scatter-Gather</a>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="script-eip.html">Script</a>
@@ -1759,6 +1832,9 @@
     <a class="nav-link" href="setVariable-eip.html">Set Variable</a>
   </li>
   <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="setVariables-eip.html">Set Variables</a>
+  </li>
+  <li class="nav-item" data-depth="2">
     <a class="nav-link" href="sort-eip.html">Sort</a>
   </li>
   <li class="nav-item" data-depth="2">
@@ -1768,7 +1844,7 @@
     <a class="nav-link" href="step-eip.html">Step</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="sticky-eip.html">Sticky</a>
+    <a class="nav-link" href="stickyLoadBalancer-eip.html">Sticky Load Balancer</a>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="stop-eip.html">Stop</a>
@@ -1789,7 +1865,7 @@
     <a class="nav-link" href="toD-eip.html">To D</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="topic-eip.html">Topic</a>
+    <a class="nav-link" href="topicLoadBalancer-eip.html">Topic Load Balancer</a>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="transactional-client.html">Transactional Client</a>
@@ -1798,13 +1874,13 @@
     <a class="nav-link" href="transform-eip.html">Transform</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="unmarshal-eip.html">Unmarshal EIP</a>
+    <a class="nav-link" href="unmarshal-eip.html">Unmarshal</a>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="validate-eip.html">Validate</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="weighted-eip.html">Weighted</a>
+    <a class="nav-link" href="weightedLoadBalancer-eip.html">Weighted Load Balancer</a>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="wireTap-eip.html">Wire Tap</a>
@@ -1819,22 +1895,40 @@
 <div class="nav-panel-explore" data-panel="explore">
   <div class="context">
     <span class="title">Camel Components</span>
-    <span class="version">Next (Pre-release)</span>
+    <span class="version">4.8.x</span>
   </div>
   <ul class="components">
     <li class="component is-current">
-      <a class="title" href="../index.html">Camel Components</a>
+      <div class="title"><a href="../../4.10.x/index.html">Camel Components</a></div>
       <ul class="versions">
-        <li class="version is-current is-latest">
-          <a href="../index.html">Next (Pre-release)</a>
+        <li class="version is-latest">
+          <a href="../../4.10.x/index.html">4.10.x (LTS)</a>
+        </li>
+        <li class="version is-current">
+          <a href="../index.html">4.8.x</a>
+        </li>
+        <li class="version">
+          <a href="../../4.4.x/index.html">4.4.x</a>
+        </li>
+        <li class="version">
+          <a href="../../4.0.x/index.html">4.0.x</a>
         </li>
       </ul>
     </li>
     <li class="component">
-      <a class="title" href="../../../manual/index.html">User manual</a>
+      <div class="title"><a href="../../../manual/4.10.x/index.html">User manual</a></div>
       <ul class="versions">
         <li class="version is-latest">
-          <a href="../../../manual/index.html">default</a>
+          <a href="../../../manual/4.10.x/index.html">4.10.x</a>
+        </li>
+        <li class="version">
+          <a href="../../../manual/4.8.x/index.html">4.8.x</a>
+        </li>
+        <li class="version">
+          <a href="../../../manual/4.4.x/index.html">4.4.x</a>
+        </li>
+        <li class="version">
+          <a href="../../../manual/4.0.x/index.html">4.0.x</a>
         </li>
       </ul>
     </li>
@@ -1846,7 +1940,7 @@
 <main class="article">
 <div class="toolbar" role="navigation">
 <button class="nav-toggle"></button>
-  <a href="../../../manual/index.html" class="home-link"></a>
+  <a href="../../../manual/4.10.x/index.html" class="home-link"></a>
 <nav class="breadcrumbs" aria-label="breadcrumbs">
   <ul>
     <li><a href="../index.html">Camel Components</a></li>
@@ -1854,6 +1948,16 @@
     <li><a href="toD-eip.html">To D</a></li>
   </ul>
 </nav>
+<div class="page-versions">
+  <button class="version-menu-toggle" title="Show other versions of page">4.8.x</button>
+  <div class="version-menu">
+    <a class="version" href="../../4.10.x/eips/toD-eip.html">4.10.x (LTS)</a>
+    <a class="version is-current" href="toD-eip.html">4.8.x</a>
+    <a class="version" href="../../4.4.x/eips/toD-eip.html">4.4.x</a>
+    <a class="version" href="../../4.0.x/eips/toD-eip.html">4.0.x</a>
+  </div>
+</div>
+<div class="edit-this-page"><a href="https://github.com/rhaetor/rh-camel-jboss/edit/camel-4.8.0-branch/core/camel-core-engine/src/main/docs/modules/eips/pages/toD-eip.adoc">Edit this Page</a></div>
 </div>
   <div class="content">
 <aside class="toc sidebar" data-title="Contents" data-levels="2">
@@ -1886,7 +1990,7 @@ interface.</p>
 <p>In Camel the ToD EIP is used for sending <a href="message.html" class="xref page">messages</a> to dynamic <a href="message-endpoint.html" class="xref page">endpoints</a>.</p>
 </div>
 <div class="paragraph">
-<p>The <a href="to-eip.html" class="xref page">To</a> and ToD EIPs are the most common patterns to use in Camel <a href="../../../manual/routes.html" class="xref page">routes</a>.</p>
+<p>The <a href="to-eip.html" class="xref page">To</a> and ToD EIPs are the most common patterns to use in Camel <a href="../../../manual/4.10.x/routes.html" class="xref page">routes</a>.</p>
 </div>
 </div>
 </div>
@@ -1894,7 +1998,7 @@ interface.</p>
 <h2 id="_options"><a class="anchor" href="#_options"></a>Options</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>The To D eip supports 9 options, which are listed below.</p>
+<p>The To D eip supports 1 options, which are listed below.</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
 <colgroup>
@@ -2007,18 +2111,58 @@ interface.</p>
 </tr>
 </tbody>
 </table>
-<div class="sect2">
-<h3 id="_different_between_to_and_tod"><a class="anchor" href="#_different_between_to_and_tod"></a>Different between To and ToD</h3>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_exchange_properties"><a class="anchor" href="#_exchange_properties"></a>Exchange properties</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>The To D eip supports 1 exchange properties, which are listed below.</p>
+</div>
+<div class="paragraph">
+<p>The exchange properties are set on the <code>Exchange</code> by the EIP, unless otherwise specified in the description.
+This means those properties are available after this EIP has completed processing the <code>Exchange</code>.</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 20%;">
+<col style="width: 50%;">
+<col style="width: 10%;">
+<col style="width: 20%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Name</th>
+<th class="tableblock halign-left valign-top">Description</th>
+<th class="tableblock halign-center valign-top">Default</th>
+<th class="tableblock halign-left valign-top">Type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong id="_option_CamelToEndpoint">CamelToEndpoint</strong></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>Endpoint URI where this Exchange is being sent to.</p>
+</div></div></td>
+<td class="tableblock halign-center valign-top"></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">String</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_different_between_to_and_tod"><a class="anchor" href="#_different_between_to_and_tod"></a>Different between To and ToD</h2>
+<div class="sectionbody">
 <div class="paragraph">
 <p>The <code>to</code> is used for sending messages to a static <a href="message-endpoint.html" class="xref page">endpoint</a>.
-In other words <code>to</code> sends message only to the <strong>same</strong> endpoint.</p>
+In other words <code>to</code> sends messages only to the <strong>same</strong> endpoint.</p>
 </div>
 <div class="paragraph">
-<p>The <code>toD</code> is used for sending message to a dynamic <a href="message-endpoint.html" class="xref page">endpoint</a>.
-The dynamic endpoint is evaluated <em>on-demand</em> by an <a href="../../../manual/expression.html" class="xref page">Expression</a>.
+<p>The <code>toD</code> is used for sending messages to a dynamic <a href="message-endpoint.html" class="xref page">endpoint</a>.
+The dynamic endpoint is evaluated <em>on-demand</em> by an <a href="../../../manual/4.10.x/expression.html" class="xref page">Expression</a>.
 By default, the <a href="../languages/simple-language.html" class="xref page">Simple</a> expression is used to compute
 the dynamic endpoint URI.</p>
-</div>
 </div>
 </div>
 </div>
@@ -2026,8 +2170,8 @@ the dynamic endpoint URI.</p>
 <h2 id="_using_tod"><a class="anchor" href="#_using_tod"></a>Using ToD</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>For example to send a message to an endpoint which is dynamic determined by a
-<a href="message.html" class="xref page">message header</a> you can do as shown below:</p>
+<p>For example, to send a message to an endpoint which is dynamically determined by a
+<a href="message.html" class="xref page">message header</a>, you can do as shown below:</p>
 </div>
 <div id="_tabs_1" class="openblock tabs is-sync is-loading">
 <div class="content">
@@ -2062,7 +2206,7 @@ the dynamic endpoint URI.</p>
 </div>
 </div>
 <div class="paragraph">
-<p>You can also prefix the uri with a value because the endpoint <a href="../../../manual/uris.html" class="xref page">URI</a> is
+<p>You can also prefix the uri with a value because the endpoint <a href="../../../manual/4.10.x/uris.html" class="xref page">URI</a> is
 evaluated using the <a href="../languages/simple-language.html" class="xref page">Simple</a> language:</p>
 </div>
 <div id="_tabs_2" class="openblock tabs is-sync is-loading">
@@ -2098,17 +2242,17 @@ evaluated using the <a href="../languages/simple-language.html" class="xref page
 </div>
 </div>
 <div class="paragraph">
-<p>In the example above we compute the dynamic endpoint with a prefix "mock:" and
-then the header foo is appended. So for example if the header foo has
+<p>In the example above, we compute the dynamic endpoint with a prefix "mock:" and
+then the header foo is appended. So, for example, if the header foo has
 value order, then the endpoint is computed as "mock:order".</p>
 </div>
 <div class="sect2">
 <h3 id="_using_other_languages_with_tod"><a class="anchor" href="#_using_other_languages_with_tod"></a>Using other languages with toD</h3>
 <div class="paragraph">
 <p>You can also use other languages such as <a href="../languages/xpath-language.html" class="xref page">XPath</a>.
-Doing this requires to start with <code>language:</code> as shown below. If you do not
+Doing this requires starting with <code>language:</code> as shown below. If you do not
 specify <code>language:</code> then the endpoint is a component name. And in some
-cases there is both a component and language with the same name such as
+ cases, there is both a component and language with the same name such as
 xquery.</p>
 </div>
 <div id="_tabs_3" class="openblock tabs is-sync is-loading">
@@ -2145,13 +2289,13 @@ xquery.</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="_avoid_creating_endless_dynamic_endpoints_which_takes_up_resources"><a class="anchor" href="#_avoid_creating_endless_dynamic_endpoints_which_takes_up_resources"></a>Avoid creating endless dynamic endpoints which takes up resources</h3>
+<h3 id="_avoid_creating_endless_dynamic_endpoints_that_take_up_resources"><a class="anchor" href="#_avoid_creating_endless_dynamic_endpoints_that_take_up_resources"></a>Avoid creating endless dynamic endpoints that take up resources</h3>
 <div class="paragraph">
 <p>When using dynamic computed endpoints with <code>toD</code> then you may compute a lot of dynamic endpoints,
 which results in an overhead of resources in use, by each dynamic endpoint uri, and its associated producer.</p>
 </div>
 <div class="paragraph">
-<p>For example HTTP based endpoints where you may have dynamic values in URI parameters when calling the HTTP service, such as:</p>
+<p>For example, HTTP-based endpoints where you may have dynamic values in URI parameters when calling the HTTP service, such as:</p>
 </div>
 <div class="listingblock">
 <div class="content">
@@ -2160,8 +2304,8 @@ which results in an overhead of resources in use, by each dynamic endpoint uri, 
 </div>
 </div>
 <div class="paragraph">
-<p>In the example above then the parameter <code>userid</code> is dynamic computed, and would result in one instance of endpoint and producer
-for each different userid. To avoid having too many dynamic endpoints you can configure <code>toD</code> to reduce its cache size, for example
+<p>In the example above then the parameter <code>userid</code> is dynamically computed, and would result in one instance of endpoint and producer
+for each different userid. To avoid having too many dynamic endpoints you can configure <code>toD</code> to reduce its cache size, for example,
 to use a cache size of 10:</p>
 </div>
 <div id="_tabs_4" class="openblock tabs is-sync is-loading">
@@ -2205,7 +2349,7 @@ to use a cache size of 10:</p>
 <td class="content">
 this will only reduce the endpoint cache of the <code>toD</code> that has a chance
 of being reused in case a message is routed with the same <code>userName</code> header. Therefore, reducing the cache size
-will not solve the <em>endless dynamic endpoint`s</em> problem. Instead, you should use static endpoints with <code>to</code> and
+will not solve the <em>endless dynamic endpoint</em> problem. Instead, you should use static endpoints with <code>to</code> and
 provide the dynamic parts in Camel message headers (if possible).
 </td>
 </tr>
@@ -2214,8 +2358,8 @@ provide the dynamic parts in Camel message headers (if possible).
 <div class="sect3">
 <h4 id="_using_static_endpoints_to_avoid_endless_dynamic_endpoints"><a class="anchor" href="#_using_static_endpoints_to_avoid_endless_dynamic_endpoints"></a>Using static endpoints to avoid endless dynamic endpoints</h4>
 <div class="paragraph">
-<p>In the example above then the parameter <code>userid</code> is dynamic computed, and would result in one instance of endpoint and producer
-for each different userid. To avoid having too dynamic endpoints you use a single static endpoint and use headers to provide the dynamic parts:</p>
+<p>In the example above then the parameter <code>userid</code> is dynamically computed, and would result in one instance of endpoint and producer
+for each different userid. To avoid having too dynamic endpoints, you use a single static endpoint and use headers to provide the dynamic parts:</p>
 </div>
 <div class="listingblock">
 <div class="content">
@@ -2226,16 +2370,16 @@ for each different userid. To avoid having too dynamic endpoints you use a singl
 </div>
 </div>
 <div class="paragraph">
-<p>However, you can use optimised components for <code>toD</code> that can <em>solve</em> this out of the box,
+<p>However, you can use optimized components for <code>toD</code> that can <em>solve</em> this out of the box,
 as documented next.</p>
 </div>
 </div>
 </div>
 <div class="sect2">
-<h3 id="_using_optimised_components_with_tod"><a class="anchor" href="#_using_optimised_components_with_tod"></a>Using optimised components with toD</h3>
+<h3 id="_using_optimized_components_with_tod"><a class="anchor" href="#_using_optimized_components_with_tod"></a>Using optimized components with toD</h3>
 <div class="paragraph">
-<p>A better solution would be if the HTTP component could be optimised to handle the variations of dynamic computed endpoint uris.
-This is with among the following components, which have been optimised for <code>toD</code>:</p>
+<p>A better solution would be if the HTTP component could be optimized to handle the variations of dynamic computed endpoint uris.
+This is with among the following components, which have been optimized for <code>toD</code>:</p>
 </div>
 <div class="ulist">
 <ul>
@@ -2257,7 +2401,7 @@ This is with among the following components, which have been optimised for <code
 </ul>
 </div>
 <div class="paragraph">
-<p>A number of non-HTTP components has been optimised as well:</p>
+<p>A number of non-HTTP components has been optimized as well:</p>
 </div>
 <div class="ulist">
 <ul>
@@ -2299,10 +2443,10 @@ This is with among the following components, which have been optimised for <code
 <div class="olist arabic">
 <ol class="arabic">
 <li>
-<p>The optimisation is detected and activated during startup of the Camel routes with <code>toD</code>.</p>
+<p>The optimization is detected and activated during startup of the Camel routes with <code>toD</code>.</p>
 </li>
 <li>
-<p>The dynamic uri in <code>toD</code> must provide the component name as either static or resolved via <a href="../../../manual/using-propertyplaceholder.html" class="xref page">property placeholders</a>.</p>
+<p>The dynamic uri in <code>toD</code> must provide the component name as either static or resolved via <a href="../../../manual/4.10.x/using-propertyplaceholder.html" class="xref page">property placeholders</a>.</p>
 </li>
 <li>
 <p>The supported components must be on the classpath.</p>
@@ -2310,11 +2454,11 @@ This is with among the following components, which have been optimised for <code
 </ol>
 </div>
 <div class="paragraph">
-<p>The HTTP based components will be optimised to use the same hostname:port for each endpoint, and the dynamic values
+<p>The HTTP based components will be optimized to use the same hostname:port for each endpoint, and the dynamic values
 for context-path and query parameters will be provided as headers:</p>
 </div>
 <div class="paragraph">
-<p>For example this route:</p>
+<p>For example, this route:</p>
 </div>
 <div class="listingblock">
 <div class="content">
@@ -2323,7 +2467,7 @@ for context-path and query parameters will be provided as headers:</p>
 </div>
 </div>
 <div class="paragraph">
-<p>Will essentially be optimised to (pseudo route):</p>
+<p>It Will essentially be optimized to (pseudo route):</p>
 </div>
 <div class="listingblock">
 <div class="content">
@@ -2337,8 +2481,8 @@ for context-path and query parameters will be provided as headers:</p>
 </div>
 <div class="paragraph">
 <p>Where <em>expression</em> will be evaluated dynamically. Notice how the uri in <code>toD</code> is now static (<code>http:myloginserver:8080</code>).
-This optimisation allows Camel to reuse the same endpoint and its associated producer for all dynamic variations.
-This yields much lower resource overhead as the same http producer will be used for all the different variations of userid&#8217;s.</p>
+This optimization allows Camel to reuse the same endpoint and its associated producer for all dynamic variations.
+This yields much lower resource overhead as the same http producer will be used for all the different variations of <code>userids</code>.</p>
 </div>
 <div class="admonitionblock note">
 <table>
@@ -2348,7 +2492,7 @@ This yields much lower resource overhead as the same http producer will be used 
 </td>
 <td class="content">
 <div class="paragraph">
-<p>When the optimised component is in use, then you cannot use the headers <code>Exchange.HTTP_PATH</code> and <code>Exchange.HTTP_QUERY</code>
+<p>When the optimized component is in use, then you cannot use the headers <code>Exchange.HTTP_PATH</code> and <code>Exchange.HTTP_QUERY</code>
 to provide dynamic values to override the uri in <code>toD</code>. If you want to use these headers, then use the plain <code>to</code> DSL instead.
 In other words these headers are used internally by <code>toD</code> to carry the dynamic details of the endpoint.</p>
 </div>
@@ -2358,7 +2502,7 @@ In other words these headers are used internally by <code>toD</code> to carry th
 </div>
 <div class="paragraph">
 <p>In case of problems then you can turn on DEBUG logging level on <code>org.apache.camel.processor.SendDynamicProcessor</code> which will log
-during startup if <code>toD</code> was optimised, or if there was a failure loading the optimised component, with a stacktrace logged.</p>
+during startup if <code>toD</code> was optimized, or if there was a failure loading the optimized component, with a stacktrace logged.</p>
 </div>
 <div class="listingblock">
 <div class="content">
@@ -2373,6 +2517,8 @@ during startup if <code>toD</code> was optimised, or if there was a failure load
 </main>
 </div>
 <footer class="footer">
+  <p>This page was built using the Antora default UI.</p>
+  <p>The source code for this UI is licensed under the terms of the MPL-2.0 license.</p>
 </footer>
 <script id="site-script" src="../../../_/js/site.js" data-ui-root-path="../../../_"></script>
 <script async src="../../../_/js/vendor/highlight.js"></script>

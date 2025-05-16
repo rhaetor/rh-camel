@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>Jira :: Red Hat Camel Reference</title>
+    <title>Jira :: Red Hat build of Apache Camel</title>
     <meta name="description" content="Interact with JIRA issue tracker.">
     <meta name="generator" content="Antora 3.1.4">
     <link rel="stylesheet" href="../../_/css/site.css">
@@ -12,7 +12,7 @@
 <header class="header">
   <nav class="navbar">
     <div class="navbar-brand">
-      <a class="navbar-item" href="../../manual/index.html">Red Hat build of Apache Camel manual</a>
+      <a class="navbar-item" href="/">Red Hat build of Apache Camel</a>
       <button class="navbar-burger" data-target="topbar-nav">
         <span></span>
         <span></span>
@@ -22,11 +22,12 @@
   </nav>
 </header>
 <div class="body">
-<div class="nav-container" data-component="components" data-version="next">
+<div class="nav-container" data-component="components" data-version="4.4.x">
   <aside class="nav">
     <div class="panels">
 <div class="nav-panel-menu is-active" data-panel="menu">
   <nav class="nav-menu">
+    <button class="nav-menu-toggle" aria-label="Toggle expand/collapse all" style="display: none"></button>
     <h3 class="title"><a href="index.html">Camel Components</a></h3>
 <ul class="nav-list">
   <li class="nav-item" data-depth="0">
@@ -912,6 +913,33 @@
     <a class="nav-link" href="splunk-hec-component.html">Splunk HEC</a>
   </li>
   <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="spring-summary.html">Spring</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="spring-batch-component.html">Spring Batch</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="spring-event-component.html">Spring Event</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="spring-jdbc-component.html">Spring JDBC</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="spring-ldap-component.html">Spring LDAP</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="spring-rabbitmq-component.html">Spring RabbitMQ</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="spring-redis-component.html">Spring Redis</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="spring-ws-component.html">Spring WebService</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
     <a class="nav-link" href="sql-component.html">SQL</a>
   </li>
   <li class="nav-item" data-depth="2">
@@ -1792,22 +1820,40 @@
 <div class="nav-panel-explore" data-panel="explore">
   <div class="context">
     <span class="title">Camel Components</span>
-    <span class="version">Next (Pre-release)</span>
+    <span class="version">4.4.x</span>
   </div>
   <ul class="components">
     <li class="component is-current">
-      <a class="title" href="index.html">Camel Components</a>
+      <div class="title"><a href="../4.10.x/index.html">Camel Components</a></div>
       <ul class="versions">
-        <li class="version is-current is-latest">
-          <a href="index.html">Next (Pre-release)</a>
+        <li class="version is-latest">
+          <a href="../4.10.x/index.html">4.10.x (LTS)</a>
+        </li>
+        <li class="version">
+          <a href="../4.8.x/index.html">4.8.x</a>
+        </li>
+        <li class="version is-current">
+          <a href="index.html">4.4.x</a>
+        </li>
+        <li class="version">
+          <a href="../4.0.x/index.html">4.0.x</a>
         </li>
       </ul>
     </li>
     <li class="component">
-      <a class="title" href="../../manual/index.html">User manual</a>
+      <div class="title"><a href="../../manual/4.10.x/index.html">User manual</a></div>
       <ul class="versions">
         <li class="version is-latest">
-          <a href="../../manual/index.html">default</a>
+          <a href="../../manual/4.10.x/index.html">4.10.x</a>
+        </li>
+        <li class="version">
+          <a href="../../manual/4.8.x/index.html">4.8.x</a>
+        </li>
+        <li class="version">
+          <a href="../../manual/4.4.x/index.html">4.4.x</a>
+        </li>
+        <li class="version">
+          <a href="../../manual/4.0.x/index.html">4.0.x</a>
         </li>
       </ul>
     </li>
@@ -1819,7 +1865,7 @@
 <main class="article">
 <div class="toolbar" role="navigation">
 <button class="nav-toggle"></button>
-  <a href="../../manual/index.html" class="home-link"></a>
+  <a href="../../manual/4.10.x/index.html" class="home-link"></a>
 <nav class="breadcrumbs" aria-label="breadcrumbs">
   <ul>
     <li><a href="index.html">Camel Components</a></li>
@@ -1827,6 +1873,16 @@
     <li><a href="jira-component.html">Jira</a></li>
   </ul>
 </nav>
+<div class="page-versions">
+  <button class="version-menu-toggle" title="Show other versions of page">4.4.x</button>
+  <div class="version-menu">
+    <a class="version" href="../4.10.x/jira-component.html">4.10.x (LTS)</a>
+    <a class="version" href="../4.8.x/jira-component.html">4.8.x</a>
+    <a class="version is-current" href="jira-component.html">4.4.x</a>
+    <a class="version is-missing" href="../4.0.x/index.html">4.0.x</a>
+  </div>
+</div>
+<div class="edit-this-page"><a href="https://github.com/rhaetor/rh-camel-jboss/edit/camel-4.4.0-branch/docs/components/modules/ROOT/pages/jira-component.adoc">Edit this Page</a></div>
 </div>
   <div class="content">
 <aside class="toc sidebar" data-title="Contents" data-levels="2">
@@ -1891,12 +1947,12 @@ for this component:</p>
 </td>
 <td class="content">
 <div class="paragraph">
-<p>Atlassian does not release their JIRA Java client&#8217;s to Maven Central.
+<p>Atlassian does not release their JIRA Java client to Maven Central.
 Therefore, when using <code>camel-jira</code> then the <code>pom.xml</code> has included Maven repository
 to the following URL: <code><a href="https://packages.atlassian.com/maven-external" class="bare">https://packages.atlassian.com/maven-external</a></code>.</p>
 </div>
 <div class="paragraph">
-<p>Just keep this in mind as Maven will then use this repository to download the JIRA client (and potentially other JARs).
+<p>Keep this in mind as Maven will then use this repository to download the JIRA client (and potentially other JARs).
 Which allows Atlassian to track these downloads by their servers.</p>
 </div>
 </td>
@@ -1961,7 +2017,7 @@ Which allows Atlassian to track these downloads by their servers.</p>
 </ul>
 </div>
 <div class="paragraph">
-<p>As Jira is fully customizable, you must assure the fields IDs exists for the project and workflow, as they can change between different Jira servers.</p>
+<p>As Jira is fully customizable, you must ensure the field IDs exist for the project and workflow, as they can change between different Jira servers.</p>
 </div>
 </div>
 </div>
@@ -1985,14 +2041,14 @@ Which allows Atlassian to track these downloads by their servers.</p>
 <h3 id="_configuring_component_options"><a class="anchor" href="#_configuring_component_options"></a>Configuring Component Options</h3>
 <div class="paragraph">
 <p>The component level is the highest level which holds general and common configurations that are inherited by the endpoints.
-For example a component may have security settings, credentials for authentication, urls for network connection and so forth.</p>
+For example, a component may have security settings, credentials for authentication, urls for network connection and so forth.</p>
 </div>
 <div class="paragraph">
 <p>Some components only have a few options, and others may have many. Because components typically have pre configured defaults
 that are commonly used, then you may often only need to configure a few options on a component; or none at all.</p>
 </div>
 <div class="paragraph">
-<p>Configuring components can be done with the <a href="../../manual/component-dsl.html" class="xref page">Component DSL</a>,
+<p>Configuring components can be done with the <a href="../../manual/4.10.x/component-dsl.html" class="xref page">Component DSL</a>,
 in a configuration file (application.properties|yaml), or directly with Java code.</p>
 </div>
 </div>
@@ -2005,11 +2061,11 @@ or as a producer (to), or used for both.</p>
 </div>
 <div class="paragraph">
 <p>Configuring endpoints is most often done directly in the endpoint URI as path and query parameters. You can also use
-the <a href="../../manual/Endpoint-dsl.html" class="xref page">Endpoint DSL</a> and <a href="../../manual/dataformat-dsl.html" class="xref page">DataFormat DSL</a>
+the <a href="../../manual/4.10.x/Endpoint-dsl.html" class="xref page">Endpoint DSL</a> and <a href="../../manual/4.10.x/dataformat-dsl.html" class="xref page">DataFormat DSL</a>
 as a <em>type safe</em> way of configuring endpoints and data formats in Java.</p>
 </div>
 <div class="paragraph">
-<p>A good practice when configuring options is to use <a href="../../manual/using-propertyplaceholder.html" class="xref page">Property Placeholders</a>,
+<p>A good practice when configuring options is to use <a href="../../manual/4.10.x/using-propertyplaceholder.html" class="xref page">Property Placeholders</a>,
 which allows to not hardcode urls, port numbers, sensitive information, and other settings.
 In other words placeholders allows to externalize the configuration from your code, and gives more flexibility and reuse.</p>
 </div>
@@ -2304,7 +2360,7 @@ In other words placeholders allows to externalize the configuration from your co
 <td class="tableblock halign-left valign-top"><p class="tableblock"><a id="_endpoint_query_option_jql"></a>
 <a href="#_endpoint_query_option_jql" class="anchor"></a><strong>jql</strong> (consumer)</p></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>JQL is the query language from JIRA which allows you to retrieve the data you want. For example jql=project=MyProject Where MyProject is the product key in Jira. It is important to use the RAW() and set the JQL inside it to prevent camel parsing it, example: RAW(project in (MYP, COM) AND resolution = Unresolved).</p>
+<p>JQL is the query language from JIRA which allows you to retrieve the data you want. For example, jql=project=MyProject Where MyProject is the product key in Jira. It is important to use the RAW() and set the JQL inside it to prevent camel parsing it, example: RAW(project in (MYP, COM) AND resolution = Unresolved).</p>
 </div></div></td>
 <td class="tableblock halign-center valign-top"></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">String</p></td>
@@ -2688,14 +2744,14 @@ In other words placeholders allows to externalize the configuration from your co
 </ul>
 </div>
 <div class="paragraph">
-<p>We recommend to use OAuth or Personal token whenever possible, as it provides the best security for your users and system.</p>
+<p>We recommend using OAuth or Personal token whenever possible, as it provides the best security for your users and system.</p>
 </div>
 <div class="sect2">
 <h3 id="_basic_authentication_requirements"><a class="anchor" href="#_basic_authentication_requirements"></a>Basic authentication requirements:</h3>
 <div class="ulist">
 <ul>
 <li>
-<p>An username and a password.</p>
+<p>A username and a password.</p>
 </li>
 </ul>
 </div>
@@ -2743,7 +2799,7 @@ to generate the client private key, consumer key, verification code and access t
 <div class="sectionbody">
 <div class="paragraph">
 <p>The JQL URI option is used by both consumer endpoints.  Theoretically,
-items like "project key", etc. could be URI options themselves.
+items like the "project key", etc. could be URI options themselves.
  However, by requiring the use of JQL, the consumers become much more
 flexible and powerful.</p>
 </div>
@@ -2770,12 +2826,12 @@ automatically set the JQL as:</p>
 </ul>
 </div>
 <div class="paragraph">
-<p>This is in order to optimize startup processing, rather than having to index every single
+<p>This is to optimize startup processing, rather than having to index every single
 issue in the project.</p>
 </div>
 <div class="paragraph">
 <p>Another note is that, similarly, the newComments consumer will have to
-index every single issue <strong>and</strong> comment in the project. Therefore, for
+index every single issue <strong>and</strong> comment on the project. Therefore, for
 large projects, it&#8217;s <strong>vital</strong> to optimize the JQL expression as much as
 possible. For example, the JIRA Toolkit Plugin includes a "Number of
 comments" custom field&#8201;&#8212;&#8201;use '"Number of comments" &gt; 0' in your query.
@@ -2793,13 +2849,13 @@ delay, etc. Example:</p>
 <h2 id="_operations"><a class="anchor" href="#_operations"></a>Operations</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>See a list of required headers to set when using the Jira operations. The author field for the producers is automatically set to the authenticated user in the Jira side.</p>
+<p>See a list of required headers to set when using the Jira operations. The author field for the producers is automatically set to the authenticated user on the Jira side.</p>
 </div>
 <div class="paragraph">
 <p>If any required field is not set, then an IllegalArgumentException is throw.</p>
 </div>
 <div class="paragraph">
-<p>There are operations that requires <code>id</code> for fields suchs as: issue type, priority, transition. Check the valid <code>id</code> on your jira project as they may differ on a jira installation and project workflow.</p>
+<p>There are operations that requires <code>id</code> for fields such as the issue type, priority, transition. Check the valid <code>id</code> on your jira project as they may differ on a jira installation and project workflow.</p>
 </div>
 </div>
 </div>
@@ -2861,7 +2917,7 @@ delay, etc. Example:</p>
 <p><code>IssueKey</code>: The issue key identifier.</p>
 </li>
 <li>
-<p>body of the exchange is the description.</p>
+<p>the body of the exchange is the description.</p>
 </li>
 </ul>
 </div>
@@ -2918,7 +2974,7 @@ delay, etc. Example:</p>
 <p><code>IssueTransitionId</code>: The issue transition <code>id</code>.</p>
 </li>
 <li>
-<p>body of the exchange is the description.</p>
+<p>the body of the exchange is the description.</p>
 </li>
 </ul>
 </div>
@@ -2981,15 +3037,15 @@ delay, etc. Example:</p>
 <div class="ulist">
 <ul>
 <li>
-<p><code>watchedFields</code> Comma separated list of fields to watch for changes i.e <code>Status,Priority,Assignee,Components</code> etc.</p>
+<p><code>watchedFields</code> Comma separated list of fields to watch for changes that is, <code>Status,Priority,Assignee,Components</code> etc.</p>
 </li>
 <li>
-<p><code>sendOnlyUpdatedField</code> By default only changed field is send as the body.</p>
+<p><code>sendOnlyUpdatedField</code> By default, only the changed field is sent as the body.</p>
 </li>
 </ul>
 </div>
 <div class="paragraph">
-<p>All messages also contain following headers that add additional info about the change:</p>
+<p>All messages also contain the following headers that add additional info about the change:</p>
 </div>
 <div class="ulist">
 <ul>
@@ -2997,12 +3053,15 @@ delay, etc. Example:</p>
 <p><code>issueKey</code>: Key of the updated issue</p>
 </li>
 <li>
-<p><code>changed</code>: name of the updated field (i.e Status)</p>
+<p><code>changed</code>: name of the updated field (that is, Status)</p>
 </li>
 <li>
 <p><code>watchedIssues</code>: list of all issue keys that are watched in the time of update</p>
 </li>
 </ul>
+</div>
+<div class="paragraph">
+<p>Unresolved include directive in modules/ROOT/pages/jira-component.adoc - include::spring-boot:partial$starter.adoc[]</p>
 </div>
 </div>
 </div>
@@ -3011,6 +3070,8 @@ delay, etc. Example:</p>
 </main>
 </div>
 <footer class="footer">
+  <p>This page was built using the Antora default UI.</p>
+  <p>The source code for this UI is licensed under the terms of the MPL-2.0 license.</p>
 </footer>
 <script id="site-script" src="../../_/js/site.js" data-ui-root-path="../../_"></script>
 <script async src="../../_/js/vendor/highlight.js"></script>

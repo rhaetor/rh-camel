@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>Groovy :: Red Hat Camel Reference</title>
+    <title>Groovy :: Red Hat build of Apache Camel</title>
     <meta name="description" content="Evaluates a Groovy script.">
     <meta name="generator" content="Antora 3.1.4">
     <link rel="stylesheet" href="../../../_/css/site.css">
@@ -12,7 +12,7 @@
 <header class="header">
   <nav class="navbar">
     <div class="navbar-brand">
-      <a class="navbar-item" href="../../manual/index.html">Red Hat build of Apache Camel manual</a>
+      <a class="navbar-item" href="/">Red Hat build of Apache Camel</a>
       <button class="navbar-burger" data-target="topbar-nav">
         <span></span>
         <span></span>
@@ -22,11 +22,12 @@
   </nav>
 </header>
 <div class="body">
-<div class="nav-container" data-component="components" data-version="next">
+<div class="nav-container" data-component="components" data-version="4.4.x">
   <aside class="nav">
     <div class="panels">
 <div class="nav-panel-menu is-active" data-panel="menu">
   <nav class="nav-menu">
+    <button class="nav-menu-toggle" aria-label="Toggle expand/collapse all" style="display: none"></button>
     <h3 class="title"><a href="../index.html">Camel Components</a></h3>
 <ul class="nav-list">
   <li class="nav-item" data-depth="0">
@@ -1819,22 +1820,40 @@
 <div class="nav-panel-explore" data-panel="explore">
   <div class="context">
     <span class="title">Camel Components</span>
-    <span class="version">Next (Pre-release)</span>
+    <span class="version">4.4.x</span>
   </div>
   <ul class="components">
     <li class="component is-current">
-      <a class="title" href="../index.html">Camel Components</a>
+      <div class="title"><a href="../../4.10.x/index.html">Camel Components</a></div>
       <ul class="versions">
-        <li class="version is-current is-latest">
-          <a href="../index.html">Next (Pre-release)</a>
+        <li class="version is-latest">
+          <a href="../../4.10.x/index.html">4.10.x (LTS)</a>
+        </li>
+        <li class="version">
+          <a href="../../4.8.x/index.html">4.8.x</a>
+        </li>
+        <li class="version is-current">
+          <a href="../index.html">4.4.x</a>
+        </li>
+        <li class="version">
+          <a href="../../4.0.x/index.html">4.0.x</a>
         </li>
       </ul>
     </li>
     <li class="component">
-      <a class="title" href="../../../manual/index.html">User manual</a>
+      <div class="title"><a href="../../../manual/4.10.x/index.html">User manual</a></div>
       <ul class="versions">
         <li class="version is-latest">
-          <a href="../../../manual/index.html">default</a>
+          <a href="../../../manual/4.10.x/index.html">4.10.x</a>
+        </li>
+        <li class="version">
+          <a href="../../../manual/4.8.x/index.html">4.8.x</a>
+        </li>
+        <li class="version">
+          <a href="../../../manual/4.4.x/index.html">4.4.x</a>
+        </li>
+        <li class="version">
+          <a href="../../../manual/4.0.x/index.html">4.0.x</a>
         </li>
       </ul>
     </li>
@@ -1846,7 +1865,7 @@
 <main class="article">
 <div class="toolbar" role="navigation">
 <button class="nav-toggle"></button>
-  <a href="../../../manual/index.html" class="home-link"></a>
+  <a href="../../../manual/4.10.x/index.html" class="home-link"></a>
 <nav class="breadcrumbs" aria-label="breadcrumbs">
   <ul>
     <li><a href="../index.html">Camel Components</a></li>
@@ -1854,6 +1873,16 @@
     <li><a href="groovy-language.html">Groovy</a></li>
   </ul>
 </nav>
+<div class="page-versions">
+  <button class="version-menu-toggle" title="Show other versions of page">4.4.x</button>
+  <div class="version-menu">
+    <a class="version" href="../../4.10.x/languages/groovy-language.html">4.10.x (LTS)</a>
+    <a class="version" href="../../4.8.x/languages/groovy-language.html">4.8.x</a>
+    <a class="version is-current" href="groovy-language.html">4.4.x</a>
+    <a class="version is-missing" href="../../4.0.x/index.html">4.0.x</a>
+  </div>
+</div>
+<div class="edit-this-page"><a href="https://github.com/rhaetor/rh-camel-jboss/edit/camel-4.4.0-branch/docs/components/modules/languages/pages/groovy-language.adoc">Edit this Page</a></div>
 </div>
   <div class="content">
 <aside class="toc sidebar" data-title="Contents" data-levels="2">
@@ -1870,7 +1899,7 @@
 <p>Camel has support for using <a href="http://www.groovy-lang.org/">Groovy</a>.</p>
 </div>
 <div class="paragraph">
-<p>For example, you can use Groovy in a <a href="../../../manual/predicate.html" class="xref page">Predicate</a>
+<p>For example, you can use Groovy in a <a href="../../../manual/4.10.x/predicate.html" class="xref page">Predicate</a>
 with the <a href="../eips/filter-eip.html" class="xref page">Message
 Filter</a> EIP.</p>
 </div>
@@ -1931,20 +1960,31 @@ Filter</a> EIP.</p>
 <h2 id="_examples"><a class="anchor" href="#_examples"></a>Examples</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>In the example below we use a groovy script as predicate in the message filter,
-to determine if any line items is over $100:</p>
+<p>In the example below, we use a groovy script as predicate in the message filter,
+to determine if any line items are over $100:</p>
 </div>
+<div id="_tabs_1" class="openblock tabs is-sync is-loading">
+<div class="content">
+<div class="ulist tablist">
+<ul>
+<li id="_tabs_1_java" class="tab">
+<p>Java</p>
+</li>
+<li id="_tabs_1_xml_dsl" class="tab">
+<p>XML DSL</p>
+</li>
+</ul>
+</div>
+<div id="_tabs_1_java--panel" class="tabpanel" aria-labelledby="_tabs_1_java">
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">// lets route if a line item is over $100
-from("queue:foo")
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">from("queue:foo")
     .filter(groovy("request.lineItems.any { i -&gt; i.value &gt; 100 }"))
         .to("queue:bar")</code></pre>
 </div>
 </div>
-<div class="paragraph">
-<p>And in XML DSL:</p>
 </div>
+<div id="_tabs_1_xml_dsl--panel" class="tabpanel" aria-labelledby="_tabs_1_xml_dsl">
 <div class="listingblock">
 <div class="content">
 <pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;route&gt;
@@ -1954,6 +1994,9 @@ from("queue:foo")
         &lt;to uri="queue:bar"/&gt;
     &lt;/filter&gt;
 &lt;/route&gt;</code></pre>
+</div>
+</div>
+</div>
 </div>
 </div>
 </div>
@@ -2018,9 +2061,9 @@ a <code>Map</code>). The <code>Exchange</code> is transferred as:</p>
 <div class="sectionbody">
 <div class="paragraph">
 <p>As the Groovy script engine evaluate method just return a <code>Null</code> if it runs a
-multiple statements script. Camel now look up the value of script result
-by using the key of "result" from the value set. If you have multiple
-statements script, you need to make sure you set the value of result
+multiple statements script. Camel now looks up the value of script result
+by using the key of <code>result</code> from the value set. If you have multiple
+statements scripts, you need to make sure you set the value of result
 variable as the script return value.</p>
 </div>
 <div class="listingblock">
@@ -2068,9 +2111,9 @@ custom static imports), instead of the default one.</p>
 <div class="sectionbody">
 <div class="paragraph">
 <p>You can externalize the script and have Camel load it from a resource
-such as <code>"classpath:"</code>, <code>"file:"</code>, or <code>"http:"</code>.<br>
- This is done using the following syntax: <code>"resource:scheme:location"</code>,
-eg to refer to a file on the classpath you can do:</p>
+such as <code>"classpath:"</code>, <code>"file:"</code>, or <code>"http:"</code>.
+This is done using the following syntax: <code>"resource:scheme:location"</code>,
+for example, to refer to a file on the classpath you can do:</p>
 </div>
 <div class="listingblock">
 <div class="content">
@@ -2083,7 +2126,7 @@ eg to refer to a file on the classpath you can do:</p>
 <h2 id="_dependencies"><a class="anchor" href="#_dependencies"></a>Dependencies</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>To use scripting languages in your camel routes you need to add a
+<p>To use scripting languages in your camel routes, you need to add a
 dependency on <strong>camel-groovy</strong>.</p>
 </div>
 <div class="paragraph">
@@ -2100,6 +2143,9 @@ the download page for the latest versions).</p>
 &lt;/dependency&gt;</code></pre>
 </div>
 </div>
+<div class="paragraph">
+<p>Unresolved include directive in modules/languages/pages/groovy-language.adoc - include::spring-boot:partial$starter.adoc[]</p>
+</div>
 </div>
 </div>
 </article>
@@ -2107,6 +2153,8 @@ the download page for the latest versions).</p>
 </main>
 </div>
 <footer class="footer">
+  <p>This page was built using the Antora default UI.</p>
+  <p>The source code for this UI is licensed under the terms of the MPL-2.0 license.</p>
 </footer>
 <script id="site-script" src="../../../_/js/site.js" data-ui-root-path="../../../_"></script>
 <script async src="../../../_/js/vendor/highlight.js"></script>

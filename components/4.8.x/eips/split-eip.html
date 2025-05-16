@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>Split :: Red Hat Camel Reference</title>
+    <title>Split :: Red Hat build of Apache Camel</title>
     <meta name="description" content="Splits a single message into many sub-messages.">
     <meta name="generator" content="Antora 3.1.4">
     <link rel="stylesheet" href="../../../_/css/site.css">
@@ -12,7 +12,7 @@
 <header class="header">
   <nav class="navbar">
     <div class="navbar-brand">
-      <a class="navbar-item" href="../../manual/index.html">Red Hat build of Apache Camel manual</a>
+      <a class="navbar-item" href="/">Red Hat build of Apache Camel</a>
       <button class="navbar-burger" data-target="topbar-nav">
         <span></span>
         <span></span>
@@ -22,11 +22,12 @@
   </nav>
 </header>
 <div class="body">
-<div class="nav-container" data-component="components" data-version="next">
+<div class="nav-container" data-component="components" data-version="4.8.x">
   <aside class="nav">
     <div class="panels">
 <div class="nav-panel-menu is-active" data-panel="menu">
   <nav class="nav-menu">
+    <button class="nav-menu-toggle" aria-label="Toggle expand/collapse all" style="display: none"></button>
     <h3 class="title"><a href="../index.html">Camel Components</a></h3>
 <ul class="nav-list">
   <li class="nav-item" data-depth="0">
@@ -36,7 +37,46 @@
     <a class="nav-link" href="../index.html">Components</a>
 <ul class="nav-list">
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="../activemq-component.html">ActiveMQ</a>
+    <a class="nav-link" href="../activemq-component.html">ActiveMQ 5.x</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../activemq6-component.html">ActiveMQ 6.x</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../ai-summary.html">AI</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../chatscript-component.html">ChatScript</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../djl-component.html">Deep Java Library</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../langchain4j-chat-component.html">LangChain4j Chat</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../langchain4j-embeddings-component.html">LangChain4j Embeddings</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../langchain4j-tokenizer-component.html">LangChain4j Tokenizer</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../langchain4j-tools-component.html">LangChain4j Tools</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../langchain4j-web-search-component.html">LangChain4j Web Search</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../milvus-component.html">Milvus</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../pinecone-component.html">Pinecone</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../qdrant-component.html">Qdrant</a>
+  </li>
+</ul>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="../amqp-component.html">AMQP</a>
@@ -65,6 +105,15 @@
 <ul class="nav-list">
   <li class="nav-item" data-depth="3">
     <a class="nav-link" href="../aws2-athena-component.html">AWS Athena</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../aws-bedrock-component.html">AWS Bedrock</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../aws-bedrock-agent-component.html">AWS Bedrock Agent</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../aws-bedrock-agent-runtime-component.html">AWS Bedrock Agent Runtime</a>
   </li>
   <li class="nav-item" data-depth="3">
     <a class="nav-link" href="../aws-cloudtrail-component.html">AWS Cloudtrail</a>
@@ -169,7 +218,7 @@
     <a class="nav-link" href="../azure-storage-blob-component.html">Azure Storage Blob Service</a>
   </li>
   <li class="nav-item" data-depth="3">
-    <a class="nav-link" href="../azure-storage-datalake-component.html">Azure Storage Datalake Service</a>
+    <a class="nav-link" href="../azure-storage-datalake-component.html">Azure Storage Data Lake Service</a>
   </li>
   <li class="nav-item" data-depth="3">
     <a class="nav-link" href="../azure-storage-queue-component.html">Azure Storage Queue Service</a>
@@ -202,9 +251,6 @@
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="../cql-component.html">Cassandra CQL</a>
-  </li>
-  <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="../chatscript-component.html">ChatScript</a>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="../chunk-component.html">Chunk</a>
@@ -277,9 +323,6 @@
     <a class="nav-link" href="../debezium-sqlserver-component.html">Debezium SQL Server Connector</a>
   </li>
 </ul>
-  </li>
-  <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="../djl-component.html">Deep Java Library</a>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="../dhis2-component.html">DHIS2</a>
@@ -395,6 +438,9 @@
   </li>
   <li class="nav-item" data-depth="3">
     <a class="nav-link" href="../google-pubsub-component.html">Google Pubsub</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../google-pubsub-lite-component.html">Google PubSub Lite</a>
   </li>
   <li class="nav-item" data-depth="3">
     <a class="nav-link" href="../google-secret-manager-component.html">Google Secret Manager</a>
@@ -687,7 +733,7 @@
     <a class="nav-link" href="../ldif-component.html">LDIF</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="../log-component.html">Log</a>
+    <a class="nav-link" href="../log-component.html">Log Data</a>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="../lucene-component.html">Lucene</a>
@@ -900,10 +946,16 @@
     <a class="nav-link" href="../smb-component.html">SMB</a>
   </li>
   <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../smooks-component.html">Smooks</a>
+  </li>
+  <li class="nav-item" data-depth="2">
     <a class="nav-link" href="../smpp-component.html">SMPP</a>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="../snmp-component.html">SNMP</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../solr-component.html">Solr</a>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="../splunk-component.html">Splunk</a>
@@ -966,6 +1018,18 @@
     <a class="nav-link" href="../stub-component.html">Stub</a>
   </li>
   <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../tahu-summary.html">Tahu</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../tahu-edge-component.html">Tahu Edge Node / Device</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../tahu-host-component.html">Tahu Host Application</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
     <a class="nav-link" href="../telegram-component.html">Telegram</a>
   </li>
   <li class="nav-item" data-depth="2">
@@ -1026,7 +1090,7 @@
     <a class="nav-link" href="../whatsapp-component.html">WhatsApp</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="../wordpress-component.html">Wordpress</a>
+    <a class="nav-link" href="../wordpress-component.html">WordPress</a>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="../workday-component.html">Workday</a>
@@ -1419,7 +1483,13 @@
     <a class="nav-link" href="../others/openapi-java.html">Openapi Java</a>
   </li>
   <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../others/openapi-validator.html">Openapi Validator</a>
+  </li>
+  <li class="nav-item" data-depth="2">
     <a class="nav-link" href="../others/opentelemetry.html">OpenTelemetry</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../others/platform-http-jolokia.html">Platform HTTP Jolokia</a>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="../others/platform-http-main.html">Platform Http Main</a>
@@ -1567,7 +1637,7 @@
     <a class="nav-link" href="event-message.html">Event Message</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="failover-eip.html">Failover</a>
+    <a class="nav-link" href="failoverLoadBalancer-eip.html">Failover Load Balancer</a>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="faultToleranceConfiguration-eip.html">Fault Tolerance Configuration</a>
@@ -1597,13 +1667,13 @@
     <a class="nav-link" href="loadBalance-eip.html">Load Balance</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="log-eip.html">Log</a>
+    <a class="nav-link" href="log-eip.html">Logger</a>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="loop-eip.html">Loop</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="marshal-eip.html">Marshal EIP</a>
+    <a class="nav-link" href="marshal-eip.html">Marshal</a>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="message.html">Message</a>
@@ -1660,6 +1730,9 @@
     <a class="nav-link" href="point-to-point-channel.html">Point to Point Channel</a>
   </li>
   <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="poll-eip.html">Poll</a>
+  </li>
+  <li class="nav-item" data-depth="2">
     <a class="nav-link" href="pollEnrich-eip.html">Poll Enrich</a>
   </li>
   <li class="nav-item" data-depth="2">
@@ -1675,7 +1748,7 @@
     <a class="nav-link" href="publish-subscribe-channel.html">Publish Subscribe Channel</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="random-eip.html">Random</a>
+    <a class="nav-link" href="randomLoadBalancer-eip.html">Random Load Balancer</a>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="recipientList-eip.html">Recipient List</a>
@@ -1717,7 +1790,7 @@
     <a class="nav-link" href="rollback-eip.html">Rollback</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="roundRobin-eip.html">Round Robin</a>
+    <a class="nav-link" href="roundRobinLoadBalancer-eip.html">Round Robin Load Balancer</a>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="routingSlip-eip.html">Routing Slip</a>
@@ -1729,7 +1802,7 @@
     <a class="nav-link" href="sample-eip.html">Sample</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="scatter-gather.html">Scatter Gather</a>
+    <a class="nav-link" href="scatter-gather.html">Scatter-Gather</a>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="script-eip.html">Script</a>
@@ -1759,6 +1832,9 @@
     <a class="nav-link" href="setVariable-eip.html">Set Variable</a>
   </li>
   <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="setVariables-eip.html">Set Variables</a>
+  </li>
+  <li class="nav-item" data-depth="2">
     <a class="nav-link" href="sort-eip.html">Sort</a>
   </li>
   <li class="nav-item is-current-page" data-depth="2">
@@ -1768,7 +1844,7 @@
     <a class="nav-link" href="step-eip.html">Step</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="sticky-eip.html">Sticky</a>
+    <a class="nav-link" href="stickyLoadBalancer-eip.html">Sticky Load Balancer</a>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="stop-eip.html">Stop</a>
@@ -1789,7 +1865,7 @@
     <a class="nav-link" href="toD-eip.html">To D</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="topic-eip.html">Topic</a>
+    <a class="nav-link" href="topicLoadBalancer-eip.html">Topic Load Balancer</a>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="transactional-client.html">Transactional Client</a>
@@ -1798,13 +1874,13 @@
     <a class="nav-link" href="transform-eip.html">Transform</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="unmarshal-eip.html">Unmarshal EIP</a>
+    <a class="nav-link" href="unmarshal-eip.html">Unmarshal</a>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="validate-eip.html">Validate</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="weighted-eip.html">Weighted</a>
+    <a class="nav-link" href="weightedLoadBalancer-eip.html">Weighted Load Balancer</a>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="wireTap-eip.html">Wire Tap</a>
@@ -1819,22 +1895,40 @@
 <div class="nav-panel-explore" data-panel="explore">
   <div class="context">
     <span class="title">Camel Components</span>
-    <span class="version">Next (Pre-release)</span>
+    <span class="version">4.8.x</span>
   </div>
   <ul class="components">
     <li class="component is-current">
-      <a class="title" href="../index.html">Camel Components</a>
+      <div class="title"><a href="../../4.10.x/index.html">Camel Components</a></div>
       <ul class="versions">
-        <li class="version is-current is-latest">
-          <a href="../index.html">Next (Pre-release)</a>
+        <li class="version is-latest">
+          <a href="../../4.10.x/index.html">4.10.x (LTS)</a>
+        </li>
+        <li class="version is-current">
+          <a href="../index.html">4.8.x</a>
+        </li>
+        <li class="version">
+          <a href="../../4.4.x/index.html">4.4.x</a>
+        </li>
+        <li class="version">
+          <a href="../../4.0.x/index.html">4.0.x</a>
         </li>
       </ul>
     </li>
     <li class="component">
-      <a class="title" href="../../../manual/index.html">User manual</a>
+      <div class="title"><a href="../../../manual/4.10.x/index.html">User manual</a></div>
       <ul class="versions">
         <li class="version is-latest">
-          <a href="../../../manual/index.html">default</a>
+          <a href="../../../manual/4.10.x/index.html">4.10.x</a>
+        </li>
+        <li class="version">
+          <a href="../../../manual/4.8.x/index.html">4.8.x</a>
+        </li>
+        <li class="version">
+          <a href="../../../manual/4.4.x/index.html">4.4.x</a>
+        </li>
+        <li class="version">
+          <a href="../../../manual/4.0.x/index.html">4.0.x</a>
         </li>
       </ul>
     </li>
@@ -1846,7 +1940,7 @@
 <main class="article">
 <div class="toolbar" role="navigation">
 <button class="nav-toggle"></button>
-  <a href="../../../manual/index.html" class="home-link"></a>
+  <a href="../../../manual/4.10.x/index.html" class="home-link"></a>
 <nav class="breadcrumbs" aria-label="breadcrumbs">
   <ul>
     <li><a href="../index.html">Camel Components</a></li>
@@ -1854,6 +1948,16 @@
     <li><a href="split-eip.html">Split</a></li>
   </ul>
 </nav>
+<div class="page-versions">
+  <button class="version-menu-toggle" title="Show other versions of page">4.8.x</button>
+  <div class="version-menu">
+    <a class="version" href="../../4.10.x/eips/split-eip.html">4.10.x (LTS)</a>
+    <a class="version is-current" href="split-eip.html">4.8.x</a>
+    <a class="version" href="../../4.4.x/eips/split-eip.html">4.4.x</a>
+    <a class="version" href="../../4.0.x/eips/split-eip.html">4.0.x</a>
+  </div>
+</div>
+<div class="edit-this-page"><a href="https://github.com/rhaetor/rh-camel-jboss/edit/camel-4.8.0-branch/core/camel-core-engine/src/main/docs/modules/eips/pages/split-eip.adoc">Edit this Page</a></div>
 </div>
   <div class="content">
 <aside class="toc sidebar" data-title="Contents" data-levels="2">
@@ -1875,7 +1979,7 @@
 <p>Use a Splitter to break out the composite message into a series of individual messages, each containing data related to one item.</p>
 </div>
 <div class="paragraph">
-<p>The <a href="http://www.enterpriseintegrationpatterns.com/patterns/messaging/Sequencer.html">Splitter</a> from the <a href="enterprise-integration-patterns.html" class="xref page">EIP patterns</a> allows you split a message into a number of pieces and process them individually.</p>
+<p>The <a href="http://www.enterpriseintegrationpatterns.com/patterns/messaging/Sequencer.html">Splitter</a> from the <a href="enterprise-integration-patterns.html" class="xref page">EIP patterns</a> allows you to split a message into a number of pieces and process them individually.</p>
 </div>
 </div>
 </div>
@@ -1883,7 +1987,7 @@
 <h2 id="_options"><a class="anchor" href="#_options"></a>Options</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>The Split eip supports 14 options, which are listed below.</p>
+<p>The Split eip supports 3 options, which are listed below.</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
 <colgroup>
@@ -1960,7 +2064,7 @@
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong id="_option_parallelAggregate">parallelAggregate</strong></p></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>If enabled then the aggregate method on AggregationStrategy can be called concurrently. Notice that this would require the implementation of AggregationStrategy to be implemented as thread-safe. By default this is false meaning that Camel synchronizes the call to the aggregate method. Though in some use-cases this can be used to archive higher performance when the AggregationStrategy is implemented as thread-safe.</p>
+<p><strong>Deprecated</strong> If enabled then the aggregate method on AggregationStrategy can be called concurrently. Notice that this would require the implementation of AggregationStrategy to be implemented as thread-safe. By default this is false meaning that Camel synchronizes the call to the aggregate method. Though in some use-cases this can be used to archive higher performance when the AggregationStrategy is implemented as thread-safe.</p>
 </div></div></td>
 <td class="tableblock halign-center valign-top"><p class="tableblock">false</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Boolean</p></td>
@@ -2045,37 +2149,51 @@
 <h2 id="_exchange_properties"><a class="anchor" href="#_exchange_properties"></a>Exchange properties</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>The following exchange properties are set on each <code>Exchange</code> that are split:</p>
+<p>The Split eip supports 3 exchange properties, which are listed below.</p>
+</div>
+<div class="paragraph">
+<p>The exchange properties are set on the <code>Exchange</code> by the EIP, unless otherwise specified in the description.
+This means those properties are available after this EIP has completed processing the <code>Exchange</code>.</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
 <colgroup>
-<col style="width: 30%;">
+<col style="width: 20%;">
+<col style="width: 50%;">
 <col style="width: 10%;">
-<col style="width: 60%;">
+<col style="width: 20%;">
 </colgroup>
 <thead>
 <tr>
-<th class="tableblock halign-left valign-top">Property</th>
-<th class="tableblock halign-left valign-top">Type</th>
+<th class="tableblock halign-left valign-top">Name</th>
 <th class="tableblock halign-left valign-top">Description</th>
+<th class="tableblock halign-center valign-top">Default</th>
+<th class="tableblock halign-left valign-top">Type</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>CamelSplitIndex</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code><code>int</code></code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">A split counter that increases for each Exchange being split. The counter starts from 0.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong id="_option_CamelSplitIndex">CamelSplitIndex</strong></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>A split counter that increases for each Exchange being split. The counter starts from 0.</p>
+</div></div></td>
+<td class="tableblock halign-center valign-top"></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">int</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>CamelSplitSize</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code><code>int</code></code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">The total number of Exchanges that was split.
-       This property is not applied for stream based splitting, except for the very last message because then Camel knows the total size.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong id="_option_CamelSplitComplete">CamelSplitComplete</strong></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>Whether this Exchange is the last.</p>
+</div></div></td>
+<td class="tableblock halign-center valign-top"></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">boolean</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>CamelSplitComplete</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code><code>boolean</code></code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Whether this Exchange is the last.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong id="_option_CamelSplitSize">CamelSplitSize</strong></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>The total number of Exchanges that was split. This property is not applied for stream based splitting, except for the very last message because then Camel knows the total size.</p>
+</div></div></td>
+<td class="tableblock halign-center valign-top"></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">int</p></td>
 </tr>
 </tbody>
 </table>
@@ -2085,8 +2203,8 @@
 <h2 id="_using_split"><a class="anchor" href="#_using_split"></a>Using Split</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>The following example shows how to take a request from the direct:a endpoint,
-then split into sub messages, which each are sent to the direct:b endpoint.</p>
+<p>The following example shows how to take a request from the <code>direct:a</code> endpoint,
+then split into sub messages, which each are sent to the <code>direct:b</code> endpoint.</p>
 </div>
 <div class="paragraph">
 <p>The example splits the message body using a tokenizer to split into lines
@@ -2115,7 +2233,7 @@ using the new-line character as separator.</p>
 </div>
 <div class="paragraph">
 <p>The Split EIP has special support for splitting using a delimiter, instead of using
-<a href="../languages/tokenize-language.html" class="xref page">Tokenize</a> language.</p>
+<a href="../../4.10.x/languages/tokenize-language.html" class="xref page">Tokenize</a> language.</p>
 </div>
 <div class="paragraph">
 <p>The previous example can also be done as follows:</p>
@@ -2142,10 +2260,10 @@ using the new-line character as separator.</p>
 </div>
 </div>
 <div class="paragraph">
-<p>The splitter can use any <a href="../../../manual/expression.html" class="xref page">Expression</a>,
+<p>The splitter can use any <a href="../../../manual/4.10.x/expression.html" class="xref page">Expression</a>,
 so you could use any of the supported languages such as
-<a href="../languages/simple-language.html" class="xref page">Simple</a>, <a href="../languages/xpath-language.html" class="xref page">XPath</a>,
-<a href="../languages/jsonpath-language.html" class="xref page">JSonPath</a>, <a href="../languages/groovy-language.html" class="xref page">Groovy</a> to perform the split.</p>
+<a href="../../4.10.x/languages/simple-language.html" class="xref page">Simple</a>, <a href="../../4.10.x/languages/xpath-language.html" class="xref page">XPath</a>,
+<a href="../../4.10.x/languages/jsonpath-language.html" class="xref page">JSonPath</a>, <a href="../../4.10.x/languages/groovy-language.html" class="xref page">Groovy</a> to perform the split.</p>
 </div>
 <div id="_tabs_1" class="openblock tabs is-sync is-loading">
 <div class="content">
@@ -2195,79 +2313,34 @@ from the message body.</p>
 <div class="ulist">
 <ul>
 <li>
-<p><code>java.util.Collection</code> - splits by each element from the collection/list/set.</p>
+<p><code>java.util.Collection</code>:  splits by each element from the collection/list/set.</p>
 </li>
 <li>
-<p><code>java.util.Map</code> - splits by each <code>Map.Entry</code> from the map.</p>
+<p><code>java.util.Map</code>:  splits by each <code>Map.Entry</code> from the map.</p>
 </li>
 <li>
-<p><code>Object[]</code> - splits the array by each element</p>
+<p><code>Object[]</code>:  splits the array by each element</p>
 </li>
 <li>
-<p><code>Iterator</code> - splits by the iterator</p>
+<p><code>Iterator</code>:  splits by the iterator</p>
 </li>
 <li>
-<p><code>Iterable</code> - splits by the iterable</p>
+<p><code>Iterable</code>:  splits by the iterable</p>
 </li>
 <li>
-<p><code>org.w3c.dom.NodeList</code> - splits the XML document by each element from the list</p>
+<p><code>org.w3c.dom.NodeList</code>:  splits the XML document by each element from the list</p>
 </li>
 <li>
-<p><code>String</code> - splits the string value by comma as separator</p>
+<p><code>String</code>:  splits the string value by comma as separator</p>
 </li>
 </ul>
 </div>
 <div class="paragraph">
-<p>For any other type the message body is not split, and instead used <em>as-is</em>, meaning that
+<p>For any other type, the message body is not split, and instead used <em>as-is</em>, meaning that
 the Split EIP will be split into a single message (the same).</p>
 </div>
 <div class="paragraph">
-<p>To use this with the splitter you should <em>just</em> use body as the expression:</p>
-</div>
-<div class="exampleblock">
-<div class="content">
-<div class="dlist">
-<dl>
-<dt class="hdlist1">Java</dt>
-<dd>
-<div class="listingblock">
-<div class="content">
-<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">from("direct:splitUsingBody")
-    .split(body())
-        .to("mock:result");</code></pre>
-</div>
-</div>
-</dd>
-<dt class="hdlist1">XML</dt>
-<dd>
-<div class="paragraph">
-<p>In XML you use <a href="../languages/simple-language.html" class="xref page">Simple</a> to refer to the message body:</p>
-</div>
-</dd>
-</dl>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;route&gt;
-  &lt;from uri="direct:splitUsingBody"/&gt;
-  &lt;split&gt;
-     &lt;simple&gt;${body}&lt;/simple&gt;
-     &lt;to uri="mock:result"/&gt;
-  &lt;/split&gt;
-&lt;/route&gt;</code></pre>
-</div>
-</div>
-</div>
-</div>
-</div>
-<div class="sect2">
-<h3 id="_splitting_with_parallel_processing"><a class="anchor" href="#_splitting_with_parallel_processing"></a>Splitting with parallel processing</h3>
-<div class="paragraph">
-<p>You can enable parallel processing with Split EIP so each split message
-is processed by its own thread in parallel.</p>
-</div>
-<div class="paragraph">
-<p>The example below enabled parallel mode:</p>
+<p>To use this with the splitter, you should <em>just</em> use body as the expression:</p>
 </div>
 <div id="_tabs_2" class="openblock tabs is-sync is-loading">
 <div class="content">
@@ -2284,6 +2357,55 @@ is processed by its own thread in parallel.</p>
 <div id="_tabs_2_java--panel" class="tabpanel" aria-labelledby="_tabs_2_java">
 <div class="listingblock">
 <div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">from("direct:splitUsingBody")
+    .split(body())
+        .to("mock:result");</code></pre>
+</div>
+</div>
+</div>
+<div id="_tabs_2_xml--panel" class="tabpanel" aria-labelledby="_tabs_2_xml">
+<div class="paragraph">
+<p>In XML, you use <a href="../../4.10.x/languages/simple-language.html" class="xref page">Simple</a> to refer to the message body:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;route&gt;
+  &lt;from uri="direct:splitUsingBody"/&gt;
+  &lt;split&gt;
+     &lt;simple&gt;${body}&lt;/simple&gt;
+     &lt;to uri="mock:result"/&gt;
+  &lt;/split&gt;
+&lt;/route&gt;</code></pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_splitting_with_parallel_processing"><a class="anchor" href="#_splitting_with_parallel_processing"></a>Splitting with parallel processing</h3>
+<div class="paragraph">
+<p>You can enable parallel processing with Split EIP so each split message
+is processed by its own thread in parallel.</p>
+</div>
+<div class="paragraph">
+<p>The example below enabled parallel mode:</p>
+</div>
+<div id="_tabs_3" class="openblock tabs is-sync is-loading">
+<div class="content">
+<div class="ulist tablist">
+<ul>
+<li id="_tabs_3_java" class="tab">
+<p>Java</p>
+</li>
+<li id="_tabs_3_xml" class="tab">
+<p>XML</p>
+</li>
+</ul>
+</div>
+<div id="_tabs_3_java--panel" class="tabpanel" aria-labelledby="_tabs_3_java">
+<div class="listingblock">
+<div class="content">
 <pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">from("direct:a")
   .split(body()).parallelProcessing()
     .to("direct:x")
@@ -2292,7 +2414,7 @@ is processed by its own thread in parallel.</p>
 </div>
 </div>
 </div>
-<div id="_tabs_2_xml--panel" class="tabpanel" aria-labelledby="_tabs_2_xml">
+<div id="_tabs_3_xml--panel" class="tabpanel" aria-labelledby="_tabs_3_xml">
 <div class="listingblock">
 <div class="content">
 <pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;route&gt;
@@ -2333,16 +2455,23 @@ thread that called the splitter, then make sure to enable the synchronous option
 to mark where split ends, and where other EIPs can be added to continue the route.</p>
 </div>
 <div class="paragraph">
-<p>In the example above then sending to mock:result happens after the Spllit EIP has finished.
-In other words the message should finish splitting the entire message before the message
+<p>In the example above then sending to mock:result happens after the Split EIP has finished.
+In other words, the message should finish splitting the entire message before the message
 continues.</p>
 </div>
-<div class="exampleblock">
+<div id="_tabs_4" class="openblock tabs is-sync is-loading">
 <div class="content">
-<div class="dlist">
-<dl>
-<dt class="hdlist1">Java</dt>
-<dd>
+<div class="ulist tablist">
+<ul>
+<li id="_tabs_4_java" class="tab">
+<p>Java</p>
+</li>
+<li id="_tabs_4_xml" class="tab">
+<p>XML</p>
+</li>
+</ul>
+</div>
+<div id="_tabs_4_java--panel" class="tabpanel" aria-labelledby="_tabs_4_java">
 <div class="listingblock">
 <div class="content">
 <pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">from("direct:a")
@@ -2354,14 +2483,10 @@ continues.</p>
   .to("mock:result");</code></pre>
 </div>
 </div>
-</dd>
-<dt class="hdlist1">XML</dt>
-<dd>
+</div>
+<div id="_tabs_4_xml--panel" class="tabpanel" aria-labelledby="_tabs_4_xml">
 <div class="paragraph">
 <p>And in XML its intuitive as <code>&lt;/split&gt;</code> marks the end of the block:</p>
-</div>
-</dd>
-</dl>
 </div>
 <div class="listingblock">
 <div class="content">
@@ -2375,6 +2500,7 @@ continues.</p>
     &lt;/split&gt;
     &lt;to uri="mock:result"/&gt;
 &lt;/route&gt;</code></pre>
+</div>
 </div>
 </div>
 </div>
@@ -2398,12 +2524,19 @@ as a single response exchange, that becomes the outgoing exchange after the Spli
 <div class="paragraph">
 <p>The example now aggregates with the <code>MyAggregationStrategy</code> class:</p>
 </div>
-<div class="exampleblock">
+<div id="_tabs_5" class="openblock tabs is-sync is-loading">
 <div class="content">
-<div class="dlist">
-<dl>
-<dt class="hdlist1">Java</dt>
-<dd>
+<div class="ulist tablist">
+<ul>
+<li id="_tabs_5_java" class="tab">
+<p>Java</p>
+</li>
+<li id="_tabs_5_xml" class="tab">
+<p>XML</p>
+</li>
+</ul>
+</div>
+<div id="_tabs_5_java--panel" class="tabpanel" aria-labelledby="_tabs_5_java">
 <div class="listingblock">
 <div class="content">
 <pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">from("direct:start")
@@ -2415,14 +2548,10 @@ as a single response exchange, that becomes the outgoing exchange after the Spli
   .to("mock:result");</code></pre>
 </div>
 </div>
-</dd>
-<dt class="hdlist1">XML</dt>
-<dd>
+</div>
+<div id="_tabs_5_xml--panel" class="tabpanel" aria-labelledby="_tabs_5_xml">
 <div class="paragraph">
 <p>And in XML we can refer to the FQN class name with <code>#class:</code> syntax as shown below:</p>
-</div>
-</dd>
-</dl>
 </div>
 <div class="listingblock">
 <div class="content">
@@ -2436,6 +2565,7 @@ as a single response exchange, that becomes the outgoing exchange after the Spli
     &lt;/split&gt;
     &lt;to uri="mock:result"/&gt;
 &lt;/route&gt;</code></pre>
+</div>
 </div>
 </div>
 </div>
@@ -2466,10 +2596,10 @@ input message and return as response; it&#8217;s the aggregate method with 3 exc
 <div class="ulist">
 <ul>
 <li>
-<p><em>default mode</em> - The message is split into sub messages, which allows to know the total split size. However this causes all sub messages to be kept temporary in-memory.</p>
+<p><em>default mode</em>:  The message is split into sub messages, which allows to know the total split size. However, this causes all sub messages to be kept temporary in-memory.</p>
 </li>
 <li>
-<p><em>streaming mode</em> - The message is split on-demand. This uses an iterator to keep track of the splitting index, but avoids loading all sub messages into memory. However, the total size cannot be know ahead of time.</p>
+<p><em>streaming mode</em>:  The message is split on-demand. This uses an iterator to keep track of the splitting index, but avoids loading all sub messages into memory. However, the total size cannot be known ahead of time.</p>
 </li>
 </ul>
 </div>
@@ -2479,19 +2609,19 @@ input message and return as response; it&#8217;s the aggregate method with 3 exc
 <div class="paragraph">
 <p>You can split in streaming mode as shown:</p>
 </div>
-<div id="_tabs_3" class="openblock tabs is-sync is-loading">
+<div id="_tabs_6" class="openblock tabs is-sync is-loading">
 <div class="content">
 <div class="ulist tablist">
 <ul>
-<li id="_tabs_3_java" class="tab">
+<li id="_tabs_6_java" class="tab">
 <p>Java</p>
 </li>
-<li id="_tabs_3_xml" class="tab">
+<li id="_tabs_6_xml" class="tab">
 <p>XML</p>
 </li>
 </ul>
 </div>
-<div id="_tabs_3_java--panel" class="tabpanel" aria-labelledby="_tabs_3_java">
+<div id="_tabs_6_java--panel" class="tabpanel" aria-labelledby="_tabs_6_java">
 <div class="listingblock">
 <div class="content">
 <pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">from("direct:streaming")
@@ -2500,7 +2630,7 @@ input message and return as response; it&#8217;s the aggregate method with 3 exc
 </div>
 </div>
 </div>
-<div id="_tabs_3_xml--panel" class="tabpanel" aria-labelledby="_tabs_3_xml">
+<div id="_tabs_6_xml--panel" class="tabpanel" aria-labelledby="_tabs_6_xml">
 <div class="listingblock">
 <div class="content">
 <pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;route&gt;
@@ -2516,22 +2646,22 @@ input message and return as response; it&#8217;s the aggregate method with 3 exc
 </div>
 </div>
 <div class="paragraph">
-<p>You can also supply a custom <a href="../languages/bean-language.html" class="xref page">Bean</a>
+<p>You can also supply a custom <a href="../../4.10.x/languages/bean-language.html" class="xref page">Bean</a>
 to perform the splitting in streaming mode like this:</p>
 </div>
-<div id="_tabs_4" class="openblock tabs is-sync is-loading">
+<div id="_tabs_7" class="openblock tabs is-sync is-loading">
 <div class="content">
 <div class="ulist tablist">
 <ul>
-<li id="_tabs_4_java" class="tab">
+<li id="_tabs_7_java" class="tab">
 <p>Java</p>
 </li>
-<li id="_tabs_4_xml" class="tab">
+<li id="_tabs_7_xml" class="tab">
 <p>XML</p>
 </li>
 </ul>
 </div>
-<div id="_tabs_4_java--panel" class="tabpanel" aria-labelledby="_tabs_4_java">
+<div id="_tabs_7_java--panel" class="tabpanel" aria-labelledby="_tabs_7_java">
 <div class="listingblock">
 <div class="content">
 <pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">from("direct:streaming")
@@ -2540,7 +2670,7 @@ to perform the splitting in streaming mode like this:</p>
 </div>
 </div>
 </div>
-<div id="_tabs_4_xml--panel" class="tabpanel" aria-labelledby="_tabs_4_xml">
+<div id="_tabs_7_xml--panel" class="tabpanel" aria-labelledby="_tabs_7_xml">
 <div class="listingblock">
 <div class="content">
 <pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;route&gt;
@@ -2556,7 +2686,7 @@ to perform the splitting in streaming mode like this:</p>
 </div>
 </div>
 <div class="paragraph">
-<p>Then the custom bean could for example be implemented as follows:</p>
+<p>Then the custom bean could, for example, be implemented as follows:</p>
 </div>
 <div class="listingblock">
 <div class="content">
@@ -2582,8 +2712,8 @@ to perform the splitting in streaming mode like this:</p>
 <i class="fa icon-tip" title="Tip"></i>
 </td>
 <td class="content">
-The bean method <code>splitMe</code> uses <code>Exchange</code> as parameter, however Camel supports
-<a href="../../../manual/bean-binding.html" class="xref page">Bean Parameter Binding</a>, which allows using other parameters types instead.
+The bean method <code>splitMe</code> uses <code>Exchange</code> as parameter, however, Camel supports
+<a href="../../../manual/4.10.x/bean-binding.html" class="xref page">Bean Parameter Binding</a>, which allows using other parameters types instead.
 </td>
 </tr>
 </table>
@@ -2617,10 +2747,10 @@ You can use the XMLTokenizer language which is specifically provided for tokeniz
 <div class="ulist">
 <ul>
 <li>
-<p><a href="../languages/tokenize-language.html" class="xref page">Tokenize</a> language</p>
+<p><a href="../../4.10.x/languages/tokenize-language.html" class="xref page">Tokenize</a> language</p>
 </li>
 <li>
-<p><a href="../languages/xtokenize-language.html" class="xref page">XML Tokenize</a> language</p>
+<p><a href="../../4.10.x/languages/xtokenize-language.html" class="xref page">XML Tokenize</a> language</p>
 </li>
 </ul>
 </div>
@@ -2630,7 +2760,7 @@ You can use the XMLTokenizer language which is specifically provided for tokeniz
 <div class="paragraph">
 <p>The first tokenizer uses the same principle as in the text tokenizer to scan the XML payload and extract a sequence of tokens.
 If you have a big XML payload, from a file source, and want to split it in streaming mode, then you can use the
-<a href="../languages/tokenize-language.html" class="xref page">Tokenize</a> language with start/end tokens to do this with low memory footprint.</p>
+<a href="../../4.10.x/languages/tokenize-language.html" class="xref page">Tokenize</a> language with start/end tokens to do this with low memory footprint.</p>
 </div>
 <div class="admonitionblock note">
 <table>
@@ -2644,7 +2774,7 @@ If you have a big XML payload, from a file source, and want to split it in strea
 </div>
 <div class="paragraph">
 <p>The Camel StAX component can also be used to split big XML files in a streaming mode.
-See more details at <a href="../stax-component.html" class="xref page">StAX</a>.</p>
+See more details at <a href="../../4.10.x/stax-component.html" class="xref page">StAX</a>.</p>
 </div>
 </td>
 </tr>
@@ -2670,23 +2800,23 @@ See more details at <a href="../stax-component.html" class="xref page">StAX</a>.
 </div>
 </div>
 <div class="paragraph">
-<p>Now to split this big file using <a href="../languages/xpath-language.html" class="xref page">XPath</a>
-would cause the entire content to be loaded into memory. So instead we can use the
-<a href="../languages/tokenize-language.html" class="xref page">Tokenize</a> language to do this as follows:</p>
+<p>Now to split this big file using <a href="../../4.10.x/languages/xpath-language.html" class="xref page">XPath</a>
+would cause the entire content to be loaded into memory. So instead, we can use the
+<a href="../../4.10.x/languages/tokenize-language.html" class="xref page">Tokenize</a> language to do this as follows:</p>
 </div>
-<div id="_tabs_5" class="openblock tabs is-sync is-loading">
+<div id="_tabs_8" class="openblock tabs is-sync is-loading">
 <div class="content">
 <div class="ulist tablist">
 <ul>
-<li id="_tabs_5_java" class="tab">
+<li id="_tabs_8_java" class="tab">
 <p>Java</p>
 </li>
-<li id="_tabs_5_xml" class="tab">
+<li id="_tabs_8_xml" class="tab">
 <p>XML</p>
 </li>
 </ul>
 </div>
-<div id="_tabs_5_java--panel" class="tabpanel" aria-labelledby="_tabs_5_java">
+<div id="_tabs_8_java--panel" class="tabpanel" aria-labelledby="_tabs_8_java">
 <div class="listingblock">
 <div class="content">
 <pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">from("file:inbox")
@@ -2695,7 +2825,7 @@ would cause the entire content to be loaded into memory. So instead we can use t
 </div>
 </div>
 </div>
-<div id="_tabs_5_xml--panel" class="tabpanel" aria-labelledby="_tabs_5_xml">
+<div id="_tabs_8_xml--panel" class="tabpanel" aria-labelledby="_tabs_8_xml">
 <div class="listingblock">
 <div class="content">
 <pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;route&gt;
@@ -2715,7 +2845,7 @@ would cause the entire content to be loaded into memory. So instead we can use t
 which mean it will grab the content between the <code>&lt;order&gt;</code> and <code>&lt;/order&gt;</code> tags (incl. the tags).</p>
 </div>
 <div class="paragraph">
-<p>So for example a split message would be structured as follows:</p>
+<p>So for example, a split message would be structured as follows:</p>
 </div>
 <div class="listingblock">
 <div class="content">
@@ -2727,19 +2857,19 @@ which mean it will grab the content between the <code>&lt;order&gt;</code> and <
 <div class="paragraph">
 <p>If you want to inherit namespaces from a root/parent tag, then you can do this as well by providing the name of the root/parent tag:</p>
 </div>
-<div id="_tabs_6" class="openblock tabs is-sync is-loading">
+<div id="_tabs_9" class="openblock tabs is-sync is-loading">
 <div class="content">
 <div class="ulist tablist">
 <ul>
-<li id="_tabs_6_java" class="tab">
+<li id="_tabs_9_java" class="tab">
 <p>Java</p>
 </li>
-<li id="_tabs_6_xml" class="tab">
+<li id="_tabs_9_xml" class="tab">
 <p>XML</p>
 </li>
 </ul>
 </div>
-<div id="_tabs_6_java--panel" class="tabpanel" aria-labelledby="_tabs_6_java">
+<div id="_tabs_9_java--panel" class="tabpanel" aria-labelledby="_tabs_9_java">
 <div class="listingblock">
 <div class="content">
 <pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">from("file:inbox")
@@ -2748,7 +2878,7 @@ which mean it will grab the content between the <code>&lt;order&gt;</code> and <
 </div>
 </div>
 </div>
-<div id="_tabs_6_xml--panel" class="tabpanel" aria-labelledby="_tabs_6_xml">
+<div id="_tabs_9_xml--panel" class="tabpanel" aria-labelledby="_tabs_9_xml">
 <div class="listingblock">
 <div class="content">
 <pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;route&gt;
@@ -2771,7 +2901,7 @@ The above tokenizer works well on simple structures but has some inherent limita
 <div class="sect2">
 <h3 id="_streaming_big_xml_payloads_using_xml_tokenize_language"><a class="anchor" href="#_streaming_big_xml_payloads_using_xml_tokenize_language"></a>Streaming big XML payloads using XML Tokenize language</h3>
 <div class="paragraph">
-<p>The second tokenizer (<a href="../languages/xtokenize-language.html" class="xref page">XML Tokenize</a>) uses a StAX parser
+<p>The second tokenizer (<a href="../../4.10.x/languages/xtokenize-language.html" class="xref page">XML Tokenize</a>) uses a StAX parser
 to overcome these limitations. This tokenizer recognizes XML namespaces and also handles simple and complex XML
 structures more naturally and efficiently.</p>
 </div>
@@ -2845,7 +2975,7 @@ from("file:inbox")
 </div>
 </div>
 <div class="paragraph">
-<p>Each mode will result in the following tokens,</p>
+<p>Each mode will result in the following tokens:</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
 <colgroup>
@@ -2906,11 +3036,11 @@ from("file:inbox")
 <div class="paragraph">
 <p>Note that this StAX based tokenizer uses StAX Location API and requires a StAX Reader implementation (such as Woodstox)
 that correctly returns the offset position pointing to the beginning of each event triggering segment (the offset position
-of <code>&lt;</code> at each start and end element event). If you use a StAX Reader which does not implement that API correctly
+of <code>&lt;</code> at each start and end element event). If you use a StAX Reader which does not implement that API correctly,
 it results in invalid XML snippets after the split.</p>
 </div>
 <div class="paragraph">
-<p>For example the snippet could be wrong terminated:</p>
+<p>For example, the snippet could be wrongly terminated:</p>
 </div>
 <div class="listingblock">
 <div class="content">
@@ -2921,25 +3051,25 @@ it results in invalid XML snippets after the split.</p>
 <div class="sect2">
 <h3 id="_splitting_files_by_grouping_n_lines_together"><a class="anchor" href="#_splitting_files_by_grouping_n_lines_together"></a>Splitting files by grouping N lines together</h3>
 <div class="paragraph">
-<p>The <a href="../languages/tokenize-language.html" class="xref page">Tokenize</a> language
-can be used for grouping N parts together, for example to split big files into chunks of 1000 lines.</p>
+<p>The <a href="../../4.10.x/languages/tokenize-language.html" class="xref page">Tokenize</a> language
+can be used for grouping N parts together, for example, to split big files into chunks of 1000 lines.</p>
 </div>
 <div class="paragraph">
 <p>Doing this is easy as the following example shows:</p>
 </div>
-<div id="_tabs_7" class="openblock tabs is-sync is-loading">
+<div id="_tabs_10" class="openblock tabs is-sync is-loading">
 <div class="content">
 <div class="ulist tablist">
 <ul>
-<li id="_tabs_7_java" class="tab">
+<li id="_tabs_10_java" class="tab">
 <p>Java</p>
 </li>
-<li id="_tabs_7_xml" class="tab">
+<li id="_tabs_10_xml" class="tab">
 <p>XML</p>
 </li>
 </ul>
 </div>
-<div id="_tabs_7_java--panel" class="tabpanel" aria-labelledby="_tabs_7_java">
+<div id="_tabs_10_java--panel" class="tabpanel" aria-labelledby="_tabs_10_java">
 <div class="listingblock">
 <div class="content">
 <pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">from("file:inbox")
@@ -2948,7 +3078,7 @@ can be used for grouping N parts together, for example to split big files into c
 </div>
 </div>
 </div>
-<div id="_tabs_7_xml--panel" class="tabpanel" aria-labelledby="_tabs_7_xml">
+<div id="_tabs_10_xml--panel" class="tabpanel" aria-labelledby="_tabs_10_xml">
 <div class="listingblock">
 <div class="content">
 <pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;route&gt;
@@ -2964,11 +3094,11 @@ can be used for grouping N parts together, for example to split big files into c
 </div>
 </div>
 <div class="paragraph">
-<p>The <code>group</code> value must be a positive number dictating how many elements to combine together in a group.
+<p>The <code>group</code> value must be a positive number dictating how many elements to combine in a group.
 Each part will be combined using the token.</p>
 </div>
 <div class="paragraph">
-<p>In the example above the message being sent to the activemq order queue, will contain 1000 lines,
+<p>In the example above, the message being sent to the activemq order queue, will contain 1000 lines,
 and each line separated by the token (which is a new line token).</p>
 </div>
 <div class="paragraph">
@@ -2989,7 +3119,7 @@ to build up the combined response message.</p>
 <div class="content">
 <pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">// this routes starts from the direct:start endpoint
 // the body is then split based on @ separator
-// the splitter in Camel supports InOut as well and for that we need
+// the splitter in Camel supports InOut as well, and for that we need
 // to be able to aggregate what response we need to send back, so we provide our
 // own strategy with the class MyOrderStrategy.
 from("direct:start")
@@ -2999,8 +3129,8 @@ from("direct:start")
         // this is important to end the splitter route as we do not want to do more routing
         // on each split message
     .end()
-    // after we have split and handled each message we want to send a single combined
-    // response back to the original caller, so we let this bean build it for us
+    // after we have split and handled each message, we want to send a single combined
+    // response back to the original caller, so we let this bean build it for us,
     // this bean will receive the result of the aggregate strategy: MyOrderStrategy
     .to("bean:MyOrderService?method=buildCombinedResponse")</code></pre>
 </div>
@@ -3044,7 +3174,7 @@ response can be returned to the waiting caller.</p>
  * This is our own order aggregation strategy where we can control
  * how each split message should be combined. As we do not want to
  * loos any message we copy from the new to the old to preserve the
- * order lines as long we process them
+ * order lines as we process them
  */
 public static class MyOrderStrategy implements AggregationStrategy {
 
@@ -3075,7 +3205,7 @@ public static class MyOrderStrategy implements AggregationStrategy {
 </div>
 </div>
 <div class="paragraph">
-<p>So lets run the sample and see how it works.</p>
+<p>So let&#8217;s run the sample and see how it works.</p>
 </div>
 <div class="paragraph">
 <p>We send an Exchange to the direct:start endpoint containing a message body with the String value: <code>A@B@C</code>. The flow is:</p>
@@ -3099,34 +3229,34 @@ Response to caller: Response[(id=1,item=A);(id=2,item=B);(id=3,item=C)]</code></
 <div class="paragraph">
 <p>The Splitter will by default continue to process
 the entire Exchange even in case of one of the
-split message will throw an exception during routing.</p>
+split messages will throw an exception during routing.</p>
 </div>
 <div class="paragraph">
-<p>For example if you have an Exchange with 1000 rows that you split.
-During processing of these split messages an exception is thrown at the 17th.
-What Camel does by default is to process the remainder 983 messages.
+<p>For example, if you have an Exchange with 1000 rows that you split.
+During processing of these split messages, an exception is thrown at the 17th.
+What Camel does by default is to process the remainder of the 983 messages.
 You have the chance to deal with the exception when aggregating using an <code>AggregationStrategy</code>.</p>
 </div>
 <div class="paragraph">
-<p>But sometimes you just want Camel to stop and let the exception be
-propagated back, and let the Camel <a href="../../../manual/error-handler.html" class="xref page">Error Handler</a>
+<p>But sometimes you want Apache Camel to stop and let the exception be
+propagated back, and let the Camel <a href="../../../manual/4.10.x/error-handler.html" class="xref page">Error Handler</a>
 handle it. You can do this by specifying that it should stop in case of an
 exception occurred. This is done by the <code>stopOnException</code> option as
 shown below:</p>
 </div>
-<div id="_tabs_8" class="openblock tabs is-sync is-loading">
+<div id="_tabs_11" class="openblock tabs is-sync is-loading">
 <div class="content">
 <div class="ulist tablist">
 <ul>
-<li id="_tabs_8_java" class="tab">
+<li id="_tabs_11_java" class="tab">
 <p>Java</p>
 </li>
-<li id="_tabs_8_xml" class="tab">
+<li id="_tabs_11_xml" class="tab">
 <p>XML</p>
 </li>
 </ul>
 </div>
-<div id="_tabs_8_java--panel" class="tabpanel" aria-labelledby="_tabs_8_java">
+<div id="_tabs_11_java--panel" class="tabpanel" aria-labelledby="_tabs_11_java">
 <div class="listingblock">
 <div class="content">
 <pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">from("direct:start")
@@ -3138,7 +3268,7 @@ shown below:</p>
 </div>
 </div>
 </div>
-<div id="_tabs_8_xml--panel" class="tabpanel" aria-labelledby="_tabs_8_xml">
+<div id="_tabs_11_xml--panel" class="tabpanel" aria-labelledby="_tabs_11_xml">
 <div class="listingblock">
 <div class="content">
 <pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;route&gt;
@@ -3167,8 +3297,8 @@ This means the Split EIP will stop after this, and not split anymore.</p>
 This means each sub exchange has its own individual unit of work.</p>
 </div>
 <div class="paragraph">
-<p>For example, you need to split a big message, and regard that process as an atomic isolated operation
-that either is a success or failure. In case of a failure you want that big message to be moved into a dead letter queue.</p>
+<p>For example, you need to split a big message, and regard that process as an atomic-isolated operation
+that either is a success or failure. In case of a failure, you want that big message to be moved into a dead letter queue.</p>
 </div>
 <div class="paragraph">
 <p>To support this use case, you would have to share the unit of work on the Splitter.</p>
@@ -3199,11 +3329,11 @@ from("direct:line")
 </div>
 </div>
 <div class="paragraph">
-<p>What would happen is that in case there is an exception thrown during splitting then
+<p>What would happen is that in case there is an exception thrown during splitting, then
 the error handler will kick in (yes error handling still applies for the sub messages).</p>
 </div>
 <div class="paragraph">
-<p>The error handler in this example is configured to retry up till 3 times.
+<p>The error handler in this example is configured to retry up till three times.
 And when a split message fails all redelivery attempts (its exhausted),
 then this message is <strong>not</strong> moved into that dead letter queue.</p>
 </div>
@@ -3261,9 +3391,9 @@ will be moved into the dead letter queue.</p>
 <h2 id="_see_also"><a class="anchor" href="#_see_also"></a>See Also</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>Because <a href="multicast-eip.html" class="xref page">Multicast</a> EIP is baseline for
+<p>Because <a href="multicast-eip.html" class="xref page">Multicast</a> EIP is a baseline for
 the <a href="recipientList-eip.html" class="xref page">Recipient List</a> and Split EIPs,
-then you can find more information in those EIPs about features that is also available
+then you can find more information in those EIPs about features that are also available
 with Split EIP.</p>
 </div>
 </div>
@@ -3273,6 +3403,8 @@ with Split EIP.</p>
 </main>
 </div>
 <footer class="footer">
+  <p>This page was built using the Antora default UI.</p>
+  <p>The source code for this UI is licensed under the terms of the MPL-2.0 license.</p>
 </footer>
 <script id="site-script" src="../../../_/js/site.js" data-ui-root-path="../../../_"></script>
 <script async src="../../../_/js/vendor/highlight.js"></script>

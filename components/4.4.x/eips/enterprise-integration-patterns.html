@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>Enterprise Integration Patterns :: Red Hat Camel Reference</title>
+    <title>Enterprise Integration Patterns :: Red Hat build of Apache Camel</title>
     <meta name="generator" content="Antora 3.1.4">
     <link rel="stylesheet" href="../../../_/css/site.css">
   </head>
@@ -11,7 +11,7 @@
 <header class="header">
   <nav class="navbar">
     <div class="navbar-brand">
-      <a class="navbar-item" href="../../manual/index.html">Red Hat build of Apache Camel manual</a>
+      <a class="navbar-item" href="/">Red Hat build of Apache Camel</a>
       <button class="navbar-burger" data-target="topbar-nav">
         <span></span>
         <span></span>
@@ -21,11 +21,12 @@
   </nav>
 </header>
 <div class="body">
-<div class="nav-container" data-component="components" data-version="next">
+<div class="nav-container" data-component="components" data-version="4.4.x">
   <aside class="nav">
     <div class="panels">
 <div class="nav-panel-menu is-active" data-panel="menu">
   <nav class="nav-menu">
+    <button class="nav-menu-toggle" aria-label="Toggle expand/collapse all" style="display: none"></button>
     <h3 class="title"><a href="../index.html">Camel Components</a></h3>
 <ul class="nav-list">
   <li class="nav-item" data-depth="0">
@@ -1818,22 +1819,40 @@
 <div class="nav-panel-explore" data-panel="explore">
   <div class="context">
     <span class="title">Camel Components</span>
-    <span class="version">Next (Pre-release)</span>
+    <span class="version">4.4.x</span>
   </div>
   <ul class="components">
     <li class="component is-current">
-      <a class="title" href="../index.html">Camel Components</a>
+      <div class="title"><a href="../../4.10.x/index.html">Camel Components</a></div>
       <ul class="versions">
-        <li class="version is-current is-latest">
-          <a href="../index.html">Next (Pre-release)</a>
+        <li class="version is-latest">
+          <a href="../../4.10.x/index.html">4.10.x (LTS)</a>
+        </li>
+        <li class="version">
+          <a href="../../4.8.x/index.html">4.8.x</a>
+        </li>
+        <li class="version is-current">
+          <a href="../index.html">4.4.x</a>
+        </li>
+        <li class="version">
+          <a href="../../4.0.x/index.html">4.0.x</a>
         </li>
       </ul>
     </li>
     <li class="component">
-      <a class="title" href="../../../manual/index.html">User manual</a>
+      <div class="title"><a href="../../../manual/4.10.x/index.html">User manual</a></div>
       <ul class="versions">
         <li class="version is-latest">
-          <a href="../../../manual/index.html">default</a>
+          <a href="../../../manual/4.10.x/index.html">4.10.x</a>
+        </li>
+        <li class="version">
+          <a href="../../../manual/4.8.x/index.html">4.8.x</a>
+        </li>
+        <li class="version">
+          <a href="../../../manual/4.4.x/index.html">4.4.x</a>
+        </li>
+        <li class="version">
+          <a href="../../../manual/4.0.x/index.html">4.0.x</a>
         </li>
       </ul>
     </li>
@@ -1845,13 +1864,23 @@
 <main class="article">
 <div class="toolbar" role="navigation">
 <button class="nav-toggle"></button>
-  <a href="../../../manual/index.html" class="home-link"></a>
+  <a href="../../../manual/4.10.x/index.html" class="home-link"></a>
 <nav class="breadcrumbs" aria-label="breadcrumbs">
   <ul>
     <li><a href="../index.html">Camel Components</a></li>
     <li><a href="enterprise-integration-patterns.html">Enterprise Integration Patterns</a></li>
   </ul>
 </nav>
+<div class="page-versions">
+  <button class="version-menu-toggle" title="Show other versions of page">4.4.x</button>
+  <div class="version-menu">
+    <a class="version" href="../../4.10.x/eips/enterprise-integration-patterns.html">4.10.x (LTS)</a>
+    <a class="version" href="../../4.8.x/eips/enterprise-integration-patterns.html">4.8.x</a>
+    <a class="version is-current" href="enterprise-integration-patterns.html">4.4.x</a>
+    <a class="version" href="../../4.0.x/eips/enterprise-integration-patterns.html">4.0.x</a>
+  </div>
+</div>
+<div class="edit-this-page"><a href="https://github.com/rhaetor/rh-camel-jboss/edit/camel-4.4.0-branch/core/camel-core-engine/src/main/docs/modules/eips/pages/enterprise-integration-patterns.adoc">Edit this Page</a></div>
 </div>
   <div class="content">
 <aside class="toc sidebar" data-title="Contents" data-levels="2">
@@ -2101,7 +2130,7 @@ for?</p></td>
 </div></div></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><a href="message-expiration.html" class="xref page">Message Expiration</a></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">How can a sender indicate
-when a message should be considered stale and thus shouldn’t be processed?</p></td>
+when a message should be considered stale and thus shouldn&#8217;t be processed?</p></td>
 </tr>
 </tbody>
 </table>
@@ -2123,9 +2152,9 @@ when a message should be considered stale and thus shouldn’t be processed?</p>
 <img src="_images/eip/ContentBasedRouterIcon.gif" alt="image">
 </div>
 </div></div></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="choice-eip.html" class="xref page">Content Based Router</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="choice-eip.html" class="xref page">Content-Based Router</a></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">How do we handle
-a situation where the implementation of a single logical function (e.g.,
+a situation where the implementation of a single logical function (for example:
 inventory check) is spread across multiple physical systems?</p></td>
 </tr>
 <tr>
@@ -2178,7 +2207,7 @@ different way?</p></td>
 </div></div></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><a href="aggregate-eip.html" class="xref page">Aggregator</a></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">How do we combine the results of
-individual, but related messages so that they can be processed as a
+individual, but related, messages so that they can be processed as a
 whole?</p></td>
 </tr>
 <tr>
@@ -2285,7 +2314,7 @@ in a given period to avoid downstream route does not get overloaded?</p></td>
 </div>
 </div></div></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><a href="kamelet-eip.html" class="xref page">Kamelet</a></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">How can I call Kamelets (route templates).</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">How can I call Kamelets (route templates)?</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="imageblock">
@@ -2313,7 +2342,7 @@ number of endpoints?</p></td>
 </div>
 </div></div></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><a href="circuitBreaker-eip.html" class="xref page">Circuit Breaker</a></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">How can I stop to call an external service if the service is broken?</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">How can I stop calling an external service if the service is broken?</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="imageblock">
@@ -2322,7 +2351,7 @@ number of endpoints?</p></td>
 </div>
 </div></div></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><a href="stop-eip.html" class="xref page">Stop</a></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">How can I stop continue routing a message?</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">How can I stop to continue routing a message?</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="imageblock">
@@ -2396,7 +2425,7 @@ required data items available?</p></td>
 </div></div></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><a href="content-filter-eip.html" class="xref page">Content Filter</a></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">How do you simplify dealing
-with a large message, when you are interested only in a few data items?</p></td>
+with a large message when you are interested only in a few data items?</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="imageblock">
@@ -2406,7 +2435,7 @@ with a large message, when you are interested only in a few data items?</p></td>
 </div></div></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><a href="claimCheck-eip.html" class="xref page">Claim Check</a></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">How can we reduce the data volume
-of message sent across the system without sacrificing information
+of a message sent across the system without sacrificing information
 content?</p></td>
 </tr>
 <tr>
@@ -2549,7 +2578,7 @@ receiver deal with duplicate messages?</p></td>
 </div></div></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><a href="resume-strategies.html" class="xref page">Resumable Consumer</a></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">How can a message
-receiver resume from last known offset?</p></td>
+receiver resume from the last known offset?</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="imageblock">
@@ -2604,7 +2633,7 @@ and via non-messaging techniques?</p></td>
 </div></div></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><a href="../controlbus-component.html" class="xref page">ControlBus</a></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">How can we effectively administer a
-messaging system that is distributed across multiple platforms and a
+messaging system distributed across multiple platforms and a
 wide geographic area?</p></td>
 </tr>
 <tr>
@@ -2666,12 +2695,12 @@ analyze and debug the flow of messages in a loosely coupled system?</p></td>
 <div class="paragraph">
 <p>The EIP icons library is available as a Visio stencil file adapted to
 render the icons with the Camel color. Download it
-<a href="#attachment$Hohpe_EIP_camel_20150622.zip" class="xref unresolved">here</a>
+<a href="_attachments/Hohpe_EIP_camel_20150622.zip" class="xref attachment">here</a>
 for your presentation, functional and technical analysis documents.</p>
 </div>
 <div class="paragraph">
 <p>The original EIP stencil is also available in
-<a href="#attachment$Hohpe_EIP_camel_OpenOffice.zip" class="xref unresolved">OpenOffice 3.x Draw</a>,
+<a href="_attachments/Hohpe_EIP_camel_OpenOffice.zip" class="xref attachment">OpenOffice 3.x Draw</a>,
 <a href="http://www.eaipatterns.com/download/EIP_Visio_stencil.zip">Microsoft Visio</a>,
 or <a href="http://www.graffletopia.com/stencils/137">Omnigraffle</a>.</p>
 </div>
@@ -2682,6 +2711,8 @@ or <a href="http://www.graffletopia.com/stencils/137">Omnigraffle</a>.</p>
 </main>
 </div>
 <footer class="footer">
+  <p>This page was built using the Antora default UI.</p>
+  <p>The source code for this UI is licensed under the terms of the MPL-2.0 license.</p>
 </footer>
 <script id="site-script" src="../../../_/js/site.js" data-ui-root-path="../../../_"></script>
 <script async src="../../../_/js/vendor/highlight.js"></script>

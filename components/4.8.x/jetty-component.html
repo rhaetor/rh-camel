@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>Jetty :: Red Hat Camel Reference</title>
+    <title>Jetty :: Red Hat build of Apache Camel</title>
     <meta name="description" content="Expose HTTP endpoints using Jetty 12.">
     <meta name="generator" content="Antora 3.1.4">
     <link rel="stylesheet" href="../../_/css/site.css">
@@ -12,7 +12,7 @@
 <header class="header">
   <nav class="navbar">
     <div class="navbar-brand">
-      <a class="navbar-item" href="../../manual/index.html">Red Hat build of Apache Camel manual</a>
+      <a class="navbar-item" href="/">Red Hat build of Apache Camel</a>
       <button class="navbar-burger" data-target="topbar-nav">
         <span></span>
         <span></span>
@@ -22,11 +22,12 @@
   </nav>
 </header>
 <div class="body">
-<div class="nav-container" data-component="components" data-version="next">
+<div class="nav-container" data-component="components" data-version="4.8.x">
   <aside class="nav">
     <div class="panels">
 <div class="nav-panel-menu is-active" data-panel="menu">
   <nav class="nav-menu">
+    <button class="nav-menu-toggle" aria-label="Toggle expand/collapse all" style="display: none"></button>
     <h3 class="title"><a href="index.html">Camel Components</a></h3>
 <ul class="nav-list">
   <li class="nav-item" data-depth="0">
@@ -36,7 +37,46 @@
     <a class="nav-link" href="index.html">Components</a>
 <ul class="nav-list">
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="activemq-component.html">ActiveMQ</a>
+    <a class="nav-link" href="activemq-component.html">ActiveMQ 5.x</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="activemq6-component.html">ActiveMQ 6.x</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="ai-summary.html">AI</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="chatscript-component.html">ChatScript</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="djl-component.html">Deep Java Library</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="langchain4j-chat-component.html">LangChain4j Chat</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="langchain4j-embeddings-component.html">LangChain4j Embeddings</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="langchain4j-tokenizer-component.html">LangChain4j Tokenizer</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="langchain4j-tools-component.html">LangChain4j Tools</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="langchain4j-web-search-component.html">LangChain4j Web Search</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="milvus-component.html">Milvus</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="pinecone-component.html">Pinecone</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="qdrant-component.html">Qdrant</a>
+  </li>
+</ul>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="amqp-component.html">AMQP</a>
@@ -65,6 +105,15 @@
 <ul class="nav-list">
   <li class="nav-item" data-depth="3">
     <a class="nav-link" href="aws2-athena-component.html">AWS Athena</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="aws-bedrock-component.html">AWS Bedrock</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="aws-bedrock-agent-component.html">AWS Bedrock Agent</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="aws-bedrock-agent-runtime-component.html">AWS Bedrock Agent Runtime</a>
   </li>
   <li class="nav-item" data-depth="3">
     <a class="nav-link" href="aws-cloudtrail-component.html">AWS Cloudtrail</a>
@@ -169,7 +218,7 @@
     <a class="nav-link" href="azure-storage-blob-component.html">Azure Storage Blob Service</a>
   </li>
   <li class="nav-item" data-depth="3">
-    <a class="nav-link" href="azure-storage-datalake-component.html">Azure Storage Datalake Service</a>
+    <a class="nav-link" href="azure-storage-datalake-component.html">Azure Storage Data Lake Service</a>
   </li>
   <li class="nav-item" data-depth="3">
     <a class="nav-link" href="azure-storage-queue-component.html">Azure Storage Queue Service</a>
@@ -202,9 +251,6 @@
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="cql-component.html">Cassandra CQL</a>
-  </li>
-  <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="chatscript-component.html">ChatScript</a>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="chunk-component.html">Chunk</a>
@@ -277,9 +323,6 @@
     <a class="nav-link" href="debezium-sqlserver-component.html">Debezium SQL Server Connector</a>
   </li>
 </ul>
-  </li>
-  <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="djl-component.html">Deep Java Library</a>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="dhis2-component.html">DHIS2</a>
@@ -395,6 +438,9 @@
   </li>
   <li class="nav-item" data-depth="3">
     <a class="nav-link" href="google-pubsub-component.html">Google Pubsub</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="google-pubsub-lite-component.html">Google PubSub Lite</a>
   </li>
   <li class="nav-item" data-depth="3">
     <a class="nav-link" href="google-secret-manager-component.html">Google Secret Manager</a>
@@ -687,7 +733,7 @@
     <a class="nav-link" href="ldif-component.html">LDIF</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="log-component.html">Log</a>
+    <a class="nav-link" href="log-component.html">Log Data</a>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="lucene-component.html">Lucene</a>
@@ -900,16 +946,49 @@
     <a class="nav-link" href="smb-component.html">SMB</a>
   </li>
   <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="smooks-component.html">Smooks</a>
+  </li>
+  <li class="nav-item" data-depth="2">
     <a class="nav-link" href="smpp-component.html">SMPP</a>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="snmp-component.html">SNMP</a>
   </li>
   <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="solr-component.html">Solr</a>
+  </li>
+  <li class="nav-item" data-depth="2">
     <a class="nav-link" href="splunk-component.html">Splunk</a>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="splunk-hec-component.html">Splunk HEC</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="spring-summary.html">Spring</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="spring-batch-component.html">Spring Batch</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="spring-event-component.html">Spring Event</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="spring-jdbc-component.html">Spring JDBC</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="spring-ldap-component.html">Spring LDAP</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="spring-rabbitmq-component.html">Spring RabbitMQ</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="spring-redis-component.html">Spring Redis</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="spring-ws-component.html">Spring WebService</a>
+  </li>
+</ul>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="sql-component.html">SQL</a>
@@ -937,6 +1016,18 @@
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="stub-component.html">Stub</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="tahu-summary.html">Tahu</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="tahu-edge-component.html">Tahu Edge Node / Device</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="tahu-host-component.html">Tahu Host Application</a>
+  </li>
+</ul>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="telegram-component.html">Telegram</a>
@@ -999,7 +1090,7 @@
     <a class="nav-link" href="whatsapp-component.html">WhatsApp</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="wordpress-component.html">Wordpress</a>
+    <a class="nav-link" href="wordpress-component.html">WordPress</a>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="workday-component.html">Workday</a>
@@ -1392,7 +1483,13 @@
     <a class="nav-link" href="others/openapi-java.html">Openapi Java</a>
   </li>
   <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="others/openapi-validator.html">Openapi Validator</a>
+  </li>
+  <li class="nav-item" data-depth="2">
     <a class="nav-link" href="others/opentelemetry.html">OpenTelemetry</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="others/platform-http-jolokia.html">Platform HTTP Jolokia</a>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="others/platform-http-main.html">Platform Http Main</a>
@@ -1540,7 +1637,7 @@
     <a class="nav-link" href="eips/event-message.html">Event Message</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="eips/failover-eip.html">Failover</a>
+    <a class="nav-link" href="eips/failoverLoadBalancer-eip.html">Failover Load Balancer</a>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="eips/faultToleranceConfiguration-eip.html">Fault Tolerance Configuration</a>
@@ -1570,13 +1667,13 @@
     <a class="nav-link" href="eips/loadBalance-eip.html">Load Balance</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="eips/log-eip.html">Log</a>
+    <a class="nav-link" href="eips/log-eip.html">Logger</a>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="eips/loop-eip.html">Loop</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="eips/marshal-eip.html">Marshal EIP</a>
+    <a class="nav-link" href="eips/marshal-eip.html">Marshal</a>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="eips/message.html">Message</a>
@@ -1633,6 +1730,9 @@
     <a class="nav-link" href="eips/point-to-point-channel.html">Point to Point Channel</a>
   </li>
   <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="eips/poll-eip.html">Poll</a>
+  </li>
+  <li class="nav-item" data-depth="2">
     <a class="nav-link" href="eips/pollEnrich-eip.html">Poll Enrich</a>
   </li>
   <li class="nav-item" data-depth="2">
@@ -1648,7 +1748,7 @@
     <a class="nav-link" href="eips/publish-subscribe-channel.html">Publish Subscribe Channel</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="eips/random-eip.html">Random</a>
+    <a class="nav-link" href="eips/randomLoadBalancer-eip.html">Random Load Balancer</a>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="eips/recipientList-eip.html">Recipient List</a>
@@ -1690,7 +1790,7 @@
     <a class="nav-link" href="eips/rollback-eip.html">Rollback</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="eips/roundRobin-eip.html">Round Robin</a>
+    <a class="nav-link" href="eips/roundRobinLoadBalancer-eip.html">Round Robin Load Balancer</a>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="eips/routingSlip-eip.html">Routing Slip</a>
@@ -1702,7 +1802,7 @@
     <a class="nav-link" href="eips/sample-eip.html">Sample</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="eips/scatter-gather.html">Scatter Gather</a>
+    <a class="nav-link" href="eips/scatter-gather.html">Scatter-Gather</a>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="eips/script-eip.html">Script</a>
@@ -1732,6 +1832,9 @@
     <a class="nav-link" href="eips/setVariable-eip.html">Set Variable</a>
   </li>
   <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="eips/setVariables-eip.html">Set Variables</a>
+  </li>
+  <li class="nav-item" data-depth="2">
     <a class="nav-link" href="eips/sort-eip.html">Sort</a>
   </li>
   <li class="nav-item" data-depth="2">
@@ -1741,7 +1844,7 @@
     <a class="nav-link" href="eips/step-eip.html">Step</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="eips/sticky-eip.html">Sticky</a>
+    <a class="nav-link" href="eips/stickyLoadBalancer-eip.html">Sticky Load Balancer</a>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="eips/stop-eip.html">Stop</a>
@@ -1762,7 +1865,7 @@
     <a class="nav-link" href="eips/toD-eip.html">To D</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="eips/topic-eip.html">Topic</a>
+    <a class="nav-link" href="eips/topicLoadBalancer-eip.html">Topic Load Balancer</a>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="eips/transactional-client.html">Transactional Client</a>
@@ -1771,13 +1874,13 @@
     <a class="nav-link" href="eips/transform-eip.html">Transform</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="eips/unmarshal-eip.html">Unmarshal EIP</a>
+    <a class="nav-link" href="eips/unmarshal-eip.html">Unmarshal</a>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="eips/validate-eip.html">Validate</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="eips/weighted-eip.html">Weighted</a>
+    <a class="nav-link" href="eips/weightedLoadBalancer-eip.html">Weighted Load Balancer</a>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="eips/wireTap-eip.html">Wire Tap</a>
@@ -1792,22 +1895,40 @@
 <div class="nav-panel-explore" data-panel="explore">
   <div class="context">
     <span class="title">Camel Components</span>
-    <span class="version">Next (Pre-release)</span>
+    <span class="version">4.8.x</span>
   </div>
   <ul class="components">
     <li class="component is-current">
-      <a class="title" href="index.html">Camel Components</a>
+      <div class="title"><a href="../4.10.x/index.html">Camel Components</a></div>
       <ul class="versions">
-        <li class="version is-current is-latest">
-          <a href="index.html">Next (Pre-release)</a>
+        <li class="version is-latest">
+          <a href="../4.10.x/index.html">4.10.x (LTS)</a>
+        </li>
+        <li class="version is-current">
+          <a href="index.html">4.8.x</a>
+        </li>
+        <li class="version">
+          <a href="../4.4.x/index.html">4.4.x</a>
+        </li>
+        <li class="version">
+          <a href="../4.0.x/index.html">4.0.x</a>
         </li>
       </ul>
     </li>
     <li class="component">
-      <a class="title" href="../../manual/index.html">User manual</a>
+      <div class="title"><a href="../../manual/4.10.x/index.html">User manual</a></div>
       <ul class="versions">
         <li class="version is-latest">
-          <a href="../../manual/index.html">default</a>
+          <a href="../../manual/4.10.x/index.html">4.10.x</a>
+        </li>
+        <li class="version">
+          <a href="../../manual/4.8.x/index.html">4.8.x</a>
+        </li>
+        <li class="version">
+          <a href="../../manual/4.4.x/index.html">4.4.x</a>
+        </li>
+        <li class="version">
+          <a href="../../manual/4.0.x/index.html">4.0.x</a>
         </li>
       </ul>
     </li>
@@ -1819,7 +1940,7 @@
 <main class="article">
 <div class="toolbar" role="navigation">
 <button class="nav-toggle"></button>
-  <a href="../../manual/index.html" class="home-link"></a>
+  <a href="../../manual/4.10.x/index.html" class="home-link"></a>
 <nav class="breadcrumbs" aria-label="breadcrumbs">
   <ul>
     <li><a href="index.html">Camel Components</a></li>
@@ -1827,6 +1948,16 @@
     <li><a href="jetty-component.html">Jetty</a></li>
   </ul>
 </nav>
+<div class="page-versions">
+  <button class="version-menu-toggle" title="Show other versions of page">4.8.x</button>
+  <div class="version-menu">
+    <a class="version" href="../4.10.x/jetty-component.html">4.10.x (LTS)</a>
+    <a class="version is-current" href="jetty-component.html">4.8.x</a>
+    <a class="version" href="../4.4.x/jetty-component.html">4.4.x</a>
+    <a class="version is-missing" href="../4.0.x/index.html">4.0.x</a>
+  </div>
+</div>
+<div class="edit-this-page"><a href="https://github.com/rhaetor/rh-camel-jboss/edit/camel-4.8.0-branch/docs/components/modules/ROOT/pages/jetty-component.adoc">Edit this Page</a></div>
 </div>
   <div class="content">
 <aside class="toc sidebar" data-title="Contents" data-levels="2">
@@ -1851,11 +1982,10 @@ behaves as a simple Web server.</p>
 <p><strong>Stream</strong></p>
 </div>
 <div class="paragraph">
-<p>The <code>assert</code> call appears in this example, because the code is part of
-an unit test.Jetty is stream based, which means the input it receives is
+<p>Jetty is stream-based, which means the input it receives is
 submitted to Camel as a stream. That means you will only be able to read
-the content of the stream <strong>once</strong>.<br>
-If you find a situation where the message body appears to be empty or
+the content of the stream <strong>once</strong>.
+If you find a situation where the message body appears to be empty, or
 you need to access the Exchange.HTTP_RESPONSE_CODE data multiple times
 (e.g.: doing multicasting, or redelivery error handling), you should use
 Stream caching or convert the message body to
@@ -1906,37 +2036,65 @@ for this component:</p>
 <div class="sect2">
 <h3 id="_configuring_component_options"><a class="anchor" href="#_configuring_component_options"></a>Configuring Component Options</h3>
 <div class="paragraph">
-<p>The component level is the highest level which holds general and common configurations that are inherited by the endpoints.
-For example a component may have security settings, credentials for authentication, urls for network connection and so forth.</p>
+<p>At the component level, you set general and shared configurations that are, then, inherited by the endpoints. It is the highest configuration level.</p>
 </div>
 <div class="paragraph">
-<p>Some components only have a few options, and others may have many. Because components typically have pre configured defaults
-that are commonly used, then you may often only need to configure a few options on a component; or none at all.</p>
+<p>For example, a component may have security settings, credentials for authentication, urls for network connection and so forth.</p>
 </div>
 <div class="paragraph">
-<p>Configuring components can be done with the <a href="../../manual/component-dsl.html" class="xref page">Component DSL</a>,
-in a configuration file (application.properties|yaml), or directly with Java code.</p>
+<p>Some components only have a few options, and others may have many.
+Because components typically have pre-configured defaults that are commonly used, then you may often only need to configure a few options on a component; or none at all.</p>
+</div>
+<div class="paragraph">
+<p>You can configure components using:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>the <a href="../../manual/4.10.x/component-dsl.html" class="xref page">Component DSL</a>.</p>
+</li>
+<li>
+<p>in a configuration file (<code>application.properties</code>, <code>*.yaml</code> files, etc).</p>
+</li>
+<li>
+<p>directly in the Java code.</p>
+</li>
+</ul>
 </div>
 </div>
 <div class="sect2">
 <h3 id="_configuring_endpoint_options"><a class="anchor" href="#_configuring_endpoint_options"></a>Configuring Endpoint Options</h3>
 <div class="paragraph">
-<p>Where you find yourself configuring the most is on endpoints, as endpoints often have many options, which allows you to
-configure what you need the endpoint to do. The options are also categorized into whether the endpoint is used as consumer (from)
-or as a producer (to), or used for both.</p>
+<p>You usually spend more time setting up endpoints because they have many options.
+These options help you customize what you want the endpoint to do.
+The options are also categorized into whether the endpoint is used as a consumer (<em>from</em>), as a producer (<em>to</em>), or  both.</p>
 </div>
 <div class="paragraph">
-<p>Configuring endpoints is most often done directly in the endpoint URI as path and query parameters. You can also use
-the <a href="../../manual/Endpoint-dsl.html" class="xref page">Endpoint DSL</a> and <a href="../../manual/dataformat-dsl.html" class="xref page">DataFormat DSL</a>
+<p>Configuring endpoints is most often done directly in the endpoint URI as <em>path</em> and <em>query</em> parameters.
+You can also use the <a href="../../manual/4.10.x/Endpoint-dsl.html" class="xref page">Endpoint DSL</a> and <a href="../../manual/4.10.x/dataformat-dsl.html" class="xref page">DataFormat DSL</a>
 as a <em>type safe</em> way of configuring endpoints and data formats in Java.</p>
 </div>
 <div class="paragraph">
-<p>A good practice when configuring options is to use <a href="../../manual/using-propertyplaceholder.html" class="xref page">Property Placeholders</a>,
-which allows to not hardcode urls, port numbers, sensitive information, and other settings.
-In other words placeholders allows to externalize the configuration from your code, and gives more flexibility and reuse.</p>
+<p>A good practice when configuring options is to use <a href="../../manual/4.10.x/using-propertyplaceholder.html" class="xref page">Property Placeholders</a>.</p>
 </div>
 <div class="paragraph">
-<p>The following two sections lists all the options, firstly for the component followed by the endpoint.</p>
+<p>Property placeholders provide a few benefits:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>They help prevent using hardcoded urls, port numbers, sensitive information, and other settings.</p>
+</li>
+<li>
+<p>They allow externalizing the configuration from the code.</p>
+</li>
+<li>
+<p>They help the code to become more flexible and reusable.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>The following two sections list all the options, firstly for the component followed by the endpoint.</p>
 </div>
 </div>
 </div>
@@ -2303,7 +2461,7 @@ In other words placeholders allows to externalize the configuration from your co
 </div>
 </div>
 <div class="paragraph">
-<p>with the following path and query parameters:</p>
+<p>With the following <em>path</em> and <em>query</em> parameters:</p>
 </div>
 <div class="sect2">
 <h3 id="_path_parameters_1_parameters"><a class="anchor" href="#_path_parameters_1_parameters"></a>Path Parameters (1 parameters)</h3>
@@ -2384,7 +2542,7 @@ In other words placeholders allows to externalize the configuration from your co
 <td class="tableblock halign-left valign-top"><p class="tableblock"><a id="_endpoint_query_option_disableStreamCache"></a>
 <a href="#_endpoint_query_option_disableStreamCache" class="anchor"></a><strong>disableStreamCache</strong> (common)</p></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>Determines whether or not the raw input stream from Servlet is cached or not (Camel will read the stream into a in memory/overflow to file, Stream caching) cache. By default Camel will cache the Servlet input stream to support reading it multiple times to ensure it Camel can retrieve all data from the stream. However you can set this option to true when you for example need to access the raw stream, such as streaming it directly to a file or other persistent store. DefaultHttpBinding will copy the request input stream into a stream cache and put it into message body if this option is false to support reading the stream multiple times. If you use Servlet to bridge/proxy an endpoint then consider enabling this option to improve performance, in case you do not need to read the message payload multiple times. The http producer will by default cache the response body stream. If setting this option to true, then the producers will not cache the response body stream but use the response stream as-is as the message body.</p>
+<p>Determines whether or not the raw input stream is cached or not. The Camel consumer (camel-servlet, camel-jetty etc.) will by default cache the input stream to support reading it multiple times to ensure it Camel can retrieve all data from the stream. However you can set this option to true when you for example need to access the raw stream, such as streaming it directly to a file or other persistent store. DefaultHttpBinding will copy the request input stream into a stream cache and put it into message body if this option is false to support reading the stream multiple times. If you use Servlet to bridge/proxy an endpoint then consider enabling this option to improve performance, in case you do not need to read the message payload multiple times. The producer (camel-http) will by default cache the response body stream. If setting this option to true, then the producers will not cache the response body stream but use the response stream as-is (the stream can only be read once) as the message body.</p>
 </div></div></td>
 <td class="tableblock halign-center valign-top"><p class="tableblock">false</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">boolean</p></td>
@@ -2719,19 +2877,18 @@ In other words placeholders allows to externalize the configuration from your co
 <div class="paragraph">
 <p>Camel uses the same message headers as the <a href="http-component.html" class="xref page">HTTP</a>
 component.
-It also uses (Exchange.HTTP_CHUNKED,CamelHttpChunked)
-header to turn on or turn off the chunked encoding on the camel-jetty
-consumer.</p>
+It also uses a header (<code>Exchange.HTTP_CHUNKED</code>, <code>CamelHttpChunked</code>) to turn
+on or turn off the chunked encoding on the camel-jetty consumer.</p>
 </div>
 <div class="paragraph">
-<p>Camel also populates <strong>all</strong> request.parameter and request.headers. For
-example, given a client request with the URL,
+<p>Camel also populates <strong>all</strong> <code>request.parameter</code> and <code>request.headers</code>.
+For example, given a client request with the URL,
 <code>http://myserver/myserver?orderid=123</code>, the exchange will contain a
-header named <code>orderid</code> with the value 123.</p>
+header named <code>orderid</code> with the value <code>123</code>.</p>
 </div>
 <div class="paragraph">
-<p>You can get the request.parameter from the
-message header not only from Get Method, but also other HTTP method.</p>
+<p>You can get the <code>request.parameter</code> from the
+message header not only from Get Method, but also other HTTP methods.</p>
 </div>
 </div>
 </div>
@@ -2787,15 +2944,19 @@ message header not only from Get Method, but also other HTTP method.</p>
 <div class="paragraph">
 <p>The Jetty component supports consumer endpoints.</p>
 </div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="_consumer_example"><a class="anchor" href="#_consumer_example"></a>Consumer Example</h2>
-<div class="sectionbody">
+<div class="sect2">
+<h3 id="_consumer"><a class="anchor" href="#_consumer"></a>Consumer</h3>
 <div class="paragraph">
-<p>In this sample we define a route that exposes a HTTP service at
+<p>In this sample we define a route that exposes an HTTP service at
 <code>http://localhost:8080/myapp/myservice</code>:</p>
 </div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
 <div class="paragraph">
 <p><strong>Usage of localhost</strong></p>
 </div>
@@ -2812,39 +2973,36 @@ If you need to expose a Jetty endpoint on all network interfaces, the
 </div>
 <div class="paragraph">
 <p>To listen across an entire URI prefix, see
-<a href="../../manual/faq/how-do-i-let-jetty-match-wildcards.html" class="xref page">How do I let Jetty match wildcards</a>.</p>
+<a href="../../manual/4.10.x/faq/how-do-i-let-jetty-match-wildcards.html" class="xref page">How do I let Jetty match wildcards</a>.</p>
 </div>
+</td>
+</tr>
+</table>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_servlets"><a class="anchor" href="#_servlets"></a>Servlets</h3>
 <div class="paragraph">
 <p>If you actually want to expose routes by HTTP and already have a
 Servlet, you should instead refer to the
 <a href="servlet-component.html" class="xref page">Servlet Transport</a>.</p>
 </div>
-<div class="paragraph">
-<p>Our business logic is implemented in the <code>MyBookService</code> class, which
-accesses the HTTP request contents and then returns a response.<br>
- <strong>Note:</strong> The <code>assert</code> call appears in this example, because the code is
-part of an unit test.</p>
 </div>
-<div class="paragraph">
-<p>The following sample shows a content-based route that routes all
-requests containing the URI parameter, <code>one</code>, to the endpoint,
-<code>mock:one</code>, and all others to <code>mock:other</code>.</p>
-</div>
+<div class="sect2">
+<h3 id="_http_request_parameters"><a class="anchor" href="#_http_request_parameters"></a>HTTP Request Parameters</h3>
 <div class="paragraph">
 <p>So if a client sends the HTTP request, <code>http://serverUri?one=hello</code>, the
 Jetty component will copy the HTTP request parameter, <code>one</code> to the
 exchange&#8217;s <code>in.header</code>. We can then use the <code>simple</code> language to route
 exchanges that contain this header to a specific endpoint and all others
 to another. If we used a language more powerful than
-<a href="languages/simple-language.html" class="xref page">Simple</a> (such as <a href="languages/ognl-language.html" class="xref page">OGNL</a>)
+<a href="languages/simple-language.html" class="xref page">Simple</a> (such as <a href="languages/ognl-language.html" class="xref page">OGNL</a>),
 we could also test for the parameter value and do routing based on the
 header value as well.</p>
 </div>
 </div>
-</div>
-<div class="sect1">
-<h2 id="_session_support"><a class="anchor" href="#_session_support"></a>Session Support</h2>
-<div class="sectionbody">
+<div class="sect2">
+<h3 id="_session_support"><a class="anchor" href="#_session_support"></a>Session Support</h3>
 <div class="paragraph">
 <p>The session support option, <code>sessionSupport</code>, can be used to enable a
 <code>HttpSession</code> object and access the session object while processing the
@@ -2880,18 +3038,16 @@ follows:</p>
 </div>
 </div>
 </div>
-</div>
-<div class="sect1">
-<h2 id="_ssl_support_https"><a class="anchor" href="#_ssl_support_https"></a>SSL Support (HTTPS)</h2>
-<div class="sectionbody">
+<div class="sect2">
+<h3 id="_ssl_support_https"><a class="anchor" href="#_ssl_support_https"></a>SSL Support (HTTPS)</h3>
 <div id="Jetty-UsingtheJSSEConfigurationUtility" class="paragraph">
 <p>Using the JSSE Configuration Utility</p>
 </div>
 <div class="paragraph">
 <p>The Jetty component supports SSL/TLS configuration
-through the <a href="../../manual/camel-configuration-utilities.html" class="xref page">Camel JSSE
+through the <a href="../../manual/4.10.x/camel-configuration-utilities.html" class="xref page">Camel JSSE
 Configuration Utility</a>.  This utility greatly decreases the amount of
-component specific code you need to write and is configurable at the
+component-specific code you need to write and is configurable at the
 endpoint and component levels.  The following examples demonstrate how
 to use the utility with the Jetty component.</p>
 </div>
@@ -2933,48 +3089,12 @@ jettyComponent.setSslContextParameters(scp);</code></pre>
   &lt;to uri="jetty:https://127.0.0.1/mail/?sslContextParameters=#sslContextParameters"/&gt;</code></pre>
 </div>
 </div>
-<div id="HTTP-Blueprintbasedconfigurationofendpoint" class="paragraph">
-<p>Blueprint based configuration of endpoint</p>
-</div>
-<div class="paragraph">
-<p>Global configuration of sslContextParameters in a dedicated Blueprint XML file</p>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;blueprint xmlns="http://www.osgi.org/xmlns/blueprint/v1.0.0"
-  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-  xsi:schemaLocation="http://www.osgi.org/xmlns/blueprint/v1.0.0 https://www.osgi.org/xmlns/blueprint/v1.0.0/blueprint.xsd"&gt;
-
-  &lt;sslContextParameters id="sslContextParameters" xmlns="http://camel.apache.org/schema/blueprint"&gt;
-    &lt;keyManagers keyPassword="keyPassword"&gt;
-      &lt;keyStore resource="etc/keystore.p12" password="keystorePassword"/&gt;
-      &lt;/keyManagers&gt;
-  &lt;/sslContextParameters&gt;
-
-  &lt;service ref="sslContextParameters" auto-export="all-classes"/&gt;
-&lt;/blueprint&gt;</code></pre>
-</div>
-</div>
-<div class="paragraph">
-<p>Use of the global configuration in other Blueprint XML files with route definitions</p>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">...
-&lt;reference id="sslContextParameters" interface="org.apache.camel.support.jsse.SSLContextParameters" ext:proxy-method="classes" /&gt;
-
-  &lt;camelContext xmlns="http://camel.apache.org/schema/blueprint"&gt;
-    &lt;route&gt;
-     &lt;from uri="jetty:https://0.0.0.0/path?sslContextParameters=#sslContextParameters"/&gt;
-...</code></pre>
-</div>
-</div>
 <div id="Jetty-ConfiguringJettyDirectly" class="paragraph">
 <p>Configuring Jetty Directly</p>
 </div>
 <div class="paragraph">
 <p>Jetty provides SSL support out of the box. To enable Jetty to run in SSL
-mode, simply format the URI with the <code>\https://</code> prefix---for example:</p>
+mode, format the URI with the <code>\https://</code> prefix---for example:</p>
 </div>
 <div class="listingblock">
 <div class="content">
@@ -2983,13 +3103,13 @@ mode, simply format the URI with the <code>\https://</code> prefix---for example
 </div>
 <div class="paragraph">
 <p>Jetty also needs to know where to load your keystore from and what
-passwords to use in order to load the correct SSL certificate. Set the
+passwords to use to load the correct SSL certificate. Set the
 following JVM System Properties:</p>
 </div>
 <div class="ulist">
 <ul>
 <li>
-<p><code>org.eclipse.jetty.ssl.keystore</code> specifies the location of the Java
+<p><code>org.eclipse.jetty.ssl.keystore</code> specify the location of the Java
 keystore file, which contains the Jetty server&#8217;s own X.509 certificate
 in a <em>key entry</em>. A key entry stores the X.509 certificate (effectively,
 the <em>public key</em>) and also its associated private key.</p>
@@ -3013,7 +3133,7 @@ following documentation at the Jetty Site:
 <a href="http://docs.codehaus.org/display/JETTY/How+to+configure+SSL">http://docs.codehaus.org/display/JETTY/How+to+configure+SSL</a></p>
 </div>
 <div class="paragraph">
-<p>Some SSL properties aren&#8217;t exposed directly by Camel, however Camel does
+<p>Camel doesn&#8217;t expose some SSL properties directly. However, Camel does
 expose the underlying SslSocketConnector, which will allow you to set
 properties like needClientAuth for mutual authentication requiring a
 client certificate or wantClientAuth for mutual authentication where a
@@ -3040,14 +3160,14 @@ client doesn&#8217;t need a certificate but can have one.</p>
 </div>
 <div class="paragraph">
 <p>The value you use as keys in the above map is the port you configure
-Jetty to listen on.</p>
+Jetty to listen to.</p>
 </div>
-<div class="sect2">
-<h3 id="_configuring_general_ssl_properties"><a class="anchor" href="#_configuring_general_ssl_properties"></a>Configuring general SSL properties</h3>
+<div class="sect3">
+<h4 id="_configuring_general_ssl_properties"><a class="anchor" href="#_configuring_general_ssl_properties"></a>Configuring general SSL properties</h4>
 <div class="paragraph">
-<p>Instead of a per port number specific SSL socket connector (as shown
-above) you can now configure general properties which applies for all
-SSL socket connectors (which is not explicit configured as above with
+<p>Instead of a per-port number specific SSL socket connector (as shown
+above), you can now configure general properties that apply for all
+SSL socket connectors (that are not explicitly configured as above with
 the port number as entry).</p>
 </div>
 <div class="listingblock">
@@ -3066,8 +3186,8 @@ the port number as entry).</p>
 </div>
 </div>
 </div>
-<div class="sect2">
-<h3 id="_how_to_obtain_reference_to_the_x509certificate"><a class="anchor" href="#_how_to_obtain_reference_to_the_x509certificate"></a>How to obtain reference to the X509Certificate</h3>
+<div class="sect3">
+<h4 id="_how_to_obtain_reference_to_the_x509certificate"><a class="anchor" href="#_how_to_obtain_reference_to_the_x509certificate"></a>How to obtain reference to the X509Certificate</h4>
 <div class="paragraph">
 <p>Jetty stores a reference to the certificate in the HttpServletRequest
 which you can access from code as follows:</p>
@@ -3079,12 +3199,12 @@ X509Certificate cert = (X509Certificate) req.getAttribute("javax.servlet.request
 </div>
 </div>
 </div>
-<div class="sect2">
-<h3 id="_configuring_general_http_properties"><a class="anchor" href="#_configuring_general_http_properties"></a>Configuring general HTTP properties</h3>
+<div class="sect3">
+<h4 id="_configuring_general_http_properties"><a class="anchor" href="#_configuring_general_http_properties"></a>Configuring general HTTP properties</h4>
 <div class="paragraph">
-<p>Instead of a per port number specific HTTP socket connector (as shown
-above) you can now configure general properties which applies for all
-HTTP socket connectors (which is not explicit configured as above with
+<p>Instead of a per-port number specific HTTP socket connector (as shown
+above), you can now configure general properties that apply for all
+HTTP socket connectors (that are not explicitly configured as above with
 the port number as entry).</p>
 </div>
 <div class="listingblock">
@@ -3100,8 +3220,8 @@ the port number as entry).</p>
 </div>
 </div>
 </div>
-<div class="sect2">
-<h3 id="_obtaining_x_forwarded_for_header_with_httpservletrequest_getremoteaddr"><a class="anchor" href="#_obtaining_x_forwarded_for_header_with_httpservletrequest_getremoteaddr"></a>Obtaining X-Forwarded-For header with HttpServletRequest.getRemoteAddr()</h3>
+<div class="sect3">
+<h4 id="_obtaining_x_forwarded_for_header_with_httpservletrequest_getremoteaddr"><a class="anchor" href="#_obtaining_x_forwarded_for_header_with_httpservletrequest_getremoteaddr"></a>Obtaining X-Forwarded-For header with HttpServletRequest.getRemoteAddr()</h4>
 <div class="paragraph">
 <p>If the HTTP requests are handled by an Apache server and forwarded to
 jetty with mod_proxy, the original client IP address is in the
@@ -3112,7 +3232,7 @@ return the address of the Apache proxy.</p>
 <p>Jetty has a forwarded property which takes the value from
 X-Forwarded-For and places it in the HttpServletRequest remoteAddr
 property.  This property is not available directly through the endpoint
-configuration but it can be easily added using the socketConnectors
+configuration, but it can be easily added using the socketConnectors
 property:</p>
 </div>
 <div class="listingblock">
@@ -3137,10 +3257,8 @@ internally.</p>
 </div>
 </div>
 </div>
-</div>
-<div class="sect1">
-<h2 id="_default_behavior_for_returning_http_status_codes"><a class="anchor" href="#_default_behavior_for_returning_http_status_codes"></a>Default behavior for returning HTTP status codes</h2>
-<div class="sectionbody">
+<div class="sect2">
+<h3 id="_default_behavior_for_returning_http_status_codes"><a class="anchor" href="#_default_behavior_for_returning_http_status_codes"></a>Default behavior for returning HTTP status codes</h3>
 <div class="paragraph">
 <p>The default behavior of HTTP status codes is defined by the
 <code>org.apache.camel.component.http.DefaultHttpBinding</code> class, which
@@ -3155,10 +3273,8 @@ specify which HTTP status code to return, set the code in the
 <code>Exchange.HTTP_RESPONSE_CODE</code> header of the OUT message.</p>
 </div>
 </div>
-</div>
-<div class="sect1">
-<h2 id="_customizing_httpbinding"><a class="anchor" href="#_customizing_httpbinding"></a>Customizing HttpBinding</h2>
-<div class="sectionbody">
+<div class="sect2">
+<h3 id="_customizing_httpbinding"><a class="anchor" href="#_customizing_httpbinding"></a>Customizing HttpBinding</h3>
 <div class="paragraph">
 <p>By default, Camel uses the
 <code>org.apache.camel.component.http.DefaultHttpBinding</code> to handle how a
@@ -3191,10 +3307,8 @@ Spring registry as follows:</p>
 </div>
 </div>
 </div>
-</div>
-<div class="sect1">
-<h2 id="_jetty_handlers_and_security_configuration"><a class="anchor" href="#_jetty_handlers_and_security_configuration"></a>Jetty handlers and security configuration</h2>
-<div class="sectionbody">
+<div class="sect2">
+<h3 id="_jetty_handlers_and_security_configuration"><a class="anchor" href="#_jetty_handlers_and_security_configuration"></a>Jetty handlers and security configuration</h3>
 <div class="paragraph">
 <p>You can configure a list of Jetty handlers on the endpoint, which can be
 useful for enabling advanced Jetty security features. These handlers are
@@ -3257,126 +3371,51 @@ configured in Spring XML as follows:</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">from("jetty:http://0.0.0.0:9080/myservice?handlers=securityHandler")</code></pre>
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">from("jetty:http://0.0.0.0:9080/myservice?handlers=securityHandler");</code></pre>
 </div>
 </div>
 <div class="paragraph">
 <p>If you need more handlers, set the <code>handlers</code> option equal to a
 comma-separated list of bean IDs.</p>
 </div>
-<div class="paragraph">
-<p>Blueprint based definition of basic authentication (based on Jetty 12):</p>
 </div>
-<div class="listingblock">
-<div class="content">
-<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;blueprint xmlns="http://www.osgi.org/xmlns/blueprint/v1.0.0"
-  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-  xsi:schemaLocation="http://www.osgi.org/xmlns/blueprint/v1.0.0 https://www.osgi.org/xmlns/blueprint/v1.0.0/blueprint.xsd"
-  xmlns:ext="http://aries.apache.org/blueprint/xmlns/blueprint-ext/v1.0.0"&gt;
-
-  &lt;bean id="constraint" class="org.eclipse.jetty.util.security.Constraint"&gt;
-    &lt;property name="name" value="BASIC"/&gt;
-    &lt;property name="authenticate" value="true"/&gt;
-      &lt;property name="roles"&gt;
-        &lt;list&gt;
-          &lt;value&gt;rolename1&lt;/value&gt;
-        &lt;/list&gt;
-      &lt;/property&gt;
-  &lt;/bean&gt;
-
-  &lt;bean id="constraintMapping" class="org.eclipse.jetty.security.ConstraintMapping"&gt;
-    &lt;property name="constraint" ref="constraint"/&gt;
-    &lt;property name="pathSpec" value="/path"/&gt;
-  &lt;/bean&gt;
-
-  &lt;bean id="securityHandler" class="org.eclipse.jetty.security.ConstraintSecurityHandler"&gt;
-    &lt;property name="loginService"&gt;
-      &lt;bean class="org.eclipse.jetty.security.HashLoginService"&gt;
-        &lt;property name="config" value="/opt/apache-karaf/etc/roles.properties"/&gt;
-        &lt;property name="hotReload" value="true"/&gt;
-      &lt;/bean&gt;
-    &lt;/property&gt;
-    &lt;property name="authenticator"&gt;
-      &lt;bean class="org.eclipse.jetty.security.authentication.BasicAuthenticator"/&gt;
-    &lt;/property&gt;
-    &lt;property name="constraintMappings"&gt;
-      &lt;list&gt;
-        &lt;ref component-id="constraintMapping"/&gt;
-      &lt;/list&gt;
-    &lt;/property&gt;
-  &lt;/bean&gt;
-
-  &lt;camelContext xmlns="http://camel.apache.org/schema/blueprint"&gt;
-
-    &lt;route&gt;
-      &lt;from uri="jetty:http://0.0.0.0/path?handlers=securityHandler"/&gt;
-...</code></pre>
-</div>
-</div>
-<div class="paragraph">
-<p>The roles.properties files contains</p>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre>username1=password1,rolename1
-username2=password2,rolename1</pre>
-</div>
-</div>
-<div class="paragraph">
-<p>This file is located in the etc folder and will be reloaded when changed. The endpoint</p>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre>http://0.0.0.0/path</pre>
-</div>
-</div>
-<div class="paragraph">
-<p>is now secured with basic authentication, only username1 with password1 and username2 with password2 are able to access the endpoint.</p>
-</div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="_how_to_return_a_custom_http_500_reply_message"><a class="anchor" href="#_how_to_return_a_custom_http_500_reply_message"></a>How to return a custom HTTP 500 reply message</h2>
-<div class="sectionbody">
+<div class="sect2">
+<h3 id="_how_to_return_a_custom_http_500_reply_message"><a class="anchor" href="#_how_to_return_a_custom_http_500_reply_message"></a>How to return a custom HTTP 500 reply message</h3>
 <div class="paragraph">
 <p>You may want to return a custom reply message when something goes wrong,
 instead of the default reply message Camel <a href="#">Jetty</a>
-replies with.<br>
- You could use a custom <code>HttpBinding</code> to be in control of the message
+replies to with.
+You could use a custom <code>HttpBinding</code> to be in control of the message
 mapping, but often it may be easier to use Camel&#8217;s
 Exception Clause to construct the custom
-reply message. For example as show here, where we return
+reply message. For example, as show here, where we return
 <code>Dude something went wrong</code> with HTTP error code 500:</p>
 </div>
 </div>
-</div>
-<div class="sect1">
-<h2 id="_multi_part_form_support"><a class="anchor" href="#_multi_part_form_support"></a>Multi-part Form support</h2>
-<div class="sectionbody">
+<div class="sect2">
+<h3 id="_multipart_form_support"><a class="anchor" href="#_multipart_form_support"></a>Multipart Form support</h3>
 <div class="paragraph">
-<p>The camel-jetty component supports multipart form post out of box.
-The submitted form-data are mapped into the message header. Camel-jetty
+<p>The camel-jetty component supports multipart form post out of the box.
+The submitted form-data are mapped into the message header. Camel Jetty
 creates an attachment for each uploaded file. The file name is mapped to
 the name of the attachment. The content type is set as the content type
 of the attachment file name. You can find the example here.</p>
 </div>
 </div>
-</div>
-<div class="sect1">
-<h2 id="_jetty_jmx_support"><a class="anchor" href="#_jetty_jmx_support"></a>Jetty JMX support</h2>
-<div class="sectionbody">
+<div class="sect2">
+<h3 id="_jetty_jmx_support"><a class="anchor" href="#_jetty_jmx_support"></a>Jetty JMX support</h3>
 <div class="paragraph">
 <p>The camel-jetty component supports the enabling of Jetty&#8217;s JMX
 capabilities at the component and endpoint level with the endpoint
 configuration taking priority. Note that JMX must be enabled within the
-Camel context in order to enable JMX support in this component as the
+Camel context to enable JMX support in this component as the
 component provides Jetty with a reference to the MBeanServer registered
 with the Camel context. Because the camel-jetty component caches and
 reuses Jetty resources for a given protocol/host/port pairing, this
 configuration option will only be evaluated during the creation of the
 first endpoint to use a protocol/host/port pairing. For example, given
 two routes created from the following XML fragments, JMX support would
-remain enabled for all endpoints listening on "https://0.0.0.0".</p>
+remain enabled for all endpoints listening on <code><a href="https://0.0.0.0" class="bare">https://0.0.0.0</a></code>.</p>
 </div>
 <div class="listingblock">
 <div class="content">
@@ -3393,8 +3432,9 @@ remain enabled for all endpoints listening on "https://0.0.0.0".</p>
 Jetty MBeanContainer. Jetty creates MBean names dynamically. If you are
 running another instance of Jetty outside of the Camel context and
 sharing the same MBeanServer between the instances, you can provide both
-instances with a reference to the same MBeanContainer in order to avoid
+instances with a reference to the same MBeanContainer to avoid
 name collisions when registering Jetty MBeans.</p>
+</div>
 </div>
 </div>
 </div>
@@ -3403,6 +3443,8 @@ name collisions when registering Jetty MBeans.</p>
 </main>
 </div>
 <footer class="footer">
+  <p>This page was built using the Antora default UI.</p>
+  <p>The source code for this UI is licensed under the terms of the MPL-2.0 license.</p>
 </footer>
 <script id="site-script" src="../../_/js/site.js" data-ui-root-path="../../_"></script>
 <script async src="../../_/js/vendor/highlight.js"></script>

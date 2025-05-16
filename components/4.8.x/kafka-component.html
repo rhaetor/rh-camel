@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>Kafka :: Red Hat Camel Reference</title>
+    <title>Kafka :: Red Hat build of Apache Camel</title>
     <meta name="description" content="Sent and receive messages to/from an Apache Kafka broker.">
     <meta name="generator" content="Antora 3.1.4">
     <link rel="stylesheet" href="../../_/css/site.css">
@@ -12,7 +12,7 @@
 <header class="header">
   <nav class="navbar">
     <div class="navbar-brand">
-      <a class="navbar-item" href="../../manual/index.html">Red Hat build of Apache Camel manual</a>
+      <a class="navbar-item" href="/">Red Hat build of Apache Camel</a>
       <button class="navbar-burger" data-target="topbar-nav">
         <span></span>
         <span></span>
@@ -22,11 +22,12 @@
   </nav>
 </header>
 <div class="body">
-<div class="nav-container" data-component="components" data-version="next">
+<div class="nav-container" data-component="components" data-version="4.8.x">
   <aside class="nav">
     <div class="panels">
 <div class="nav-panel-menu is-active" data-panel="menu">
   <nav class="nav-menu">
+    <button class="nav-menu-toggle" aria-label="Toggle expand/collapse all" style="display: none"></button>
     <h3 class="title"><a href="index.html">Camel Components</a></h3>
 <ul class="nav-list">
   <li class="nav-item" data-depth="0">
@@ -36,7 +37,46 @@
     <a class="nav-link" href="index.html">Components</a>
 <ul class="nav-list">
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="activemq-component.html">ActiveMQ</a>
+    <a class="nav-link" href="activemq-component.html">ActiveMQ 5.x</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="activemq6-component.html">ActiveMQ 6.x</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="ai-summary.html">AI</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="chatscript-component.html">ChatScript</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="djl-component.html">Deep Java Library</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="langchain4j-chat-component.html">LangChain4j Chat</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="langchain4j-embeddings-component.html">LangChain4j Embeddings</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="langchain4j-tokenizer-component.html">LangChain4j Tokenizer</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="langchain4j-tools-component.html">LangChain4j Tools</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="langchain4j-web-search-component.html">LangChain4j Web Search</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="milvus-component.html">Milvus</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="pinecone-component.html">Pinecone</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="qdrant-component.html">Qdrant</a>
+  </li>
+</ul>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="amqp-component.html">AMQP</a>
@@ -65,6 +105,15 @@
 <ul class="nav-list">
   <li class="nav-item" data-depth="3">
     <a class="nav-link" href="aws2-athena-component.html">AWS Athena</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="aws-bedrock-component.html">AWS Bedrock</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="aws-bedrock-agent-component.html">AWS Bedrock Agent</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="aws-bedrock-agent-runtime-component.html">AWS Bedrock Agent Runtime</a>
   </li>
   <li class="nav-item" data-depth="3">
     <a class="nav-link" href="aws-cloudtrail-component.html">AWS Cloudtrail</a>
@@ -169,7 +218,7 @@
     <a class="nav-link" href="azure-storage-blob-component.html">Azure Storage Blob Service</a>
   </li>
   <li class="nav-item" data-depth="3">
-    <a class="nav-link" href="azure-storage-datalake-component.html">Azure Storage Datalake Service</a>
+    <a class="nav-link" href="azure-storage-datalake-component.html">Azure Storage Data Lake Service</a>
   </li>
   <li class="nav-item" data-depth="3">
     <a class="nav-link" href="azure-storage-queue-component.html">Azure Storage Queue Service</a>
@@ -202,9 +251,6 @@
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="cql-component.html">Cassandra CQL</a>
-  </li>
-  <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="chatscript-component.html">ChatScript</a>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="chunk-component.html">Chunk</a>
@@ -277,9 +323,6 @@
     <a class="nav-link" href="debezium-sqlserver-component.html">Debezium SQL Server Connector</a>
   </li>
 </ul>
-  </li>
-  <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="djl-component.html">Deep Java Library</a>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="dhis2-component.html">DHIS2</a>
@@ -395,6 +438,9 @@
   </li>
   <li class="nav-item" data-depth="3">
     <a class="nav-link" href="google-pubsub-component.html">Google Pubsub</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="google-pubsub-lite-component.html">Google PubSub Lite</a>
   </li>
   <li class="nav-item" data-depth="3">
     <a class="nav-link" href="google-secret-manager-component.html">Google Secret Manager</a>
@@ -687,7 +733,7 @@
     <a class="nav-link" href="ldif-component.html">LDIF</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="log-component.html">Log</a>
+    <a class="nav-link" href="log-component.html">Log Data</a>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="lucene-component.html">Lucene</a>
@@ -900,16 +946,49 @@
     <a class="nav-link" href="smb-component.html">SMB</a>
   </li>
   <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="smooks-component.html">Smooks</a>
+  </li>
+  <li class="nav-item" data-depth="2">
     <a class="nav-link" href="smpp-component.html">SMPP</a>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="snmp-component.html">SNMP</a>
   </li>
   <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="solr-component.html">Solr</a>
+  </li>
+  <li class="nav-item" data-depth="2">
     <a class="nav-link" href="splunk-component.html">Splunk</a>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="splunk-hec-component.html">Splunk HEC</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="spring-summary.html">Spring</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="spring-batch-component.html">Spring Batch</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="spring-event-component.html">Spring Event</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="spring-jdbc-component.html">Spring JDBC</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="spring-ldap-component.html">Spring LDAP</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="spring-rabbitmq-component.html">Spring RabbitMQ</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="spring-redis-component.html">Spring Redis</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="spring-ws-component.html">Spring WebService</a>
+  </li>
+</ul>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="sql-component.html">SQL</a>
@@ -937,6 +1016,18 @@
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="stub-component.html">Stub</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="tahu-summary.html">Tahu</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="tahu-edge-component.html">Tahu Edge Node / Device</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="tahu-host-component.html">Tahu Host Application</a>
+  </li>
+</ul>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="telegram-component.html">Telegram</a>
@@ -999,7 +1090,7 @@
     <a class="nav-link" href="whatsapp-component.html">WhatsApp</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="wordpress-component.html">Wordpress</a>
+    <a class="nav-link" href="wordpress-component.html">WordPress</a>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="workday-component.html">Workday</a>
@@ -1392,7 +1483,13 @@
     <a class="nav-link" href="others/openapi-java.html">Openapi Java</a>
   </li>
   <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="others/openapi-validator.html">Openapi Validator</a>
+  </li>
+  <li class="nav-item" data-depth="2">
     <a class="nav-link" href="others/opentelemetry.html">OpenTelemetry</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="others/platform-http-jolokia.html">Platform HTTP Jolokia</a>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="others/platform-http-main.html">Platform Http Main</a>
@@ -1540,7 +1637,7 @@
     <a class="nav-link" href="eips/event-message.html">Event Message</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="eips/failover-eip.html">Failover</a>
+    <a class="nav-link" href="eips/failoverLoadBalancer-eip.html">Failover Load Balancer</a>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="eips/faultToleranceConfiguration-eip.html">Fault Tolerance Configuration</a>
@@ -1570,13 +1667,13 @@
     <a class="nav-link" href="eips/loadBalance-eip.html">Load Balance</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="eips/log-eip.html">Log</a>
+    <a class="nav-link" href="eips/log-eip.html">Logger</a>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="eips/loop-eip.html">Loop</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="eips/marshal-eip.html">Marshal EIP</a>
+    <a class="nav-link" href="eips/marshal-eip.html">Marshal</a>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="eips/message.html">Message</a>
@@ -1633,6 +1730,9 @@
     <a class="nav-link" href="eips/point-to-point-channel.html">Point to Point Channel</a>
   </li>
   <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="eips/poll-eip.html">Poll</a>
+  </li>
+  <li class="nav-item" data-depth="2">
     <a class="nav-link" href="eips/pollEnrich-eip.html">Poll Enrich</a>
   </li>
   <li class="nav-item" data-depth="2">
@@ -1648,7 +1748,7 @@
     <a class="nav-link" href="eips/publish-subscribe-channel.html">Publish Subscribe Channel</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="eips/random-eip.html">Random</a>
+    <a class="nav-link" href="eips/randomLoadBalancer-eip.html">Random Load Balancer</a>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="eips/recipientList-eip.html">Recipient List</a>
@@ -1690,7 +1790,7 @@
     <a class="nav-link" href="eips/rollback-eip.html">Rollback</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="eips/roundRobin-eip.html">Round Robin</a>
+    <a class="nav-link" href="eips/roundRobinLoadBalancer-eip.html">Round Robin Load Balancer</a>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="eips/routingSlip-eip.html">Routing Slip</a>
@@ -1702,7 +1802,7 @@
     <a class="nav-link" href="eips/sample-eip.html">Sample</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="eips/scatter-gather.html">Scatter Gather</a>
+    <a class="nav-link" href="eips/scatter-gather.html">Scatter-Gather</a>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="eips/script-eip.html">Script</a>
@@ -1732,6 +1832,9 @@
     <a class="nav-link" href="eips/setVariable-eip.html">Set Variable</a>
   </li>
   <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="eips/setVariables-eip.html">Set Variables</a>
+  </li>
+  <li class="nav-item" data-depth="2">
     <a class="nav-link" href="eips/sort-eip.html">Sort</a>
   </li>
   <li class="nav-item" data-depth="2">
@@ -1741,7 +1844,7 @@
     <a class="nav-link" href="eips/step-eip.html">Step</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="eips/sticky-eip.html">Sticky</a>
+    <a class="nav-link" href="eips/stickyLoadBalancer-eip.html">Sticky Load Balancer</a>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="eips/stop-eip.html">Stop</a>
@@ -1762,7 +1865,7 @@
     <a class="nav-link" href="eips/toD-eip.html">To D</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="eips/topic-eip.html">Topic</a>
+    <a class="nav-link" href="eips/topicLoadBalancer-eip.html">Topic Load Balancer</a>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="eips/transactional-client.html">Transactional Client</a>
@@ -1771,13 +1874,13 @@
     <a class="nav-link" href="eips/transform-eip.html">Transform</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="eips/unmarshal-eip.html">Unmarshal EIP</a>
+    <a class="nav-link" href="eips/unmarshal-eip.html">Unmarshal</a>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="eips/validate-eip.html">Validate</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="eips/weighted-eip.html">Weighted</a>
+    <a class="nav-link" href="eips/weightedLoadBalancer-eip.html">Weighted Load Balancer</a>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="eips/wireTap-eip.html">Wire Tap</a>
@@ -1792,22 +1895,40 @@
 <div class="nav-panel-explore" data-panel="explore">
   <div class="context">
     <span class="title">Camel Components</span>
-    <span class="version">Next (Pre-release)</span>
+    <span class="version">4.8.x</span>
   </div>
   <ul class="components">
     <li class="component is-current">
-      <a class="title" href="index.html">Camel Components</a>
+      <div class="title"><a href="../4.10.x/index.html">Camel Components</a></div>
       <ul class="versions">
-        <li class="version is-current is-latest">
-          <a href="index.html">Next (Pre-release)</a>
+        <li class="version is-latest">
+          <a href="../4.10.x/index.html">4.10.x (LTS)</a>
+        </li>
+        <li class="version is-current">
+          <a href="index.html">4.8.x</a>
+        </li>
+        <li class="version">
+          <a href="../4.4.x/index.html">4.4.x</a>
+        </li>
+        <li class="version">
+          <a href="../4.0.x/index.html">4.0.x</a>
         </li>
       </ul>
     </li>
     <li class="component">
-      <a class="title" href="../../manual/index.html">User manual</a>
+      <div class="title"><a href="../../manual/4.10.x/index.html">User manual</a></div>
       <ul class="versions">
         <li class="version is-latest">
-          <a href="../../manual/index.html">default</a>
+          <a href="../../manual/4.10.x/index.html">4.10.x</a>
+        </li>
+        <li class="version">
+          <a href="../../manual/4.8.x/index.html">4.8.x</a>
+        </li>
+        <li class="version">
+          <a href="../../manual/4.4.x/index.html">4.4.x</a>
+        </li>
+        <li class="version">
+          <a href="../../manual/4.0.x/index.html">4.0.x</a>
         </li>
       </ul>
     </li>
@@ -1819,7 +1940,7 @@
 <main class="article">
 <div class="toolbar" role="navigation">
 <button class="nav-toggle"></button>
-  <a href="../../manual/index.html" class="home-link"></a>
+  <a href="../../manual/4.10.x/index.html" class="home-link"></a>
 <nav class="breadcrumbs" aria-label="breadcrumbs">
   <ul>
     <li><a href="index.html">Camel Components</a></li>
@@ -1827,6 +1948,16 @@
     <li><a href="kafka-component.html">Kafka</a></li>
   </ul>
 </nav>
+<div class="page-versions">
+  <button class="version-menu-toggle" title="Show other versions of page">4.8.x</button>
+  <div class="version-menu">
+    <a class="version" href="../4.10.x/kafka-component.html">4.10.x (LTS)</a>
+    <a class="version is-current" href="kafka-component.html">4.8.x</a>
+    <a class="version" href="../4.4.x/kafka-component.html">4.4.x</a>
+    <a class="version is-missing" href="../4.0.x/index.html">4.0.x</a>
+  </div>
+</div>
+<div class="edit-this-page"><a href="https://github.com/rhaetor/rh-camel-jboss/edit/camel-4.8.0-branch/docs/components/modules/ROOT/pages/kafka-component.adoc">Edit this Page</a></div>
 </div>
   <div class="content">
 <aside class="toc sidebar" data-title="Contents" data-levels="2">
@@ -1891,37 +2022,65 @@ for this component.</p>
 <div class="sect2">
 <h3 id="_configuring_component_options"><a class="anchor" href="#_configuring_component_options"></a>Configuring Component Options</h3>
 <div class="paragraph">
-<p>The component level is the highest level which holds general and common configurations that are inherited by the endpoints.
-For example a component may have security settings, credentials for authentication, urls for network connection and so forth.</p>
+<p>At the component level, you set general and shared configurations that are, then, inherited by the endpoints. It is the highest configuration level.</p>
 </div>
 <div class="paragraph">
-<p>Some components only have a few options, and others may have many. Because components typically have pre configured defaults
-that are commonly used, then you may often only need to configure a few options on a component; or none at all.</p>
+<p>For example, a component may have security settings, credentials for authentication, urls for network connection and so forth.</p>
 </div>
 <div class="paragraph">
-<p>Configuring components can be done with the <a href="../../manual/component-dsl.html" class="xref page">Component DSL</a>,
-in a configuration file (application.properties|yaml), or directly with Java code.</p>
+<p>Some components only have a few options, and others may have many.
+Because components typically have pre-configured defaults that are commonly used, then you may often only need to configure a few options on a component; or none at all.</p>
+</div>
+<div class="paragraph">
+<p>You can configure components using:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>the <a href="../../manual/4.10.x/component-dsl.html" class="xref page">Component DSL</a>.</p>
+</li>
+<li>
+<p>in a configuration file (<code>application.properties</code>, <code>*.yaml</code> files, etc).</p>
+</li>
+<li>
+<p>directly in the Java code.</p>
+</li>
+</ul>
 </div>
 </div>
 <div class="sect2">
 <h3 id="_configuring_endpoint_options"><a class="anchor" href="#_configuring_endpoint_options"></a>Configuring Endpoint Options</h3>
 <div class="paragraph">
-<p>Where you find yourself configuring the most is on endpoints, as endpoints often have many options, which allows you to
-configure what you need the endpoint to do. The options are also categorized into whether the endpoint is used as consumer (from)
-or as a producer (to), or used for both.</p>
+<p>You usually spend more time setting up endpoints because they have many options.
+These options help you customize what you want the endpoint to do.
+The options are also categorized into whether the endpoint is used as a consumer (<em>from</em>), as a producer (<em>to</em>), or  both.</p>
 </div>
 <div class="paragraph">
-<p>Configuring endpoints is most often done directly in the endpoint URI as path and query parameters. You can also use
-the <a href="../../manual/Endpoint-dsl.html" class="xref page">Endpoint DSL</a> and <a href="../../manual/dataformat-dsl.html" class="xref page">DataFormat DSL</a>
+<p>Configuring endpoints is most often done directly in the endpoint URI as <em>path</em> and <em>query</em> parameters.
+You can also use the <a href="../../manual/4.10.x/Endpoint-dsl.html" class="xref page">Endpoint DSL</a> and <a href="../../manual/4.10.x/dataformat-dsl.html" class="xref page">DataFormat DSL</a>
 as a <em>type safe</em> way of configuring endpoints and data formats in Java.</p>
 </div>
 <div class="paragraph">
-<p>A good practice when configuring options is to use <a href="../../manual/using-propertyplaceholder.html" class="xref page">Property Placeholders</a>,
-which allows to not hardcode urls, port numbers, sensitive information, and other settings.
-In other words placeholders allows to externalize the configuration from your code, and gives more flexibility and reuse.</p>
+<p>A good practice when configuring options is to use <a href="../../manual/4.10.x/using-propertyplaceholder.html" class="xref page">Property Placeholders</a>.</p>
 </div>
 <div class="paragraph">
-<p>The following two sections lists all the options, firstly for the component followed by the endpoint.</p>
+<p>Property placeholders provide a few benefits:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>They help prevent using hardcoded urls, port numbers, sensitive information, and other settings.</p>
+</li>
+<li>
+<p>They allow externalizing the configuration from the code.</p>
+</li>
+<li>
+<p>They help the code to become more flexible and reusable.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>The following two sections list all the options, firstly for the component followed by the endpoint.</p>
 </div>
 </div>
 </div>
@@ -1930,7 +2089,7 @@ In other words placeholders allows to externalize the configuration from your co
 <h2 id="_component_options"><a class="anchor" href="#_component_options"></a>Component Options</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>The Kafka component supports 114 options, which are listed below.</p>
+<p>The Kafka component supports 116 options, which are listed below.</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
 <colgroup>
@@ -2000,6 +2159,24 @@ In other words placeholders allows to externalize the configuration from your co
 <p>The maximum amount of time in milliseconds to wait when reconnecting to a broker that has repeatedly failed to connect. If provided, the backoff per host will increase exponentially for each consecutive connection failure, up to this maximum. After calculating the backoff increase, 20% random jitter is added to avoid connection storms.</p>
 </div></div></td>
 <td class="tableblock halign-center valign-top"><p class="tableblock">1000</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Integer</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a id="_component_option_retryBackoffMaxMs"></a>
+<a href="#_component_option_retryBackoffMaxMs" class="anchor"></a><strong>retryBackoffMaxMs</strong> (common)</p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>The maximum amount of time in milliseconds to wait when retrying a request to the broker that has repeatedly failed. If provided, the backoff per client will increase exponentially for each failed request, up to this maximum. To prevent all clients from being synchronized upon retry, a randomized jitter with a factor of 0.2 will be applied to the backoff, resulting in the backoff falling within a range between 20% below and 20% above the computed value. If retry.backoff.ms is set to be higher than retry.backoff.max.ms, then retry.backoff.max.ms will be used as a constant backoff from the beginning without any exponential increase.</p>
+</div></div></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">1000</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Integer</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a id="_component_option_retryBackoffMs"></a>
+<a href="#_component_option_retryBackoffMs" class="anchor"></a><strong>retryBackoffMs</strong> (common)</p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>The amount of time to wait before attempting to retry a failed request to a given topic partition. This avoids repeatedly sending requests in a tight loop under some failure scenarios. This value is the initial backoff value and will increase exponentially for each failed request, up to the retry.backoff.max.ms value.</p>
+</div></div></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">100</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Integer</p></td>
 </tr>
 <tr>
@@ -2130,7 +2307,7 @@ In other words placeholders allows to externalize the configuration from your co
 <td class="tableblock halign-left valign-top"><p class="tableblock"><a id="_component_option_fetchMaxBytes"></a>
 <a href="#_component_option_fetchMaxBytes" class="anchor"></a><strong>fetchMaxBytes</strong> (consumer)</p></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>The maximum amount of data the server should return for a fetch request This is not an absolute maximum, if the first message in the first non-empty partition of the fetch is larger than this value, the message will still be returned to ensure that the consumer can make progress. The maximum message size accepted by the broker is defined via message.max.bytes (broker config) or max.message.bytes (topic config). Note that the consumer performs multiple fetches in parallel.</p>
+<p>The maximum amount of data the server should return for a fetch request. This is not an absolute maximum, if the first message in the first non-empty partition of the fetch is larger than this value, the message will still be returned to ensure that the consumer can make progress. The maximum message size accepted by the broker is defined via message.max.bytes (broker config) or max.message.bytes (topic config). Note that the consumer performs multiple fetches in parallel.</p>
 </div></div></td>
 <td class="tableblock halign-center valign-top"><p class="tableblock">52428800</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Integer</p></td>
@@ -2148,7 +2325,7 @@ In other words placeholders allows to externalize the configuration from your co
 <td class="tableblock halign-left valign-top"><p class="tableblock"><a id="_component_option_fetchWaitMaxMs"></a>
 <a href="#_component_option_fetchWaitMaxMs" class="anchor"></a><strong>fetchWaitMaxMs</strong> (consumer)</p></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>The maximum amount of time the server will block before answering the fetch request if there isn&#8217;t sufficient data to immediately satisfy fetch.min.bytes.</p>
+<p>The maximum amount of time the server will block before answering the fetch request if there isn&#8217;t enough data to immediately satisfy fetch.min.bytes.</p>
 </div></div></td>
 <td class="tableblock halign-center valign-top"><p class="tableblock">500</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Integer</p></td>
@@ -2542,7 +2719,7 @@ In other words placeholders allows to externalize the configuration from your co
 <td class="tableblock halign-left valign-top"><p class="tableblock"><a id="_component_option_lingerMs"></a>
 <a href="#_component_option_lingerMs" class="anchor"></a><strong>lingerMs</strong> (producer)</p></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>The producer groups together any records that arrive in between request transmissions into a single, batched, request. Normally, this occurs only under load when records arrive faster than they can be sent out. However, in some circumstances, the client may want to reduce the number of requests even under a moderate load. This setting accomplishes this by adding a small amount of artificial delay. That is, rather than immediately sending out a record, the producer will wait for up to the given delay to allow other records to be sent so that they can be batched together. This can be thought of as analogous to Nagle&#8217;s algorithm in TCP. This setting gives the upper bound on the delay for batching: once we get batch.size worth of records for a partition, it will be sent immediately regardless of this setting, however, if we have fewer than this many bytes accumulated for this partition, we will 'linger' for the specified time waiting for more records to show up. This setting defaults to 0 (i.e., no delay). Setting linger.ms=5, for example, would have the effect of reducing the number of requests sent but would add up to 5ms of latency to records sent in the absence of load.</p>
+<p>The producer groups together any records that arrive in between request transmissions into a single, batched, request. Normally, this occurs only under load when records arrive faster than they can be sent out. However, in some circumstances, the client may want to reduce the number of requests even under a moderate load. This setting achieves this by adding a small amount of artificial delay. That is, rather than immediately sending out a record, the producer will wait for up to the given delay to allow other records to be sent so that they can be batched together. This can be thought of as analogous to Nagle&#8217;s algorithm in TCP. This setting gives the upper bound on the delay for batching: once we get batch.size worth of records for a partition, it will be sent immediately regardless of this setting, however, if we have fewer than this many bytes accumulated for this partition, we will 'linger' for the specified time waiting for more records to show up. This setting defaults to 0 (i.e., no delay). Setting linger.ms=5, for example, would have the effect of reducing the number of requests sent but would add up to 5ms of latency to records sent in the absence of load.</p>
 </div></div></td>
 <td class="tableblock halign-center valign-top"><p class="tableblock">0</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Integer</p></td>
@@ -2723,18 +2900,9 @@ In other words placeholders allows to externalize the configuration from your co
 <td class="tableblock halign-left valign-top"><p class="tableblock"><a id="_component_option_retries"></a>
 <a href="#_component_option_retries" class="anchor"></a><strong>retries</strong> (producer)</p></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>Setting a value greater than zero will cause the client to resend any record that has failed to be sent due to a potentially transient error. Note that this retry is no different from if the client re-sending the record upon receiving the error. Produce requests will be failed before the number of retries has been exhausted if the timeout configured by delivery.timeout.ms expires first before successful acknowledgement. Users should generally prefer to leave this config unset and instead use delivery.timeout.ms to control retry behavior. Enabling idempotence requires this config value to be greater than 0. If conflicting configurations are set and idempotence is not explicitly enabled, idempotence is disabled. Allowing retries while setting enable.idempotence to false and max.in.flight.requests.per.connection to 1 will potentially change the ordering of records because if two batches are sent to a single partition, and the first fails and is retried but the second succeeds, then the records in the second batch may appear first.</p>
+<p>Setting a value greater than zero will cause the client to resend any record that has failed to be sent due to a potentially transient error. Note that this retry is no different from if the client re-sending the record upon receiving the error. Produce requests will be failed before the number of retries has been exhausted if the timeout configured by delivery.timeout.ms expires first before successful acknowledgement. Users should generally prefer to leave this config unset and instead use delivery.timeout.ms to control retry behavior. Enabling idempotence requires this config value to be greater than 0. If conflicting configurations are set and idempotence is not explicitly enabled, idempotence is disabled. Allowing retries while setting enable.idempotence to false and max.in.flight.requests.per.connection to 1 will potentially change the ordering of records, because if two batches are sent to a single partition, and the first fails and is retried but the second succeeds; then the records in the second batch may appear first.</p>
 </div></div></td>
 <td class="tableblock halign-center valign-top"></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Integer</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><a id="_component_option_retryBackoffMs"></a>
-<a href="#_component_option_retryBackoffMs" class="anchor"></a><strong>retryBackoffMs</strong> (producer)</p></td>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>Before each retry, the producer refreshes the metadata of relevant topics to see if a new leader has been elected. Since the leader election takes a bit of time, this property specifies the amount of time that the producer waits before refreshing the metadata.</p>
-</div></div></td>
-<td class="tableblock halign-center valign-top"><p class="tableblock">100</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Integer</p></td>
 </tr>
 <tr>
@@ -2745,6 +2913,15 @@ In other words placeholders allows to externalize the configuration from your co
 </div></div></td>
 <td class="tableblock halign-center valign-top"><p class="tableblock">131072</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Integer</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a id="_component_option_useIterator"></a>
+<a href="#_component_option_useIterator" class="anchor"></a><strong>useIterator</strong> (producer)</p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>Sets whether sending to kafka should send the message body as a single record, or use a java.util.Iterator to send multiple records to kafka (if the message body can be iterated).</p>
+</div></div></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">true</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">boolean</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><a id="_component_option_valueSerializer"></a>
@@ -3095,7 +3272,7 @@ In other words placeholders allows to externalize the configuration from your co
 </div>
 </div>
 <div class="paragraph">
-<p>with the following path and query parameters:</p>
+<p>With the following <em>path</em> and <em>query</em> parameters:</p>
 </div>
 <div class="sect2">
 <h3 id="_path_parameters_1_parameters"><a class="anchor" href="#_path_parameters_1_parameters"></a>Path Parameters (1 parameters)</h3>
@@ -3128,7 +3305,7 @@ In other words placeholders allows to externalize the configuration from your co
 </table>
 </div>
 <div class="sect2">
-<h3 id="_query_parameters"><a class="anchor" href="#_query_parameters"></a>Query Parameters (106 parameters)</h3>
+<h3 id="_query_parameters"><a class="anchor" href="#_query_parameters"></a>Query Parameters (108 parameters)</h3>
 <table class="tableblock frame-all grid-all stretch">
 <colgroup>
 <col style="width: 20%;">
@@ -3188,6 +3365,24 @@ In other words placeholders allows to externalize the configuration from your co
 <p>The maximum amount of time in milliseconds to wait when reconnecting to a broker that has repeatedly failed to connect. If provided, the backoff per host will increase exponentially for each consecutive connection failure, up to this maximum. After calculating the backoff increase, 20% random jitter is added to avoid connection storms.</p>
 </div></div></td>
 <td class="tableblock halign-center valign-top"><p class="tableblock">1000</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Integer</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a id="_endpoint_query_option_retryBackoffMaxMs"></a>
+<a href="#_endpoint_query_option_retryBackoffMaxMs" class="anchor"></a><strong>retryBackoffMaxMs</strong> (common)</p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>The maximum amount of time in milliseconds to wait when retrying a request to the broker that has repeatedly failed. If provided, the backoff per client will increase exponentially for each failed request, up to this maximum. To prevent all clients from being synchronized upon retry, a randomized jitter with a factor of 0.2 will be applied to the backoff, resulting in the backoff falling within a range between 20% below and 20% above the computed value. If retry.backoff.ms is set to be higher than retry.backoff.max.ms, then retry.backoff.max.ms will be used as a constant backoff from the beginning without any exponential increase.</p>
+</div></div></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">1000</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Integer</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a id="_endpoint_query_option_retryBackoffMs"></a>
+<a href="#_endpoint_query_option_retryBackoffMs" class="anchor"></a><strong>retryBackoffMs</strong> (common)</p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>The amount of time to wait before attempting to retry a failed request to a given topic partition. This avoids repeatedly sending requests in a tight loop under some failure scenarios. This value is the initial backoff value and will increase exponentially for each failed request, up to the retry.backoff.max.ms value.</p>
+</div></div></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">100</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Integer</p></td>
 </tr>
 <tr>
@@ -3309,7 +3504,7 @@ In other words placeholders allows to externalize the configuration from your co
 <td class="tableblock halign-left valign-top"><p class="tableblock"><a id="_endpoint_query_option_fetchMaxBytes"></a>
 <a href="#_endpoint_query_option_fetchMaxBytes" class="anchor"></a><strong>fetchMaxBytes</strong> (consumer)</p></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>The maximum amount of data the server should return for a fetch request This is not an absolute maximum, if the first message in the first non-empty partition of the fetch is larger than this value, the message will still be returned to ensure that the consumer can make progress. The maximum message size accepted by the broker is defined via message.max.bytes (broker config) or max.message.bytes (topic config). Note that the consumer performs multiple fetches in parallel.</p>
+<p>The maximum amount of data the server should return for a fetch request. This is not an absolute maximum, if the first message in the first non-empty partition of the fetch is larger than this value, the message will still be returned to ensure that the consumer can make progress. The maximum message size accepted by the broker is defined via message.max.bytes (broker config) or max.message.bytes (topic config). Note that the consumer performs multiple fetches in parallel.</p>
 </div></div></td>
 <td class="tableblock halign-center valign-top"><p class="tableblock">52428800</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Integer</p></td>
@@ -3327,7 +3522,7 @@ In other words placeholders allows to externalize the configuration from your co
 <td class="tableblock halign-left valign-top"><p class="tableblock"><a id="_endpoint_query_option_fetchWaitMaxMs"></a>
 <a href="#_endpoint_query_option_fetchWaitMaxMs" class="anchor"></a><strong>fetchWaitMaxMs</strong> (consumer)</p></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>The maximum amount of time the server will block before answering the fetch request if there isn&#8217;t sufficient data to immediately satisfy fetch.min.bytes.</p>
+<p>The maximum amount of time the server will block before answering the fetch request if there isn&#8217;t enough data to immediately satisfy fetch.min.bytes.</p>
 </div></div></td>
 <td class="tableblock halign-center valign-top"><p class="tableblock">500</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Integer</p></td>
@@ -3707,7 +3902,7 @@ In other words placeholders allows to externalize the configuration from your co
 <td class="tableblock halign-left valign-top"><p class="tableblock"><a id="_endpoint_query_option_lingerMs"></a>
 <a href="#_endpoint_query_option_lingerMs" class="anchor"></a><strong>lingerMs</strong> (producer)</p></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>The producer groups together any records that arrive in between request transmissions into a single, batched, request. Normally, this occurs only under load when records arrive faster than they can be sent out. However, in some circumstances, the client may want to reduce the number of requests even under a moderate load. This setting accomplishes this by adding a small amount of artificial delay. That is, rather than immediately sending out a record, the producer will wait for up to the given delay to allow other records to be sent so that they can be batched together. This can be thought of as analogous to Nagle&#8217;s algorithm in TCP. This setting gives the upper bound on the delay for batching: once we get batch.size worth of records for a partition, it will be sent immediately regardless of this setting, however, if we have fewer than this many bytes accumulated for this partition, we will 'linger' for the specified time waiting for more records to show up. This setting defaults to 0 (i.e., no delay). Setting linger.ms=5, for example, would have the effect of reducing the number of requests sent but would add up to 5ms of latency to records sent in the absence of load.</p>
+<p>The producer groups together any records that arrive in between request transmissions into a single, batched, request. Normally, this occurs only under load when records arrive faster than they can be sent out. However, in some circumstances, the client may want to reduce the number of requests even under a moderate load. This setting achieves this by adding a small amount of artificial delay. That is, rather than immediately sending out a record, the producer will wait for up to the given delay to allow other records to be sent so that they can be batched together. This can be thought of as analogous to Nagle&#8217;s algorithm in TCP. This setting gives the upper bound on the delay for batching: once we get batch.size worth of records for a partition, it will be sent immediately regardless of this setting, however, if we have fewer than this many bytes accumulated for this partition, we will 'linger' for the specified time waiting for more records to show up. This setting defaults to 0 (i.e., no delay). Setting linger.ms=5, for example, would have the effect of reducing the number of requests sent but would add up to 5ms of latency to records sent in the absence of load.</p>
 </div></div></td>
 <td class="tableblock halign-center valign-top"><p class="tableblock">0</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Integer</p></td>
@@ -3888,18 +4083,9 @@ In other words placeholders allows to externalize the configuration from your co
 <td class="tableblock halign-left valign-top"><p class="tableblock"><a id="_endpoint_query_option_retries"></a>
 <a href="#_endpoint_query_option_retries" class="anchor"></a><strong>retries</strong> (producer)</p></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>Setting a value greater than zero will cause the client to resend any record that has failed to be sent due to a potentially transient error. Note that this retry is no different from if the client re-sending the record upon receiving the error. Produce requests will be failed before the number of retries has been exhausted if the timeout configured by delivery.timeout.ms expires first before successful acknowledgement. Users should generally prefer to leave this config unset and instead use delivery.timeout.ms to control retry behavior. Enabling idempotence requires this config value to be greater than 0. If conflicting configurations are set and idempotence is not explicitly enabled, idempotence is disabled. Allowing retries while setting enable.idempotence to false and max.in.flight.requests.per.connection to 1 will potentially change the ordering of records because if two batches are sent to a single partition, and the first fails and is retried but the second succeeds, then the records in the second batch may appear first.</p>
+<p>Setting a value greater than zero will cause the client to resend any record that has failed to be sent due to a potentially transient error. Note that this retry is no different from if the client re-sending the record upon receiving the error. Produce requests will be failed before the number of retries has been exhausted if the timeout configured by delivery.timeout.ms expires first before successful acknowledgement. Users should generally prefer to leave this config unset and instead use delivery.timeout.ms to control retry behavior. Enabling idempotence requires this config value to be greater than 0. If conflicting configurations are set and idempotence is not explicitly enabled, idempotence is disabled. Allowing retries while setting enable.idempotence to false and max.in.flight.requests.per.connection to 1 will potentially change the ordering of records, because if two batches are sent to a single partition, and the first fails and is retried but the second succeeds; then the records in the second batch may appear first.</p>
 </div></div></td>
 <td class="tableblock halign-center valign-top"></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Integer</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><a id="_endpoint_query_option_retryBackoffMs"></a>
-<a href="#_endpoint_query_option_retryBackoffMs" class="anchor"></a><strong>retryBackoffMs</strong> (producer)</p></td>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>Before each retry, the producer refreshes the metadata of relevant topics to see if a new leader has been elected. Since the leader election takes a bit of time, this property specifies the amount of time that the producer waits before refreshing the metadata.</p>
-</div></div></td>
-<td class="tableblock halign-center valign-top"><p class="tableblock">100</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Integer</p></td>
 </tr>
 <tr>
@@ -3910,6 +4096,15 @@ In other words placeholders allows to externalize the configuration from your co
 </div></div></td>
 <td class="tableblock halign-center valign-top"><p class="tableblock">131072</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Integer</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a id="_endpoint_query_option_useIterator"></a>
+<a href="#_endpoint_query_option_useIterator" class="anchor"></a><strong>useIterator</strong> (producer)</p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>Sets whether sending to kafka should send the message body as a single record, or use a java.util.Iterator to send multiple records to kafka (if the message body can be iterated).</p>
+</div></div></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">true</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">boolean</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><a id="_endpoint_query_option_valueSerializer"></a>
@@ -4389,8 +4584,10 @@ In other words placeholders allows to externalize the configuration from your co
 </div>
 </div>
 <div class="sect1">
-<h2 id="_consumer_error_handling"><a class="anchor" href="#_consumer_error_handling"></a>Consumer error handling</h2>
+<h2 id="_usage"><a class="anchor" href="#_usage"></a>Usage</h2>
 <div class="sectionbody">
+<div class="sect2">
+<h3 id="_consumer_error_handling"><a class="anchor" href="#_consumer_error_handling"></a>Consumer error handling</h3>
 <div class="paragraph">
 <p>While kafka consumer is polling messages from the kafka broker, then errors can happen. This section describes what happens and what
 you can configure.</p>
@@ -4430,10 +4627,8 @@ Camel components have.</p>
 on the component level, which allows controlling which of the strategies to use for each exception.</p>
 </div>
 </div>
-</div>
-<div class="sect1">
-<h2 id="_consumer_error_handling_advanced"><a class="anchor" href="#_consumer_error_handling_advanced"></a>Consumer error handling (advanced)</h2>
-<div class="sectionbody">
+<div class="sect2">
+<h3 id="_consumer_error_handling_advanced"><a class="anchor" href="#_consumer_error_handling_advanced"></a>Consumer error handling (advanced)</h3>
 <div class="paragraph">
 <p>By default, Camel will poll using the <strong>ERROR_HANDLER</strong> to process exceptions.
 How Camel handles a message that results in an exception can be altered using the <code>breakOnFirstError</code> attribute in the configuration.
@@ -4453,163 +4648,8 @@ camelContext.addComponent("kafka", kafka);</code></pre>
 will work based on the <code>CommitManager</code> that is configured.</p>
 </div>
 </div>
-</div>
-<div class="sect1">
-<h2 id="_samples"><a class="anchor" href="#_samples"></a>Samples</h2>
-<div class="sectionbody">
 <div class="sect2">
-<h3 id="_consuming_messages_from_kafka"><a class="anchor" href="#_consuming_messages_from_kafka"></a>Consuming messages from Kafka</h3>
-<div class="paragraph">
-<p>Here is the minimal route you need to read messages from Kafka.</p>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">from("kafka:test?brokers=localhost:9092")
-    .log("Message received from Kafka : ${body}")
-    .log("    on the topic ${headers[kafka.TOPIC]}")
-    .log("    on the partition ${headers[kafka.PARTITION]}")
-    .log("    with the offset ${headers[kafka.OFFSET]}")
-    .log("    with the key ${headers[kafka.KEY]}")</code></pre>
-</div>
-</div>
-<div class="paragraph">
-<p>If you need to consume messages from multiple topics, you can use a comma separated list of topic names.</p>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">from("kafka:test,test1,test2?brokers=localhost:9092")
-    .log("Message received from Kafka : ${body}")
-    .log("    on the topic ${headers[kafka.TOPIC]}")
-    .log("    on the partition ${headers[kafka.PARTITION]}")
-    .log("    with the offset ${headers[kafka.OFFSET]}")
-    .log("    with the key ${headers[kafka.KEY]}")</code></pre>
-</div>
-</div>
-<div class="paragraph">
-<p>It&#8217;s also possible to subscribe to multiple topics giving a pattern as the topic name and using the <code>topicIsPattern</code> option.</p>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">from("kafka:test*?brokers=localhost:9092&amp;topicIsPattern=true")
-    .log("Message received from Kafka : ${body}")
-    .log("    on the topic ${headers[kafka.TOPIC]}")
-    .log("    on the partition ${headers[kafka.PARTITION]}")
-    .log("    with the offset ${headers[kafka.OFFSET]}")
-    .log("    with the key ${headers[kafka.KEY]}")</code></pre>
-</div>
-</div>
-<div class="paragraph">
-<p>When consuming messages from Kafka, you can use your own offset management and not delegate this management to Kafka.
-To keep the offsets, the component needs a <code>StateRepository</code> implementation such as <code>FileStateRepository</code>.
-This bean should be available in the registry.
-Here how to use it :</p>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">// Create the repository in which the Kafka offsets will be persisted
-FileStateRepository repository = FileStateRepository.fileStateRepository(new File("/path/to/repo.dat"));
-
-// Bind this repository into the Camel registry
-Registry registry = createCamelRegistry();
-registry.bind("offsetRepo", repository);
-
-// Configure the camel context
-DefaultCamelContext camelContext = new DefaultCamelContext(registry);
-camelContext.addRoutes(new RouteBuilder() {
-    @Override
-    public void configure() throws Exception {
-        from("kafka:" + TOPIC + "?brokers=localhost:{{kafkaPort}}" +
-                     // Set up the topic and broker address
-                     "&amp;groupId=A" +
-                     // The consumer processor group ID
-                     "&amp;autoOffsetReset=earliest" +
-                     // Ask to start from the beginning if we have unknown offset
-                     "&amp;offsetRepository=#offsetRepo")
-                     // Keep the offsets in the previously configured repository
-                .to("mock:result");
-    }
-});</code></pre>
-</div>
-</div>
-</div>
-<div class="sect2">
-<h3 id="_producing_messages_to_kafka"><a class="anchor" href="#_producing_messages_to_kafka"></a>Producing messages to Kafka</h3>
-<div class="paragraph">
-<p>Here is the minimal route you need in order to write messages to Kafka.</p>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">from("direct:start")
-    .setBody(constant("Message from Camel"))          // Message to send
-    .setHeader(KafkaConstants.KEY, constant("Camel")) // Key of the message
-    .to("kafka:test?brokers=localhost:9092");</code></pre>
-</div>
-</div>
-</div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="_ssl_configuration"><a class="anchor" href="#_ssl_configuration"></a>SSL configuration</h2>
-<div class="sectionbody">
-<div class="paragraph">
-<p>You have 2 different ways to configure the SSL communication on the Kafka component.</p>
-</div>
-<div class="paragraph">
-<p>The first way is through the many SSL endpoint parameters:</p>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">from("kafka:" + TOPIC + "?brokers=localhost:{{kafkaPort}}" +
-             "&amp;groupId=A" +
-             "&amp;sslKeystoreLocation=/path/to/keystore.jks" +
-             "&amp;sslKeystorePassword=changeit" +
-             "&amp;sslKeyPassword=changeit" +
-             "&amp;securityProtocol=SSL")
-        .to("mock:result");</code></pre>
-</div>
-</div>
-<div class="paragraph">
-<p>The second way is to use the <code>sslContextParameters</code> endpoint parameter:</p>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">// Configure the SSLContextParameters object
-KeyStoreParameters ksp = new KeyStoreParameters();
-ksp.setResource("/path/to/keystore.jks");
-ksp.setPassword("changeit");
-KeyManagersParameters kmp = new KeyManagersParameters();
-kmp.setKeyStore(ksp);
-kmp.setKeyPassword("changeit");
-SSLContextParameters scp = new SSLContextParameters();
-scp.setKeyManagers(kmp);
-
-// Bind this SSLContextParameters into the Camel registry
-Registry registry = createCamelRegistry();
-registry.bind("ssl", scp);
-
-// Configure the camel context
-DefaultCamelContext camelContext = new DefaultCamelContext(registry);
-camelContext.addRoutes(new RouteBuilder() {
-    @Override
-    public void configure() throws Exception {
-        from("kafka:" + TOPIC + "?brokers=localhost:{{kafkaPort}}" +
-                     // Set up the topic and broker address
-                     "&amp;groupId=A" +
-                     // The consumer processor group ID
-                     "&amp;sslContextParameters=#ssl" +
-                     // The security protocol
-                     "&amp;securityProtocol=SSL)
-                     // Reference the SSL configuration
-                .to("mock:result");
-    }
-});</code></pre>
-</div>
-</div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="_using_the_kafka_idempotent_repository"><a class="anchor" href="#_using_the_kafka_idempotent_repository"></a>Using the Kafka idempotent repository</h2>
-<div class="sectionbody">
+<h3 id="_the_kafka_idempotent_repository"><a class="anchor" href="#_the_kafka_idempotent_repository"></a>The Kafka idempotent repository</h3>
 <div class="paragraph">
 <p>The <code>camel-kafka</code> library provides a Kafka topic-based idempotent repository. This repository stores broadcasts all changes to idempotent state (add/remove) in a Kafka topic, and populates a local in-memory cache for each repository&#8217;s process instance through event sourcing.
 The topic used must be unique per idempotent repository instance. The mechanism does not have any requirements about the number of topic partitions, as the repository consumes from all partitions at the same time. It also does not have any requirements about the replication factor of the topic.
@@ -4622,50 +4662,64 @@ Be mindful of the format of the header used for the uniqueness check. By default
 </div>
 <table class="tableblock frame-all grid-all stretch">
 <colgroup>
-<col style="width: 28.5714%;">
-<col style="width: 71.4286%;">
+<col style="width: 22.2222%;">
+<col style="width: 22.2222%;">
+<col style="width: 55.5556%;">
 </colgroup>
 <thead>
 <tr>
 <th class="tableblock halign-left valign-top">Property</th>
+<th class="tableblock halign-left valign-top">Default</th>
 <th class="tableblock halign-left valign-top">Description</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>topic</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">The name of the Kafka topic to use to broadcast changes. (required)</p></td>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Required</strong> The name of the Kafka topic to use to broadcast changes. (required)</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>bootstrapServers</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">The <code>bootstrap.servers</code> property on the internal Kafka producer and consumer. Use this as shorthand if not setting <code>consumerConfig</code> and <code>producerConfig</code>. If used, this component will apply sensible default configurations for the producer and consumer.</p></td>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Required</strong> The <code>bootstrap.servers</code> property on the internal Kafka producer and consumer. Use this as shorthand if not setting <code>consumerConfig</code> and <code>producerConfig</code>. If used, this component will apply sensible default configurations for the producer and consumer.</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>producerConfig</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Sets the properties that will be used by the Kafka producer that broadcasts changes. Overrides <code>bootstrapServers</code>, so must define the Kafka <code>bootstrap.servers</code> property itself</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>groupId</code></p></td>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The groupId to assign to the idempotent consumer.</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>consumerConfig</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Sets the properties that will be used by the Kafka consumer that populates the cache from the topic. Overrides <code>bootstrapServers</code>, so must define the Kafka <code>bootstrap.servers</code> property itself</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>startupOnly</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>false</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Whether to sync on startup only, or to continue syncing while Camel is running.</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>maxCacheSize</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>1000</code></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">How many of the most recently used keys should be stored in memory (default 1000).</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>pollDurationMs</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">The poll duration of the Kafka consumer. The local caches are updated immediately. This value will affect how far behind other peers that update their caches from the topic are relative to the idempotent consumer instance that sent the cache action message. The default value of this is 100 ms.<br>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>100</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The poll duration of the Kafka consumer. The local caches are updated immediately. This value will affect how far behind other peers that update their caches from the topic are relative to the idempotent consumer instance that sent the cache action message. The default value of this is 100 ms.
 If setting this value explicitly, be aware that there is a tradeoff between the remote cache liveness and the volume of network traffic between this repository&#8217;s consumer and the Kafka brokers. The cache warmup process also depends on there being one poll that fetches nothing - this indicates that the stream has been consumed up to the current point. If the poll duration is excessively long for the rate at which messages are sent on the topic, there exists a possibility that the cache cannot be warmed up and will operate in an inconsistent state relative to its peers until it catches up.</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>groupId</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">The groupId to assign to the idempotent consumer. If not specified, it will be randomized.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>producerConfig</code></p></td>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Sets the properties that will be used by the Kafka producer that broadcasts changes. Overrides <code>bootstrapServers</code>, so must define the Kafka <code>bootstrap.servers</code> property itself</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>consumerConfig</code></p></td>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Sets the properties that will be used by the Kafka consumer that populates the cache from the topic. Overrides <code>bootstrapServers</code>, so must define the Kafka <code>bootstrap.servers</code> property itself</p></td>
 </tr>
 </tbody>
 </table>
 <div class="paragraph">
 <p>The repository can be instantiated by defining the <code>topic</code> and <code>bootstrapServers</code>, or the <code>producerConfig</code> and <code>consumerConfig</code> property sets can be explicitly defined to enable features such as SSL/SASL.
-To use, this repository must be placed in the Camel registry, either manually or by registration as a bean in Spring/Blueprint, as it is <code>CamelContext</code> aware.</p>
+To use, this repository must be placed in the Camel registry, either manually or by registration as a bean in Spring, as it is <code>CamelContext</code> aware.</p>
 </div>
 <div class="paragraph">
 <p>Sample usage is as follows:</p>
@@ -4765,10 +4819,8 @@ from("direct:performInsert")
 </div>
 </div>
 </div>
-</div>
-<div class="sect1">
-<h2 id="_using_manual_commit_with_kafka_consumer"><a class="anchor" href="#_using_manual_commit_with_kafka_consumer"></a>Using manual commit with Kafka consumer</h2>
-<div class="sectionbody">
+<div class="sect2">
+<h3 id="_manual_commits_with_the_kafka_consumer"><a class="anchor" href="#_manual_commits_with_the_kafka_consumer"></a>Manual commits with the Kafka consumer</h3>
 <div class="paragraph">
 <p>By default, the Kafka consumer will use auto commit, where the offset will be committed automatically in the background using a given interval.</p>
 </div>
@@ -4782,7 +4834,7 @@ or on the endpoint, for example:</p>
 <pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">KafkaComponent kafka = new KafkaComponent();
 kafka.setAutoCommitEnable(false);
 kafka.setAllowManualCommit(true);
-...
+// ...
 camelContext.addComponent("kafka", kafka);</code></pre>
 </div>
 </div>
@@ -4842,10 +4894,8 @@ exception with the message <code>KafkaConsumer is not safe for multi-threaded ac
 <p>*Note 2: this is mostly useful with aggregation&#8217;s completion timeout strategies.</p>
 </div>
 </div>
-</div>
-<div class="sect1">
-<h2 id="_pausable_consumers"><a class="anchor" href="#_pausable_consumers"></a>Pausable Consumers</h2>
-<div class="sectionbody">
+<div class="sect2">
+<h3 id="_pausable_consumers"><a class="anchor" href="#_pausable_consumers"></a>Pausable Consumers</h3>
 <div class="paragraph">
 <p>The Kafka component supports pausable consumers. This type of consumer can pause consuming data based on
 conditions external to the component itself, such as an external system being unavailable or other transient conditions.</p>
@@ -4862,15 +4912,34 @@ conditions external to the component itself, such as an external system being un
 <div class="paragraph">
 <p>In this example, consuming messages can pause (by calling the Kafka&#8217;s Consumer pause method) if the result from <code>canContinue</code> is false.</p>
 </div>
-<div class="paragraph">
-<p>The pausable EIP is meant to be used as a support mechanism when there is an exception somewhere in the route that prevents the exchange from being processed. More specifically,
-the check called by the <code>pausable</code> EIP should be used to test for transient conditions preventing the exchange from being processed.</p>
+<div class="admonitionblock important">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-important" title="Important"></i>
+</td>
+<td class="content">
+The pausable EIP is meant to be used as a support mechanism when <strong>there is an exception</strong> somewhere in the route that prevents the exchange from being processed. More specifically,
+the check called by the <code>pausable</code> EIP should be used to test for transient conditions preventing the exchange from being processed.
+</td>
+</tr>
+</table>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+most users should prefer using the <a href="../../manual/4.10.x/route-policy.html" class="xref page">RoutePolicy</a>, which offers better control of the route.
+</td>
+</tr>
+</table>
 </div>
 </div>
-</div>
-<div class="sect1">
-<h2 id="_kafka_headers_propagation"><a class="anchor" href="#_kafka_headers_propagation"></a>Kafka Headers propagation</h2>
-<div class="sectionbody">
+<div class="sect2">
+<h3 id="_kafka_headers_propagation"><a class="anchor" href="#_kafka_headers_propagation"></a>Kafka Headers propagation</h3>
 <div class="paragraph">
 <p>When consuming messages from Kafka, headers will be propagated to camel exchange headers automatically.
 Producing flow backed by same behaviour - camel headers of particular exchange will be propagated to kafka message headers.</p>
@@ -4902,13 +4971,11 @@ Default strategy can be overridden by using <code>headerFilterStrategy</code> ur
 </div>
 </div>
 <div class="paragraph">
-<p><code>myStrategy</code> object should be a subclass of <code>HeaderFilterStrategy</code> and must be placed in the Camel registry, either manually or by registration as a bean in Spring/Blueprint, as it is <code>CamelContext</code> aware.</p>
+<p><code>myStrategy</code> object should be a subclass of <code>HeaderFilterStrategy</code> and must be placed in the Camel registry, either manually or by registration as a bean in Spring, as it is <code>CamelContext</code> aware.</p>
 </div>
 </div>
-</div>
-<div class="sect1">
-<h2 id="_kafka_transaction"><a class="anchor" href="#_kafka_transaction"></a>Kafka Transaction</h2>
-<div class="sectionbody">
+<div class="sect2">
+<h3 id="_kafka_transaction"><a class="anchor" href="#_kafka_transaction"></a>Kafka Transaction</h3>
 <div class="paragraph">
 <p>You need to add <code>transactional.id</code>, <code>enable.idempotence</code> and <code>retries</code> in <code>additional-properties</code> to enable kafka transaction with the producer.</p>
 </div>
@@ -4925,18 +4992,17 @@ Default strategy can be overridden by using <code>headerFilterStrategy</code> ur
 <p>It would work with JTA <code>camel-jta</code> by using <code>transacted()</code> and if it involves some resources (SQL or JMS), which supports XA, then they would work in tandem, where they both will either commit or rollback at the end of the exchange routing. In some cases, if the JTA transaction manager fails to commit (during the 2PC processing), but kafka transaction has been committed before and there is no chance to roll back the changes since the kafka transaction does not support JTA/XA spec. There is still a risk with the data consistency.</p>
 </div>
 </div>
-</div>
-<div class="sect1">
-<h2 id="_setting_kerberos_config_file"><a class="anchor" href="#_setting_kerberos_config_file"></a>Setting Kerberos config file</h2>
-<div class="sectionbody">
+<div class="sect2">
+<h3 id="_setting_kerberos_config_file"><a class="anchor" href="#_setting_kerberos_config_file"></a>Setting Kerberos config file</h3>
 <div class="paragraph">
-<p>Configure the 'krb5.conf' file directly through the API</p>
+<p>Configure the 'krb5.conf' file directly through the API:</p>
 </div>
 <div class="listingblock">
 <div class="content">
 <pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">static {
     KafkaComponent.setKerberosConfigLocation("path/to/config/file");
 }</code></pre>
+</div>
 </div>
 </div>
 <div class="sect2">
@@ -5099,6 +5165,224 @@ every record or the whole batch at once by committing the last exchange on the l
 </div>
 </div>
 </div>
+<div class="sect2">
+<h3 id="_custom_subscription_adapters"><a class="anchor" href="#_custom_subscription_adapters"></a>Custom Subscription Adapters</h3>
+<div class="paragraph">
+<p>Applications with complex subscription logic may provide a custom bean to handle the subscription process. To so, it is
+necessary to implement the interface <code>SubscribeAdapter</code>.</p>
+</div>
+<div class="listingblock">
+<div class="title">Example subscriber adapter that subscribes to a set of Kafka topics or patterns</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">public class CustomSubscribeAdapter implements SubscribeAdapter {
+    @Override
+    public void subscribe(Consumer&lt;?, ?&gt; consumer, ConsumerRebalanceListener reBalanceListener, TopicInfo topicInfo) {
+        if (topicInfo.isPattern()) {
+            consumer.subscribe(topicInfo.getPattern(), reBalanceListener);
+        } else {
+            consumer.subscribe(topicInfo.getTopics(), reBalanceListener);
+        }
+    }
+}</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Then, it is necessary to add it as named bean instance to the registry:</p>
+</div>
+<div class="listingblock">
+<div class="title">Add to registry example</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">context.getRegistry().bind(KafkaConstants.KAFKA_SUBSCRIBE_ADAPTER, new CustomSubscribeAdapter());</code></pre>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_interoperability"><a class="anchor" href="#_interoperability"></a>Interoperability</h3>
+<div class="sect3">
+<h4 id="_jms"><a class="anchor" href="#_jms"></a>JMS</h4>
+<div class="paragraph">
+<p>When interoperating Kafka and JMS, it may be necessary to coerce the JMS headers into their expected type.</p>
+</div>
+<div class="paragraph">
+<p>For instance, when consuming messages from Kafka carrying JMS headers and then sending them to a JMS broker, those headers are
+first deserialized into a byte array. Then, the <code>camel-jms</code> component tries to coerce this byte array into the
+specific type used by.
+However, both the origin endpoint as well as how this was setup on the code itsef may affect how the data is serialized and
+deserialized. As such, it is not feasible to naively assume the data type of the byte array.</p>
+</div>
+<div class="paragraph">
+<p>To address this issue, we provide a custom header deserializer to force Kafka to de-serialize the JMS data according to
+the JMS specification. This approach ensures that the headers are properly interpreted and processed by the camel-jms component.</p>
+</div>
+<div class="paragraph">
+<p>Due to the inherent complexity of each possible system and endpoint, it may not be possible for this deserializer to cover all
+possible scenarios. As such, it is provided as model that can be modified and/or adapted for the specific needs of each application.</p>
+</div>
+<div class="paragraph">
+<p>To utilize this solution, you need to modify the route URI on the consumer end of the pipeline by including the
+<code>headerDeserializer</code> option.
+For example:</p>
+</div>
+<div class="listingblock">
+<div class="title">Route snippet</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">from("kafka:topic?headerDeserializer=#class:org.apache.camel.component.kafka.consumer.support.interop.JMSDeserializer")
+    .to("...");</code></pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_examples"><a class="anchor" href="#_examples"></a>Examples</h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="_consuming_messages_from_kafka"><a class="anchor" href="#_consuming_messages_from_kafka"></a>Consuming messages from Kafka</h3>
+<div class="paragraph">
+<p>Here is the minimal route you need to read messages from Kafka.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">from("kafka:test?brokers=localhost:9092")
+    .log("Message received from Kafka : ${body}")
+    .log("    on the topic ${headers[kafka.TOPIC]}")
+    .log("    on the partition ${headers[kafka.PARTITION]}")
+    .log("    with the offset ${headers[kafka.OFFSET]}")
+    .log("    with the key ${headers[kafka.KEY]}")</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>If you need to consume messages from multiple topics, you can use a comma separated list of topic names.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">from("kafka:test,test1,test2?brokers=localhost:9092")
+    .log("Message received from Kafka : ${body}")
+    .log("    on the topic ${headers[kafka.TOPIC]}")
+    .log("    on the partition ${headers[kafka.PARTITION]}")
+    .log("    with the offset ${headers[kafka.OFFSET]}")
+    .log("    with the key ${headers[kafka.KEY]}")</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>It&#8217;s also possible to subscribe to multiple topics giving a pattern as the topic name and using the <code>topicIsPattern</code> option.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">from("kafka:test.*?brokers=localhost:9092&amp;topicIsPattern=true")
+    .log("Message received from Kafka : ${body}")
+    .log("    on the topic ${headers[kafka.TOPIC]}")
+    .log("    on the partition ${headers[kafka.PARTITION]}")
+    .log("    with the offset ${headers[kafka.OFFSET]}")
+    .log("    with the key ${headers[kafka.KEY]}")</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>When consuming messages from Kafka, you can use your own offset management and not delegate this management to Kafka.
+To keep the offsets, the component needs a <code>StateRepository</code> implementation such as <code>FileStateRepository</code>.
+This bean should be available in the registry.
+Here how to use it :</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">// Create the repository in which the Kafka offsets will be persisted
+FileStateRepository repository = FileStateRepository.fileStateRepository(new File("/path/to/repo.dat"));
+
+// Bind this repository into the Camel registry
+Registry registry = createCamelRegistry();
+registry.bind("offsetRepo", repository);
+
+// Configure the camel context
+DefaultCamelContext camelContext = new DefaultCamelContext(registry);
+camelContext.addRoutes(new RouteBuilder() {
+    @Override
+    public void configure() throws Exception {
+        fromF("kafka:%s?brokers=localhost:{{kafkaPort}}" +
+                     // Set up the topic and broker address
+                     "&amp;groupId=A" +
+                     // The consumer processor group ID
+                     "&amp;autoOffsetReset=earliest" +
+                     // Ask to start from the beginning if we have unknown offset
+                     "&amp;offsetRepository=#offsetRepo", TOPIC)
+                     // Keep the offsets in the previously configured repository
+                .to("mock:result");
+    }
+});</code></pre>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_producing_messages_to_kafka"><a class="anchor" href="#_producing_messages_to_kafka"></a>Producing messages to Kafka</h3>
+<div class="paragraph">
+<p>Here is the minimal route you need to produce messages to Kafka.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">from("direct:start")
+    .setBody(constant("Message from Camel"))          // Message to send
+    .setHeader(KafkaConstants.KEY, constant("Camel")) // Key of the message
+    .to("kafka:test?brokers=localhost:9092");</code></pre>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_ssl_configuration"><a class="anchor" href="#_ssl_configuration"></a>SSL configuration</h3>
+<div class="paragraph">
+<p>You have two different ways to configure the SSL communication on the Kafka component.</p>
+</div>
+<div class="paragraph">
+<p>The first way is through the many SSL endpoint parameters:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">from("kafka:" + TOPIC + "?brokers=localhost:{{kafkaPort}}" +
+             "&amp;groupId=A" +
+             "&amp;sslKeystoreLocation=/path/to/keystore.jks" +
+             "&amp;sslKeystorePassword=changeit" +
+             "&amp;sslKeyPassword=changeit" +
+             "&amp;securityProtocol=SSL")
+        .to("mock:result");</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>The second way is to use the <code>sslContextParameters</code> endpoint parameter:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">// Configure the SSLContextParameters object
+KeyStoreParameters ksp = new KeyStoreParameters();
+ksp.setResource("/path/to/keystore.jks");
+ksp.setPassword("changeit");
+KeyManagersParameters kmp = new KeyManagersParameters();
+kmp.setKeyStore(ksp);
+kmp.setKeyPassword("changeit");
+SSLContextParameters scp = new SSLContextParameters();
+scp.setKeyManagers(kmp);
+
+// Bind this SSLContextParameters into the Camel registry
+Registry registry = createCamelRegistry();
+registry.bind("ssl", scp);
+
+// Configure the camel context
+DefaultCamelContext camelContext = new DefaultCamelContext(registry);
+camelContext.addRoutes(new RouteBuilder() {
+    @Override
+    public void configure() throws Exception {
+        from("kafka:" + TOPIC + "?brokers=localhost:{{kafkaPort}}" +
+                     // Set up the topic and broker address
+                     "&amp;groupId=A" +
+                     // The consumer processor group ID
+                     "&amp;sslContextParameters=#ssl" +
+                     // The security protocol
+                     "&amp;securityProtocol=SSL)
+                     // Reference the SSL configuration
+                .to("mock:result");
+    }
+});</code></pre>
+</div>
+</div>
+</div>
 </div>
 </div>
 </article>
@@ -5106,6 +5390,8 @@ every record or the whole batch at once by committing the last exchange on the l
 </main>
 </div>
 <footer class="footer">
+  <p>This page was built using the Antora default UI.</p>
+  <p>The source code for this UI is licensed under the terms of the MPL-2.0 license.</p>
 </footer>
 <script id="site-script" src="../../_/js/site.js" data-ui-root-path="../../_"></script>
 <script async src="../../_/js/vendor/highlight.js"></script>

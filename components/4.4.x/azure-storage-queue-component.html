@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>Azure Storage Queue Service :: Red Hat Camel Reference</title>
+    <title>Azure Storage Queue Service :: Red Hat build of Apache Camel</title>
     <meta name="description" content="Stores and retrieves messages to/from Azure Storage Queue.">
     <meta name="generator" content="Antora 3.1.4">
     <link rel="stylesheet" href="../../_/css/site.css">
@@ -12,7 +12,7 @@
 <header class="header">
   <nav class="navbar">
     <div class="navbar-brand">
-      <a class="navbar-item" href="../../manual/index.html">Red Hat build of Apache Camel manual</a>
+      <a class="navbar-item" href="/">Red Hat build of Apache Camel</a>
       <button class="navbar-burger" data-target="topbar-nav">
         <span></span>
         <span></span>
@@ -22,11 +22,12 @@
   </nav>
 </header>
 <div class="body">
-<div class="nav-container" data-component="components" data-version="next">
+<div class="nav-container" data-component="components" data-version="4.4.x">
   <aside class="nav">
     <div class="panels">
 <div class="nav-panel-menu is-active" data-panel="menu">
   <nav class="nav-menu">
+    <button class="nav-menu-toggle" aria-label="Toggle expand/collapse all" style="display: none"></button>
     <h3 class="title"><a href="index.html">Camel Components</a></h3>
 <ul class="nav-list">
   <li class="nav-item" data-depth="0">
@@ -912,6 +913,33 @@
     <a class="nav-link" href="splunk-hec-component.html">Splunk HEC</a>
   </li>
   <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="spring-summary.html">Spring</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="spring-batch-component.html">Spring Batch</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="spring-event-component.html">Spring Event</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="spring-jdbc-component.html">Spring JDBC</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="spring-ldap-component.html">Spring LDAP</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="spring-rabbitmq-component.html">Spring RabbitMQ</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="spring-redis-component.html">Spring Redis</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="spring-ws-component.html">Spring WebService</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
     <a class="nav-link" href="sql-component.html">SQL</a>
   </li>
   <li class="nav-item" data-depth="2">
@@ -1792,22 +1820,40 @@
 <div class="nav-panel-explore" data-panel="explore">
   <div class="context">
     <span class="title">Camel Components</span>
-    <span class="version">Next (Pre-release)</span>
+    <span class="version">4.4.x</span>
   </div>
   <ul class="components">
     <li class="component is-current">
-      <a class="title" href="index.html">Camel Components</a>
+      <div class="title"><a href="../4.10.x/index.html">Camel Components</a></div>
       <ul class="versions">
-        <li class="version is-current is-latest">
-          <a href="index.html">Next (Pre-release)</a>
+        <li class="version is-latest">
+          <a href="../4.10.x/index.html">4.10.x (LTS)</a>
+        </li>
+        <li class="version">
+          <a href="../4.8.x/index.html">4.8.x</a>
+        </li>
+        <li class="version is-current">
+          <a href="index.html">4.4.x</a>
+        </li>
+        <li class="version">
+          <a href="../4.0.x/index.html">4.0.x</a>
         </li>
       </ul>
     </li>
     <li class="component">
-      <a class="title" href="../../manual/index.html">User manual</a>
+      <div class="title"><a href="../../manual/4.10.x/index.html">User manual</a></div>
       <ul class="versions">
         <li class="version is-latest">
-          <a href="../../manual/index.html">default</a>
+          <a href="../../manual/4.10.x/index.html">4.10.x</a>
+        </li>
+        <li class="version">
+          <a href="../../manual/4.8.x/index.html">4.8.x</a>
+        </li>
+        <li class="version">
+          <a href="../../manual/4.4.x/index.html">4.4.x</a>
+        </li>
+        <li class="version">
+          <a href="../../manual/4.0.x/index.html">4.0.x</a>
         </li>
       </ul>
     </li>
@@ -1819,7 +1865,7 @@
 <main class="article">
 <div class="toolbar" role="navigation">
 <button class="nav-toggle"></button>
-  <a href="../../manual/index.html" class="home-link"></a>
+  <a href="../../manual/4.10.x/index.html" class="home-link"></a>
 <nav class="breadcrumbs" aria-label="breadcrumbs">
   <ul>
     <li><a href="index.html">Camel Components</a></li>
@@ -1828,6 +1874,16 @@
     <li><a href="azure-storage-queue-component.html">Azure Storage Queue Service</a></li>
   </ul>
 </nav>
+<div class="page-versions">
+  <button class="version-menu-toggle" title="Show other versions of page">4.4.x</button>
+  <div class="version-menu">
+    <a class="version" href="../4.10.x/azure-storage-queue-component.html">4.10.x (LTS)</a>
+    <a class="version" href="../4.8.x/azure-storage-queue-component.html">4.8.x</a>
+    <a class="version is-current" href="azure-storage-queue-component.html">4.4.x</a>
+    <a class="version is-missing" href="../4.0.x/index.html">4.0.x</a>
+  </div>
+</div>
+<div class="edit-this-page"><a href="https://github.com/rhaetor/rh-camel-jboss/edit/camel-4.4.0-branch/docs/components/modules/ROOT/pages/azure-storage-queue-component.adoc">Edit this Page</a></div>
 </div>
   <div class="content">
 <aside class="toc sidebar" data-title="Contents" data-levels="2">
@@ -1845,7 +1901,7 @@
 </div>
 <div class="paragraph">
 <p>The Azure Storage Queue component supports storing and retrieving the messages to/from
-<a href="https://azure.microsoft.com/services/storage/queues/">Azure Storage Queue</a> service using <strong>Azure APIs v12</strong>. However in case of versions above v12,
+<a href="https://azure.microsoft.com/services/storage/queues/">Azure Storage Queue</a> service using <strong>Azure APIs v12</strong>. However, in the case of versions above v12,
 we will see if this component can adopt these changes depending on how much breaking changes can result.</p>
 </div>
 <div class="paragraph">
@@ -1880,13 +1936,15 @@ for this component:</p>
 </div>
 </div>
 <div class="paragraph">
-<p>In case of consumer, accountName and queueName are required. In case of producer, it depends on the operation that being
-requested, for example if operation is on a service level, e.b: listQueues, only accountName is required, but in case
-of operation being requested on the queue level, e.g: createQueue, sendMessage.. etc, both accountName and queueName are required.</p>
+<p>In the case of consumer, <code>accountName</code> and <code>queueName</code> are required.</p>
+</div>
+<div class="paragraph">
+<p>In the case of producer, it depends on the operation that being requested, for example, if operation is on a service level, e.b: <code>listQueues</code>, only <code>accountName</code> is required, but in the case
+of operation being requested on the queue level, for example, <code>createQueue, `sendMessage</code>, and so on, both <code>accountName</code> and <code>queueName</code> are required.</p>
 </div>
 <div class="paragraph">
 <p>The queue will be created if it does not already exist.
-You can append query options to the URI in the following format, ?options=value&amp;option2=value&amp;&#8230;&#8203;</p>
+You can append query options to the URI in the following format: <code>?options=value&amp;option2=value&amp;&#8230;&#8203;</code></p>
 </div>
 </div>
 </div>
@@ -1910,14 +1968,14 @@ You can append query options to the URI in the following format, ?options=value&
 <h3 id="_configuring_component_options"><a class="anchor" href="#_configuring_component_options"></a>Configuring Component Options</h3>
 <div class="paragraph">
 <p>The component level is the highest level which holds general and common configurations that are inherited by the endpoints.
-For example a component may have security settings, credentials for authentication, urls for network connection and so forth.</p>
+For example, a component may have security settings, credentials for authentication, urls for network connection and so forth.</p>
 </div>
 <div class="paragraph">
 <p>Some components only have a few options, and others may have many. Because components typically have pre configured defaults
 that are commonly used, then you may often only need to configure a few options on a component; or none at all.</p>
 </div>
 <div class="paragraph">
-<p>Configuring components can be done with the <a href="../../manual/component-dsl.html" class="xref page">Component DSL</a>,
+<p>Configuring components can be done with the <a href="../../manual/4.10.x/component-dsl.html" class="xref page">Component DSL</a>,
 in a configuration file (application.properties|yaml), or directly with Java code.</p>
 </div>
 </div>
@@ -1930,11 +1988,11 @@ or as a producer (to), or used for both.</p>
 </div>
 <div class="paragraph">
 <p>Configuring endpoints is most often done directly in the endpoint URI as path and query parameters. You can also use
-the <a href="../../manual/Endpoint-dsl.html" class="xref page">Endpoint DSL</a> and <a href="../../manual/dataformat-dsl.html" class="xref page">DataFormat DSL</a>
+the <a href="../../manual/4.10.x/Endpoint-dsl.html" class="xref page">Endpoint DSL</a> and <a href="../../manual/4.10.x/dataformat-dsl.html" class="xref page">DataFormat DSL</a>
 as a <em>type safe</em> way of configuring endpoints and data formats in Java.</p>
 </div>
 <div class="paragraph">
-<p>A good practice when configuring options is to use <a href="../../manual/using-propertyplaceholder.html" class="xref page">Property Placeholders</a>,
+<p>A good practice when configuring options is to use <a href="../../manual/4.10.x/using-propertyplaceholder.html" class="xref page">Property Placeholders</a>,
 which allows to not hardcode urls, port numbers, sensitive information, and other settings.
 In other words placeholders allows to externalize the configuration from your code, and gives more flexibility and reuse.</p>
 </div>
@@ -2146,7 +2204,7 @@ In other words placeholders allows to externalize the configuration from your co
 <td class="tableblock halign-left valign-top"><p class="tableblock"><a id="_component_option_timeToLive"></a>
 <a href="#_component_option_timeToLive" class="anchor"></a><strong>timeToLive</strong> (queue)</p></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>How long the message will stay alive in the queue. If unset the value will default to 7 days, if -1 is passed the message will not expire. The time to live must be -1 or any positive number. The format should be in this form: PnDTnHnMn.nS., e.g: PT20.345S&#8201;&#8212;&#8201;parses as 20.345 seconds, P2D&#8201;&#8212;&#8201;parses as 2 days However, in case you are using EndpointDsl/ComponentDsl, you can do something like Duration.ofSeconds() since these Java APIs are typesafe.</p>
+<p>How long the message will stay alive in the queue. If unset the value will default to 7 days, if -1 is passed the message will not expire. The time to live must be -1 or any positive number. The format should be in this form: PnDTnHnMn.nS., for example, PT20.345S&#8201;&#8212;&#8201;parses as 20.345 seconds, P2D&#8201;&#8212;&#8201;parses as 2 days However, in case you are using EndpointDsl/ComponentDsl, you can do something like Duration.ofSeconds() since these Java APIs are typesafe.</p>
 </div></div></td>
 <td class="tableblock halign-center valign-top"></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Duration</p></td>
@@ -2155,7 +2213,7 @@ In other words placeholders allows to externalize the configuration from your co
 <td class="tableblock halign-left valign-top"><p class="tableblock"><a id="_component_option_visibilityTimeout"></a>
 <a href="#_component_option_visibilityTimeout" class="anchor"></a><strong>visibilityTimeout</strong> (queue)</p></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>The timeout period for how long the message is invisible in the queue. The timeout must be between 1 seconds and 7 days. The format should be in this form: PnDTnHnMn.nS., e.g: PT20.345S&#8201;&#8212;&#8201;parses as 20.345 seconds, P2D&#8201;&#8212;&#8201;parses as 2 days However, in case you are using EndpointDsl/ComponentDsl, you can do something like Duration.ofSeconds() since these Java APIs are typesafe.</p>
+<p>The timeout period for how long the message is invisible in the queue. The timeout must be between 1 seconds and 7 days. The format should be in this form: PnDTnHnMn.nS., for example, PT20.345S&#8201;&#8212;&#8201;parses as 20.345 seconds, P2D&#8201;&#8212;&#8201;parses as 2 days However, in case you are using EndpointDsl/ComponentDsl, you can do something like Duration.ofSeconds() since these Java APIs are typesafe.</p>
 </div></div></td>
 <td class="tableblock halign-center valign-top"></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Duration</p></td>
@@ -2446,7 +2504,7 @@ In other words placeholders allows to externalize the configuration from your co
 <td class="tableblock halign-left valign-top"><p class="tableblock"><a id="_endpoint_query_option_timeToLive"></a>
 <a href="#_endpoint_query_option_timeToLive" class="anchor"></a><strong>timeToLive</strong> (queue)</p></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>How long the message will stay alive in the queue. If unset the value will default to 7 days, if -1 is passed the message will not expire. The time to live must be -1 or any positive number. The format should be in this form: PnDTnHnMn.nS., e.g: PT20.345S&#8201;&#8212;&#8201;parses as 20.345 seconds, P2D&#8201;&#8212;&#8201;parses as 2 days However, in case you are using EndpointDsl/ComponentDsl, you can do something like Duration.ofSeconds() since these Java APIs are typesafe.</p>
+<p>How long the message will stay alive in the queue. If unset the value will default to 7 days, if -1 is passed the message will not expire. The time to live must be -1 or any positive number. The format should be in this form: PnDTnHnMn.nS., for example, PT20.345S&#8201;&#8212;&#8201;parses as 20.345 seconds, P2D&#8201;&#8212;&#8201;parses as 2 days However, in case you are using EndpointDsl/ComponentDsl, you can do something like Duration.ofSeconds() since these Java APIs are typesafe.</p>
 </div></div></td>
 <td class="tableblock halign-center valign-top"></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Duration</p></td>
@@ -2455,7 +2513,7 @@ In other words placeholders allows to externalize the configuration from your co
 <td class="tableblock halign-left valign-top"><p class="tableblock"><a id="_endpoint_query_option_visibilityTimeout"></a>
 <a href="#_endpoint_query_option_visibilityTimeout" class="anchor"></a><strong>visibilityTimeout</strong> (queue)</p></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>The timeout period for how long the message is invisible in the queue. The timeout must be between 1 seconds and 7 days. The format should be in this form: PnDTnHnMn.nS., e.g: PT20.345S&#8201;&#8212;&#8201;parses as 20.345 seconds, P2D&#8201;&#8212;&#8201;parses as 2 days However, in case you are using EndpointDsl/ComponentDsl, you can do something like Duration.ofSeconds() since these Java APIs are typesafe.</p>
+<p>The timeout period for how long the message is invisible in the queue. The timeout must be between 1 seconds and 7 days. The format should be in this form: PnDTnHnMn.nS., for example, PT20.345S&#8201;&#8212;&#8201;parses as 20.345 seconds, P2D&#8201;&#8212;&#8201;parses as 2 days However, in case you are using EndpointDsl/ComponentDsl, you can do something like Duration.ofSeconds() since these Java APIs are typesafe.</p>
 </div></div></td>
 <td class="tableblock halign-center valign-top"></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Duration</p></td>
@@ -2666,7 +2724,7 @@ In other words placeholders allows to externalize the configuration from your co
 <p><strong>Required information options:</strong></p>
 </div>
 <div class="paragraph">
-<p>To use this component, you have multiple options in order to provide the required Azure authentication information:</p>
+<p>To use this component, you have multiple options to provide the required Azure authentication information:</p>
 </div>
 <div class="ulist">
 <ul>
@@ -2674,7 +2732,7 @@ In other words placeholders allows to externalize the configuration from your co
 <p>By providing your own QueueServiceClient instance which can be injected into <code>serviceClient</code>.</p>
 </li>
 <li>
-<p>Via Azure Identity, when specifying <code>credentialType=AZURE_IDENTITY</code> and providing required <a href="https://github.com/Azure/azure-sdk-for-java/tree/main/sdk/identity/azure-identity#environment-variables">environment variables</a>. This enables service principal (e.g. app registration) authentication with secret/certificate as well as username password.</p>
+<p>Via Azure Identity, when specifying <code>credentialType=AZURE_IDENTITY</code> and providing required <a href="https://github.com/Azure/azure-sdk-for-java/tree/main/sdk/identity/azure-identity#environment-variables">environment variables</a>. This enables service principal (for example, app registration) authentication with secret/certificate as well as username password.</p>
 </li>
 <li>
 <p>Via shared storage account key, when specifying <code>credentialType=SHARED_ACCOUNT_KEY</code> and providing <code>accountName</code> and <code>accessKey</code> for your Azure account, this is the simplest way to get started. The accessKey can be generated through your Azure portal. Note that this is the default authentication strategy.</p>
@@ -2691,7 +2749,7 @@ In other words placeholders allows to externalize the configuration from your co
 <h2 id="_usage"><a class="anchor" href="#_usage"></a>Usage</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>For example in order to get a message content from the queue <code>messageQueue</code>
+<p>For example, to get a message content from the queue <code>messageQueue</code>
 in the <code>storageAccount</code> storage account and, use the following snippet:</p>
 </div>
 <div class="listingblock">
@@ -2954,14 +3012,14 @@ context.getRegistry().bind("client", client);</code></pre>
 <h3 id="_automatic_detection_of_queueserviceclient_client_in_registry"><a class="anchor" href="#_automatic_detection_of_queueserviceclient_client_in_registry"></a>Automatic detection of QueueServiceClient client in registry</h3>
 <div class="paragraph">
 <p>The component is capable of detecting the presence of an QueueServiceClient bean into the registry.
-If it&#8217;s the only instance of that type it will be used as client and you won&#8217;t have to define it as uri parameter, like the example above.
+If it&#8217;s the only instance of that type, it will be used as the client, and you won&#8217;t have to define it as uri parameter, like the example above.
 This may be really useful for smarter configuration of the endpoint.</p>
 </div>
 </div>
 <div class="sect2">
 <h3 id="_azure_storage_queue_producer_operations"><a class="anchor" href="#_azure_storage_queue_producer_operations"></a>Azure Storage Queue Producer operations</h3>
 <div class="paragraph">
-<p>Camel Azure Storage Queue component provides wide range of operations on the producer side:</p>
+<p>Camel Azure Storage Queue component provides a wide range of operations on the producer side:</p>
 </div>
 <div class="paragraph">
 <p><strong>Operations on the service level</strong></p>
@@ -3019,8 +3077,8 @@ This may be really useful for smarter configuration of the endpoint.</p>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>sendMessage</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Default Producer Operation</strong> Sends a message with a given time-to-live and a timeout period where the message is invisible in the queue. The message text is evaluated from the exchange message body.
-                By default, if the queue doesn`t exist, it will create an empty queue first. If you want to disable this, set the config <code>createQueue</code> or header <code>CamelAzureStorageQueueCreateQueue</code> to <code>false</code>.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Default Producer Operation</strong> Sends a message with a given time-to-live and timeout period where the message is invisible in the queue. The message text is evaluated from the exchange message body.
+                By default, if the queue doesn&#8217;t exist, it will create an empty queue first. If you want to disable this, set the config <code>createQueue</code> or header <code>CamelAzureStorageQueueCreateQueue</code> to <code>false</code>.</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>deleteMessage</code></p></td>
@@ -3028,7 +3086,7 @@ This may be really useful for smarter configuration of the endpoint.</p>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>receiveMessages</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Retrieves up to the maximum number of messages from the queue and hides them from other operations for the timeout period. However it will not dequeue the message from the queue due to reliability reasons.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Retrieves up to the maximum number of messages from the queue and hides them from other operations for the timeout period. However, it will not dequeue the message from the queue due to reliability reasons.</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>peekMessages</code></p></td>
@@ -3047,7 +3105,7 @@ This may be really useful for smarter configuration of the endpoint.</p>
 <div class="sect2">
 <h3 id="_consumer_examples"><a class="anchor" href="#_consumer_examples"></a>Consumer Examples</h3>
 <div class="paragraph">
-<p>To consume a queue into a file component with maximum 5 messages in one batch, this can be done like this:</p>
+<p>To consume a queue into a file component with maximum five messages in one batch, this can be done like this:</p>
 </div>
 <div class="listingblock">
 <div class="content">
@@ -3071,7 +3129,7 @@ This may be really useful for smarter configuration of the endpoint.</p>
     .process(exchange -&gt; {
       // set the header you want the producer to evaluate, refer to the previous
       // section to learn about the headers that can be set
-      // e.g, to only returns list of queues with 'awesome' prefix:
+      // for example, to only returns a list of queues with 'awesome' prefix:
       exchange.getIn().setHeader(QueueConstants.QUEUES_SEGMENT_OPTIONS, new QueuesSegmentOptions().setPrefix("awesome"));
      })
     .to("azure-storage-queue://cameldev?serviceClient=#client&amp;operation=listQueues")
@@ -3092,7 +3150,7 @@ This may be really useful for smarter configuration of the endpoint.</p>
     .process(exchange -&gt; {
       // set the header you want the producer to evaluate, refer to the previous
       // section to learn about the headers that can be set
-      // e.g:
+      // For example:
       exchange.getIn().setHeader(QueueConstants.QUEUE_NAME, "overrideName");
      })
     .to("azure-storage-queue://cameldev/test?serviceClient=#client&amp;operation=createQueue");</code></pre>
@@ -3111,7 +3169,7 @@ This may be really useful for smarter configuration of the endpoint.</p>
     .process(exchange -&gt; {
       // set the header you want the producer to evaluate, refer to the previous
       // section to learn about the headers that can be set
-      // e.g:
+      // For example:
       exchange.getIn().setHeader(QueueConstants.QUEUE_NAME, "overrideName");
      })
     .to("azure-storage-queue://cameldev/test?serviceClient=#client&amp;operation=deleteQueue");</code></pre>
@@ -3130,7 +3188,7 @@ This may be really useful for smarter configuration of the endpoint.</p>
     .process(exchange -&gt; {
       // set the header you want the producer to evaluate, refer to the previous
       // section to learn about the headers that can be set
-      // e.g:
+      // For example:
       exchange.getIn().setHeader(QueueConstants.QUEUE_NAME, "overrideName");
      })
     .to("azure-storage-queue://cameldev/test?serviceClient=#client&amp;operation=clearQueue");</code></pre>
@@ -3149,7 +3207,7 @@ This may be really useful for smarter configuration of the endpoint.</p>
     .process(exchange -&gt; {
       // set the header you want the producer to evaluate, refer to the previous
       // section to learn about the headers that can be set
-      // e.g:
+      // For example:
       exchange.getIn().setBody("message to send");
       // we set a visibility of 1min
       exchange.getIn().setHeader(QueueConstants.VISIBILITY_TIMEOUT, Duration.ofMinutes(1));
@@ -3170,7 +3228,7 @@ This may be really useful for smarter configuration of the endpoint.</p>
     .process(exchange -&gt; {
       // set the header you want the producer to evaluate, refer to the previous
       // section to learn about the headers that can be set
-      // e.g:
+      // For example:
       // Mandatory header:
       exchange.getIn().setHeader(QueueConstants.MESSAGE_ID, "1");
       // Mandatory header:
@@ -3228,7 +3286,7 @@ This may be really useful for smarter configuration of the endpoint.</p>
    .process(exchange -&gt; {
        // set the header you want the producer to evaluate, refer to the previous
        // section to learn about the headers that can be set
-       // e.g:
+       // For example:
        exchange.getIn().setBody("new message text");
        // Mandatory header:
        exchange.getIn().setHeader(QueueConstants.MESSAGE_ID, "1");
@@ -3244,7 +3302,7 @@ This may be really useful for smarter configuration of the endpoint.</p>
 <div class="sect2">
 <h3 id="_development_notes_important"><a class="anchor" href="#_development_notes_important"></a>Development Notes (Important)</h3>
 <div class="paragraph">
-<p>When developing on this component, you will need to obtain your Azure accessKey in order to run the integration tests. In addition to the mocked unit tests
+<p>When developing on this component, you will need to obtain your Azure <code>accessKey</code> to run the integration tests. In addition to the mocked unit tests,
 you <strong>will need to run the integration tests with every change you make or even client upgrade as the Azure client can break things even on minor versions upgrade.</strong>
 To run the integration tests, on this component directory, run the following maven command:</p>
 </div>
@@ -3256,6 +3314,9 @@ To run the integration tests, on this component directory, run the following mav
 <div class="paragraph">
 <p>Whereby <code>accountName</code> is your Azure account name and <code>accessKey</code> is the access key being generated from Azure portal.</p>
 </div>
+<div class="paragraph">
+<p>Unresolved include directive in modules/ROOT/pages/azure-storage-queue-component.adoc - include::spring-boot:partial$starter.adoc[]</p>
+</div>
 </div>
 </div>
 </div>
@@ -3264,6 +3325,8 @@ To run the integration tests, on this component directory, run the following mav
 </main>
 </div>
 <footer class="footer">
+  <p>This page was built using the Antora default UI.</p>
+  <p>The source code for this UI is licensed under the terms of the MPL-2.0 license.</p>
 </footer>
 <script id="site-script" src="../../_/js/site.js" data-ui-root-path="../../_"></script>
 <script async src="../../_/js/vendor/highlight.js"></script>

@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>FTP :: Red Hat Camel Reference</title>
+    <title>FTP :: Red Hat build of Apache Camel</title>
     <meta name="description" content="Upload and download files to/from FTP servers.">
     <meta name="generator" content="Antora 3.1.4">
     <link rel="stylesheet" href="../../_/css/site.css">
@@ -12,7 +12,7 @@
 <header class="header">
   <nav class="navbar">
     <div class="navbar-brand">
-      <a class="navbar-item" href="../../manual/index.html">Red Hat build of Apache Camel manual</a>
+      <a class="navbar-item" href="/">Red Hat build of Apache Camel</a>
       <button class="navbar-burger" data-target="topbar-nav">
         <span></span>
         <span></span>
@@ -22,11 +22,12 @@
   </nav>
 </header>
 <div class="body">
-<div class="nav-container" data-component="components" data-version="next">
+<div class="nav-container" data-component="components" data-version="4.8.x">
   <aside class="nav">
     <div class="panels">
 <div class="nav-panel-menu is-active" data-panel="menu">
   <nav class="nav-menu">
+    <button class="nav-menu-toggle" aria-label="Toggle expand/collapse all" style="display: none"></button>
     <h3 class="title"><a href="index.html">Camel Components</a></h3>
 <ul class="nav-list">
   <li class="nav-item" data-depth="0">
@@ -36,7 +37,46 @@
     <a class="nav-link" href="index.html">Components</a>
 <ul class="nav-list">
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="activemq-component.html">ActiveMQ</a>
+    <a class="nav-link" href="activemq-component.html">ActiveMQ 5.x</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="activemq6-component.html">ActiveMQ 6.x</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="ai-summary.html">AI</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="chatscript-component.html">ChatScript</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="djl-component.html">Deep Java Library</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="langchain4j-chat-component.html">LangChain4j Chat</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="langchain4j-embeddings-component.html">LangChain4j Embeddings</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="langchain4j-tokenizer-component.html">LangChain4j Tokenizer</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="langchain4j-tools-component.html">LangChain4j Tools</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="langchain4j-web-search-component.html">LangChain4j Web Search</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="milvus-component.html">Milvus</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="pinecone-component.html">Pinecone</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="qdrant-component.html">Qdrant</a>
+  </li>
+</ul>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="amqp-component.html">AMQP</a>
@@ -65,6 +105,15 @@
 <ul class="nav-list">
   <li class="nav-item" data-depth="3">
     <a class="nav-link" href="aws2-athena-component.html">AWS Athena</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="aws-bedrock-component.html">AWS Bedrock</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="aws-bedrock-agent-component.html">AWS Bedrock Agent</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="aws-bedrock-agent-runtime-component.html">AWS Bedrock Agent Runtime</a>
   </li>
   <li class="nav-item" data-depth="3">
     <a class="nav-link" href="aws-cloudtrail-component.html">AWS Cloudtrail</a>
@@ -169,7 +218,7 @@
     <a class="nav-link" href="azure-storage-blob-component.html">Azure Storage Blob Service</a>
   </li>
   <li class="nav-item" data-depth="3">
-    <a class="nav-link" href="azure-storage-datalake-component.html">Azure Storage Datalake Service</a>
+    <a class="nav-link" href="azure-storage-datalake-component.html">Azure Storage Data Lake Service</a>
   </li>
   <li class="nav-item" data-depth="3">
     <a class="nav-link" href="azure-storage-queue-component.html">Azure Storage Queue Service</a>
@@ -202,9 +251,6 @@
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="cql-component.html">Cassandra CQL</a>
-  </li>
-  <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="chatscript-component.html">ChatScript</a>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="chunk-component.html">Chunk</a>
@@ -277,9 +323,6 @@
     <a class="nav-link" href="debezium-sqlserver-component.html">Debezium SQL Server Connector</a>
   </li>
 </ul>
-  </li>
-  <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="djl-component.html">Deep Java Library</a>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="dhis2-component.html">DHIS2</a>
@@ -395,6 +438,9 @@
   </li>
   <li class="nav-item" data-depth="3">
     <a class="nav-link" href="google-pubsub-component.html">Google Pubsub</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="google-pubsub-lite-component.html">Google PubSub Lite</a>
   </li>
   <li class="nav-item" data-depth="3">
     <a class="nav-link" href="google-secret-manager-component.html">Google Secret Manager</a>
@@ -687,7 +733,7 @@
     <a class="nav-link" href="ldif-component.html">LDIF</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="log-component.html">Log</a>
+    <a class="nav-link" href="log-component.html">Log Data</a>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="lucene-component.html">Lucene</a>
@@ -900,16 +946,49 @@
     <a class="nav-link" href="smb-component.html">SMB</a>
   </li>
   <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="smooks-component.html">Smooks</a>
+  </li>
+  <li class="nav-item" data-depth="2">
     <a class="nav-link" href="smpp-component.html">SMPP</a>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="snmp-component.html">SNMP</a>
   </li>
   <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="solr-component.html">Solr</a>
+  </li>
+  <li class="nav-item" data-depth="2">
     <a class="nav-link" href="splunk-component.html">Splunk</a>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="splunk-hec-component.html">Splunk HEC</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="spring-summary.html">Spring</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="spring-batch-component.html">Spring Batch</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="spring-event-component.html">Spring Event</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="spring-jdbc-component.html">Spring JDBC</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="spring-ldap-component.html">Spring LDAP</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="spring-rabbitmq-component.html">Spring RabbitMQ</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="spring-redis-component.html">Spring Redis</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="spring-ws-component.html">Spring WebService</a>
+  </li>
+</ul>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="sql-component.html">SQL</a>
@@ -937,6 +1016,18 @@
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="stub-component.html">Stub</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="tahu-summary.html">Tahu</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="tahu-edge-component.html">Tahu Edge Node / Device</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="tahu-host-component.html">Tahu Host Application</a>
+  </li>
+</ul>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="telegram-component.html">Telegram</a>
@@ -999,7 +1090,7 @@
     <a class="nav-link" href="whatsapp-component.html">WhatsApp</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="wordpress-component.html">Wordpress</a>
+    <a class="nav-link" href="wordpress-component.html">WordPress</a>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="workday-component.html">Workday</a>
@@ -1392,7 +1483,13 @@
     <a class="nav-link" href="others/openapi-java.html">Openapi Java</a>
   </li>
   <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="others/openapi-validator.html">Openapi Validator</a>
+  </li>
+  <li class="nav-item" data-depth="2">
     <a class="nav-link" href="others/opentelemetry.html">OpenTelemetry</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="others/platform-http-jolokia.html">Platform HTTP Jolokia</a>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="others/platform-http-main.html">Platform Http Main</a>
@@ -1540,7 +1637,7 @@
     <a class="nav-link" href="eips/event-message.html">Event Message</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="eips/failover-eip.html">Failover</a>
+    <a class="nav-link" href="eips/failoverLoadBalancer-eip.html">Failover Load Balancer</a>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="eips/faultToleranceConfiguration-eip.html">Fault Tolerance Configuration</a>
@@ -1570,13 +1667,13 @@
     <a class="nav-link" href="eips/loadBalance-eip.html">Load Balance</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="eips/log-eip.html">Log</a>
+    <a class="nav-link" href="eips/log-eip.html">Logger</a>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="eips/loop-eip.html">Loop</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="eips/marshal-eip.html">Marshal EIP</a>
+    <a class="nav-link" href="eips/marshal-eip.html">Marshal</a>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="eips/message.html">Message</a>
@@ -1633,6 +1730,9 @@
     <a class="nav-link" href="eips/point-to-point-channel.html">Point to Point Channel</a>
   </li>
   <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="eips/poll-eip.html">Poll</a>
+  </li>
+  <li class="nav-item" data-depth="2">
     <a class="nav-link" href="eips/pollEnrich-eip.html">Poll Enrich</a>
   </li>
   <li class="nav-item" data-depth="2">
@@ -1648,7 +1748,7 @@
     <a class="nav-link" href="eips/publish-subscribe-channel.html">Publish Subscribe Channel</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="eips/random-eip.html">Random</a>
+    <a class="nav-link" href="eips/randomLoadBalancer-eip.html">Random Load Balancer</a>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="eips/recipientList-eip.html">Recipient List</a>
@@ -1690,7 +1790,7 @@
     <a class="nav-link" href="eips/rollback-eip.html">Rollback</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="eips/roundRobin-eip.html">Round Robin</a>
+    <a class="nav-link" href="eips/roundRobinLoadBalancer-eip.html">Round Robin Load Balancer</a>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="eips/routingSlip-eip.html">Routing Slip</a>
@@ -1702,7 +1802,7 @@
     <a class="nav-link" href="eips/sample-eip.html">Sample</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="eips/scatter-gather.html">Scatter Gather</a>
+    <a class="nav-link" href="eips/scatter-gather.html">Scatter-Gather</a>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="eips/script-eip.html">Script</a>
@@ -1732,6 +1832,9 @@
     <a class="nav-link" href="eips/setVariable-eip.html">Set Variable</a>
   </li>
   <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="eips/setVariables-eip.html">Set Variables</a>
+  </li>
+  <li class="nav-item" data-depth="2">
     <a class="nav-link" href="eips/sort-eip.html">Sort</a>
   </li>
   <li class="nav-item" data-depth="2">
@@ -1741,7 +1844,7 @@
     <a class="nav-link" href="eips/step-eip.html">Step</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="eips/sticky-eip.html">Sticky</a>
+    <a class="nav-link" href="eips/stickyLoadBalancer-eip.html">Sticky Load Balancer</a>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="eips/stop-eip.html">Stop</a>
@@ -1762,7 +1865,7 @@
     <a class="nav-link" href="eips/toD-eip.html">To D</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="eips/topic-eip.html">Topic</a>
+    <a class="nav-link" href="eips/topicLoadBalancer-eip.html">Topic Load Balancer</a>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="eips/transactional-client.html">Transactional Client</a>
@@ -1771,13 +1874,13 @@
     <a class="nav-link" href="eips/transform-eip.html">Transform</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="eips/unmarshal-eip.html">Unmarshal EIP</a>
+    <a class="nav-link" href="eips/unmarshal-eip.html">Unmarshal</a>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="eips/validate-eip.html">Validate</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="eips/weighted-eip.html">Weighted</a>
+    <a class="nav-link" href="eips/weightedLoadBalancer-eip.html">Weighted Load Balancer</a>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="eips/wireTap-eip.html">Wire Tap</a>
@@ -1792,22 +1895,40 @@
 <div class="nav-panel-explore" data-panel="explore">
   <div class="context">
     <span class="title">Camel Components</span>
-    <span class="version">Next (Pre-release)</span>
+    <span class="version">4.8.x</span>
   </div>
   <ul class="components">
     <li class="component is-current">
-      <a class="title" href="index.html">Camel Components</a>
+      <div class="title"><a href="../4.10.x/index.html">Camel Components</a></div>
       <ul class="versions">
-        <li class="version is-current is-latest">
-          <a href="index.html">Next (Pre-release)</a>
+        <li class="version is-latest">
+          <a href="../4.10.x/index.html">4.10.x (LTS)</a>
+        </li>
+        <li class="version is-current">
+          <a href="index.html">4.8.x</a>
+        </li>
+        <li class="version">
+          <a href="../4.4.x/index.html">4.4.x</a>
+        </li>
+        <li class="version">
+          <a href="../4.0.x/index.html">4.0.x</a>
         </li>
       </ul>
     </li>
     <li class="component">
-      <a class="title" href="../../manual/index.html">User manual</a>
+      <div class="title"><a href="../../manual/4.10.x/index.html">User manual</a></div>
       <ul class="versions">
         <li class="version is-latest">
-          <a href="../../manual/index.html">default</a>
+          <a href="../../manual/4.10.x/index.html">4.10.x</a>
+        </li>
+        <li class="version">
+          <a href="../../manual/4.8.x/index.html">4.8.x</a>
+        </li>
+        <li class="version">
+          <a href="../../manual/4.4.x/index.html">4.4.x</a>
+        </li>
+        <li class="version">
+          <a href="../../manual/4.0.x/index.html">4.0.x</a>
         </li>
       </ul>
     </li>
@@ -1819,7 +1940,7 @@
 <main class="article">
 <div class="toolbar" role="navigation">
 <button class="nav-toggle"></button>
-  <a href="../../manual/index.html" class="home-link"></a>
+  <a href="../../manual/4.10.x/index.html" class="home-link"></a>
 <nav class="breadcrumbs" aria-label="breadcrumbs">
   <ul>
     <li><a href="index.html">Camel Components</a></li>
@@ -1827,6 +1948,16 @@
     <li><a href="ftp-component.html">FTP</a></li>
   </ul>
 </nav>
+<div class="page-versions">
+  <button class="version-menu-toggle" title="Show other versions of page">4.8.x</button>
+  <div class="version-menu">
+    <a class="version" href="../4.10.x/ftp-component.html">4.10.x (LTS)</a>
+    <a class="version is-current" href="ftp-component.html">4.8.x</a>
+    <a class="version" href="../4.4.x/ftp-component.html">4.4.x</a>
+    <a class="version is-missing" href="../4.0.x/index.html">4.0.x</a>
+  </div>
+</div>
+<div class="edit-this-page"><a href="https://github.com/rhaetor/rh-camel-jboss/edit/camel-4.8.0-branch/docs/components/modules/ROOT/pages/ftp-component.adoc">Edit this Page</a></div>
 </div>
   <div class="content">
 <aside class="toc sidebar" data-title="Contents" data-levels="2">
@@ -1847,13 +1978,8 @@
 SFTP protocols.</p>
 </div>
 <div class="paragraph">
-<p>When consuming from remote FTP server make sure you read the section titled <em>Default when consuming files</em>
+<p>When consuming from remote FTP server, make sure you read the section <a href="#FTP-DefaultWhenConsumingFiles">Default when consuming files</a>
 further below for details related to consuming files.</p>
-</div>
-<div class="paragraph">
-<p>Absolute path is <strong>not</strong> supported. Camel translates absolute path to relative by trimming all
-leading slashes from <code>directoryname</code>. There&#8217;ll be WARN message printed
-in the logs.</p>
 </div>
 <div class="paragraph">
 <p>Maven users will need to add the following dependency to their <code>pom.xml</code>
@@ -1882,9 +2008,24 @@ ftps://[username@]hostname[:port]/directoryname[?options]</pre>
 </div>
 </div>
 <div class="paragraph">
-<p>Where <strong>directoryname</strong> represents the underlying directory. The directory
-name is a relative path. Absolute path&#8217;s is <strong>not</strong> supported. The
+<p>Where <code>directoryname</code> represents the underlying directory. The directory
+name is a relative path. Absolute path is <strong>not</strong> supported. The
 relative path can contain nested folders, such as /inbox/us.</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>Camel translates the absolute path to relative by trimming all leading slashes from <code>directoryname</code>.
+There&#8217;ll be a warning (<code>WARN</code> level) message printed in the logs.</p>
+</div>
+</td>
+</tr>
+</table>
 </div>
 <div class="paragraph">
 <p>The <code>autoCreate</code> option is supported. When consumer
@@ -1904,11 +2045,11 @@ according to the protocol (ftp = 21, sftp = 22, ftps = 2222).</p>
 </div>
 <div class="paragraph">
 <p>This component uses two different libraries for the actual FTP work. FTP
-and FTPS uses <a href="http://commons.apache.org/net/">Apache Commons Net</a> while
+and FTPS use <a href="http://commons.apache.org/net/">Apache Commons Net</a> while
 SFTP uses <a href="http://www.jcraft.com/jsch/">JCraft JSCH</a>.</p>
 </div>
 <div class="paragraph">
-<p>FTPS (also known as FTP Secure) is an extension to FTP that adds
+<p>FTPS, also known as FTP Secure, is an extension to FTP that adds
 support for the Transport Layer Security (TLS) and the Secure Sockets
 Layer (SSL) cryptographic protocols.</p>
 </div>
@@ -1933,37 +2074,65 @@ Layer (SSL) cryptographic protocols.</p>
 <div class="sect2">
 <h3 id="_configuring_component_options"><a class="anchor" href="#_configuring_component_options"></a>Configuring Component Options</h3>
 <div class="paragraph">
-<p>The component level is the highest level which holds general and common configurations that are inherited by the endpoints.
-For example a component may have security settings, credentials for authentication, urls for network connection and so forth.</p>
+<p>At the component level, you set general and shared configurations that are, then, inherited by the endpoints. It is the highest configuration level.</p>
 </div>
 <div class="paragraph">
-<p>Some components only have a few options, and others may have many. Because components typically have pre configured defaults
-that are commonly used, then you may often only need to configure a few options on a component; or none at all.</p>
+<p>For example, a component may have security settings, credentials for authentication, urls for network connection and so forth.</p>
 </div>
 <div class="paragraph">
-<p>Configuring components can be done with the <a href="../../manual/component-dsl.html" class="xref page">Component DSL</a>,
-in a configuration file (application.properties|yaml), or directly with Java code.</p>
+<p>Some components only have a few options, and others may have many.
+Because components typically have pre-configured defaults that are commonly used, then you may often only need to configure a few options on a component; or none at all.</p>
+</div>
+<div class="paragraph">
+<p>You can configure components using:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>the <a href="../../manual/4.10.x/component-dsl.html" class="xref page">Component DSL</a>.</p>
+</li>
+<li>
+<p>in a configuration file (<code>application.properties</code>, <code>*.yaml</code> files, etc).</p>
+</li>
+<li>
+<p>directly in the Java code.</p>
+</li>
+</ul>
 </div>
 </div>
 <div class="sect2">
 <h3 id="_configuring_endpoint_options"><a class="anchor" href="#_configuring_endpoint_options"></a>Configuring Endpoint Options</h3>
 <div class="paragraph">
-<p>Where you find yourself configuring the most is on endpoints, as endpoints often have many options, which allows you to
-configure what you need the endpoint to do. The options are also categorized into whether the endpoint is used as consumer (from)
-or as a producer (to), or used for both.</p>
+<p>You usually spend more time setting up endpoints because they have many options.
+These options help you customize what you want the endpoint to do.
+The options are also categorized into whether the endpoint is used as a consumer (<em>from</em>), as a producer (<em>to</em>), or  both.</p>
 </div>
 <div class="paragraph">
-<p>Configuring endpoints is most often done directly in the endpoint URI as path and query parameters. You can also use
-the <a href="../../manual/Endpoint-dsl.html" class="xref page">Endpoint DSL</a> and <a href="../../manual/dataformat-dsl.html" class="xref page">DataFormat DSL</a>
+<p>Configuring endpoints is most often done directly in the endpoint URI as <em>path</em> and <em>query</em> parameters.
+You can also use the <a href="../../manual/4.10.x/Endpoint-dsl.html" class="xref page">Endpoint DSL</a> and <a href="../../manual/4.10.x/dataformat-dsl.html" class="xref page">DataFormat DSL</a>
 as a <em>type safe</em> way of configuring endpoints and data formats in Java.</p>
 </div>
 <div class="paragraph">
-<p>A good practice when configuring options is to use <a href="../../manual/using-propertyplaceholder.html" class="xref page">Property Placeholders</a>,
-which allows to not hardcode urls, port numbers, sensitive information, and other settings.
-In other words placeholders allows to externalize the configuration from your code, and gives more flexibility and reuse.</p>
+<p>A good practice when configuring options is to use <a href="../../manual/4.10.x/using-propertyplaceholder.html" class="xref page">Property Placeholders</a>.</p>
 </div>
 <div class="paragraph">
-<p>The following two sections lists all the options, firstly for the component followed by the endpoint.</p>
+<p>Property placeholders provide a few benefits:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>They help prevent using hardcoded urls, port numbers, sensitive information, and other settings.</p>
+</li>
+<li>
+<p>They allow externalizing the configuration from the code.</p>
+</li>
+<li>
+<p>They help the code to become more flexible and reusable.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>The following two sections list all the options, firstly for the component followed by the endpoint.</p>
 </div>
 </div>
 </div>
@@ -2051,7 +2220,7 @@ In other words placeholders allows to externalize the configuration from your co
 </div>
 </div>
 <div class="paragraph">
-<p>with the following path and query parameters:</p>
+<p>With the following <em>path</em> and <em>query</em> parameters:</p>
 </div>
 <div class="sect2">
 <h3 id="_path_parameters_3_parameters"><a class="anchor" href="#_path_parameters_3_parameters"></a>Path Parameters (3 parameters)</h3>
@@ -2102,7 +2271,7 @@ In other words placeholders allows to externalize the configuration from your co
 </table>
 </div>
 <div class="sect2">
-<h3 id="_query_parameters"><a class="anchor" href="#_query_parameters"></a>Query Parameters (111 parameters)</h3>
+<h3 id="_query_parameters"><a class="anchor" href="#_query_parameters"></a>Query Parameters (112 parameters)</h3>
 <table class="tableblock frame-all grid-all stretch">
 <colgroup>
 <col style="width: 20%;">
@@ -2202,7 +2371,7 @@ In other words placeholders allows to externalize the configuration from your co
 <td class="tableblock halign-left valign-top"><p class="tableblock"><a id="_endpoint_query_option_transferLoggingIntervalSeconds"></a>
 <a href="#_endpoint_query_option_transferLoggingIntervalSeconds" class="anchor"></a><strong>transferLoggingIntervalSeconds</strong> (common)</p></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>Configures the interval in seconds to use when logging the progress of upload and download operations that are in-flight. This is used for logging progress when operations takes longer time.</p>
+<p>Configures the interval in seconds to use when logging the progress of upload and download operations that are in-flight. This is used for logging progress when operations take a longer time.</p>
 </div></div></td>
 <td class="tableblock halign-center valign-top"><p class="tableblock">5</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">int</p></td>
@@ -2245,7 +2414,7 @@ In other words placeholders allows to externalize the configuration from your co
 <td class="tableblock halign-left valign-top"><p class="tableblock"><a id="_endpoint_query_option_transferLoggingVerbose"></a>
 <a href="#_endpoint_query_option_transferLoggingVerbose" class="anchor"></a><strong>transferLoggingVerbose</strong> (common)</p></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>Configures whether the perform verbose (fine grained) logging of the progress of upload and download operations.</p>
+<p>Configures whether perform verbose (fine-grained) logging of the progress of upload and download operations.</p>
 </div></div></td>
 <td class="tableblock halign-center valign-top"><p class="tableblock">false</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">boolean</p></td>
@@ -2317,7 +2486,7 @@ In other words placeholders allows to externalize the configuration from your co
 <td class="tableblock halign-left valign-top"><p class="tableblock"><a id="_endpoint_query_option_resumeDownload"></a>
 <a href="#_endpoint_query_option_resumeDownload" class="anchor"></a><strong>resumeDownload</strong> (consumer)</p></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>Configures whether resume download is enabled. This must be supported by the FTP server (almost all FTP servers support it). In addition the options localWorkDirectory must be configured so downloaded files are stored in a local directory, and the option binary must be enabled, which is required to support resuming of downloads.</p>
+<p>Configures whether resume download is enabled. This must be supported by the FTP server (almost all FTP servers support it). In addition, the options localWorkDirectory must be configured so downloaded files are stored in a local directory, and the option binary must be enabled, which is required to support resuming of downloads.</p>
 </div></div></td>
 <td class="tableblock halign-center valign-top"><p class="tableblock">false</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">boolean</p></td>
@@ -2393,7 +2562,7 @@ In other words placeholders allows to externalize the configuration from your co
 <td class="tableblock halign-left valign-top"><p class="tableblock"><a id="_endpoint_query_option_handleDirectoryParserAbsoluteResult"></a>
 <a href="#_endpoint_query_option_handleDirectoryParserAbsoluteResult" class="anchor"></a><strong>handleDirectoryParserAbsoluteResult</strong> (consumer (advanced))</p></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>Allows you to set how the consumer will handle subfolders and files in the path if the directory parser results in with absolute paths The reason for this is that some FTP servers may return file names with absolute paths, and if so then the FTP component needs to handle this by converting the returned path into a relative path.</p>
+<p>Allows you to set how the consumer will handle subfolders and files in the path if the directory parser results in with absolute paths. The reason for this is that some FTP servers may return file names with absolute paths, and if so, then the FTP component needs to handle this by converting the returned path into a relative path.</p>
 </div></div></td>
 <td class="tableblock halign-center valign-top"><p class="tableblock">false</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">boolean</p></td>
@@ -2608,7 +2777,7 @@ In other words placeholders allows to externalize the configuration from your co
 <td class="tableblock halign-left valign-top"><p class="tableblock"><a id="_endpoint_query_option_chmod"></a>
 <a href="#_endpoint_query_option_chmod" class="anchor"></a><strong>chmod</strong> (producer (advanced))</p></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>Allows you to set chmod on the stored file. For example chmod=640.</p>
+<p>Allows you to set chmod on the stored file. For example, chmod=640.</p>
 </div></div></td>
 <td class="tableblock halign-center valign-top"></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">String</p></td>
@@ -2671,7 +2840,7 @@ In other words placeholders allows to externalize the configuration from your co
 <td class="tableblock halign-left valign-top"><p class="tableblock"><a id="_endpoint_query_option_activePortRange"></a>
 <a href="#_endpoint_query_option_activePortRange" class="anchor"></a><strong>activePortRange</strong> (advanced)</p></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>Set the client side port range in active mode. The syntax is: minPort-maxPort Both port numbers are inclusive, eg 10000-19999 to include all 1xxxx ports.</p>
+<p>Set the client side port range in active mode. The syntax is: minPort-maxPort Both port numbers are inclusive, e.g., 10000-19999 to include all 1xxxx ports.</p>
 </div></div></td>
 <td class="tableblock halign-center valign-top"></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">String</p></td>
@@ -2886,6 +3055,15 @@ In other words placeholders allows to externalize the configuration from your co
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><a id="_endpoint_query_option_idempotent"></a>
 <a href="#_endpoint_query_option_idempotent" class="anchor"></a><strong>idempotent</strong> (filter)</p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>Option to use the Idempotent Consumer EIP pattern to let Camel skip already processed files. Will by default use a memory based LRUCache that holds 1000 entries. If noop=true then idempotent will be enabled as well to avoid consuming the same files over and over again.</p>
+</div></div></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">false</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Boolean</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a id="_endpoint_query_option_idempotentEager"></a>
+<a href="#_endpoint_query_option_idempotentEager" class="anchor"></a><strong>idempotentEager</strong> (filter)</p></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p>Option to use the Idempotent Consumer EIP pattern to let Camel skip already processed files. Will by default use a memory based LRUCache that holds 1000 entries. If noop=true then idempotent will be enabled as well to avoid consuming the same files over and over again.</p>
 </div></div></td>
@@ -3484,11 +3662,13 @@ In other words placeholders allows to externalize the configuration from your co
 </div>
 </div>
 <div class="sect1">
-<h2 id="_ftps_component_default_trust_store"><a class="anchor" href="#_ftps_component_default_trust_store"></a>FTPS component default trust store</h2>
+<h2 id="_usage"><a class="anchor" href="#_usage"></a>Usage</h2>
 <div class="sectionbody">
+<div class="sect2">
+<h3 id="_ftps_component_default_trust_store"><a class="anchor" href="#_ftps_component_default_trust_store"></a>FTPS component default trust store</h3>
 <div class="paragraph">
 <p>When using the <code>ftpClient.</code> properties related to SSL with the FTPS
-component, the trust store accept all certificates. If you only want
+component, the trust store accepts all certificates. If you only want
 trust selective certificates, you have to configure the trust store with
 the <code>ftpClient.trustStore.xxx</code> options or by configuring a custom
 <code>ftpClient</code>.</p>
@@ -3503,7 +3683,7 @@ configuration of the provided SSLContextParameters instance.</p>
 <code>ftpClientConfig.</code> prefix.</p>
 </div>
 <div class="paragraph">
-<p>For example to set the <code>setDataTimeout</code> on the <code>FTPClient</code> to 30 seconds
+<p>For example, to set the <code>setDataTimeout</code> on the <code>FTPClient</code> to 30 seconds
 you can do:</p>
 </div>
 <div class="listingblock">
@@ -3512,7 +3692,7 @@ you can do:</p>
 </div>
 </div>
 <div class="paragraph">
-<p>You can mix and match and have use both prefixes, for example to
+<p>You can mix and match and use both prefixes, for example, to
 configure date format or timezones.</p>
 </div>
 <div class="listingblock">
@@ -3526,10 +3706,10 @@ configure date format or timezones.</p>
 <div class="paragraph">
 <p>See the documentation of the Apache Commons FTP FTPClientConfig for
 possible options and more details. And as well for Apache Commons FTP
-FTPClient.</p>
+<code>FTPClient</code>.</p>
 </div>
 <div class="paragraph">
-<p>If you do not like having many and long configuration in the url you can
+<p>If you do not like having many and long configurations in the url, you can
 refer to the <code>ftpClient</code> or <code>ftpClientConfig</code> to use by letting Camel
 lookup in the Registry for it.</p>
 </div>
@@ -3538,14 +3718,14 @@ lookup in the Registry for it.</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">   &lt;bean id="myConfig" class="org.apache.commons.net.ftp.FTPClientConfig"&gt;
+<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">   &lt;bean id="myConfig" class="org.apache.commons.net.ftp.FTPClientConfig"&gt;
        &lt;property name="lenientFutureDates" value="true"/&gt;
        &lt;property name="serverLanguageCode" value="fr"/&gt;
    &lt;/bean&gt;</code></pre>
 </div>
 </div>
 <div class="paragraph">
-<p>And then let Camel lookup this bean when you use the # notation in the
+<p>And then let Camel look up this bean when you use the # notation in the
 url.</p>
 </div>
 <div class="listingblock">
@@ -3554,57 +3734,26 @@ url.</p>
 </div>
 </div>
 </div>
-</div>
-<div class="sect1">
-<h2 id="_examples"><a class="anchor" href="#_examples"></a>Examples</h2>
-<div class="sectionbody">
-<div class="listingblock">
-<div class="content">
-<pre>ftp://someone@someftpserver.com/public/upload/images/holiday2008?password=secret&amp;binary=true
-
-ftp://someoneelse@someotherftpserver.co.uk:12049/reports/2008/password=secret&amp;binary=false
-
-ftp://publicftpserver.com/download</pre>
-</div>
-</div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="_concurrency"><a class="anchor" href="#_concurrency"></a>Concurrency</h2>
-<div class="sectionbody">
-<div class="paragraph">
-<p>FTP Consumer does not support concurrency</p>
-</div>
+<div class="sect2">
+<h3 id="_concurrency"><a class="anchor" href="#_concurrency"></a>Concurrency</h3>
 <div class="paragraph">
 <p>The FTP consumer (with the same endpoint) does not support concurrency
-(the backing FTP client is not thread safe).<br>
- You can use multiple FTP consumers to poll from different endpoints. It
-is only a single endpoint that does not support concurrent consumers.</p>
+(the backing FTP client is not thread safe).
+You can use multiple FTP consumers to poll from different endpoints.
+It is only a single endpoint that does not support concurrent consumers.</p>
 </div>
 <div class="paragraph">
 <p>The FTP producer does <strong>not</strong> have this issue, it supports concurrency.</p>
 </div>
 </div>
-</div>
-<div class="sect1">
-<h2 id="_more_information"><a class="anchor" href="#_more_information"></a>More information</h2>
-<div class="sectionbody">
-<div class="paragraph">
-<p>This component is an extension of the File component.
-So there are more samples and details on the File
-component page.</p>
-</div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="_default_when_consuming_files"><a class="anchor" href="#_default_when_consuming_files"></a>Default when consuming files</h2>
-<div class="sectionbody">
+<div class="sect2">
+<h3 id="FTP-DefaultWhenConsumingFiles"><a class="anchor" href="#FTP-DefaultWhenConsumingFiles"></a>Default when consuming files</h3>
 <div class="paragraph">
 <p>The FTP consumer will by default leave the consumed
 files untouched on the remote FTP server. You have to configure it
 explicitly if you want it to delete the files or move them to another
-location. For example you can use <code>delete=true</code> to delete the files, or
-use <code>move=.done</code> to move the files into a hidden done sub directory.</p>
+location. For example, you can use <code>delete=true</code> to delete the files, or
+use <code>move=.done</code> to move the files into a hidden done subdirectory.</p>
 </div>
 <div class="paragraph">
 <p>The regular File consumer is different as it will by
@@ -3612,30 +3761,27 @@ default move files to a <code>.camel</code> sub directory. The reason Camel does
 <strong>not</strong> do this by default for the FTP consumer is that it may lack
 permissions by default to be able to move or delete files.</p>
 </div>
-<div class="sect2">
-<h3 id="_limitations"><a class="anchor" href="#_limitations"></a>limitations</h3>
+<div class="sect3">
+<h4 id="_limitations"><a class="anchor" href="#_limitations"></a>limitations</h4>
 <div class="paragraph">
-<p>The option <strong>readLock</strong> can be used to force Camel <strong>not</strong> to consume files
-that is currently in the progress of being written. However, this option
+<p>The option <code>readLock</code> can be used to force Camel <strong>not</strong> to consume files
+that are currently in the progress of being written. However, this option
 is turned off by default, as it requires that the user has write access.
-See the options table at File2 for more details about
-read locks.<br>
- There are other solutions to avoid consuming files that are currently
+See the options table for more details about read locks.
+There are other solutions to avoid consuming files that are currently
 being written over FTP; for instance, you can write to a temporary
 destination and move the file after it has been written.</p>
 </div>
 <div class="paragraph">
 <p>When moving files using <code>move</code> or <code>preMove</code> option the files are
 restricted to the FTP_ROOT folder. That prevents you from moving files
-outside the FTP area. If you want to move files to another area you can
+outside the FTP area. If you want to move files to another area, you can
 use soft links and move files into a soft linked folder.</p>
 </div>
 </div>
 </div>
-</div>
-<div class="sect1">
-<h2 id="_exchange_properties"><a class="anchor" href="#_exchange_properties"></a>Exchange Properties</h2>
-<div class="sectionbody">
+<div class="sect2">
+<h3 id="_exchange_properties"><a class="anchor" href="#_exchange_properties"></a>Exchange Properties</h3>
 <div class="paragraph">
 <p>Camel sets the following exchange properties</p>
 </div>
@@ -3653,25 +3799,23 @@ use soft links and move files into a soft linked folder.</p>
 <tbody>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>CamelBatchIndex</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Current index out of total number of files being consumed in this batch.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The current index out of total number of files being consumed in this batch.</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>CamelBatchSize</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Total number of files being consumed in this batch.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The total number of files being consumed in this batch.</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>CamelBatchComplete</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">True if there are no more files in this batch.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>true</code> if there are no more files in this batch.</p></td>
 </tr>
 </tbody>
 </table>
 </div>
-</div>
-<div class="sect1">
-<h2 id="_about_timeouts"><a class="anchor" href="#_about_timeouts"></a>About timeouts</h2>
-<div class="sectionbody">
+<div class="sect2">
+<h3 id="_about_timeouts"><a class="anchor" href="#_about_timeouts"></a>About timeouts</h3>
 <div class="paragraph">
-<p>The two set of libraries (see top) has different API for setting
+<p>The two sets of libraries (see top) have different API for setting
 timeout. You can use the <code>connectTimeout</code> option for both of them to set
 a timeout in millis to establish a network connection. An individual
 <code>soTimeout</code> can also be set on the FTP/FTPS, which corresponds to using
@@ -3681,10 +3825,8 @@ for FTP/FTPS as the data timeout, which corresponds to the
 <code>ftpClient.dataTimeout</code> value. All timeout values are in millis.</p>
 </div>
 </div>
-</div>
-<div class="sect1">
-<h2 id="_using_local_work_directory"><a class="anchor" href="#_using_local_work_directory"></a>Using Local Work Directory</h2>
-<div class="sectionbody">
+<div class="sect2">
+<h3 id="_using_local_work_directory"><a class="anchor" href="#_using_local_work_directory"></a>Using Local Work Directory</h3>
 <div class="paragraph">
 <p>Camel supports consuming from remote FTP servers and downloading the
 files directly into a local work directory. This avoids reading the
@@ -3693,14 +3835,14 @@ the local file using <code>FileOutputStream</code>.</p>
 </div>
 <div class="paragraph">
 <p>Camel will store to a local file with the same name as the remote file,
-though with <code>.inprogress</code> as extension while the file is being
-downloaded. Afterwards, the file is renamed to remove the <code>.inprogress</code>
-suffix. And finally, when the Exchange is complete
+though with <code>.inprogress</code> as the extension while the file is being
+downloaded. Afterward, the file is renamed to remove the <code>.inprogress</code>
+suffix. And finally, when the Exchange is complete,
 the local file is deleted.</p>
 </div>
 <div class="paragraph">
 <p>So if you want to download files from a remote FTP server and store it
-as files then you need to route to a file endpoint such as:</p>
+as files, then you need to route to a file endpoint such as:</p>
 </div>
 <div class="listingblock">
 <div class="content">
@@ -3725,14 +3867,12 @@ As Camel knows it&#8217;s a local work file, it can optimize and use a rename in
 </table>
 </div>
 </div>
-</div>
-<div class="sect1">
-<h2 id="_stepwise_changing_directories"><a class="anchor" href="#_stepwise_changing_directories"></a>Stepwise changing directories</h2>
-<div class="sectionbody">
+<div class="sect2">
+<h3 id="_stepwise_changing_directories"><a class="anchor" href="#_stepwise_changing_directories"></a>Stepwise changing directories</h3>
 <div class="paragraph">
 <p>Camel FTP can operate in two modes in terms of
-traversing directories when consuming files (eg downloading) or
-producing files (eg uploading)</p>
+traversing directories when consuming files (e.g., downloading) or
+producing files (e.g., uploading)</p>
 </div>
 <div class="ulist">
 <ul>
@@ -3754,13 +3894,13 @@ stepwise, while others can only download if they do not.</p>
 </div>
 <div class="paragraph">
 <p>Note that stepwise changing of directory will in most cases only work
-when the user is confined to it&#8217;s home directory and when the home
+when the user is confined to its home directory and when the home
 directory is reported as <code>"/"</code>.</p>
 </div>
 <div class="paragraph">
 <p>The difference between the two of them is best illustrated with an
 example. Suppose we have the following directory structure on the remote
-FTP server we need to traverse and download files:</p>
+FTP server, we need to traverse and download files:</p>
 </div>
 <div class="listingblock">
 <div class="content">
@@ -3772,15 +3912,24 @@ FTP server we need to traverse and download files:</p>
 </div>
 </div>
 <div class="paragraph">
-<p>And that we have a file in each of sub-a (a.txt) and sub-b (b.txt)
+<p>And that we have a file in each of <code>sub-a</code> (<code>a.txt</code>) and <code>sub-b</code> (<code>b.txt</code>)
 folder.</p>
 </div>
+<div id="_tabs_1" class="openblock tabs is-sync is-loading">
+<div class="content">
+<div class="ulist tablist">
+<ul>
+<li id="_tabs_1_default_stepwise_enabled" class="tab">
+<p>Default (Stepwise enabled)</p>
+</li>
+<li id="_tabs_1_stepwise_disabled" class="tab">
+<p>Stepwise Disabled</p>
+</li>
+</ul>
 </div>
-</div>
-<div class="sect1">
-<h2 id="_using_stepwisetrue_default_mode"><a class="anchor" href="#_using_stepwisetrue_default_mode"></a>Using stepwise=true (default mode)</h2>
-<div class="sectionbody">
+<div id="_tabs_1_default_stepwise_enabled--panel" class="tabpanel" aria-labelledby="_tabs_1_default_stepwise_enabled">
 <div class="listingblock">
+<div class="title">Using <code>stepwise=true</code> (default mode)</div>
 <div class="content">
 <pre>TYPE A
 200 Type set to A
@@ -3870,11 +4019,9 @@ disconnected.</pre>
 structure using CD xxx.</p>
 </div>
 </div>
-</div>
-<div class="sect1">
-<h2 id="_using_stepwisefalse"><a class="anchor" href="#_using_stepwisefalse"></a>Using stepwise=false</h2>
-<div class="sectionbody">
+<div id="_tabs_1_stepwise_disabled--panel" class="tabpanel" aria-labelledby="_tabs_1_stepwise_disabled">
 <div class="listingblock">
+<div class="title">Using <code>stepwise=false</code></div>
 <div class="content">
 <pre>230 Logged on
 TYPE A
@@ -3917,16 +4064,194 @@ disconnected.</pre>
 </div>
 </div>
 <div class="paragraph">
-<p>As you can see when not using stepwise, there are no CD operation
+<p>As you can see when not using stepwise, there is no CD operation
 invoked at all.</p>
 </div>
 </div>
 </div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_filtering_strategies"><a class="anchor" href="#_filtering_strategies"></a>Filtering Strategies</h3>
+<div class="paragraph">
+<p>Camel supports pluggable filtering strategies. They are described below.</p>
+</div>
+<div class="admonitionblock tip">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-tip" title="Tip"></i>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>See also the documentation for filtering strategies on the <a href="file-component.html" class="xref page">File component</a>.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="sect3">
+<h4 id="_custom_filtering"><a class="anchor" href="#_custom_filtering"></a>Custom filtering</h4>
+<div class="paragraph">
+<p>Camel supports pluggable filtering strategies. This strategy it to use
+the build in <code>org.apache.camel.component.file.GenericFileFilter</code> in
+Java. You can then configure the endpoint with such a filter to skip
+certain filters before being processed.</p>
+</div>
+<div class="paragraph">
+<p>In the sample, we have built our own filter that only accepts files
+starting with <code>report</code> in the filename.</p>
+</div>
+<div class="paragraph">
+<p>And then we can configure our route using the <strong>filter</strong> attribute to
+reference our filter (using <code>#</code> notation) that we have defined in the
+spring XML file:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">   &lt;!-- define our sorter as a plain spring bean --&gt;
+   &lt;bean id="myFilter" class="com.mycompany.MyFileFilter"/&gt;
+
+  &lt;route&gt;
+    &lt;from uri="ftp://someuser@someftpserver.com?password=secret&amp;amp;filter=#myFilter"/&gt;
+    &lt;to uri="bean:processInbox"/&gt;
+  &lt;/route&gt;</code></pre>
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_filtering_using_ant_path_matcher"><a class="anchor" href="#_filtering_using_ant_path_matcher"></a>Filtering using ANT path matcher</h4>
+<div class="paragraph">
+<p>The ANT path matcher is a filter shipped out-of-the-box in the
+<strong>camel-spring</strong> jar. So you need to depend on <strong>camel-spring</strong> if you are
+using Maven.
+The reason is that we leverage Spring&#8217;s
+<a href="http://static.springsource.org/spring/docs/3.0.x/api/org/springframework/util/AntPathMatcher.html">AntPathMatcher</a>
+to do the actual matching.</p>
+</div>
+<div class="paragraph">
+<p>The file paths are matched with the following rules:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>?</code> matches one character</p>
+</li>
+<li>
+<p><code>*</code> matches zero or more characters</p>
+</li>
+<li>
+<p><code>**</code> matches zero or more directories in a path</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>The sample below demonstrates how to use it:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">from("ftp://admin@localhost:2222/public/camel?antInclude=**/*.txt").to("...");</code></pre>
+</div>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_using_a_proxy_with_sftp"><a class="anchor" href="#_using_a_proxy_with_sftp"></a>Using a proxy with SFTP</h3>
+<div class="paragraph">
+<p>To use an HTTP proxy to connect to your remote host, you can configure
+your route in the following way:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;!-- define our sorter as a plain spring bean --&gt;
+&lt;bean id="proxy" class="com.jcraft.jsch.ProxyHTTP"&gt;
+  &lt;constructor-arg value="localhost"/&gt;
+  &lt;constructor-arg value="7777"/&gt;
+&lt;/bean&gt;
+
+&lt;route&gt;
+  &lt;from uri="sftp://localhost:9999/root?username=admin&amp;password=admin&amp;proxy=#proxy"/&gt;
+  &lt;to uri="bean:processFile"/&gt;
+&lt;/route&gt;</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>You can also assign a username and password to the proxy, if necessary.
+Please consult the documentation for <code>com.jcraft.jsch.Proxy</code> to discover
+all options.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_setting_preferred_sftp_authentication_method"><a class="anchor" href="#_setting_preferred_sftp_authentication_method"></a>Setting preferred SFTP authentication method</h3>
+<div class="paragraph">
+<p>If you want to explicitly specify the list of authentication methods
+that should be used by <code>sftp</code> component, use <code>preferredAuthentications</code>
+option. If, for example, you would like Camel to attempt to authenticate
+with a private/public SSH key and fallback to user/password authentication
+in the case when no public key is available, use the following route
+configuration:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">from("sftp://localhost:9999/root?username=admin&amp;password=admin&amp;preferredAuthentications=publickey,password").
+  to("bean:processFile");</code></pre>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_consuming_a_single_file_using_a_fixed_name"><a class="anchor" href="#_consuming_a_single_file_using_a_fixed_name"></a>Consuming a single file using a fixed name</h3>
+<div class="paragraph">
+<p>When you want to download a single file and knows the file name, you can
+use <code>fileName=myFileName.txt</code> to tell Camel the name of the file to
+download. By default, the consumer will still do an FTP LIST command to do
+a directory listing and then filter these files based on the <code>fileName</code>
+option. Though in this use-case it may be desirable to turn off the
+directory listing by setting <code>useList=false</code>. For example, the user
+account used to log in to the FTP server may not have permission to do an
+FTP LIST command. So you can turn off this with <code>useList=false</code>, and
+then provide the fixed name of the file to download with
+<code>fileName=myFileName.txt</code>, then the FTP consumer can still download the
+file. If the file for some reason does not exist, then Camel will by
+default throw an exception, you can turn this off and ignore this by
+setting <code>ignoreFileNotFoundOrPermissionError=true</code>.</p>
+</div>
+<div class="paragraph">
+<p>For example, to have a Camel route that picks up a single file, and delete
+it after use you can do</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">from("ftp://admin@localhost:21/nolist/?password=admin&amp;stepwise=false&amp;useList=false&amp;ignoreFileNotFoundOrPermissionError=true&amp;fileName=report.txt&amp;delete=true")
+  .to("activemq:queue:report");</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Notice that we have used all the options we talked above.</p>
+</div>
+<div class="paragraph">
+<p>You can also use this with <code>ConsumerTemplate</code>. For example, to download a
+single file (if it exists) and grab the file content as a String type:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">String data = template.retrieveBodyNoWait("ftp://admin@localhost:21/nolist/?password=admin&amp;stepwise=false&amp;useList=false&amp;ignoreFileNotFoundOrPermissionError=true&amp;fileName=report.txt&amp;delete=true", String.class);</code></pre>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_debug_logging"><a class="anchor" href="#_debug_logging"></a>Debug logging</h3>
+<div class="paragraph">
+<p>This component has log level <strong>TRACE</strong> that can be helpful if you have
+problems.</p>
+</div>
+</div>
+</div>
+</div>
 <div class="sect1">
-<h2 id="_samples"><a class="anchor" href="#_samples"></a>Samples</h2>
+<h2 id="_examples"><a class="anchor" href="#_examples"></a>Examples</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>In the sample below we set up Camel to download all the reports from the
+<p>In the sample below, we set up Camel to download all the reports from the
 FTP server once every hour (60 min) as BINARY content and store it as
 files on the local file system.</p>
 </div>
@@ -3961,171 +4286,28 @@ files on the local file system.</p>
 </div>
 </div>
 </div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="_custom_filtering"><a class="anchor" href="#_custom_filtering"></a>Custom filtering</h2>
-<div class="sectionbody">
-<div class="paragraph">
-<p>Camel supports pluggable filtering strategies. This strategy it to use
-the build in <code>org.apache.camel.component.file.GenericFileFilter</code> in
-Java. You can then configure the endpoint with such a filter to skip
-certain filters before being processed.</p>
-</div>
-<div class="paragraph">
-<p>In the sample we have built our own filter that only accepts files
-starting with report in the filename.</p>
-</div>
-<div class="paragraph">
-<p>And then we can configure our route using the <strong>filter</strong> attribute to
-reference our filter (using <code>#</code> notation) that we have defined in the
-spring XML file:</p>
-</div>
+<div class="sect2">
+<h3 id="_examples_2"><a class="anchor" href="#_examples_2"></a>Examples</h3>
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">   &lt;!-- define our sorter as a plain spring bean --&gt;
-   &lt;bean id="myFilter" class="com.mycompany.MyFileFilter"/&gt;
+<pre>ftp://someone@someftpserver.com/public/upload/images/holiday2008?password=secret&amp;binary=true
 
-  &lt;route&gt;
-    &lt;from uri="ftp://someuser@someftpserver.com?password=secret&amp;amp;filter=#myFilter"/&gt;
-    &lt;to uri="bean:processInbox"/&gt;
-  &lt;/route&gt;</code></pre>
-</div>
-</div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="_filtering_using_ant_path_matcher"><a class="anchor" href="#_filtering_using_ant_path_matcher"></a>Filtering using ANT path matcher</h2>
-<div class="sectionbody">
-<div class="paragraph">
-<p>The ANT path matcher is a filter that is shipped out-of-the-box in the
-<strong>camel-spring</strong> jar. So you need to depend on <strong>camel-spring</strong> if you are
-using Maven.<br>
- The reason is that we leverage Spring&#8217;s
-<a href="http://static.springsource.org/spring/docs/3.0.x/api/org/springframework/util/AntPathMatcher.html">AntPathMatcher</a>
-to do the actual matching.</p>
-</div>
-<div class="paragraph">
-<p>The file paths are matched with the following rules:</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p><code>?</code> matches one character</p>
-</li>
-<li>
-<p><code>*</code> matches zero or more characters</p>
-</li>
-<li>
-<p><code>**</code> matches zero or more directories in a path</p>
-</li>
-</ul>
-</div>
-<div class="paragraph">
-<p>The sample below demonstrates how to use it:</p>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">from("ftp://admin@localhost:2222/public/camel?antInclude=**/*.txt").to("...");</code></pre>
-</div>
-</div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="_using_a_proxy_with_sftp"><a class="anchor" href="#_using_a_proxy_with_sftp"></a>Using a proxy with SFTP</h2>
-<div class="sectionbody">
-<div class="paragraph">
-<p>To use an HTTP proxy to connect to your remote host, you can configure
-your route in the following way:</p>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;!-- define our sorter as a plain spring bean --&gt;
-&lt;bean id="proxy" class="com.jcraft.jsch.ProxyHTTP"&gt;
-  &lt;constructor-arg value="localhost"/&gt;
-  &lt;constructor-arg value="7777"/&gt;
-&lt;/bean&gt;
+ftp://someoneelse@someotherftpserver.co.uk:12049/reports/2008/password=secret&amp;binary=false
 
-&lt;route&gt;
-  &lt;from uri="sftp://localhost:9999/root?username=admin&amp;password=admin&amp;proxy=#proxy"/&gt;
-  &lt;to uri="bean:processFile"/&gt;
-&lt;/route&gt;</code></pre>
+ftp://publicftpserver.com/download</pre>
 </div>
-</div>
-<div class="paragraph">
-<p>You can also assign a user name and password to the proxy, if necessary.
-Please consult the documentation for <code>com.jcraft.jsch.Proxy</code> to discover
-all options.</p>
-</div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="_setting_preferred_sftp_authentication_method"><a class="anchor" href="#_setting_preferred_sftp_authentication_method"></a>Setting preferred SFTP authentication method</h2>
-<div class="sectionbody">
-<div class="paragraph">
-<p>If you want to explicitly specify the list of authentication methods
-that should be used by <code>sftp</code> component, use <code>preferredAuthentications</code>
-option. If for example you would like Camel to attempt to authenticate
-with private/public SSH key and fallback to user/password authentication
-in the case when no public key is available, use the following route
-configuration:</p>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">from("sftp://localhost:9999/root?username=admin&amp;password=admin&amp;preferredAuthentications=publickey,password").
-  to("bean:processFile");</code></pre>
 </div>
 </div>
 </div>
 </div>
 <div class="sect1">
-<h2 id="_consuming_a_single_file_using_a_fixed_name"><a class="anchor" href="#_consuming_a_single_file_using_a_fixed_name"></a>Consuming a single file using a fixed name</h2>
+<h2 id="_more_information"><a class="anchor" href="#_more_information"></a>More information</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>When you want to download a single file and knows the file name, you can
-use <code>fileName=myFileName.txt</code> to tell Camel the name of the file to
-download. By default the consumer will still do a FTP LIST command to do
-a directory listing and then filter these files based on the <code>fileName</code>
-option. Though in this use-case it may be desirable to turn off the
-directory listing by setting <code>useList=false</code>. For example the user
-account used to login to the FTP server may not have permission to do a
-FTP LIST command. So you can turn off this with <code>useList=false</code>, and
-then provide the fixed name of the file to download with
-<code>fileName=myFileName.txt</code>, then the FTP consumer can still download the
-file. If the file for some reason does not exist, then Camel will by
-default throw an exception, you can turn this off and ignore this by
-setting <code>ignoreFileNotFoundOrPermissionError=true</code>.</p>
+<p>This component is an extension of the <a href="file-component.html" class="xref page">File component</a>.</p>
 </div>
 <div class="paragraph">
-<p>For example to have a Camel route that pickup a single file, and delete
-it after use you can do</p>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">from("ftp://admin@localhost:21/nolist/?password=admin&amp;stepwise=false&amp;useList=false&amp;ignoreFileNotFoundOrPermissionError=true&amp;fileName=report.txt&amp;delete=true")
-  .to("activemq:queue:report");</code></pre>
-</div>
-</div>
-<div class="paragraph">
-<p>Notice that we have used all the options we talked above.</p>
-</div>
-<div class="paragraph">
-<p>You can also use this with <code>ConsumerTemplate</code>. For example to download a
-single file (if it exists) and grab the file content as a String type:</p>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">String data = template.retrieveBodyNoWait("ftp://admin@localhost:21/nolist/?password=admin&amp;stepwise=false&amp;useList=false&amp;ignoreFileNotFoundOrPermissionError=true&amp;fileName=report.txt&amp;delete=true", String.class);</code></pre>
-</div>
-</div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="_debug_logging"><a class="anchor" href="#_debug_logging"></a>Debug logging</h2>
-<div class="sectionbody">
-<div class="paragraph">
-<p>This component has log level <strong>TRACE</strong> that can be helpful if you have
-problems.</p>
+<p>You can find additional samples and details on the File component page.</p>
 </div>
 </div>
 </div>
@@ -4134,6 +4316,8 @@ problems.</p>
 </main>
 </div>
 <footer class="footer">
+  <p>This page was built using the Antora default UI.</p>
+  <p>The source code for this UI is licensed under the terms of the MPL-2.0 license.</p>
 </footer>
 <script id="site-script" src="../../_/js/site.js" data-ui-root-path="../../_"></script>
 <script async src="../../_/js/vendor/highlight.js"></script>

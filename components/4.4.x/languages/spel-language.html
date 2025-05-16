@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>SpEL :: Red Hat Camel Reference</title>
+    <title>SpEL :: Red Hat build of Apache Camel</title>
     <meta name="description" content="Evaluates a Spring expression (SpEL).">
     <meta name="generator" content="Antora 3.1.4">
     <link rel="stylesheet" href="../../../_/css/site.css">
@@ -12,7 +12,7 @@
 <header class="header">
   <nav class="navbar">
     <div class="navbar-brand">
-      <a class="navbar-item" href="../../manual/index.html">Red Hat build of Apache Camel manual</a>
+      <a class="navbar-item" href="/">Red Hat build of Apache Camel</a>
       <button class="navbar-burger" data-target="topbar-nav">
         <span></span>
         <span></span>
@@ -22,11 +22,12 @@
   </nav>
 </header>
 <div class="body">
-<div class="nav-container" data-component="components" data-version="next">
+<div class="nav-container" data-component="components" data-version="4.4.x">
   <aside class="nav">
     <div class="panels">
 <div class="nav-panel-menu is-active" data-panel="menu">
   <nav class="nav-menu">
+    <button class="nav-menu-toggle" aria-label="Toggle expand/collapse all" style="display: none"></button>
     <h3 class="title"><a href="../index.html">Camel Components</a></h3>
 <ul class="nav-list">
   <li class="nav-item" data-depth="0">
@@ -1819,22 +1820,40 @@
 <div class="nav-panel-explore" data-panel="explore">
   <div class="context">
     <span class="title">Camel Components</span>
-    <span class="version">Next (Pre-release)</span>
+    <span class="version">4.4.x</span>
   </div>
   <ul class="components">
     <li class="component is-current">
-      <a class="title" href="../index.html">Camel Components</a>
+      <div class="title"><a href="../../4.10.x/index.html">Camel Components</a></div>
       <ul class="versions">
-        <li class="version is-current is-latest">
-          <a href="../index.html">Next (Pre-release)</a>
+        <li class="version is-latest">
+          <a href="../../4.10.x/index.html">4.10.x (LTS)</a>
+        </li>
+        <li class="version">
+          <a href="../../4.8.x/index.html">4.8.x</a>
+        </li>
+        <li class="version is-current">
+          <a href="../index.html">4.4.x</a>
+        </li>
+        <li class="version">
+          <a href="../../4.0.x/index.html">4.0.x</a>
         </li>
       </ul>
     </li>
     <li class="component">
-      <a class="title" href="../../../manual/index.html">User manual</a>
+      <div class="title"><a href="../../../manual/4.10.x/index.html">User manual</a></div>
       <ul class="versions">
         <li class="version is-latest">
-          <a href="../../../manual/index.html">default</a>
+          <a href="../../../manual/4.10.x/index.html">4.10.x</a>
+        </li>
+        <li class="version">
+          <a href="../../../manual/4.8.x/index.html">4.8.x</a>
+        </li>
+        <li class="version">
+          <a href="../../../manual/4.4.x/index.html">4.4.x</a>
+        </li>
+        <li class="version">
+          <a href="../../../manual/4.0.x/index.html">4.0.x</a>
         </li>
       </ul>
     </li>
@@ -1846,7 +1865,7 @@
 <main class="article">
 <div class="toolbar" role="navigation">
 <button class="nav-toggle"></button>
-  <a href="../../../manual/index.html" class="home-link"></a>
+  <a href="../../../manual/4.10.x/index.html" class="home-link"></a>
 <nav class="breadcrumbs" aria-label="breadcrumbs">
   <ul>
     <li><a href="../index.html">Camel Components</a></li>
@@ -1854,6 +1873,16 @@
     <li><a href="spel-language.html">SpEL</a></li>
   </ul>
 </nav>
+<div class="page-versions">
+  <button class="version-menu-toggle" title="Show other versions of page">4.4.x</button>
+  <div class="version-menu">
+    <a class="version" href="../../4.10.x/languages/spel-language.html">4.10.x (LTS)</a>
+    <a class="version" href="../../4.8.x/languages/spel-language.html">4.8.x</a>
+    <a class="version is-current" href="spel-language.html">4.4.x</a>
+    <a class="version is-missing" href="../../4.0.x/index.html">4.0.x</a>
+  </div>
+</div>
+<div class="edit-this-page"><a href="https://github.com/rhaetor/rh-camel-jboss/edit/camel-4.4.0-branch/docs/components/modules/languages/pages/spel-language.adoc">Edit this Page</a></div>
 </div>
   <div class="content">
 <aside class="toc sidebar" data-title="Contents" data-levels="2">
@@ -1879,8 +1908,8 @@ to be used as an Expression or Predicate in the DSL or XML Configuration.</p>
 </td>
 <td class="content">
 <div class="paragraph">
-<p>It is recommended to use SpEL in Spring runtimes. However, you can
-use SpEL in other runtimes (there are some functionality which SpEL can only do in a Spring runtime)</p>
+<p>It is recommended to use SpEL in Spring runtimes.
+Although you can use SpEL in other runtimes, there is some functionality that SpEL can only do in a Spring runtime.</p>
 </div>
 </td>
 </tr>
@@ -2057,11 +2086,11 @@ Filter</a>:</p>
 <div class="paragraph">
 <p>SpEL expressions need to be surrounded by <code>#{</code> <code>}</code> delimiters since
 expression templating is enabled. This allows you to combine SpEL
-expressions with regular text and use this as extremely lightweight
+expressions with regular text and use this as an extremely lightweight
 template language.</p>
 </div>
 <div class="paragraph">
-<p>For example if you construct the following route:</p>
+<p>For example, if you construct the following route:</p>
 </div>
 <div class="listingblock">
 <div class="content">
@@ -2074,8 +2103,8 @@ template language.</p>
 <p>In the route above, notice <code>spel</code> is a static method which we need to
 import from <code>org.apache.camel.language.spel.SpelExpression.spel</code>, as we
 use <code>spel</code> as an Expression passed in as a parameter
-to the <code>setBody</code> method. Though if we use the fluent API we can do this
-instead:</p>
+to the <code>setBody</code> method.
+Though if we use the fluent API, we can do this instead:</p>
 </div>
 <div class="listingblock">
 <div class="content">
@@ -2086,11 +2115,11 @@ instead:</p>
 </div>
 <div class="paragraph">
 <p>Notice we now use the <code>spel</code> method from the <code>setBody()</code> method. And
-this does not require us to static import the <code>spel</code> method.</p>
+this does not require us to statically import the <code>spel</code> method.</p>
 </div>
 <div class="paragraph">
 <p>Then we send a message with the string "World" in the body, and a header
-"dayOrNight" with value "day":</p>
+<code>dayOrNight</code> with value <code>day</code>:</p>
 </div>
 <div class="listingblock">
 <div class="content">
@@ -2105,8 +2134,8 @@ day"</em></p>
 <div class="sect2">
 <h3 id="_bean_integration"><a class="anchor" href="#_bean_integration"></a>Bean integration</h3>
 <div class="paragraph">
-<p>You can reference beans defined in the <a href="../../../manual/registry.html" class="xref page">Registry</a>
-in your SpEL expressions. For example if you have a bean named "foo"
+<p>You can reference beans defined in the <a href="../../../manual/4.10.x/registry.html" class="xref page">Registry</a>
+in your SpEL expressions. For example, if you have a bean named "foo"
 registered in the Spring <code>ApplicationContext</code>. You
 can then invoke the "bar" method on this bean like this:</p>
 </div>
@@ -2122,15 +2151,18 @@ can then invoke the "bar" method on this bean like this:</p>
 <h2 id="_loading_script_from_external_resource"><a class="anchor" href="#_loading_script_from_external_resource"></a>Loading script from external resource</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>You can externalize the script and have Camel load it from a resource
+<p>You can externalize the script and have Apache Camel load it from a resource
 such as <code>"classpath:"</code>, <code>"file:"</code>, or <code>"http:"</code>.
 This is done using the following syntax: <code>"resource:scheme:location"</code>,
-e.g. to refer to a file on the classpath you can do:</p>
+for example, to refer to a file on the classpath you can do:</p>
 </div>
 <div class="listingblock">
 <div class="content">
 <pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">.setHeader("myHeader").spel("resource:classpath:myspel.txt")</code></pre>
 </div>
+</div>
+<div class="paragraph">
+<p>Unresolved include directive in modules/languages/pages/spel-language.adoc - include::spring-boot:partial$starter.adoc[]</p>
 </div>
 </div>
 </div>
@@ -2139,6 +2171,8 @@ e.g. to refer to a file on the classpath you can do:</p>
 </main>
 </div>
 <footer class="footer">
+  <p>This page was built using the Antora default UI.</p>
+  <p>The source code for this UI is licensed under the terms of the MPL-2.0 license.</p>
 </footer>
 <script id="site-script" src="../../../_/js/site.js" data-ui-root-path="../../../_"></script>
 <script async src="../../../_/js/vendor/highlight.js"></script>

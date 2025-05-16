@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>XML Security :: Red Hat Camel Reference</title>
+    <title>XML Security :: Red Hat build of Apache Camel</title>
     <meta name="description" content="Encrypt and decrypt XML payloads using Apache Santuario.">
     <meta name="generator" content="Antora 3.1.4">
     <link rel="stylesheet" href="../../../_/css/site.css">
@@ -12,7 +12,7 @@
 <header class="header">
   <nav class="navbar">
     <div class="navbar-brand">
-      <a class="navbar-item" href="../../manual/index.html">Red Hat build of Apache Camel manual</a>
+      <a class="navbar-item" href="/">Red Hat build of Apache Camel</a>
       <button class="navbar-burger" data-target="topbar-nav">
         <span></span>
         <span></span>
@@ -22,11 +22,12 @@
   </nav>
 </header>
 <div class="body">
-<div class="nav-container" data-component="components" data-version="next">
+<div class="nav-container" data-component="components" data-version="4.8.x">
   <aside class="nav">
     <div class="panels">
 <div class="nav-panel-menu is-active" data-panel="menu">
   <nav class="nav-menu">
+    <button class="nav-menu-toggle" aria-label="Toggle expand/collapse all" style="display: none"></button>
     <h3 class="title"><a href="../index.html">Camel Components</a></h3>
 <ul class="nav-list">
   <li class="nav-item" data-depth="0">
@@ -36,7 +37,46 @@
     <a class="nav-link" href="../index.html">Components</a>
 <ul class="nav-list">
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="../activemq-component.html">ActiveMQ</a>
+    <a class="nav-link" href="../activemq-component.html">ActiveMQ 5.x</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../activemq6-component.html">ActiveMQ 6.x</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../ai-summary.html">AI</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../chatscript-component.html">ChatScript</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../djl-component.html">Deep Java Library</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../langchain4j-chat-component.html">LangChain4j Chat</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../langchain4j-embeddings-component.html">LangChain4j Embeddings</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../langchain4j-tokenizer-component.html">LangChain4j Tokenizer</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../langchain4j-tools-component.html">LangChain4j Tools</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../langchain4j-web-search-component.html">LangChain4j Web Search</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../milvus-component.html">Milvus</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../pinecone-component.html">Pinecone</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../qdrant-component.html">Qdrant</a>
+  </li>
+</ul>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="../amqp-component.html">AMQP</a>
@@ -65,6 +105,15 @@
 <ul class="nav-list">
   <li class="nav-item" data-depth="3">
     <a class="nav-link" href="../aws2-athena-component.html">AWS Athena</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../aws-bedrock-component.html">AWS Bedrock</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../aws-bedrock-agent-component.html">AWS Bedrock Agent</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../aws-bedrock-agent-runtime-component.html">AWS Bedrock Agent Runtime</a>
   </li>
   <li class="nav-item" data-depth="3">
     <a class="nav-link" href="../aws-cloudtrail-component.html">AWS Cloudtrail</a>
@@ -169,7 +218,7 @@
     <a class="nav-link" href="../azure-storage-blob-component.html">Azure Storage Blob Service</a>
   </li>
   <li class="nav-item" data-depth="3">
-    <a class="nav-link" href="../azure-storage-datalake-component.html">Azure Storage Datalake Service</a>
+    <a class="nav-link" href="../azure-storage-datalake-component.html">Azure Storage Data Lake Service</a>
   </li>
   <li class="nav-item" data-depth="3">
     <a class="nav-link" href="../azure-storage-queue-component.html">Azure Storage Queue Service</a>
@@ -202,9 +251,6 @@
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="../cql-component.html">Cassandra CQL</a>
-  </li>
-  <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="../chatscript-component.html">ChatScript</a>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="../chunk-component.html">Chunk</a>
@@ -277,9 +323,6 @@
     <a class="nav-link" href="../debezium-sqlserver-component.html">Debezium SQL Server Connector</a>
   </li>
 </ul>
-  </li>
-  <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="../djl-component.html">Deep Java Library</a>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="../dhis2-component.html">DHIS2</a>
@@ -395,6 +438,9 @@
   </li>
   <li class="nav-item" data-depth="3">
     <a class="nav-link" href="../google-pubsub-component.html">Google Pubsub</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../google-pubsub-lite-component.html">Google PubSub Lite</a>
   </li>
   <li class="nav-item" data-depth="3">
     <a class="nav-link" href="../google-secret-manager-component.html">Google Secret Manager</a>
@@ -687,7 +733,7 @@
     <a class="nav-link" href="../ldif-component.html">LDIF</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="../log-component.html">Log</a>
+    <a class="nav-link" href="../log-component.html">Log Data</a>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="../lucene-component.html">Lucene</a>
@@ -900,10 +946,16 @@
     <a class="nav-link" href="../smb-component.html">SMB</a>
   </li>
   <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../smooks-component.html">Smooks</a>
+  </li>
+  <li class="nav-item" data-depth="2">
     <a class="nav-link" href="../smpp-component.html">SMPP</a>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="../snmp-component.html">SNMP</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../solr-component.html">Solr</a>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="../splunk-component.html">Splunk</a>
@@ -966,6 +1018,18 @@
     <a class="nav-link" href="../stub-component.html">Stub</a>
   </li>
   <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../tahu-summary.html">Tahu</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../tahu-edge-component.html">Tahu Edge Node / Device</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../tahu-host-component.html">Tahu Host Application</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
     <a class="nav-link" href="../telegram-component.html">Telegram</a>
   </li>
   <li class="nav-item" data-depth="2">
@@ -1026,7 +1090,7 @@
     <a class="nav-link" href="../whatsapp-component.html">WhatsApp</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="../wordpress-component.html">Wordpress</a>
+    <a class="nav-link" href="../wordpress-component.html">WordPress</a>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="../workday-component.html">Workday</a>
@@ -1419,7 +1483,13 @@
     <a class="nav-link" href="../others/openapi-java.html">Openapi Java</a>
   </li>
   <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../others/openapi-validator.html">Openapi Validator</a>
+  </li>
+  <li class="nav-item" data-depth="2">
     <a class="nav-link" href="../others/opentelemetry.html">OpenTelemetry</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../others/platform-http-jolokia.html">Platform HTTP Jolokia</a>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="../others/platform-http-main.html">Platform Http Main</a>
@@ -1567,7 +1637,7 @@
     <a class="nav-link" href="../eips/event-message.html">Event Message</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="../eips/failover-eip.html">Failover</a>
+    <a class="nav-link" href="../eips/failoverLoadBalancer-eip.html">Failover Load Balancer</a>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="../eips/faultToleranceConfiguration-eip.html">Fault Tolerance Configuration</a>
@@ -1597,13 +1667,13 @@
     <a class="nav-link" href="../eips/loadBalance-eip.html">Load Balance</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="../eips/log-eip.html">Log</a>
+    <a class="nav-link" href="../eips/log-eip.html">Logger</a>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="../eips/loop-eip.html">Loop</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="../eips/marshal-eip.html">Marshal EIP</a>
+    <a class="nav-link" href="../eips/marshal-eip.html">Marshal</a>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="../eips/message.html">Message</a>
@@ -1660,6 +1730,9 @@
     <a class="nav-link" href="../eips/point-to-point-channel.html">Point to Point Channel</a>
   </li>
   <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../eips/poll-eip.html">Poll</a>
+  </li>
+  <li class="nav-item" data-depth="2">
     <a class="nav-link" href="../eips/pollEnrich-eip.html">Poll Enrich</a>
   </li>
   <li class="nav-item" data-depth="2">
@@ -1675,7 +1748,7 @@
     <a class="nav-link" href="../eips/publish-subscribe-channel.html">Publish Subscribe Channel</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="../eips/random-eip.html">Random</a>
+    <a class="nav-link" href="../eips/randomLoadBalancer-eip.html">Random Load Balancer</a>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="../eips/recipientList-eip.html">Recipient List</a>
@@ -1717,7 +1790,7 @@
     <a class="nav-link" href="../eips/rollback-eip.html">Rollback</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="../eips/roundRobin-eip.html">Round Robin</a>
+    <a class="nav-link" href="../eips/roundRobinLoadBalancer-eip.html">Round Robin Load Balancer</a>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="../eips/routingSlip-eip.html">Routing Slip</a>
@@ -1729,7 +1802,7 @@
     <a class="nav-link" href="../eips/sample-eip.html">Sample</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="../eips/scatter-gather.html">Scatter Gather</a>
+    <a class="nav-link" href="../eips/scatter-gather.html">Scatter-Gather</a>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="../eips/script-eip.html">Script</a>
@@ -1759,6 +1832,9 @@
     <a class="nav-link" href="../eips/setVariable-eip.html">Set Variable</a>
   </li>
   <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../eips/setVariables-eip.html">Set Variables</a>
+  </li>
+  <li class="nav-item" data-depth="2">
     <a class="nav-link" href="../eips/sort-eip.html">Sort</a>
   </li>
   <li class="nav-item" data-depth="2">
@@ -1768,7 +1844,7 @@
     <a class="nav-link" href="../eips/step-eip.html">Step</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="../eips/sticky-eip.html">Sticky</a>
+    <a class="nav-link" href="../eips/stickyLoadBalancer-eip.html">Sticky Load Balancer</a>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="../eips/stop-eip.html">Stop</a>
@@ -1789,7 +1865,7 @@
     <a class="nav-link" href="../eips/toD-eip.html">To D</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="../eips/topic-eip.html">Topic</a>
+    <a class="nav-link" href="../eips/topicLoadBalancer-eip.html">Topic Load Balancer</a>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="../eips/transactional-client.html">Transactional Client</a>
@@ -1798,13 +1874,13 @@
     <a class="nav-link" href="../eips/transform-eip.html">Transform</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="../eips/unmarshal-eip.html">Unmarshal EIP</a>
+    <a class="nav-link" href="../eips/unmarshal-eip.html">Unmarshal</a>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="../eips/validate-eip.html">Validate</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="../eips/weighted-eip.html">Weighted</a>
+    <a class="nav-link" href="../eips/weightedLoadBalancer-eip.html">Weighted Load Balancer</a>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="../eips/wireTap-eip.html">Wire Tap</a>
@@ -1819,22 +1895,40 @@
 <div class="nav-panel-explore" data-panel="explore">
   <div class="context">
     <span class="title">Camel Components</span>
-    <span class="version">Next (Pre-release)</span>
+    <span class="version">4.8.x</span>
   </div>
   <ul class="components">
     <li class="component is-current">
-      <a class="title" href="../index.html">Camel Components</a>
+      <div class="title"><a href="../../4.10.x/index.html">Camel Components</a></div>
       <ul class="versions">
-        <li class="version is-current is-latest">
-          <a href="../index.html">Next (Pre-release)</a>
+        <li class="version is-latest">
+          <a href="../../4.10.x/index.html">4.10.x (LTS)</a>
+        </li>
+        <li class="version is-current">
+          <a href="../index.html">4.8.x</a>
+        </li>
+        <li class="version">
+          <a href="../../4.4.x/index.html">4.4.x</a>
+        </li>
+        <li class="version">
+          <a href="../../4.0.x/index.html">4.0.x</a>
         </li>
       </ul>
     </li>
     <li class="component">
-      <a class="title" href="../../../manual/index.html">User manual</a>
+      <div class="title"><a href="../../../manual/4.10.x/index.html">User manual</a></div>
       <ul class="versions">
         <li class="version is-latest">
-          <a href="../../../manual/index.html">default</a>
+          <a href="../../../manual/4.10.x/index.html">4.10.x</a>
+        </li>
+        <li class="version">
+          <a href="../../../manual/4.8.x/index.html">4.8.x</a>
+        </li>
+        <li class="version">
+          <a href="../../../manual/4.4.x/index.html">4.4.x</a>
+        </li>
+        <li class="version">
+          <a href="../../../manual/4.0.x/index.html">4.0.x</a>
         </li>
       </ul>
     </li>
@@ -1846,7 +1940,7 @@
 <main class="article">
 <div class="toolbar" role="navigation">
 <button class="nav-toggle"></button>
-  <a href="../../../manual/index.html" class="home-link"></a>
+  <a href="../../../manual/4.10.x/index.html" class="home-link"></a>
 <nav class="breadcrumbs" aria-label="breadcrumbs">
   <ul>
     <li><a href="../index.html">Camel Components</a></li>
@@ -1854,6 +1948,16 @@
     <li><a href="xmlSecurity-dataformat.html">XML Security</a></li>
   </ul>
 </nav>
+<div class="page-versions">
+  <button class="version-menu-toggle" title="Show other versions of page">4.8.x</button>
+  <div class="version-menu">
+    <a class="version" href="../../4.10.x/dataformats/xmlSecurity-dataformat.html">4.10.x (LTS)</a>
+    <a class="version is-current" href="xmlSecurity-dataformat.html">4.8.x</a>
+    <a class="version" href="../../4.4.x/dataformats/xmlSecurity-dataformat.html">4.4.x</a>
+    <a class="version is-missing" href="../../4.0.x/index.html">4.0.x</a>
+  </div>
+</div>
+<div class="edit-this-page"><a href="https://github.com/rhaetor/rh-camel-jboss/edit/camel-4.8.0-branch/docs/components/modules/dataformats/pages/xmlSecurity-dataformat.adoc">Edit this Page</a></div>
 </div>
   <div class="content">
 <aside class="toc sidebar" data-title="Contents" data-levels="2">
@@ -1884,14 +1988,14 @@ while being dispatched or received along a route.</p>
 <div class="paragraph">
 <p><strong>Since Camel 2.9</strong><br>
  The XMLSecurity Data Format supports asymmetric key encryption. In this
-encryption model a symmetric key is generated and used to perform XML
+encryption model, a symmetric key is generated and used to perform XML
 content encryption or decryption. This "content encryption key" is then
 itself encrypted using an asymmetric encryption algorithm that leverages
 the recipient&#8217;s public key as the "key encryption key". Use of an
 asymmetric key encryption algorithm ensures that only the holder of the
 recipient&#8217;s private key can access the generated symmetric encryption
 key. Thus, only the private key holder can decode the message. The
-XMLSecurity Data Format handles all of the logic required to encrypt and
+XMLSecurity Data Format handles all the logic required to encrypt and
 decrypt the message content and encryption key(s) using asymmetric key
 encryption.</p>
 </div>
@@ -1900,7 +2004,7 @@ encryption.</p>
 when processing the XPath queries that select content for encryption. A
 namespace definition mapping can be included as part of the data format
 configuration. This enables true namespace matching, even if the prefix
-values in the XPath query and the target xml document are not equivalent
+values in the XPath query and the target XML document are not equivalent
 strings.</p>
 </div>
 </div>
@@ -1929,7 +2033,7 @@ strings.</p>
 <tbody>
 <tr>
 <td class="tableblock halign-left valign-top"><div class="content"><div id="_dataformat_option_xmlCipherAlgorithm" class="paragraph">
-<p><a href="#_dataformat_option_xmlCipherAlgorithm" class="anchor"></a><strong>xmlCipherAlgorithm</strong></p>
+<p><a href="#_dataformat_option_xmlCipherAlgorithm" class="anchor"></a><strong>xmlCipherAlgorithm</strong> (common)</p>
 </div></div></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>AES-256-GCM</code></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>Enum</code></p></td>
@@ -1979,7 +2083,7 @@ strings.</p>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><div class="content"><div id="_dataformat_option_passPhrase" class="paragraph">
-<p><a href="#_dataformat_option_passPhrase" class="anchor"></a><strong>passPhrase</strong></p>
+<p><a href="#_dataformat_option_passPhrase" class="anchor"></a><strong>passPhrase</strong> (common)</p>
 </div></div></td>
 <td class="tableblock halign-left valign-top"></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>String</code></p></td>
@@ -1989,7 +2093,7 @@ strings.</p>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><div class="content"><div id="_dataformat_option_passPhraseByte" class="paragraph">
-<p><a href="#_dataformat_option_passPhraseByte" class="anchor"></a><strong>passPhraseByte</strong></p>
+<p><a href="#_dataformat_option_passPhraseByte" class="anchor"></a><strong>passPhraseByte</strong> (advanced)</p>
 </div></div></td>
 <td class="tableblock halign-left valign-top"></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>String</code></p></td>
@@ -1999,7 +2103,7 @@ strings.</p>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><div class="content"><div id="_dataformat_option_secureTag" class="paragraph">
-<p><a href="#_dataformat_option_secureTag" class="anchor"></a><strong>secureTag</strong></p>
+<p><a href="#_dataformat_option_secureTag" class="anchor"></a><strong>secureTag</strong> (common)</p>
 </div></div></td>
 <td class="tableblock halign-left valign-top"></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>String</code></p></td>
@@ -2009,7 +2113,7 @@ strings.</p>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><div class="content"><div id="_dataformat_option_secureTagContents" class="paragraph">
-<p><a href="#_dataformat_option_secureTagContents" class="anchor"></a><strong>secureTagContents</strong></p>
+<p><a href="#_dataformat_option_secureTagContents" class="anchor"></a><strong>secureTagContents</strong> (common)</p>
 </div></div></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>false</code></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>Boolean</code></p></td>
@@ -2019,7 +2123,7 @@ strings.</p>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><div class="content"><div id="_dataformat_option_keyCipherAlgorithm" class="paragraph">
-<p><a href="#_dataformat_option_keyCipherAlgorithm" class="anchor"></a><strong>keyCipherAlgorithm</strong></p>
+<p><a href="#_dataformat_option_keyCipherAlgorithm" class="anchor"></a><strong>keyCipherAlgorithm</strong> (common)</p>
 </div></div></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>RSA_OAEP</code></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>Enum</code></p></td>
@@ -2045,7 +2149,7 @@ strings.</p>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><div class="content"><div id="_dataformat_option_recipientKeyAlias" class="paragraph">
-<p><a href="#_dataformat_option_recipientKeyAlias" class="anchor"></a><strong>recipientKeyAlias</strong></p>
+<p><a href="#_dataformat_option_recipientKeyAlias" class="anchor"></a><strong>recipientKeyAlias</strong> (common)</p>
 </div></div></td>
 <td class="tableblock halign-left valign-top"></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>String</code></p></td>
@@ -2055,7 +2159,7 @@ strings.</p>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><div class="content"><div id="_dataformat_option_keyOrTrustStoreParametersRef" class="paragraph">
-<p><a href="#_dataformat_option_keyOrTrustStoreParametersRef" class="anchor"></a><strong>keyOrTrustStoreParametersRef</strong></p>
+<p><a href="#_dataformat_option_keyOrTrustStoreParametersRef" class="anchor"></a><strong>keyOrTrustStoreParametersRef</strong> (common)</p>
 </div></div></td>
 <td class="tableblock halign-left valign-top"></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>String</code></p></td>
@@ -2065,7 +2169,7 @@ strings.</p>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><div class="content"><div id="_dataformat_option_keyPassword" class="paragraph">
-<p><a href="#_dataformat_option_keyPassword" class="anchor"></a><strong>keyPassword</strong></p>
+<p><a href="#_dataformat_option_keyPassword" class="anchor"></a><strong>keyPassword</strong> (common)</p>
 </div></div></td>
 <td class="tableblock halign-left valign-top"></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>String</code></p></td>
@@ -2075,7 +2179,7 @@ strings.</p>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><div class="content"><div id="_dataformat_option_digestAlgorithm" class="paragraph">
-<p><a href="#_dataformat_option_digestAlgorithm" class="anchor"></a><strong>digestAlgorithm</strong></p>
+<p><a href="#_dataformat_option_digestAlgorithm" class="anchor"></a><strong>digestAlgorithm</strong> (common)</p>
 </div></div></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>SHA1</code></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>Enum</code></p></td>
@@ -2101,7 +2205,7 @@ strings.</p>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><div class="content"><div id="_dataformat_option_mgfAlgorithm" class="paragraph">
-<p><a href="#_dataformat_option_mgfAlgorithm" class="anchor"></a><strong>mgfAlgorithm</strong></p>
+<p><a href="#_dataformat_option_mgfAlgorithm" class="anchor"></a><strong>mgfAlgorithm</strong> (common)</p>
 </div></div></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>MGF1_SHA1</code></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>Enum</code></p></td>
@@ -2127,7 +2231,7 @@ strings.</p>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><div class="content"><div id="_dataformat_option_addKeyValueForEncryptedKey" class="paragraph">
-<p><a href="#_dataformat_option_addKeyValueForEncryptedKey" class="anchor"></a><strong>addKeyValueForEncryptedKey</strong></p>
+<p><a href="#_dataformat_option_addKeyValueForEncryptedKey" class="anchor"></a><strong>addKeyValueForEncryptedKey</strong> (common)</p>
 </div></div></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>true</code></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>Boolean</code></p></td>
@@ -2141,8 +2245,8 @@ strings.</p>
 <h3 id="_key_cipher_algorithm"><a class="anchor" href="#_key_cipher_algorithm"></a>Key Cipher Algorithm</h3>
 <div class="paragraph">
 <p>The default Key Cipher Algorithm is now
-XMLCipher.RSA_OAEP instead of XMLCipher.RSA_v1dot5. Usage of
-XMLCipher.RSA_v1dot5 is discouraged due to various attacks. Requests
+<code>XMLCipher.RSA_OAEP</code> instead of <code>XMLCipher.RSA_v1dot5</code>. Usage of
+<code>XMLCipher.RSA_v1dot5</code> is discouraged due to various attacks. Requests
 that use RSA v1.5 as the key cipher algorithm will be rejected unless it
 has been explicitly configured as the key cipher algorithm.</p>
 </div>
@@ -2153,7 +2257,7 @@ has been explicitly configured as the key cipher algorithm.</p>
 <h2 id="_marshal"><a class="anchor" href="#_marshal"></a>Marshal</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>In order to encrypt the payload, the <code>marshal</code> processor needs to be
+<p>To encrypt the payload, the <code>marshal</code> processor needs to be
 applied on the route followed by the <strong><code>xmlSecurity()</code></strong> tag.</p>
 </div>
 </div>
@@ -2162,7 +2266,7 @@ applied on the route followed by the <strong><code>xmlSecurity()</code></strong>
 <h2 id="_unmarshal"><a class="anchor" href="#_unmarshal"></a>Unmarshal</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>In order to decrypt the payload, the <code>unmarshal</code> processor needs to be
+<p>To decrypt the payload, the <code>unmarshal</code> processor needs to be
 applied on the route followed by the <strong><code>xmlSecurity()</code></strong> tag.</p>
 </div>
 </div>
@@ -2249,7 +2353,7 @@ context.addRoutes(new RouteBuilder() {
 <p>Spring XML</p>
 </div>
 <div class="paragraph">
-<p>A namespace prefix that is defined as part of the <code>camelContext</code>
+<p>A namespace prefix defined as part of the <code>camelContext</code>
 definition can be re-used in context within the data format <code>secureTag</code>
 attribute of the <code>xmlSecurity</code> element.</p>
 </div>
@@ -2335,6 +2439,8 @@ attribute of the <code>xmlSecurity</code> element.</p>
 </main>
 </div>
 <footer class="footer">
+  <p>This page was built using the Antora default UI.</p>
+  <p>The source code for this UI is licensed under the terms of the MPL-2.0 license.</p>
 </footer>
 <script id="site-script" src="../../../_/js/site.js" data-ui-root-path="../../../_"></script>
 <script async src="../../../_/js/vendor/highlight.js"></script>

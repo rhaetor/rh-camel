@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>uniVocity CSV :: Red Hat Camel Reference</title>
+    <title>uniVocity CSV :: Red Hat build of Apache Camel</title>
     <meta name="description" content="Marshal and unmarshal Java objects from and to CSV (Comma Separated Values) using UniVocity Parsers.">
     <meta name="generator" content="Antora 3.1.4">
     <link rel="stylesheet" href="../../../_/css/site.css">
@@ -12,7 +12,7 @@
 <header class="header">
   <nav class="navbar">
     <div class="navbar-brand">
-      <a class="navbar-item" href="../../manual/index.html">Red Hat build of Apache Camel manual</a>
+      <a class="navbar-item" href="/">Red Hat build of Apache Camel</a>
       <button class="navbar-burger" data-target="topbar-nav">
         <span></span>
         <span></span>
@@ -22,11 +22,12 @@
   </nav>
 </header>
 <div class="body">
-<div class="nav-container" data-component="components" data-version="next">
+<div class="nav-container" data-component="components" data-version="4.4.x">
   <aside class="nav">
     <div class="panels">
 <div class="nav-panel-menu is-active" data-panel="menu">
   <nav class="nav-menu">
+    <button class="nav-menu-toggle" aria-label="Toggle expand/collapse all" style="display: none"></button>
     <h3 class="title"><a href="../index.html">Camel Components</a></h3>
 <ul class="nav-list">
   <li class="nav-item" data-depth="0">
@@ -1819,22 +1820,40 @@
 <div class="nav-panel-explore" data-panel="explore">
   <div class="context">
     <span class="title">Camel Components</span>
-    <span class="version">Next (Pre-release)</span>
+    <span class="version">4.4.x</span>
   </div>
   <ul class="components">
     <li class="component is-current">
-      <a class="title" href="../index.html">Camel Components</a>
+      <div class="title"><a href="../../4.10.x/index.html">Camel Components</a></div>
       <ul class="versions">
-        <li class="version is-current is-latest">
-          <a href="../index.html">Next (Pre-release)</a>
+        <li class="version is-latest">
+          <a href="../../4.10.x/index.html">4.10.x (LTS)</a>
+        </li>
+        <li class="version">
+          <a href="../../4.8.x/index.html">4.8.x</a>
+        </li>
+        <li class="version is-current">
+          <a href="../index.html">4.4.x</a>
+        </li>
+        <li class="version">
+          <a href="../../4.0.x/index.html">4.0.x</a>
         </li>
       </ul>
     </li>
     <li class="component">
-      <a class="title" href="../../../manual/index.html">User manual</a>
+      <div class="title"><a href="../../../manual/4.10.x/index.html">User manual</a></div>
       <ul class="versions">
         <li class="version is-latest">
-          <a href="../../../manual/index.html">default</a>
+          <a href="../../../manual/4.10.x/index.html">4.10.x</a>
+        </li>
+        <li class="version">
+          <a href="../../../manual/4.8.x/index.html">4.8.x</a>
+        </li>
+        <li class="version">
+          <a href="../../../manual/4.4.x/index.html">4.4.x</a>
+        </li>
+        <li class="version">
+          <a href="../../../manual/4.0.x/index.html">4.0.x</a>
         </li>
       </ul>
     </li>
@@ -1846,7 +1865,7 @@
 <main class="article">
 <div class="toolbar" role="navigation">
 <button class="nav-toggle"></button>
-  <a href="../../../manual/index.html" class="home-link"></a>
+  <a href="../../../manual/4.10.x/index.html" class="home-link"></a>
 <nav class="breadcrumbs" aria-label="breadcrumbs">
   <ul>
     <li><a href="../index.html">Camel Components</a></li>
@@ -1854,6 +1873,16 @@
     <li><a href="univocityCsv-dataformat.html">uniVocity CSV</a></li>
   </ul>
 </nav>
+<div class="page-versions">
+  <button class="version-menu-toggle" title="Show other versions of page">4.4.x</button>
+  <div class="version-menu">
+    <a class="version" href="../../4.10.x/dataformats/univocityCsv-dataformat.html">4.10.x (LTS)</a>
+    <a class="version" href="../../4.8.x/dataformats/univocityCsv-dataformat.html">4.8.x</a>
+    <a class="version is-current" href="univocityCsv-dataformat.html">4.4.x</a>
+    <a class="version is-missing" href="../../4.0.x/index.html">4.0.x</a>
+  </div>
+</div>
+<div class="edit-this-page"><a href="https://github.com/rhaetor/rh-camel-jboss/edit/camel-4.4.0-branch/docs/components/modules/dataformats/pages/univocityCsv-dataformat.adoc">Edit this Page</a></div>
 </div>
   <div class="content">
 <aside class="toc sidebar" data-title="Contents" data-levels="2">
@@ -1867,9 +1896,9 @@
 <p><strong>Since Camel 2.15</strong></p>
 </div>
 <div class="paragraph">
-<p>This <a href="../../../manual/data-format.html" class="xref page">Data
+<p>This <a href="../../../manual/4.10.x/data-format.html" class="xref page">Data
 Format</a> uses <a href="https://www.univocity.com/pages/univocity_parsers_tutorial.html">uniVocity-parsers</a>
-for reading and writing 3 kinds of tabular data text files:</p>
+for reading and writing three kinds of tabular data text files:</p>
 </div>
 <div class="ulist">
 <ul>
@@ -1887,10 +1916,10 @@ tabulation</p>
 </ul>
 </div>
 <div class="paragraph">
-<p>Thus there are 3 data formats based on uniVocity-parsers.</p>
+<p>Thus, there are three data formats based on uniVocity-parsers.</p>
 </div>
 <div class="paragraph">
-<p>If you use Maven you can just add the following to your pom.xml,
+<p>If you use Maven, you can add the following to your <code>pom.xml</code>,
 substituting the version number for the latest and greatest release.</p>
 </div>
 <div class="listingblock">
@@ -1915,7 +1944,7 @@ please refer to their
 page</a>.</p>
 </div>
 <div class="paragraph">
-<p>The 3 data formats share common options and have dedicated ones, this
+<p>The three data formats share common options and have dedicated ones, this
 section presents them all.</p>
 </div>
 </div>
@@ -2099,7 +2128,7 @@ section presents them all.</p>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>false</code></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>Boolean</code></p></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>Whether the unmarshalling should produce an iterator that reads the lines on the fly or if all the lines must be read at once. The default value is false.</p>
+<p>Whether the unmarshaling should produce an iterator that reads the lines on the fly or if all the lines must be read at once. The default value is false.</p>
 </div></div></td>
 </tr>
 <tr>
@@ -2109,7 +2138,7 @@ section presents them all.</p>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>false</code></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>Boolean</code></p></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>Whether the unmarshalling should produce maps for the lines values instead of lists. It requires to have header (either defined or collected). The default value is false.</p>
+<p>Whether the unmarshaling should produce maps for the lines values instead of lists. It requires to have header (either defined or collected). The default value is false.</p>
 </div></div></td>
 </tr>
 </tbody>
@@ -2117,10 +2146,10 @@ section presents them all.</p>
 </div>
 </div>
 <div class="sect1">
-<h2 id="_marshalling_usages"><a class="anchor" href="#_marshalling_usages"></a>Marshalling usages</h2>
+<h2 id="_marshaling_usages"><a class="anchor" href="#_marshaling_usages"></a>Marshaling usages</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>The marshalling accepts either:</p>
+<p>The marshaling accepts either:</p>
 </div>
 <div class="ulist">
 <ul>
@@ -2133,10 +2162,10 @@ section presents them all.</p>
 </ul>
 </div>
 <div class="paragraph">
-<p>Any other body will throws an exception.</p>
+<p>Any other body will throw an exception.</p>
 </div>
 <div class="sect2">
-<h3 id="_usage_example_marshalling_a_map_into_csv_format"><a class="anchor" href="#_usage_example_marshalling_a_map_into_csv_format"></a>Usage example: marshalling a Map into CSV format</h3>
+<h3 id="_usage_example_marshaling_a_map_into_csv_format"><a class="anchor" href="#_usage_example_marshaling_a_map_into_csv_format"></a>Usage example: marshaling a Map into CSV format</h3>
 <div class="listingblock">
 <div class="content">
 <pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;route&gt;
@@ -2150,7 +2179,7 @@ section presents them all.</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="_usage_example_marshalling_a_map_into_fixed_width_format"><a class="anchor" href="#_usage_example_marshalling_a_map_into_fixed_width_format"></a>Usage example: marshalling a Map into fixed-width format</h3>
+<h3 id="_usage_example_marshaling_a_map_into_fixed_width_format"><a class="anchor" href="#_usage_example_marshaling_a_map_into_fixed_width_format"></a>Usage example: marshaling a Map into fixed-width format</h3>
 <div class="listingblock">
 <div class="content">
 <pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;route&gt;
@@ -2168,7 +2197,7 @@ section presents them all.</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="_usage_example_marshalling_a_map_into_tsv_format"><a class="anchor" href="#_usage_example_marshalling_a_map_into_tsv_format"></a>Usage example: marshalling a Map into TSV format</h3>
+<h3 id="_usage_example_marshaling_a_map_into_tsv_format"><a class="anchor" href="#_usage_example_marshaling_a_map_into_tsv_format"></a>Usage example: marshaling a Map into TSV format</h3>
 <div class="listingblock">
 <div class="content">
 <pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;route&gt;
@@ -2184,10 +2213,10 @@ section presents them all.</p>
 </div>
 </div>
 <div class="sect1">
-<h2 id="_unmarshalling_usages"><a class="anchor" href="#_unmarshalling_usages"></a>Unmarshalling usages</h2>
+<h2 id="_unmarshaling_usages"><a class="anchor" href="#_unmarshaling_usages"></a>Unmarshaling usages</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>The unmarshalling uses an <code>InputStream</code> in order to read the data.</p>
+<p>The unmarshaling uses an <code>InputStream</code> to read the data.</p>
 </div>
 <div class="paragraph">
 <p>Each row produces either:</p>
@@ -2217,7 +2246,7 @@ headers (<code>asMap</code> option with <code>true</code>).</p>
 </ul>
 </div>
 <div class="sect2">
-<h3 id="_usage_example_unmarshalling_a_csv_format_into_maps_with_automatic_headers"><a class="anchor" href="#_usage_example_unmarshalling_a_csv_format_into_maps_with_automatic_headers"></a>Usage example: unmarshalling a CSV format into maps with automatic headers</h3>
+<h3 id="_usage_example_unmarshaling_a_csv_format_into_maps_with_automatic_headers"><a class="anchor" href="#_usage_example_unmarshaling_a_csv_format_into_maps_with_automatic_headers"></a>Usage example: unmarshaling a CSV format into maps with automatic headers</h3>
 <div class="listingblock">
 <div class="content">
 <pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;route&gt;
@@ -2231,7 +2260,7 @@ headers (<code>asMap</code> option with <code>true</code>).</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="_usage_example_unmarshalling_a_fixed_width_format_into_lists"><a class="anchor" href="#_usage_example_unmarshalling_a_fixed_width_format_into_lists"></a>Usage example: unmarshalling a fixed-width format into lists</h3>
+<h3 id="_usage_example_unmarshaling_a_fixed_width_format_into_lists"><a class="anchor" href="#_usage_example_unmarshaling_a_fixed_width_format_into_lists"></a>Usage example: unmarshaling a fixed-width format into lists</h3>
 <div class="listingblock">
 <div class="content">
 <pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;route&gt;
@@ -2247,6 +2276,9 @@ headers (<code>asMap</code> option with <code>true</code>).</p>
 &lt;/route&gt;</code></pre>
 </div>
 </div>
+<div class="paragraph">
+<p>Unresolved include directive in modules/dataformats/pages/univocityCsv-dataformat.adoc - include::spring-boot:partial$starter.adoc[]</p>
+</div>
 </div>
 </div>
 </div>
@@ -2255,6 +2287,8 @@ headers (<code>asMap</code> option with <code>true</code>).</p>
 </main>
 </div>
 <footer class="footer">
+  <p>This page was built using the Antora default UI.</p>
+  <p>The source code for this UI is licensed under the terms of the MPL-2.0 license.</p>
 </footer>
 <script id="site-script" src="../../../_/js/site.js" data-ui-root-path="../../../_"></script>
 <script async src="../../../_/js/vendor/highlight.js"></script>

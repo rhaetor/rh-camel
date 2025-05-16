@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>SQL :: Red Hat Camel Reference</title>
+    <title>SQL :: Red Hat build of Apache Camel</title>
     <meta name="description" content="Perform SQL queries using Spring JDBC.">
     <meta name="generator" content="Antora 3.1.4">
     <link rel="stylesheet" href="../../_/css/site.css">
@@ -12,7 +12,7 @@
 <header class="header">
   <nav class="navbar">
     <div class="navbar-brand">
-      <a class="navbar-item" href="../../manual/index.html">Red Hat build of Apache Camel manual</a>
+      <a class="navbar-item" href="/">Red Hat build of Apache Camel</a>
       <button class="navbar-burger" data-target="topbar-nav">
         <span></span>
         <span></span>
@@ -22,11 +22,12 @@
   </nav>
 </header>
 <div class="body">
-<div class="nav-container" data-component="components" data-version="next">
+<div class="nav-container" data-component="components" data-version="4.8.x">
   <aside class="nav">
     <div class="panels">
 <div class="nav-panel-menu is-active" data-panel="menu">
   <nav class="nav-menu">
+    <button class="nav-menu-toggle" aria-label="Toggle expand/collapse all" style="display: none"></button>
     <h3 class="title"><a href="index.html">Camel Components</a></h3>
 <ul class="nav-list">
   <li class="nav-item" data-depth="0">
@@ -36,7 +37,46 @@
     <a class="nav-link" href="index.html">Components</a>
 <ul class="nav-list">
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="activemq-component.html">ActiveMQ</a>
+    <a class="nav-link" href="activemq-component.html">ActiveMQ 5.x</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="activemq6-component.html">ActiveMQ 6.x</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="ai-summary.html">AI</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="chatscript-component.html">ChatScript</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="djl-component.html">Deep Java Library</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="langchain4j-chat-component.html">LangChain4j Chat</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="langchain4j-embeddings-component.html">LangChain4j Embeddings</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="langchain4j-tokenizer-component.html">LangChain4j Tokenizer</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="langchain4j-tools-component.html">LangChain4j Tools</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="langchain4j-web-search-component.html">LangChain4j Web Search</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="milvus-component.html">Milvus</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="pinecone-component.html">Pinecone</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="qdrant-component.html">Qdrant</a>
+  </li>
+</ul>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="amqp-component.html">AMQP</a>
@@ -65,6 +105,15 @@
 <ul class="nav-list">
   <li class="nav-item" data-depth="3">
     <a class="nav-link" href="aws2-athena-component.html">AWS Athena</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="aws-bedrock-component.html">AWS Bedrock</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="aws-bedrock-agent-component.html">AWS Bedrock Agent</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="aws-bedrock-agent-runtime-component.html">AWS Bedrock Agent Runtime</a>
   </li>
   <li class="nav-item" data-depth="3">
     <a class="nav-link" href="aws-cloudtrail-component.html">AWS Cloudtrail</a>
@@ -169,7 +218,7 @@
     <a class="nav-link" href="azure-storage-blob-component.html">Azure Storage Blob Service</a>
   </li>
   <li class="nav-item" data-depth="3">
-    <a class="nav-link" href="azure-storage-datalake-component.html">Azure Storage Datalake Service</a>
+    <a class="nav-link" href="azure-storage-datalake-component.html">Azure Storage Data Lake Service</a>
   </li>
   <li class="nav-item" data-depth="3">
     <a class="nav-link" href="azure-storage-queue-component.html">Azure Storage Queue Service</a>
@@ -202,9 +251,6 @@
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="cql-component.html">Cassandra CQL</a>
-  </li>
-  <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="chatscript-component.html">ChatScript</a>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="chunk-component.html">Chunk</a>
@@ -277,9 +323,6 @@
     <a class="nav-link" href="debezium-sqlserver-component.html">Debezium SQL Server Connector</a>
   </li>
 </ul>
-  </li>
-  <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="djl-component.html">Deep Java Library</a>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="dhis2-component.html">DHIS2</a>
@@ -395,6 +438,9 @@
   </li>
   <li class="nav-item" data-depth="3">
     <a class="nav-link" href="google-pubsub-component.html">Google Pubsub</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="google-pubsub-lite-component.html">Google PubSub Lite</a>
   </li>
   <li class="nav-item" data-depth="3">
     <a class="nav-link" href="google-secret-manager-component.html">Google Secret Manager</a>
@@ -687,7 +733,7 @@
     <a class="nav-link" href="ldif-component.html">LDIF</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="log-component.html">Log</a>
+    <a class="nav-link" href="log-component.html">Log Data</a>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="lucene-component.html">Lucene</a>
@@ -900,16 +946,49 @@
     <a class="nav-link" href="smb-component.html">SMB</a>
   </li>
   <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="smooks-component.html">Smooks</a>
+  </li>
+  <li class="nav-item" data-depth="2">
     <a class="nav-link" href="smpp-component.html">SMPP</a>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="snmp-component.html">SNMP</a>
   </li>
   <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="solr-component.html">Solr</a>
+  </li>
+  <li class="nav-item" data-depth="2">
     <a class="nav-link" href="splunk-component.html">Splunk</a>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="splunk-hec-component.html">Splunk HEC</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="spring-summary.html">Spring</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="spring-batch-component.html">Spring Batch</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="spring-event-component.html">Spring Event</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="spring-jdbc-component.html">Spring JDBC</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="spring-ldap-component.html">Spring LDAP</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="spring-rabbitmq-component.html">Spring RabbitMQ</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="spring-redis-component.html">Spring Redis</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="spring-ws-component.html">Spring WebService</a>
+  </li>
+</ul>
   </li>
   <li class="nav-item is-current-page" data-depth="2">
     <a class="nav-link" href="sql-component.html">SQL</a>
@@ -937,6 +1016,18 @@
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="stub-component.html">Stub</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="tahu-summary.html">Tahu</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="tahu-edge-component.html">Tahu Edge Node / Device</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="tahu-host-component.html">Tahu Host Application</a>
+  </li>
+</ul>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="telegram-component.html">Telegram</a>
@@ -999,7 +1090,7 @@
     <a class="nav-link" href="whatsapp-component.html">WhatsApp</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="wordpress-component.html">Wordpress</a>
+    <a class="nav-link" href="wordpress-component.html">WordPress</a>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="workday-component.html">Workday</a>
@@ -1392,7 +1483,13 @@
     <a class="nav-link" href="others/openapi-java.html">Openapi Java</a>
   </li>
   <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="others/openapi-validator.html">Openapi Validator</a>
+  </li>
+  <li class="nav-item" data-depth="2">
     <a class="nav-link" href="others/opentelemetry.html">OpenTelemetry</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="others/platform-http-jolokia.html">Platform HTTP Jolokia</a>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="others/platform-http-main.html">Platform Http Main</a>
@@ -1540,7 +1637,7 @@
     <a class="nav-link" href="eips/event-message.html">Event Message</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="eips/failover-eip.html">Failover</a>
+    <a class="nav-link" href="eips/failoverLoadBalancer-eip.html">Failover Load Balancer</a>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="eips/faultToleranceConfiguration-eip.html">Fault Tolerance Configuration</a>
@@ -1570,13 +1667,13 @@
     <a class="nav-link" href="eips/loadBalance-eip.html">Load Balance</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="eips/log-eip.html">Log</a>
+    <a class="nav-link" href="eips/log-eip.html">Logger</a>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="eips/loop-eip.html">Loop</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="eips/marshal-eip.html">Marshal EIP</a>
+    <a class="nav-link" href="eips/marshal-eip.html">Marshal</a>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="eips/message.html">Message</a>
@@ -1633,6 +1730,9 @@
     <a class="nav-link" href="eips/point-to-point-channel.html">Point to Point Channel</a>
   </li>
   <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="eips/poll-eip.html">Poll</a>
+  </li>
+  <li class="nav-item" data-depth="2">
     <a class="nav-link" href="eips/pollEnrich-eip.html">Poll Enrich</a>
   </li>
   <li class="nav-item" data-depth="2">
@@ -1648,7 +1748,7 @@
     <a class="nav-link" href="eips/publish-subscribe-channel.html">Publish Subscribe Channel</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="eips/random-eip.html">Random</a>
+    <a class="nav-link" href="eips/randomLoadBalancer-eip.html">Random Load Balancer</a>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="eips/recipientList-eip.html">Recipient List</a>
@@ -1690,7 +1790,7 @@
     <a class="nav-link" href="eips/rollback-eip.html">Rollback</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="eips/roundRobin-eip.html">Round Robin</a>
+    <a class="nav-link" href="eips/roundRobinLoadBalancer-eip.html">Round Robin Load Balancer</a>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="eips/routingSlip-eip.html">Routing Slip</a>
@@ -1702,7 +1802,7 @@
     <a class="nav-link" href="eips/sample-eip.html">Sample</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="eips/scatter-gather.html">Scatter Gather</a>
+    <a class="nav-link" href="eips/scatter-gather.html">Scatter-Gather</a>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="eips/script-eip.html">Script</a>
@@ -1732,6 +1832,9 @@
     <a class="nav-link" href="eips/setVariable-eip.html">Set Variable</a>
   </li>
   <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="eips/setVariables-eip.html">Set Variables</a>
+  </li>
+  <li class="nav-item" data-depth="2">
     <a class="nav-link" href="eips/sort-eip.html">Sort</a>
   </li>
   <li class="nav-item" data-depth="2">
@@ -1741,7 +1844,7 @@
     <a class="nav-link" href="eips/step-eip.html">Step</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="eips/sticky-eip.html">Sticky</a>
+    <a class="nav-link" href="eips/stickyLoadBalancer-eip.html">Sticky Load Balancer</a>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="eips/stop-eip.html">Stop</a>
@@ -1762,7 +1865,7 @@
     <a class="nav-link" href="eips/toD-eip.html">To D</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="eips/topic-eip.html">Topic</a>
+    <a class="nav-link" href="eips/topicLoadBalancer-eip.html">Topic Load Balancer</a>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="eips/transactional-client.html">Transactional Client</a>
@@ -1771,13 +1874,13 @@
     <a class="nav-link" href="eips/transform-eip.html">Transform</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="eips/unmarshal-eip.html">Unmarshal EIP</a>
+    <a class="nav-link" href="eips/unmarshal-eip.html">Unmarshal</a>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="eips/validate-eip.html">Validate</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="eips/weighted-eip.html">Weighted</a>
+    <a class="nav-link" href="eips/weightedLoadBalancer-eip.html">Weighted Load Balancer</a>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="eips/wireTap-eip.html">Wire Tap</a>
@@ -1792,22 +1895,40 @@
 <div class="nav-panel-explore" data-panel="explore">
   <div class="context">
     <span class="title">Camel Components</span>
-    <span class="version">Next (Pre-release)</span>
+    <span class="version">4.8.x</span>
   </div>
   <ul class="components">
     <li class="component is-current">
-      <a class="title" href="index.html">Camel Components</a>
+      <div class="title"><a href="../4.10.x/index.html">Camel Components</a></div>
       <ul class="versions">
-        <li class="version is-current is-latest">
-          <a href="index.html">Next (Pre-release)</a>
+        <li class="version is-latest">
+          <a href="../4.10.x/index.html">4.10.x (LTS)</a>
+        </li>
+        <li class="version is-current">
+          <a href="index.html">4.8.x</a>
+        </li>
+        <li class="version">
+          <a href="../4.4.x/index.html">4.4.x</a>
+        </li>
+        <li class="version">
+          <a href="../4.0.x/index.html">4.0.x</a>
         </li>
       </ul>
     </li>
     <li class="component">
-      <a class="title" href="../../manual/index.html">User manual</a>
+      <div class="title"><a href="../../manual/4.10.x/index.html">User manual</a></div>
       <ul class="versions">
         <li class="version is-latest">
-          <a href="../../manual/index.html">default</a>
+          <a href="../../manual/4.10.x/index.html">4.10.x</a>
+        </li>
+        <li class="version">
+          <a href="../../manual/4.8.x/index.html">4.8.x</a>
+        </li>
+        <li class="version">
+          <a href="../../manual/4.4.x/index.html">4.4.x</a>
+        </li>
+        <li class="version">
+          <a href="../../manual/4.0.x/index.html">4.0.x</a>
         </li>
       </ul>
     </li>
@@ -1819,7 +1940,7 @@
 <main class="article">
 <div class="toolbar" role="navigation">
 <button class="nav-toggle"></button>
-  <a href="../../manual/index.html" class="home-link"></a>
+  <a href="../../manual/4.10.x/index.html" class="home-link"></a>
 <nav class="breadcrumbs" aria-label="breadcrumbs">
   <ul>
     <li><a href="index.html">Camel Components</a></li>
@@ -1827,6 +1948,16 @@
     <li><a href="sql-component.html">SQL</a></li>
   </ul>
 </nav>
+<div class="page-versions">
+  <button class="version-menu-toggle" title="Show other versions of page">4.8.x</button>
+  <div class="version-menu">
+    <a class="version" href="../4.10.x/sql-component.html">4.10.x (LTS)</a>
+    <a class="version is-current" href="sql-component.html">4.8.x</a>
+    <a class="version" href="../4.4.x/sql-component.html">4.4.x</a>
+    <a class="version is-missing" href="../4.0.x/index.html">4.0.x</a>
+  </div>
+</div>
+<div class="edit-this-page"><a href="https://github.com/rhaetor/rh-camel-jboss/edit/camel-4.8.0-branch/docs/components/modules/ROOT/pages/sql-component.adoc">Edit this Page</a></div>
 </div>
   <div class="content">
 <aside class="toc sidebar" data-title="Contents" data-levels="2">
@@ -1924,10 +2055,13 @@ for this component:</p>
 <p>from a <a href="languages/simple-language.html" class="xref page">Simple</a> expressions</p>
 </li>
 <li>
-<p>from message body if its a <code>java.util.Map</code></p>
+<p>from message body if it is a <code>java.util.Map</code></p>
 </li>
 <li>
 <p>from message headers</p>
+</li>
+<li>
+<p>from exchange variables</p>
 </li>
 </ol>
 </div>
@@ -2027,37 +2161,65 @@ And also use comments such as the – dash line.</p>
 <div class="sect2">
 <h3 id="_configuring_component_options"><a class="anchor" href="#_configuring_component_options"></a>Configuring Component Options</h3>
 <div class="paragraph">
-<p>The component level is the highest level which holds general and common configurations that are inherited by the endpoints.
-For example a component may have security settings, credentials for authentication, urls for network connection and so forth.</p>
+<p>At the component level, you set general and shared configurations that are, then, inherited by the endpoints. It is the highest configuration level.</p>
 </div>
 <div class="paragraph">
-<p>Some components only have a few options, and others may have many. Because components typically have pre configured defaults
-that are commonly used, then you may often only need to configure a few options on a component; or none at all.</p>
+<p>For example, a component may have security settings, credentials for authentication, urls for network connection and so forth.</p>
 </div>
 <div class="paragraph">
-<p>Configuring components can be done with the <a href="../../manual/component-dsl.html" class="xref page">Component DSL</a>,
-in a configuration file (application.properties|yaml), or directly with Java code.</p>
+<p>Some components only have a few options, and others may have many.
+Because components typically have pre-configured defaults that are commonly used, then you may often only need to configure a few options on a component; or none at all.</p>
+</div>
+<div class="paragraph">
+<p>You can configure components using:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>the <a href="../../manual/4.10.x/component-dsl.html" class="xref page">Component DSL</a>.</p>
+</li>
+<li>
+<p>in a configuration file (<code>application.properties</code>, <code>*.yaml</code> files, etc).</p>
+</li>
+<li>
+<p>directly in the Java code.</p>
+</li>
+</ul>
 </div>
 </div>
 <div class="sect2">
 <h3 id="_configuring_endpoint_options"><a class="anchor" href="#_configuring_endpoint_options"></a>Configuring Endpoint Options</h3>
 <div class="paragraph">
-<p>Where you find yourself configuring the most is on endpoints, as endpoints often have many options, which allows you to
-configure what you need the endpoint to do. The options are also categorized into whether the endpoint is used as consumer (from)
-or as a producer (to), or used for both.</p>
+<p>You usually spend more time setting up endpoints because they have many options.
+These options help you customize what you want the endpoint to do.
+The options are also categorized into whether the endpoint is used as a consumer (<em>from</em>), as a producer (<em>to</em>), or  both.</p>
 </div>
 <div class="paragraph">
-<p>Configuring endpoints is most often done directly in the endpoint URI as path and query parameters. You can also use
-the <a href="../../manual/Endpoint-dsl.html" class="xref page">Endpoint DSL</a> and <a href="../../manual/dataformat-dsl.html" class="xref page">DataFormat DSL</a>
+<p>Configuring endpoints is most often done directly in the endpoint URI as <em>path</em> and <em>query</em> parameters.
+You can also use the <a href="../../manual/4.10.x/Endpoint-dsl.html" class="xref page">Endpoint DSL</a> and <a href="../../manual/4.10.x/dataformat-dsl.html" class="xref page">DataFormat DSL</a>
 as a <em>type safe</em> way of configuring endpoints and data formats in Java.</p>
 </div>
 <div class="paragraph">
-<p>A good practice when configuring options is to use <a href="../../manual/using-propertyplaceholder.html" class="xref page">Property Placeholders</a>,
-which allows to not hardcode urls, port numbers, sensitive information, and other settings.
-In other words placeholders allows to externalize the configuration from your code, and gives more flexibility and reuse.</p>
+<p>A good practice when configuring options is to use <a href="../../manual/4.10.x/using-propertyplaceholder.html" class="xref page">Property Placeholders</a>.</p>
 </div>
 <div class="paragraph">
-<p>The following two sections lists all the options, firstly for the component followed by the endpoint.</p>
+<p>Property placeholders provide a few benefits:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>They help prevent using hardcoded urls, port numbers, sensitive information, and other settings.</p>
+</li>
+<li>
+<p>They allow externalizing the configuration from the code.</p>
+</li>
+<li>
+<p>They help the code to become more flexible and reusable.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>The following two sections list all the options, firstly for the component followed by the endpoint.</p>
 </div>
 </div>
 </div>
@@ -2066,7 +2228,7 @@ In other words placeholders allows to externalize the configuration from your co
 <h2 id="_component_options"><a class="anchor" href="#_component_options"></a>Component Options</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>The SQL component supports 8 options, which are listed below.</p>
+<p>The SQL component supports 9 options, which are listed below.</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
 <colgroup>
@@ -2130,6 +2292,15 @@ In other words placeholders allows to externalize the configuration from your co
 <td class="tableblock halign-left valign-top"><p class="tableblock">RowMapperFactory</p></td>
 </tr>
 <tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a id="_component_option_serviceLocationEnabled"></a>
+<a href="#_component_option_serviceLocationEnabled" class="anchor"></a><strong>serviceLocationEnabled</strong> (advanced)</p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>Whether to detect the network address location of the JMS broker on startup. This information is gathered via reflection on the ConnectionFactory, and is vendor specific. This option can be used to turn this off.</p>
+</div></div></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">true</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">boolean</p></td>
+</tr>
+<tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><a id="_component_option_usePlaceholder"></a>
 <a href="#_component_option_usePlaceholder" class="anchor"></a><strong>usePlaceholder</strong> (advanced)</p></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
@@ -2172,7 +2343,7 @@ In other words placeholders allows to externalize the configuration from your co
 </div>
 </div>
 <div class="paragraph">
-<p>with the following path and query parameters:</p>
+<p>With the following <em>path</em> and <em>query</em> parameters:</p>
 </div>
 <div class="sect2">
 <h3 id="_path_parameters_1_parameters"><a class="anchor" href="#_path_parameters_1_parameters"></a>Path Parameters (1 parameters)</h3>
@@ -2830,8 +3001,10 @@ In other words placeholders allows to externalize the configuration from your co
 </div>
 </div>
 <div class="sect1">
-<h2 id="_treatment_of_the_message_body"><a class="anchor" href="#_treatment_of_the_message_body"></a>Treatment of the message body</h2>
+<h2 id="_usage"><a class="anchor" href="#_usage"></a>Usage</h2>
 <div class="sectionbody">
+<div class="sect2">
+<h3 id="_treatment_of_the_message_body"><a class="anchor" href="#_treatment_of_the_message_body"></a>Treatment of the message body</h3>
 <div class="paragraph">
 <p>The SQL component tries to convert the message body to an object of
 <code>java.util.Iterator</code> type and then uses this iterator to fill the query
@@ -2858,15 +3031,13 @@ allows to use the message body as the SQL statement, and then the SQL
 parameters must be provided in a header with the
 key <code>SqlConstants.SQL_PARAMETERS</code>. This allows the SQL component to work
 more dynamically as the SQL query is from the message body. Use templating
-(such as <a href="velocity-component.html" class="xref page">Velocity</a>, <a href="freemarker-component.html" class="xref page">Freemarker</a>)
+(such as <a href="../4.10.x/velocity-component.html" class="xref page">Velocity</a>, <a href="../4.10.x/freemarker-component.html" class="xref page">Freemarker</a>)
 for conditional processing, e.g., to include or exclude <code>where</code> clauses
 depending on the presence of query parameters.</p>
 </div>
 </div>
-</div>
-<div class="sect1">
-<h2 id="_result_of_the_query"><a class="anchor" href="#_result_of_the_query"></a>Result of the query</h2>
-<div class="sectionbody">
+<div class="sect2">
+<h3 id="_result_of_the_query"><a class="anchor" href="#_result_of_the_query"></a>Result of the query</h3>
 <div class="paragraph">
 <p>For <code>select</code> operations, the result is an instance of
 <code>List&lt;Map&lt;String, Object&gt;&gt;</code> type, as returned by the
@@ -2889,10 +3060,8 @@ and outputType together:</p>
 </div>
 </div>
 </div>
-</div>
-<div class="sect1">
-<h2 id="_using_streamlist"><a class="anchor" href="#_using_streamlist"></a>Using StreamList</h2>
-<div class="sectionbody">
+<div class="sect2">
+<h3 id="_using_streamlist"><a class="anchor" href="#_using_streamlist"></a>Using StreamList</h3>
 <div class="paragraph">
 <p>The producer supports <code>outputType=StreamList</code> that uses an iterator to stream the output of the query.
 This allows processing the data in a streaming fashion which, for example,
@@ -2910,10 +3079,8 @@ can be used by the Splitter EIP to process each row one at a time, and load data
 </div>
 </div>
 </div>
-</div>
-<div class="sect1">
-<h2 id="_generated_keys"><a class="anchor" href="#_generated_keys"></a>Generated keys</h2>
-<div class="sectionbody">
+<div class="sect2">
+<h3 id="_generated_keys"><a class="anchor" href="#_generated_keys"></a>Generated keys</h3>
 <div class="paragraph">
 <p>If you insert data using SQL INSERT, then the RDBMS may support auto
 generated keys. You can instruct the SQL producer to return the
@@ -2931,10 +3098,8 @@ driver cannot correctly determine the number of parameters.</p>
 <a href="https://gitbox.apache.org/repos/asf?p=camel.git;a=blob_plain;f=components/camel-sql/src/test/java/org/apache/camel/component/sql/SqlGeneratedKeysTest.java;hb=HEAD">unit test</a>.</p>
 </div>
 </div>
-</div>
-<div class="sect1">
-<h2 id="_datasource"><a class="anchor" href="#_datasource"></a>DataSource</h2>
-<div class="sectionbody">
+<div class="sect2">
+<h3 id="_datasource"><a class="anchor" href="#_datasource"></a>DataSource</h3>
 <div class="paragraph">
 <p>You can set a reference to a <code>DataSource</code> in the URI directly:</p>
 </div>
@@ -2944,18 +3109,18 @@ driver cannot correctly determine the number of parameters.</p>
 </div>
 </div>
 </div>
-</div>
-<div class="sect1">
-<h2 id="_using_named_parameters"><a class="anchor" href="#_using_named_parameters"></a>Using named parameters</h2>
-<div class="sectionbody">
+<div class="sect2">
+<h3 id="_using_named_parameters"><a class="anchor" href="#_using_named_parameters"></a>Using named parameters</h3>
 <div class="paragraph">
 <p>In the given route below, we want to get all the projects from the
 <code>projects</code> table.
 Notice the SQL query has two named parameters, <code>:#lic</code> and
 <code>:#min</code>.
-Camel will then look up for these parameters from the message body or
-message headers.
-Notice in the example above we set two headers with
+Camel will then look up for these parameters from the message body,
+message headers and exchange variables.</p>
+</div>
+<div class="paragraph">
+<p>Notice in the example above we set two headers with
 constant value for the named parameters:</p>
 </div>
 <div class="listingblock">
@@ -2977,10 +3142,8 @@ parameters will be taken from the body.</p>
 </div>
 </div>
 </div>
-</div>
-<div class="sect1">
-<h2 id="_using_expression_parameters_in_producers"><a class="anchor" href="#_using_expression_parameters_in_producers"></a>Using expression parameters in producers</h2>
-<div class="sectionbody">
+<div class="sect2">
+<h3 id="_using_expression_parameters_in_producers"><a class="anchor" href="#_using_expression_parameters_in_producers"></a>Using expression parameters in producers</h3>
 <div class="paragraph">
 <p>In the given route below, we want to get all the projects from the
 database. It uses the body of the exchange for defining the license and
@@ -2994,8 +3157,8 @@ uses the value of a property as the second parameter.</p>
   .to("sql:select * from projects where license = :#${body} and id &gt; :#${exchangeProperty.min} order by id")</code></pre>
 </div>
 </div>
-<div class="sect2">
-<h3 id="_using_expression_parameters_in_consumers"><a class="anchor" href="#_using_expression_parameters_in_consumers"></a>Using expression parameters in consumers</h3>
+<div class="sect3">
+<h4 id="_using_expression_parameters_in_consumers"><a class="anchor" href="#_using_expression_parameters_in_consumers"></a>Using expression parameters in consumers</h4>
 <div class="paragraph">
 <p>When using the SQL component as consumer, you can now also use expression parameters (simple language)
 to build dynamic query parameters, such as calling a method on a bean to retrieve an id, date or something.</p>
@@ -3032,10 +3195,8 @@ bean methods as in this example.</p>
 </div>
 </div>
 </div>
-</div>
-<div class="sect1">
-<h2 id="_using_in_queries_with_dynamic_values"><a class="anchor" href="#_using_in_queries_with_dynamic_values"></a>Using IN queries with dynamic values</h2>
-<div class="sectionbody">
+<div class="sect2">
+<h3 id="_using_in_queries_with_dynamic_values"><a class="anchor" href="#_using_in_queries_with_dynamic_values"></a>Using IN queries with dynamic values</h3>
 <div class="paragraph">
 <p>The SQL producer allows using SQL queries with <code>IN</code> statements where the <code>IN</code> values are dynamically computed.
 For example, from the message body or a header, etc.</p>
@@ -3109,11 +3270,22 @@ queries easier)</p>
     .to("mock:query");</code></pre>
 </div>
 </div>
+<div class="paragraph">
+<p>If the dynamic list of values is stored in the message body, you can use <code>(:#in:${body})</code> to
+refer to the message body, such as:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-sql hljs" data-lang="sql">-- this is a comment
+select *
+from projects
+where project in (:#in:${body})
+order by id</code></pre>
 </div>
 </div>
-<div class="sect1">
-<h2 id="_using_the_jdbc_based_idempotent_repository"><a class="anchor" href="#_using_the_jdbc_based_idempotent_repository"></a>Using the JDBC-based idempotent repository</h2>
-<div class="sectionbody">
+</div>
+<div class="sect2">
+<h3 id="_using_the_jdbc_based_idempotent_repository"><a class="anchor" href="#_using_the_jdbc_based_idempotent_repository"></a>Using the JDBC-based idempotent repository</h3>
 <div class="paragraph">
 <p>In this section, we will use the JDBC-based idempotent repository.</p>
 </div>
@@ -3174,8 +3346,8 @@ and allow only one consumer to handle the message.</p>
 constraint, or your SQL server uses a different syntax for table creation, you can create the table yourself using
 the above schema as a starting point.</p>
 </div>
-<div class="sect2">
-<h3 id="_customize_the_jdbc_idempotency_repository"><a class="anchor" href="#_customize_the_jdbc_idempotency_repository"></a>Customize the JDBC idempotency repository</h3>
+<div class="sect3">
+<h4 id="_customize_the_jdbc_idempotency_repository"><a class="anchor" href="#_customize_the_jdbc_idempotency_repository"></a>Customize the JDBC idempotency repository</h4>
 <div class="paragraph">
 <p>You have a few options to tune the
 <code>org.apache.camel.processor.idempotent.jdbc.JdbcMessageIdRepository</code> for
@@ -3196,28 +3368,28 @@ your needs:</p>
 </thead>
 <tbody>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">createTableIfNotExists</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>createTableIfNotExists</code></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>true</code></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Defines whether Camel should try to create the table if it doesn&#8217;t exist.</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">tableName</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>tableName</code></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>CAMEL_MESSAGEPROCESSED</code></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">To use a custom table name instead of the default name: <code>CAMEL_MESSAGEPROCESSED</code>.</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">tableExistsString</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>tableExistsString</code></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>SELECT 1 FROM CAMEL_MESSAGEPROCESSED WHERE 1 = 0</code></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">This query is used to figure out whether the table already exists or
 not. It must throw an exception to indicate the table doesn&#8217;t exist.</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">createString</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>createString</code></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>CREATE TABLE CAMEL_MESSAGEPROCESSED (processorName VARCHAR(255),messageId VARCHAR(100), createdAt TIMESTAMP)</code></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">The statement which is used to create the table.</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">queryString</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>queryString</code></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>SELECT COUNT(*) FROM CAMEL_MESSAGEPROCESSED WHERE processorName = ? AND messageId = ?</code></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">The query which is used to figure out whether the message already exists
 in the repository (the result is not equals to '0'). It takes two
@@ -3225,7 +3397,7 @@ parameters. This first one is the processor name (<code>String</code>) and the
 second one is the message id (<code>String</code>).</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">insertString</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>insertString</code></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>INSERT INTO CAMEL_MESSAGEPROCESSED (processorName, messageId, createdAt) VALUES (?, ?, ?)</code></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">The statement which is used to add the entry into the table. It takes
 three parameters. The first one is the processor name (<code>String</code>), the
@@ -3234,7 +3406,7 @@ timestamp (<code>java.sql.Timestamp</code>) when this entry was added to the
 repository.</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">deleteString</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>deleteString</code></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>DELETE FROM CAMEL_MESSAGEPROCESSED WHERE processorName = ? AND messageId = ?</code></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">The statement which is used to delete the entry from the database.
 It takes two parameters. This first one is the processor name (<code>String</code>) and
@@ -3247,8 +3419,8 @@ the second one is the message id (<code>String</code>).</p></td>
 However, if you want to customize the SQL queries, then you can configure each of them individually.</p>
 </div>
 </div>
-<div class="sect2">
-<h3 id="_orphan_lock_aware_jdbc_idempotentrepository"><a class="anchor" href="#_orphan_lock_aware_jdbc_idempotentrepository"></a>Orphan Lock aware Jdbc IdempotentRepository</h3>
+<div class="sect3">
+<h4 id="_orphan_lock_aware_jdbc_idempotentrepository"><a class="anchor" href="#_orphan_lock_aware_jdbc_idempotentrepository"></a>Orphan Lock aware Jdbc IdempotentRepository</h4>
 <div class="paragraph">
 <p>One of the limitations of <code>org.apache.camel.processor.idempotent.jdbc.JdbcMessageIdRepository</code> is that it does not handle orphan locks resulting from JVM crash or non-graceful shutdown. This can result in unprocessed files/messages if this is implementation is used with camel-file, camel-ftp etc. if you need to address orphan locks processing then use
 <code>org.apache.camel.processor.idempotent.jdbc.JdbcOrphanLockAwareIdempotentRepository</code>.  This repository keeps track of the locks held by an instance of the application. For each lock held, the application will send keep-alive signals to the lock repository resulting in updating the createdAt column with the current Timestamp. When an application instance tries to acquire a lock, then there are three possibilities:</p>
@@ -3280,18 +3452,18 @@ However, if you want to customize the SQL queries, then you can configure each o
 <td class="tableblock halign-left valign-top"><p class="tableblock">Description</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">lockMaxAgeMillis</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">This refers to the duration after which the lock is considered orphaned, i.e., if the currentTimestamp - createdAt &gt;= lockMaxAgeMillis then lock is orphaned.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>lockMaxAgeMillis</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">This refers to the duration after which the lock is considered orphaned, i.e., if the <code>currentTimestamp - createdAt &gt;= lockMaxAgeMillis</code> then lock is orphaned.</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">lockKeepAliveIntervalMillis</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>lockKeepAliveIntervalMillis</code></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">The frequency at which keep-alive updates are done to createdAt Timestamp column.</p></td>
 </tr>
 </tbody>
 </table>
 </div>
-<div class="sect2">
-<h3 id="_caching_jdbc_idempotentrepository"><a class="anchor" href="#_caching_jdbc_idempotentrepository"></a>Caching Jdbc IdempotentRepository</h3>
+<div class="sect3">
+<h4 id="_caching_jdbc_idempotentrepository"><a class="anchor" href="#_caching_jdbc_idempotentrepository"></a>Caching Jdbc IdempotentRepository</h4>
 <div class="paragraph">
 <p>Some SQL implementations are not fast on a per-query basis.  The
 <code>JdbcMessageIdRepository</code> implementation does its idempotent checks
@@ -3306,10 +3478,8 @@ be made with regard to stale data and your specific usage.</p>
 </div>
 </div>
 </div>
-</div>
-<div class="sect1">
-<h2 id="_using_the_jdbc_based_aggregation_repository"><a class="anchor" href="#_using_the_jdbc_based_aggregation_repository"></a>Using the JDBC based aggregation repository</h2>
-<div class="sectionbody">
+<div class="sect2">
+<h3 id="_using_the_jdbc_based_aggregation_repository"><a class="anchor" href="#_using_the_jdbc_based_aggregation_repository"></a>Using the JDBC based aggregation repository</h3>
 <div class="paragraph">
 <p><code>JdbcAggregationRepository</code> is an <code>AggregationRepository</code> which on the
 fly persists the aggregated messages. This ensures that you will not
@@ -3332,8 +3502,8 @@ send the Exchange when the <code>maximumRedeliveries</code> was hit.</p>
 <div class="paragraph">
 <p>You can see some examples in the unit tests of camel-sql, for example <code>JdbcAggregateRecoverDeadLetterChannelTest.java</code></p>
 </div>
-<div class="sect2">
-<h3 id="_database"><a class="anchor" href="#_database"></a>Database</h3>
+<div class="sect3">
+<h4 id="_database"><a class="anchor" href="#_database"></a>Database</h4>
 <div class="paragraph">
 <p>To be operational, each aggregator uses two tables: the aggregation and
 completed one. By convention, the completed has the same name as the
@@ -3373,10 +3543,8 @@ CREATE TABLE aggregation_completed (
 </div>
 </div>
 </div>
-</div>
-<div class="sect1">
-<h2 id="_storing_body_and_headers_as_text"><a class="anchor" href="#_storing_body_and_headers_as_text"></a>Storing body and headers as text</h2>
-<div class="sectionbody">
+<div class="sect2">
+<h3 id="_storing_body_and_headers_as_text"><a class="anchor" href="#_storing_body_and_headers_as_text"></a>Storing body and headers as text</h3>
 <div class="paragraph">
 <p>You can configure the <code>JdbcAggregationRepository</code> to store message body
 and select(ed) headers as String in separate columns.
@@ -3426,8 +3594,8 @@ CREATE TABLE aggregationRepo3_completed (
 &lt;/bean&gt;</code></pre>
 </div>
 </div>
-<div class="sect2">
-<h3 id="_codec_serialization"><a class="anchor" href="#_codec_serialization"></a>Codec (Serialization)</h3>
+<div class="sect3">
+<h4 id="_codec_serialization"><a class="anchor" href="#_codec_serialization"></a>Codec (Serialization)</h4>
 <div class="paragraph">
 <p>Since they can contain any type of payload, Exchanges are not
 serializable by design. It is converted into a byte array to be stored
@@ -3449,22 +3617,22 @@ and org.apache.camel packages and subpackages. The remaining classes will be bla
 This could be accomplished by changing the deserializationFilter field in the repository.</p>
 </div>
 </div>
-<div class="sect2">
-<h3 id="_transaction"><a class="anchor" href="#_transaction"></a>Transaction</h3>
+<div class="sect3">
+<h4 id="_transaction"><a class="anchor" href="#_transaction"></a>Transaction</h4>
 <div class="paragraph">
 <p>A Spring <code>PlatformTransactionManager</code> is required to orchestrate
 transaction.</p>
 </div>
-<div class="sect3">
-<h4 id="_service_startstop"><a class="anchor" href="#_service_startstop"></a>Service (Start/Stop)</h4>
+<div class="sect4">
+<h5 id="_service_startstop"><a class="anchor" href="#_service_startstop"></a>Service (Start/Stop)</h5>
 <div class="paragraph">
 <p>The <code>start</code> method verify the connection of the database and the presence of the required tables.
 If anything is wrong, it will fail during starting.</p>
 </div>
 </div>
 </div>
-<div class="sect2">
-<h3 id="_aggregator_configuration"><a class="anchor" href="#_aggregator_configuration"></a>Aggregator configuration</h3>
+<div class="sect3">
+<h4 id="_aggregator_configuration"><a class="anchor" href="#_aggregator_configuration"></a>Aggregator configuration</h4>
 <div class="paragraph">
 <p>Depending on the targeted environment, the aggregator might need some
 configuration. As you already know, each aggregator should have its own
@@ -3493,8 +3661,8 @@ your database system, it can be injected with the <code>lobHandler</code> proper
 </div>
 </div>
 </div>
-<div class="sect2">
-<h3 id="_optimistic_locking"><a class="anchor" href="#_optimistic_locking"></a>Optimistic locking</h3>
+<div class="sect3">
+<h4 id="_optimistic_locking"><a class="anchor" href="#_optimistic_locking"></a>Optimistic locking</h4>
 <div class="paragraph">
 <p>You can turn on <code>optimisticLocking</code> and use
 this JDBC-based aggregation repository in a clustered environment where
@@ -3565,8 +3733,8 @@ class="org.apache.camel.processor.aggregate.jdbc.JdbcAggregationRepository"&gt;
 </div>
 </div>
 </div>
-<div class="sect2">
-<h3 id="_propagation_behavior"><a class="anchor" href="#_propagation_behavior"></a>Propagation behavior</h3>
+<div class="sect3">
+<h4 id="_propagation_behavior"><a class="anchor" href="#_propagation_behavior"></a>Propagation behavior</h4>
 <div class="paragraph">
 <p><code>JdbcAggregationRepository</code> uses two distinct <em>transaction templates</em> from Spring-TX. One is read-only
 and one is used for read-write operations.</p>
@@ -3592,13 +3760,13 @@ class="org.apache.camel.processor.aggregate.jdbc.JdbcAggregationRepository"&gt;
 so <code>propagationBehaviorName</code> is convenient setter that allows to use names of the constants.</p>
 </div>
 </div>
-<div class="sect2">
-<h3 id="_clustering"><a class="anchor" href="#_clustering"></a>Clustering</h3>
+<div class="sect3">
+<h4 id="_clustering"><a class="anchor" href="#_clustering"></a>Clustering</h4>
 <div class="paragraph">
-<p>JdbcAggregationRepository does not provide recovery in a clustered environment.</p>
+<p><code>JdbcAggregationRepository</code> does not provide recovery in a clustered environment.</p>
 </div>
 <div class="paragraph">
-<p>You may use ClusteredJdbcAggregationRepository that provides a limited support for recovery in a clustered environment:
+<p>You may use <code>ClusteredJdbcAggregationRepository</code> that provides a limited support for recovery in a clustered environment:
 recovery mechanism is dealt separately by members of the cluster,
 i.e., a member may only recover exchanges that it completed itself.</p>
 </div>
@@ -3621,8 +3789,8 @@ Since each member is the only responsible for the recovery of its completed exch
 </table>
 </div>
 </div>
-<div class="sect2">
-<h3 id="_postgresql_case"><a class="anchor" href="#_postgresql_case"></a>PostgreSQL case</h3>
+<div class="sect3">
+<h4 id="_postgresql_case"><a class="anchor" href="#_postgresql_case"></a>PostgreSQL case</h4>
 <div class="paragraph">
 <p>There&#8217;s a special database that may cause problems with optimistic locking used by <code>JdbcAggregationRepository</code>:
 PostgreSQL marks connection as invalid in case of data integrity violation exception (the one with SQLState 23505).
@@ -3652,10 +3820,8 @@ but without marking PostgreSQL connection as invalid.</p>
 </div>
 </div>
 </div>
-</div>
-<div class="sect1">
-<h2 id="_camel_sql_starter"><a class="anchor" href="#_camel_sql_starter"></a>Camel Sql Starter</h2>
-<div class="sectionbody">
+<div class="sect2">
+<h3 id="_camel_sql_starter"><a class="anchor" href="#_camel_sql_starter"></a>Camel SQL Starter</h3>
 <div class="paragraph">
 <p>A starter module is available to spring-boot users. When using the starter,
 the <code>DataSource</code> can be directly configured using spring-boot properties.</p>
@@ -3692,11 +3858,14 @@ spring.datasource.driver-class-name=com.mysql.jdbc.Driver</code></pre>
 </div>
 </div>
 </div>
+</div>
 </article>
   </div>
 </main>
 </div>
 <footer class="footer">
+  <p>This page was built using the Antora default UI.</p>
+  <p>The source code for this UI is licensed under the terms of the MPL-2.0 license.</p>
 </footer>
 <script id="site-script" src="../../_/js/site.js" data-ui-root-path="../../_"></script>
 <script async src="../../_/js/vendor/highlight.js"></script>

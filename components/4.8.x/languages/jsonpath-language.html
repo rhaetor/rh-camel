@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>JSONPath :: Red Hat Camel Reference</title>
+    <title>JSONPath :: Red Hat build of Apache Camel</title>
     <meta name="description" content="Evaluates a JSONPath expression against a JSON message body.">
     <meta name="generator" content="Antora 3.1.4">
     <link rel="stylesheet" href="../../../_/css/site.css">
@@ -12,7 +12,7 @@
 <header class="header">
   <nav class="navbar">
     <div class="navbar-brand">
-      <a class="navbar-item" href="../../manual/index.html">Red Hat build of Apache Camel manual</a>
+      <a class="navbar-item" href="/">Red Hat build of Apache Camel</a>
       <button class="navbar-burger" data-target="topbar-nav">
         <span></span>
         <span></span>
@@ -22,11 +22,12 @@
   </nav>
 </header>
 <div class="body">
-<div class="nav-container" data-component="components" data-version="next">
+<div class="nav-container" data-component="components" data-version="4.8.x">
   <aside class="nav">
     <div class="panels">
 <div class="nav-panel-menu is-active" data-panel="menu">
   <nav class="nav-menu">
+    <button class="nav-menu-toggle" aria-label="Toggle expand/collapse all" style="display: none"></button>
     <h3 class="title"><a href="../index.html">Camel Components</a></h3>
 <ul class="nav-list">
   <li class="nav-item" data-depth="0">
@@ -36,7 +37,46 @@
     <a class="nav-link" href="../index.html">Components</a>
 <ul class="nav-list">
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="../activemq-component.html">ActiveMQ</a>
+    <a class="nav-link" href="../activemq-component.html">ActiveMQ 5.x</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../activemq6-component.html">ActiveMQ 6.x</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../ai-summary.html">AI</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../chatscript-component.html">ChatScript</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../djl-component.html">Deep Java Library</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../langchain4j-chat-component.html">LangChain4j Chat</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../langchain4j-embeddings-component.html">LangChain4j Embeddings</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../langchain4j-tokenizer-component.html">LangChain4j Tokenizer</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../langchain4j-tools-component.html">LangChain4j Tools</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../langchain4j-web-search-component.html">LangChain4j Web Search</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../milvus-component.html">Milvus</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../pinecone-component.html">Pinecone</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../qdrant-component.html">Qdrant</a>
+  </li>
+</ul>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="../amqp-component.html">AMQP</a>
@@ -65,6 +105,15 @@
 <ul class="nav-list">
   <li class="nav-item" data-depth="3">
     <a class="nav-link" href="../aws2-athena-component.html">AWS Athena</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../aws-bedrock-component.html">AWS Bedrock</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../aws-bedrock-agent-component.html">AWS Bedrock Agent</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../aws-bedrock-agent-runtime-component.html">AWS Bedrock Agent Runtime</a>
   </li>
   <li class="nav-item" data-depth="3">
     <a class="nav-link" href="../aws-cloudtrail-component.html">AWS Cloudtrail</a>
@@ -169,7 +218,7 @@
     <a class="nav-link" href="../azure-storage-blob-component.html">Azure Storage Blob Service</a>
   </li>
   <li class="nav-item" data-depth="3">
-    <a class="nav-link" href="../azure-storage-datalake-component.html">Azure Storage Datalake Service</a>
+    <a class="nav-link" href="../azure-storage-datalake-component.html">Azure Storage Data Lake Service</a>
   </li>
   <li class="nav-item" data-depth="3">
     <a class="nav-link" href="../azure-storage-queue-component.html">Azure Storage Queue Service</a>
@@ -202,9 +251,6 @@
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="../cql-component.html">Cassandra CQL</a>
-  </li>
-  <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="../chatscript-component.html">ChatScript</a>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="../chunk-component.html">Chunk</a>
@@ -277,9 +323,6 @@
     <a class="nav-link" href="../debezium-sqlserver-component.html">Debezium SQL Server Connector</a>
   </li>
 </ul>
-  </li>
-  <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="../djl-component.html">Deep Java Library</a>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="../dhis2-component.html">DHIS2</a>
@@ -395,6 +438,9 @@
   </li>
   <li class="nav-item" data-depth="3">
     <a class="nav-link" href="../google-pubsub-component.html">Google Pubsub</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../google-pubsub-lite-component.html">Google PubSub Lite</a>
   </li>
   <li class="nav-item" data-depth="3">
     <a class="nav-link" href="../google-secret-manager-component.html">Google Secret Manager</a>
@@ -687,7 +733,7 @@
     <a class="nav-link" href="../ldif-component.html">LDIF</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="../log-component.html">Log</a>
+    <a class="nav-link" href="../log-component.html">Log Data</a>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="../lucene-component.html">Lucene</a>
@@ -900,10 +946,16 @@
     <a class="nav-link" href="../smb-component.html">SMB</a>
   </li>
   <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../smooks-component.html">Smooks</a>
+  </li>
+  <li class="nav-item" data-depth="2">
     <a class="nav-link" href="../smpp-component.html">SMPP</a>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="../snmp-component.html">SNMP</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../solr-component.html">Solr</a>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="../splunk-component.html">Splunk</a>
@@ -966,6 +1018,18 @@
     <a class="nav-link" href="../stub-component.html">Stub</a>
   </li>
   <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../tahu-summary.html">Tahu</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../tahu-edge-component.html">Tahu Edge Node / Device</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../tahu-host-component.html">Tahu Host Application</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
     <a class="nav-link" href="../telegram-component.html">Telegram</a>
   </li>
   <li class="nav-item" data-depth="2">
@@ -1026,7 +1090,7 @@
     <a class="nav-link" href="../whatsapp-component.html">WhatsApp</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="../wordpress-component.html">Wordpress</a>
+    <a class="nav-link" href="../wordpress-component.html">WordPress</a>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="../workday-component.html">Workday</a>
@@ -1419,7 +1483,13 @@
     <a class="nav-link" href="../others/openapi-java.html">Openapi Java</a>
   </li>
   <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../others/openapi-validator.html">Openapi Validator</a>
+  </li>
+  <li class="nav-item" data-depth="2">
     <a class="nav-link" href="../others/opentelemetry.html">OpenTelemetry</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../others/platform-http-jolokia.html">Platform HTTP Jolokia</a>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="../others/platform-http-main.html">Platform Http Main</a>
@@ -1567,7 +1637,7 @@
     <a class="nav-link" href="../eips/event-message.html">Event Message</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="../eips/failover-eip.html">Failover</a>
+    <a class="nav-link" href="../eips/failoverLoadBalancer-eip.html">Failover Load Balancer</a>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="../eips/faultToleranceConfiguration-eip.html">Fault Tolerance Configuration</a>
@@ -1597,13 +1667,13 @@
     <a class="nav-link" href="../eips/loadBalance-eip.html">Load Balance</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="../eips/log-eip.html">Log</a>
+    <a class="nav-link" href="../eips/log-eip.html">Logger</a>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="../eips/loop-eip.html">Loop</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="../eips/marshal-eip.html">Marshal EIP</a>
+    <a class="nav-link" href="../eips/marshal-eip.html">Marshal</a>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="../eips/message.html">Message</a>
@@ -1660,6 +1730,9 @@
     <a class="nav-link" href="../eips/point-to-point-channel.html">Point to Point Channel</a>
   </li>
   <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../eips/poll-eip.html">Poll</a>
+  </li>
+  <li class="nav-item" data-depth="2">
     <a class="nav-link" href="../eips/pollEnrich-eip.html">Poll Enrich</a>
   </li>
   <li class="nav-item" data-depth="2">
@@ -1675,7 +1748,7 @@
     <a class="nav-link" href="../eips/publish-subscribe-channel.html">Publish Subscribe Channel</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="../eips/random-eip.html">Random</a>
+    <a class="nav-link" href="../eips/randomLoadBalancer-eip.html">Random Load Balancer</a>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="../eips/recipientList-eip.html">Recipient List</a>
@@ -1717,7 +1790,7 @@
     <a class="nav-link" href="../eips/rollback-eip.html">Rollback</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="../eips/roundRobin-eip.html">Round Robin</a>
+    <a class="nav-link" href="../eips/roundRobinLoadBalancer-eip.html">Round Robin Load Balancer</a>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="../eips/routingSlip-eip.html">Routing Slip</a>
@@ -1729,7 +1802,7 @@
     <a class="nav-link" href="../eips/sample-eip.html">Sample</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="../eips/scatter-gather.html">Scatter Gather</a>
+    <a class="nav-link" href="../eips/scatter-gather.html">Scatter-Gather</a>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="../eips/script-eip.html">Script</a>
@@ -1759,6 +1832,9 @@
     <a class="nav-link" href="../eips/setVariable-eip.html">Set Variable</a>
   </li>
   <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../eips/setVariables-eip.html">Set Variables</a>
+  </li>
+  <li class="nav-item" data-depth="2">
     <a class="nav-link" href="../eips/sort-eip.html">Sort</a>
   </li>
   <li class="nav-item" data-depth="2">
@@ -1768,7 +1844,7 @@
     <a class="nav-link" href="../eips/step-eip.html">Step</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="../eips/sticky-eip.html">Sticky</a>
+    <a class="nav-link" href="../eips/stickyLoadBalancer-eip.html">Sticky Load Balancer</a>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="../eips/stop-eip.html">Stop</a>
@@ -1789,7 +1865,7 @@
     <a class="nav-link" href="../eips/toD-eip.html">To D</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="../eips/topic-eip.html">Topic</a>
+    <a class="nav-link" href="../eips/topicLoadBalancer-eip.html">Topic Load Balancer</a>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="../eips/transactional-client.html">Transactional Client</a>
@@ -1798,13 +1874,13 @@
     <a class="nav-link" href="../eips/transform-eip.html">Transform</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="../eips/unmarshal-eip.html">Unmarshal EIP</a>
+    <a class="nav-link" href="../eips/unmarshal-eip.html">Unmarshal</a>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="../eips/validate-eip.html">Validate</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="../eips/weighted-eip.html">Weighted</a>
+    <a class="nav-link" href="../eips/weightedLoadBalancer-eip.html">Weighted Load Balancer</a>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="../eips/wireTap-eip.html">Wire Tap</a>
@@ -1819,22 +1895,40 @@
 <div class="nav-panel-explore" data-panel="explore">
   <div class="context">
     <span class="title">Camel Components</span>
-    <span class="version">Next (Pre-release)</span>
+    <span class="version">4.8.x</span>
   </div>
   <ul class="components">
     <li class="component is-current">
-      <a class="title" href="../index.html">Camel Components</a>
+      <div class="title"><a href="../../4.10.x/index.html">Camel Components</a></div>
       <ul class="versions">
-        <li class="version is-current is-latest">
-          <a href="../index.html">Next (Pre-release)</a>
+        <li class="version is-latest">
+          <a href="../../4.10.x/index.html">4.10.x (LTS)</a>
+        </li>
+        <li class="version is-current">
+          <a href="../index.html">4.8.x</a>
+        </li>
+        <li class="version">
+          <a href="../../4.4.x/index.html">4.4.x</a>
+        </li>
+        <li class="version">
+          <a href="../../4.0.x/index.html">4.0.x</a>
         </li>
       </ul>
     </li>
     <li class="component">
-      <a class="title" href="../../../manual/index.html">User manual</a>
+      <div class="title"><a href="../../../manual/4.10.x/index.html">User manual</a></div>
       <ul class="versions">
         <li class="version is-latest">
-          <a href="../../../manual/index.html">default</a>
+          <a href="../../../manual/4.10.x/index.html">4.10.x</a>
+        </li>
+        <li class="version">
+          <a href="../../../manual/4.8.x/index.html">4.8.x</a>
+        </li>
+        <li class="version">
+          <a href="../../../manual/4.4.x/index.html">4.4.x</a>
+        </li>
+        <li class="version">
+          <a href="../../../manual/4.0.x/index.html">4.0.x</a>
         </li>
       </ul>
     </li>
@@ -1846,7 +1940,7 @@
 <main class="article">
 <div class="toolbar" role="navigation">
 <button class="nav-toggle"></button>
-  <a href="../../../manual/index.html" class="home-link"></a>
+  <a href="../../../manual/4.10.x/index.html" class="home-link"></a>
 <nav class="breadcrumbs" aria-label="breadcrumbs">
   <ul>
     <li><a href="../index.html">Camel Components</a></li>
@@ -1854,6 +1948,16 @@
     <li><a href="jsonpath-language.html">JSONPath</a></li>
   </ul>
 </nav>
+<div class="page-versions">
+  <button class="version-menu-toggle" title="Show other versions of page">4.8.x</button>
+  <div class="version-menu">
+    <a class="version" href="../../4.10.x/languages/jsonpath-language.html">4.10.x (LTS)</a>
+    <a class="version is-current" href="jsonpath-language.html">4.8.x</a>
+    <a class="version" href="../../4.4.x/languages/jsonpath-language.html">4.4.x</a>
+    <a class="version is-missing" href="../../4.0.x/index.html">4.0.x</a>
+  </div>
+</div>
+<div class="edit-this-page"><a href="https://github.com/rhaetor/rh-camel-jboss/edit/camel-4.8.0-branch/docs/components/modules/languages/pages/jsonpath-language.adoc">Edit this Page</a></div>
 </div>
   <div class="content">
 <aside class="toc sidebar" data-title="Contents" data-levels="2">
@@ -1868,7 +1972,7 @@
 </div>
 <div class="paragraph">
 <p>Camel supports <a href="https://github.com/json-path/JsonPath/">JSONPath</a> to allow
-using <a href="../../../manual/expression.html" class="xref page">Expression</a> or <a href="../../../manual/predicate.html" class="xref page">Predicate</a> on JSON messages.</p>
+using <a href="../../../manual/4.10.x/expression.html" class="xref page">Expression</a> or <a href="../../../manual/4.10.x/predicate.html" class="xref page">Predicate</a> on JSON messages.</p>
 </div>
 </div>
 </div>
@@ -1896,7 +2000,7 @@ using <a href="../../../manual/expression.html" class="xref page">Expression</a>
 <tbody>
 <tr>
 <td class="tableblock halign-left valign-top"><div class="content"><div id="_language_option_suppressExceptions" class="paragraph">
-<p><a href="#_language_option_suppressExceptions" class="anchor"></a><strong>suppressExceptions</strong></p>
+<p><a href="#_language_option_suppressExceptions" class="anchor"></a><strong>suppressExceptions</strong> (common)</p>
 </div></div></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>false</code></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>Boolean</code></p></td>
@@ -1906,7 +2010,7 @@ using <a href="../../../manual/expression.html" class="xref page">Expression</a>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><div class="content"><div id="_language_option_allowSimple" class="paragraph">
-<p><a href="#_language_option_allowSimple" class="anchor"></a><strong>allowSimple</strong></p>
+<p><a href="#_language_option_allowSimple" class="anchor"></a><strong>allowSimple</strong> (advanced)</p>
 </div></div></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>true</code></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>Boolean</code></p></td>
@@ -1916,7 +2020,7 @@ using <a href="../../../manual/expression.html" class="xref page">Expression</a>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><div class="content"><div id="_language_option_allowEasyPredicate" class="paragraph">
-<p><a href="#_language_option_allowEasyPredicate" class="anchor"></a><strong>allowEasyPredicate</strong></p>
+<p><a href="#_language_option_allowEasyPredicate" class="anchor"></a><strong>allowEasyPredicate</strong> (advanced)</p>
 </div></div></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>true</code></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>Boolean</code></p></td>
@@ -1926,7 +2030,7 @@ using <a href="../../../manual/expression.html" class="xref page">Expression</a>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><div class="content"><div id="_language_option_writeAsString" class="paragraph">
-<p><a href="#_language_option_writeAsString" class="anchor"></a><strong>writeAsString</strong></p>
+<p><a href="#_language_option_writeAsString" class="anchor"></a><strong>writeAsString</strong> (common)</p>
 </div></div></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>false</code></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>Boolean</code></p></td>
@@ -1936,7 +2040,7 @@ using <a href="../../../manual/expression.html" class="xref page">Expression</a>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><div class="content"><div id="_language_option_unpackArray" class="paragraph">
-<p><a href="#_language_option_unpackArray" class="anchor"></a><strong>unpackArray</strong></p>
+<p><a href="#_language_option_unpackArray" class="anchor"></a><strong>unpackArray</strong> (common)</p>
 </div></div></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>false</code></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>Boolean</code></p></td>
@@ -1946,7 +2050,7 @@ using <a href="../../../manual/expression.html" class="xref page">Expression</a>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><div class="content"><div id="_language_option_option" class="paragraph">
-<p><a href="#_language_option_option" class="anchor"></a><strong>option</strong></p>
+<p><a href="#_language_option_option" class="anchor"></a><strong>option</strong> (advanced)</p>
 </div></div></td>
 <td class="tableblock halign-left valign-top"></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>Enum</code></p></td>
@@ -1978,7 +2082,7 @@ using <a href="../../../manual/expression.html" class="xref page">Expression</a>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><div class="content"><div id="_language_option_source" class="paragraph">
-<p><a href="#_language_option_source" class="anchor"></a><strong>source</strong></p>
+<p><a href="#_language_option_source" class="anchor"></a><strong>source</strong> (common)</p>
 </div></div></td>
 <td class="tableblock halign-left valign-top"></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>String</code></p></td>
@@ -1988,7 +2092,7 @@ using <a href="../../../manual/expression.html" class="xref page">Expression</a>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><div class="content"><div id="_language_option_resultType" class="paragraph">
-<p><a href="#_language_option_resultType" class="anchor"></a><strong>resultType</strong></p>
+<p><a href="#_language_option_resultType" class="anchor"></a><strong>resultType</strong> (common)</p>
 </div></div></td>
 <td class="tableblock halign-left valign-top"></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>String</code></p></td>
@@ -1998,7 +2102,7 @@ using <a href="../../../manual/expression.html" class="xref page">Expression</a>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><div class="content"><div id="_language_option_trim" class="paragraph">
-<p><a href="#_language_option_trim" class="anchor"></a><strong>trim</strong></p>
+<p><a href="#_language_option_trim" class="anchor"></a><strong>trim</strong> (advanced)</p>
 </div></div></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>true</code></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>Boolean</code></p></td>
@@ -2011,59 +2115,18 @@ using <a href="../../../manual/expression.html" class="xref page">Expression</a>
 </div>
 </div>
 <div class="sect1">
-<h2 id="_examples"><a class="anchor" href="#_examples"></a>Examples</h2>
+<h2 id="_usage"><a class="anchor" href="#_usage"></a>Usage</h2>
 <div class="sectionbody">
-<div class="paragraph">
-<p>For example, you can use JSONPath in a <a href="../../../manual/predicate.html" class="xref page">Predicate</a>
-with the <a href="../eips/choice-eip.html" class="xref page">Content Based Router</a> EIP.</p>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">from("queue:books.new")
-  .choice()
-    .when().jsonpath("$.store.book[?(@.price &lt; 10)]")
-      .to("jms:queue:book.cheap")
-    .when().jsonpath("$.store.book[?(@.price &lt; 30)]")
-      .to("jms:queue:book.average")
-    .otherwise()
-      .to("jms:queue:book.expensive");</code></pre>
-</div>
-</div>
-<div class="paragraph">
-<p>And in XML DSL:</p>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;route&gt;
-  &lt;from uri="direct:start"/&gt;
-  &lt;choice&gt;
-    &lt;when&gt;
-      &lt;jsonpath&gt;$.store.book[?(@.price &amp;lt; 10)]&lt;/jsonpath&gt;
-      &lt;to uri="mock:cheap"/&gt;
-    &lt;/when&gt;
-    &lt;when&gt;
-      &lt;jsonpath&gt;$.store.book[?(@.price &amp;lt; 30)]&lt;/jsonpath&gt;
-      &lt;to uri="mock:average"/&gt;
-    &lt;/when&gt;
-    &lt;otherwise&gt;
-      &lt;to uri="mock:expensive"/&gt;
-    &lt;/otherwise&gt;
-  &lt;/choice&gt;
-&lt;/route&gt;</code></pre>
-</div>
-</div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="_jsonpath_syntax"><a class="anchor" href="#_jsonpath_syntax"></a>JSONPath Syntax</h2>
-<div class="sectionbody">
+<div class="sect2">
+<h3 id="_jsonpath_syntax"><a class="anchor" href="#_jsonpath_syntax"></a>JSONPath Syntax</h3>
 <div class="paragraph">
 <p>Using the JSONPath syntax takes some time to learn, even for basic predicates.
-So for example to find out all the cheap books you have to do:</p>
+So for example, to find out all the cheap books you have to do:</p>
 </div>
 <div class="listingblock">
 <div class="content">
 <pre class="highlightjs highlight"><code class="language-text hljs" data-lang="text">$.store.book[?(@.price &lt; 20)]</code></pre>
+</div>
 </div>
 </div>
 <div class="sect2">
@@ -2111,8 +2174,64 @@ using a basic style. That means the predicate must not start with the <code>$</c
 </div>
 </div>
 <div class="sect1">
-<h2 id="_supported_message_body_types"><a class="anchor" href="#_supported_message_body_types"></a>Supported message body types</h2>
+<h2 id="_examples"><a class="anchor" href="#_examples"></a>Examples</h2>
 <div class="sectionbody">
+<div class="paragraph">
+<p>For example, you can use JSONPath in a <a href="../../../manual/4.10.x/predicate.html" class="xref page">Predicate</a>
+with the <a href="../eips/choice-eip.html" class="xref page">Content-Based Router</a> EIP.</p>
+</div>
+<div id="_tabs_1" class="openblock tabs is-sync is-loading">
+<div class="content">
+<div class="ulist tablist">
+<ul>
+<li id="_tabs_1_java" class="tab">
+<p>Java</p>
+</li>
+<li id="_tabs_1_xml_dsl" class="tab">
+<p>XML DSL</p>
+</li>
+</ul>
+</div>
+<div id="_tabs_1_java--panel" class="tabpanel" aria-labelledby="_tabs_1_java">
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">from("queue:books.new")
+  .choice()
+    .when().jsonpath("$.store.book[?(@.price &lt; 10)]")
+      .to("jms:queue:book.cheap")
+    .when().jsonpath("$.store.book[?(@.price &lt; 30)]")
+      .to("jms:queue:book.average")
+    .otherwise()
+      .to("jms:queue:book.expensive");</code></pre>
+</div>
+</div>
+</div>
+<div id="_tabs_1_xml_dsl--panel" class="tabpanel" aria-labelledby="_tabs_1_xml_dsl">
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;route&gt;
+  &lt;from uri="direct:start"/&gt;
+  &lt;choice&gt;
+    &lt;when&gt;
+      &lt;jsonpath&gt;$.store.book[?(@.price &amp;lt; 10)]&lt;/jsonpath&gt;
+      &lt;to uri="mock:cheap"/&gt;
+    &lt;/when&gt;
+    &lt;when&gt;
+      &lt;jsonpath&gt;$.store.book[?(@.price &amp;lt; 30)]&lt;/jsonpath&gt;
+      &lt;to uri="mock:average"/&gt;
+    &lt;/when&gt;
+    &lt;otherwise&gt;
+      &lt;to uri="mock:expensive"/&gt;
+    &lt;/otherwise&gt;
+  &lt;/choice&gt;
+&lt;/route&gt;</code></pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_supported_message_body_types"><a class="anchor" href="#_supported_message_body_types"></a>Supported message body types</h3>
 <div class="paragraph">
 <p>Camel JSONPath supports message body using the following types:</p>
 </div>
@@ -2157,21 +2276,32 @@ using a basic style. That means the predicate must not start with the <code>$</c
 </tbody>
 </table>
 <div class="paragraph">
-<p>If a message body is of unsupported type then an exception is thrown by default, however you
-can configure JSONPath to suppress exceptions (see below)</p>
+<p>If a message body is of unsupported type, then an exception is thrown by default.
+However, you can configure JSONPath to suppress exceptions (see below)</p>
 </div>
 </div>
-</div>
-<div class="sect1">
-<h2 id="_suppressing_exceptions"><a class="anchor" href="#_suppressing_exceptions"></a>Suppressing exceptions</h2>
-<div class="sectionbody">
+<div class="sect2">
+<h3 id="_suppressing_exceptions"><a class="anchor" href="#_suppressing_exceptions"></a>Suppressing exceptions</h3>
 <div class="paragraph">
 <p>By default, jsonpath will throw an exception if the json payload does not
 have a valid path accordingly to the configured jsonpath expression. In
-some use-cases you may want to ignore this in case the json payload
+some use-cases, you may want to ignore this in case the json payload
 contains optional data. Therefore, you can set the option
 <code>suppressExceptions</code> to <code>true</code> to ignore this as shown:</p>
 </div>
+<div id="_tabs_2" class="openblock tabs is-sync is-loading">
+<div class="content">
+<div class="ulist tablist">
+<ul>
+<li id="_tabs_2_java" class="tab">
+<p>Java</p>
+</li>
+<li id="_tabs_2_xml_dsl" class="tab">
+<p>XML DSL</p>
+</li>
+</ul>
+</div>
+<div id="_tabs_2_java--panel" class="tabpanel" aria-labelledby="_tabs_2_java">
 <div class="listingblock">
 <div class="content">
 <pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">from("direct:start")
@@ -2183,9 +2313,8 @@ contains optional data. Therefore, you can set the option
             .to("mock:other");</code></pre>
 </div>
 </div>
-<div class="paragraph">
-<p>And in XML DSL:</p>
 </div>
+<div id="_tabs_2_xml_dsl--panel" class="tabpanel" aria-labelledby="_tabs_2_xml_dsl">
 <div class="listingblock">
 <div class="content">
 <pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;route&gt;
@@ -2202,14 +2331,15 @@ contains optional data. Therefore, you can set the option
 &lt;/route&gt;</code></pre>
 </div>
 </div>
+</div>
+</div>
+</div>
 <div class="paragraph">
 <p>This option is also available on the <code>@JsonPath</code> annotation.</p>
 </div>
 </div>
-</div>
-<div class="sect1">
-<h2 id="_inline_simple_expressions"><a class="anchor" href="#_inline_simple_expressions"></a>Inline Simple expressions</h2>
-<div class="sectionbody">
+<div class="sect2">
+<h3 id="_inline_simple_expressions"><a class="anchor" href="#_inline_simple_expressions"></a>Inline Simple expressions</h3>
 <div class="paragraph">
 <p>It&#8217;s possible to inlined <a href="simple-language.html" class="xref page">Simple</a> language
 in the JSONPath expression using the simple syntax <code>${xxx}</code>.</p>
@@ -2217,6 +2347,19 @@ in the JSONPath expression using the simple syntax <code>${xxx}</code>.</p>
 <div class="paragraph">
 <p>An example is shown below:</p>
 </div>
+<div id="_tabs_3" class="openblock tabs is-sync is-loading">
+<div class="content">
+<div class="ulist tablist">
+<ul>
+<li id="_tabs_3_java" class="tab">
+<p>Java</p>
+</li>
+<li id="_tabs_3_xml_dsl" class="tab">
+<p>XML DSL</p>
+</li>
+</ul>
+</div>
+<div id="_tabs_3_java--panel" class="tabpanel" aria-labelledby="_tabs_3_java">
 <div class="listingblock">
 <div class="content">
 <pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">from("direct:start")
@@ -2229,9 +2372,8 @@ in the JSONPath expression using the simple syntax <code>${xxx}</code>.</p>
       .to("mock:expensive");</code></pre>
 </div>
 </div>
-<div class="paragraph">
-<p>And in XML DSL:</p>
 </div>
+<div id="_tabs_3_xml_dsl--panel" class="tabpanel" aria-labelledby="_tabs_3_xml_dsl">
 <div class="listingblock">
 <div class="content">
 <pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;route&gt;
@@ -2252,17 +2394,32 @@ in the JSONPath expression using the simple syntax <code>${xxx}</code>.</p>
 &lt;/route&gt;</code></pre>
 </div>
 </div>
+</div>
+</div>
+</div>
 <div class="paragraph">
 <p>You can turn off support for inlined Simple expression by setting the option <code>allowSimple</code> to <code>false</code> as shown:</p>
 </div>
+<div id="_tabs_4" class="openblock tabs is-sync is-loading">
+<div class="content">
+<div class="ulist tablist">
+<ul>
+<li id="_tabs_4_java" class="tab">
+<p>Java</p>
+</li>
+<li id="_tabs_4_xml_dsl" class="tab">
+<p>XML DSL</p>
+</li>
+</ul>
+</div>
+<div id="_tabs_4_java--panel" class="tabpanel" aria-labelledby="_tabs_4_java">
 <div class="listingblock">
 <div class="content">
 <pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">.when().jsonpath("$.store.book[?(@.price &lt; 10)]", false, false)</code></pre>
 </div>
 </div>
-<div class="paragraph">
-<p>And in XML DSL:</p>
 </div>
+<div id="_tabs_4_xml_dsl--panel" class="tabpanel" aria-labelledby="_tabs_4_xml_dsl">
 <div class="listingblock">
 <div class="content">
 <pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;jsonpath allowSimple="false"&gt;$.store.book[?(@.price &amp;lt; 10)]&lt;/jsonpath&gt;</code></pre>
@@ -2270,11 +2427,12 @@ in the JSONPath expression using the simple syntax <code>${xxx}</code>.</p>
 </div>
 </div>
 </div>
-<div class="sect1">
-<h2 id="_jsonpath_injection"><a class="anchor" href="#_jsonpath_injection"></a>JSONPath injection</h2>
-<div class="sectionbody">
+</div>
+</div>
+<div class="sect2">
+<h3 id="_jsonpath_injection"><a class="anchor" href="#_jsonpath_injection"></a>JSONPath injection</h3>
 <div class="paragraph">
-<p>You can use <a href="../../../manual/bean-integration.html" class="xref page">Bean Integration</a> to invoke a
+<p>You can use <a href="../../../manual/4.10.x/bean-integration.html" class="xref page">Bean Integration</a> to invoke a
 method on a bean and use various languages such as JSONPath (via the <code>@JsonPath</code> annotation)
 to extract a value from the message and bind it to a method parameter, as shown below:</p>
 </div>
@@ -2290,33 +2448,44 @@ to extract a value from the message and bind it to a method parameter, as shown 
 </div>
 </div>
 </div>
-</div>
-<div class="sect1">
-<h2 id="_encoding_detection"><a class="anchor" href="#_encoding_detection"></a>Encoding Detection</h2>
-<div class="sectionbody">
+<div class="sect2">
+<h3 id="_encoding_detection"><a class="anchor" href="#_encoding_detection"></a>Encoding Detection</h3>
 <div class="paragraph">
 <p>The encoding of the JSON document is
-detected automatically, if the document is encoded in unicode  (UTF-8,
-UTF-16LE, UTF-16BE, UTF-32LE, UTF-32BE ) as specified in  RFC-4627. If
-the encoding is a non-unicode encoding, you can either make sure that
+detected automatically, if the document is encoded in unicode (UTF-8,
+UTF-16LE, UTF-16BE, UTF-32LE, UTF-32BE) as specified in RFC-4627.
+If the encoding is a non-unicode encoding, you can either make sure that
 you enter the document in String format to JSONPath, or you
 can specify the encoding in the header <code>CamelJsonPathJsonEncoding</code> which
 is defined as a constant in: <code>JsonpathConstants.HEADER_JSON_ENCODING</code>.</p>
 </div>
 </div>
-</div>
-<div class="sect1">
-<h2 id="_split_json_data_into_sub_rows_as_json"><a class="anchor" href="#_split_json_data_into_sub_rows_as_json"></a>Split JSON data into sub rows as JSON</h2>
-<div class="sectionbody">
+<div class="sect2">
+<h3 id="_split_json_data_into_sub_rows_as_json"><a class="anchor" href="#_split_json_data_into_sub_rows_as_json"></a>Split JSON data into sub rows as JSON</h3>
 <div class="paragraph">
 <p>You can use JSONPath to split a JSON document, such as:</p>
 </div>
 <div class="listingblock">
 <div class="content">
 <pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">from("direct:start")
-    .split().jsonpath("$.store.book[*]")
+    .split().jsonpath("$.store.book[*]", List.class)
     .to("log:book");</code></pre>
 </div>
+</div>
+<div class="admonitionblock important">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-important" title="Important"></i>
+</td>
+<td class="content">
+Notice how we specify <code>List.class</code> as the result-type. This is because if there is only
+a single element (only 1 book), then jsonpath will return the single entity as a <code>Map</code> instead of <code>List&lt;Map&gt;</code>.
+Therefore, we tell Camel that the result should always be a <code>List</code>, and Camel will then automatic wrap the
+single element into a new <code>List</code> object.
+</td>
+</tr>
+</table>
 </div>
 <div class="paragraph">
 <p>Then each book is logged, however the message body is a <code>Map</code> instance. Sometimes
@@ -2326,7 +2495,7 @@ with the <code>writeAsString</code> option as shown:</p>
 <div class="listingblock">
 <div class="content">
 <pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">from("direct:start")
-    .split().jsonpathWriteAsString("$.store.book[*]")
+    .split().jsonpathWriteAsString("$.store.book[*]", List.class)
     .to("log:book");</code></pre>
 </div>
 </div>
@@ -2334,10 +2503,8 @@ with the <code>writeAsString</code> option as shown:</p>
 <p>Then each book is logged as a String JSON value.</p>
 </div>
 </div>
-</div>
-<div class="sect1">
-<h2 id="_unpack_a_single_element_array_into_an_object"><a class="anchor" href="#_unpack_a_single_element_array_into_an_object"></a>Unpack a single-element array into an object</h2>
-<div class="sectionbody">
+<div class="sect2">
+<h3 id="_unpack_a_single_element_array_into_an_object"><a class="anchor" href="#_unpack_a_single_element_array_into_an_object"></a>Unpack a single-element array into an object</h3>
 <div class="paragraph">
 <p>It is possible to unpack a single-element array into an object:</p>
 </div>
@@ -2349,19 +2516,17 @@ with the <code>writeAsString</code> option as shown:</p>
 </div>
 </div>
 <div class="paragraph">
-<p>If book array contains only one book, it will be converted into a Book object.</p>
+<p>If a book array contains only one book, it will be converted into a Book object.</p>
 </div>
 </div>
-</div>
-<div class="sect1">
-<h2 id="_using_header_as_input"><a class="anchor" href="#_using_header_as_input"></a>Using header as input</h2>
-<div class="sectionbody">
+<div class="sect2">
+<h3 id="_using_header_as_input"><a class="anchor" href="#_using_header_as_input"></a>Using header as input</h3>
 <div class="paragraph">
 <p>By default, JSONPath uses the message body as the input source. However, you can also use a header as input
 by specifying the <code>headerName</code> option.</p>
 </div>
 <div class="paragraph">
-<p>For example to count the number of books from a JSON document that
+<p>For example, to count the number of books from a JSON document that
 was stored in a header named <code>books</code> you can do:</p>
 </div>
 <div class="listingblock">
@@ -2391,17 +2556,15 @@ and we also told that we wanted the result to be converted as an integer by <cod
 </div>
 </div>
 </div>
-</div>
-<div class="sect1">
-<h2 id="_transforming_a_json_message"><a class="anchor" href="#_transforming_a_json_message"></a>Transforming a JSon message</h2>
-<div class="sectionbody">
+<div class="sect2">
+<h3 id="_transforming_a_json_message"><a class="anchor" href="#_transforming_a_json_message"></a>Transforming a JSon message</h3>
 <div class="paragraph">
-<p>For basic JSon transformation where you have a fixed structure you can represent with a combination of using
+<p>For basic JSon transformation where you have a fixed structure, you can represent with a combination of using
 Camel simple and JSonPath language as:</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-none hljs">{
+<pre class="highlightjs highlight"><code class="language-json hljs" data-lang="json">{
   "company": "${jsonpath($.customer.name)}",
   "location": "${jsonpath($.customer.address.country)}",
   "gold": ${jsonpath($.customer.orders.length() &gt; 5)}
@@ -2426,11 +2589,14 @@ also make it XML or plain text based:</p>
 </div>
 </div>
 </div>
+</div>
 </article>
   </div>
 </main>
 </div>
 <footer class="footer">
+  <p>This page was built using the Antora default UI.</p>
+  <p>The source code for this UI is licensed under the terms of the MPL-2.0 license.</p>
 </footer>
 <script id="site-script" src="../../../_/js/site.js" data-ui-root-path="../../../_"></script>
 <script async src="../../../_/js/vendor/highlight.js"></script>

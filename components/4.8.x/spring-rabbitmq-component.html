@@ -3,8 +3,8 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>Spring RabbitMQ :: Red Hat Camel Reference</title>
-    <meta name="description" content="Send and receive messages from RabbitMQ using Spring RabbitMQ client.">
+    <title>Spring RabbitMQ :: Red Hat build of Apache Camel</title>
+    <meta name="description" content="Send and receive messages from RabbitMQ using the Spring RabbitMQ client.">
     <meta name="generator" content="Antora 3.1.4">
     <link rel="stylesheet" href="../../_/css/site.css">
   </head>
@@ -12,7 +12,7 @@
 <header class="header">
   <nav class="navbar">
     <div class="navbar-brand">
-      <a class="navbar-item" href="../../manual/index.html">Red Hat build of Apache Camel manual</a>
+      <a class="navbar-item" href="/">Red Hat build of Apache Camel</a>
       <button class="navbar-burger" data-target="topbar-nav">
         <span></span>
         <span></span>
@@ -22,11 +22,12 @@
   </nav>
 </header>
 <div class="body">
-<div class="nav-container" data-component="components" data-version="next">
+<div class="nav-container" data-component="components" data-version="4.8.x">
   <aside class="nav">
     <div class="panels">
 <div class="nav-panel-menu is-active" data-panel="menu">
   <nav class="nav-menu">
+    <button class="nav-menu-toggle" aria-label="Toggle expand/collapse all" style="display: none"></button>
     <h3 class="title"><a href="index.html">Camel Components</a></h3>
 <ul class="nav-list">
   <li class="nav-item" data-depth="0">
@@ -36,7 +37,46 @@
     <a class="nav-link" href="index.html">Components</a>
 <ul class="nav-list">
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="activemq-component.html">ActiveMQ</a>
+    <a class="nav-link" href="activemq-component.html">ActiveMQ 5.x</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="activemq6-component.html">ActiveMQ 6.x</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="ai-summary.html">AI</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="chatscript-component.html">ChatScript</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="djl-component.html">Deep Java Library</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="langchain4j-chat-component.html">LangChain4j Chat</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="langchain4j-embeddings-component.html">LangChain4j Embeddings</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="langchain4j-tokenizer-component.html">LangChain4j Tokenizer</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="langchain4j-tools-component.html">LangChain4j Tools</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="langchain4j-web-search-component.html">LangChain4j Web Search</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="milvus-component.html">Milvus</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="pinecone-component.html">Pinecone</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="qdrant-component.html">Qdrant</a>
+  </li>
+</ul>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="amqp-component.html">AMQP</a>
@@ -65,6 +105,15 @@
 <ul class="nav-list">
   <li class="nav-item" data-depth="3">
     <a class="nav-link" href="aws2-athena-component.html">AWS Athena</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="aws-bedrock-component.html">AWS Bedrock</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="aws-bedrock-agent-component.html">AWS Bedrock Agent</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="aws-bedrock-agent-runtime-component.html">AWS Bedrock Agent Runtime</a>
   </li>
   <li class="nav-item" data-depth="3">
     <a class="nav-link" href="aws-cloudtrail-component.html">AWS Cloudtrail</a>
@@ -169,7 +218,7 @@
     <a class="nav-link" href="azure-storage-blob-component.html">Azure Storage Blob Service</a>
   </li>
   <li class="nav-item" data-depth="3">
-    <a class="nav-link" href="azure-storage-datalake-component.html">Azure Storage Datalake Service</a>
+    <a class="nav-link" href="azure-storage-datalake-component.html">Azure Storage Data Lake Service</a>
   </li>
   <li class="nav-item" data-depth="3">
     <a class="nav-link" href="azure-storage-queue-component.html">Azure Storage Queue Service</a>
@@ -202,9 +251,6 @@
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="cql-component.html">Cassandra CQL</a>
-  </li>
-  <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="chatscript-component.html">ChatScript</a>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="chunk-component.html">Chunk</a>
@@ -277,9 +323,6 @@
     <a class="nav-link" href="debezium-sqlserver-component.html">Debezium SQL Server Connector</a>
   </li>
 </ul>
-  </li>
-  <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="djl-component.html">Deep Java Library</a>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="dhis2-component.html">DHIS2</a>
@@ -395,6 +438,9 @@
   </li>
   <li class="nav-item" data-depth="3">
     <a class="nav-link" href="google-pubsub-component.html">Google Pubsub</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="google-pubsub-lite-component.html">Google PubSub Lite</a>
   </li>
   <li class="nav-item" data-depth="3">
     <a class="nav-link" href="google-secret-manager-component.html">Google Secret Manager</a>
@@ -687,7 +733,7 @@
     <a class="nav-link" href="ldif-component.html">LDIF</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="log-component.html">Log</a>
+    <a class="nav-link" href="log-component.html">Log Data</a>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="lucene-component.html">Lucene</a>
@@ -900,10 +946,16 @@
     <a class="nav-link" href="smb-component.html">SMB</a>
   </li>
   <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="smooks-component.html">Smooks</a>
+  </li>
+  <li class="nav-item" data-depth="2">
     <a class="nav-link" href="smpp-component.html">SMPP</a>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="snmp-component.html">SNMP</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="solr-component.html">Solr</a>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="splunk-component.html">Splunk</a>
@@ -966,6 +1018,18 @@
     <a class="nav-link" href="stub-component.html">Stub</a>
   </li>
   <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="tahu-summary.html">Tahu</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="tahu-edge-component.html">Tahu Edge Node / Device</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="tahu-host-component.html">Tahu Host Application</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
     <a class="nav-link" href="telegram-component.html">Telegram</a>
   </li>
   <li class="nav-item" data-depth="2">
@@ -1026,7 +1090,7 @@
     <a class="nav-link" href="whatsapp-component.html">WhatsApp</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="wordpress-component.html">Wordpress</a>
+    <a class="nav-link" href="wordpress-component.html">WordPress</a>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="workday-component.html">Workday</a>
@@ -1419,7 +1483,13 @@
     <a class="nav-link" href="others/openapi-java.html">Openapi Java</a>
   </li>
   <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="others/openapi-validator.html">Openapi Validator</a>
+  </li>
+  <li class="nav-item" data-depth="2">
     <a class="nav-link" href="others/opentelemetry.html">OpenTelemetry</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="others/platform-http-jolokia.html">Platform HTTP Jolokia</a>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="others/platform-http-main.html">Platform Http Main</a>
@@ -1567,7 +1637,7 @@
     <a class="nav-link" href="eips/event-message.html">Event Message</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="eips/failover-eip.html">Failover</a>
+    <a class="nav-link" href="eips/failoverLoadBalancer-eip.html">Failover Load Balancer</a>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="eips/faultToleranceConfiguration-eip.html">Fault Tolerance Configuration</a>
@@ -1597,13 +1667,13 @@
     <a class="nav-link" href="eips/loadBalance-eip.html">Load Balance</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="eips/log-eip.html">Log</a>
+    <a class="nav-link" href="eips/log-eip.html">Logger</a>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="eips/loop-eip.html">Loop</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="eips/marshal-eip.html">Marshal EIP</a>
+    <a class="nav-link" href="eips/marshal-eip.html">Marshal</a>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="eips/message.html">Message</a>
@@ -1660,6 +1730,9 @@
     <a class="nav-link" href="eips/point-to-point-channel.html">Point to Point Channel</a>
   </li>
   <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="eips/poll-eip.html">Poll</a>
+  </li>
+  <li class="nav-item" data-depth="2">
     <a class="nav-link" href="eips/pollEnrich-eip.html">Poll Enrich</a>
   </li>
   <li class="nav-item" data-depth="2">
@@ -1675,7 +1748,7 @@
     <a class="nav-link" href="eips/publish-subscribe-channel.html">Publish Subscribe Channel</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="eips/random-eip.html">Random</a>
+    <a class="nav-link" href="eips/randomLoadBalancer-eip.html">Random Load Balancer</a>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="eips/recipientList-eip.html">Recipient List</a>
@@ -1717,7 +1790,7 @@
     <a class="nav-link" href="eips/rollback-eip.html">Rollback</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="eips/roundRobin-eip.html">Round Robin</a>
+    <a class="nav-link" href="eips/roundRobinLoadBalancer-eip.html">Round Robin Load Balancer</a>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="eips/routingSlip-eip.html">Routing Slip</a>
@@ -1729,7 +1802,7 @@
     <a class="nav-link" href="eips/sample-eip.html">Sample</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="eips/scatter-gather.html">Scatter Gather</a>
+    <a class="nav-link" href="eips/scatter-gather.html">Scatter-Gather</a>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="eips/script-eip.html">Script</a>
@@ -1759,6 +1832,9 @@
     <a class="nav-link" href="eips/setVariable-eip.html">Set Variable</a>
   </li>
   <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="eips/setVariables-eip.html">Set Variables</a>
+  </li>
+  <li class="nav-item" data-depth="2">
     <a class="nav-link" href="eips/sort-eip.html">Sort</a>
   </li>
   <li class="nav-item" data-depth="2">
@@ -1768,7 +1844,7 @@
     <a class="nav-link" href="eips/step-eip.html">Step</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="eips/sticky-eip.html">Sticky</a>
+    <a class="nav-link" href="eips/stickyLoadBalancer-eip.html">Sticky Load Balancer</a>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="eips/stop-eip.html">Stop</a>
@@ -1789,7 +1865,7 @@
     <a class="nav-link" href="eips/toD-eip.html">To D</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="eips/topic-eip.html">Topic</a>
+    <a class="nav-link" href="eips/topicLoadBalancer-eip.html">Topic Load Balancer</a>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="eips/transactional-client.html">Transactional Client</a>
@@ -1798,13 +1874,13 @@
     <a class="nav-link" href="eips/transform-eip.html">Transform</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="eips/unmarshal-eip.html">Unmarshal EIP</a>
+    <a class="nav-link" href="eips/unmarshal-eip.html">Unmarshal</a>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="eips/validate-eip.html">Validate</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="eips/weighted-eip.html">Weighted</a>
+    <a class="nav-link" href="eips/weightedLoadBalancer-eip.html">Weighted Load Balancer</a>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="eips/wireTap-eip.html">Wire Tap</a>
@@ -1819,22 +1895,40 @@
 <div class="nav-panel-explore" data-panel="explore">
   <div class="context">
     <span class="title">Camel Components</span>
-    <span class="version">Next (Pre-release)</span>
+    <span class="version">4.8.x</span>
   </div>
   <ul class="components">
     <li class="component is-current">
-      <a class="title" href="index.html">Camel Components</a>
+      <div class="title"><a href="../4.10.x/index.html">Camel Components</a></div>
       <ul class="versions">
-        <li class="version is-current is-latest">
-          <a href="index.html">Next (Pre-release)</a>
+        <li class="version is-latest">
+          <a href="../4.10.x/index.html">4.10.x (LTS)</a>
+        </li>
+        <li class="version is-current">
+          <a href="index.html">4.8.x</a>
+        </li>
+        <li class="version">
+          <a href="../4.4.x/index.html">4.4.x</a>
+        </li>
+        <li class="version">
+          <a href="../4.0.x/index.html">4.0.x</a>
         </li>
       </ul>
     </li>
     <li class="component">
-      <a class="title" href="../../manual/index.html">User manual</a>
+      <div class="title"><a href="../../manual/4.10.x/index.html">User manual</a></div>
       <ul class="versions">
         <li class="version is-latest">
-          <a href="../../manual/index.html">default</a>
+          <a href="../../manual/4.10.x/index.html">4.10.x</a>
+        </li>
+        <li class="version">
+          <a href="../../manual/4.8.x/index.html">4.8.x</a>
+        </li>
+        <li class="version">
+          <a href="../../manual/4.4.x/index.html">4.4.x</a>
+        </li>
+        <li class="version">
+          <a href="../../manual/4.0.x/index.html">4.0.x</a>
         </li>
       </ul>
     </li>
@@ -1846,7 +1940,7 @@
 <main class="article">
 <div class="toolbar" role="navigation">
 <button class="nav-toggle"></button>
-  <a href="../../manual/index.html" class="home-link"></a>
+  <a href="../../manual/4.10.x/index.html" class="home-link"></a>
 <nav class="breadcrumbs" aria-label="breadcrumbs">
   <ul>
     <li><a href="index.html">Camel Components</a></li>
@@ -1855,6 +1949,16 @@
     <li><a href="spring-rabbitmq-component.html">Spring RabbitMQ</a></li>
   </ul>
 </nav>
+<div class="page-versions">
+  <button class="version-menu-toggle" title="Show other versions of page">4.8.x</button>
+  <div class="version-menu">
+    <a class="version" href="../4.10.x/spring-rabbitmq-component.html">4.10.x (LTS)</a>
+    <a class="version is-current" href="spring-rabbitmq-component.html">4.8.x</a>
+    <a class="version" href="../4.4.x/spring-rabbitmq-component.html">4.4.x</a>
+    <a class="version is-missing" href="../4.0.x/index.html">4.0.x</a>
+  </div>
+</div>
+<div class="edit-this-page"><a href="https://github.com/rhaetor/rh-camel-jboss/edit/camel-4.8.0-branch/docs/components/modules/ROOT/pages/spring-rabbitmq-component.adoc">Edit this Page</a></div>
 </div>
   <div class="content">
 <aside class="toc sidebar" data-title="Contents" data-levels="2">
@@ -1925,37 +2029,65 @@ determines the exchange the queue will be bound to.</p>
 <div class="sect2">
 <h3 id="_configuring_component_options"><a class="anchor" href="#_configuring_component_options"></a>Configuring Component Options</h3>
 <div class="paragraph">
-<p>The component level is the highest level which holds general and common configurations that are inherited by the endpoints.
-For example a component may have security settings, credentials for authentication, urls for network connection and so forth.</p>
+<p>At the component level, you set general and shared configurations that are, then, inherited by the endpoints. It is the highest configuration level.</p>
 </div>
 <div class="paragraph">
-<p>Some components only have a few options, and others may have many. Because components typically have pre configured defaults
-that are commonly used, then you may often only need to configure a few options on a component; or none at all.</p>
+<p>For example, a component may have security settings, credentials for authentication, urls for network connection and so forth.</p>
 </div>
 <div class="paragraph">
-<p>Configuring components can be done with the <a href="../../manual/component-dsl.html" class="xref page">Component DSL</a>,
-in a configuration file (application.properties|yaml), or directly with Java code.</p>
+<p>Some components only have a few options, and others may have many.
+Because components typically have pre-configured defaults that are commonly used, then you may often only need to configure a few options on a component; or none at all.</p>
+</div>
+<div class="paragraph">
+<p>You can configure components using:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>the <a href="../../manual/4.10.x/component-dsl.html" class="xref page">Component DSL</a>.</p>
+</li>
+<li>
+<p>in a configuration file (<code>application.properties</code>, <code>*.yaml</code> files, etc).</p>
+</li>
+<li>
+<p>directly in the Java code.</p>
+</li>
+</ul>
 </div>
 </div>
 <div class="sect2">
 <h3 id="_configuring_endpoint_options"><a class="anchor" href="#_configuring_endpoint_options"></a>Configuring Endpoint Options</h3>
 <div class="paragraph">
-<p>Where you find yourself configuring the most is on endpoints, as endpoints often have many options, which allows you to
-configure what you need the endpoint to do. The options are also categorized into whether the endpoint is used as consumer (from)
-or as a producer (to), or used for both.</p>
+<p>You usually spend more time setting up endpoints because they have many options.
+These options help you customize what you want the endpoint to do.
+The options are also categorized into whether the endpoint is used as a consumer (<em>from</em>), as a producer (<em>to</em>), or  both.</p>
 </div>
 <div class="paragraph">
-<p>Configuring endpoints is most often done directly in the endpoint URI as path and query parameters. You can also use
-the <a href="../../manual/Endpoint-dsl.html" class="xref page">Endpoint DSL</a> and <a href="../../manual/dataformat-dsl.html" class="xref page">DataFormat DSL</a>
+<p>Configuring endpoints is most often done directly in the endpoint URI as <em>path</em> and <em>query</em> parameters.
+You can also use the <a href="../../manual/4.10.x/Endpoint-dsl.html" class="xref page">Endpoint DSL</a> and <a href="../../manual/4.10.x/dataformat-dsl.html" class="xref page">DataFormat DSL</a>
 as a <em>type safe</em> way of configuring endpoints and data formats in Java.</p>
 </div>
 <div class="paragraph">
-<p>A good practice when configuring options is to use <a href="../../manual/using-propertyplaceholder.html" class="xref page">Property Placeholders</a>,
-which allows to not hardcode urls, port numbers, sensitive information, and other settings.
-In other words placeholders allows to externalize the configuration from your code, and gives more flexibility and reuse.</p>
+<p>A good practice when configuring options is to use <a href="../../manual/4.10.x/using-propertyplaceholder.html" class="xref page">Property Placeholders</a>.</p>
 </div>
 <div class="paragraph">
-<p>The following two sections lists all the options, firstly for the component followed by the endpoint.</p>
+<p>Property placeholders provide a few benefits:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>They help prevent using hardcoded urls, port numbers, sensitive information, and other settings.</p>
+</li>
+<li>
+<p>They allow externalizing the configuration from the code.</p>
+</li>
+<li>
+<p>They help the code to become more flexible and reusable.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>The following two sections list all the options, firstly for the component followed by the endpoint.</p>
 </div>
 </div>
 </div>
@@ -1964,7 +2096,7 @@ In other words placeholders allows to externalize the configuration from your co
 <h2 id="_component_options"><a class="anchor" href="#_component_options"></a>Component Options</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>The Spring RabbitMQ component supports 29 options, which are listed below.</p>
+<p>The Spring RabbitMQ component supports 31 options, which are listed below.</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
 <colgroup>
@@ -2015,7 +2147,7 @@ In other words placeholders allows to externalize the configuration from your co
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p>Specifies whether the consumer should auto declare binding between exchange, queue and routing key when starting. Enabling this can be good for development to make it easy to standup exchanges, queues and bindings on the broker.</p>
 </div></div></td>
-<td class="tableblock halign-center valign-top"><p class="tableblock">false</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">true</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">boolean</p></td>
 </tr>
 <tr>
@@ -2213,6 +2345,15 @@ In other words placeholders allows to externalize the configuration from your co
 <td class="tableblock halign-left valign-top"><p class="tableblock">boolean</p></td>
 </tr>
 <tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a id="_component_option_autoDeclareProducer"></a>
+<a href="#_component_option_autoDeclareProducer" class="anchor"></a><strong>autoDeclareProducer</strong> (producer)</p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>Specifies whether the producer should auto declare binding between exchange, queue and routing key when starting. Enabling this can be good for development to make it easy to standup exchanges, queues and bindings on the broker.</p>
+</div></div></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">false</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">boolean</p></td>
+</tr>
+<tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><a id="_component_option_lazyStartProducer"></a>
 <a href="#_component_option_lazyStartProducer" class="anchor"></a><strong>lazyStartProducer</strong> (producer)</p></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
@@ -2229,6 +2370,15 @@ In other words placeholders allows to externalize the configuration from your co
 </div></div></td>
 <td class="tableblock halign-center valign-top"><p class="tableblock">5000</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">long</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a id="_component_option_args"></a>
+<a href="#_component_option_args" class="anchor"></a><strong>args</strong> (advanced)</p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>Specify arguments for configuring the different RabbitMQ concepts, a different prefix is required for each element: consumer. exchange. queue. binding. dlq.exchange. dlq.queue. dlq.binding. For example to declare a queue with message ttl argument: queue.x-message-ttl=60000.</p>
+</div></div></td>
+<td class="tableblock halign-center valign-top"></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Map</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><a id="_component_option_autowiredEnabled"></a>
@@ -2291,7 +2441,7 @@ In other words placeholders allows to externalize the configuration from your co
 </div>
 </div>
 <div class="paragraph">
-<p>with the following path and query parameters:</p>
+<p>With the following <em>path</em> and <em>query</em> parameters:</p>
 </div>
 <div class="sect2">
 <h3 id="_path_parameters_1_parameters"><a class="anchor" href="#_path_parameters_1_parameters"></a>Path Parameters (1 parameters)</h3>
@@ -2324,7 +2474,7 @@ In other words placeholders allows to externalize the configuration from your co
 </table>
 </div>
 <div class="sect2">
-<h3 id="_query_parameters"><a class="anchor" href="#_query_parameters"></a>Query Parameters (37 parameters)</h3>
+<h3 id="_query_parameters"><a class="anchor" href="#_query_parameters"></a>Query Parameters (41 parameters)</h3>
 <table class="tableblock frame-all grid-all stretch">
 <colgroup>
 <col style="width: 20%;">
@@ -2351,6 +2501,61 @@ In other words placeholders allows to externalize the configuration from your co
 <td class="tableblock halign-left valign-top"><p class="tableblock">ConnectionFactory</p></td>
 </tr>
 <tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a id="_endpoint_query_option_deadLetterExchange"></a>
+<a href="#_endpoint_query_option_deadLetterExchange" class="anchor"></a><strong>deadLetterExchange</strong> (common)</p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>The name of the dead letter exchange.</p>
+</div></div></td>
+<td class="tableblock halign-center valign-top"></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">String</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a id="_endpoint_query_option_deadLetterExchangeType"></a>
+<a href="#_endpoint_query_option_deadLetterExchangeType" class="anchor"></a><strong>deadLetterExchangeType</strong> (common)</p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>The type of the dead letter exchange.</p>
+</div>
+<div class="paragraph">
+<p>Enum values:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>direct</p>
+</li>
+<li>
+<p>fanout</p>
+</li>
+<li>
+<p>headers</p>
+</li>
+<li>
+<p>topic</p>
+</li>
+</ul>
+</div></div></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">direct</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">String</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a id="_endpoint_query_option_deadLetterQueue"></a>
+<a href="#_endpoint_query_option_deadLetterQueue" class="anchor"></a><strong>deadLetterQueue</strong> (common)</p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>The name of the dead letter queue.</p>
+</div></div></td>
+<td class="tableblock halign-center valign-top"></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">String</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a id="_endpoint_query_option_deadLetterRoutingKey"></a>
+<a href="#_endpoint_query_option_deadLetterRoutingKey" class="anchor"></a><strong>deadLetterRoutingKey</strong> (common)</p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>The routing key for the dead letter exchange.</p>
+</div></div></td>
+<td class="tableblock halign-center valign-top"></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">String</p></td>
+</tr>
+<tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><a id="_endpoint_query_option_disableReplyTo"></a>
 <a href="#_endpoint_query_option_disableReplyTo" class="anchor"></a><strong>disableReplyTo</strong> (common)</p></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
@@ -2358,6 +2563,15 @@ In other words placeholders allows to externalize the configuration from your co
 </div></div></td>
 <td class="tableblock halign-center valign-top"><p class="tableblock">false</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">boolean</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a id="_endpoint_query_option_queues"></a>
+<a href="#_endpoint_query_option_queues" class="anchor"></a><strong>queues</strong> (common)</p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>The queue(s) to use for consuming or producing messages. Multiple queue names can be separated by comma. If none has been configured then Camel will generate an unique id as the queue name.</p>
+</div></div></td>
+<td class="tableblock halign-center valign-top"></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">String</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><a id="_endpoint_query_option_routingKey"></a>
@@ -2430,61 +2644,6 @@ In other words placeholders allows to externalize the configuration from your co
 <td class="tableblock halign-left valign-top"><p class="tableblock">boolean</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><a id="_endpoint_query_option_deadLetterExchange"></a>
-<a href="#_endpoint_query_option_deadLetterExchange" class="anchor"></a><strong>deadLetterExchange</strong> (consumer)</p></td>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>The name of the dead letter exchange.</p>
-</div></div></td>
-<td class="tableblock halign-center valign-top"></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">String</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><a id="_endpoint_query_option_deadLetterExchangeType"></a>
-<a href="#_endpoint_query_option_deadLetterExchangeType" class="anchor"></a><strong>deadLetterExchangeType</strong> (consumer)</p></td>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>The type of the dead letter exchange.</p>
-</div>
-<div class="paragraph">
-<p>Enum values:</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>direct</p>
-</li>
-<li>
-<p>fanout</p>
-</li>
-<li>
-<p>headers</p>
-</li>
-<li>
-<p>topic</p>
-</li>
-</ul>
-</div></div></td>
-<td class="tableblock halign-center valign-top"><p class="tableblock">direct</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">String</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><a id="_endpoint_query_option_deadLetterQueue"></a>
-<a href="#_endpoint_query_option_deadLetterQueue" class="anchor"></a><strong>deadLetterQueue</strong> (consumer)</p></td>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>The name of the dead letter queue.</p>
-</div></div></td>
-<td class="tableblock halign-center valign-top"></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">String</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><a id="_endpoint_query_option_deadLetterRoutingKey"></a>
-<a href="#_endpoint_query_option_deadLetterRoutingKey" class="anchor"></a><strong>deadLetterRoutingKey</strong> (consumer)</p></td>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>The routing key for the dead letter exchange.</p>
-</div></div></td>
-<td class="tableblock halign-center valign-top"></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">String</p></td>
-</tr>
-<tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><a id="_endpoint_query_option_exchangeType"></a>
 <a href="#_endpoint_query_option_exchangeType" class="anchor"></a><strong>exchangeType</strong> (consumer)</p></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
@@ -2525,7 +2684,7 @@ In other words placeholders allows to externalize the configuration from your co
 <td class="tableblock halign-left valign-top"><p class="tableblock"><a id="_endpoint_query_option_maximumRetryAttempts"></a>
 <a href="#_endpoint_query_option_maximumRetryAttempts" class="anchor"></a><strong>maximumRetryAttempts</strong> (consumer)</p></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>How many times a Rabbitmq consumer will retry the same message if Camel failed to process the message.</p>
+<p>How many times a Rabbitmq consumer will try the same message if Camel failed to process the message (The number of attempts includes the initial try).</p>
 </div></div></td>
 <td class="tableblock halign-center valign-top"><p class="tableblock">5</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">int</p></td>
@@ -2538,15 +2697,6 @@ In other words placeholders allows to externalize the configuration from your co
 </div></div></td>
 <td class="tableblock halign-center valign-top"><p class="tableblock">false</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">boolean</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><a id="_endpoint_query_option_queues"></a>
-<a href="#_endpoint_query_option_queues" class="anchor"></a><strong>queues</strong> (consumer)</p></td>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>The queue(s) to use for consuming messages. Multiple queue names can be separated by comma. If none has been configured then Camel will generate an unique id as the queue name for the consumer.</p>
-</div></div></td>
-<td class="tableblock halign-center valign-top"></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">String</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><a id="_endpoint_query_option_rejectAndDontRequeue"></a>
@@ -2674,6 +2824,15 @@ In other words placeholders allows to externalize the configuration from your co
 <td class="tableblock halign-left valign-top"><p class="tableblock">boolean</p></td>
 </tr>
 <tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a id="_endpoint_query_option_autoDeclareProducer"></a>
+<a href="#_endpoint_query_option_autoDeclareProducer" class="anchor"></a><strong>autoDeclareProducer</strong> (producer)</p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>Specifies whether the producer should auto declare binding between exchange, queue and routing key when starting.</p>
+</div></div></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">false</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">boolean</p></td>
+</tr>
+<tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><a id="_endpoint_query_option_confirm"></a>
 <a href="#_endpoint_query_option_confirm" class="anchor"></a><strong>confirm</strong> (producer)</p></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
@@ -2715,6 +2874,33 @@ In other words placeholders allows to externalize the configuration from your co
 </div></div></td>
 <td class="tableblock halign-center valign-top"><p class="tableblock">30000</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">long</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a id="_endpoint_query_option_skipBindQueue"></a>
+<a href="#_endpoint_query_option_skipBindQueue" class="anchor"></a><strong>skipBindQueue</strong> (producer)</p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>If true the queue will not be bound to the exchange after declaring it.</p>
+</div></div></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">false</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">boolean</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a id="_endpoint_query_option_skipDeclareExchange"></a>
+<a href="#_endpoint_query_option_skipDeclareExchange" class="anchor"></a><strong>skipDeclareExchange</strong> (producer)</p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>This can be used if we need to declare the queue but not the exchange.</p>
+</div></div></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">false</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">boolean</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a id="_endpoint_query_option_skipDeclareQueue"></a>
+<a href="#_endpoint_query_option_skipDeclareQueue" class="anchor"></a><strong>skipDeclareQueue</strong> (producer)</p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>If true the producer will not declare and bind a queue. This can be used for directing messages via an existing routing key.</p>
+</div></div></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">false</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">boolean</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><a id="_endpoint_query_option_usePublisherConnection"></a>
@@ -3002,10 +3188,12 @@ In other words placeholders allows to externalize the configuration from your co
 </div>
 </div>
 <div class="sect1">
-<h2 id="_using_a_connection_factory"><a class="anchor" href="#_using_a_connection_factory"></a>Using a connection factory</h2>
+<h2 id="_usage"><a class="anchor" href="#_usage"></a>Usage</h2>
 <div class="sectionbody">
+<div class="sect2">
+<h3 id="_using_a_connection_factory"><a class="anchor" href="#_using_a_connection_factory"></a>Using a connection factory</h3>
 <div class="paragraph">
-<p>To connect to RabbitMQ you need to setup a <code>ConnectionFactory</code> (same as with JMS) with the login details such as:</p>
+<p>To connect to RabbitMQ, you need to set up a <code>ConnectionFactory</code> (same as with JMS) with the login details such as:</p>
 </div>
 <div class="admonitionblock tip">
 <table>
@@ -3022,12 +3210,12 @@ It is recommended to use <code>CachingConnectionFactory</code> from spring-rabbi
 <div class="listingblock">
 <div class="content">
 <pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;bean id="rabbitConnectionFactory" class="org.springframework.amqp.rabbit.connection.CachingConnectionFactory"&gt;
-  &lt;property name="uri" value="amqp://lolcalhost:5672"/&gt;
+  &lt;property name="uri" value="amqp://localhost:5672"/&gt;
 &lt;/bean&gt;</code></pre>
 </div>
 </div>
 <div class="paragraph">
-<p>The <code>ConnectionFactory</code> is auto-detected by default, so you can just do</p>
+<p>The <code>ConnectionFactory</code> is auto-detected by default, so you can do:</p>
 </div>
 <div class="listingblock">
 <div class="content">
@@ -3040,10 +3228,8 @@ It is recommended to use <code>CachingConnectionFactory</code> from spring-rabbi
 </div>
 </div>
 </div>
-</div>
-<div class="sect1">
-<h2 id="_default_exchange_name"><a class="anchor" href="#_default_exchange_name"></a>Default Exchange Name</h2>
-<div class="sectionbody">
+<div class="sect2">
+<h3 id="_default_exchange_name"><a class="anchor" href="#_default_exchange_name"></a>Default Exchange Name</h3>
 <div class="paragraph">
 <p>To use default exchange name (which would be an empty exchange name in RabbitMQ) then you should use <code>default</code> as name
 in the endpoint uri, such as:</p>
@@ -3054,25 +3240,24 @@ in the endpoint uri, such as:</p>
 </div>
 </div>
 </div>
-</div>
-<div class="sect1">
-<h2 id="_auto_declare_exchanges_queues_and_bindings"><a class="anchor" href="#_auto_declare_exchanges_queues_and_bindings"></a>Auto declare exchanges, queues and bindings</h2>
-<div class="sectionbody">
+<div class="sect2">
+<h3 id="_auto_declare_exchanges_queues_and_bindings"><a class="anchor" href="#_auto_declare_exchanges_queues_and_bindings"></a>Auto declare exchanges, queues and bindings</h3>
 <div class="paragraph">
 <p>Before you can send or receive messages from RabbitMQ, then exchanges, queues and bindings must be setup first.</p>
 </div>
 <div class="paragraph">
-<p>In development mode it may be desirable to let Camel automatic do this.
+<p>In development mode, it may be desirable to let Camel automatic do this.
 You can enable this by setting <code>autoDeclare=true</code> on the <code>SpringRabbitMQComponent</code>.</p>
 </div>
 <div class="paragraph">
-<p>Then Spring RabbitMQ will automatic necessary declare the elements and setup the binding between the exchange, queue and routing keys.</p>
+<p>Then Spring RabbitMQ will automatically declare the necessary elements and set up the binding between the exchange,
+queue and routing keys.</p>
 </div>
 <div class="paragraph">
-<p>The elements can be configured using the multi-valued <code>args</code> option.</p>
+<p>The elements can be configured using the multivalued <code>args</code> option.</p>
 </div>
 <div class="paragraph">
-<p>For example to specify the queue as durable and exclusive, you can configure the endpoint uri with <code>arg.queue.durable=true&amp;arg.queue.exclusive=true</code>.</p>
+<p>For example, to specify the queue as durable and exclusive, you can configure the endpoint uri with <code>arg.queue.durable=true&amp;arg.queue.exclusive=true</code>.</p>
 </div>
 <div class="paragraph">
 <p><strong>Exchanges</strong></p>
@@ -3151,13 +3336,13 @@ See details in the RabbitMQ documentation.</p>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">x-dead-letter-exchange</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">String</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">The name of the dead letter exchange. If none configured then the component configured value is used.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The name of the dead letter exchange. If none configured, then the component configured value is used.</p></td>
 <td class="tableblock halign-left valign-top"></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">x-dead-letter-routing-key</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">String</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">The routing key for the dead letter exchange. If none configured then the component configured value is used.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The routing key for the dead letter exchange. If none configured, then the component configured value is used.</p></td>
 <td class="tableblock halign-left valign-top"></td>
 </tr>
 </tbody>
@@ -3167,33 +3352,30 @@ See details in the RabbitMQ documentation.</p>
 See details in the RabbitMQ documentation.</p>
 </div>
 </div>
-</div>
-<div class="sect1">
-<h2 id="_mapping_from_camel_to_rabbitmq"><a class="anchor" href="#_mapping_from_camel_to_rabbitmq"></a>Mapping from Camel to RabbitMQ</h2>
-<div class="sectionbody">
+<div class="sect2">
+<h3 id="_mapping_from_camel_to_rabbitmq"><a class="anchor" href="#_mapping_from_camel_to_rabbitmq"></a>Mapping from Camel to RabbitMQ</h3>
 <div class="paragraph">
 <p>The message body is mapped from Camel Message body to a <code>byte[]</code> which is the type that RabbitMQ uses for message body.
-Camel wil use its type converter to convert the message body to byte array.</p>
+Camel will use its type converter to convert the message body to a byte array.</p>
 </div>
 <div class="paragraph">
-<p>Spring Rabbit comes out of the box with support for mapping Java serialized objects but Camel Spring RabbitMQ
+<p>Spring Rabbit comes out of the box with support for mapping Java serialized objects, but Camel Spring RabbitMQ
 does <strong>not</strong> support this due to security vulnerabilities and using Java objects is a bad design as it enforces strong coupling.</p>
 </div>
 <div class="paragraph">
-<p>Custom message headers is mapped from Camel Message headers to RabbitMQ headers. This behaviour can be customized by configuring
+<p>Custom message headers are mapped from Camel Message headers to RabbitMQ headers.
+This behaviour can be customized by configuring
 a new implementation of <code>HeaderFilterStrategy</code> on the Camel component.</p>
 </div>
 </div>
-</div>
-<div class="sect1">
-<h2 id="_request_reply"><a class="anchor" href="#_request_reply"></a>Request / Reply</h2>
-<div class="sectionbody">
+<div class="sect2">
+<h3 id="_request_reply"><a class="anchor" href="#_request_reply"></a>Request / Reply</h3>
 <div class="paragraph">
 <p>Request and reply messaging is supported using <a href="https://www.rabbitmq.com/direct-reply-to.html">RabbitMQ direct reply-to</a>.</p>
 </div>
 <div class="paragraph">
-<p>The example below will do request/reply, where the message is sent via the cheese exchange name and routing key <em>foo.bar</em>,
-which is being consumed by the 2nd Camel route, that prepends the message with `Hello `, and then sends back the message.</p>
+<p>The example below will do request/reply, where the message is sent via the cheese exchange name and routing key <code>foo.bar</code>,
+which is being consumed by the second Camel route, that prepends the message with `Hello `, and then sends back the message.</p>
 </div>
 <div class="paragraph">
 <p>So if we send <code>World</code> as message body to <em>direct:start</em> then, we will se the message being logged</p>
@@ -3201,13 +3383,13 @@ which is being consumed by the 2nd Camel route, that prepends the message with `
 <div class="ulist">
 <ul>
 <li>
-<p>log:request &#8658; World</p>
+<p><code>log:request &#8594; World</code></p>
 </li>
 <li>
-<p>log:input &#8658; World</p>
+<p><code>log:input &#8594; World</code></p>
 </li>
 <li>
-<p>log:response &#8658; Hello World</p>
+<p><code>log:response &#8594; Hello World</code></p>
 </li>
 </ul>
 </div>
@@ -3224,13 +3406,11 @@ from("spring-rabbitmq:cheese?queues=myqueue&amp;routingKey=foo.bar")
 </div>
 </div>
 </div>
-</div>
-<div class="sect1">
-<h2 id="_reuse_endpoint_and_send_to_different_destinations_computed_at_runtime"><a class="anchor" href="#_reuse_endpoint_and_send_to_different_destinations_computed_at_runtime"></a>Reuse endpoint and send to different destinations computed at runtime</h2>
-<div class="sectionbody">
+<div class="sect2">
+<h3 id="_reuse_endpoint_and_send_to_different_destinations_computed_at_runtime"><a class="anchor" href="#_reuse_endpoint_and_send_to_different_destinations_computed_at_runtime"></a>Reuse endpoint and send to different destinations computed at runtime</h3>
 <div class="paragraph">
 <p>If you need to send messages to a lot of different RabbitMQ exchanges, it
-makes sense to reuse a endpoint and specify the real destination in
+makes sense to reuse an endpoint and specify the real destination in
 a message header. This allows Camel to reuse the same endpoint, but send
 to different exchanges. This greatly reduces the number of endpoints
 created and economizes on memory and thread resources.</p>
@@ -3312,37 +3492,34 @@ the message to <code>spring-rabbitmq:order-emea</code>, assuming the <code>regio
 <div class="paragraph">
 <p>Keep in mind that the producer removes both <code>CamelSpringRabbitmqExchangeOverrideName</code> and <code>CamelSpringRabbitmqRoutingOverrideKey</code>
 headers from the exchange and do not propagate them to the created Rabbitmq
-message in order to avoid the accidental loops
-in the routes (in scenarios when the message will be forwarded to the
+message to avoid the accidental loops
+in the routes (in scenarios when the message will be forwarded to
 another RabbitMQ endpoint).</p>
 </div>
 </div>
-</div>
-<div class="sect1">
-<h2 id="_using_tod"><a class="anchor" href="#_using_tod"></a>Using toD</h2>
-<div class="sectionbody">
+<div class="sect2">
+<h3 id="_using_tod"><a class="anchor" href="#_using_tod"></a>Using toD</h3>
 <div class="paragraph">
 <p>If you need to send messages to a lot of different exchanges, it
-makes sense to reuse a endpoint and specify the dynamic destinations
+makes sense to reuse an endpoint and specify the dynamic destinations
 with simple language using <a href="eips/toD-eip.html" class="xref page">toD</a>.</p>
 </div>
 <div class="paragraph">
-<p>For example suppose you need to send messages to exchanges with order types,
-then using toD could for example be done as follows:</p>
+<p>For example, suppose you need to send messages to exchanges with order types,
+then using toD could, for example, be done as follows:</p>
 </div>
 <div class="listingblock">
+<div class="title">Example SJMS2 route with <code>toD</code></div>
 <div class="content">
 <pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">from("direct:order")
   .toD("spring-rabbit:order-${header.orderType}");</code></pre>
 </div>
 </div>
 </div>
-</div>
-<div class="sect1">
-<h2 id="_manual_acknowledgement"><a class="anchor" href="#_manual_acknowledgement"></a>Manual Acknowledgement</h2>
-<div class="sectionbody">
+<div class="sect2">
+<h3 id="_manual_acknowledgement"><a class="anchor" href="#_manual_acknowledgement"></a>Manual Acknowledgement</h3>
 <div class="paragraph">
-<p>If we need to manually acknowledge a message for some use case  we can
+<p>If we need to manually acknowledge a message for some use case, we can
 do it by setting and acknowledgeMode to Manual and using the below snippet
 of code to get Channel and deliveryTag to manually acknowledge the message:</p>
 </div>
@@ -3358,11 +3535,14 @@ of code to get Channel and deliveryTag to manually acknowledge the message:</p>
 </div>
 </div>
 </div>
+</div>
 </article>
   </div>
 </main>
 </div>
 <footer class="footer">
+  <p>This page was built using the Antora default UI.</p>
+  <p>The source code for this UI is licensed under the terms of the MPL-2.0 license.</p>
 </footer>
 <script id="site-script" src="../../_/js/site.js" data-ui-root-path="../../_"></script>
 <script async src="../../_/js/vendor/highlight.js"></script>

@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>Simple :: Red Hat Camel Reference</title>
+    <title>Simple :: Red Hat build of Apache Camel</title>
     <meta name="description" content="Evaluates a Camel simple expression.">
     <meta name="generator" content="Antora 3.1.4">
     <link rel="stylesheet" href="../../../_/css/site.css">
@@ -12,7 +12,7 @@
 <header class="header">
   <nav class="navbar">
     <div class="navbar-brand">
-      <a class="navbar-item" href="../../manual/index.html">Red Hat build of Apache Camel manual</a>
+      <a class="navbar-item" href="/">Red Hat build of Apache Camel</a>
       <button class="navbar-burger" data-target="topbar-nav">
         <span></span>
         <span></span>
@@ -22,11 +22,12 @@
   </nav>
 </header>
 <div class="body">
-<div class="nav-container" data-component="components" data-version="next">
+<div class="nav-container" data-component="components" data-version="4.4.x">
   <aside class="nav">
     <div class="panels">
 <div class="nav-panel-menu is-active" data-panel="menu">
   <nav class="nav-menu">
+    <button class="nav-menu-toggle" aria-label="Toggle expand/collapse all" style="display: none"></button>
     <h3 class="title"><a href="../index.html">Camel Components</a></h3>
 <ul class="nav-list">
   <li class="nav-item" data-depth="0">
@@ -1819,22 +1820,40 @@
 <div class="nav-panel-explore" data-panel="explore">
   <div class="context">
     <span class="title">Camel Components</span>
-    <span class="version">Next (Pre-release)</span>
+    <span class="version">4.4.x</span>
   </div>
   <ul class="components">
     <li class="component is-current">
-      <a class="title" href="../index.html">Camel Components</a>
+      <div class="title"><a href="../../4.10.x/index.html">Camel Components</a></div>
       <ul class="versions">
-        <li class="version is-current is-latest">
-          <a href="../index.html">Next (Pre-release)</a>
+        <li class="version is-latest">
+          <a href="../../4.10.x/index.html">4.10.x (LTS)</a>
+        </li>
+        <li class="version">
+          <a href="../../4.8.x/index.html">4.8.x</a>
+        </li>
+        <li class="version is-current">
+          <a href="../index.html">4.4.x</a>
+        </li>
+        <li class="version">
+          <a href="../../4.0.x/index.html">4.0.x</a>
         </li>
       </ul>
     </li>
     <li class="component">
-      <a class="title" href="../../../manual/index.html">User manual</a>
+      <div class="title"><a href="../../../manual/4.10.x/index.html">User manual</a></div>
       <ul class="versions">
         <li class="version is-latest">
-          <a href="../../../manual/index.html">default</a>
+          <a href="../../../manual/4.10.x/index.html">4.10.x</a>
+        </li>
+        <li class="version">
+          <a href="../../../manual/4.8.x/index.html">4.8.x</a>
+        </li>
+        <li class="version">
+          <a href="../../../manual/4.4.x/index.html">4.4.x</a>
+        </li>
+        <li class="version">
+          <a href="../../../manual/4.0.x/index.html">4.0.x</a>
         </li>
       </ul>
     </li>
@@ -1846,7 +1865,7 @@
 <main class="article">
 <div class="toolbar" role="navigation">
 <button class="nav-toggle"></button>
-  <a href="../../../manual/index.html" class="home-link"></a>
+  <a href="../../../manual/4.10.x/index.html" class="home-link"></a>
 <nav class="breadcrumbs" aria-label="breadcrumbs">
   <ul>
     <li><a href="../index.html">Camel Components</a></li>
@@ -1854,6 +1873,16 @@
     <li><a href="simple-language.html">Simple</a></li>
   </ul>
 </nav>
+<div class="page-versions">
+  <button class="version-menu-toggle" title="Show other versions of page">4.4.x</button>
+  <div class="version-menu">
+    <a class="version" href="../../4.10.x/languages/simple-language.html">4.10.x (LTS)</a>
+    <a class="version" href="../../4.8.x/languages/simple-language.html">4.8.x</a>
+    <a class="version is-current" href="simple-language.html">4.4.x</a>
+    <a class="version is-missing" href="../../4.0.x/index.html">4.0.x</a>
+  </div>
+</div>
+<div class="edit-this-page"><a href="https://github.com/rhaetor/rh-camel-jboss/edit/camel-4.4.0-branch/docs/components/modules/languages/pages/simple-language.adoc">Edit this Page</a></div>
 </div>
   <div class="content">
 <aside class="toc sidebar" data-title="Contents" data-levels="2">
@@ -2273,9 +2302,9 @@ Command accepts offsets such as: <strong>now-24h</strong> or <strong>header.xxx+
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">bean:_bean expression_</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Object</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Invoking a bean expression using the <a href="../bean-component.html" class="xref page">Bean</a> language.
+<td class="tableblock halign-left valign-top"><p class="tableblock">Invoking a bean expression using the <a href="../../4.10.x/bean-component.html" class="xref page">Bean</a> language.
 Specifying a method name you must use dot as separator. We also support
-the ?method=methodname syntax that is used by the <a href="../bean-component.html" class="xref page">Bean</a>
+the ?method=methodname syntax that is used by the <a href="../../4.10.x/bean-component.html" class="xref page">Bean</a>
 component. Camel will by default lookup a bean by the given name. However if you need to refer
 to a bean class (such as calling a static method) then you can prefix with type, such as <code>bean:type:fqnClassName</code>.</p></td>
 </tr>
@@ -2409,7 +2438,7 @@ log sensitive data from the message itself.</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Returns an UUID using the Camel <code>UuidGenerator</code>.
 You can choose between <code>default</code>, <code>classic</code>, <code>short</code> and <code>simple</code> as the type.
 If no type is given the default is used. It is also possible to use a custom <code>UuidGenerator</code>
-and bind the bean to the <a href="../../../manual/registry.html" class="xref page">Registry</a> with an id. For example <code>${uuid(myGenerator}</code>
+and bind the bean to the <a href="../../../manual/4.10.x/registry.html" class="xref page">Registry</a> with an id. For example <code>${uuid(myGenerator}</code>
 where the ID is <em>myGenerator</em>.</p></td>
 </tr>
 <tr>
@@ -2583,7 +2612,7 @@ value from a list.</p>
 </div>
 </div>
 <div class="paragraph">
-<p>And the 3rd last is of course:</p>
+<p>And the 3rd last is:</p>
 </div>
 <div class="listingblock">
 <div class="content">
@@ -3130,7 +3159,7 @@ bean we must prepend <code>.method name</code> such as below where we invoke the
 </div>
 <div class="paragraph">
 <p>We can use the <code>?method=methodname</code> option that we are familiar with the
-<a href="../bean-component.html" class="xref page">Bean</a> component itself:</p>
+<a href="../../4.10.x/bean-component.html" class="xref page">Bean</a> component itself:</p>
 </div>
 <div class="listingblock">
 <div class="content">
@@ -3154,7 +3183,7 @@ type, for example to ensure that it is a String you can do:</p>
 <p>There are a few types which have a shorthand notation, so we can use
 <code>String</code> instead of <code>java.lang.String</code>. These are:
 <code>byte[], String, Integer, Long</code>. All other types must use their FQN
-name, e.g. <code>org.w3c.dom.Document</code>.</p>
+name, for example, <code>org.w3c.dom.Document</code>.</p>
 </div>
 <div class="paragraph">
 <p>It is also possible to lookup a value from a header <code>Map</code>:</p>
@@ -3194,7 +3223,7 @@ to the desired type. This is most usable to define types such as
 booleans, integers, etc.</p>
 </div>
 <div class="paragraph">
-<p>For example to set a header as a boolean type you can do:</p>
+<p>For example, to set a header as a boolean type you can do:</p>
 </div>
 <div class="listingblock">
 <div class="content">
@@ -3255,12 +3284,15 @@ whitespace characters.</p>
 <p>You can externalize the script and have Camel load it from a resource
 such as <code>"classpath:"</code>, <code>"file:"</code>, or <code>"http:"</code>.
 This is done using the following syntax: <code>"resource:scheme:location"</code>,
-e.g. to refer to a file on the classpath you can do:</p>
+for example, to refer to a file on the classpath you can do:</p>
 </div>
 <div class="listingblock">
 <div class="content">
 <pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">.setHeader("myHeader").simple("resource:classpath:mysimple.txt")</code></pre>
 </div>
+</div>
+<div class="paragraph">
+<p>Unresolved include directive in modules/languages/pages/simple-language.adoc - include::spring-boot:partial$starter.adoc[]</p>
 </div>
 </div>
 </div>
@@ -3269,6 +3301,8 @@ e.g. to refer to a file on the classpath you can do:</p>
 </main>
 </div>
 <footer class="footer">
+  <p>This page was built using the Antora default UI.</p>
+  <p>The source code for this UI is licensed under the terms of the MPL-2.0 license.</p>
 </footer>
 <script id="site-script" src="../../../_/js/site.js" data-ui-root-path="../../../_"></script>
 <script async src="../../../_/js/vendor/highlight.js"></script>

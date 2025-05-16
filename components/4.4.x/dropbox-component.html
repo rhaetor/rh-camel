@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>Dropbox :: Red Hat Camel Reference</title>
+    <title>Dropbox :: Red Hat build of Apache Camel</title>
     <meta name="description" content="Upload, download and manage files, folders, groups, collaborations, etc on Dropbox.">
     <meta name="generator" content="Antora 3.1.4">
     <link rel="stylesheet" href="../../_/css/site.css">
@@ -12,7 +12,7 @@
 <header class="header">
   <nav class="navbar">
     <div class="navbar-brand">
-      <a class="navbar-item" href="../../manual/index.html">Red Hat build of Apache Camel manual</a>
+      <a class="navbar-item" href="/">Red Hat build of Apache Camel</a>
       <button class="navbar-burger" data-target="topbar-nav">
         <span></span>
         <span></span>
@@ -22,11 +22,12 @@
   </nav>
 </header>
 <div class="body">
-<div class="nav-container" data-component="components" data-version="next">
+<div class="nav-container" data-component="components" data-version="4.4.x">
   <aside class="nav">
     <div class="panels">
 <div class="nav-panel-menu is-active" data-panel="menu">
   <nav class="nav-menu">
+    <button class="nav-menu-toggle" aria-label="Toggle expand/collapse all" style="display: none"></button>
     <h3 class="title"><a href="index.html">Camel Components</a></h3>
 <ul class="nav-list">
   <li class="nav-item" data-depth="0">
@@ -912,6 +913,33 @@
     <a class="nav-link" href="splunk-hec-component.html">Splunk HEC</a>
   </li>
   <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="spring-summary.html">Spring</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="spring-batch-component.html">Spring Batch</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="spring-event-component.html">Spring Event</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="spring-jdbc-component.html">Spring JDBC</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="spring-ldap-component.html">Spring LDAP</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="spring-rabbitmq-component.html">Spring RabbitMQ</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="spring-redis-component.html">Spring Redis</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="spring-ws-component.html">Spring WebService</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
     <a class="nav-link" href="sql-component.html">SQL</a>
   </li>
   <li class="nav-item" data-depth="2">
@@ -1792,22 +1820,40 @@
 <div class="nav-panel-explore" data-panel="explore">
   <div class="context">
     <span class="title">Camel Components</span>
-    <span class="version">Next (Pre-release)</span>
+    <span class="version">4.4.x</span>
   </div>
   <ul class="components">
     <li class="component is-current">
-      <a class="title" href="index.html">Camel Components</a>
+      <div class="title"><a href="../4.10.x/index.html">Camel Components</a></div>
       <ul class="versions">
-        <li class="version is-current is-latest">
-          <a href="index.html">Next (Pre-release)</a>
+        <li class="version is-latest">
+          <a href="../4.10.x/index.html">4.10.x (LTS)</a>
+        </li>
+        <li class="version">
+          <a href="../4.8.x/index.html">4.8.x</a>
+        </li>
+        <li class="version is-current">
+          <a href="index.html">4.4.x</a>
+        </li>
+        <li class="version">
+          <a href="../4.0.x/index.html">4.0.x</a>
         </li>
       </ul>
     </li>
     <li class="component">
-      <a class="title" href="../../manual/index.html">User manual</a>
+      <div class="title"><a href="../../manual/4.10.x/index.html">User manual</a></div>
       <ul class="versions">
         <li class="version is-latest">
-          <a href="../../manual/index.html">default</a>
+          <a href="../../manual/4.10.x/index.html">4.10.x</a>
+        </li>
+        <li class="version">
+          <a href="../../manual/4.8.x/index.html">4.8.x</a>
+        </li>
+        <li class="version">
+          <a href="../../manual/4.4.x/index.html">4.4.x</a>
+        </li>
+        <li class="version">
+          <a href="../../manual/4.0.x/index.html">4.0.x</a>
         </li>
       </ul>
     </li>
@@ -1819,7 +1865,7 @@
 <main class="article">
 <div class="toolbar" role="navigation">
 <button class="nav-toggle"></button>
-  <a href="../../manual/index.html" class="home-link"></a>
+  <a href="../../manual/4.10.x/index.html" class="home-link"></a>
 <nav class="breadcrumbs" aria-label="breadcrumbs">
   <ul>
     <li><a href="index.html">Camel Components</a></li>
@@ -1827,6 +1873,16 @@
     <li><a href="dropbox-component.html">Dropbox</a></li>
   </ul>
 </nav>
+<div class="page-versions">
+  <button class="version-menu-toggle" title="Show other versions of page">4.4.x</button>
+  <div class="version-menu">
+    <a class="version" href="../4.10.x/dropbox-component.html">4.10.x (LTS)</a>
+    <a class="version" href="../4.8.x/dropbox-component.html">4.8.x</a>
+    <a class="version is-current" href="dropbox-component.html">4.4.x</a>
+    <a class="version is-missing" href="../4.0.x/index.html">4.0.x</a>
+  </div>
+</div>
+<div class="edit-this-page"><a href="https://github.com/rhaetor/rh-camel-jboss/edit/camel-4.4.0-branch/docs/components/modules/ROOT/pages/dropbox-component.adoc">Edit this Page</a></div>
 </div>
   <div class="content">
 <aside class="toc sidebar" data-title="Contents" data-levels="2">
@@ -1862,7 +1918,7 @@ delete files/dir, upload files and search files by queries</p>
 </ul>
 </div>
 <div class="paragraph">
-<p>In order to work with Dropbox API you need to obtain an <strong>accessToken</strong>,
+<p>To work with Dropbox API, you need to obtain an <strong>accessToken</strong>,
  <strong>expireIn</strong>, <strong>refreshToken</strong>, <strong>apiKey</strong>, <strong>apiSecret</strong> and a <strong>clientIdentifier.</strong><br>
 You can refer to the
 <a href="https://dropbox.tech/developers/migrating-app-permissions-and-access-tokens">Dropbox
@@ -1936,7 +1992,7 @@ perform on Dropbox remote folder.</p>
 </tbody>
 </table>
 <div class="paragraph">
-<p><strong>Operations</strong> require additional options to work, some are mandatory for
+<p><strong>Operations</strong> require additional options to work. Some are mandatory for
 the specific operation.</p>
 </div>
 </div>
@@ -1961,14 +2017,14 @@ the specific operation.</p>
 <h3 id="_configuring_component_options"><a class="anchor" href="#_configuring_component_options"></a>Configuring Component Options</h3>
 <div class="paragraph">
 <p>The component level is the highest level which holds general and common configurations that are inherited by the endpoints.
-For example a component may have security settings, credentials for authentication, urls for network connection and so forth.</p>
+For example, a component may have security settings, credentials for authentication, urls for network connection and so forth.</p>
 </div>
 <div class="paragraph">
 <p>Some components only have a few options, and others may have many. Because components typically have pre configured defaults
 that are commonly used, then you may often only need to configure a few options on a component; or none at all.</p>
 </div>
 <div class="paragraph">
-<p>Configuring components can be done with the <a href="../../manual/component-dsl.html" class="xref page">Component DSL</a>,
+<p>Configuring components can be done with the <a href="../../manual/4.10.x/component-dsl.html" class="xref page">Component DSL</a>,
 in a configuration file (application.properties|yaml), or directly with Java code.</p>
 </div>
 </div>
@@ -1981,11 +2037,11 @@ or as a producer (to), or used for both.</p>
 </div>
 <div class="paragraph">
 <p>Configuring endpoints is most often done directly in the endpoint URI as path and query parameters. You can also use
-the <a href="../../manual/Endpoint-dsl.html" class="xref page">Endpoint DSL</a> and <a href="../../manual/dataformat-dsl.html" class="xref page">DataFormat DSL</a>
+the <a href="../../manual/4.10.x/Endpoint-dsl.html" class="xref page">Endpoint DSL</a> and <a href="../../manual/4.10.x/dataformat-dsl.html" class="xref page">DataFormat DSL</a>
 as a <em>type safe</em> way of configuring endpoints and data formats in Java.</p>
 </div>
 <div class="paragraph">
-<p>A good practice when configuring options is to use <a href="../../manual/using-propertyplaceholder.html" class="xref page">Property Placeholders</a>,
+<p>A good practice when configuring options is to use <a href="../../manual/4.10.x/using-propertyplaceholder.html" class="xref page">Property Placeholders</a>,
 which allows to not hardcode urls, port numbers, sensitive information, and other settings.
 In other words placeholders allows to externalize the configuration from your code, and gives more flexibility and reuse.</p>
 </div>
@@ -2470,7 +2526,7 @@ In other words placeholders allows to externalize the configuration from your co
 <p>Delete files on Dropbox.</p>
 </div>
 <div class="paragraph">
-<p>Works only as Camel producer.</p>
+<p>Works only as a Camel producer.</p>
 </div>
 <div class="paragraph">
 <p>Below are listed the options for this operation:</p>
@@ -2545,7 +2601,7 @@ from("direct:start")
 <p>Download files from Dropbox.</p>
 </div>
 <div class="paragraph">
-<p>Works as Camel producer or Camel consumer.</p>
+<p>Works as a Camel producer or Camel consumer.</p>
 </div>
 <div class="paragraph">
 <p>Below are listed the options for this operation:</p>
@@ -2610,11 +2666,11 @@ from("dropbox://get?accessToken=XXX&amp;clientIdentifier=XXX&amp;expireIn=1000&a
 <tbody>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>byte[]</code> or <code>CachedOutputStream</code>  if stream caching is enabled</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">in case of single file download, stream representing the file downloaded</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">in case of single file download, stream represents the file downloaded</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>Map&lt;String, byte[]&gt;</code> or <code>Map&lt;String, CachedOutputStream&gt;</code> if stream caching is enabled</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">in case of multiple files download, a map with as key the path of the
+<td class="tableblock halign-left valign-top"><p class="tableblock">in the case of multiple files downloaded, a map with as a key the path of the
 remote file downloaded and as value the stream representing the file
 downloaded</p></td>
 </tr>
@@ -2630,7 +2686,7 @@ downloaded</p></td>
 <p>Move files on Dropbox between one folder to another.</p>
 </div>
 <div class="paragraph">
-<p>Works only as Camel producer.</p>
+<p>Works only as a Camel producer.</p>
 </div>
 <div class="paragraph">
 <p>Below are listed the options for this operation:</p>
@@ -2705,7 +2761,7 @@ downloaded</p></td>
 <p>Upload files on Dropbox.</p>
 </div>
 <div class="paragraph">
-<p>Works as Camel producer.</p>
+<p>Works as a Camel producer.</p>
 </div>
 <div class="paragraph">
 <p>Below are listed the options for this operation:</p>
@@ -2728,16 +2784,16 @@ downloaded</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>uploadMode</code></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>true</code></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">add or force this option specifies how a file should be saved on
-dropbox: in case of "add" the new file will be renamed if a file with the same
-name already exists on dropbox. In case of "force" if a file with the same name already exists on
+dropbox: in the case of <code>add</code>, the new file will be renamed if a file with the same
+name already exists on dropbox. In the case of <code>force</code>, if a file with the same name already exists on
 dropbox, this will be overwritten.</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>localPath</code></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>false</code></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Folder or file to upload on Dropbox from the local filesystem.
-If this option has been configured then it takes precedence over uploading as a single
-file with content from the Camel message body (message body is converted into a byte array).</p></td>
+If this option has been configured, then it takes precedence over uploading as a single
+file with content from the Camel message body (the message body is converted into a byte array).</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>remotePath</code></p></td>
@@ -2805,7 +2861,7 @@ used as the file name.</p>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>Map&lt;String, DropboxResultCode&gt;</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">in case of multiple files upload, a map with as key the path of the
+<td class="tableblock halign-left valign-top"><p class="tableblock">in the case of multiple files upload, a map with as a key the path of the
 remote file uploaded and as value the result of the upload operation, OK
 or KO</p></td>
 </tr>
@@ -2818,7 +2874,7 @@ or KO</p></td>
 <h2 id="_search_operation"><a class="anchor" href="#_search_operation"></a>Search operation</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>Search inside a remote Dropbox folder including its sub directories.</p>
+<p>Search inside a remote Dropbox folder including its subdirectories.</p>
 </div>
 <div class="paragraph">
 <p>Works as Camel producer and as Camel consumer.</p>
@@ -2890,11 +2946,14 @@ from("direct:start")
 <tbody>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>List&lt;com.dropbox.core.v2.files.SearchMatchV2&gt;</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">list of file path founded. For more information on this object refer to
+<td class="tableblock halign-left valign-top"><p class="tableblock">list of the file path found. For more information on this object, refer to
 <a href="https://javadoc.io/doc/com.dropbox.core/dropbox-core-sdk/latest/com/dropbox/core/v2/files/SearchMatchV2.html">Dropbox documentation</a>.</p></td>
 </tr>
 </tbody>
 </table>
+<div class="paragraph">
+<p>Unresolved include directive in modules/ROOT/pages/dropbox-component.adoc - include::spring-boot:partial$starter.adoc[]</p>
+</div>
 </div>
 </div>
 </div>
@@ -2903,6 +2962,8 @@ from("direct:start")
 </main>
 </div>
 <footer class="footer">
+  <p>This page was built using the Antora default UI.</p>
+  <p>The source code for this UI is licensed under the terms of the MPL-2.0 license.</p>
 </footer>
 <script id="site-script" src="../../_/js/site.js" data-ui-root-path="../../_"></script>
 <script async src="../../_/js/vendor/highlight.js"></script>

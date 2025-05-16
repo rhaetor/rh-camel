@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>CSV :: Red Hat Camel Reference</title>
+    <title>CSV :: Red Hat build of Apache Camel</title>
     <meta name="description" content="Handle CSV (Comma Separated Values) payloads.">
     <meta name="generator" content="Antora 3.1.4">
     <link rel="stylesheet" href="../../../_/css/site.css">
@@ -12,7 +12,7 @@
 <header class="header">
   <nav class="navbar">
     <div class="navbar-brand">
-      <a class="navbar-item" href="../../manual/index.html">Red Hat build of Apache Camel manual</a>
+      <a class="navbar-item" href="/">Red Hat build of Apache Camel</a>
       <button class="navbar-burger" data-target="topbar-nav">
         <span></span>
         <span></span>
@@ -22,11 +22,12 @@
   </nav>
 </header>
 <div class="body">
-<div class="nav-container" data-component="components" data-version="next">
+<div class="nav-container" data-component="components" data-version="4.4.x">
   <aside class="nav">
     <div class="panels">
 <div class="nav-panel-menu is-active" data-panel="menu">
   <nav class="nav-menu">
+    <button class="nav-menu-toggle" aria-label="Toggle expand/collapse all" style="display: none"></button>
     <h3 class="title"><a href="../index.html">Camel Components</a></h3>
 <ul class="nav-list">
   <li class="nav-item" data-depth="0">
@@ -1819,22 +1820,40 @@
 <div class="nav-panel-explore" data-panel="explore">
   <div class="context">
     <span class="title">Camel Components</span>
-    <span class="version">Next (Pre-release)</span>
+    <span class="version">4.4.x</span>
   </div>
   <ul class="components">
     <li class="component is-current">
-      <a class="title" href="../index.html">Camel Components</a>
+      <div class="title"><a href="../../4.10.x/index.html">Camel Components</a></div>
       <ul class="versions">
-        <li class="version is-current is-latest">
-          <a href="../index.html">Next (Pre-release)</a>
+        <li class="version is-latest">
+          <a href="../../4.10.x/index.html">4.10.x (LTS)</a>
+        </li>
+        <li class="version">
+          <a href="../../4.8.x/index.html">4.8.x</a>
+        </li>
+        <li class="version is-current">
+          <a href="../index.html">4.4.x</a>
+        </li>
+        <li class="version">
+          <a href="../../4.0.x/index.html">4.0.x</a>
         </li>
       </ul>
     </li>
     <li class="component">
-      <a class="title" href="../../../manual/index.html">User manual</a>
+      <div class="title"><a href="../../../manual/4.10.x/index.html">User manual</a></div>
       <ul class="versions">
         <li class="version is-latest">
-          <a href="../../../manual/index.html">default</a>
+          <a href="../../../manual/4.10.x/index.html">4.10.x</a>
+        </li>
+        <li class="version">
+          <a href="../../../manual/4.8.x/index.html">4.8.x</a>
+        </li>
+        <li class="version">
+          <a href="../../../manual/4.4.x/index.html">4.4.x</a>
+        </li>
+        <li class="version">
+          <a href="../../../manual/4.0.x/index.html">4.0.x</a>
         </li>
       </ul>
     </li>
@@ -1846,7 +1865,7 @@
 <main class="article">
 <div class="toolbar" role="navigation">
 <button class="nav-toggle"></button>
-  <a href="../../../manual/index.html" class="home-link"></a>
+  <a href="../../../manual/4.10.x/index.html" class="home-link"></a>
 <nav class="breadcrumbs" aria-label="breadcrumbs">
   <ul>
     <li><a href="../index.html">Camel Components</a></li>
@@ -1854,6 +1873,16 @@
     <li><a href="csv-dataformat.html">CSV</a></li>
   </ul>
 </nav>
+<div class="page-versions">
+  <button class="version-menu-toggle" title="Show other versions of page">4.4.x</button>
+  <div class="version-menu">
+    <a class="version" href="../../4.10.x/dataformats/csv-dataformat.html">4.10.x (LTS)</a>
+    <a class="version" href="../../4.8.x/dataformats/csv-dataformat.html">4.8.x</a>
+    <a class="version is-current" href="csv-dataformat.html">4.4.x</a>
+    <a class="version is-missing" href="../../4.0.x/index.html">4.0.x</a>
+  </div>
+</div>
+<div class="edit-this-page"><a href="https://github.com/rhaetor/rh-camel-jboss/edit/camel-4.4.0-branch/docs/components/modules/dataformats/pages/csv-dataformat.adoc">Edit this Page</a></div>
 </div>
   <div class="content">
 <aside class="toc sidebar" data-title="Contents" data-levels="2">
@@ -2174,13 +2203,13 @@ exported/imported by Excel.</p>
 </div></div></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><div class="content"><div id="_dataformat_option_marshallerFactoryRef" class="paragraph">
-<p><a href="#_dataformat_option_marshallerFactoryRef" class="anchor"></a><strong>marshallerFactoryRef</strong></p>
+<td class="tableblock halign-left valign-top"><div class="content"><div id="_dataformat_option_marshalerFactoryRef" class="paragraph">
+<p><a href="#_dataformat_option_marshalerFactoryRef" class="anchor"></a><strong>marshalerFactoryRef</strong></p>
 </div></div></td>
 <td class="tableblock halign-left valign-top"></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>String</code></p></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>Sets the implementation of the CsvMarshallerFactory interface which is able to customize marshalling/unmarshalling behavior by extending CsvMarshaller or creating it from scratch.</p>
+<p>Sets the implementation of the CsvMarshalerFactory interface which is able to customize marshaling/unmarshaling behavior by extending CsvMarshaler or creating it from scratch.</p>
 </div></div></td>
 </tr>
 <tr>
@@ -2190,7 +2219,7 @@ exported/imported by Excel.</p>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>false</code></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>Boolean</code></p></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>Whether the unmarshalling should produce an iterator that reads the lines on the fly or if all the lines must be read at one.</p>
+<p>Whether the unmarshaling should produce an iterator that reads the lines on the fly or if all the lines must be read at one.</p>
 </div></div></td>
 </tr>
 <tr>
@@ -2200,7 +2229,7 @@ exported/imported by Excel.</p>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>false</code></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>Boolean</code></p></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>Whether the unmarshalling should produce maps (HashMap)for the lines values instead of lists. It requires to have header (either defined or collected).</p>
+<p>Whether the unmarshaling should produce maps (HashMap)for the lines values instead of lists. It requires to have header (either defined or collected).</p>
 </div></div></td>
 </tr>
 <tr>
@@ -2210,7 +2239,7 @@ exported/imported by Excel.</p>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>false</code></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>Boolean</code></p></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>Whether the unmarshalling should produce ordered maps (LinkedHashMap) for the lines values instead of lists. It requires to have header (either defined or collected).</p>
+<p>Whether the unmarshaling should produce ordered maps (LinkedHashMap) for the lines values instead of lists. It requires to have header (either defined or collected).</p>
 </div></div></td>
 </tr>
 <tr>
@@ -2230,7 +2259,7 @@ exported/imported by Excel.</p>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>false</code></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>Boolean</code></p></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>Whether the unmarshalling should capture the header record and store it in the message header.</p>
+<p>Whether the unmarshaling should capture the header record and store it in the message header.</p>
 </div></div></td>
 </tr>
 </tbody>
@@ -2267,7 +2296,7 @@ exported/imported by Excel.</p>
 </div>
 </div>
 <div class="sect1">
-<h2 id="_marshalling_a_map_to_csv"><a class="anchor" href="#_marshalling_a_map_to_csv"></a>Marshalling a Map to CSV</h2>
+<h2 id="_marshaling_a_map_to_csv"><a class="anchor" href="#_marshaling_a_map_to_csv"></a>Marshaling a Map to CSV</h2>
 <div class="sectionbody">
 <div class="paragraph">
 <p>The component allows you to marshal a Java Map (or any other message
@@ -2275,7 +2304,7 @@ type that can be converted in a Map) into a
 CSV payload.</p>
 </div>
 <div class="paragraph">
-<p>Considering the following body</p>
+<p>Considering the following body:</p>
 </div>
 <div class="listingblock">
 <div class="content">
@@ -2285,8 +2314,21 @@ body.put("bar", 123);</code></pre>
 </div>
 </div>
 <div class="paragraph">
-<p>and this Java route definition</p>
+<p>and this route definition:</p>
 </div>
+<div id="_tabs_1" class="openblock tabs is-sync is-loading">
+<div class="content">
+<div class="ulist tablist">
+<ul>
+<li id="_tabs_1_java" class="tab">
+<p>Java</p>
+</li>
+<li id="_tabs_1_xml" class="tab">
+<p>XML</p>
+</li>
+</ul>
+</div>
+<div id="_tabs_1_java--panel" class="tabpanel" aria-labelledby="_tabs_1_java">
 <div class="listingblock">
 <div class="content">
 <pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">from("direct:start")
@@ -2294,9 +2336,8 @@ body.put("bar", 123);</code></pre>
     .to("mock:result");</code></pre>
 </div>
 </div>
-<div class="paragraph">
-<p>or this XML route definition</p>
 </div>
+<div id="_tabs_1_xml--panel" class="tabpanel" aria-labelledby="_tabs_1_xml">
 <div class="listingblock">
 <div class="content">
 <pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;route&gt;
@@ -2306,6 +2347,9 @@ body.put("bar", 123);</code></pre>
     &lt;/marshal&gt;
     &lt;to uri="mock:result" /&gt;
 &lt;/route&gt;</code></pre>
+</div>
+</div>
+</div>
 </div>
 </div>
 <div class="paragraph">
@@ -2319,10 +2363,10 @@ body.put("bar", 123);</code></pre>
 </div>
 </div>
 <div class="sect1">
-<h2 id="_unmarshalling_a_csv_message_into_a_java_list"><a class="anchor" href="#_unmarshalling_a_csv_message_into_a_java_list"></a>Unmarshalling a CSV message into a Java List</h2>
+<h2 id="_unmarshaling_a_csv_message_into_a_java_list"><a class="anchor" href="#_unmarshaling_a_csv_message_into_a_java_list"></a>Unmarshaling a CSV message into a Java List</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>Unmarshalling will transform a CSV messsage into a Java List with CSV
+<p>Unmarshaling will transform a CSV message into a Java List with CSV
 file lines (containing another List with all the field values).</p>
 </div>
 <div class="paragraph">
@@ -2362,14 +2406,14 @@ for (List&lt;String&gt; line : data) {
 </div>
 </div>
 <div class="sect1">
-<h2 id="_marshalling_a_listmap_to_csv"><a class="anchor" href="#_marshalling_a_listmap_to_csv"></a>Marshalling a List&lt;Map&gt; to CSV</h2>
+<h2 id="_marshaling_a_listmap_to_csv"><a class="anchor" href="#_marshaling_a_listmap_to_csv"></a>Marshaling a List&lt;Map&gt; to CSV</h2>
 <div class="sectionbody">
 <div class="paragraph">
 <p><strong>Since Camel 2.1</strong></p>
 </div>
 <div class="paragraph">
-<p>If you have multiple rows of data you want to be marshalled into CSV
-format you can now store the message payload as a
+<p>If you have multiple rows of data you want to be marshaled into CSV
+format, you can now store the message payload as a
 <code>List&lt;Map&lt;String, Object&gt;&gt;</code> object where the list contains a Map for
 each row.</p>
 </div>
@@ -2416,7 +2460,7 @@ public void doHandleCsvData(List&lt;List&lt;String&gt;&gt; csvData)
 <h2 id="_marshaling_with_a_pipe_as_delimiter"><a class="anchor" href="#_marshaling_with_a_pipe_as_delimiter"></a>Marshaling with a pipe as delimiter</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>Considering the following body</p>
+<p>Considering the following body:</p>
 </div>
 <div class="listingblock">
 <div class="content">
@@ -2426,8 +2470,21 @@ body.put("bar", 123);</code></pre>
 </div>
 </div>
 <div class="paragraph">
-<p>and this Java route definition</p>
+<p>And this Java route definition:</p>
 </div>
+<div id="_tabs_2" class="openblock tabs is-sync is-loading">
+<div class="content">
+<div class="ulist tablist">
+<ul>
+<li id="_tabs_2_java" class="tab">
+<p>Java</p>
+</li>
+<li id="_tabs_2_xml" class="tab">
+<p>XML</p>
+</li>
+</ul>
+</div>
+<div id="_tabs_2_java--panel" class="tabpanel" aria-labelledby="_tabs_2_java">
 <div class="listingblock">
 <div class="content">
 <pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">from("direct:start")
@@ -2435,9 +2492,8 @@ body.put("bar", 123);</code></pre>
     .to("mock:result")</code></pre>
 </div>
 </div>
-<div class="paragraph">
-<p>or this XML route definition</p>
 </div>
+<div id="_tabs_2_xml--panel" class="tabpanel" aria-labelledby="_tabs_2_xml">
 <div class="listingblock">
 <div class="content">
 <pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;route&gt;
@@ -2449,8 +2505,11 @@ body.put("bar", 123);</code></pre>
 &lt;/route&gt;</code></pre>
 </div>
 </div>
+</div>
+</div>
+</div>
 <div class="paragraph">
-<p>then it will produce</p>
+<p>Then it will produce:</p>
 </div>
 <div class="listingblock">
 <div class="content">
@@ -2547,20 +2606,19 @@ Usign the Spring/XML DSL:</p>
 <p>You can instruct the CSV Data Format to skip the
 first line which contains the CSV headers. Using the Spring/XML DSL:</p>
 </div>
-<div class="listingblock">
+<div id="_tabs_3" class="openblock tabs is-sync is-loading">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;route&gt;
-  &lt;from uri="direct:start" /&gt;
-  &lt;unmarshal&gt;
-    &lt;csv skipFirstLine="true" /&gt;
-  &lt;/unmarshal&gt;
-  &lt;to uri="bean:myCsvHandler?method=doHandleCsv" /&gt;
-&lt;/route&gt;</code></pre>
+<div class="ulist tablist">
+<ul>
+<li id="_tabs_3_java" class="tab">
+<p>Java</p>
+</li>
+<li id="_tabs_3_xml" class="tab">
+<p>XML</p>
+</li>
+</ul>
 </div>
-</div>
-<div class="paragraph">
-<p>Or the Java DSL:</p>
-</div>
+<div id="_tabs_3_java--panel" class="tabpanel" aria-labelledby="_tabs_3_java">
 <div class="listingblock">
 <div class="content">
 <pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">CsvDataFormat csv = new CsvDataFormat();
@@ -2572,27 +2630,39 @@ from("direct:start")
 </div>
 </div>
 </div>
-</div>
-<div class="sect1">
-<h2 id="_unmarshaling_with_a_pipe_as_delimiter"><a class="anchor" href="#_unmarshaling_with_a_pipe_as_delimiter"></a>Unmarshaling with a pipe as delimiter</h2>
-<div class="sectionbody">
-<div class="paragraph">
-<p>Using the Spring/XML DSL:</p>
-</div>
+<div id="_tabs_3_xml--panel" class="tabpanel" aria-labelledby="_tabs_3_xml">
 <div class="listingblock">
 <div class="content">
 <pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;route&gt;
   &lt;from uri="direct:start" /&gt;
   &lt;unmarshal&gt;
-    &lt;csv delimiter="|" /&gt;
+    &lt;csv skipFirstLine="true" /&gt;
   &lt;/unmarshal&gt;
   &lt;to uri="bean:myCsvHandler?method=doHandleCsv" /&gt;
 &lt;/route&gt;</code></pre>
 </div>
 </div>
-<div class="paragraph">
-<p>Or the Java DSL:</p>
 </div>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_unmarshaling_with_a_pipe_as_delimiter"><a class="anchor" href="#_unmarshaling_with_a_pipe_as_delimiter"></a>Unmarshaling with a pipe as delimiter</h2>
+<div class="sectionbody">
+<div id="_tabs_4" class="openblock tabs is-sync is-loading">
+<div class="content">
+<div class="ulist tablist">
+<ul>
+<li id="_tabs_4_java" class="tab">
+<p>Java</p>
+</li>
+<li id="_tabs_4_spring_xml" class="tab">
+<p>Spring XML</p>
+</li>
+</ul>
+</div>
+<div id="_tabs_4_java--panel" class="tabpanel" aria-labelledby="_tabs_4_java">
 <div class="listingblock">
 <div class="content">
 <pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">CsvDataFormat csv = new CsvDataFormat();
@@ -2605,6 +2675,9 @@ from("direct:start")
   .to("bean:myCsvHandler?method=doHandleCsv");</code></pre>
 </div>
 </div>
+<div class="paragraph">
+<p>Or, possibly:</p>
+</div>
 <div class="listingblock">
 <div class="content">
 <pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">CsvDataFormat csv = new CsvDataFormat();
@@ -2615,16 +2688,20 @@ from("direct:start")
   .to("bean:myCsvHandler?method=doHandleCsv");</code></pre>
 </div>
 </div>
+</div>
+<div id="_tabs_4_spring_xml--panel" class="tabpanel" aria-labelledby="_tabs_4_spring_xml">
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">CsvDataFormat csv = new CsvDataFormat();
-CSVConfig csvConfig = new CSVConfig();
-csvConfig.setDelimiter(";");
-csv.setConfig(csvConfig);
-
-from("direct:start")
-  .unmarshal(csv)
-  .to("bean:myCsvHandler?method=doHandleCsv");</code></pre>
+<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;route&gt;
+  &lt;from uri="direct:start" /&gt;
+  &lt;unmarshal&gt;
+    &lt;csv delimiter="|" /&gt;
+  &lt;/unmarshal&gt;
+  &lt;to uri="bean:myCsvHandler?method=doHandleCsv" /&gt;
+&lt;/route&gt;</code></pre>
+</div>
+</div>
+</div>
 </div>
 </div>
 <div class="paragraph">
@@ -2640,7 +2717,7 @@ csvConfig.setDelimiter(';');</code></pre>
 </div>
 </div>
 <div class="paragraph">
-<p>doesn&#8217;t work. You have to set the delimiter as a String!</p>
+<p>This doesn&#8217;t work. You have to set the delimiter as a String!</p>
 </div>
 </div>
 </div>
@@ -2648,11 +2725,11 @@ csvConfig.setDelimiter(';');</code></pre>
 <h2 id="_dependencies"><a class="anchor" href="#_dependencies"></a>Dependencies</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>To use CSV in your Camel routes you need to add a dependency on
+<p>To use CSV in your Camel routes, you need to add a dependency on
 <strong>camel-csv</strong>, which implements this data format.</p>
 </div>
 <div class="paragraph">
-<p>If you use Maven you can just add the following to your pom.xml,
+<p>If you use Maven, you can add the following to your pom.xml,
 substituting the version number for the latest and greatest release (see
 the download page for the latest versions).</p>
 </div>
@@ -2665,6 +2742,9 @@ the download page for the latest versions).</p>
 &lt;/dependency&gt;</code></pre>
 </div>
 </div>
+<div class="paragraph">
+<p>Unresolved include directive in modules/dataformats/pages/csv-dataformat.adoc - include::spring-boot:partial$starter.adoc[]</p>
+</div>
 </div>
 </div>
 </article>
@@ -2672,6 +2752,8 @@ the download page for the latest versions).</p>
 </main>
 </div>
 <footer class="footer">
+  <p>This page was built using the Antora default UI.</p>
+  <p>The source code for this UI is licensed under the terms of the MPL-2.0 license.</p>
 </footer>
 <script id="site-script" src="../../../_/js/site.js" data-ui-root-path="../../../_"></script>
 <script async src="../../../_/js/vendor/highlight.js"></script>

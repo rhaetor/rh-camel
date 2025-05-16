@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>Wire Tap :: Red Hat Camel Reference</title>
+    <title>Wire Tap :: Red Hat build of Apache Camel</title>
     <meta name="description" content="Routes a copy of a message (or creates a new message) to a secondary destination while continue routing the original message.">
     <meta name="generator" content="Antora 3.1.4">
     <link rel="stylesheet" href="../../../_/css/site.css">
@@ -12,7 +12,7 @@
 <header class="header">
   <nav class="navbar">
     <div class="navbar-brand">
-      <a class="navbar-item" href="../../manual/index.html">Red Hat build of Apache Camel manual</a>
+      <a class="navbar-item" href="/">Red Hat build of Apache Camel</a>
       <button class="navbar-burger" data-target="topbar-nav">
         <span></span>
         <span></span>
@@ -22,11 +22,12 @@
   </nav>
 </header>
 <div class="body">
-<div class="nav-container" data-component="components" data-version="next">
+<div class="nav-container" data-component="components" data-version="4.4.x">
   <aside class="nav">
     <div class="panels">
 <div class="nav-panel-menu is-active" data-panel="menu">
   <nav class="nav-menu">
+    <button class="nav-menu-toggle" aria-label="Toggle expand/collapse all" style="display: none"></button>
     <h3 class="title"><a href="../index.html">Camel Components</a></h3>
 <ul class="nav-list">
   <li class="nav-item" data-depth="0">
@@ -1819,22 +1820,40 @@
 <div class="nav-panel-explore" data-panel="explore">
   <div class="context">
     <span class="title">Camel Components</span>
-    <span class="version">Next (Pre-release)</span>
+    <span class="version">4.4.x</span>
   </div>
   <ul class="components">
     <li class="component is-current">
-      <a class="title" href="../index.html">Camel Components</a>
+      <div class="title"><a href="../../4.10.x/index.html">Camel Components</a></div>
       <ul class="versions">
-        <li class="version is-current is-latest">
-          <a href="../index.html">Next (Pre-release)</a>
+        <li class="version is-latest">
+          <a href="../../4.10.x/index.html">4.10.x (LTS)</a>
+        </li>
+        <li class="version">
+          <a href="../../4.8.x/index.html">4.8.x</a>
+        </li>
+        <li class="version is-current">
+          <a href="../index.html">4.4.x</a>
+        </li>
+        <li class="version">
+          <a href="../../4.0.x/index.html">4.0.x</a>
         </li>
       </ul>
     </li>
     <li class="component">
-      <a class="title" href="../../../manual/index.html">User manual</a>
+      <div class="title"><a href="../../../manual/4.10.x/index.html">User manual</a></div>
       <ul class="versions">
         <li class="version is-latest">
-          <a href="../../../manual/index.html">default</a>
+          <a href="../../../manual/4.10.x/index.html">4.10.x</a>
+        </li>
+        <li class="version">
+          <a href="../../../manual/4.8.x/index.html">4.8.x</a>
+        </li>
+        <li class="version">
+          <a href="../../../manual/4.4.x/index.html">4.4.x</a>
+        </li>
+        <li class="version">
+          <a href="../../../manual/4.0.x/index.html">4.0.x</a>
         </li>
       </ul>
     </li>
@@ -1846,7 +1865,7 @@
 <main class="article">
 <div class="toolbar" role="navigation">
 <button class="nav-toggle"></button>
-  <a href="../../../manual/index.html" class="home-link"></a>
+  <a href="../../../manual/4.10.x/index.html" class="home-link"></a>
 <nav class="breadcrumbs" aria-label="breadcrumbs">
   <ul>
     <li><a href="../index.html">Camel Components</a></li>
@@ -1854,6 +1873,16 @@
     <li><a href="wireTap-eip.html">Wire Tap</a></li>
   </ul>
 </nav>
+<div class="page-versions">
+  <button class="version-menu-toggle" title="Show other versions of page">4.4.x</button>
+  <div class="version-menu">
+    <a class="version" href="../../4.10.x/eips/wireTap-eip.html">4.10.x (LTS)</a>
+    <a class="version" href="../../4.8.x/eips/wireTap-eip.html">4.8.x</a>
+    <a class="version is-current" href="wireTap-eip.html">4.4.x</a>
+    <a class="version" href="../../4.0.x/eips/wireTap-eip.html">4.0.x</a>
+  </div>
+</div>
+<div class="edit-this-page"><a href="https://github.com/rhaetor/rh-camel-jboss/edit/camel-4.4.0-branch/core/camel-core-engine/src/main/docs/modules/eips/pages/wireTap-eip.adoc">Edit this Page</a></div>
 </div>
   <div class="content">
 <aside class="toc sidebar" data-title="Contents" data-levels="2">
@@ -2032,10 +2061,10 @@ forwarded to the ultimate destination.</p>
 <div class="sectionbody">
 <div class="paragraph">
 <p>Camel&#8217;s Wire Tap will copy the original
-<a href="../../../manual/exchange.html" class="xref page">Exchange</a> and set its
-<a href="../../../manual/exchange-pattern.html" class="xref page">Exchange Pattern</a> to <strong><code>InOnly</code></strong>, as we want
-the tapped <a href="../../../manual/exchange.html" class="xref page">Exchange</a> to be sent in a fire and forget
-style. The tapped <a href="../../../manual/exchange.html" class="xref page">Exchange</a> is then sent in a
+<a href="../../../manual/4.10.x/exchange.html" class="xref page">Exchange</a> and set its
+<a href="../../../manual/4.10.x/exchange-pattern.html" class="xref page">Exchange Pattern</a> to <strong><code>InOnly</code></strong>, as we want
+the tapped <a href="../../../manual/4.10.x/exchange.html" class="xref page">Exchange</a> to be sent in a fire and forget
+style. The tapped <a href="../../../manual/4.10.x/exchange.html" class="xref page">Exchange</a> is then sent in a
 separate thread, so it can run in parallel with the original. Beware that
 only the <code>Exchange</code> is copied - Wire Tap won&#8217;t do a deep clone (unless you
 specify a custom processor via <strong><code>onPrepare</code></strong> which does that). So all
@@ -2044,8 +2073,9 @@ copies could share objects from the original <code>Exchange</code>.</p>
 <div class="sect2">
 <h3 id="_using_wire_tap"><a class="anchor" href="#_using_wire_tap"></a>Using Wire Tap</h3>
 <div class="paragraph">
-<p>In the example below the exchange is wire tapped to the direct:tap route.
-This route delays the message 1 second before continuing. This is because
+<p>In the example below, the exchange is wire tapped to the direct:tap route.
+This route delays message 1 second before continuing.
+This is because
 it allows you to see that the tapped message is routed independently of the original
 route, so that you would see log:result happens before log:tap</p>
 </div>
@@ -2122,12 +2152,12 @@ from("direct:tap")
 <div class="sect2">
 <h3 id="_wire_tapping_with_dynamic_uris"><a class="anchor" href="#_wire_tapping_with_dynamic_uris"></a>Wire tapping with dynamic URIs</h3>
 <div class="paragraph">
-<p>For example to wire tap to a dynamic URI, then the URI
-uses the  <a href="../languages/simple-language.html" class="xref page">Simple</a> language that
+<p>For example, to wire tap to a dynamic URI, then the URI
+uses the  <a href="../../4.10.x/languages/simple-language.html" class="xref page">Simple</a> language that
 allows to construct dynamic URIs.</p>
 </div>
 <div class="paragraph">
-<p>For example to wire tap to a JMS queue where the header ID is part of the queue name:</p>
+<p>For example, to wire tap to a JMS queue where the header ID is part of the queue name:</p>
 </div>
 <div id="_tabs_2" class="openblock tabs is-sync is-loading">
 <div class="content">
@@ -2188,10 +2218,10 @@ allows to construct dynamic URIs.</p>
 <div class="paragraph">
 <p>The WireTap uses a thread pool to process the
 tapped messages. This thread pool will by default use the settings
-detailed at <a href="../../../manual/threading-model.html" class="xref page">Threading Model</a>.</p>
+detailed in the <a href="../../../manual/4.10.x/threading-model.html" class="xref page">Threading Model</a>.</p>
 </div>
 <div class="paragraph">
-<p>In particular, when the pool is exhausted (with all threads utilized), further wiretaps
+<p>In particular, when the pool is exhausted (with all threads used), further wiretaps
 will be executed synchronously by the calling thread. To remedy this,
 you can configure an explicit thread pool on the Wire Tap having either
 a different rejection policy, a larger worker queue, or more worker threads.</p>
@@ -2202,12 +2232,12 @@ a different rejection policy, a larger worker queue, or more worker threads.</p>
 <h2 id="_wire_tapping_streaming_based_messages"><a class="anchor" href="#_wire_tapping_streaming_based_messages"></a>Wire tapping Streaming based messages</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>If you Wire Tap a stream message body then you
-should consider enabling <a href="../../../manual/stream-caching.html" class="xref page">Stream caching</a> to
+<p>If you Wire Tap a stream message body, then you
+should consider enabling <a href="../../../manual/4.10.x/stream-caching.html" class="xref page">Stream caching</a> to
 ensure the message body can be read at each endpoint.</p>
 </div>
 <div class="paragraph">
-<p>See more details at <a href="../../../manual/stream-caching.html" class="xref page">Stream caching</a>.</p>
+<p>See more details at <a href="../../../manual/4.10.x/stream-caching.html" class="xref page">Stream caching</a>.</p>
 </div>
 </div>
 </div>
@@ -2216,6 +2246,8 @@ ensure the message body can be read at each endpoint.</p>
 </main>
 </div>
 <footer class="footer">
+  <p>This page was built using the Antora default UI.</p>
+  <p>The source code for this UI is licensed under the terms of the MPL-2.0 license.</p>
 </footer>
 <script id="site-script" src="../../../_/js/site.js" data-ui-root-path="../../../_"></script>
 <script async src="../../../_/js/vendor/highlight.js"></script>

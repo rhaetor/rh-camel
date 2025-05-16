@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>Recipient List :: Red Hat Camel Reference</title>
+    <title>Recipient List :: Red Hat build of Apache Camel</title>
     <meta name="description" content="Route messages to a number of dynamically specified recipients">
     <meta name="generator" content="Antora 3.1.4">
     <link rel="stylesheet" href="../../../_/css/site.css">
@@ -12,7 +12,7 @@
 <header class="header">
   <nav class="navbar">
     <div class="navbar-brand">
-      <a class="navbar-item" href="../../manual/index.html">Red Hat build of Apache Camel manual</a>
+      <a class="navbar-item" href="/">Red Hat build of Apache Camel</a>
       <button class="navbar-burger" data-target="topbar-nav">
         <span></span>
         <span></span>
@@ -22,11 +22,12 @@
   </nav>
 </header>
 <div class="body">
-<div class="nav-container" data-component="components" data-version="next">
+<div class="nav-container" data-component="components" data-version="4.8.x">
   <aside class="nav">
     <div class="panels">
 <div class="nav-panel-menu is-active" data-panel="menu">
   <nav class="nav-menu">
+    <button class="nav-menu-toggle" aria-label="Toggle expand/collapse all" style="display: none"></button>
     <h3 class="title"><a href="../index.html">Camel Components</a></h3>
 <ul class="nav-list">
   <li class="nav-item" data-depth="0">
@@ -36,7 +37,46 @@
     <a class="nav-link" href="../index.html">Components</a>
 <ul class="nav-list">
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="../activemq-component.html">ActiveMQ</a>
+    <a class="nav-link" href="../activemq-component.html">ActiveMQ 5.x</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../activemq6-component.html">ActiveMQ 6.x</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../ai-summary.html">AI</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../chatscript-component.html">ChatScript</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../djl-component.html">Deep Java Library</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../langchain4j-chat-component.html">LangChain4j Chat</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../langchain4j-embeddings-component.html">LangChain4j Embeddings</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../langchain4j-tokenizer-component.html">LangChain4j Tokenizer</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../langchain4j-tools-component.html">LangChain4j Tools</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../langchain4j-web-search-component.html">LangChain4j Web Search</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../milvus-component.html">Milvus</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../pinecone-component.html">Pinecone</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../qdrant-component.html">Qdrant</a>
+  </li>
+</ul>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="../amqp-component.html">AMQP</a>
@@ -65,6 +105,15 @@
 <ul class="nav-list">
   <li class="nav-item" data-depth="3">
     <a class="nav-link" href="../aws2-athena-component.html">AWS Athena</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../aws-bedrock-component.html">AWS Bedrock</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../aws-bedrock-agent-component.html">AWS Bedrock Agent</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../aws-bedrock-agent-runtime-component.html">AWS Bedrock Agent Runtime</a>
   </li>
   <li class="nav-item" data-depth="3">
     <a class="nav-link" href="../aws-cloudtrail-component.html">AWS Cloudtrail</a>
@@ -169,7 +218,7 @@
     <a class="nav-link" href="../azure-storage-blob-component.html">Azure Storage Blob Service</a>
   </li>
   <li class="nav-item" data-depth="3">
-    <a class="nav-link" href="../azure-storage-datalake-component.html">Azure Storage Datalake Service</a>
+    <a class="nav-link" href="../azure-storage-datalake-component.html">Azure Storage Data Lake Service</a>
   </li>
   <li class="nav-item" data-depth="3">
     <a class="nav-link" href="../azure-storage-queue-component.html">Azure Storage Queue Service</a>
@@ -202,9 +251,6 @@
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="../cql-component.html">Cassandra CQL</a>
-  </li>
-  <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="../chatscript-component.html">ChatScript</a>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="../chunk-component.html">Chunk</a>
@@ -277,9 +323,6 @@
     <a class="nav-link" href="../debezium-sqlserver-component.html">Debezium SQL Server Connector</a>
   </li>
 </ul>
-  </li>
-  <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="../djl-component.html">Deep Java Library</a>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="../dhis2-component.html">DHIS2</a>
@@ -395,6 +438,9 @@
   </li>
   <li class="nav-item" data-depth="3">
     <a class="nav-link" href="../google-pubsub-component.html">Google Pubsub</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../google-pubsub-lite-component.html">Google PubSub Lite</a>
   </li>
   <li class="nav-item" data-depth="3">
     <a class="nav-link" href="../google-secret-manager-component.html">Google Secret Manager</a>
@@ -687,7 +733,7 @@
     <a class="nav-link" href="../ldif-component.html">LDIF</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="../log-component.html">Log</a>
+    <a class="nav-link" href="../log-component.html">Log Data</a>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="../lucene-component.html">Lucene</a>
@@ -900,10 +946,16 @@
     <a class="nav-link" href="../smb-component.html">SMB</a>
   </li>
   <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../smooks-component.html">Smooks</a>
+  </li>
+  <li class="nav-item" data-depth="2">
     <a class="nav-link" href="../smpp-component.html">SMPP</a>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="../snmp-component.html">SNMP</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../solr-component.html">Solr</a>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="../splunk-component.html">Splunk</a>
@@ -966,6 +1018,18 @@
     <a class="nav-link" href="../stub-component.html">Stub</a>
   </li>
   <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../tahu-summary.html">Tahu</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../tahu-edge-component.html">Tahu Edge Node / Device</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../tahu-host-component.html">Tahu Host Application</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
     <a class="nav-link" href="../telegram-component.html">Telegram</a>
   </li>
   <li class="nav-item" data-depth="2">
@@ -1026,7 +1090,7 @@
     <a class="nav-link" href="../whatsapp-component.html">WhatsApp</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="../wordpress-component.html">Wordpress</a>
+    <a class="nav-link" href="../wordpress-component.html">WordPress</a>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="../workday-component.html">Workday</a>
@@ -1419,7 +1483,13 @@
     <a class="nav-link" href="../others/openapi-java.html">Openapi Java</a>
   </li>
   <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../others/openapi-validator.html">Openapi Validator</a>
+  </li>
+  <li class="nav-item" data-depth="2">
     <a class="nav-link" href="../others/opentelemetry.html">OpenTelemetry</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../others/platform-http-jolokia.html">Platform HTTP Jolokia</a>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="../others/platform-http-main.html">Platform Http Main</a>
@@ -1567,7 +1637,7 @@
     <a class="nav-link" href="event-message.html">Event Message</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="failover-eip.html">Failover</a>
+    <a class="nav-link" href="failoverLoadBalancer-eip.html">Failover Load Balancer</a>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="faultToleranceConfiguration-eip.html">Fault Tolerance Configuration</a>
@@ -1597,13 +1667,13 @@
     <a class="nav-link" href="loadBalance-eip.html">Load Balance</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="log-eip.html">Log</a>
+    <a class="nav-link" href="log-eip.html">Logger</a>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="loop-eip.html">Loop</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="marshal-eip.html">Marshal EIP</a>
+    <a class="nav-link" href="marshal-eip.html">Marshal</a>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="message.html">Message</a>
@@ -1660,6 +1730,9 @@
     <a class="nav-link" href="point-to-point-channel.html">Point to Point Channel</a>
   </li>
   <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="poll-eip.html">Poll</a>
+  </li>
+  <li class="nav-item" data-depth="2">
     <a class="nav-link" href="pollEnrich-eip.html">Poll Enrich</a>
   </li>
   <li class="nav-item" data-depth="2">
@@ -1675,7 +1748,7 @@
     <a class="nav-link" href="publish-subscribe-channel.html">Publish Subscribe Channel</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="random-eip.html">Random</a>
+    <a class="nav-link" href="randomLoadBalancer-eip.html">Random Load Balancer</a>
   </li>
   <li class="nav-item is-current-page" data-depth="2">
     <a class="nav-link" href="recipientList-eip.html">Recipient List</a>
@@ -1717,7 +1790,7 @@
     <a class="nav-link" href="rollback-eip.html">Rollback</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="roundRobin-eip.html">Round Robin</a>
+    <a class="nav-link" href="roundRobinLoadBalancer-eip.html">Round Robin Load Balancer</a>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="routingSlip-eip.html">Routing Slip</a>
@@ -1729,7 +1802,7 @@
     <a class="nav-link" href="sample-eip.html">Sample</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="scatter-gather.html">Scatter Gather</a>
+    <a class="nav-link" href="scatter-gather.html">Scatter-Gather</a>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="script-eip.html">Script</a>
@@ -1759,6 +1832,9 @@
     <a class="nav-link" href="setVariable-eip.html">Set Variable</a>
   </li>
   <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="setVariables-eip.html">Set Variables</a>
+  </li>
+  <li class="nav-item" data-depth="2">
     <a class="nav-link" href="sort-eip.html">Sort</a>
   </li>
   <li class="nav-item" data-depth="2">
@@ -1768,7 +1844,7 @@
     <a class="nav-link" href="step-eip.html">Step</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="sticky-eip.html">Sticky</a>
+    <a class="nav-link" href="stickyLoadBalancer-eip.html">Sticky Load Balancer</a>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="stop-eip.html">Stop</a>
@@ -1789,7 +1865,7 @@
     <a class="nav-link" href="toD-eip.html">To D</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="topic-eip.html">Topic</a>
+    <a class="nav-link" href="topicLoadBalancer-eip.html">Topic Load Balancer</a>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="transactional-client.html">Transactional Client</a>
@@ -1798,13 +1874,13 @@
     <a class="nav-link" href="transform-eip.html">Transform</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="unmarshal-eip.html">Unmarshal EIP</a>
+    <a class="nav-link" href="unmarshal-eip.html">Unmarshal</a>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="validate-eip.html">Validate</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="weighted-eip.html">Weighted</a>
+    <a class="nav-link" href="weightedLoadBalancer-eip.html">Weighted Load Balancer</a>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="wireTap-eip.html">Wire Tap</a>
@@ -1819,22 +1895,40 @@
 <div class="nav-panel-explore" data-panel="explore">
   <div class="context">
     <span class="title">Camel Components</span>
-    <span class="version">Next (Pre-release)</span>
+    <span class="version">4.8.x</span>
   </div>
   <ul class="components">
     <li class="component is-current">
-      <a class="title" href="../index.html">Camel Components</a>
+      <div class="title"><a href="../../4.10.x/index.html">Camel Components</a></div>
       <ul class="versions">
-        <li class="version is-current is-latest">
-          <a href="../index.html">Next (Pre-release)</a>
+        <li class="version is-latest">
+          <a href="../../4.10.x/index.html">4.10.x (LTS)</a>
+        </li>
+        <li class="version is-current">
+          <a href="../index.html">4.8.x</a>
+        </li>
+        <li class="version">
+          <a href="../../4.4.x/index.html">4.4.x</a>
+        </li>
+        <li class="version">
+          <a href="../../4.0.x/index.html">4.0.x</a>
         </li>
       </ul>
     </li>
     <li class="component">
-      <a class="title" href="../../../manual/index.html">User manual</a>
+      <div class="title"><a href="../../../manual/4.10.x/index.html">User manual</a></div>
       <ul class="versions">
         <li class="version is-latest">
-          <a href="../../../manual/index.html">default</a>
+          <a href="../../../manual/4.10.x/index.html">4.10.x</a>
+        </li>
+        <li class="version">
+          <a href="../../../manual/4.8.x/index.html">4.8.x</a>
+        </li>
+        <li class="version">
+          <a href="../../../manual/4.4.x/index.html">4.4.x</a>
+        </li>
+        <li class="version">
+          <a href="../../../manual/4.0.x/index.html">4.0.x</a>
         </li>
       </ul>
     </li>
@@ -1846,7 +1940,7 @@
 <main class="article">
 <div class="toolbar" role="navigation">
 <button class="nav-toggle"></button>
-  <a href="../../../manual/index.html" class="home-link"></a>
+  <a href="../../../manual/4.10.x/index.html" class="home-link"></a>
 <nav class="breadcrumbs" aria-label="breadcrumbs">
   <ul>
     <li><a href="../index.html">Camel Components</a></li>
@@ -1854,6 +1948,16 @@
     <li><a href="recipientList-eip.html">Recipient List</a></li>
   </ul>
 </nav>
+<div class="page-versions">
+  <button class="version-menu-toggle" title="Show other versions of page">4.8.x</button>
+  <div class="version-menu">
+    <a class="version" href="../../4.10.x/eips/recipientList-eip.html">4.10.x (LTS)</a>
+    <a class="version is-current" href="recipientList-eip.html">4.8.x</a>
+    <a class="version" href="../../4.4.x/eips/recipientList-eip.html">4.4.x</a>
+    <a class="version" href="../../4.0.x/eips/recipientList-eip.html">4.0.x</a>
+  </div>
+</div>
+<div class="edit-this-page"><a href="https://github.com/rhaetor/rh-camel-jboss/edit/camel-4.8.0-branch/core/camel-core-engine/src/main/docs/modules/eips/pages/recipientList-eip.adoc">Edit this Page</a></div>
 </div>
   <div class="content">
 <aside class="toc sidebar" data-title="Contents" data-levels="2">
@@ -1885,7 +1989,7 @@ from the <a href="enterprise-integration-patterns.html" class="xref page">EIP pa
 <h2 id="_options"><a class="anchor" href="#_options"></a>Options</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>The Recipient List eip supports 16 options, which are listed below.</p>
+<p>The Recipient List eip supports 2 options, which are listed below.</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
 <colgroup>
@@ -1962,7 +2066,7 @@ from the <a href="enterprise-integration-patterns.html" class="xref page">EIP pa
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong id="_option_parallelAggregate">parallelAggregate</strong></p></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>If enabled then the aggregate method on AggregationStrategy can be called concurrently. Notice that this would require the implementation of AggregationStrategy to be implemented as thread-safe. By default this is false meaning that Camel synchronizes the call to the aggregate method. Though in some use-cases this can be used to archive higher performance when the AggregationStrategy is implemented as thread-safe.</p>
+<p><strong>Deprecated</strong> If enabled then the aggregate method on AggregationStrategy can be called concurrently. Notice that this would require the implementation of AggregationStrategy to be implemented as thread-safe. By default this is false meaning that Camel synchronizes the call to the aggregate method. Though in some use-cases this can be used to archive higher performance when the AggregationStrategy is implemented as thread-safe.</p>
 </div></div></td>
 <td class="tableblock halign-center valign-top"><p class="tableblock">false</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Boolean</p></td>
@@ -2067,26 +2171,43 @@ See the <code>cacheSize</code> option for more details on <em>how much cache</em
 <h2 id="_exchange_properties"><a class="anchor" href="#_exchange_properties"></a>Exchange properties</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>The following exchange properties are set on each <code>Exchange</code> that are sent by the recipient list:</p>
+<p>The Recipient List eip supports 2 exchange properties, which are listed below.</p>
+</div>
+<div class="paragraph">
+<p>The exchange properties are set on the <code>Exchange</code> by the EIP, unless otherwise specified in the description.
+This means those properties are available after this EIP has completed processing the <code>Exchange</code>.</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
 <colgroup>
-<col style="width: 30%;">
+<col style="width: 20%;">
+<col style="width: 50%;">
 <col style="width: 10%;">
-<col style="width: 60%;">
+<col style="width: 20%;">
 </colgroup>
 <thead>
 <tr>
-<th class="tableblock halign-left valign-top">Property</th>
-<th class="tableblock halign-left valign-top">Type</th>
+<th class="tableblock halign-left valign-top">Name</th>
 <th class="tableblock halign-left valign-top">Description</th>
+<th class="tableblock halign-center valign-top">Default</th>
+<th class="tableblock halign-left valign-top">Type</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>CamelRecipientListEndpoint</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code><code>String</code></code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Uri of the <code>Endpoint</code> that the message was sent to.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong id="_option_CamelRecipientListEndpoint">CamelRecipientListEndpoint</strong></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>The endpoint uri of this recipient list.</p>
+</div></div></td>
+<td class="tableblock halign-center valign-top"></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">String</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong id="_option_CamelToEndpoint">CamelToEndpoint</strong></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>Endpoint URI where this Exchange is being sent to.</p>
+</div></div></td>
+<td class="tableblock halign-center valign-top"></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">String</p></td>
 </tr>
 </tbody>
 </table>
@@ -2096,22 +2217,22 @@ See the <code>cacheSize</code> option for more details on <em>how much cache</em
 <h2 id="_using_recipient_list"><a class="anchor" href="#_using_recipient_list"></a>Using Recipient List</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>The Recipient List EIP allows to route <strong>the same</strong> message to a number of <a href="../../../manual/endpoint.html" class="xref page">endpoints</a>
+<p>The Recipient List EIP allows routing <strong>the same</strong> message to a number of <a href="../../../manual/4.10.x/endpoint.html" class="xref page">endpoints</a>
 and process them in a different way.</p>
 </div>
 <div class="paragraph">
-<p>There can be 1 or more destinations, and Camel will execute them sequentially (by default).
+<p>There can be one or more destinations, and Camel will execute them sequentially (by default).
 However, a parallel mode exists which allows processing messages concurrently.</p>
 </div>
 <div class="paragraph">
 <p>The Recipient List EIP has many features and is based on the <a href="multicast-eip.html" class="xref page">Multicast</a> EIP.
-For example the Recipient List EIP is capable of aggregating each message into a single
+For example, the Recipient List EIP is capable of aggregating each message into a single
 <em>response</em> message as the result after the Recipient List EIP.</p>
 </div>
 <div class="sect2">
 <h3 id="_using_static_recipient_list"><a class="anchor" href="#_using_static_recipient_list"></a>Using Static Recipient List</h3>
 <div class="paragraph">
-<p>The following example shows how to route a request from an input queue:a endpoint
+<p>The following example shows how to route a request from an input <code>queue:a</code> endpoint
 to a static list of destinations, using <code>constant</code>:</p>
 </div>
 <div id="_tabs_1" class="openblock tabs is-sync is-loading">
@@ -2156,7 +2277,7 @@ to a static list of destinations, using <code>constant</code>:</p>
 calculated at runtime.</p>
 </div>
 <div class="paragraph">
-<p>The following example demonstrates how to create a dynamic recipient list using an <a href="../../../manual/expression.html" class="xref page">Expression</a>
+<p>The following example demonstrates how to create a dynamic recipient list using an <a href="../../../manual/4.10.x/expression.html" class="xref page">Expression</a>
 (which in this case extracts a named header value dynamically) to calculate the list of endpoints; which are either
 of type <code>Endpoint</code> or are converted to a <code>String</code> and then resolved using the endpoint URIs (separated by comma).</p>
 </div>
@@ -2233,7 +2354,7 @@ By default, Camel uses comma as delimiter, but this option lets you specify a cu
 <div class="content">
 <pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;route&gt;
   &lt;from uri="direct:a"/&gt;
-  &lt;!-- use semi-colon as a delimiter for String based values --&gt;
+  &lt;!-- use semicolon as a delimiter for String-based values --&gt;
   &lt;recipientList delimiter=";"&gt;
     &lt;header&gt;myHeader&lt;/header&gt;
   &lt;/recipientList&gt;
@@ -2242,11 +2363,12 @@ By default, Camel uses comma as delimiter, but this option lets you specify a cu
 </div>
 <div class="paragraph">
 <p>So if <strong>myHeader</strong> contains a <code>String</code> with the value <code>"activemq:queue:foo;activemq:topic:hello ; log:bar"</code>
-then Camel will split the <code>String</code> using the delimiter given in the XML that was comma, resulting into 3 endpoints to send to.
-You can use spaces between the endpoints as Camel will trim the value when it look up the endpoint to send to.</p>
+then Camel will split the <code>String</code> using the delimiter given in the XML that was comma,
+resulting into three endpoints to send to.
+You can use spaces between the endpoints as Camel will trim the value when it looks up the endpoint to send to.</p>
 </div>
 <div class="paragraph">
-<p>And in Java DSL, you specify the delimiter as 2nd parameter as shown below:</p>
+<p>And in Java DSL, you specify the delimiter as second parameter as shown below:</p>
 </div>
 <div class="listingblock">
 <div class="content">
@@ -2259,7 +2381,7 @@ You can use spaces between the endpoints as Camel will trim the value when it lo
 <h3 id="_using_parallel_processing"><a class="anchor" href="#_using_parallel_processing"></a>Using parallel processing</h3>
 <div class="paragraph">
 <p>The Recipient List supports <code>parallelProcessing</code> similar to what <a href="multicast-eip.html" class="xref page">Multicast</a> and <a href="split-eip.html" class="xref page">Split</a> EIPs have as well.
-When using parallel processing then a thread pool is used to have concurrent tasks sending the <code>Exchange</code>
+When using parallel processing, then a thread pool is used to have concurrent tasks sending the <code>Exchange</code>
 to multiple recipients concurrently.</p>
 </div>
 <div class="paragraph">
@@ -2326,14 +2448,14 @@ the same way you would do it for the <code>aggregationStrategy</code>. By defaul
 sub messages will throw an exception during routing.</p>
 </div>
 <div class="paragraph">
-<p>For example if you want to route to 3 destinations and the 2nd
+<p>For example, if you want to route to three destinations and the second
 destination fails by an exception. What Camel does by default is to
 process the remainder destinations. You have the chance to deal with the exception
 when aggregating using an <code>AggregationStrategy</code>.</p>
 </div>
 <div class="paragraph">
-<p>But sometimes you just want Camel to stop and let the exception be
-propagated back, and let the Camel <a href="../../../manual/error-handler.html" class="xref page">Error Handler</a>
+<p>But sometimes you want the Camel to stop and let the exception be
+propagated back, and let the Camel <a href="../../../manual/4.10.x/error-handler.html" class="xref page">Error Handler</a>
 handle it. You can do this by specifying that it should stop in case of an
 exception occurred. This is done by the <code>stopOnException</code> option as
 shown below:</p>
@@ -2400,11 +2522,11 @@ shown below:</p>
 </div>
 <div class="paragraph">
 <p>In this example suppose a message is sent with the header <code>whereTo=direct:foo,direct:bar,direct:baz</code>
-that means the recipient list sends messages to those 3 endpoints.</p>
+that means the recipient list sends messages to those three endpoints.</p>
 </div>
 <div class="paragraph">
 <p>Now suppose that the <code>MyProcessor</code> is causing a failure and throws an exception.
-This means the Recipient List EIP will stop after this, and not the last route (direct:baz).</p>
+This means the Recipient List EIP will stop after this, and not the last route (<code>direct:baz</code>).</p>
 </div>
 </div>
 </div>
@@ -2472,13 +2594,15 @@ For example, you can set a timeout value of 20 sec.</p>
 </td>
 <td class="content">
 <div class="title">Tasks may keep running</div>
-If the timeout is reached with running tasks still remaining, certain tasks for which it is difficult for Camel to shut down in a graceful manner may continue to run. So use this option with a bit of care.
+If the timeout is reached with running tasks still remaining,
+certain tasks for which it is challenging for Camel to shut down in a graceful manner may continue to run.
+So use this option with a bit of care.
 </td>
 </tr>
 </table>
 </div>
 <div class="paragraph">
-<p>For example in the unit test below you can see that we multicast the message to 3 destinations.
+<p>For example, in the unit test below, you can see that we multicast the message to three destinations.
 We have a timeout of 2 seconds, which means only the last two messages can be completed within the timeframe.
 This means we will only aggregate the last two which yields a result aggregation which outputs "BC".</p>
 </div>
@@ -2522,7 +2646,7 @@ This allows you to deal with the timeout in the <code>AggregationStrategy</code>
 <div class="title">Timeout is total</div>
 <div class="paragraph">
 <p>The timeout is total, which means that after X time, Camel will aggregate the messages which have completed within the timeframe.
-The remainders will be cancelled. Camel will also only invoke the <code>timeout</code> method in the <code>TimeoutAwareAggregationStrategy</code> once, for the first index which caused the timeout.</p>
+The remainder will be canceled. Camel will also only invoke the <code>timeout</code> method in the <code>TimeoutAwareAggregationStrategy</code> once, for the first index which caused the timeout.</p>
 </div>
 </td>
 </tr>
@@ -2538,7 +2662,7 @@ but want to use <code>InOut</code> exchange pattern with a recipient list. You c
 recipient endpoints.</p>
 </div>
 <div class="paragraph">
-<p>For example in the route below we pick up new files (which will be started as <code>InOnly</code>) and then route to a recipient list.
+<p>For example, in the route below we pick up new files (which will be started as <code>InOnly</code>) and then route to a recipient list.
 As we want to use <code>InOut</code> with the ActiveMQ (JMS) endpoint we can now specify this using the <code>exchangePattern=InOut</code> option.
 Then the response from the JMS request/reply will then be continued routed, and thus the response is what will be stored
 in as a file in the outbox directory.</p>
@@ -2577,9 +2701,9 @@ If you want to alter the exchange pattern permanently then use <code>.setExchang
 <h2 id="_see_also"><a class="anchor" href="#_see_also"></a>See Also</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>Because Recipient List EIP is based from the <a href="multicast-eip.html" class="xref page">Multicast</a>,
+<p>Because Recipient List EIP is based on the <a href="multicast-eip.html" class="xref page">Multicast</a>,
 then you can find more information in <a href="multicast-eip.html" class="xref page">Multicast</a> EIP
-about features that is also available with Recipient List EIP.</p>
+about features that are also available with Recipient List EIP.</p>
 </div>
 </div>
 </div>
@@ -2588,6 +2712,8 @@ about features that is also available with Recipient List EIP.</p>
 </main>
 </div>
 <footer class="footer">
+  <p>This page was built using the Antora default UI.</p>
+  <p>The source code for this UI is licensed under the terms of the MPL-2.0 license.</p>
 </footer>
 <script id="site-script" src="../../../_/js/site.js" data-ui-root-path="../../../_"></script>
 <script async src="../../../_/js/vendor/highlight.js"></script>

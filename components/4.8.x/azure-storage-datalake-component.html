@@ -3,8 +3,8 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>Azure Storage Datalake Service :: Red Hat Camel Reference</title>
-    <meta name="description" content="Sends and receives files to/from Azure DataLake Storage.">
+    <title>Azure Storage Data Lake Service :: Red Hat build of Apache Camel</title>
+    <meta name="description" content="Sends and receives files to/from Azure Data Lake Storage.">
     <meta name="generator" content="Antora 3.1.4">
     <link rel="stylesheet" href="../../_/css/site.css">
   </head>
@@ -12,7 +12,7 @@
 <header class="header">
   <nav class="navbar">
     <div class="navbar-brand">
-      <a class="navbar-item" href="../../manual/index.html">Red Hat build of Apache Camel manual</a>
+      <a class="navbar-item" href="/">Red Hat build of Apache Camel</a>
       <button class="navbar-burger" data-target="topbar-nav">
         <span></span>
         <span></span>
@@ -22,11 +22,12 @@
   </nav>
 </header>
 <div class="body">
-<div class="nav-container" data-component="components" data-version="next">
+<div class="nav-container" data-component="components" data-version="4.8.x">
   <aside class="nav">
     <div class="panels">
 <div class="nav-panel-menu is-active" data-panel="menu">
   <nav class="nav-menu">
+    <button class="nav-menu-toggle" aria-label="Toggle expand/collapse all" style="display: none"></button>
     <h3 class="title"><a href="index.html">Camel Components</a></h3>
 <ul class="nav-list">
   <li class="nav-item" data-depth="0">
@@ -36,7 +37,46 @@
     <a class="nav-link" href="index.html">Components</a>
 <ul class="nav-list">
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="activemq-component.html">ActiveMQ</a>
+    <a class="nav-link" href="activemq-component.html">ActiveMQ 5.x</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="activemq6-component.html">ActiveMQ 6.x</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="ai-summary.html">AI</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="chatscript-component.html">ChatScript</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="djl-component.html">Deep Java Library</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="langchain4j-chat-component.html">LangChain4j Chat</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="langchain4j-embeddings-component.html">LangChain4j Embeddings</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="langchain4j-tokenizer-component.html">LangChain4j Tokenizer</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="langchain4j-tools-component.html">LangChain4j Tools</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="langchain4j-web-search-component.html">LangChain4j Web Search</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="milvus-component.html">Milvus</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="pinecone-component.html">Pinecone</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="qdrant-component.html">Qdrant</a>
+  </li>
+</ul>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="amqp-component.html">AMQP</a>
@@ -65,6 +105,15 @@
 <ul class="nav-list">
   <li class="nav-item" data-depth="3">
     <a class="nav-link" href="aws2-athena-component.html">AWS Athena</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="aws-bedrock-component.html">AWS Bedrock</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="aws-bedrock-agent-component.html">AWS Bedrock Agent</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="aws-bedrock-agent-runtime-component.html">AWS Bedrock Agent Runtime</a>
   </li>
   <li class="nav-item" data-depth="3">
     <a class="nav-link" href="aws-cloudtrail-component.html">AWS Cloudtrail</a>
@@ -169,7 +218,7 @@
     <a class="nav-link" href="azure-storage-blob-component.html">Azure Storage Blob Service</a>
   </li>
   <li class="nav-item is-current-page" data-depth="3">
-    <a class="nav-link" href="azure-storage-datalake-component.html">Azure Storage Datalake Service</a>
+    <a class="nav-link" href="azure-storage-datalake-component.html">Azure Storage Data Lake Service</a>
   </li>
   <li class="nav-item" data-depth="3">
     <a class="nav-link" href="azure-storage-queue-component.html">Azure Storage Queue Service</a>
@@ -202,9 +251,6 @@
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="cql-component.html">Cassandra CQL</a>
-  </li>
-  <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="chatscript-component.html">ChatScript</a>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="chunk-component.html">Chunk</a>
@@ -277,9 +323,6 @@
     <a class="nav-link" href="debezium-sqlserver-component.html">Debezium SQL Server Connector</a>
   </li>
 </ul>
-  </li>
-  <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="djl-component.html">Deep Java Library</a>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="dhis2-component.html">DHIS2</a>
@@ -395,6 +438,9 @@
   </li>
   <li class="nav-item" data-depth="3">
     <a class="nav-link" href="google-pubsub-component.html">Google Pubsub</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="google-pubsub-lite-component.html">Google PubSub Lite</a>
   </li>
   <li class="nav-item" data-depth="3">
     <a class="nav-link" href="google-secret-manager-component.html">Google Secret Manager</a>
@@ -687,7 +733,7 @@
     <a class="nav-link" href="ldif-component.html">LDIF</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="log-component.html">Log</a>
+    <a class="nav-link" href="log-component.html">Log Data</a>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="lucene-component.html">Lucene</a>
@@ -900,16 +946,49 @@
     <a class="nav-link" href="smb-component.html">SMB</a>
   </li>
   <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="smooks-component.html">Smooks</a>
+  </li>
+  <li class="nav-item" data-depth="2">
     <a class="nav-link" href="smpp-component.html">SMPP</a>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="snmp-component.html">SNMP</a>
   </li>
   <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="solr-component.html">Solr</a>
+  </li>
+  <li class="nav-item" data-depth="2">
     <a class="nav-link" href="splunk-component.html">Splunk</a>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="splunk-hec-component.html">Splunk HEC</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="spring-summary.html">Spring</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="spring-batch-component.html">Spring Batch</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="spring-event-component.html">Spring Event</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="spring-jdbc-component.html">Spring JDBC</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="spring-ldap-component.html">Spring LDAP</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="spring-rabbitmq-component.html">Spring RabbitMQ</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="spring-redis-component.html">Spring Redis</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="spring-ws-component.html">Spring WebService</a>
+  </li>
+</ul>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="sql-component.html">SQL</a>
@@ -937,6 +1016,18 @@
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="stub-component.html">Stub</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="tahu-summary.html">Tahu</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="tahu-edge-component.html">Tahu Edge Node / Device</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="tahu-host-component.html">Tahu Host Application</a>
+  </li>
+</ul>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="telegram-component.html">Telegram</a>
@@ -999,7 +1090,7 @@
     <a class="nav-link" href="whatsapp-component.html">WhatsApp</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="wordpress-component.html">Wordpress</a>
+    <a class="nav-link" href="wordpress-component.html">WordPress</a>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="workday-component.html">Workday</a>
@@ -1392,7 +1483,13 @@
     <a class="nav-link" href="others/openapi-java.html">Openapi Java</a>
   </li>
   <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="others/openapi-validator.html">Openapi Validator</a>
+  </li>
+  <li class="nav-item" data-depth="2">
     <a class="nav-link" href="others/opentelemetry.html">OpenTelemetry</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="others/platform-http-jolokia.html">Platform HTTP Jolokia</a>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="others/platform-http-main.html">Platform Http Main</a>
@@ -1540,7 +1637,7 @@
     <a class="nav-link" href="eips/event-message.html">Event Message</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="eips/failover-eip.html">Failover</a>
+    <a class="nav-link" href="eips/failoverLoadBalancer-eip.html">Failover Load Balancer</a>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="eips/faultToleranceConfiguration-eip.html">Fault Tolerance Configuration</a>
@@ -1570,13 +1667,13 @@
     <a class="nav-link" href="eips/loadBalance-eip.html">Load Balance</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="eips/log-eip.html">Log</a>
+    <a class="nav-link" href="eips/log-eip.html">Logger</a>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="eips/loop-eip.html">Loop</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="eips/marshal-eip.html">Marshal EIP</a>
+    <a class="nav-link" href="eips/marshal-eip.html">Marshal</a>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="eips/message.html">Message</a>
@@ -1633,6 +1730,9 @@
     <a class="nav-link" href="eips/point-to-point-channel.html">Point to Point Channel</a>
   </li>
   <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="eips/poll-eip.html">Poll</a>
+  </li>
+  <li class="nav-item" data-depth="2">
     <a class="nav-link" href="eips/pollEnrich-eip.html">Poll Enrich</a>
   </li>
   <li class="nav-item" data-depth="2">
@@ -1648,7 +1748,7 @@
     <a class="nav-link" href="eips/publish-subscribe-channel.html">Publish Subscribe Channel</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="eips/random-eip.html">Random</a>
+    <a class="nav-link" href="eips/randomLoadBalancer-eip.html">Random Load Balancer</a>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="eips/recipientList-eip.html">Recipient List</a>
@@ -1690,7 +1790,7 @@
     <a class="nav-link" href="eips/rollback-eip.html">Rollback</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="eips/roundRobin-eip.html">Round Robin</a>
+    <a class="nav-link" href="eips/roundRobinLoadBalancer-eip.html">Round Robin Load Balancer</a>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="eips/routingSlip-eip.html">Routing Slip</a>
@@ -1702,7 +1802,7 @@
     <a class="nav-link" href="eips/sample-eip.html">Sample</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="eips/scatter-gather.html">Scatter Gather</a>
+    <a class="nav-link" href="eips/scatter-gather.html">Scatter-Gather</a>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="eips/script-eip.html">Script</a>
@@ -1732,6 +1832,9 @@
     <a class="nav-link" href="eips/setVariable-eip.html">Set Variable</a>
   </li>
   <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="eips/setVariables-eip.html">Set Variables</a>
+  </li>
+  <li class="nav-item" data-depth="2">
     <a class="nav-link" href="eips/sort-eip.html">Sort</a>
   </li>
   <li class="nav-item" data-depth="2">
@@ -1741,7 +1844,7 @@
     <a class="nav-link" href="eips/step-eip.html">Step</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="eips/sticky-eip.html">Sticky</a>
+    <a class="nav-link" href="eips/stickyLoadBalancer-eip.html">Sticky Load Balancer</a>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="eips/stop-eip.html">Stop</a>
@@ -1762,7 +1865,7 @@
     <a class="nav-link" href="eips/toD-eip.html">To D</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="eips/topic-eip.html">Topic</a>
+    <a class="nav-link" href="eips/topicLoadBalancer-eip.html">Topic Load Balancer</a>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="eips/transactional-client.html">Transactional Client</a>
@@ -1771,13 +1874,13 @@
     <a class="nav-link" href="eips/transform-eip.html">Transform</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="eips/unmarshal-eip.html">Unmarshal EIP</a>
+    <a class="nav-link" href="eips/unmarshal-eip.html">Unmarshal</a>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="eips/validate-eip.html">Validate</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="eips/weighted-eip.html">Weighted</a>
+    <a class="nav-link" href="eips/weightedLoadBalancer-eip.html">Weighted Load Balancer</a>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="eips/wireTap-eip.html">Wire Tap</a>
@@ -1792,22 +1895,40 @@
 <div class="nav-panel-explore" data-panel="explore">
   <div class="context">
     <span class="title">Camel Components</span>
-    <span class="version">Next (Pre-release)</span>
+    <span class="version">4.8.x</span>
   </div>
   <ul class="components">
     <li class="component is-current">
-      <a class="title" href="index.html">Camel Components</a>
+      <div class="title"><a href="../4.10.x/index.html">Camel Components</a></div>
       <ul class="versions">
-        <li class="version is-current is-latest">
-          <a href="index.html">Next (Pre-release)</a>
+        <li class="version is-latest">
+          <a href="../4.10.x/index.html">4.10.x (LTS)</a>
+        </li>
+        <li class="version is-current">
+          <a href="index.html">4.8.x</a>
+        </li>
+        <li class="version">
+          <a href="../4.4.x/index.html">4.4.x</a>
+        </li>
+        <li class="version">
+          <a href="../4.0.x/index.html">4.0.x</a>
         </li>
       </ul>
     </li>
     <li class="component">
-      <a class="title" href="../../manual/index.html">User manual</a>
+      <div class="title"><a href="../../manual/4.10.x/index.html">User manual</a></div>
       <ul class="versions">
         <li class="version is-latest">
-          <a href="../../manual/index.html">default</a>
+          <a href="../../manual/4.10.x/index.html">4.10.x</a>
+        </li>
+        <li class="version">
+          <a href="../../manual/4.8.x/index.html">4.8.x</a>
+        </li>
+        <li class="version">
+          <a href="../../manual/4.4.x/index.html">4.4.x</a>
+        </li>
+        <li class="version">
+          <a href="../../manual/4.0.x/index.html">4.0.x</a>
         </li>
       </ul>
     </li>
@@ -1819,22 +1940,32 @@
 <main class="article">
 <div class="toolbar" role="navigation">
 <button class="nav-toggle"></button>
-  <a href="../../manual/index.html" class="home-link"></a>
+  <a href="../../manual/4.10.x/index.html" class="home-link"></a>
 <nav class="breadcrumbs" aria-label="breadcrumbs">
   <ul>
     <li><a href="index.html">Camel Components</a></li>
     <li><a href="index.html">Components</a></li>
     <li><a href="azure-summary.html">Azure</a></li>
-    <li><a href="azure-storage-datalake-component.html">Azure Storage Datalake Service</a></li>
+    <li><a href="azure-storage-datalake-component.html">Azure Storage Data Lake Service</a></li>
   </ul>
 </nav>
+<div class="page-versions">
+  <button class="version-menu-toggle" title="Show other versions of page">4.8.x</button>
+  <div class="version-menu">
+    <a class="version" href="../4.10.x/azure-storage-datalake-component.html">4.10.x (LTS)</a>
+    <a class="version is-current" href="azure-storage-datalake-component.html">4.8.x</a>
+    <a class="version" href="../4.4.x/azure-storage-datalake-component.html">4.4.x</a>
+    <a class="version is-missing" href="../4.0.x/index.html">4.0.x</a>
+  </div>
+</div>
+<div class="edit-this-page"><a href="https://github.com/rhaetor/rh-camel-jboss/edit/camel-4.8.0-branch/docs/components/modules/ROOT/pages/azure-storage-datalake-component.adoc">Edit this Page</a></div>
 </div>
   <div class="content">
 <aside class="toc sidebar" data-title="Contents" data-levels="2">
   <div class="toc-menu"></div>
 </aside>
 <article class="doc">
-<h1 class="page">Azure Storage Datalake Service</h1>
+<h1 class="page">Azure Storage Data Lake Service</h1>
 <div id="preamble">
 <div class="sectionbody">
 <div class="paragraph">
@@ -1844,7 +1975,7 @@
 <p><strong>Both producer and consumer are supported</strong></p>
 </div>
 <div class="paragraph">
-<p>The Azure storage datalake component is used for storing and retrieving file from Azure Storage Datalake Sevice using the <strong>Azure APIs v12</strong>.</p>
+<p>The Azure storage datalake component is used for storing and retrieving file from Azure Storage Data Lake Service using the <strong>Azure APIs v12</strong>.</p>
 </div>
 <div class="paragraph">
 <p>Prerequisites</p>
@@ -1876,11 +2007,11 @@
 </div>
 </div>
 <div class="paragraph">
-<p>In case of a consumer, both accountName and fileSystemName are required. In case of the producer, it depends on the operation
+<p>In the case of the consumer, both <code>accountName</code> and <code>fileSystemName</code> are required. In the case of the producer, it depends on the operation
 being requested.</p>
 </div>
 <div class="paragraph">
-<p>You can append query options to the URI in the following format, ?option1=value&amp;option2=value&amp;&#8230;&#8203;</p>
+<p>You can append query options to the URI in the following format: <code>?option1=value&amp;option2=value&amp;&#8230;&#8203;</code></p>
 </div>
 </div>
 </div>
@@ -1903,37 +2034,65 @@ being requested.</p>
 <div class="sect2">
 <h3 id="_configuring_component_options"><a class="anchor" href="#_configuring_component_options"></a>Configuring Component Options</h3>
 <div class="paragraph">
-<p>The component level is the highest level which holds general and common configurations that are inherited by the endpoints.
-For example a component may have security settings, credentials for authentication, urls for network connection and so forth.</p>
+<p>At the component level, you set general and shared configurations that are, then, inherited by the endpoints. It is the highest configuration level.</p>
 </div>
 <div class="paragraph">
-<p>Some components only have a few options, and others may have many. Because components typically have pre configured defaults
-that are commonly used, then you may often only need to configure a few options on a component; or none at all.</p>
+<p>For example, a component may have security settings, credentials for authentication, urls for network connection and so forth.</p>
 </div>
 <div class="paragraph">
-<p>Configuring components can be done with the <a href="../../manual/component-dsl.html" class="xref page">Component DSL</a>,
-in a configuration file (application.properties|yaml), or directly with Java code.</p>
+<p>Some components only have a few options, and others may have many.
+Because components typically have pre-configured defaults that are commonly used, then you may often only need to configure a few options on a component; or none at all.</p>
+</div>
+<div class="paragraph">
+<p>You can configure components using:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>the <a href="../../manual/4.10.x/component-dsl.html" class="xref page">Component DSL</a>.</p>
+</li>
+<li>
+<p>in a configuration file (<code>application.properties</code>, <code>*.yaml</code> files, etc).</p>
+</li>
+<li>
+<p>directly in the Java code.</p>
+</li>
+</ul>
 </div>
 </div>
 <div class="sect2">
 <h3 id="_configuring_endpoint_options"><a class="anchor" href="#_configuring_endpoint_options"></a>Configuring Endpoint Options</h3>
 <div class="paragraph">
-<p>Where you find yourself configuring the most is on endpoints, as endpoints often have many options, which allows you to
-configure what you need the endpoint to do. The options are also categorized into whether the endpoint is used as consumer (from)
-or as a producer (to), or used for both.</p>
+<p>You usually spend more time setting up endpoints because they have many options.
+These options help you customize what you want the endpoint to do.
+The options are also categorized into whether the endpoint is used as a consumer (<em>from</em>), as a producer (<em>to</em>), or  both.</p>
 </div>
 <div class="paragraph">
-<p>Configuring endpoints is most often done directly in the endpoint URI as path and query parameters. You can also use
-the <a href="../../manual/Endpoint-dsl.html" class="xref page">Endpoint DSL</a> and <a href="../../manual/dataformat-dsl.html" class="xref page">DataFormat DSL</a>
+<p>Configuring endpoints is most often done directly in the endpoint URI as <em>path</em> and <em>query</em> parameters.
+You can also use the <a href="../../manual/4.10.x/Endpoint-dsl.html" class="xref page">Endpoint DSL</a> and <a href="../../manual/4.10.x/dataformat-dsl.html" class="xref page">DataFormat DSL</a>
 as a <em>type safe</em> way of configuring endpoints and data formats in Java.</p>
 </div>
 <div class="paragraph">
-<p>A good practice when configuring options is to use <a href="../../manual/using-propertyplaceholder.html" class="xref page">Property Placeholders</a>,
-which allows to not hardcode urls, port numbers, sensitive information, and other settings.
-In other words placeholders allows to externalize the configuration from your code, and gives more flexibility and reuse.</p>
+<p>A good practice when configuring options is to use <a href="../../manual/4.10.x/using-propertyplaceholder.html" class="xref page">Property Placeholders</a>.</p>
 </div>
 <div class="paragraph">
-<p>The following two sections lists all the options, firstly for the component followed by the endpoint.</p>
+<p>Property placeholders provide a few benefits:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>They help prevent using hardcoded urls, port numbers, sensitive information, and other settings.</p>
+</li>
+<li>
+<p>They allow externalizing the configuration from the code.</p>
+</li>
+<li>
+<p>They help the code to become more flexible and reusable.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>The following two sections list all the options, firstly for the component followed by the endpoint.</p>
 </div>
 </div>
 </div>
@@ -1942,7 +2101,7 @@ In other words placeholders allows to externalize the configuration from your co
 <h2 id="_component_options"><a class="anchor" href="#_component_options"></a>Component Options</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>The Azure Storage Datalake Service component supports 38 options, which are listed below.</p>
+<p>The Azure Storage Data Lake Service component supports 38 options, which are listed below.</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
 <colgroup>
@@ -1991,7 +2150,7 @@ In other words placeholders allows to externalize the configuration from your co
 <td class="tableblock halign-left valign-top"><p class="tableblock"><a id="_component_option_configuration"></a>
 <a href="#_component_option_configuration" class="anchor"></a><strong>configuration</strong> (common)</p></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>configuration object for datalake.</p>
+<p>configuration object for data lake.</p>
 </div></div></td>
 <td class="tableblock halign-center valign-top"></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">DataLakeConfiguration</p></td>
@@ -2121,7 +2280,7 @@ In other words placeholders allows to externalize the configuration from your co
 <td class="tableblock halign-left valign-top"><p class="tableblock"><a id="_component_option_path"></a>
 <a href="#_component_option_path" class="anchor"></a><strong>path</strong> (common)</p></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>path in azure datalake for operations.</p>
+<p>path in azure data lake for operations.</p>
 </div></div></td>
 <td class="tableblock halign-center valign-top"></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">String</p></td>
@@ -2175,7 +2334,7 @@ In other words placeholders allows to externalize the configuration from your co
 <td class="tableblock halign-left valign-top"><p class="tableblock"><a id="_component_option_serviceClient"></a>
 <a href="#_component_option_serviceClient" class="anchor"></a><strong>serviceClient</strong> (common)</p></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p><strong>Autowired</strong> datalake service client for azure storage datalake.</p>
+<p><strong>Autowired</strong> data lake service client for azure storage data lake.</p>
 </div></div></td>
 <td class="tableblock halign-center valign-top"></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">DataLakeServiceClient</p></td>
@@ -2184,7 +2343,7 @@ In other words placeholders allows to externalize the configuration from your co
 <td class="tableblock halign-left valign-top"><p class="tableblock"><a id="_component_option_sharedKeyCredential"></a>
 <a href="#_component_option_sharedKeyCredential" class="anchor"></a><strong>sharedKeyCredential</strong> (common)</p></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>shared key credential for azure datalake gen2.</p>
+<p>shared key credential for azure data lake gen2.</p>
 </div></div></td>
 <td class="tableblock halign-center valign-top"></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">StorageSharedKeyCredential</p></td>
@@ -2345,7 +2504,7 @@ In other words placeholders allows to externalize the configuration from your co
 <h2 id="_endpoint_options"><a class="anchor" href="#_endpoint_options"></a>Endpoint Options</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>The Azure Storage Datalake Service endpoint is configured using URI syntax:</p>
+<p>The Azure Storage Data Lake Service endpoint is configured using URI syntax:</p>
 </div>
 <div class="listingblock">
 <div class="content">
@@ -2353,7 +2512,7 @@ In other words placeholders allows to externalize the configuration from your co
 </div>
 </div>
 <div class="paragraph">
-<p>with the following path and query parameters:</p>
+<p>With the following <em>path</em> and <em>query</em> parameters:</p>
 </div>
 <div class="sect2">
 <h3 id="_path_parameters_2_parameters"><a class="anchor" href="#_path_parameters_2_parameters"></a>Path Parameters (2 parameters)</h3>
@@ -2483,7 +2642,7 @@ In other words placeholders allows to externalize the configuration from your co
 <td class="tableblock halign-left valign-top"><p class="tableblock"><a id="_endpoint_query_option_dataLakeServiceClient"></a>
 <a href="#_endpoint_query_option_dataLakeServiceClient" class="anchor"></a><strong>dataLakeServiceClient</strong> (common)</p></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>service client of datalake.</p>
+<p>service client of data lake.</p>
 </div></div></td>
 <td class="tableblock halign-center valign-top"></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">DataLakeServiceClient</p></td>
@@ -2573,7 +2732,7 @@ In other words placeholders allows to externalize the configuration from your co
 <td class="tableblock halign-left valign-top"><p class="tableblock"><a id="_endpoint_query_option_path"></a>
 <a href="#_endpoint_query_option_path" class="anchor"></a><strong>path</strong> (common)</p></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>path in azure datalake for operations.</p>
+<p>path in azure data lake for operations.</p>
 </div></div></td>
 <td class="tableblock halign-center valign-top"></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">String</p></td>
@@ -2627,7 +2786,7 @@ In other words placeholders allows to externalize the configuration from your co
 <td class="tableblock halign-left valign-top"><p class="tableblock"><a id="_endpoint_query_option_serviceClient"></a>
 <a href="#_endpoint_query_option_serviceClient" class="anchor"></a><strong>serviceClient</strong> (common)</p></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p><strong>Autowired</strong> datalake service client for azure storage datalake.</p>
+<p><strong>Autowired</strong> data lake service client for azure storage data lake.</p>
 </div></div></td>
 <td class="tableblock halign-center valign-top"></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">DataLakeServiceClient</p></td>
@@ -2636,7 +2795,7 @@ In other words placeholders allows to externalize the configuration from your co
 <td class="tableblock halign-left valign-top"><p class="tableblock"><a id="_endpoint_query_option_sharedKeyCredential"></a>
 <a href="#_endpoint_query_option_sharedKeyCredential" class="anchor"></a><strong>sharedKeyCredential</strong> (common)</p></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>shared key credential for azure datalake gen2.</p>
+<p>shared key credential for azure data lake gen2.</p>
 </div></div></td>
 <td class="tableblock halign-center valign-top"></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">StorageSharedKeyCredential</p></td>
@@ -2996,29 +3155,29 @@ In other words placeholders allows to externalize the configuration from your co
 <div class="sect2">
 <h3 id="_methods_of_authentication"><a class="anchor" href="#_methods_of_authentication"></a>Methods of authentication</h3>
 <div class="paragraph">
-<p>In order to use this component, you will have to provide at least one of the specific credentialType parameters:</p>
+<p>To use this component, you will have to provide at least one of the specific credentialType parameters:</p>
 </div>
 <div class="ulist">
 <ul>
 <li>
-<p>SHARED_KEY_CREDENTIAL: Provide <code>accountName</code> and <code>accessKey</code> for your azure account or provide StorageSharedKeyCredential instance which can be provided into <code>sharedKeyCredential</code> option.</p>
+<p><code>SHARED_KEY_CREDENTIAL</code>: Provide <code>accountName</code> and <code>accessKey</code> for your azure account or provide StorageSharedKeyCredential instance which can be provided into <code>sharedKeyCredential</code> option.</p>
 </li>
 <li>
-<p>CLIENT_SECRET: Provide ClientSecretCredential instance which can be provided into <code>clientSecretCredential</code> option or provide <code>accountName</code>, <code>clientId</code>, <code>clientSecret</code> and <code>tenantId</code> for authentication with Azure Active Directory.</p>
+<p><code>CLIENT_SECRET</code>: Provide ClientSecretCredential instance which can be provided into <code>clientSecretCredential</code> option or provide <code>accountName</code>, <code>clientId</code>, <code>clientSecret</code> and <code>tenantId</code> for authentication with Azure Active Directory.</p>
 </li>
 <li>
-<p>SERVICE_CLIENT_INSTANCE: Provide a DataLakeServiceClient instance which can be provided into <code>serviceClient</code> option.</p>
+<p><code>SERVICE_CLIENT_INSTANCE</code>: Provide a DataLakeServiceClient instance which can be provided into <code>serviceClient</code> option.</p>
 </li>
 <li>
-<p>AZURE_IDENTITY: Use the Default Azure Credential Provider Chain</p>
+<p><code>AZURE_IDENTITY</code>: Use the Default Azure Credential Provider Chain</p>
 </li>
 <li>
-<p>AZURE_SAS: Provide <code>sasSignature</code> or <code>sasCredential</code> parameters to use SAS mechanism</p>
+<p><code>AZURE_SAS</code>: Provide <code>sasSignature</code> or <code>sasCredential</code> parameters to use SAS mechanism</p>
 </li>
 </ul>
 </div>
 <div class="paragraph">
-<p>Default is CLIENT_SECRET</p>
+<p>The default is <code>CLIENT_SECRET</code>.</p>
 </div>
 </div>
 </div>
@@ -3027,7 +3186,7 @@ In other words placeholders allows to externalize the configuration from your co
 <h2 id="_usage"><a class="anchor" href="#_usage"></a>Usage</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>For example, in order to download content from file <code>test.txt</code> located on the <code>filesystem</code> in <code>camelTesting</code> storage account, use the following snippet:</p>
+<p>For example, to download content from file <code>test.txt</code> located on the <code>filesystem</code> in <code>camelTesting</code> storage account, use the following snippet:</p>
 </div>
 <div class="listingblock">
 <div class="content">
@@ -3041,7 +3200,7 @@ to("file://fileDirectory");</code></pre>
 <h2 id="_message_headers"><a class="anchor" href="#_message_headers"></a>Message Headers</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>The Azure Storage Datalake Service component supports 63 message header(s), which is/are listed below:</p>
+<p>The Azure Storage Data Lake Service component supports 63 message header(s), which is/are listed below:</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
 <colgroup>
@@ -3146,7 +3305,7 @@ to("file://fileDirectory");</code></pre>
 <a href="#_endpoint_header_CamelAzureStorageDataLakeFileSystemName" class="anchor"></a><strong>CamelAzureStorageDataLakeFileSystemName</strong> (producer)</p>
 <p class="tableblock">Constant: <a href="https://javadoc.io/doc/org.apache.camel/camel-azure-storage-datalake/latest/org/apache/camel/component/azure/storage/datalake/DataLakeConstants.html#FILESYSTEM_NAME"><code>FILESYSTEM_NAME</code></a></p></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>Name of the file system in azure datalake on which operation is to be performed. Please make sure that filesystem name is all lowercase.</p>
+<p>Name of the file system in azure data lake on which operation is to be performed. Please make sure that filesystem name is all lowercase.</p>
 </div></div></td>
 <td class="tableblock halign-center valign-top"></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">String</p></td>
@@ -3156,7 +3315,7 @@ to("file://fileDirectory");</code></pre>
 <a href="#_endpoint_header_CamelAzureStorageDataLakeDirectoryName" class="anchor"></a><strong>CamelAzureStorageDataLakeDirectoryName</strong> (producer)</p>
 <p class="tableblock">Constant: <a href="https://javadoc.io/doc/org.apache.camel/camel-azure-storage-datalake/latest/org/apache/camel/component/azure/storage/datalake/DataLakeConstants.html#DIRECTORY_NAME"><code>DIRECTORY_NAME</code></a></p></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>Name of the directory in azure datalake on which operation is to be performed.</p>
+<p>Name of the directory in azure data lake on which operation is to be performed.</p>
 </div></div></td>
 <td class="tableblock halign-center valign-top"></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">String</p></td>
@@ -3166,7 +3325,7 @@ to("file://fileDirectory");</code></pre>
 <a href="#_endpoint_header_CamelAzureStorageDataLakeFileName" class="anchor"></a><strong>CamelAzureStorageDataLakeFileName</strong> (producer)</p>
 <p class="tableblock">Constant: <a href="https://javadoc.io/doc/org.apache.camel/camel-azure-storage-datalake/latest/org/apache/camel/component/azure/storage/datalake/DataLakeConstants.html#FILE_NAME"><code>FILE_NAME</code></a></p></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>Name of the file in azure datalake on which operation is to be performed.</p>
+<p>Name of the file in azure data lake on which operation is to be performed.</p>
 </div></div></td>
 <td class="tableblock halign-center valign-top"></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">String</p></td>
@@ -3643,7 +3802,7 @@ to("file://fileDirectory");</code></pre>
 <a href="#_endpoint_header_CamelAzureStorageDataLakeDownloadLink" class="anchor"></a><strong>CamelAzureStorageDataLakeDownloadLink</strong> (consumer)</p>
 <p class="tableblock">Constant: <a href="https://javadoc.io/doc/org.apache.camel/camel-azure-storage-datalake/latest/org/apache/camel/component/azure/storage/datalake/DataLakeConstants.html#DOWNLOAD_LINK"><code>DOWNLOAD_LINK</code></a></p></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>The link that can be used to download the file from datalake.</p>
+<p>The link that can be used to download the file from data lake.</p>
 </div></div></td>
 <td class="tableblock halign-center valign-top"></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">String</p></td>
@@ -3811,7 +3970,7 @@ to("file://fileDirectory");</code></pre>
 </tbody>
 </table>
 <div class="sect2">
-<h3 id="_automatic_detection_of_service_client"><a class="anchor" href="#_automatic_detection_of_service_client"></a>Automatic detection of service client</h3>
+<h3 id="_automatic_detection_of_a_service_client"><a class="anchor" href="#_automatic_detection_of_a_service_client"></a>Automatic detection of a service client</h3>
 <div class="paragraph">
 <p>The component is capable of automatically detecting the presence of a DataLakeServiceClient bean in the registry.
 Hence, if your registry has only one instance of type DataLakeServiceClient, it will be automatically used as the default client.
@@ -3867,15 +4026,15 @@ You won&#8217;t have to explicitly define it as an uri parameter.</p>
 <tbody>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>createFileSystem</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Creates a new file System with the storage account</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Create a new file System with the storage account</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>deleteFileSystem</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Deletes the specified file system within the storage account</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Delete the specified file system within the storage account</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>listPaths</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Returns list of all the files within the given path in the given file system , with folder structure flattened</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Returns list of all the files within the given path in the given file system, with folder structure flattened</p></td>
 </tr>
 </tbody>
 </table>
@@ -3899,11 +4058,11 @@ You won&#8217;t have to explicitly define it as an uri parameter.</p>
 <tbody>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>createFile</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Creates a new file in the specified directory within the fileSystem</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Create a new file in the specified directory within the fileSystem</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>deleteDirectory</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Deletes the specified directory within the file system</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Delete the specified directory within the file system</p></td>
 </tr>
 </tbody>
 </table>
@@ -3931,16 +4090,16 @@ You won&#8217;t have to explicitly define it as an uri parameter.</p>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>downloadToFile</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Downloadd the entire file from the file system into a path specified by fileDir.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Download the entire file from the file system into a path specified by fileDir.</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>downloadLink</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Generate download link for the specified file using Shared Access Signature (SAS).
+<td class="tableblock halign-left valign-top"><p class="tableblock">Generate a download link for the specified file using Shared Access Signature (SAS).
 The expiration time to be set for the link can be specified otherwise 1 hour is taken as default.</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>deleteFile</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Deletes the specified file.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Delete the specified file.</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>appendToFile</code></p></td>
@@ -3953,15 +4112,20 @@ required after append.</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>openQueryInputStream</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Opens an inputstream based on the query passed to the endpoint. For this operation,
+<td class="tableblock halign-left valign-top"><p class="tableblock">Opens an <code>InputStream</code> based on the query passed to the endpoint. For this operation,
 you must first register the query acceleration feature with your subscription.</p></td>
 </tr>
 </tbody>
 </table>
 <div class="paragraph">
-<p>Refer the examples section below for more details on how to use these operations</p>
+<p>Refer to the examples section below for more details on how to use these operations</p>
 </div>
 </div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_examples"><a class="anchor" href="#_examples"></a>Examples</h2>
+<div class="sectionbody">
 <div class="sect2">
 <h3 id="_consumer_examples"><a class="anchor" href="#_consumer_examples"></a>Consumer Examples</h3>
 <div class="paragraph">
@@ -4072,13 +4236,13 @@ to("mock:results");</code></pre>
 </ul>
 </div>
 <div class="paragraph">
-<p>This can be done in two ways, We can either set an outputstream in the exchange body</p>
+<p>This can be done in two ways, We can either set an <code>OutputStream</code> in the exchange body</p>
 </div>
 <div class="listingblock">
 <div class="content">
 <pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">from("direct:start")
     .process(exchange -&gt; {
-        // set an outputstream where the file data can should be written
+        // set an OutputStream where the file data can should be written
         exchange.getIn().setBody(outputStream);
     })
     .to("azure-storage-datalake:cameltesting/filesystem?operation=getFile&amp;fileName=test.txt&amp;dataLakeServiceClient=#serviceClient")
@@ -4086,7 +4250,7 @@ to("mock:results");</code></pre>
 </div>
 </div>
 <div class="paragraph">
-<p>Or if body is not set, the operation will give an inputstream, given that you have already registered for query acceleration
+<p>Or if the body is not set, the operation will give an <code>InputStream</code>, given that you have already registered for query acceleration
 in azure portal.</p>
 </div>
 <div class="listingblock">
@@ -4276,9 +4440,9 @@ in azure portal.</p>
 <div class="sect2">
 <h3 id="_testing"><a class="anchor" href="#_testing"></a>Testing</h3>
 <div class="paragraph">
-<p>Please run all the unit tests and integration test while making changes to the component as changes or version upgrades can break things.
-For running all the test in the component, you will need to obtain azure accountName and accessKey. After obtaining the same, you
-can run the full test, on this component directory, by running the following maven command</p>
+<p>Please run all the unit tests and integration tests while making changes to the component as changes or version upgrades can break things.
+For running all the tests in the component, you will need to obtain azure <code>accountName</code> and <code>accessKey</code>. After obtaining the same, you
+can run the full test on this component directory by running the following maven command</p>
 </div>
 <div class="listingblock">
 <div class="content">
@@ -4286,7 +4450,7 @@ can run the full test, on this component directory, by running the following mav
 </div>
 </div>
 <div class="paragraph">
-<p>You can also skip the integration test, and run only basic unit test by using the command</p>
+<p>You can also skip the integration test and run only basic unit test by using the command</p>
 </div>
 <div class="listingblock">
 <div class="content">
@@ -4301,6 +4465,8 @@ can run the full test, on this component directory, by running the following mav
 </main>
 </div>
 <footer class="footer">
+  <p>This page was built using the Antora default UI.</p>
+  <p>The source code for this UI is licensed under the terms of the MPL-2.0 license.</p>
 </footer>
 <script id="site-script" src="../../_/js/site.js" data-ui-root-path="../../_"></script>
 <script async src="../../_/js/vendor/highlight.js"></script>

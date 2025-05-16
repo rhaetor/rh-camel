@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>Azure Event Hubs :: Red Hat Camel Reference</title>
+    <title>Azure Event Hubs :: Red Hat build of Apache Camel</title>
     <meta name="description" content="Send and receive events to/from Azure Event Hubs using AMQP protocol.">
     <meta name="generator" content="Antora 3.1.4">
     <link rel="stylesheet" href="../../_/css/site.css">
@@ -12,7 +12,7 @@
 <header class="header">
   <nav class="navbar">
     <div class="navbar-brand">
-      <a class="navbar-item" href="../../manual/index.html">Red Hat build of Apache Camel manual</a>
+      <a class="navbar-item" href="/">Red Hat build of Apache Camel</a>
       <button class="navbar-burger" data-target="topbar-nav">
         <span></span>
         <span></span>
@@ -22,11 +22,12 @@
   </nav>
 </header>
 <div class="body">
-<div class="nav-container" data-component="components" data-version="next">
+<div class="nav-container" data-component="components" data-version="4.4.x">
   <aside class="nav">
     <div class="panels">
 <div class="nav-panel-menu is-active" data-panel="menu">
   <nav class="nav-menu">
+    <button class="nav-menu-toggle" aria-label="Toggle expand/collapse all" style="display: none"></button>
     <h3 class="title"><a href="index.html">Camel Components</a></h3>
 <ul class="nav-list">
   <li class="nav-item" data-depth="0">
@@ -912,6 +913,33 @@
     <a class="nav-link" href="splunk-hec-component.html">Splunk HEC</a>
   </li>
   <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="spring-summary.html">Spring</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="spring-batch-component.html">Spring Batch</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="spring-event-component.html">Spring Event</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="spring-jdbc-component.html">Spring JDBC</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="spring-ldap-component.html">Spring LDAP</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="spring-rabbitmq-component.html">Spring RabbitMQ</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="spring-redis-component.html">Spring Redis</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="spring-ws-component.html">Spring WebService</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
     <a class="nav-link" href="sql-component.html">SQL</a>
   </li>
   <li class="nav-item" data-depth="2">
@@ -1792,22 +1820,40 @@
 <div class="nav-panel-explore" data-panel="explore">
   <div class="context">
     <span class="title">Camel Components</span>
-    <span class="version">Next (Pre-release)</span>
+    <span class="version">4.4.x</span>
   </div>
   <ul class="components">
     <li class="component is-current">
-      <a class="title" href="index.html">Camel Components</a>
+      <div class="title"><a href="../4.10.x/index.html">Camel Components</a></div>
       <ul class="versions">
-        <li class="version is-current is-latest">
-          <a href="index.html">Next (Pre-release)</a>
+        <li class="version is-latest">
+          <a href="../4.10.x/index.html">4.10.x (LTS)</a>
+        </li>
+        <li class="version">
+          <a href="../4.8.x/index.html">4.8.x</a>
+        </li>
+        <li class="version is-current">
+          <a href="index.html">4.4.x</a>
+        </li>
+        <li class="version">
+          <a href="../4.0.x/index.html">4.0.x</a>
         </li>
       </ul>
     </li>
     <li class="component">
-      <a class="title" href="../../manual/index.html">User manual</a>
+      <div class="title"><a href="../../manual/4.10.x/index.html">User manual</a></div>
       <ul class="versions">
         <li class="version is-latest">
-          <a href="../../manual/index.html">default</a>
+          <a href="../../manual/4.10.x/index.html">4.10.x</a>
+        </li>
+        <li class="version">
+          <a href="../../manual/4.8.x/index.html">4.8.x</a>
+        </li>
+        <li class="version">
+          <a href="../../manual/4.4.x/index.html">4.4.x</a>
+        </li>
+        <li class="version">
+          <a href="../../manual/4.0.x/index.html">4.0.x</a>
         </li>
       </ul>
     </li>
@@ -1819,7 +1865,7 @@
 <main class="article">
 <div class="toolbar" role="navigation">
 <button class="nav-toggle"></button>
-  <a href="../../manual/index.html" class="home-link"></a>
+  <a href="../../manual/4.10.x/index.html" class="home-link"></a>
 <nav class="breadcrumbs" aria-label="breadcrumbs">
   <ul>
     <li><a href="index.html">Camel Components</a></li>
@@ -1828,6 +1874,16 @@
     <li><a href="azure-eventhubs-component.html">Azure Event Hubs</a></li>
   </ul>
 </nav>
+<div class="page-versions">
+  <button class="version-menu-toggle" title="Show other versions of page">4.4.x</button>
+  <div class="version-menu">
+    <a class="version" href="../4.10.x/azure-eventhubs-component.html">4.10.x (LTS)</a>
+    <a class="version" href="../4.8.x/azure-eventhubs-component.html">4.8.x</a>
+    <a class="version is-current" href="azure-eventhubs-component.html">4.4.x</a>
+    <a class="version is-missing" href="../4.0.x/index.html">4.0.x</a>
+  </div>
+</div>
+<div class="edit-this-page"><a href="https://github.com/rhaetor/rh-camel-jboss/edit/camel-4.4.0-branch/docs/components/modules/ROOT/pages/azure-eventhubs-component.adoc">Edit this Page</a></div>
 </div>
   <div class="content">
 <aside class="toc sidebar" data-title="Contents" data-levels="2">
@@ -1854,7 +1910,7 @@ Azure EventHubs is a highly scalable publish-subscribe service that can ingest m
 <i class="fa icon-note" title="Note"></i>
 </td>
 <td class="content">
-Besides AMQP protocol support, Event Hubs as well supports Kafka and HTTPS protocols. Therefore, you can use as well <a href="kafka-component.html" class="xref page">Camel Kafka</a> component to produce and consume to Azure Event Hubs. You can lean more <a href="https://docs.microsoft.com/en-us/azure/event-hubs/event-hubs-quickstart-kafka-enabled-event-hubs">here</a>.
+Besides AMQP protocol support, Event Hubs as well supports Kafka and HTTPS protocols. Therefore, you can also use the <a href="../4.10.x/kafka-component.html" class="xref page">Camel Kafka</a> component to produce and consume to Azure Event Hubs. You can lean more <a href="https://docs.microsoft.com/en-us/azure/event-hubs/event-hubs-quickstart-kafka-enabled-event-hubs">here</a>.
 </td>
 </tr>
 </table>
@@ -1916,14 +1972,14 @@ in the <code>connectionString</code></p>
 <h3 id="_configuring_component_options"><a class="anchor" href="#_configuring_component_options"></a>Configuring Component Options</h3>
 <div class="paragraph">
 <p>The component level is the highest level which holds general and common configurations that are inherited by the endpoints.
-For example a component may have security settings, credentials for authentication, urls for network connection and so forth.</p>
+For example, a component may have security settings, credentials for authentication, urls for network connection and so forth.</p>
 </div>
 <div class="paragraph">
 <p>Some components only have a few options, and others may have many. Because components typically have pre configured defaults
 that are commonly used, then you may often only need to configure a few options on a component; or none at all.</p>
 </div>
 <div class="paragraph">
-<p>Configuring components can be done with the <a href="../../manual/component-dsl.html" class="xref page">Component DSL</a>,
+<p>Configuring components can be done with the <a href="../../manual/4.10.x/component-dsl.html" class="xref page">Component DSL</a>,
 in a configuration file (application.properties|yaml), or directly with Java code.</p>
 </div>
 </div>
@@ -1936,11 +1992,11 @@ or as a producer (to), or used for both.</p>
 </div>
 <div class="paragraph">
 <p>Configuring endpoints is most often done directly in the endpoint URI as path and query parameters. You can also use
-the <a href="../../manual/Endpoint-dsl.html" class="xref page">Endpoint DSL</a> and <a href="../../manual/dataformat-dsl.html" class="xref page">DataFormat DSL</a>
+the <a href="../../manual/4.10.x/Endpoint-dsl.html" class="xref page">Endpoint DSL</a> and <a href="../../manual/4.10.x/dataformat-dsl.html" class="xref page">DataFormat DSL</a>
 as a <em>type safe</em> way of configuring endpoints and data formats in Java.</p>
 </div>
 <div class="paragraph">
-<p>A good practice when configuring options is to use <a href="../../manual/using-propertyplaceholder.html" class="xref page">Property Placeholders</a>,
+<p>A good practice when configuring options is to use <a href="../../manual/4.10.x/using-propertyplaceholder.html" class="xref page">Property Placeholders</a>,
 which allows to not hardcode urls, port numbers, sensitive information, and other settings.
 In other words placeholders allows to externalize the configuration from your code, and gives more flexibility and reuse.</p>
 </div>
@@ -2560,29 +2616,49 @@ In other words placeholders allows to externalize the configuration from your co
 <div class="sectionbody">
 <div class="paragraph">
 <p>You have three different Credential Types: AZURE_IDENTITY, TOKEN_CREDENTIAL and CONNECTION_STRING. You can also provide a client instance yourself.
-To use this component, you have 3 options in order to provide the required Azure authentication information:</p>
+To use this component, you have three options to provide the required Azure authentication information:</p>
 </div>
 <div class="paragraph">
-<p>CONNECTION_STRING:
-- Provide <code>sharedAccessName</code> and <code>sharedAccessKey</code> for your Azure Event Hubs account. The sharedAccessKey can
-be generated through your Event Hubs Azure portal.
-- Provide <code>connectionString</code> string, if you provide the connection string, you don&#8217;t supply <code>namespace</code>, <code>eventHubName</code>, <code>sharedAccessKey</code> and <code>sharedAccessName</code>
+<p><strong>CONNECTION_STRING</strong>:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Provide <code>sharedAccessName</code> and <code>sharedAccessKey</code> for your Azure Event Hubs account. The sharedAccessKey can
+be generated through your Event Hubs Azure portal.</p>
+</li>
+<li>
+<p>Provide <code>connectionString</code> string, if you provide the connection string, you don&#8217;t supply <code>namespace</code>, <code>eventHubName</code>, <code>sharedAccessKey</code> and <code>sharedAccessName</code>
 as these data already included in the <code>connectionString</code>, therefore is the simplest option to get started. Learn more <a href="https://docs.microsoft.com/en-us/azure/event-hubs/event-hubs-get-connection-string">here</a> on how to generate the connection string.</p>
+</li>
+</ul>
 </div>
 <div class="paragraph">
-<p>TOKEN_CREDENTIAL:
-- Provide an implementation of <code>com.azure.core.credential.TokenCredential</code> into the Camel&#8217;s Registry, e.g. using the <code>com.azure.identity.DefaultAzureCredentialBuilder().build();</code> API.
+<p><strong>TOKEN_CREDENTIAL</strong>:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Provide an implementation of <code>com.azure.core.credential.TokenCredential</code> into the Camel&#8217;s Registry, for example, using the <code>com.azure.identity.DefaultAzureCredentialBuilder().build();</code> API.
 See the documentation <a href="https://docs.microsoft.com/en-us/azure/active-directory/authentication/overview-authentication">here about Azure-AD authentication</a>.</p>
+</li>
+</ul>
 </div>
 <div class="paragraph">
-<p>AZURE_IDENTITY:
+<p><strong>AZURE_IDENTITY:</strong>
 - This will use <code>com.azure.identity.DefaultAzureCredentialBuilder().build();</code> instance. This will follow the Default Azure Credential Chain.
 See the documentation <a href="https://docs.microsoft.com/en-us/azure/active-directory/authentication/overview-authentication">here about Azure-AD authentication</a>.</p>
 </div>
 <div class="paragraph">
-<p>Client instance:
-- Provide a <a href="https://docs.microsoft.com/en-us/java/api/com.azure.messaging.eventhubs.eventhubproducerasyncclient?view=azure-java-stable">EventHubProducerAsyncClient</a> instance which can be
+<p><strong>Client instance</strong>:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Provide a <a href="https://docs.microsoft.com/en-us/java/api/com.azure.messaging.eventhubs.eventhubproducerasyncclient?view=azure-java-stable">EventHubProducerAsyncClient</a> instance which can be
 provided into <code>producerAsyncClient</code>. However, this is <strong>only possible for camel producer</strong>, for the camel consumer, is not possible to inject the client due to some design constraint by the <code>EventProcessorClient</code>.</p>
+</li>
+</ul>
 </div>
 </div>
 </div>
@@ -2590,12 +2666,12 @@ provided into <code>producerAsyncClient</code>. However, this is <strong>only po
 <h2 id="_checkpoint_store_information"><a class="anchor" href="#_checkpoint_store_information"></a>Checkpoint Store Information</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>A checkpoint store stores and retrieves partition ownership information and checkpoint details for each partition in a given consumer group of an event hub instance. Users are not meant to implement an CheckpointStore.
+<p>A checkpoint store stores and retrieves partition ownership information and checkpoint details for each partition in a given consumer group of an event hub instance. Users are not meant to implement a CheckpointStore.
 Users are expected to choose existing implementations of this interface, instantiate it, and pass it to the component through <code>checkpointStore</code> option.
 Users are not expected to use any of the methods on a checkpoint store, these are used internally by the client.</p>
 </div>
 <div class="paragraph">
-<p>Having said that, if the user does not pass any <code>CheckpointStore</code> implementation, the component will fallback to use <a href="https://docs.microsoft.com/en-us/javascript/api/@azure/eventhubs-checkpointstore-blob/blobcheckpointstore?view=azure-node-latest"><code>BlobCheckpointStore</code></a> to store the checkpoint info in Azure Blob Storage account.
+<p>Having said that, if the user does not pass any <code>CheckpointStore</code> implementation, the component will fall back to use <a href="https://docs.microsoft.com/en-us/javascript/api/@azure/eventhubs-checkpointstore-blob/blobcheckpointstore?view=azure-node-latest"><code>BlobCheckpointStore</code></a> to store the checkpoint info in the Azure Blob Storage account.
 If you chose to use the default <code>BlobCheckpointStore</code>, you will need to supply the following options:</p>
 </div>
 <div class="ulist">
@@ -2604,10 +2680,10 @@ If you chose to use the default <code>BlobCheckpointStore</code>, you will need 
 <p><code>blobAccountName</code>: It sets Azure account name to be used for authentication with azure blob services.</p>
 </li>
 <li>
-<p><code>blobAccessKey</code> : It sets access key for the associated azure account name to be used for authentication with azure blob services.</p>
+<p><code>blobAccessKey</code>: It sets the access key for the associated azure account name to be used for authentication with azure blob services.</p>
 </li>
 <li>
-<p><code>blobContainerName</code> : It sets the blob container that shall be used by the BlobCheckpointStore to store the checkpoint offsets.</p>
+<p><code>blobContainerName</code>: It sets the blob container that shall be used by the BlobCheckpointStore to store the checkpoint offsets.</p>
 </li>
 </ul>
 </div>
@@ -2628,7 +2704,7 @@ If you chose to use the default <code>BlobCheckpointStore</code>, you will need 
 <h2 id="_usage"><a class="anchor" href="#_usage"></a>Usage</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>For example in order consume event from EventHub, use the following snippet:</p>
+<p>For example, to consume events from EventHub, use the following snippet:</p>
 </div>
 <div class="listingblock">
 <div class="content">
@@ -2753,14 +2829,14 @@ The same goes as well for the component&#8217;s consumer, it will set the encode
 <h3 id="_automatic_detection_of_eventhubproducerasyncclient_client_in_registry"><a class="anchor" href="#_automatic_detection_of_eventhubproducerasyncclient_client_in_registry"></a>Automatic detection of EventHubProducerAsyncClient client in registry</h3>
 <div class="paragraph">
 <p>The component is capable of detecting the presence of an EventHubProducerAsyncClient bean into the registry.
-If it&#8217;s the only instance of that type it will be used as client and you won&#8217;t have to define it as uri parameter, like the example above.
+If it&#8217;s the only instance of that type, it will be used as the client, and you won&#8217;t have to define it as uri parameter, like the example above.
 This may be really useful for smarter configuration of the endpoint.</p>
 </div>
 </div>
 <div class="sect2">
 <h3 id="_consumer_example"><a class="anchor" href="#_consumer_example"></a>Consumer Example</h3>
 <div class="paragraph">
-<p>The example below will unmarshal the events that was originally produced in JSON:</p>
+<p>The example below will unmarshal the events that were originally produced in JSON:</p>
 </div>
 <div class="listingblock">
 <div class="content">
@@ -2787,7 +2863,7 @@ This may be really useful for smarter configuration of the endpoint.</p>
 </div>
 </div>
 <div class="paragraph">
-<p>Also, the component supports as well <strong>aggregation</strong> of messages by sending events as <strong>iterable</strong> of either Exchanges/Messages or normal data (e.g: list of Strings). For example:</p>
+<p>Also, the component supports <strong>aggregation</strong> of messages by sending events as <strong>iterable</strong> of either Exchanges/Messages or normal data (for example, list of Strings). For example:</p>
 </div>
 <div class="listingblock">
 <div class="content">
@@ -2825,7 +2901,7 @@ from("direct:start")
 <div class="sect2">
 <h3 id="_development_notes_important"><a class="anchor" href="#_development_notes_important"></a>Development Notes (Important)</h3>
 <div class="paragraph">
-<p>When developing on this component, you will need to obtain your Azure accessKey in order to run the integration tests. In addition to the mocked unit tests
+<p>When developing on this component, you will need to obtain your Azure accessKey to run the integration tests. In addition to the mocked unit tests,
 you <strong>will need to run the integration tests with every change you make or even client upgrade as the Azure client can break things even on minor versions upgrade.</strong>
 To run the integration tests, on this component directory, run the following maven command:</p>
 </div>
@@ -2837,6 +2913,9 @@ To run the integration tests, on this component directory, run the following mav
 <div class="paragraph">
 <p>Whereby <code>blobAccountName</code> is your Azure account name and <code>blobAccessKey</code> is the access key being generated from Azure portal and <code>connectionString</code> is the eventHub connection string.</p>
 </div>
+<div class="paragraph">
+<p>Unresolved include directive in modules/ROOT/pages/azure-eventhubs-component.adoc - include::spring-boot:partial$starter.adoc[]</p>
+</div>
 </div>
 </div>
 </div>
@@ -2845,6 +2924,8 @@ To run the integration tests, on this component directory, run the following mav
 </main>
 </div>
 <footer class="footer">
+  <p>This page was built using the Antora default UI.</p>
+  <p>The source code for this UI is licensed under the terms of the MPL-2.0 license.</p>
 </footer>
 <script id="site-script" src="../../_/js/site.js" data-ui-root-path="../../_"></script>
 <script async src="../../_/js/vendor/highlight.js"></script>

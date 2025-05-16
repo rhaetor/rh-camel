@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>Message History :: Red Hat Camel Reference</title>
+    <title>Message History :: Red Hat build of Apache Camel</title>
     <meta name="generator" content="Antora 3.1.4">
     <link rel="stylesheet" href="../../../_/css/site.css">
   </head>
@@ -11,7 +11,7 @@
 <header class="header">
   <nav class="navbar">
     <div class="navbar-brand">
-      <a class="navbar-item" href="../../manual/index.html">Red Hat build of Apache Camel manual</a>
+      <a class="navbar-item" href="/">Red Hat build of Apache Camel</a>
       <button class="navbar-burger" data-target="topbar-nav">
         <span></span>
         <span></span>
@@ -21,11 +21,12 @@
   </nav>
 </header>
 <div class="body">
-<div class="nav-container" data-component="components" data-version="next">
+<div class="nav-container" data-component="components" data-version="4.4.x">
   <aside class="nav">
     <div class="panels">
 <div class="nav-panel-menu is-active" data-panel="menu">
   <nav class="nav-menu">
+    <button class="nav-menu-toggle" aria-label="Toggle expand/collapse all" style="display: none"></button>
     <h3 class="title"><a href="../index.html">Camel Components</a></h3>
 <ul class="nav-list">
   <li class="nav-item" data-depth="0">
@@ -1818,22 +1819,40 @@
 <div class="nav-panel-explore" data-panel="explore">
   <div class="context">
     <span class="title">Camel Components</span>
-    <span class="version">Next (Pre-release)</span>
+    <span class="version">4.4.x</span>
   </div>
   <ul class="components">
     <li class="component is-current">
-      <a class="title" href="../index.html">Camel Components</a>
+      <div class="title"><a href="../../4.10.x/index.html">Camel Components</a></div>
       <ul class="versions">
-        <li class="version is-current is-latest">
-          <a href="../index.html">Next (Pre-release)</a>
+        <li class="version is-latest">
+          <a href="../../4.10.x/index.html">4.10.x (LTS)</a>
+        </li>
+        <li class="version">
+          <a href="../../4.8.x/index.html">4.8.x</a>
+        </li>
+        <li class="version is-current">
+          <a href="../index.html">4.4.x</a>
+        </li>
+        <li class="version">
+          <a href="../../4.0.x/index.html">4.0.x</a>
         </li>
       </ul>
     </li>
     <li class="component">
-      <a class="title" href="../../../manual/index.html">User manual</a>
+      <div class="title"><a href="../../../manual/4.10.x/index.html">User manual</a></div>
       <ul class="versions">
         <li class="version is-latest">
-          <a href="../../../manual/index.html">default</a>
+          <a href="../../../manual/4.10.x/index.html">4.10.x</a>
+        </li>
+        <li class="version">
+          <a href="../../../manual/4.8.x/index.html">4.8.x</a>
+        </li>
+        <li class="version">
+          <a href="../../../manual/4.4.x/index.html">4.4.x</a>
+        </li>
+        <li class="version">
+          <a href="../../../manual/4.0.x/index.html">4.0.x</a>
         </li>
       </ul>
     </li>
@@ -1845,7 +1864,7 @@
 <main class="article">
 <div class="toolbar" role="navigation">
 <button class="nav-toggle"></button>
-  <a href="../../../manual/index.html" class="home-link"></a>
+  <a href="../../../manual/4.10.x/index.html" class="home-link"></a>
 <nav class="breadcrumbs" aria-label="breadcrumbs">
   <ul>
     <li><a href="../index.html">Camel Components</a></li>
@@ -1853,6 +1872,16 @@
     <li><a href="message-history.html">Message History</a></li>
   </ul>
 </nav>
+<div class="page-versions">
+  <button class="version-menu-toggle" title="Show other versions of page">4.4.x</button>
+  <div class="version-menu">
+    <a class="version" href="../../4.10.x/eips/message-history.html">4.10.x (LTS)</a>
+    <a class="version" href="../../4.8.x/eips/message-history.html">4.8.x</a>
+    <a class="version is-current" href="message-history.html">4.4.x</a>
+    <a class="version" href="../../4.0.x/eips/message-history.html">4.0.x</a>
+  </div>
+</div>
+<div class="edit-this-page"><a href="https://github.com/rhaetor/rh-camel-jboss/edit/camel-4.4.0-branch/core/camel-core-engine/src/main/docs/modules/eips/pages/message-history.adoc">Edit this Page</a></div>
 </div>
   <div class="content">
 <aside class="toc sidebar" data-title="Contents" data-levels="2">
@@ -1876,7 +1905,8 @@ from the <a href="enterprise-integration-patterns.html" class="xref page">EIP pa
 </div>
 </div>
 <div class="paragraph">
-<p>Attaching a Message History to the message will provide a list of all applications that the message passed through since its origination.</p>
+<p>Attaching a Message History to the message will provide a list of all applications
+that the message has passed through since its origination.</p>
 </div>
 </div>
 </div>
@@ -1894,14 +1924,26 @@ in a <code>java.util.concurrent.CopyOnWriteArrayList</code> due to the need of b
 <p>The Message History can be enabled or disabled per CamelContext or per route (disabled by default).
 For example, you can turn it on with:</p>
 </div>
+<div id="_tabs_1" class="openblock tabs is-loading">
+<div class="content">
+<div class="ulist tablist">
+<ul>
+<li id="_tabs_1_java" class="tab">
+<p>Java</p>
+</li>
+<li id="_tabs_1_xml" class="tab">
+<p>XML</p>
+</li>
+</ul>
+</div>
+<div id="_tabs_1_java--panel" class="tabpanel" aria-labelledby="_tabs_1_java">
 <div class="listingblock">
 <div class="content">
 <pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">camelContext.setMessageHistory(true);</code></pre>
 </div>
 </div>
-<div class="paragraph">
-<p>Or in XML</p>
 </div>
+<div id="_tabs_1_xml--panel" class="tabpanel" aria-labelledby="_tabs_1_xml">
 <div class="listingblock">
 <div class="content">
 <pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;camelContext messageHistory="true"&gt;
@@ -1909,29 +1951,48 @@ For example, you can turn it on with:</p>
 &lt;/camelContext&gt;</code></pre>
 </div>
 </div>
+</div>
+</div>
+</div>
 <div class="paragraph">
 <p>Or when using Spring Boot or Quarkus, you can enable this in the configuration file:</p>
 </div>
+<div id="_tabs_2" class="openblock tabs is-loading">
+<div class="content">
+<div class="ulist tablist">
+<ul>
+<li id="_tabs_2_quarkus" class="tab">
+<p>Quarkus</p>
+</li>
+<li id="_tabs_2_spring_boot" class="tab">
+<p>Spring Boot</p>
+</li>
+</ul>
+</div>
+<div id="_tabs_2_quarkus--panel" class="tabpanel" aria-labelledby="_tabs_2_quarkus">
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-properties hljs" data-lang="properties">camel.quarkus.message-history = true</code></pre>
+</div>
+</div>
+</div>
+<div id="_tabs_2_spring_boot--panel" class="tabpanel" aria-labelledby="_tabs_2_spring_boot">
 <div class="listingblock">
 <div class="content">
 <pre class="highlightjs highlight"><code class="language-properties hljs" data-lang="properties">camel.springboot.message-history = true</code></pre>
 </div>
 </div>
-<div class="paragraph">
-<p>And in Quarkus:</p>
 </div>
-<div class="listingblock">
-<div class="content">
-<pre class="highlightjs highlight"><code class="language-properties hljs" data-lang="properties">camel.quarkus.message-history = true</code></pre>
 </div>
 </div>
 <div class="sect2">
 <h3 id="_route_level_message_history"><a class="anchor" href="#_route_level_message_history"></a>Route level Message History</h3>
 <div class="paragraph">
 <p>You can also enable or disable message history per route.
-When doing this then Camel can only gather message history in the routes where this is enabled,
-which means you may not have full coverage. You may still want to do this, for example to capture
-the history in a critical route to help pin-point where the route is slow.</p>
+When doing this, then Camel can only gather message history in the routes where this is enabled,
+which means you may not have full coverage.
+You may still want to do this, for example, to capture
+the history in a critical route to help pinpoint where the route is slow.</p>
 </div>
 <div class="paragraph">
 <p>A route level configuration overrides the global configuration.</p>
@@ -1951,6 +2012,19 @@ the history in a critical route to help pin-point where the route is slow.</p>
 <div class="paragraph">
 <p>You can also turn off message history per route:</p>
 </div>
+<div id="_tabs_3" class="openblock tabs is-loading">
+<div class="content">
+<div class="ulist tablist">
+<ul>
+<li id="_tabs_3_java" class="tab">
+<p>Java</p>
+</li>
+<li id="_tabs_3_xml" class="tab">
+<p>XML</p>
+</li>
+</ul>
+</div>
+<div id="_tabs_3_java--panel" class="tabpanel" aria-labelledby="_tabs_3_java">
 <div class="listingblock">
 <div class="content">
 <pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">from("jms:cheese")
@@ -1960,9 +2034,8 @@ the history in a critical route to help pin-point where the route is slow.</p>
   .to("jms:wine");</code></pre>
 </div>
 </div>
-<div class="paragraph">
-<p>And in XML:</p>
 </div>
+<div id="_tabs_3_xml--panel" class="tabpanel" aria-labelledby="_tabs_3_xml">
 <div class="listingblock">
 <div class="content">
 <pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;route messageHistory="true"&gt;
@@ -1971,6 +2044,9 @@ the history in a critical route to help pin-point where the route is slow.</p>
   &lt;to uri="bean:transform"/&gt;
   &lt;to uri="jms:wine"/&gt;
 &lt;/route&gt;</code></pre>
+</div>
+</div>
+</div>
 </div>
 </div>
 </div>
@@ -1983,14 +2059,26 @@ When enabled, then the message history will output this information in the route
 <div class="paragraph">
 <p>To enable source location:</p>
 </div>
+<div id="_tabs_4" class="openblock tabs is-loading">
+<div class="content">
+<div class="ulist tablist">
+<ul>
+<li id="_tabs_4_java" class="tab">
+<p>Java</p>
+</li>
+<li id="_tabs_4_xml" class="tab">
+<p>XML</p>
+</li>
+</ul>
+</div>
+<div id="_tabs_4_java--panel" class="tabpanel" aria-labelledby="_tabs_4_java">
 <div class="listingblock">
 <div class="content">
 <pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">camelContext.setSourceLocationEnabled(true);</code></pre>
 </div>
 </div>
-<div class="paragraph">
-<p>Or in XML</p>
 </div>
+<div id="_tabs_4_xml--panel" class="tabpanel" aria-labelledby="_tabs_4_xml">
 <div class="listingblock">
 <div class="content">
 <pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;camelContext sourceLocationEnabled="true"&gt;
@@ -1998,20 +2086,38 @@ When enabled, then the message history will output this information in the route
 &lt;/camelContext&gt;</code></pre>
 </div>
 </div>
+</div>
+</div>
+</div>
 <div class="paragraph">
 <p>Or when using Spring Boot or Quarkus, you can enable this in the configuration file:</p>
 </div>
+<div id="_tabs_5" class="openblock tabs is-loading">
+<div class="content">
+<div class="ulist tablist">
+<ul>
+<li id="_tabs_5_quarkus" class="tab">
+<p>Quarkus</p>
+</li>
+<li id="_tabs_5_spring_boot" class="tab">
+<p>Spring Boot</p>
+</li>
+</ul>
+</div>
+<div id="_tabs_5_quarkus--panel" class="tabpanel" aria-labelledby="_tabs_5_quarkus">
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-properties hljs" data-lang="properties">camel.quarkus.source-location-enabled = true</code></pre>
+</div>
+</div>
+</div>
+<div id="_tabs_5_spring_boot--panel" class="tabpanel" aria-labelledby="_tabs_5_spring_boot">
 <div class="listingblock">
 <div class="content">
 <pre class="highlightjs highlight"><code class="language-properties hljs" data-lang="properties">camel.springboot.source-location-enabled = true</code></pre>
 </div>
 </div>
-<div class="paragraph">
-<p>And in Quarkus:</p>
 </div>
-<div class="listingblock">
-<div class="content">
-<pre class="highlightjs highlight"><code class="language-properties hljs" data-lang="properties">camel.quarkus.source-location-enabled = true</code></pre>
 </div>
 </div>
 </div>
@@ -2022,7 +2128,7 @@ When enabled, then the message history will output this information in the route
 <div class="sectionbody">
 <div class="paragraph">
 <p>If Message History is enabled, then Camel will include this information,
-when the <a href="../../../manual/error-handler.html" class="xref page">Error Handler</a> logs exhausted exceptions,
+when the <a href="../../../manual/4.10.x/error-handler.html" class="xref page">Error Handler</a> logs exhausted exceptions,
 where you can see the message history; you may think this as a "route stacktrace".</p>
 </div>
 <div class="paragraph">
@@ -2051,11 +2157,11 @@ java.lang.IllegalArgumentException: The number is too low
 </div>
 </div>
 <div class="paragraph">
-<p>When Message History is enabled then the full history is logged as shown above. Here we can see the full path
+<p>When Message History is enabled, then the full history is logged as shown above. Here we can see the full path
 the message has been routed.</p>
 </div>
 <div class="paragraph">
-<p>When Message History is disabled (by default) then the error handler logs a brief history with the last node
+<p>When Message History is disabled, as it is by default, then the error handler logs a brief history with the last node
 where the exception occurred as shown below:</p>
 </div>
 <div class="listingblock">
@@ -2083,7 +2189,7 @@ java.lang.IllegalArgumentException: The number is too low
 where the exception occurred (throwException1).</p>
 </div>
 <div class="paragraph">
-<p>Notice that the source column is empty, because source location is not enabled.
+<p>Notice that the source column is empty because the source location is not enabled.
 When enabled then, you can see exactly which source file and line number the message routed:</p>
 </div>
 <div class="listingblock">
@@ -2094,7 +2200,7 @@ Message History
 ---------------------------------------------------------------------------------------------------------------------------------------
 Source                                   ID                             Processor                                          Elapsed (ms)
 MyJavaRouteBuilder:29                    route1/route1                  from[timer://java?period=2s]                                 10
-MyJavaRouteBuilder:32                    route1/setBody1                setBody[bean[MyJavaRouteBuilder method:randomNumbe            1
+MyJavaRouteBuilder:32                    route1/setBody1                setBody[bean[MyJavaRouteBuilder method:randomNumber           1
 MyJavaRouteBuilder:33                    route1/log1                    log                                                           1
 MyJavaRouteBuilder:34                    route1/filter1                 filter[simple{${body} &lt; 30}]                                  0
 MyJavaRouteBuilder:35                    route1/throwException1         throwException[java.lang.IllegalArgumentException]            0
@@ -2115,7 +2221,7 @@ java.lang.IllegalArgumentException: The number is too low
 <h3 id="_configuring_route_stack_trace_from_error_handler"><a class="anchor" href="#_configuring_route_stack_trace_from_error_handler"></a>Configuring route stack-trace from error handler</h3>
 <div class="paragraph">
 <p>You can turn off logging Message History with <code>logExhaustedMessageHistory</code>
-from the <a href="../../../manual/error-handler.html" class="xref page">Error Handler</a> using:</p>
+from the <a href="../../../manual/4.10.x/error-handler.html" class="xref page">Error Handler</a> using:</p>
 </div>
 <div class="listingblock">
 <div class="content">
@@ -2123,15 +2229,30 @@ from the <a href="../../../manual/error-handler.html" class="xref page">Error Ha
 </div>
 </div>
 <div class="paragraph">
-<p>The <a href="../../../manual/error-handler.html" class="xref page">Error Handler</a> does not log the
+<p>The <a href="../../../manual/4.10.x/error-handler.html" class="xref page">Error Handler</a> does not log the
 message body/header details (to avoid logging sensitive message body details).
 You can enable this with <code>logExhaustedMessageBody</code> on the error handler as shown:</p>
 </div>
+<div id="_tabs_6" class="openblock tabs is-loading">
+<div class="content">
+<div class="ulist tablist">
+<ul>
+<li id="_tabs_6_java" class="tab">
+<p>Java</p>
+</li>
+<li id="_tabs_6_xml" class="tab">
+<p>XML</p>
+</li>
+</ul>
+</div>
+<div id="_tabs_6_java--panel" class="tabpanel" aria-labelledby="_tabs_6_java">
 <div class="listingblock">
 <div class="content">
 <pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">errorHandler(defaultErrorHandler().logExhaustedMessageBody(true));</code></pre>
 </div>
 </div>
+</div>
+<div id="_tabs_6_xml--panel" class="tabpanel" aria-labelledby="_tabs_6_xml">
 <div class="paragraph">
 <p>In XML configuring this is a bit different, as you configure this in the <code>redeliveryPolicy</code>
 of the <code>&lt;errorHandler&gt;</code> as shown:</p>
@@ -2151,6 +2272,9 @@ of the <code>&lt;errorHandler&gt;</code> as shown:</p>
       &lt;to uri="jms:wine"/&gt;
     &lt;/route&gt;
 &lt;/camelContext&gt;</code></pre>
+</div>
+</div>
+</div>
 </div>
 </div>
 </div>
@@ -2185,6 +2309,8 @@ for (MessageHistory history : list) {
 </main>
 </div>
 <footer class="footer">
+  <p>This page was built using the Antora default UI.</p>
+  <p>The source code for this UI is licensed under the terms of the MPL-2.0 license.</p>
 </footer>
 <script id="site-script" src="../../../_/js/site.js" data-ui-root-path="../../../_"></script>
 <script async src="../../../_/js/vendor/highlight.js"></script>

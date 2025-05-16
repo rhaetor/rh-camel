@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>SMPP :: Red Hat Camel Reference</title>
+    <title>SMPP :: Red Hat build of Apache Camel</title>
     <meta name="description" content="Send and receive SMS messages using a SMSC (Short Message Service Center).">
     <meta name="generator" content="Antora 3.1.4">
     <link rel="stylesheet" href="../../_/css/site.css">
@@ -12,7 +12,7 @@
 <header class="header">
   <nav class="navbar">
     <div class="navbar-brand">
-      <a class="navbar-item" href="../../manual/index.html">Red Hat build of Apache Camel manual</a>
+      <a class="navbar-item" href="/">Red Hat build of Apache Camel</a>
       <button class="navbar-burger" data-target="topbar-nav">
         <span></span>
         <span></span>
@@ -22,11 +22,12 @@
   </nav>
 </header>
 <div class="body">
-<div class="nav-container" data-component="components" data-version="next">
+<div class="nav-container" data-component="components" data-version="4.4.x">
   <aside class="nav">
     <div class="panels">
 <div class="nav-panel-menu is-active" data-panel="menu">
   <nav class="nav-menu">
+    <button class="nav-menu-toggle" aria-label="Toggle expand/collapse all" style="display: none"></button>
     <h3 class="title"><a href="index.html">Camel Components</a></h3>
 <ul class="nav-list">
   <li class="nav-item" data-depth="0">
@@ -912,6 +913,33 @@
     <a class="nav-link" href="splunk-hec-component.html">Splunk HEC</a>
   </li>
   <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="spring-summary.html">Spring</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="spring-batch-component.html">Spring Batch</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="spring-event-component.html">Spring Event</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="spring-jdbc-component.html">Spring JDBC</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="spring-ldap-component.html">Spring LDAP</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="spring-rabbitmq-component.html">Spring RabbitMQ</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="spring-redis-component.html">Spring Redis</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="spring-ws-component.html">Spring WebService</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
     <a class="nav-link" href="sql-component.html">SQL</a>
   </li>
   <li class="nav-item" data-depth="2">
@@ -1792,22 +1820,40 @@
 <div class="nav-panel-explore" data-panel="explore">
   <div class="context">
     <span class="title">Camel Components</span>
-    <span class="version">Next (Pre-release)</span>
+    <span class="version">4.4.x</span>
   </div>
   <ul class="components">
     <li class="component is-current">
-      <a class="title" href="index.html">Camel Components</a>
+      <div class="title"><a href="../4.10.x/index.html">Camel Components</a></div>
       <ul class="versions">
-        <li class="version is-current is-latest">
-          <a href="index.html">Next (Pre-release)</a>
+        <li class="version is-latest">
+          <a href="../4.10.x/index.html">4.10.x (LTS)</a>
+        </li>
+        <li class="version">
+          <a href="../4.8.x/index.html">4.8.x</a>
+        </li>
+        <li class="version is-current">
+          <a href="index.html">4.4.x</a>
+        </li>
+        <li class="version">
+          <a href="../4.0.x/index.html">4.0.x</a>
         </li>
       </ul>
     </li>
     <li class="component">
-      <a class="title" href="../../manual/index.html">User manual</a>
+      <div class="title"><a href="../../manual/4.10.x/index.html">User manual</a></div>
       <ul class="versions">
         <li class="version is-latest">
-          <a href="../../manual/index.html">default</a>
+          <a href="../../manual/4.10.x/index.html">4.10.x</a>
+        </li>
+        <li class="version">
+          <a href="../../manual/4.8.x/index.html">4.8.x</a>
+        </li>
+        <li class="version">
+          <a href="../../manual/4.4.x/index.html">4.4.x</a>
+        </li>
+        <li class="version">
+          <a href="../../manual/4.0.x/index.html">4.0.x</a>
         </li>
       </ul>
     </li>
@@ -1819,7 +1865,7 @@
 <main class="article">
 <div class="toolbar" role="navigation">
 <button class="nav-toggle"></button>
-  <a href="../../manual/index.html" class="home-link"></a>
+  <a href="../../manual/4.10.x/index.html" class="home-link"></a>
 <nav class="breadcrumbs" aria-label="breadcrumbs">
   <ul>
     <li><a href="index.html">Camel Components</a></li>
@@ -1827,6 +1873,16 @@
     <li><a href="smpp-component.html">SMPP</a></li>
   </ul>
 </nav>
+<div class="page-versions">
+  <button class="version-menu-toggle" title="Show other versions of page">4.4.x</button>
+  <div class="version-menu">
+    <a class="version" href="../4.10.x/smpp-component.html">4.10.x (LTS)</a>
+    <a class="version" href="../4.8.x/smpp-component.html">4.8.x</a>
+    <a class="version is-current" href="smpp-component.html">4.4.x</a>
+    <a class="version is-missing" href="../4.0.x/index.html">4.0.x</a>
+  </div>
+</div>
+<div class="edit-this-page"><a href="https://github.com/rhaetor/rh-camel-jboss/edit/camel-4.4.0-branch/docs/components/modules/ROOT/pages/smpp-component.adoc">Edit this Page</a></div>
 </div>
   <div class="content">
 <aside class="toc sidebar" data-title="Contents" data-levels="2">
@@ -1857,8 +1913,8 @@ the protocol implementation.</p>
 Entity) and not as an SMSC itself.</p>
 </div>
 <div class="paragraph">
-<p>You are also able to execute ReplaceSm,
-QuerySm, SubmitMulti, CancelSm and DataSm.</p>
+<p>You are also able to execute <code>ReplaceSm</code>,
+<code>QuerySm</code>, <code>SubmitMulti</code>, <code>CancelSm</code>, and <code>DataSm</code>.</p>
 </div>
 <div class="paragraph">
 <p>Maven users will need to add the following dependency to their <code>pom.xml</code>
@@ -1880,7 +1936,7 @@ for this component:</p>
 <h2 id="_sms_limitations"><a class="anchor" href="#_sms_limitations"></a>SMS limitations</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>SMS is neither reliable or secure.  Users who require reliable and
+<p>SMS is neither reliable nor secure. Users who require reliable and
 secure delivery may want to consider using the XMPP or SIP components
 instead, combined with a smartphone app supporting the chosen protocol.</p>
 </div>
@@ -1888,7 +1944,7 @@ instead, combined with a smartphone app supporting the chosen protocol.</p>
 <ul>
 <li>
 <p>Reliability: although the SMPP standard offers a range of feedback
-mechanisms to indicate errors, non-delivery and confirmation of delivery
+mechanisms to indicate errors, non-delivery and confirmation of delivery,
 it is not uncommon for mobile networks to hide or simulate these
 responses.  For example, some networks automatically send a delivery
 confirmation for every message even if the destination number is invalid
@@ -1904,14 +1960,14 @@ authenticated in any other part of the network.  Some operators allow
 staff in retail outlets or call centres to browse through the SMS
 message histories of their customers.  Message sender identity can be
 easily forged.  Regulators and even the mobile telephone industry itself
-has cautioned against the use of SMS in two-factor authentication
+have cautioned against the use of SMS in two-factor authentication
 schemes and other purposes where security is important.</p>
 </li>
 </ul>
 </div>
 <div class="paragraph">
 <p>While the Camel component makes it as easy as possible to send messages
-to the SMS network, it can not offer an easy solution to these problems.</p>
+to the SMS network, it cannot offer an easy solution to these problems.</p>
 </div>
 </div>
 </div>
@@ -1928,13 +1984,14 @@ component acts when more than one value is set.</p>
 <p>Data coding is an 8 bit field in the SMPP wire format.</p>
 </div>
 <div class="paragraph">
-<p>Alphabet corresponds to bits 0-3 of the data coding field.  For some
-types of message, where a message class is used (by setting bit 5 of the
+<p>The alphabet corresponds to bits 0–3 of the data coding field.
+For some types of message, where a message class is used (by setting bit 5 of the
 data coding field), the lower two bits of the data coding field are not
-interpreted as alphabet and only bits 2 and 3 impact the alphabet.</p>
+interpreted as alphabet.
+Only bits 2 and 3 impact the alphabet.</p>
 </div>
 <div class="paragraph">
-<p>Furthermore, current version of the JSMPP library only seems to support
+<p>Furthermore, the current version of the JSMPP library only seems to support
 bits 2 and 3, assuming that bits 0 and 1 are used for message class.
 This is why the Alphabet class in JSMPP doesn&#8217;t support the value 3
 (binary 0011) which indicates ISO-8859-1.</p>
@@ -1973,20 +2030,21 @@ array, the Camel SMPP component does not consider the data coding value
 (from either the header or endpoint parameter).</p>
 </div>
 <div class="paragraph">
-<p>If some characters in the String can not be represented in the chosen
-alphabet, they may be replaced by the question mark ( ? ) symbol.  Users
-of the API may want to consider checking if their message body can be
+<p>If some characters in the String cannot be represented in the chosen
+alphabet, they may be replaced by the question mark (<code>?</code>) symbol.
+Users of the API may want to consider checking if their message body can be
 converted to ISO-8859-1 before passing it to the component and if not,
-setting the alphabet header to request UCS-2 encoding.  If the alphabet
-and data coding options are not specified at all then the component may
+setting the alphabet header to request UCS-2 encoding.
+If the alphabet
+and data coding options are not specified at all, then the component may
 try to detect the required encoding and set the data coding for you.</p>
 </div>
 <div class="paragraph">
-<p>The list of alphabet codes are specified in the SMPP specification v3.4,
+<p>The list of alphabet codes is specified in the SMPP specification v3.4,
 section 5.2.19.  One notable limitation of the SMPP specification is
 that there is no alphabet code for explicitly requesting use of the GSM
-3.38 (7 bit) character set.  Choosing the value 0 for the alphabet
-selects the SMSC <em>default</em> alphabet, this usually means GSM 3.38 but it
+3.38 (7-bit) character set.  Choosing <code>0</code> for the alphabet
+selects the SMSC <em>default</em> alphabet, this usually means GSM 3.38, but it
 is not guaranteed.  The SMPP gateway Nexmo
 <a href="https://help.nexmo.com/hc/en-us/articles/204015813-How-to-change-the-character-encoding-in-SMPP-">actually
 allows the default to be mapped to any other character set with a
@@ -2007,10 +2065,11 @@ is completed automatically.</p>
 </div>
 <div class="paragraph">
 <p>If the GSM 3.38 alphabet is used, the component will pack up to 160
-characters into the 140 byte message body.  If an 8 bit character set is
-used (e.g. ISO-8859-1 for western Europe) then 140 characters will be
-allowed within the 140 byte message body.  If 16 bit UCS-2 encoding is
-used then just 70 characters fit into each 140 byte message.</p>
+characters into the 140-byte message body.
+If an 8-bit character set is used (for example, ISO-8859-1 for Western Europe), then 140 characters will be
+allowed within the 140-byte message body.
+If 16 bit UCS-2 encoding is
+ used, then just 70 characters fit into each 140-byte message.</p>
 </div>
 <div class="paragraph">
 <p>Some SMSC providers implement throttling rules.  Each part of a message
@@ -2059,14 +2118,14 @@ use SSLSocket to init a connection to the server.</p>
 <h3 id="_configuring_component_options"><a class="anchor" href="#_configuring_component_options"></a>Configuring Component Options</h3>
 <div class="paragraph">
 <p>The component level is the highest level which holds general and common configurations that are inherited by the endpoints.
-For example a component may have security settings, credentials for authentication, urls for network connection and so forth.</p>
+For example, a component may have security settings, credentials for authentication, urls for network connection and so forth.</p>
 </div>
 <div class="paragraph">
 <p>Some components only have a few options, and others may have many. Because components typically have pre configured defaults
 that are commonly used, then you may often only need to configure a few options on a component; or none at all.</p>
 </div>
 <div class="paragraph">
-<p>Configuring components can be done with the <a href="../../manual/component-dsl.html" class="xref page">Component DSL</a>,
+<p>Configuring components can be done with the <a href="../../manual/4.10.x/component-dsl.html" class="xref page">Component DSL</a>,
 in a configuration file (application.properties|yaml), or directly with Java code.</p>
 </div>
 </div>
@@ -2079,11 +2138,11 @@ or as a producer (to), or used for both.</p>
 </div>
 <div class="paragraph">
 <p>Configuring endpoints is most often done directly in the endpoint URI as path and query parameters. You can also use
-the <a href="../../manual/Endpoint-dsl.html" class="xref page">Endpoint DSL</a> and <a href="../../manual/dataformat-dsl.html" class="xref page">DataFormat DSL</a>
+the <a href="../../manual/4.10.x/Endpoint-dsl.html" class="xref page">Endpoint DSL</a> and <a href="../../manual/4.10.x/dataformat-dsl.html" class="xref page">DataFormat DSL</a>
 as a <em>type safe</em> way of configuring endpoints and data formats in Java.</p>
 </div>
 <div class="paragraph">
-<p>A good practice when configuring options is to use <a href="../../manual/using-propertyplaceholder.html" class="xref page">Property Placeholders</a>,
+<p>A good practice when configuring options is to use <a href="../../manual/4.10.x/using-propertyplaceholder.html" class="xref page">Property Placeholders</a>,
 which allows to not hardcode urls, port numbers, sensitive information, and other settings.
 In other words placeholders allows to externalize the configuration from your code, and gives more flexibility and reuse.</p>
 </div>
@@ -2308,7 +2367,7 @@ In other words placeholders allows to externalize the configuration from your co
 <td class="tableblock halign-left valign-top"><p class="tableblock"><a id="_component_option_messageReceiverRouteId"></a>
 <a href="#_component_option_messageReceiverRouteId" class="anchor"></a><strong>messageReceiverRouteId</strong> (producer)</p></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>Set this on producer in order to benefit from transceiver (TRX) binding type. So once set, you don&#8217;t need to define an 'SMTPP consumer' endpoint anymore. You would set this to a 'Direct consumer' endpoint instead. DISCALIMER: This feature is only tested with 'Direct consumer' endpoint. The behavior with any other consumer type is unknown and not tested.</p>
+<p>Set this on producer to benefit from transceiver (TRX) binding type. So once set, you don&#8217;t need to define an 'SMTPP consumer' endpoint anymore. You would set this to a 'Direct consumer' endpoint instead. DISCALIMER: This feature is only tested with 'Direct consumer' endpoint. The behavior with any other consumer type is unknown and not tested.</p>
 </div></div></td>
 <td class="tableblock halign-center valign-top"></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">String</p></td>
@@ -2701,7 +2760,7 @@ In other words placeholders allows to externalize the configuration from your co
 <td class="tableblock halign-left valign-top"><p class="tableblock"><a id="_component_option_transactionTimer"></a>
 <a href="#_component_option_transactionTimer" class="anchor"></a><strong>transactionTimer</strong> (advanced)</p></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>Defines the maximum period of inactivity allowed after a transaction, after which an SMPP entity may assume that the session is no longer active. This timer may be active on either communicating SMPP entity (i.e. SMSC or ESME).</p>
+<p>Defines the maximum period of inactivity allowed after a transaction, after which an SMPP entity may assume that the session is no longer active. This timer may be active on either communicating SMPP entity (that is, SMSC or ESME).</p>
 </div></div></td>
 <td class="tableblock halign-center valign-top"><p class="tableblock">10000</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Integer</p></td>
@@ -3111,7 +3170,7 @@ In other words placeholders allows to externalize the configuration from your co
 <td class="tableblock halign-left valign-top"><p class="tableblock"><a id="_endpoint_query_option_messageReceiverRouteId"></a>
 <a href="#_endpoint_query_option_messageReceiverRouteId" class="anchor"></a><strong>messageReceiverRouteId</strong> (producer)</p></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>Set this on producer in order to benefit from transceiver (TRX) binding type. So once set, you don&#8217;t need to define an 'SMTPP consumer' endpoint anymore. You would set this to a 'Direct consumer' endpoint instead. DISCALIMER: This feature is only tested with 'Direct consumer' endpoint. The behavior with any other consumer type is unknown and not tested.</p>
+<p>Set this on producer to benefit from transceiver (TRX) binding type. So once set, you don&#8217;t need to define an 'SMTPP consumer' endpoint anymore. You would set this to a 'Direct consumer' endpoint instead. DISCALIMER: This feature is only tested with 'Direct consumer' endpoint. The behavior with any other consumer type is unknown and not tested.</p>
 </div></div></td>
 <td class="tableblock halign-center valign-top"></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">String</p></td>
@@ -3495,7 +3554,7 @@ In other words placeholders allows to externalize the configuration from your co
 <td class="tableblock halign-left valign-top"><p class="tableblock"><a id="_endpoint_query_option_transactionTimer"></a>
 <a href="#_endpoint_query_option_transactionTimer" class="anchor"></a><strong>transactionTimer</strong> (advanced)</p></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>Defines the maximum period of inactivity allowed after a transaction, after which an SMPP entity may assume that the session is no longer active. This timer may be active on either communicating SMPP entity (i.e. SMSC or ESME).</p>
+<p>Defines the maximum period of inactivity allowed after a transaction, after which an SMPP entity may assume that the session is no longer active. This timer may be active on either communicating SMPP entity (that is, SMSC or ESME).</p>
 </div></div></td>
 <td class="tableblock halign-center valign-top"><p class="tableblock">10000</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Integer</p></td>
@@ -4134,7 +4193,7 @@ When the SMPP consumer receives a <code>DeliverSm</code> or
 can also throw a <code>ProcessRequestException</code> instead of handle the
 failure. In this case, this exception is forwarded to the underlying
 <a href="http://jsmpp.org">JSMPP library</a> which will return the included error
-code to the SMSC. This feature is useful to e.g. instruct the SMSC to
+code to the SMSC. This feature is useful to for example, instruct the SMSC to
 resend the short message at a later time. This could be done with the
 following lines of code:</p>
 </div>
@@ -4215,11 +4274,12 @@ from("direct:messageReceiver").id("sampleMessageReceiverRouteId")
 </div>
 <div class="paragraph">
 <p>Please note that with TRX binding type, you wouldn&#8217;t define a corresponding redundant SMPP consumer. Camel will use the
-specified route by <code>messageReceiverRouteId</code> as the corresponding consumer. Internally it uses one and same SmppSession
+specified route by <code>messageReceiverRouteId</code> as the corresponding consumer. Internally, it uses one and same SmppSession
 as producer for the provided consumer.</p>
 </div>
 <div class="paragraph">
-<p>When the SMPP Server doesn&#8217;t support TRX then you have to define separate producer (TX by default) and consumer (RX by default).</p>
+<p>When the SMPP Server doesn&#8217;t support TRX,
+then you have to define separate producer (TX by default) and consumer (RX by default).</p>
 </div>
 <div class="admonitionblock tip">
 <table>
@@ -4255,6 +4315,9 @@ configuration:</p>
 <pre class="highlightjs highlight"><code class="language-properties hljs" data-lang="properties">log4j.logger.org.apache.camel.component.smpp=DEBUG</code></pre>
 </div>
 </div>
+<div class="paragraph">
+<p>Unresolved include directive in modules/ROOT/pages/smpp-component.adoc - include::spring-boot:partial$starter.adoc[]</p>
+</div>
 </div>
 </div>
 </article>
@@ -4262,6 +4325,8 @@ configuration:</p>
 </main>
 </div>
 <footer class="footer">
+  <p>This page was built using the Antora default UI.</p>
+  <p>The source code for this UI is licensed under the terms of the MPL-2.0 license.</p>
 </footer>
 <script id="site-script" src="../../_/js/site.js" data-ui-root-path="../../_"></script>
 <script async src="../../_/js/vendor/highlight.js"></script>

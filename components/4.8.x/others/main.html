@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>Main :: Red Hat Camel Reference</title>
+    <title>Main :: Red Hat build of Apache Camel</title>
     <meta name="description" content="Camel Main">
     <meta name="generator" content="Antora 3.1.4">
     <link rel="stylesheet" href="../../../_/css/site.css">
@@ -12,7 +12,7 @@
 <header class="header">
   <nav class="navbar">
     <div class="navbar-brand">
-      <a class="navbar-item" href="../../manual/index.html">Red Hat build of Apache Camel manual</a>
+      <a class="navbar-item" href="/">Red Hat build of Apache Camel</a>
       <button class="navbar-burger" data-target="topbar-nav">
         <span></span>
         <span></span>
@@ -22,11 +22,12 @@
   </nav>
 </header>
 <div class="body">
-<div class="nav-container" data-component="components" data-version="next">
+<div class="nav-container" data-component="components" data-version="4.8.x">
   <aside class="nav">
     <div class="panels">
 <div class="nav-panel-menu is-active" data-panel="menu">
   <nav class="nav-menu">
+    <button class="nav-menu-toggle" aria-label="Toggle expand/collapse all" style="display: none"></button>
     <h3 class="title"><a href="../index.html">Camel Components</a></h3>
 <ul class="nav-list">
   <li class="nav-item" data-depth="0">
@@ -36,7 +37,46 @@
     <a class="nav-link" href="../index.html">Components</a>
 <ul class="nav-list">
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="../activemq-component.html">ActiveMQ</a>
+    <a class="nav-link" href="../activemq-component.html">ActiveMQ 5.x</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../activemq6-component.html">ActiveMQ 6.x</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../ai-summary.html">AI</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../chatscript-component.html">ChatScript</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../djl-component.html">Deep Java Library</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../langchain4j-chat-component.html">LangChain4j Chat</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../langchain4j-embeddings-component.html">LangChain4j Embeddings</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../langchain4j-tokenizer-component.html">LangChain4j Tokenizer</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../langchain4j-tools-component.html">LangChain4j Tools</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../langchain4j-web-search-component.html">LangChain4j Web Search</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../milvus-component.html">Milvus</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../pinecone-component.html">Pinecone</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../qdrant-component.html">Qdrant</a>
+  </li>
+</ul>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="../amqp-component.html">AMQP</a>
@@ -65,6 +105,15 @@
 <ul class="nav-list">
   <li class="nav-item" data-depth="3">
     <a class="nav-link" href="../aws2-athena-component.html">AWS Athena</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../aws-bedrock-component.html">AWS Bedrock</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../aws-bedrock-agent-component.html">AWS Bedrock Agent</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../aws-bedrock-agent-runtime-component.html">AWS Bedrock Agent Runtime</a>
   </li>
   <li class="nav-item" data-depth="3">
     <a class="nav-link" href="../aws-cloudtrail-component.html">AWS Cloudtrail</a>
@@ -169,7 +218,7 @@
     <a class="nav-link" href="../azure-storage-blob-component.html">Azure Storage Blob Service</a>
   </li>
   <li class="nav-item" data-depth="3">
-    <a class="nav-link" href="../azure-storage-datalake-component.html">Azure Storage Datalake Service</a>
+    <a class="nav-link" href="../azure-storage-datalake-component.html">Azure Storage Data Lake Service</a>
   </li>
   <li class="nav-item" data-depth="3">
     <a class="nav-link" href="../azure-storage-queue-component.html">Azure Storage Queue Service</a>
@@ -202,9 +251,6 @@
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="../cql-component.html">Cassandra CQL</a>
-  </li>
-  <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="../chatscript-component.html">ChatScript</a>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="../chunk-component.html">Chunk</a>
@@ -277,9 +323,6 @@
     <a class="nav-link" href="../debezium-sqlserver-component.html">Debezium SQL Server Connector</a>
   </li>
 </ul>
-  </li>
-  <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="../djl-component.html">Deep Java Library</a>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="../dhis2-component.html">DHIS2</a>
@@ -395,6 +438,9 @@
   </li>
   <li class="nav-item" data-depth="3">
     <a class="nav-link" href="../google-pubsub-component.html">Google Pubsub</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../google-pubsub-lite-component.html">Google PubSub Lite</a>
   </li>
   <li class="nav-item" data-depth="3">
     <a class="nav-link" href="../google-secret-manager-component.html">Google Secret Manager</a>
@@ -687,7 +733,7 @@
     <a class="nav-link" href="../ldif-component.html">LDIF</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="../log-component.html">Log</a>
+    <a class="nav-link" href="../log-component.html">Log Data</a>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="../lucene-component.html">Lucene</a>
@@ -900,10 +946,16 @@
     <a class="nav-link" href="../smb-component.html">SMB</a>
   </li>
   <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../smooks-component.html">Smooks</a>
+  </li>
+  <li class="nav-item" data-depth="2">
     <a class="nav-link" href="../smpp-component.html">SMPP</a>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="../snmp-component.html">SNMP</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../solr-component.html">Solr</a>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="../splunk-component.html">Splunk</a>
@@ -966,6 +1018,18 @@
     <a class="nav-link" href="../stub-component.html">Stub</a>
   </li>
   <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../tahu-summary.html">Tahu</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../tahu-edge-component.html">Tahu Edge Node / Device</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../tahu-host-component.html">Tahu Host Application</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
     <a class="nav-link" href="../telegram-component.html">Telegram</a>
   </li>
   <li class="nav-item" data-depth="2">
@@ -1026,7 +1090,7 @@
     <a class="nav-link" href="../whatsapp-component.html">WhatsApp</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="../wordpress-component.html">Wordpress</a>
+    <a class="nav-link" href="../wordpress-component.html">WordPress</a>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="../workday-component.html">Workday</a>
@@ -1419,7 +1483,13 @@
     <a class="nav-link" href="openapi-java.html">Openapi Java</a>
   </li>
   <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="openapi-validator.html">Openapi Validator</a>
+  </li>
+  <li class="nav-item" data-depth="2">
     <a class="nav-link" href="opentelemetry.html">OpenTelemetry</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="platform-http-jolokia.html">Platform HTTP Jolokia</a>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="platform-http-main.html">Platform Http Main</a>
@@ -1567,7 +1637,7 @@
     <a class="nav-link" href="../eips/event-message.html">Event Message</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="../eips/failover-eip.html">Failover</a>
+    <a class="nav-link" href="../eips/failoverLoadBalancer-eip.html">Failover Load Balancer</a>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="../eips/faultToleranceConfiguration-eip.html">Fault Tolerance Configuration</a>
@@ -1597,13 +1667,13 @@
     <a class="nav-link" href="../eips/loadBalance-eip.html">Load Balance</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="../eips/log-eip.html">Log</a>
+    <a class="nav-link" href="../eips/log-eip.html">Logger</a>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="../eips/loop-eip.html">Loop</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="../eips/marshal-eip.html">Marshal EIP</a>
+    <a class="nav-link" href="../eips/marshal-eip.html">Marshal</a>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="../eips/message.html">Message</a>
@@ -1660,6 +1730,9 @@
     <a class="nav-link" href="../eips/point-to-point-channel.html">Point to Point Channel</a>
   </li>
   <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../eips/poll-eip.html">Poll</a>
+  </li>
+  <li class="nav-item" data-depth="2">
     <a class="nav-link" href="../eips/pollEnrich-eip.html">Poll Enrich</a>
   </li>
   <li class="nav-item" data-depth="2">
@@ -1675,7 +1748,7 @@
     <a class="nav-link" href="../eips/publish-subscribe-channel.html">Publish Subscribe Channel</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="../eips/random-eip.html">Random</a>
+    <a class="nav-link" href="../eips/randomLoadBalancer-eip.html">Random Load Balancer</a>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="../eips/recipientList-eip.html">Recipient List</a>
@@ -1717,7 +1790,7 @@
     <a class="nav-link" href="../eips/rollback-eip.html">Rollback</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="../eips/roundRobin-eip.html">Round Robin</a>
+    <a class="nav-link" href="../eips/roundRobinLoadBalancer-eip.html">Round Robin Load Balancer</a>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="../eips/routingSlip-eip.html">Routing Slip</a>
@@ -1729,7 +1802,7 @@
     <a class="nav-link" href="../eips/sample-eip.html">Sample</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="../eips/scatter-gather.html">Scatter Gather</a>
+    <a class="nav-link" href="../eips/scatter-gather.html">Scatter-Gather</a>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="../eips/script-eip.html">Script</a>
@@ -1759,6 +1832,9 @@
     <a class="nav-link" href="../eips/setVariable-eip.html">Set Variable</a>
   </li>
   <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../eips/setVariables-eip.html">Set Variables</a>
+  </li>
+  <li class="nav-item" data-depth="2">
     <a class="nav-link" href="../eips/sort-eip.html">Sort</a>
   </li>
   <li class="nav-item" data-depth="2">
@@ -1768,7 +1844,7 @@
     <a class="nav-link" href="../eips/step-eip.html">Step</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="../eips/sticky-eip.html">Sticky</a>
+    <a class="nav-link" href="../eips/stickyLoadBalancer-eip.html">Sticky Load Balancer</a>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="../eips/stop-eip.html">Stop</a>
@@ -1789,7 +1865,7 @@
     <a class="nav-link" href="../eips/toD-eip.html">To D</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="../eips/topic-eip.html">Topic</a>
+    <a class="nav-link" href="../eips/topicLoadBalancer-eip.html">Topic Load Balancer</a>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="../eips/transactional-client.html">Transactional Client</a>
@@ -1798,13 +1874,13 @@
     <a class="nav-link" href="../eips/transform-eip.html">Transform</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="../eips/unmarshal-eip.html">Unmarshal EIP</a>
+    <a class="nav-link" href="../eips/unmarshal-eip.html">Unmarshal</a>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="../eips/validate-eip.html">Validate</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="../eips/weighted-eip.html">Weighted</a>
+    <a class="nav-link" href="../eips/weightedLoadBalancer-eip.html">Weighted Load Balancer</a>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="../eips/wireTap-eip.html">Wire Tap</a>
@@ -1819,22 +1895,40 @@
 <div class="nav-panel-explore" data-panel="explore">
   <div class="context">
     <span class="title">Camel Components</span>
-    <span class="version">Next (Pre-release)</span>
+    <span class="version">4.8.x</span>
   </div>
   <ul class="components">
     <li class="component is-current">
-      <a class="title" href="../index.html">Camel Components</a>
+      <div class="title"><a href="../../4.10.x/index.html">Camel Components</a></div>
       <ul class="versions">
-        <li class="version is-current is-latest">
-          <a href="../index.html">Next (Pre-release)</a>
+        <li class="version is-latest">
+          <a href="../../4.10.x/index.html">4.10.x (LTS)</a>
+        </li>
+        <li class="version is-current">
+          <a href="../index.html">4.8.x</a>
+        </li>
+        <li class="version">
+          <a href="../../4.4.x/index.html">4.4.x</a>
+        </li>
+        <li class="version">
+          <a href="../../4.0.x/index.html">4.0.x</a>
         </li>
       </ul>
     </li>
     <li class="component">
-      <a class="title" href="../../../manual/index.html">User manual</a>
+      <div class="title"><a href="../../../manual/4.10.x/index.html">User manual</a></div>
       <ul class="versions">
         <li class="version is-latest">
-          <a href="../../../manual/index.html">default</a>
+          <a href="../../../manual/4.10.x/index.html">4.10.x</a>
+        </li>
+        <li class="version">
+          <a href="../../../manual/4.8.x/index.html">4.8.x</a>
+        </li>
+        <li class="version">
+          <a href="../../../manual/4.4.x/index.html">4.4.x</a>
+        </li>
+        <li class="version">
+          <a href="../../../manual/4.0.x/index.html">4.0.x</a>
         </li>
       </ul>
     </li>
@@ -1846,7 +1940,7 @@
 <main class="article">
 <div class="toolbar" role="navigation">
 <button class="nav-toggle"></button>
-  <a href="../../../manual/index.html" class="home-link"></a>
+  <a href="../../../manual/4.10.x/index.html" class="home-link"></a>
 <nav class="breadcrumbs" aria-label="breadcrumbs">
   <ul>
     <li><a href="../index.html">Camel Components</a></li>
@@ -1854,6 +1948,16 @@
     <li><a href="main.html">Main</a></li>
   </ul>
 </nav>
+<div class="page-versions">
+  <button class="version-menu-toggle" title="Show other versions of page">4.8.x</button>
+  <div class="version-menu">
+    <a class="version" href="../../4.10.x/others/main.html">4.10.x (LTS)</a>
+    <a class="version is-current" href="main.html">4.8.x</a>
+    <a class="version" href="../../4.4.x/others/main.html">4.4.x</a>
+    <a class="version is-missing" href="../../4.0.x/index.html">4.0.x</a>
+  </div>
+</div>
+<div class="edit-this-page"><a href="https://github.com/rhaetor/rh-camel-jboss/edit/camel-4.8.0-branch/docs/components/modules/others/pages/main.adoc">Edit this Page</a></div>
 </div>
   <div class="content">
 <aside class="toc sidebar" data-title="Contents" data-levels="2">
@@ -1883,7 +1987,7 @@
 <div class="sect2">
 <h3 id="_camel_main_configurations"><a class="anchor" href="#_camel_main_configurations"></a>Camel Main configurations</h3>
 <div class="paragraph">
-<p>The camel.main supports 117 options, which are listed below.</p>
+<p>The camel.main supports 121 options, which are listed below.</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
 <colgroup>
@@ -1950,24 +2054,6 @@
 <td class="tableblock halign-left valign-top"><p class="tableblock">boolean</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>camel.main.backlogTracing</strong></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Sets whether backlog tracing is enabled or not. Default is false.</p></td>
-<td class="tableblock halign-center valign-top"><p class="tableblock">false</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">boolean</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>camel.main.backlogTracing&#8203;Standby</strong></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Whether to set backlog tracing on standby. If on standby then the backlog tracer is installed and made available. Then the backlog tracer can be enabled later at runtime via JMX or via Java API. Default is false.</p></td>
-<td class="tableblock halign-center valign-top"><p class="tableblock">false</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">boolean</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>camel.main.backlogTracing&#8203;Templates</strong></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Whether backlog tracing should trace inner details from route templates (or kamelets). Turning this on increases the verbosity of tracing by including events from internal routes in the templates or kamelets. Default is false.</p></td>
-<td class="tableblock halign-center valign-top"><p class="tableblock">false</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">boolean</p></td>
-</tr>
-<tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>camel.main.basePackageScan</strong></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Package name to use as base (offset) for classpath scanning of RouteBuilder , org.apache.camel.TypeConverter , CamelConfiguration classes, and also classes annotated with org.apache.camel.Converter , or org.apache.camel.BindToRegistry . If you are using Spring Boot then it is instead recommended to use Spring Boots component scanning and annotate your route builder classes with Component. In other words only use this for Camel Main in standalone mode.</p></td>
 <td class="tableblock halign-center valign-top"></td>
@@ -1993,7 +2079,7 @@
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>camel.main.beanPostProcessor&#8203;Enabled</strong></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Can be used to turn off bean post processing. Be careful to turn this off, as this means that beans that use Camel annotations such as org.apache.camel.EndpointInject , org.apache.camel.ProducerTemplate , org.apache.camel.Produce , org.apache.camel.Consume etc will not be injected and in use. Turning this off should only be done if you are sure you do not use any of these Camel features. Not all runtimes allow turning this off (such as camel-blueprint or camel-cdi with XML). The default value is true (enabled).</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Can be used to turn off bean post processing. Be careful to turn this off, as this means that beans that use Camel annotations such as org.apache.camel.EndpointInject , org.apache.camel.ProducerTemplate , org.apache.camel.Produce , org.apache.camel.Consume etc will not be injected and in use. Turning this off should only be done if you are sure you do not use any of these Camel features. Not all runtimes allow turning this off. The default value is true (enabled).</p></td>
 <td class="tableblock halign-center valign-top"><p class="tableblock">true</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">boolean</p></td>
 </tr>
@@ -2008,6 +2094,12 @@
 <td class="tableblock halign-left valign-top"><p class="tableblock">Whether to use case sensitive or insensitive headers. Important: When using case sensitive (this is set to false). Then the map is case sensitive which means headers such as content-type and Content-Type are two different keys which can be a problem for some protocols such as HTTP based, which rely on case insensitive headers. However case sensitive implementations can yield faster performance. Therefore use case sensitive implementation with care. Default is true.</p></td>
 <td class="tableblock halign-center valign-top"><p class="tableblock">true</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">boolean</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>camel.main.cloudProperties&#8203;Location</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Sets the locations (comma separated values) where to find properties configuration as defined for cloud native environments such as Kubernetes. You should only scan text based mounted configuration.</p></td>
+<td class="tableblock halign-center valign-top"></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">String</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>camel.main.compileWorkDir</strong></p></td>
@@ -2214,6 +2306,18 @@
 <td class="tableblock halign-left valign-top"><p class="tableblock">String</p></td>
 </tr>
 <tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>camel.main.jmxManagement&#8203;RegisterRoutesCreateByKamelet</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Whether routes created by Kamelets should be registered for JMX management. Enabling this allows to have fine-grained monitoring and management of every route created via Kamelets. This is default disabled as a Kamelet is intended as a component (black-box) and its implementation details as Camel route makes the overall management and monitoring of Camel applications more verbose. During development of Kamelets then enabling this will make it possible for developers to do fine-grained performance inspection and identify potential bottlenecks in the Kamelet routes. However, for production usage then keeping this disabled is recommended.</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">false</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">boolean</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>camel.main.jmxManagement&#8203;RegisterRoutesCreateByTemplate</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Whether routes created by route templates (not Kamelets) should be registered for JMX management. Enabling this allows to have fine-grained monitoring and management of every route created via route templates. This is default enabled (unlike Kamelets) as routes created via templates is regarded as standard routes, and should be available for management and monitoring.</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">true</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">boolean</p></td>
+</tr>
+<tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>camel.main.jmxManagement&#8203;StatisticsLevel</strong></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Sets the JMX statistics level, the level can be set to Extended to gather additional information The default value is Default.</p></td>
 <td class="tableblock halign-center valign-top"><p class="tableblock">Default</p></td>
@@ -2268,6 +2372,24 @@
 <td class="tableblock halign-left valign-top"><p class="tableblock">boolean</p></td>
 </tr>
 <tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>camel.main.logName</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The global name to use for Log EIP The name is default the routeId or the source:line if source location is enabled. You can also specify the name using tokens: ${class} - the logger class name (org.apache.camel.processor.LogProcessor) ${contextId} - the camel context id ${routeId} - the route id ${groupId} - the route group id ${nodeId} - the node id ${nodePrefixId} - the node prefix id ${source} - the source:line (source location must be enabled) ${source.name} - the source filename (source location must be enabled) ${source.line} - the source line number (source location must be enabled) For example to use the route and node id you can specify the name as: ${routeId}/${nodeId}</p></td>
+<td class="tableblock halign-center valign-top"></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">String</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>camel.main.mainListenerClasses</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Sets classes names that will be used for MainListener that makes it possible to do custom logic during starting and stopping camel-main.</p></td>
+<td class="tableblock halign-center valign-top"></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">String</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>camel.main.mainListeners</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Sets main listener objects that will be used for MainListener that makes it possible to do custom logic during starting and stopping camel-main.</p></td>
+<td class="tableblock halign-center valign-top"></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">List</p></td>
+</tr>
+<tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>camel.main.mdcLoggingKeys&#8203;Pattern</strong></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Sets the pattern used for determine which custom MDC keys to propagate during message routing when the routing engine continues routing asynchronously for the given message. Setting this pattern to will propagate all custom keys. Or setting the pattern to foo,bar will propagate any keys starting with either foo or bar. Notice that a set of standard Camel MDC keys are always propagated which starts with camel. as key name. The match rules are applied in this order (case insensitive): 1. exact match, returns true 2. wildcard match (pattern ends with a and the name starts with the pattern), returns true 3. regular expression match, returns true 4. otherwise returns false</p></td>
 <td class="tableblock halign-center valign-top"></td>
@@ -2296,6 +2418,12 @@
 <td class="tableblock halign-left valign-top"><p class="tableblock">Producer template endpoints cache size.</p></td>
 <td class="tableblock halign-center valign-top"><p class="tableblock">1000</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">int</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>camel.main.profile</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Camel profile to use when running. The dev profile is for development, which enables a set of additional developer focus functionality, tracing, debugging, and gathering additional runtime statistics that are useful during development. However, those additional features has a slight overhead cost, and are not enabled for production profile. The default profile is prod.</p></td>
+<td class="tableblock halign-center valign-top"></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">String</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>camel.main.routeFilterExclude&#8203;Pattern</strong></p></td>
@@ -2659,7 +2787,7 @@
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>camel.routecontroller.enabled</strong></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">To enable using supervising route controller which allows Camel to startup and then the controller takes care of starting the routes in a safe manner. This can be used when you want to startup Camel despite a route may otherwise fail fast during startup and cause Camel to fail to startup as well. By delegating the route startup to the supervising route controller then its manages the startup using a background thread. The controller allows to be configured with various settings to attempt to restart failing routes.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">To enable using supervising route controller which allows Camel to start up and then, the controller takes care of starting the routes in a safe manner. This can be used when you want to start up Camel despite a route may otherwise fail fast during startup and cause Camel to fail to start up as well. By delegating the route startup to the supervising route controller, then it manages the startup using a background thread. The controller allows to be configured with various settings to attempt to restart failing routes.</p></td>
 <td class="tableblock halign-center valign-top"><p class="tableblock">false</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">boolean</p></td>
 </tr>
@@ -2689,14 +2817,14 @@
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>&#8203;camel.routecontroller.unhealthy&#8203;OnExhausted</strong></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Whether to mark the route as unhealthy (down) when all restarting attempts (backoff) have failed and the route is not successfully started and the route manager is giving up. Setting this to true allows health checks to know about this and can report the Camel application as DOWN. The default is false.</p></td>
-<td class="tableblock halign-center valign-top"><p class="tableblock">false</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Whether to mark the route as unhealthy (down) when all restarting attempts (backoff) have failed and the route is not successfully started and the route manager is giving up. If setting this to false will make health checks ignore this problem and allow to report the Camel application as UP.</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">true</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">boolean</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>&#8203;camel.routecontroller.unhealthy&#8203;OnRestarting</strong></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Whether to mark the route as unhealthy (down) when the route failed to initially start, and is being controlled for restarting (backoff). Setting this to true allows health checks to know about this and can report the Camel application as DOWN. The default is false.</p></td>
-<td class="tableblock halign-center valign-top"><p class="tableblock">false</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Whether to mark the route as unhealthy (down) when the route failed to initially start, and is being controlled for restarting (backoff). If setting this to false will make health checks ignore this problem and allow to report the Camel application as UP.</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">true</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">boolean</p></td>
 </tr>
 </tbody>
@@ -2705,7 +2833,7 @@
 <div class="sect2">
 <h3 id="_camel_embedded_http_server_only_for_standalone_not_spring_boot_or_quarkus_configurations"><a class="anchor" href="#_camel_embedded_http_server_only_for_standalone_not_spring_boot_or_quarkus_configurations"></a>Camel Embedded HTTP Server (only for standalone; not Spring Boot or Quarkus) configurations</h3>
 <div class="paragraph">
-<p>The camel.server supports 12 options, which are listed below.</p>
+<p>The camel.server supports 23 options, which are listed below.</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
 <colgroup>
@@ -2724,8 +2852,32 @@
 </thead>
 <tbody>
 <tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>camel.server.authentication&#8203;Enabled</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Whether to enable HTTP authentication for embedded server (for standalone applications; not Spring Boot or Quarkus).</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">false</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">boolean</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>camel.server.authentication&#8203;Path</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Set HTTP url path of embedded server that is protected by authentication configuration.</p></td>
+<td class="tableblock halign-center valign-top"></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">String</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>camel.server.basicProperties&#8203;File</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Name of the file that contains basic authentication info for Vert.x file auth provider.</p></td>
+<td class="tableblock halign-center valign-top"></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">String</p></td>
+</tr>
+<tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>camel.server.devConsoleEnabled</strong></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Whether to enable developer console (not intended for production use). Dev console must also be enabled on CamelContext. For example by setting camel.context.dev-console=true in application.properties, or via code camelContext.setDevConsole(true); If enabled then you can access a basic developer console on context-path: /q/dev.</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">false</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">boolean</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>camel.server.downloadEnabled</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Whether to enable file download via HTTP. This makes it possible to browse and download resource source files such as Camel XML or YAML routes. Only enable this for development, troubleshooting or special situations for management and monitoring.</p></td>
 <td class="tableblock halign-center valign-top"><p class="tableblock">false</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">boolean</p></td>
 </tr>
@@ -2748,10 +2900,34 @@
 <td class="tableblock halign-left valign-top"><p class="tableblock">String</p></td>
 </tr>
 <tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>camel.server.infoEnabled</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Whether to enable info console. If enabled then you can see some basic Camel information at /q/info</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">false</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">boolean</p></td>
+</tr>
+<tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>camel.server.jolokiaEnabled</strong></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Whether to enable jolokia. If enabled then you can access jolokia api on context-path: /q/jolokia</p></td>
 <td class="tableblock halign-center valign-top"><p class="tableblock">false</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">boolean</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>camel.server.jwtKeystore&#8203;Password</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Password from the keystore used for JWT tokens validation.</p></td>
+<td class="tableblock halign-center valign-top"></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">String</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>camel.server.jwtKeystorePath</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Path to the keystore file used for JWT tokens validation.</p></td>
+<td class="tableblock halign-center valign-top"></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">String</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>camel.server.jwtKeystoreType</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Type of the keystore used for JWT tokens validation (jks, pkcs12, etc.).</p></td>
+<td class="tableblock halign-center valign-top"></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">String</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>camel.server.maxBodySize</strong></p></td>
@@ -2778,6 +2954,24 @@
 <td class="tableblock halign-left valign-top"><p class="tableblock">int</p></td>
 </tr>
 <tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>camel.server.sendEnabled</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Whether to enable sending messages to Camel via HTTP. This makes it possible to use Camel to send messages to Camel endpoint URIs via HTTP.</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">false</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">boolean</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>camel.server.staticContextPath</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The context-path to use for serving static content. By default, the root path is used. And if there is an index.html page then this is automatically loaded.</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">/</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">String</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>camel.server.staticEnabled</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Whether serving static files is enabled. If enabled then Camel can host html/js and other web files that makes it possible to include small web applications.</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">false</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">boolean</p></td>
+</tr>
+<tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>camel.server.uploadEnabled</strong></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Whether to enable file upload via HTTP (not intended for production use). This functionality is for development to be able to reload Camel routes and code with source changes (if reload is enabled). If enabled then you can upload/delete files via HTTP PUT/DELETE on context-path: /q/upload/{name}. You must also configure the uploadSourceDir option.</p></td>
 <td class="tableblock halign-center valign-top"><p class="tableblock">false</p></td>
@@ -2801,7 +2995,7 @@
 <div class="sect2">
 <h3 id="_camel_debugger_configurations"><a class="anchor" href="#_camel_debugger_configurations"></a>Camel Debugger configurations</h3>
 <div class="paragraph">
-<p>The camel.debug supports 13 options, which are listed below.</p>
+<p>The camel.debug supports 15 options, which are listed below.</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
 <colgroup>
@@ -2834,7 +3028,7 @@
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>camel.debug.bodyMaxChars</strong></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">To limit the message body to a maximum size in the traced message. Use 0 or negative value to use unlimited size.</p></td>
-<td class="tableblock halign-center valign-top"><p class="tableblock">131072</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">32768</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">int</p></td>
 </tr>
 <tr>
@@ -2874,6 +3068,18 @@
 <td class="tableblock halign-left valign-top"><p class="tableblock">boolean</p></td>
 </tr>
 <tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>camel.debug.jmxConnector&#8203;Enabled</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Whether to create JMX connector that allows tooling to control the Camel debugger. This is what the IDEA and VSCode tooling is using.</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">true</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">boolean</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>camel.debug.jmxConnectorPort</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Port number to expose a JMX RMI connector for tooling that needs to control the debugger.</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">1099</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">int</p></td>
+</tr>
+<tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>camel.debug.loggingLevel</strong></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">The debugger logging level to use when logging activity.</p></td>
 <td class="tableblock halign-center valign-top"><p class="tableblock">INFO</p></td>
@@ -2901,9 +3107,9 @@
 </table>
 </div>
 <div class="sect2">
-<h3 id="_camel_ssl_configurations"><a class="anchor" href="#_camel_ssl_configurations"></a>Camel SSL configurations</h3>
+<h3 id="_camel_tracer_configurations"><a class="anchor" href="#_camel_tracer_configurations"></a>Camel Tracer configurations</h3>
 <div class="paragraph">
-<p>The camel.ssl supports 6 options, which are listed below.</p>
+<p>The camel.trace supports 14 options, which are listed below.</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
 <colgroup>
@@ -2922,6 +3128,138 @@
 </thead>
 <tbody>
 <tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>camel.trace.backlogSize</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Defines how many of the last messages to keep in the tracer (should be between 1 - 1000).</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">100</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">int</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>camel.trace.bodyIncludeFiles</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Whether to include the message body of file based messages. The overhead is that the file content has to be read from the file.</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">true</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">boolean</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>camel.trace.bodyIncludeStreams</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Whether to include the message body of stream based messages. If enabled then beware the stream may not be re-readable later. See more about Stream Caching.</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">false</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">boolean</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>camel.trace.bodyMaxChars</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">To limit the message body to a maximum size in the traced message. Use 0 or negative value to use unlimited size.</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">32768</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">int</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>camel.trace.enabled</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Enables tracer in your Camel application.</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">false</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">boolean</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>camel.trace.includeException</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Trace messages to include exception if the message failed</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">true</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">boolean</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>camel.trace.includeExchange&#8203;Properties</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Whether to include the exchange properties in the traced message</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">true</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">boolean</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>camel.trace.includeExchange&#8203;Variables</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Whether to include the exchange variables in the traced message</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">true</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">boolean</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>camel.trace.removeOnDump</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Whether all traced messages should be removed when the tracer is dumping. By default, the messages are removed, which means that dumping will not contain previous dumped messages.</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">true</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">boolean</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>camel.trace.standby</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">To set the tracer in standby mode, where the tracer will be installed by not automatic enabled. The tracer can then later be enabled explicit from Java, JMX or tooling.</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">false</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">boolean</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>camel.trace.traceFilter</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Filter for tracing messages</p></td>
+<td class="tableblock halign-center valign-top"></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">String</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>camel.trace.tracePattern</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Filter for tracing by route or node id</p></td>
+<td class="tableblock halign-center valign-top"></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">String</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>camel.trace.traceRests</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Whether to trace routes that is created from Rest DSL.</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">false</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">boolean</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>camel.trace.traceTemplates</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Whether to trace routes that is created from route templates or kamelets.</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">false</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">boolean</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="sect2">
+<h3 id="_camel_ssl_configurations"><a class="anchor" href="#_camel_ssl_configurations"></a>Camel SSL configurations</h3>
+<div class="paragraph">
+<p>The camel.ssl supports 19 options, which are listed below.</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 20%;">
+<col style="width: 50%;">
+<col style="width: 10%;">
+<col style="width: 20%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Name</th>
+<th class="tableblock halign-left valign-top">Description</th>
+<th class="tableblock halign-center valign-top">Default</th>
+<th class="tableblock halign-left valign-top">Type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>camel.ssl.certAlias</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">An optional certificate alias to use. This is useful when the keystore has multiple certificates.</p></td>
+<td class="tableblock halign-center valign-top"></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">String</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>camel.ssl.cipherSuites</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">List of TLS/SSL cipher suite algorithm names. Multiple names can be separated by comma.</p></td>
+<td class="tableblock halign-center valign-top"></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">String</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>camel.ssl.cipherSuitesExclude</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Filters TLS/SSL cipher suites algorithms names. This filter is used for excluding algorithms that matches the naming pattern. Multiple names can be separated by comma. Notice that if the cipherSuites option has been configured then the include/exclude filters are not in use.</p></td>
+<td class="tableblock halign-center valign-top"></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">String</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>camel.ssl.cipherSuitesInclude</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Filters TLS/SSL cipher suites algorithms names. This filter is used for including algorithms that matches the naming pattern. Multiple names can be separated by comma. Notice that if the cipherSuites option has been configured then the include/exclude filters are not in use.</p></td>
+<td class="tableblock halign-center valign-top"></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">String</p></td>
+</tr>
+<tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>camel.ssl.clientAuthentication</strong></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Sets the configuration for server-side client-authentication requirements</p></td>
 <td class="tableblock halign-center valign-top"><p class="tableblock">NONE</p></td>
@@ -2934,8 +3272,20 @@
 <td class="tableblock halign-left valign-top"><p class="tableblock">boolean</p></td>
 </tr>
 <tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>camel.ssl.keyManagerAlgorithm</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Algorithm name used for creating the KeyManagerFactory. See https://docs.oracle.com/en/java/javase/17/docs/specs/security/standard-names.html</p></td>
+<td class="tableblock halign-center valign-top"></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">String</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>camel.ssl.keyManagerProvider</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">To use a specific provider for creating KeyManagerFactory. The list of available providers returned by java.security.Security.getProviders() or null to use the highest priority provider implementing the secure socket protocol.</p></td>
+<td class="tableblock halign-center valign-top"></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">String</p></td>
+</tr>
+<tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>camel.ssl.keyStore</strong></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Sets the SSL Keystore resource.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The key store to load. The key store is by default loaded from classpath. If you must load from file system, then use file: as prefix. file:nameOfFile (to refer to the file system) classpath:nameOfFile (to refer to the classpath; default) http:uri (to load the resource using HTTP) ref:nameOfBean (to lookup an existing KeyStore instance from the registry, for example for testing and development).</p></td>
 <td class="tableblock halign-center valign-top"></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">String</p></td>
 </tr>
@@ -2946,8 +3296,50 @@
 <td class="tableblock halign-left valign-top"><p class="tableblock">String</p></td>
 </tr>
 <tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>camel.ssl.keyStoreProvider</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">To use a specific provider for creating KeyStore. The list of available providers returned by java.security.Security.getProviders() or null to use the highest priority provider implementing the secure socket protocol.</p></td>
+<td class="tableblock halign-center valign-top"></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">String</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>camel.ssl.keyStoreType</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The type of the key store to load. See https://docs.oracle.com/en/java/javase/17/docs/specs/security/standard-names.html</p></td>
+<td class="tableblock halign-center valign-top"></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">String</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>camel.ssl.provider</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">To use a specific provider for creating SSLContext. The list of available providers returned by java.security.Security.getProviders() or null to use the highest priority provider implementing the secure socket protocol.</p></td>
+<td class="tableblock halign-center valign-top"></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">String</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>camel.ssl.secureRandom&#8203;Algorithm</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Algorithm name used for creating the SecureRandom. See https://docs.oracle.com/en/java/javase/17/docs/specs/security/standard-names.html</p></td>
+<td class="tableblock halign-center valign-top"></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">String</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>camel.ssl.secureRandomProvider</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">To use a specific provider for creating SecureRandom. The list of available providers returned by java.security.Security.getProviders() or null to use the highest priority provider implementing the secure socket protocol.</p></td>
+<td class="tableblock halign-center valign-top"></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">String</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>camel.ssl.secureSocketProtocol</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The protocol for the secure sockets created by the SSLContext. See https://docs.oracle.com/en/java/javase/17/docs/specs/security/standard-names.html</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">TLSv1.3</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">String</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>camel.ssl.sessionTimeout</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Timeout in seconds to use for SSLContext. The default is 24 hours.</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">86400</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">int</p></td>
+</tr>
+<tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>camel.ssl.trustStore</strong></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Sets the SSL Truststore resource.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The trust store to load. The trust store is by default loaded from classpath. If you must load from file system, then use file: as prefix. file:nameOfFile (to refer to the file system) classpath:nameOfFile (to refer to the classpath; default) http:uri (to load the resource using HTTP) ref:nameOfBean (to lookup an existing KeyStore instance from the registry, for example for testing and development).</p></td>
 <td class="tableblock halign-center valign-top"></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">String</p></td>
 </tr>
@@ -3107,7 +3499,7 @@
 <div class="sect2">
 <h3 id="_camel_rest_dsl_configurations"><a class="anchor" href="#_camel_rest_dsl_configurations"></a>Camel Rest-DSL configurations</h3>
 <div class="paragraph">
-<p>The camel.rest supports 28 options, which are listed below.</p>
+<p>The camel.rest supports 29 options, which are listed below.</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
 <colgroup>
@@ -3166,6 +3558,12 @@
 <td class="tableblock halign-left valign-top"><p class="tableblock">Sets the binding mode to be used by the REST consumer</p></td>
 <td class="tableblock halign-center valign-top"><p class="tableblock">RestBindingMode.off</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">RestBindingMode</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>camel.rest.bindingPackageScan</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Package name to use as base (offset) for classpath scanning of POJO classes are located when using binding mode is enabled for JSon or XML. Multiple package names can be separated by comma.</p></td>
+<td class="tableblock halign-center valign-top"></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">String</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>camel.rest.clientRequest&#8203;Validation</strong></p></td>
@@ -3241,8 +3639,8 @@
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>camel.rest.inlineRoutes</strong></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Inline routes in rest-dsl which are linked using direct endpoints. By default, each service in Rest DSL is an individual route, meaning that you would have at least two routes per service (rest-dsl, and the route linked from rest-dsl). Enabling this allows Camel to optimize and inline this as a single route, however this requires to use direct endpoints, which must be unique per service. This option is default false.</p></td>
-<td class="tableblock halign-center valign-top"><p class="tableblock">false</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Inline routes in rest-dsl which are linked using direct endpoints. Each service in Rest DSL is an individual route, meaning that you would have at least two routes per service (rest-dsl, and the route linked from rest-dsl). By inlining (default) allows Camel to optimize and inline this as a single route, however this requires to use direct endpoints, which must be unique per service. If a route is not using direct endpoint then the rest-dsl is not inlined, and will become an individual route. This option is default true.</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">true</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">boolean</p></td>
 </tr>
 <tr>
@@ -3283,8 +3681,8 @@
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>camel.rest.useXForwardHeaders</strong></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Whether to use X-Forward headers to set host etc. for Swagger. This option is default true.</p></td>
-<td class="tableblock halign-center valign-top"><p class="tableblock">true</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Whether to use X-Forward headers to set host etc. for OpenApi. This may be needed in special cases involving reverse-proxy and networking going from HTTP to HTTPS etc. Then the proxy can send X-Forward headers (X-Forwarded-Proto) that influences the host names in the OpenAPI schema that camel-openapi-java generates from Rest DSL routes.</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">false</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">boolean</p></td>
 </tr>
 <tr>
@@ -3299,7 +3697,7 @@
 <div class="sect2">
 <h3 id="_camel_aws_vault_configurations"><a class="anchor" href="#_camel_aws_vault_configurations"></a>Camel AWS Vault configurations</h3>
 <div class="paragraph">
-<p>The camel.vault.aws supports 9 options, which are listed below.</p>
+<p>The camel.vault.aws supports 11 options, which are listed below.</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
 <colgroup>
@@ -3370,6 +3768,18 @@
 <td class="tableblock halign-left valign-top"><p class="tableblock">Specify the secret names (or pattern) to check for updates. Multiple secrets can be separated by comma.</p></td>
 <td class="tableblock halign-center valign-top"></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">String</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>camel.vault.aws.sqsQueueUrl</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">In case of usage of SQS notification this field will specified the Queue URL to use</p></td>
+<td class="tableblock halign-center valign-top"></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">String</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>camel.vault.aws.useSqs&#8203;Notification</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Whether to use AWS SQS for secrets updates notification, this will require setting up Eventbridge/Cloudtrail/SQS communication</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">false</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">boolean</p></td>
 </tr>
 </tbody>
 </table>
@@ -3537,9 +3947,93 @@
 </table>
 </div>
 <div class="sect2">
-<h3 id="_camel_opentelemtry_configurations"><a class="anchor" href="#_camel_opentelemtry_configurations"></a>Camel OpenTelemtry configurations</h3>
+<h3 id="_camel_kubernetes_vault_configurations"><a class="anchor" href="#_camel_kubernetes_vault_configurations"></a>Camel Kubernetes Vault configurations</h3>
 <div class="paragraph">
-<p>The camel.opentelemetry supports 4 options, which are listed below.</p>
+<p>The camel.vault.kubernetes supports 2 options, which are listed below.</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 20%;">
+<col style="width: 50%;">
+<col style="width: 10%;">
+<col style="width: 20%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Name</th>
+<th class="tableblock halign-left valign-top">Description</th>
+<th class="tableblock halign-center valign-top">Default</th>
+<th class="tableblock halign-left valign-top">Type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>camel.vault.kubernetes.refresh&#8203;Enabled</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Whether to automatically reload Camel upon secrets being updated in Kubernetes Cluster.</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">true</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">boolean</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>camel.vault.kubernetes.secrets</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Specify the secret names (or pattern) to check for updates. Multiple secrets can be separated by comma.</p></td>
+<td class="tableblock halign-center valign-top"></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">String</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="sect2">
+<h3 id="_camel_hashicorp_vault_configurations"><a class="anchor" href="#_camel_hashicorp_vault_configurations"></a>Camel Hashicorp Vault configurations</h3>
+<div class="paragraph">
+<p>The camel.vault.hashicorp supports 4 options, which are listed below.</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 20%;">
+<col style="width: 50%;">
+<col style="width: 10%;">
+<col style="width: 20%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Name</th>
+<th class="tableblock halign-left valign-top">Description</th>
+<th class="tableblock halign-center valign-top">Default</th>
+<th class="tableblock halign-left valign-top">Type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>camel.vault.hashicorp.host</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Host to access hashicorp vault</p></td>
+<td class="tableblock halign-center valign-top"></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">String</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>camel.vault.hashicorp.port</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Port to access hashicorp vault</p></td>
+<td class="tableblock halign-center valign-top"></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">String</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>camel.vault.hashicorp.scheme</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Scheme to access hashicorp vault</p></td>
+<td class="tableblock halign-center valign-top"></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">String</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>camel.vault.hashicorp.token</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Token to access hashicorp vault</p></td>
+<td class="tableblock halign-center valign-top"></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">String</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="sect2">
+<h3 id="_camel_opentelemetry_configurations"><a class="anchor" href="#_camel_opentelemetry_configurations"></a>Camel OpenTelemetry configurations</h3>
+<div class="paragraph">
+<p>The camel.opentelemetry supports 5 options, which are listed below.</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
 <colgroup>
@@ -3581,13 +4075,19 @@
 <td class="tableblock halign-center valign-top"><p class="tableblock">camel</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">String</p></td>
 </tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>camel.opentelemetry.trace&#8203;Processors</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Setting this to true will create new OpenTelemetry Spans for each Camel Processors. Use the excludePattern property to filter out Processors.</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">false</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">boolean</p></td>
+</tr>
 </tbody>
 </table>
 </div>
 <div class="sect2">
 <h3 id="_camel_micrometer_metrics_configurations"><a class="anchor" href="#_camel_micrometer_metrics_configurations"></a>Camel Micrometer Metrics configurations</h3>
 <div class="paragraph">
-<p>The camel.metrics supports 9 options, which are listed below.</p>
+<p>The camel.metrics supports 10 options, which are listed below.</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
 <colgroup>
@@ -3651,6 +4151,12 @@
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>camel.metrics.namingStrategy</strong></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Controls the name style to use for metrics. Default = uses micrometer naming convention. Legacy = uses the classic naming style (camelCase)</p></td>
 <td class="tableblock halign-center valign-top"><p class="tableblock">default</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">String</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>camel.metrics.routePolicyLevel</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Sets the level of information to capture. all = both context and routes.</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">all</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">String</p></td>
 </tr>
 <tr>
@@ -4149,7 +4655,7 @@ camel.beans.myApp[username] = goofy</code></pre>
 </div>
 <div class="paragraph">
 <p>Camel will then create this as a <code>LinkedHashMap</code> type with the name <code>myApp</code> which is
-bound to the Camel <a href="../../../manual/registry.html" class="xref page">Registry</a>, with the data defined in the properties.</p>
+bound to the Camel <a href="../../../manual/4.10.x/registry.html" class="xref page">Registry</a>, with the data defined in the properties.</p>
 </div>
 <div class="paragraph">
 <p>If you desire a different <code>java.util.Map</code> implementation, then you can use <code>#class</code> style as shown:</p>
@@ -4262,7 +4768,7 @@ Otherwise, if a parameter is set, and the bean does not have such a parameter, t
 <div class="sect2">
 <h3 id="_optional_parameter_values_on_beans"><a class="anchor" href="#_optional_parameter_values_on_beans"></a>Optional parameter values on beans</h3>
 <div class="paragraph">
-<p>If a parameter value on a bean is configured using <a href="../../../manual/using-propertyplaceholder.html" class="xref page">Property Placeholder</a>
+<p>If a parameter value on a bean is configured using <a href="../../../manual/4.10.x/using-propertyplaceholder.html" class="xref page">Property Placeholder</a>
 and the placeholder is optional, then the placeholder can be marked as optional using <code>?</code> syntax, as shown:</p>
 </div>
 <div class="listingblock">
@@ -4432,6 +4938,8 @@ which demonstrate running Camel in standalone with <code>camel-main</code>.</p>
 </main>
 </div>
 <footer class="footer">
+  <p>This page was built using the Antora default UI.</p>
+  <p>The source code for this UI is licensed under the terms of the MPL-2.0 license.</p>
 </footer>
 <script id="site-script" src="../../../_/js/site.js" data-ui-root-path="../../../_"></script>
 <script async src="../../../_/js/vendor/highlight.js"></script>

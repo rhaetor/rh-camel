@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>Salesforce :: Red Hat Camel Reference</title>
+    <title>Salesforce :: Red Hat build of Apache Camel</title>
     <meta name="description" content="Communicate with Salesforce using Java DTOs.">
     <meta name="generator" content="Antora 3.1.4">
     <link rel="stylesheet" href="../../_/css/site.css">
@@ -12,7 +12,7 @@
 <header class="header">
   <nav class="navbar">
     <div class="navbar-brand">
-      <a class="navbar-item" href="../../manual/index.html">Red Hat build of Apache Camel manual</a>
+      <a class="navbar-item" href="/">Red Hat build of Apache Camel</a>
       <button class="navbar-burger" data-target="topbar-nav">
         <span></span>
         <span></span>
@@ -22,11 +22,12 @@
   </nav>
 </header>
 <div class="body">
-<div class="nav-container" data-component="components" data-version="next">
+<div class="nav-container" data-component="components" data-version="4.4.x">
   <aside class="nav">
     <div class="panels">
 <div class="nav-panel-menu is-active" data-panel="menu">
   <nav class="nav-menu">
+    <button class="nav-menu-toggle" aria-label="Toggle expand/collapse all" style="display: none"></button>
     <h3 class="title"><a href="index.html">Camel Components</a></h3>
 <ul class="nav-list">
   <li class="nav-item" data-depth="0">
@@ -912,6 +913,33 @@
     <a class="nav-link" href="splunk-hec-component.html">Splunk HEC</a>
   </li>
   <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="spring-summary.html">Spring</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="spring-batch-component.html">Spring Batch</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="spring-event-component.html">Spring Event</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="spring-jdbc-component.html">Spring JDBC</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="spring-ldap-component.html">Spring LDAP</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="spring-rabbitmq-component.html">Spring RabbitMQ</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="spring-redis-component.html">Spring Redis</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="spring-ws-component.html">Spring WebService</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
     <a class="nav-link" href="sql-component.html">SQL</a>
   </li>
   <li class="nav-item" data-depth="2">
@@ -1792,22 +1820,40 @@
 <div class="nav-panel-explore" data-panel="explore">
   <div class="context">
     <span class="title">Camel Components</span>
-    <span class="version">Next (Pre-release)</span>
+    <span class="version">4.4.x</span>
   </div>
   <ul class="components">
     <li class="component is-current">
-      <a class="title" href="index.html">Camel Components</a>
+      <div class="title"><a href="../4.10.x/index.html">Camel Components</a></div>
       <ul class="versions">
-        <li class="version is-current is-latest">
-          <a href="index.html">Next (Pre-release)</a>
+        <li class="version is-latest">
+          <a href="../4.10.x/index.html">4.10.x (LTS)</a>
+        </li>
+        <li class="version">
+          <a href="../4.8.x/index.html">4.8.x</a>
+        </li>
+        <li class="version is-current">
+          <a href="index.html">4.4.x</a>
+        </li>
+        <li class="version">
+          <a href="../4.0.x/index.html">4.0.x</a>
         </li>
       </ul>
     </li>
     <li class="component">
-      <a class="title" href="../../manual/index.html">User manual</a>
+      <div class="title"><a href="../../manual/4.10.x/index.html">User manual</a></div>
       <ul class="versions">
         <li class="version is-latest">
-          <a href="../../manual/index.html">default</a>
+          <a href="../../manual/4.10.x/index.html">4.10.x</a>
+        </li>
+        <li class="version">
+          <a href="../../manual/4.8.x/index.html">4.8.x</a>
+        </li>
+        <li class="version">
+          <a href="../../manual/4.4.x/index.html">4.4.x</a>
+        </li>
+        <li class="version">
+          <a href="../../manual/4.0.x/index.html">4.0.x</a>
         </li>
       </ul>
     </li>
@@ -1819,7 +1865,7 @@
 <main class="article">
 <div class="toolbar" role="navigation">
 <button class="nav-toggle"></button>
-  <a href="../../manual/index.html" class="home-link"></a>
+  <a href="../../manual/4.10.x/index.html" class="home-link"></a>
 <nav class="breadcrumbs" aria-label="breadcrumbs">
   <ul>
     <li><a href="index.html">Camel Components</a></li>
@@ -1827,6 +1873,16 @@
     <li><a href="salesforce-component.html">Salesforce</a></li>
   </ul>
 </nav>
+<div class="page-versions">
+  <button class="version-menu-toggle" title="Show other versions of page">4.4.x</button>
+  <div class="version-menu">
+    <a class="version" href="../4.10.x/salesforce-component.html">4.10.x (LTS)</a>
+    <a class="version" href="../4.8.x/salesforce-component.html">4.8.x</a>
+    <a class="version is-current" href="salesforce-component.html">4.4.x</a>
+    <a class="version is-missing" href="../4.0.x/index.html">4.0.x</a>
+  </div>
+</div>
+<div class="edit-this-page"><a href="https://github.com/rhaetor/rh-camel-jboss/edit/camel-4.4.0-branch/docs/components/modules/ROOT/pages/salesforce-component.adoc">Edit this Page</a></div>
 </div>
   <div class="content">
 <aside class="toc sidebar" data-title="Contents" data-levels="2">
@@ -1857,7 +1913,7 @@ generates these DTOs.</p>
 <div class="paragraph">
 <p>Developers wishing to contribute to the component are instructed
 to look at the <a href="https://github.com/apache/camel/tree/main/components/camel-salesforce/camel-salesforce-component/README.md">README.md</a> file on instructions on how to get started and
-setup your environment for running integration tests.</p>
+set up your environment for running integration tests.</p>
 </div>
 </td>
 </tr>
@@ -1908,7 +1964,7 @@ setup your environment for running integration tests.</p>
 <p><strong>Generate DTOs</strong>. Optionally, generate Java DTOs to represent your salesforce objects. This step isn&#8217;t a hard requirement per se, but most use cases will benefit from the type safety and auto-completion. Use the <a href="#MavenPlugin">maven plugin</a> to generate DTOs for the salesforce objects you&#8217;ll be working with.</p>
 </li>
 <li>
-<p><strong>Configure authentication</strong>. Using the OAuth key and secret you generated previously, configure salesforce <a href="#AuthenticatingToSalesforce">authentication</a>.</p>
+<p><strong>Configure authentication</strong>. Using the OAuth key and secret, you generated previously, configure salesforce <a href="#AuthenticatingToSalesforce">authentication</a>.</p>
 </li>
 <li>
 <p><strong>Create routes</strong>. Starting creating routes that interact with salesforce!</p>
@@ -1937,14 +1993,14 @@ setup your environment for running integration tests.</p>
 <h3 id="_configuring_component_options"><a class="anchor" href="#_configuring_component_options"></a>Configuring Component Options</h3>
 <div class="paragraph">
 <p>The component level is the highest level which holds general and common configurations that are inherited by the endpoints.
-For example a component may have security settings, credentials for authentication, urls for network connection and so forth.</p>
+For example, a component may have security settings, credentials for authentication, urls for network connection and so forth.</p>
 </div>
 <div class="paragraph">
 <p>Some components only have a few options, and others may have many. Because components typically have pre configured defaults
 that are commonly used, then you may often only need to configure a few options on a component; or none at all.</p>
 </div>
 <div class="paragraph">
-<p>Configuring components can be done with the <a href="../../manual/component-dsl.html" class="xref page">Component DSL</a>,
+<p>Configuring components can be done with the <a href="../../manual/4.10.x/component-dsl.html" class="xref page">Component DSL</a>,
 in a configuration file (application.properties|yaml), or directly with Java code.</p>
 </div>
 </div>
@@ -1957,11 +2013,11 @@ or as a producer (to), or used for both.</p>
 </div>
 <div class="paragraph">
 <p>Configuring endpoints is most often done directly in the endpoint URI as path and query parameters. You can also use
-the <a href="../../manual/Endpoint-dsl.html" class="xref page">Endpoint DSL</a> and <a href="../../manual/dataformat-dsl.html" class="xref page">DataFormat DSL</a>
+the <a href="../../manual/4.10.x/Endpoint-dsl.html" class="xref page">Endpoint DSL</a> and <a href="../../manual/4.10.x/dataformat-dsl.html" class="xref page">DataFormat DSL</a>
 as a <em>type safe</em> way of configuring endpoints and data formats in Java.</p>
 </div>
 <div class="paragraph">
-<p>A good practice when configuring options is to use <a href="../../manual/using-propertyplaceholder.html" class="xref page">Property Placeholders</a>,
+<p>A good practice when configuring options is to use <a href="../../manual/4.10.x/using-propertyplaceholder.html" class="xref page">Property Placeholders</a>,
 which allows to not hardcode urls, port numbers, sensitive information, and other settings.
 In other words placeholders allows to externalize the configuration from your code, and gives more flexibility and reuse.</p>
 </div>
@@ -2776,7 +2832,7 @@ In other words placeholders allows to externalize the configuration from your co
 <td class="tableblock halign-left valign-top"><p class="tableblock"><a id="_component_option_rawPath"></a>
 <a href="#_component_option_rawPath" class="anchor"></a><strong>rawPath</strong> (producer)</p></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>The portion of the endpoint URL after the domain name. E.g., '/services/data/v52.0/sobjects/Account/'.</p>
+<p>The portion of the endpoint URL after the domain name. for example, '/services/data/v52.0/sobjects/Account/'.</p>
 </div></div></td>
 <td class="tableblock halign-center valign-top"></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">String</p></td>
@@ -4071,7 +4127,7 @@ In other words placeholders allows to externalize the configuration from your co
 <td class="tableblock halign-left valign-top"><p class="tableblock"><a id="_endpoint_query_option_rawPath"></a>
 <a href="#_endpoint_query_option_rawPath" class="anchor"></a><strong>rawPath</strong> (producer)</p></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>The portion of the endpoint URL after the domain name. E.g., '/services/data/v52.0/sobjects/Account/'.</p>
+<p>The portion of the endpoint URL after the domain name. for example, '/services/data/v52.0/sobjects/Account/'.</p>
 </div></div></td>
 <td class="tableblock halign-center valign-top"></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">String</p></td>
@@ -4345,7 +4401,7 @@ In other words placeholders allows to externalize the configuration from your co
 </ul>
 </div>
 <div class="paragraph">
-<p>For each of the flows, different sets of properties needs to be set:</p>
+<p>For each of the flows, different sets of properties need to be set:</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
 <caption class="title">Table 1. Properties to set for each authentication flow</caption>
@@ -4395,7 +4451,7 @@ In other words placeholders allows to externalize the configuration from your co
 </tbody>
 </table>
 <div class="paragraph">
-<p>The component auto determines what flow you&#8217;re trying to configure. In order to be explicit, set the
+<p>The component auto determines what flow you&#8217;re trying to configure. To be explicit, set the
 <code>authenticationType</code> property.</p>
 </div>
 <div class="admonitionblock note">
@@ -4422,7 +4478,7 @@ In other words placeholders allows to externalize the configuration from your co
 <div class="paragraph">
 <p>The certificate used in JWT Bearer Token Flow can be a self-signed
 certificate. The KeyStore holding the certificate and the private key
-must contain only single certificate-private key entry.</p>
+must contain only a single certificate-private key entry.</p>
 </div>
 </td>
 </tr>
@@ -4473,7 +4529,7 @@ response headers that start with <code>Sforce</code> will be present in the outb
 message headers.</p>
 </div>
 <div class="paragraph">
-<p>For example to fetch API limits you can specify:</p>
+<p>For example, to fetch API limits, you can specify:</p>
 </div>
 <div class="listingblock">
 <div class="content">
@@ -4599,8 +4655,8 @@ send null values to salesforce, use the <code>fieldsToNull</code> property, as f
 <p><a href="#query">query</a> - Runs a Salesforce SOQL query.</p>
 </li>
 <li>
-<p><a href="#queryMore">queryMore</a> - Retrieves more results (in case of large number of
-results) using result link returned from the 'query' API.</p>
+<p><a href="#queryMore">queryMore</a> - Retrieves more results (in case of a large number of
+results) using the result link returned from the 'query' API.</p>
 </li>
 <li>
 <p><a href="#queryAll">queryAll</a> - Runs a SOQL query. Unlike the query operation, queryAll returns records that are deleted because of a merge or delete. queryAll also returns information about archived task and event records.</p>
@@ -4835,7 +4891,7 @@ as well as the maximum batch size permitted in queries.</p>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>sObjectName</code></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>String</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Name of SObject, e.g. <code>Account</code>. Alternatively, can be supplied in Body.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Name of SObject, for example, <code>Account</code>. Alternatively, can be supplied in Body.</p></td>
 <td class="tableblock halign-left valign-top"></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">x</p></td>
 </tr>
@@ -4877,7 +4933,7 @@ as well as the maximum batch size permitted in queries.</p>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>sObjectName</code></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>String</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Name of SObject, e.g. <code>Account</code>. Alternatively, can be supplied in Body.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Name of SObject, for example, <code>Account</code>. Alternatively, can be supplied in Body.</p></td>
 <td class="tableblock halign-left valign-top"></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">x</p></td>
 </tr>
@@ -4919,7 +4975,7 @@ as well as the maximum batch size permitted in queries.</p>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>sObjectName</code></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>String</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Name of SObject, e.g. <code>Account</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Name of SObject, for example, <code>Account</code></p></td>
 <td class="tableblock halign-left valign-top"></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">x</p></td>
 </tr>
@@ -4997,7 +5053,7 @@ overrides <code>sObjectName</code> and <code>sObjectId</code> parameters.</p></t
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>sObjectName</code></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>String</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Name of SObject, e.g. <code>Account</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Name of SObject, for example, <code>Account</code></p></td>
 <td class="tableblock halign-left valign-top"></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">x</p></td>
 </tr>
@@ -5054,7 +5110,7 @@ overrides <code>sObjectName</code> and <code>sObjectIdValue</code> parameters.</
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>sObjectName</code></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>String</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Name of SObject, e.g. Account</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Name of SObject, for example, Account</p></td>
 <td class="tableblock halign-left valign-top"></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Required if SObject not supplied in body</p></td>
 </tr>
@@ -5119,7 +5175,7 @@ and <code>sObjectName</code> are not supplied</p></td>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>sObjectName</code></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>String</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Name of SObject, e.g. <code>Account</code>. Only used if Camel cannot determine from Body.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Name of SObject, for example, <code>Account</code>. Only used if Camel cannot determine from Body.</p></td>
 <td class="tableblock halign-left valign-top"></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">If Body is a <code>String</code></p></td>
 </tr>
@@ -5168,7 +5224,7 @@ and <code>sObjectName</code> are not supplied</p></td>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>sObjectName</code></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>String</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Name of SObject, e.g. <code>Account</code>. Only used if Camel cannot determine from Body.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Name of SObject, for example, <code>Account</code>. Only used if Camel cannot determine from Body.</p></td>
 <td class="tableblock halign-left valign-top"></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">If Body is a <code>String</code></p></td>
 </tr>
@@ -5232,7 +5288,7 @@ and <code>sObjectName</code> are not supplied</p></td>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>sObjectName</code></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>String</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Name of SObject, e.g. <code>Account</code>. Only used if Camel cannot determine from Body.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Name of SObject, for example, <code>Account</code>. Only used if Camel cannot determine from Body.</p></td>
 <td class="tableblock halign-left valign-top"></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">If Body is a <code>String</code></p></td>
 </tr>
@@ -5281,7 +5337,7 @@ and <code>sObjectName</code> are not supplied</p></td>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>sObjectName</code></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>String</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Name of SObject, e.g. <code>Account</code>. Only used if Camel cannot determine from Body.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Name of SObject, for example, <code>Account</code>. Only used if Camel cannot determine from Body.</p></td>
 <td class="tableblock halign-left valign-top"></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">If Body is not an <code>AbstractSObjectBase</code> instance</p></td>
 </tr>
@@ -5345,7 +5401,7 @@ and <code>sObjectName</code> are not supplied</p></td>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>sObjectName</code></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>String</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Name of SObject, e.g. <code>Account</code>. Only used if Camel cannot determine from Body.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Name of SObject, for example, <code>Account</code>. Only used if Camel cannot determine from Body.</p></td>
 <td class="tableblock halign-left valign-top"></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">If Body is not an <code>AbstractSObjectBase</code> instance</p></td>
 </tr>
@@ -5396,14 +5452,14 @@ the correct <code>AbstractQueryRecordsBase</code> sublcass based on the response
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>sObjectClass</code></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>String</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Fully qualified name of class to deserialize response to. Usually a subclass of <code>AbstractQueryRecordsBase</code>, e.g. <code>org.my.dto.QueryRecordsAccount</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Fully qualified name of class to deserialize response to. Usually a subclass of <code>AbstractQueryRecordsBase</code>, for example, <code>org.my.dto.QueryRecordsAccount</code></p></td>
 <td class="tableblock halign-left valign-top"></td>
 <td class="tableblock halign-left valign-top"></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>sObjectName</code></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>String</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Simple name of class to deserialize response to. Usually a subclass of <code>AbstractQueryRecordsBase</code>, e.g. <code>QueryRecordsAccount</code>. Requires the <code>package</code> option be set.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Simple name of class to deserialize response to. Usually a subclass of <code>AbstractQueryRecordsBase</code>, for example, <code>QueryRecordsAccount</code>. Requires the <code>package</code> option be set.</p></td>
 <td class="tableblock halign-left valign-top"></td>
 <td class="tableblock halign-left valign-top"></td>
 </tr>
@@ -5454,14 +5510,14 @@ operations. If neither <code>sObjectClass</code> nor <code>sObjectName</code> ar
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>sObjectClass</code></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>String</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Fully qualified name of class to deserialize response to. Usually a subclass of <code>AbstractQueryRecordsBase</code>, e.g. <code>org.my.dto.QueryRecordsAccount</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Fully qualified name of class to deserialize response to. Usually a subclass of <code>AbstractQueryRecordsBase</code>, for example, <code>org.my.dto.QueryRecordsAccount</code></p></td>
 <td class="tableblock halign-left valign-top"></td>
 <td class="tableblock halign-left valign-top"></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>sObjectName</code></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>String</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Simple name of class to deserialize response to. Usually a subclass of <code>AbstractQueryRecordsBase</code>, e.g. <code>QueryRecordsAccount</code>. Requires the <code>package</code> option be set.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Simple name of class to deserialize response to. Usually a subclass of <code>AbstractQueryRecordsBase</code>, for example, <code>QueryRecordsAccount</code>. Requires the <code>package</code> option be set.</p></td>
 <td class="tableblock halign-left valign-top"></td>
 <td class="tableblock halign-left valign-top"></td>
 </tr>
@@ -5520,14 +5576,14 @@ response.</p>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>sObjectClass</code></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>String</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Fully qualified name of class to deserialize response to. Usually a subclass of <code>AbstractQueryRecordsBase</code>, e.g. <code>org.my.dto.QueryRecordsAccount</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Fully qualified name of class to deserialize response to. Usually a subclass of <code>AbstractQueryRecordsBase</code>, for example, <code>org.my.dto.QueryRecordsAccount</code></p></td>
 <td class="tableblock halign-left valign-top"></td>
 <td class="tableblock halign-left valign-top"></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>sObjectName</code></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>String</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Simple name of class to deserialize response to. Usually a subclass of <code>AbstractQueryRecordsBase</code>, e.g. <code>QueryRecordsAccount</code>. Requires the <code>package</code> option be set.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Simple name of class to deserialize response to. Usually a subclass of <code>AbstractQueryRecordsBase</code>, for example, <code>QueryRecordsAccount</code>. Requires the <code>package</code> option be set.</p></td>
 <td class="tableblock halign-left valign-top"></td>
 <td class="tableblock halign-left valign-top"></td>
 </tr>
@@ -5663,7 +5719,7 @@ a batch.</p>
 </ol>
 </div>
 <div class="paragraph">
-<p>For example to send one record for approval using values in headers use:</p>
+<p>For example, to send one record for approval using values in headers use:</p>
 </div>
 <div class="paragraph">
 <p>Given a route:</p>
@@ -5791,7 +5847,7 @@ by the route</p></td>
 <div class="paragraph">
 <p>As with the batch API, the results can vary from API to API so the body of each <code>SObjectCompositeResult</code> instance is given as a
 <code>java.lang.Object</code>. In most cases the result will be a <code>java.util.Map</code> with string keys and values or other
-<code>java.util.Map</code> as value. Requests are made in JSON format hold some type information (i.e. it is known what values are
+<code>java.util.Map</code> as value. Requests are made in JSON format hold some type information (that is, it is known what values are
 strings and what values are numbers).</p>
 </div>
 </td>
@@ -5799,7 +5855,7 @@ strings and what values are numbers).</p>
 </table>
 </div>
 <div class="paragraph">
-<p>Lets look at an example:</p>
+<p>Let&#8217;s look at an example:</p>
 </div>
 <div class="listingblock">
 <div class="content">
@@ -5924,12 +5980,12 @@ the identifier values (<code>Id</code> property) or their corresponding
 <p>Note that for some records operation can succeed and for some it can fail&#8201;&#8212;&#8201;so you need to manually check for errors.</p>
 </div>
 <div class="paragraph">
-<p>Easiest way to use this functionality is to use the DTOs generated by the <code>camel-salesforce-maven-plugin</code>, but you
-also have the option of customizing the references that identify the each object in the tree, for instance primary keys
+<p>The easiest way to use this functionality is to use the DTOs generated by the <code>camel-salesforce-maven-plugin</code>, but you
+also have the option of customizing the references that identify each object in the tree, for instance primary keys
 from your database.</p>
 </div>
 <div class="paragraph">
-<p>Lets look at an example:</p>
+<p>Let&#8217;s look at an example:</p>
 </div>
 <div class="listingblock">
 <div class="content">
@@ -6012,14 +6068,14 @@ list of responses with the order preserved, so that the n-th requests response i
 <td class="content">
 <div class="paragraph">
 <p>The results can vary from API to API so the result of each sub-request (<code>SObjectBatchResult.result</code>) is given as a <code>java.lang.Object</code>. In most cases
-the result will be a <code>java.util.Map</code> with string keys and values or other <code>java.util.Map</code> as value. Requests are made in JSON format and hold some type information (i.e. it is known what values are strings and what values are numbers).</p>
+the result will be a <code>java.util.Map</code> with string keys and values or other <code>java.util.Map</code> as value. Requests are made in JSON format and hold some type information (that is, it is known what values are strings and what values are numbers).</p>
 </div>
 </td>
 </tr>
 </table>
 </div>
 <div class="paragraph">
-<p>Lets look at an example:</p>
+<p>Let&#8217;s look at an example:</p>
 </div>
 <div class="listingblock">
 <div class="content">
@@ -6105,14 +6161,14 @@ final Object updateResultData = deleteResult.getResult(); // probably null</code
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">sObjectName</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">String</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Type of SObject, e.g. <code>Account</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Type of SObject, for example, <code>Account</code></p></td>
 <td class="tableblock halign-left valign-top"></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">x</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">sObjectClass</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">String</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Fully-qualified class name of DTO class to use for deserializing the response.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Fully qualified class name of DTO class to use for deserializing the response.</p></td>
 <td class="tableblock halign-left valign-top"></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Required if <code>sObjectName</code> parameter does not resolve to a class that exists in the package specified by the <code>package</code> option.</p></td>
 </tr>
@@ -6266,7 +6322,7 @@ final Object updateResultData = deleteResult.getResult(); // probably null</code
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>sObjectName</code></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>String</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Type of SObject, e.g. <code>Account</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Type of SObject, for example, <code>Account</code></p></td>
 <td class="tableblock halign-left valign-top"></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">x</p></td>
 </tr>
@@ -6447,14 +6503,14 @@ is transformed into query parameters. For other HTTP methods, the body is used f
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>apexUrl</code></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>String</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">The portion of the endpoint URL after <code><a href="https://instance.salesforce.com/services/apexrest/" class="bare">https://instance.salesforce.com/services/apexrest/</a></code>, e.g., 'MyApexClass/'</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The portion of the endpoint URL after <code><a href="https://instance.salesforce.com/services/apexrest/" class="bare">https://instance.salesforce.com/services/apexrest/</a></code>, for example, 'MyApexClass/'</p></td>
 <td class="tableblock halign-left valign-top"></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Yes, unless supplied in endpoint</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>apexMethod</code></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>String</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">The HTTP method (e.g. <code>GET</code>, <code>POST</code>) to use.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The HTTP method (for example, <code>GET</code>, <code>POST</code>) to use.</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>GET</code></p></td>
 <td class="tableblock halign-left valign-top"></td>
 </tr>
@@ -6475,7 +6531,7 @@ is transformed into query parameters. For other HTTP methods, the body is used f
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>sObjectName</code></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>String</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Name of sObject (e.g. <code>Merchandise__c</code>) used to deserialize the response</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Name of sObject (for example, <code>Merchandise__c</code>) used to deserialize the response</p></td>
 <td class="tableblock halign-left valign-top"></td>
 <td class="tableblock halign-left valign-top"></td>
 </tr>
@@ -7264,8 +7320,8 @@ to be set in the <code>queryLocator</code> parameter on subsequent calls.</p>
 <h3 id="BulkAPI"><a class="anchor" href="#BulkAPI"></a>Bulk (original) API</h3>
 <div class="paragraph">
 <p>Producer endpoints can use the following APIs. All Job data formats,
-i.e. xml, csv, zip/xml, and zip/csv are supported.<br>
- The request and response have to be marshalled/unmarshalled by the
+that is, xml, csv, zip/xml, and zip/csv are supported.<br>
+ The request and response have to be marshaled/unmarshaled by the
 route. Usually the request will be some stream source like a CSV file,
  and the response may also be saved to a file to be correlated with the
 request.</p>
@@ -7974,7 +8030,7 @@ is supported via the pkChunking* options. See an explanation <a href="https://de
 <td class="tableblock halign-left valign-top"><p class="tableblock">Body</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>BatchInfo</code> or <code>String</code></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>JobInfo</code> instance from which <code>jobId</code> and <code>batchId</code> will be used.
-Otherwise can be a <code>String</code> containing the <code>resultId</code></p></td>
+Otherwise, can be a <code>String</code> containing the <code>resultId</code></p></td>
 <td class="tableblock halign-left valign-top"></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>BatchInfo</code> Required if <code>jobId</code> and <code>BatchId</code> not supplied</p></td>
 </tr>
@@ -8067,7 +8123,7 @@ attempt to serialize event payloads from the following input types:</p>
 <div class="ulist">
 <ul>
 <li>
-<p>Avro <code>GenericRecord</code>. Camel fetches the Avro schema in order to serialize <code>GenericRecord</code>
+<p>Avro <code>GenericRecord</code>. Camel fetches the Avro schema to serialize <code>GenericRecord</code>
 instances. This option doesn&#8217;t require ahead-of-time generation of Event classes.</p>
 </li>
 <li>
@@ -8075,7 +8131,7 @@ instances. This option doesn&#8217;t require ahead-of-time generation of Event c
 event type. The <a href="#MavenPlugin">maven plugin</a> can generate the subclasses automatically.</p>
 </li>
 <li>
-<p>POJO. Camel fetches the Avro schema in order to serialize POJO instances. The POJO&#8217;s
+<p>POJO. Camel fetches the Avro schema to serialize POJO instances. The POJO&#8217;s
 field names must match event field names exactly, including case.</p>
 </li>
 <li>
@@ -8089,7 +8145,7 @@ field names must match event field names exactly, including case.</p>
 </li>
 <li>
 <p><code>com.salesforce.eventbus.protobuf.ProducerEvent</code>. Providing a <code>ProducerEvent</code> allows full control,
-e.g. setting the <code>id</code> property, which can be tied back to the <code>PublishResult.CorrelationKey</code>.</p>
+for example, setting the <code>id</code> property, which can be tied back to the <code>PublishResult.CorrelationKey</code>.</p>
 </li>
 </ul>
 </div>
@@ -8337,7 +8393,7 @@ Data Capture events.</p>
 <div class="sect3">
 <h4 id="_platform_events"><a class="anchor" href="#_platform_events"></a>Platform Events</h4>
 <div class="paragraph">
-<p>To emit a platform event use the <a href="#createSObject">createSObject</a> operation, passing an instance of a platform event, e.g. <code>Order_Event__e</code>.</p>
+<p>To emit a platform event use the <a href="#createSObject">createSObject</a> operation, passing an instance of a platform event, for example, <code>Order_Event__e</code>.</p>
 </div>
 <div class="paragraph">
 <p>The URI format for consuming platform events is:</p>
@@ -8413,7 +8469,7 @@ Data Capture events.</p>
 <div class="sect3">
 <h4 id="_change_data_capture_events"><a class="anchor" href="#_change_data_capture_events"></a>Change Data Capture Events</h4>
 <div class="paragraph">
-<p>Change Data Capture (CDC) allows you to receive near-real-time changes of Salesforce records, and synchronize corresponding records in an external data store. Change Data Capture publishes change events, which represent changes to Salesforce records. Changes include creation of a new record, updates to an existing record, deletion of a record, and undeletion of a record.</p>
+<p>Change Data Capture (CDC) allows you to receive near-real-time changes of Salesforce records, and synchronize corresponding records in an external data store. Change Data Capture publishes change events, which represent changes to Salesforce records. Changes include the creation of a new record, updates to an existing record, deletion of a record, and undeletion of a record.</p>
 </div>
 <div class="paragraph">
 <p>The URI format to consume CDC events is as follows:</p>
@@ -8905,7 +8961,7 @@ header will be automatically set based on the <code>format</code> option, but th
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>rawPath</code></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>String</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">The portion of the endpoint URL after the domain name, e.g., '/services/data/v51.0/sobjects/Account/'</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The portion of the endpoint URL after the domain name, for example, '/services/data/v51.0/sobjects/Account/'</p></td>
 <td class="tableblock halign-left valign-top"></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">x</p></td>
 </tr>
@@ -9053,6 +9109,9 @@ methods to generate SOQL queries. For instance to fetch all custom fields from
 <a href="https://github.com/apache/camel/tree/main/components/camel-salesforce/camel-salesforce-maven-plugin">README.md</a>
 for details on how to use the plugin.</p>
 </div>
+<div class="paragraph">
+<p>Unresolved include directive in modules/ROOT/pages/salesforce-component.adoc - include::spring-boot:partial$starter.adoc[]</p>
+</div>
 </div>
 </div>
 </article>
@@ -9060,6 +9119,8 @@ for details on how to use the plugin.</p>
 </main>
 </div>
 <footer class="footer">
+  <p>This page was built using the Antora default UI.</p>
+  <p>The source code for this UI is licensed under the terms of the MPL-2.0 license.</p>
 </footer>
 <script id="site-script" src="../../_/js/site.js" data-ui-root-path="../../_"></script>
 <script async src="../../_/js/vendor/highlight.js"></script>

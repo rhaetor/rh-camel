@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>gRPC :: Red Hat Camel Reference</title>
+    <title>gRPC :: Red Hat build of Apache Camel</title>
     <meta name="description" content="Expose gRPC endpoints and access external gRPC endpoints.">
     <meta name="generator" content="Antora 3.1.4">
     <link rel="stylesheet" href="../../_/css/site.css">
@@ -12,7 +12,7 @@
 <header class="header">
   <nav class="navbar">
     <div class="navbar-brand">
-      <a class="navbar-item" href="../../manual/index.html">Red Hat build of Apache Camel manual</a>
+      <a class="navbar-item" href="/">Red Hat build of Apache Camel</a>
       <button class="navbar-burger" data-target="topbar-nav">
         <span></span>
         <span></span>
@@ -22,11 +22,12 @@
   </nav>
 </header>
 <div class="body">
-<div class="nav-container" data-component="components" data-version="next">
+<div class="nav-container" data-component="components" data-version="4.4.x">
   <aside class="nav">
     <div class="panels">
 <div class="nav-panel-menu is-active" data-panel="menu">
   <nav class="nav-menu">
+    <button class="nav-menu-toggle" aria-label="Toggle expand/collapse all" style="display: none"></button>
     <h3 class="title"><a href="index.html">Camel Components</a></h3>
 <ul class="nav-list">
   <li class="nav-item" data-depth="0">
@@ -912,6 +913,33 @@
     <a class="nav-link" href="splunk-hec-component.html">Splunk HEC</a>
   </li>
   <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="spring-summary.html">Spring</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="spring-batch-component.html">Spring Batch</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="spring-event-component.html">Spring Event</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="spring-jdbc-component.html">Spring JDBC</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="spring-ldap-component.html">Spring LDAP</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="spring-rabbitmq-component.html">Spring RabbitMQ</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="spring-redis-component.html">Spring Redis</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="spring-ws-component.html">Spring WebService</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
     <a class="nav-link" href="sql-component.html">SQL</a>
   </li>
   <li class="nav-item" data-depth="2">
@@ -1792,22 +1820,40 @@
 <div class="nav-panel-explore" data-panel="explore">
   <div class="context">
     <span class="title">Camel Components</span>
-    <span class="version">Next (Pre-release)</span>
+    <span class="version">4.4.x</span>
   </div>
   <ul class="components">
     <li class="component is-current">
-      <a class="title" href="index.html">Camel Components</a>
+      <div class="title"><a href="../4.10.x/index.html">Camel Components</a></div>
       <ul class="versions">
-        <li class="version is-current is-latest">
-          <a href="index.html">Next (Pre-release)</a>
+        <li class="version is-latest">
+          <a href="../4.10.x/index.html">4.10.x (LTS)</a>
+        </li>
+        <li class="version">
+          <a href="../4.8.x/index.html">4.8.x</a>
+        </li>
+        <li class="version is-current">
+          <a href="index.html">4.4.x</a>
+        </li>
+        <li class="version">
+          <a href="../4.0.x/index.html">4.0.x</a>
         </li>
       </ul>
     </li>
     <li class="component">
-      <a class="title" href="../../manual/index.html">User manual</a>
+      <div class="title"><a href="../../manual/4.10.x/index.html">User manual</a></div>
       <ul class="versions">
         <li class="version is-latest">
-          <a href="../../manual/index.html">default</a>
+          <a href="../../manual/4.10.x/index.html">4.10.x</a>
+        </li>
+        <li class="version">
+          <a href="../../manual/4.8.x/index.html">4.8.x</a>
+        </li>
+        <li class="version">
+          <a href="../../manual/4.4.x/index.html">4.4.x</a>
+        </li>
+        <li class="version">
+          <a href="../../manual/4.0.x/index.html">4.0.x</a>
         </li>
       </ul>
     </li>
@@ -1819,7 +1865,7 @@
 <main class="article">
 <div class="toolbar" role="navigation">
 <button class="nav-toggle"></button>
-  <a href="../../manual/index.html" class="home-link"></a>
+  <a href="../../manual/4.10.x/index.html" class="home-link"></a>
 <nav class="breadcrumbs" aria-label="breadcrumbs">
   <ul>
     <li><a href="index.html">Camel Components</a></li>
@@ -1827,6 +1873,16 @@
     <li><a href="grpc-component.html">gRPC</a></li>
   </ul>
 </nav>
+<div class="page-versions">
+  <button class="version-menu-toggle" title="Show other versions of page">4.4.x</button>
+  <div class="version-menu">
+    <a class="version" href="../4.10.x/grpc-component.html">4.10.x (LTS)</a>
+    <a class="version" href="../4.8.x/grpc-component.html">4.8.x</a>
+    <a class="version is-current" href="grpc-component.html">4.4.x</a>
+    <a class="version is-missing" href="../4.0.x/index.html">4.0.x</a>
+  </div>
+</div>
+<div class="edit-this-page"><a href="https://github.com/rhaetor/rh-camel-jboss/edit/camel-4.4.0-branch/docs/components/modules/ROOT/pages/grpc-component.adoc">Edit this Page</a></div>
 </div>
   <div class="content">
 <aside class="toc sidebar" data-title="Contents" data-levels="2">
@@ -1893,14 +1949,14 @@ for this component:</p>
 <h3 id="_configuring_component_options"><a class="anchor" href="#_configuring_component_options"></a>Configuring Component Options</h3>
 <div class="paragraph">
 <p>The component level is the highest level which holds general and common configurations that are inherited by the endpoints.
-For example a component may have security settings, credentials for authentication, urls for network connection and so forth.</p>
+For example, a component may have security settings, credentials for authentication, urls for network connection and so forth.</p>
 </div>
 <div class="paragraph">
 <p>Some components only have a few options, and others may have many. Because components typically have pre configured defaults
 that are commonly used, then you may often only need to configure a few options on a component; or none at all.</p>
 </div>
 <div class="paragraph">
-<p>Configuring components can be done with the <a href="../../manual/component-dsl.html" class="xref page">Component DSL</a>,
+<p>Configuring components can be done with the <a href="../../manual/4.10.x/component-dsl.html" class="xref page">Component DSL</a>,
 in a configuration file (application.properties|yaml), or directly with Java code.</p>
 </div>
 </div>
@@ -1913,11 +1969,11 @@ or as a producer (to), or used for both.</p>
 </div>
 <div class="paragraph">
 <p>Configuring endpoints is most often done directly in the endpoint URI as path and query parameters. You can also use
-the <a href="../../manual/Endpoint-dsl.html" class="xref page">Endpoint DSL</a> and <a href="../../manual/dataformat-dsl.html" class="xref page">DataFormat DSL</a>
+the <a href="../../manual/4.10.x/Endpoint-dsl.html" class="xref page">Endpoint DSL</a> and <a href="../../manual/4.10.x/dataformat-dsl.html" class="xref page">DataFormat DSL</a>
 as a <em>type safe</em> way of configuring endpoints and data formats in Java.</p>
 </div>
 <div class="paragraph">
-<p>A good practice when configuring options is to use <a href="../../manual/using-propertyplaceholder.html" class="xref page">Property Placeholders</a>,
+<p>A good practice when configuring options is to use <a href="../../manual/4.10.x/using-propertyplaceholder.html" class="xref page">Property Placeholders</a>,
 which allows to not hardcode urls, port numbers, sensitive information, and other settings.
 In other words placeholders allows to externalize the configuration from your code, and gives more flexibility and reuse.</p>
 </div>
@@ -2502,12 +2558,12 @@ In other words placeholders allows to externalize the configuration from your co
 <p><strong>SSL/TLS:</strong> gRPC has SSL/TLS integration and promotes the use of SSL/TLS to authenticate the server, and to encrypt all the data exchanged between the client and the server. Optional mechanisms are available for clients to provide certificates for mutual authentication.</p>
 </li>
 <li>
-<p><strong>Token-based authentication with Google:</strong> gRPC provides a generic mechanism to attach metadata based credentials to requests and responses. Additional support for acquiring access tokens while accessing Google APIs through gRPC is provided. In general this mechanism must be used as well as SSL/TLS on the channel.</p>
+<p><strong>Token-based authentication with Google:</strong> gRPC provides a generic mechanism to attach metadata-based credentials to requests and responses. Additional support for acquiring access tokens while accessing Google APIs through gRPC is provided. In general, this mechanism must be used as well as SSL/TLS on the channel.</p>
 </li>
 </ul>
 </div>
 <div class="paragraph">
-<p>To enable these features the following component properties combinations must be configured:</p>
+<p>To enable these features, the following component properties combinations must be configured:</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
 <colgroup>
@@ -2633,7 +2689,7 @@ In other words placeholders allows to externalize the configuration from your co
 <h2 id="_grpc_producer_resource_type_mapping"><a class="anchor" href="#_grpc_producer_resource_type_mapping"></a>gRPC producer resource type mapping</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>The table below shows the types of objects in the message body, depending on the types (simple or stream) of incoming and outgoing parameters, as well as the invocation style (synchronous or asynchronous). Please note, that invocation of the procedures with incoming stream parameter in asynchronous style are not allowed.</p>
+<p>The table below shows the types of objects in the message body, depending on the types (simple or stream) of incoming and outgoing parameters, as well as the invocation style (synchronous or asynchronous). Please note that invocation of the procedures with incoming stream parameter in asynchronous style is not allowed.</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
 <colgroup>
@@ -2717,12 +2773,12 @@ In other words placeholders allows to externalize the configuration from your co
 <h2 id="_grpc_proxy"><a class="anchor" href="#_grpc_proxy"></a>gRPC Proxy</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>It is not possible to create universal proxy-route for all methods, so you need to divide your gRPC service into several services by method&#8217;s type: unary, server streaming, client streaming and bidirectional streaming.</p>
+<p>It is not possible to create a universal proxy-route for all methods, so you need to divide your gRPC service into several services by method&#8217;s type: unary, server streaming, client streaming and bidirectional streaming.</p>
 </div>
 <div class="sect2">
 <h3 id="_unary"><a class="anchor" href="#_unary"></a>Unary</h3>
 <div class="paragraph">
-<p>For unary requests it is enough to write the following code:</p>
+<p>For unary requests, it is enough to write the following code:</p>
 </div>
 <div class="listingblock">
 <div class="content">
@@ -2739,7 +2795,8 @@ In other words placeholders allows to externalize the configuration from your co
 <div class="sect2">
 <h3 id="_server_streaming"><a class="anchor" href="#_server_streaming"></a>Server streaming</h3>
 <div class="paragraph">
-<p>Server streaming may be done by the same approach as unary, but in that configuration Camel route will wait stream for completion and will aggregate all responses to list before sending that data as response stream. If this behavior is unacceptable, you need to apply a number of options:</p>
+<p>Server streaming may be done by the same approach as unary, but in that configuration Camel route will wait stream for completion and will aggregate all responses to a list before sending that data as response stream.
+If this behavior is unacceptable, you need to apply a number of options:</p>
 </div>
 <div class="olist arabic">
 <ol class="arabic">
@@ -2786,15 +2843,16 @@ from("direct:next")
 <div class="sect2">
 <h3 id="_client_streaming_and_bidirectional_streaming"><a class="anchor" href="#_client_streaming_and_bidirectional_streaming"></a>Client streaming and bidirectional streaming</h3>
 <div class="paragraph">
-<p>Both client streaming and bidirectional streaming gRPC methods exposes StreamObserver as responses handler, so you need the same technic as described in server streaming section&#8201;&#8212;&#8201;all 5 steps.</p>
+<p>Both client streaming and bidirectional streaming gRPC methods expose <code>StreamObserver</code> as responses' handler.
+Therefore, you need the same technique as described in the server streaming section (all 5 steps).</p>
 </div>
 <div class="paragraph">
-<p>But there another thing&#8201;&#8212;&#8201;requests also comes in streaming mode. So you need the following:</p>
+<p>But there is another thing: requests also come in streaming mode. So you need the following:</p>
 </div>
 <div class="olist arabic">
 <ol class="arabic">
 <li>
-<p>Set consumer strategy to DELEGATION&#8201;&#8212;&#8201;that differs from default PROPAGATION option in the fact that consumer will not produce responses at all. If you set PROPAGATION, then you will receive more responses than you expected;</p>
+<p>Set consumer strategy to DELEGATION&#8201;&#8212;&#8201;that differs from the default PROPAGATION option in the fact that consumer will not produce responses at all. If you set PROPAGATION, then you will receive more responses than you expected;</p>
 </li>
 <li>
 <p>Forward <code>onError</code> and <code>onCompletion</code> on consumer;</p>
@@ -2907,13 +2965,13 @@ from("direct:grpc-response-stream")
 <h2 id="_configuration"><a class="anchor" href="#_configuration"></a>Configuration</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>It is recommended to use the <code>protobuf-maven-plugin</code>, which calls the Protocol Buffer Compiler (protoc) to generate Java source files from .proto (protocol buffer definition) files. This plugin will generate procedures request and response classes, their builders and gRPC procedures stubs classes as well.</p>
+<p>It is recommended to use the <code>protobuf-maven-plugin</code>, which calls the Protocol Buffer Compiler (protoc) to generate Java source files from .proto (protocol buffer definition) files. This plugin will generate procedure request and response classes, their builders and gRPC procedures stubs classes as well.</p>
 </div>
 <div class="paragraph">
-<p>Following steps are required:</p>
+<p>The following steps are required:</p>
 </div>
 <div class="paragraph">
-<p>Insert operating system and CPU architecture detection extension inside <strong>&lt;build&gt;</strong> tag of the project pom.xml or set ${os.detected.classifier} parameter manually</p>
+<p>Insert operating system and CPU architecture detection extension inside <strong>&lt;build&gt;</strong> tag of the project <code>pom.xml</code> or set <code>${os.detected.classifier}</code> parameter manually</p>
 </div>
 <div class="listingblock">
 <div class="content">
@@ -2971,6 +3029,9 @@ from("direct:grpc-response-stream")
 </li>
 </ul>
 </div>
+<div class="paragraph">
+<p>Unresolved include directive in modules/ROOT/pages/grpc-component.adoc - include::spring-boot:partial$starter.adoc[]</p>
+</div>
 </div>
 </div>
 </article>
@@ -2978,6 +3039,8 @@ from("direct:grpc-response-stream")
 </main>
 </div>
 <footer class="footer">
+  <p>This page was built using the Antora default UI.</p>
+  <p>The source code for this UI is licensed under the terms of the MPL-2.0 license.</p>
 </footer>
 <script id="site-script" src="../../_/js/site.js" data-ui-root-path="../../_"></script>
 <script async src="../../_/js/vendor/highlight.js"></script>

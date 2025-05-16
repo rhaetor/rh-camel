@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>Main :: Red Hat Camel Reference</title>
+    <title>Main :: Red Hat build of Apache Camel</title>
     <meta name="description" content="Camel Main">
     <meta name="generator" content="Antora 3.1.4">
     <link rel="stylesheet" href="../../../_/css/site.css">
@@ -12,7 +12,7 @@
 <header class="header">
   <nav class="navbar">
     <div class="navbar-brand">
-      <a class="navbar-item" href="../../manual/index.html">Red Hat build of Apache Camel manual</a>
+      <a class="navbar-item" href="/">Red Hat build of Apache Camel</a>
       <button class="navbar-burger" data-target="topbar-nav">
         <span></span>
         <span></span>
@@ -22,11 +22,12 @@
   </nav>
 </header>
 <div class="body">
-<div class="nav-container" data-component="components" data-version="next">
+<div class="nav-container" data-component="components" data-version="4.4.x">
   <aside class="nav">
     <div class="panels">
 <div class="nav-panel-menu is-active" data-panel="menu">
   <nav class="nav-menu">
+    <button class="nav-menu-toggle" aria-label="Toggle expand/collapse all" style="display: none"></button>
     <h3 class="title"><a href="../index.html">Camel Components</a></h3>
 <ul class="nav-list">
   <li class="nav-item" data-depth="0">
@@ -1819,22 +1820,40 @@
 <div class="nav-panel-explore" data-panel="explore">
   <div class="context">
     <span class="title">Camel Components</span>
-    <span class="version">Next (Pre-release)</span>
+    <span class="version">4.4.x</span>
   </div>
   <ul class="components">
     <li class="component is-current">
-      <a class="title" href="../index.html">Camel Components</a>
+      <div class="title"><a href="../../4.10.x/index.html">Camel Components</a></div>
       <ul class="versions">
-        <li class="version is-current is-latest">
-          <a href="../index.html">Next (Pre-release)</a>
+        <li class="version is-latest">
+          <a href="../../4.10.x/index.html">4.10.x (LTS)</a>
+        </li>
+        <li class="version">
+          <a href="../../4.8.x/index.html">4.8.x</a>
+        </li>
+        <li class="version is-current">
+          <a href="../index.html">4.4.x</a>
+        </li>
+        <li class="version">
+          <a href="../../4.0.x/index.html">4.0.x</a>
         </li>
       </ul>
     </li>
     <li class="component">
-      <a class="title" href="../../../manual/index.html">User manual</a>
+      <div class="title"><a href="../../../manual/4.10.x/index.html">User manual</a></div>
       <ul class="versions">
         <li class="version is-latest">
-          <a href="../../../manual/index.html">default</a>
+          <a href="../../../manual/4.10.x/index.html">4.10.x</a>
+        </li>
+        <li class="version">
+          <a href="../../../manual/4.8.x/index.html">4.8.x</a>
+        </li>
+        <li class="version">
+          <a href="../../../manual/4.4.x/index.html">4.4.x</a>
+        </li>
+        <li class="version">
+          <a href="../../../manual/4.0.x/index.html">4.0.x</a>
         </li>
       </ul>
     </li>
@@ -1846,7 +1865,7 @@
 <main class="article">
 <div class="toolbar" role="navigation">
 <button class="nav-toggle"></button>
-  <a href="../../../manual/index.html" class="home-link"></a>
+  <a href="../../../manual/4.10.x/index.html" class="home-link"></a>
 <nav class="breadcrumbs" aria-label="breadcrumbs">
   <ul>
     <li><a href="../index.html">Camel Components</a></li>
@@ -1854,6 +1873,16 @@
     <li><a href="main.html">Main</a></li>
   </ul>
 </nav>
+<div class="page-versions">
+  <button class="version-menu-toggle" title="Show other versions of page">4.4.x</button>
+  <div class="version-menu">
+    <a class="version" href="../../4.10.x/others/main.html">4.10.x (LTS)</a>
+    <a class="version" href="../../4.8.x/others/main.html">4.8.x</a>
+    <a class="version is-current" href="main.html">4.4.x</a>
+    <a class="version is-missing" href="../../4.0.x/index.html">4.0.x</a>
+  </div>
+</div>
+<div class="edit-this-page"><a href="https://github.com/rhaetor/rh-camel-jboss/edit/camel-4.4.0-branch/docs/components/modules/others/pages/main.adoc">Edit this Page</a></div>
 </div>
   <div class="content">
 <aside class="toc sidebar" data-title="Contents" data-levels="2">
@@ -1915,7 +1944,7 @@
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>camel.main.autoConfiguration&#8203;EnvironmentVariablesEnabled</strong></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Whether auto configuration should include OS environment variables as well. When enabled this allows to overrule any configuration using an OS environment variable. For example to set a shutdown timeout of 5 seconds: CAMEL_MAIN_SHUTDOWNTIMEOUT=5. This option is default enabled.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Whether auto configuration should include OS environment variables as well. When enabled this allows to overrule any configuration using an OS environment variable. For example, to set a shutdown timeout of 5 seconds: CAMEL_MAIN_SHUTDOWNTIMEOUT=5. This option is default enabled.</p></td>
 <td class="tableblock halign-center valign-top"><p class="tableblock">true</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">boolean</p></td>
 </tr>
@@ -1933,7 +1962,7 @@
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>camel.main.autoConfiguration&#8203;SystemPropertiesEnabled</strong></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Whether auto configuration should include JVM system properties as well. When enabled this allows to overrule any configuration using a JVM system property. For example to set a shutdown timeout of 5 seconds: -D camel.main.shutdown-timeout=5. Note that JVM system properties take precedence over OS environment variables. This option is default enabled.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Whether auto configuration should include JVM system properties as well. When enabled this allows to overrule any configuration using a JVM system property. For example, to set a shutdown timeout of 5 seconds: -D camel.main.shutdown-timeout=5. Note that JVM system properties take precedence over OS environment variables. This option is default enabled.</p></td>
 <td class="tableblock halign-center valign-top"><p class="tableblock">true</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">boolean</p></td>
 </tr>
@@ -2185,13 +2214,13 @@
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>camel.main.javaRoutesExclude&#8203;Pattern</strong></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Used for exclusive filtering RouteBuilder classes which are collected from the registry or via classpath scanning. The exclusive filtering takes precedence over inclusive filtering. The pattern is using Ant-path style pattern. Multiple patterns can be specified separated by comma. For example to exclude all classes starting with Bar use: &#42;&#42;/Bar&#42; To exclude all routes form a specific package use: com/mycompany/bar/&#42; To exclude all routes form a specific package and its sub-packages use double wildcards: com/mycompany/bar/&#42;&#42; And to exclude all routes from two specific packages use: com/mycompany/bar/&#42;,com/mycompany/stuff/&#42;</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Used for exclusive filtering RouteBuilder classes which are collected from the registry or via classpath scanning. The exclusive filtering takes precedence over inclusive filtering. The pattern is using Ant-path style pattern. Multiple patterns can be specified separated by comma. For example, to exclude all classes starting with Bar use: &#42;&#42;/Bar&#42; To exclude all routes form a specific package use: com/mycompany/bar/&#42; To exclude all routes form a specific package and its sub-packages use double wildcards: com/mycompany/bar/&#42;&#42; And to exclude all routes from two specific packages use: com/mycompany/bar/&#42;,com/mycompany/stuff/&#42;</p></td>
 <td class="tableblock halign-center valign-top"></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">String</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>camel.main.javaRoutesInclude&#8203;Pattern</strong></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Used for inclusive filtering RouteBuilder classes which are collected from the registry or via classpath scanning. The exclusive filtering takes precedence over inclusive filtering. The pattern is using Ant-path style pattern. Multiple patterns can be specified separated by comma. Multiple patterns can be specified separated by comma. For example to include all classes starting with Foo use: &#42;&#42;/Foo To include all routes form a specific package use: com/mycompany/foo/&#42; To include all routes form a specific package and its sub-packages use double wildcards: com/mycompany/foo/&#42;&#42; And to include all routes from two specific packages use: com/mycompany/foo/&#42;,com/mycompany/stuff/&#42;</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Used for inclusive filtering RouteBuilder classes which are collected from the registry or via classpath scanning. The exclusive filtering takes precedence over inclusive filtering. The pattern is using Ant-path style pattern. Multiple patterns can be specified separated by comma. Multiple patterns can be specified separated by comma. For example, to include all classes starting with Foo use: &#42;&#42;/Foo To include all routes form a specific package use: com/mycompany/foo/&#42; To include all routes form a specific package and its sub-packages use double wildcards: com/mycompany/foo/&#42;&#42; And to include all routes from two specific packages use: com/mycompany/foo/&#42;,com/mycompany/stuff/&#42;</p></td>
 <td class="tableblock halign-center valign-top"></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">String</p></td>
 </tr>
@@ -2299,13 +2328,13 @@
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>camel.main.routeFilterExclude&#8203;Pattern</strong></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Used for filtering routes routes matching the given pattern, which follows the following rules: - Match by route id - Match by route input endpoint uri The matching is using exact match, by wildcard and regular expression as documented by PatternHelper#matchPattern(String,String) . For example to only include routes which starts with foo in their route id&#8217;s, use: include=foo&#42; And to exclude routes which starts from JMS endpoints, use: exclude=jms:&#42; Multiple patterns can be separated by comma, for example to exclude both foo and bar routes, use: exclude=foo&#42;,bar&#42; Exclude takes precedence over include.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Used for filtering routes routes matching the given pattern, which follows the following rules: - Match by route id - Match by route input endpoint uri The matching is using exact match, by wildcard and regular expression as documented by PatternHelper#matchPattern(String,String) . For example, to only include routes which starts with foo in their route id&#8217;s, use: include=foo&#42; And to exclude routes which starts from JMS endpoints, use: exclude=jms:&#42; Multiple patterns can be separated by comma, for example to exclude both foo and bar routes, use: exclude=foo&#42;,bar&#42; Exclude takes precedence over include.</p></td>
 <td class="tableblock halign-center valign-top"></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">String</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>camel.main.routeFilterInclude&#8203;Pattern</strong></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Used for filtering routes matching the given pattern, which follows the following rules: - Match by route id - Match by route input endpoint uri The matching is using exact match, by wildcard and regular expression as documented by PatternHelper#matchPattern(String,String) . For example to only include routes which starts with foo in their route id&#8217;s, use: include=foo&#42; And to exclude routes which starts from JMS endpoints, use: exclude=jms:&#42; Multiple patterns can be separated by comma, for example to exclude both foo and bar routes, use: exclude=foo&#42;,bar&#42; Exclude takes precedence over include.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Used for filtering routes matching the given pattern, which follows the following rules: - Match by route id - Match by route input endpoint uri The matching is using exact match, by wildcard and regular expression as documented by PatternHelper#matchPattern(String,String) . For example, to only include routes which starts with foo in their route id&#8217;s, use: include=foo&#42; And to exclude routes which starts from JMS endpoints, use: exclude=jms:&#42; Multiple patterns can be separated by comma, for example to exclude both foo and bar routes, use: exclude=foo&#42;,bar&#42; Exclude takes precedence over include.</p></td>
 <td class="tableblock halign-center valign-top"></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">String</p></td>
 </tr>
@@ -2377,7 +2406,7 @@
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>camel.main.routesReloadRestart&#8203;Duration</strong></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Whether to restart max duration when routes are reloaded. For example if max duration is 60 seconds, and a route is reloaded after 25 seconds, then this will restart the count and wait 60 seconds again.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Whether to restart max duration when routes are reloaded. For example, if max duration is 60 seconds, and a route is reloaded after 25 seconds, then this will restart the count and wait 60 seconds again.</p></td>
 <td class="tableblock halign-center valign-top"><p class="tableblock">false</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">boolean</p></td>
 </tr>
@@ -2485,7 +2514,7 @@
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>camel.main.streamCaching&#8203;Enabled</strong></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Sets whether stream caching is enabled or not. While stream types (like StreamSource, InputStream and Reader) are commonly used in messaging for performance reasons, they also have an important drawback: they can only be read once. In order to be able to work with message content multiple times, the stream needs to be cached. Streams are cached in memory only (by default). If streamCachingSpoolEnabled=true, then, for large stream messages (over 128 KB by default) will be cached in a temporary file instead, and Camel will handle deleting the temporary file once the cached stream is no longer necessary. Default is true.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Sets whether stream caching is enabled or not. While stream types (like StreamSource, InputStream and Reader) are commonly used in messaging for performance reasons, they also have an important drawback: they can only be read once. To be able to work with message content multiple times, the stream needs to be cached. Streams are cached in memory only (by default). If streamCachingSpoolEnabled=true, then, for large stream messages (over 128 KB by default) will be cached in a temporary file instead, and Camel will handle deleting the temporary file once the cached stream is no longer necessary. Default is true.</p></td>
 <td class="tableblock halign-center valign-top"><p class="tableblock">true</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">boolean</p></td>
 </tr>
@@ -2557,7 +2586,7 @@
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>camel.main.tracingPattern</strong></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Tracing pattern to match which node EIPs to trace. For example to match all To EIP nodes, use to. The pattern matches by node and route id&#8217;s Multiple patterns can be separated by comma.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Tracing pattern to match which node EIPs to trace. For example, to match all To EIP nodes, use to. The pattern matches by node and route id&#8217;s Multiple patterns can be separated by comma.</p></td>
 <td class="tableblock halign-center valign-top"></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">String</p></td>
 </tr>
@@ -2665,13 +2694,13 @@
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>camel.routecontroller.exclude&#8203;Routes</strong></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Pattern for filtering routes to be excluded as supervised. The pattern is matching on route id, and endpoint uri for the route. Multiple patterns can be separated by comma. For example to exclude all JMS routes, you can say jms:. And to exclude routes with specific route ids mySpecialRoute,myOtherSpecialRoute. The pattern supports wildcards and uses the matcher from org.apache.camel.support.PatternHelper#matchPattern.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Pattern for filtering routes to be excluded as supervised. The pattern is matching on route id, and endpoint uri for the route. Multiple patterns can be separated by comma. For example, to exclude all JMS routes, you can say jms:. And to exclude routes with specific route ids mySpecialRoute,myOtherSpecialRoute. The pattern supports wildcards and uses the matcher from org.apache.camel.support.PatternHelper#matchPattern.</p></td>
 <td class="tableblock halign-center valign-top"></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">String</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>camel.routecontroller.include&#8203;Routes</strong></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Pattern for filtering routes to be included as supervised. The pattern is matching on route id, and endpoint uri for the route. Multiple patterns can be separated by comma. For example to include all kafka routes, you can say kafka:. And to include routes with specific route ids myRoute,myOtherRoute. The pattern supports wildcards and uses the matcher from org.apache.camel.support.PatternHelper#matchPattern.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Pattern for filtering routes to be included as supervised. The pattern is matching on route id, and endpoint uri for the route. Multiple patterns can be separated by comma. For example, to include all kafka routes, you can say kafka:. And to include routes with specific route ids myRoute,myOtherRoute. The pattern supports wildcards and uses the matcher from org.apache.camel.support.PatternHelper#matchPattern.</p></td>
 <td class="tableblock halign-center valign-top"></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">String</p></td>
 </tr>
@@ -2725,7 +2754,7 @@
 <tbody>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>camel.server.devConsoleEnabled</strong></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Whether to enable developer console (not intended for production use). Dev console must also be enabled on CamelContext. For example by setting camel.context.dev-console=true in application.properties, or via code camelContext.setDevConsole(true); If enabled then you can access a basic developer console on context-path: /q/dev.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Whether to enable developer console (not intended for production use). Dev console must also be enabled on CamelContext. For example, by setting camel.context.dev-console=true in application.properties, or via code camelContext.setDevConsole(true); If enabled then you can access a basic developer console on context-path: /q/dev.</p></td>
 <td class="tableblock halign-center valign-top"><p class="tableblock">false</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">boolean</p></td>
 </tr>
@@ -4042,7 +4071,7 @@ or be annotated with <code>@Configuration</code> (or both). In previous versions
 </table>
 </div>
 <div class="paragraph">
-<p>For example to configure a Camel application by creating custom beans you can do:</p>
+<p>For example, to configure a Camel application by creating custom beans you can do:</p>
 </div>
 <div class="listingblock">
 <div class="content">
@@ -4100,7 +4129,7 @@ public class MyConfiguration {
 <p>Custom beans can be configured in <code>camel-main</code> via properties (such as in the <code>application.properties</code> file).</p>
 </div>
 <div class="paragraph">
-<p>For example to create a <code>DataSource</code> for a Postgress database, you can create a new bean instance via <code>#class:</code> with the class name (fully qualified).
+<p>For example, to create a <code>DataSource</code> for a Postgress database, you can create a new bean instance via <code>#class:</code> with the class name (fully qualified).
 Properties on the data source can then additional configured such as the server and database name, etc.</p>
 </div>
 <div class="listingblock">
@@ -4149,7 +4178,7 @@ camel.beans.myApp[username] = goofy</code></pre>
 </div>
 <div class="paragraph">
 <p>Camel will then create this as a <code>LinkedHashMap</code> type with the name <code>myApp</code> which is
-bound to the Camel <a href="../../../manual/registry.html" class="xref page">Registry</a>, with the data defined in the properties.</p>
+bound to the Camel <a href="../../../manual/4.10.x/registry.html" class="xref page">Registry</a>, with the data defined in the properties.</p>
 </div>
 <div class="paragraph">
 <p>If you desire a different <code>java.util.Map</code> implementation, then you can use <code>#class</code> style as shown:</p>
@@ -4262,7 +4291,7 @@ Otherwise, if a parameter is set, and the bean does not have such a parameter, t
 <div class="sect2">
 <h3 id="_optional_parameter_values_on_beans"><a class="anchor" href="#_optional_parameter_values_on_beans"></a>Optional parameter values on beans</h3>
 <div class="paragraph">
-<p>If a parameter value on a bean is configured using <a href="../../../manual/using-propertyplaceholder.html" class="xref page">Property Placeholder</a>
+<p>If a parameter value on a bean is configured using <a href="../../../manual/4.10.x/using-propertyplaceholder.html" class="xref page">Property Placeholder</a>
 and the placeholder is optional, then the placeholder can be marked as optional using <code>?</code> syntax, as shown:</p>
 </div>
 <div class="listingblock">
@@ -4296,7 +4325,7 @@ camel.beans.foo.company = {{?companyName:Acme}}</code></pre>
 <p>You can configure nested parameters separating them via <code>.</code> (dot).</p>
 </div>
 <div class="paragraph">
-<p>For example given this <code>Country</code> class:</p>
+<p>For example, given this <code>Country</code> class:</p>
 </div>
 <div class="listingblock">
 <div class="content">
@@ -4432,6 +4461,8 @@ which demonstrate running Camel in standalone with <code>camel-main</code>.</p>
 </main>
 </div>
 <footer class="footer">
+  <p>This page was built using the Antora default UI.</p>
+  <p>The source code for this UI is licensed under the terms of the MPL-2.0 license.</p>
 </footer>
 <script id="site-script" src="../../../_/js/site.js" data-ui-root-path="../../../_"></script>
 <script async src="../../../_/js/vendor/highlight.js"></script>

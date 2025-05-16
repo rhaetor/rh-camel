@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>HTTP :: Red Hat Camel Reference</title>
+    <title>HTTP :: Red Hat build of Apache Camel</title>
     <meta name="description" content="Send requests to external HTTP servers using Apache HTTP Client 5.x.">
     <meta name="generator" content="Antora 3.1.4">
     <link rel="stylesheet" href="../../_/css/site.css">
@@ -12,7 +12,7 @@
 <header class="header">
   <nav class="navbar">
     <div class="navbar-brand">
-      <a class="navbar-item" href="../../manual/index.html">Red Hat build of Apache Camel manual</a>
+      <a class="navbar-item" href="/">Red Hat build of Apache Camel</a>
       <button class="navbar-burger" data-target="topbar-nav">
         <span></span>
         <span></span>
@@ -22,11 +22,12 @@
   </nav>
 </header>
 <div class="body">
-<div class="nav-container" data-component="components" data-version="next">
+<div class="nav-container" data-component="components" data-version="4.8.x">
   <aside class="nav">
     <div class="panels">
 <div class="nav-panel-menu is-active" data-panel="menu">
   <nav class="nav-menu">
+    <button class="nav-menu-toggle" aria-label="Toggle expand/collapse all" style="display: none"></button>
     <h3 class="title"><a href="index.html">Camel Components</a></h3>
 <ul class="nav-list">
   <li class="nav-item" data-depth="0">
@@ -36,7 +37,46 @@
     <a class="nav-link" href="index.html">Components</a>
 <ul class="nav-list">
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="activemq-component.html">ActiveMQ</a>
+    <a class="nav-link" href="activemq-component.html">ActiveMQ 5.x</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="activemq6-component.html">ActiveMQ 6.x</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="ai-summary.html">AI</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="chatscript-component.html">ChatScript</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="djl-component.html">Deep Java Library</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="langchain4j-chat-component.html">LangChain4j Chat</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="langchain4j-embeddings-component.html">LangChain4j Embeddings</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="langchain4j-tokenizer-component.html">LangChain4j Tokenizer</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="langchain4j-tools-component.html">LangChain4j Tools</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="langchain4j-web-search-component.html">LangChain4j Web Search</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="milvus-component.html">Milvus</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="pinecone-component.html">Pinecone</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="qdrant-component.html">Qdrant</a>
+  </li>
+</ul>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="amqp-component.html">AMQP</a>
@@ -65,6 +105,15 @@
 <ul class="nav-list">
   <li class="nav-item" data-depth="3">
     <a class="nav-link" href="aws2-athena-component.html">AWS Athena</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="aws-bedrock-component.html">AWS Bedrock</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="aws-bedrock-agent-component.html">AWS Bedrock Agent</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="aws-bedrock-agent-runtime-component.html">AWS Bedrock Agent Runtime</a>
   </li>
   <li class="nav-item" data-depth="3">
     <a class="nav-link" href="aws-cloudtrail-component.html">AWS Cloudtrail</a>
@@ -169,7 +218,7 @@
     <a class="nav-link" href="azure-storage-blob-component.html">Azure Storage Blob Service</a>
   </li>
   <li class="nav-item" data-depth="3">
-    <a class="nav-link" href="azure-storage-datalake-component.html">Azure Storage Datalake Service</a>
+    <a class="nav-link" href="azure-storage-datalake-component.html">Azure Storage Data Lake Service</a>
   </li>
   <li class="nav-item" data-depth="3">
     <a class="nav-link" href="azure-storage-queue-component.html">Azure Storage Queue Service</a>
@@ -202,9 +251,6 @@
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="cql-component.html">Cassandra CQL</a>
-  </li>
-  <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="chatscript-component.html">ChatScript</a>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="chunk-component.html">Chunk</a>
@@ -277,9 +323,6 @@
     <a class="nav-link" href="debezium-sqlserver-component.html">Debezium SQL Server Connector</a>
   </li>
 </ul>
-  </li>
-  <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="djl-component.html">Deep Java Library</a>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="dhis2-component.html">DHIS2</a>
@@ -395,6 +438,9 @@
   </li>
   <li class="nav-item" data-depth="3">
     <a class="nav-link" href="google-pubsub-component.html">Google Pubsub</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="google-pubsub-lite-component.html">Google PubSub Lite</a>
   </li>
   <li class="nav-item" data-depth="3">
     <a class="nav-link" href="google-secret-manager-component.html">Google Secret Manager</a>
@@ -687,7 +733,7 @@
     <a class="nav-link" href="ldif-component.html">LDIF</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="log-component.html">Log</a>
+    <a class="nav-link" href="log-component.html">Log Data</a>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="lucene-component.html">Lucene</a>
@@ -900,16 +946,49 @@
     <a class="nav-link" href="smb-component.html">SMB</a>
   </li>
   <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="smooks-component.html">Smooks</a>
+  </li>
+  <li class="nav-item" data-depth="2">
     <a class="nav-link" href="smpp-component.html">SMPP</a>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="snmp-component.html">SNMP</a>
   </li>
   <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="solr-component.html">Solr</a>
+  </li>
+  <li class="nav-item" data-depth="2">
     <a class="nav-link" href="splunk-component.html">Splunk</a>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="splunk-hec-component.html">Splunk HEC</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="spring-summary.html">Spring</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="spring-batch-component.html">Spring Batch</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="spring-event-component.html">Spring Event</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="spring-jdbc-component.html">Spring JDBC</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="spring-ldap-component.html">Spring LDAP</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="spring-rabbitmq-component.html">Spring RabbitMQ</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="spring-redis-component.html">Spring Redis</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="spring-ws-component.html">Spring WebService</a>
+  </li>
+</ul>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="sql-component.html">SQL</a>
@@ -937,6 +1016,18 @@
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="stub-component.html">Stub</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="tahu-summary.html">Tahu</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="tahu-edge-component.html">Tahu Edge Node / Device</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="tahu-host-component.html">Tahu Host Application</a>
+  </li>
+</ul>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="telegram-component.html">Telegram</a>
@@ -999,7 +1090,7 @@
     <a class="nav-link" href="whatsapp-component.html">WhatsApp</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="wordpress-component.html">Wordpress</a>
+    <a class="nav-link" href="wordpress-component.html">WordPress</a>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="workday-component.html">Workday</a>
@@ -1392,7 +1483,13 @@
     <a class="nav-link" href="others/openapi-java.html">Openapi Java</a>
   </li>
   <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="others/openapi-validator.html">Openapi Validator</a>
+  </li>
+  <li class="nav-item" data-depth="2">
     <a class="nav-link" href="others/opentelemetry.html">OpenTelemetry</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="others/platform-http-jolokia.html">Platform HTTP Jolokia</a>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="others/platform-http-main.html">Platform Http Main</a>
@@ -1540,7 +1637,7 @@
     <a class="nav-link" href="eips/event-message.html">Event Message</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="eips/failover-eip.html">Failover</a>
+    <a class="nav-link" href="eips/failoverLoadBalancer-eip.html">Failover Load Balancer</a>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="eips/faultToleranceConfiguration-eip.html">Fault Tolerance Configuration</a>
@@ -1570,13 +1667,13 @@
     <a class="nav-link" href="eips/loadBalance-eip.html">Load Balance</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="eips/log-eip.html">Log</a>
+    <a class="nav-link" href="eips/log-eip.html">Logger</a>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="eips/loop-eip.html">Loop</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="eips/marshal-eip.html">Marshal EIP</a>
+    <a class="nav-link" href="eips/marshal-eip.html">Marshal</a>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="eips/message.html">Message</a>
@@ -1633,6 +1730,9 @@
     <a class="nav-link" href="eips/point-to-point-channel.html">Point to Point Channel</a>
   </li>
   <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="eips/poll-eip.html">Poll</a>
+  </li>
+  <li class="nav-item" data-depth="2">
     <a class="nav-link" href="eips/pollEnrich-eip.html">Poll Enrich</a>
   </li>
   <li class="nav-item" data-depth="2">
@@ -1648,7 +1748,7 @@
     <a class="nav-link" href="eips/publish-subscribe-channel.html">Publish Subscribe Channel</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="eips/random-eip.html">Random</a>
+    <a class="nav-link" href="eips/randomLoadBalancer-eip.html">Random Load Balancer</a>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="eips/recipientList-eip.html">Recipient List</a>
@@ -1690,7 +1790,7 @@
     <a class="nav-link" href="eips/rollback-eip.html">Rollback</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="eips/roundRobin-eip.html">Round Robin</a>
+    <a class="nav-link" href="eips/roundRobinLoadBalancer-eip.html">Round Robin Load Balancer</a>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="eips/routingSlip-eip.html">Routing Slip</a>
@@ -1702,7 +1802,7 @@
     <a class="nav-link" href="eips/sample-eip.html">Sample</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="eips/scatter-gather.html">Scatter Gather</a>
+    <a class="nav-link" href="eips/scatter-gather.html">Scatter-Gather</a>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="eips/script-eip.html">Script</a>
@@ -1732,6 +1832,9 @@
     <a class="nav-link" href="eips/setVariable-eip.html">Set Variable</a>
   </li>
   <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="eips/setVariables-eip.html">Set Variables</a>
+  </li>
+  <li class="nav-item" data-depth="2">
     <a class="nav-link" href="eips/sort-eip.html">Sort</a>
   </li>
   <li class="nav-item" data-depth="2">
@@ -1741,7 +1844,7 @@
     <a class="nav-link" href="eips/step-eip.html">Step</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="eips/sticky-eip.html">Sticky</a>
+    <a class="nav-link" href="eips/stickyLoadBalancer-eip.html">Sticky Load Balancer</a>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="eips/stop-eip.html">Stop</a>
@@ -1762,7 +1865,7 @@
     <a class="nav-link" href="eips/toD-eip.html">To D</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="eips/topic-eip.html">Topic</a>
+    <a class="nav-link" href="eips/topicLoadBalancer-eip.html">Topic Load Balancer</a>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="eips/transactional-client.html">Transactional Client</a>
@@ -1771,13 +1874,13 @@
     <a class="nav-link" href="eips/transform-eip.html">Transform</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="eips/unmarshal-eip.html">Unmarshal EIP</a>
+    <a class="nav-link" href="eips/unmarshal-eip.html">Unmarshal</a>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="eips/validate-eip.html">Validate</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="eips/weighted-eip.html">Weighted</a>
+    <a class="nav-link" href="eips/weightedLoadBalancer-eip.html">Weighted Load Balancer</a>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="eips/wireTap-eip.html">Wire Tap</a>
@@ -1792,22 +1895,40 @@
 <div class="nav-panel-explore" data-panel="explore">
   <div class="context">
     <span class="title">Camel Components</span>
-    <span class="version">Next (Pre-release)</span>
+    <span class="version">4.8.x</span>
   </div>
   <ul class="components">
     <li class="component is-current">
-      <a class="title" href="index.html">Camel Components</a>
+      <div class="title"><a href="../4.10.x/index.html">Camel Components</a></div>
       <ul class="versions">
-        <li class="version is-current is-latest">
-          <a href="index.html">Next (Pre-release)</a>
+        <li class="version is-latest">
+          <a href="../4.10.x/index.html">4.10.x (LTS)</a>
+        </li>
+        <li class="version is-current">
+          <a href="index.html">4.8.x</a>
+        </li>
+        <li class="version">
+          <a href="../4.4.x/index.html">4.4.x</a>
+        </li>
+        <li class="version">
+          <a href="../4.0.x/index.html">4.0.x</a>
         </li>
       </ul>
     </li>
     <li class="component">
-      <a class="title" href="../../manual/index.html">User manual</a>
+      <div class="title"><a href="../../manual/4.10.x/index.html">User manual</a></div>
       <ul class="versions">
         <li class="version is-latest">
-          <a href="../../manual/index.html">default</a>
+          <a href="../../manual/4.10.x/index.html">4.10.x</a>
+        </li>
+        <li class="version">
+          <a href="../../manual/4.8.x/index.html">4.8.x</a>
+        </li>
+        <li class="version">
+          <a href="../../manual/4.4.x/index.html">4.4.x</a>
+        </li>
+        <li class="version">
+          <a href="../../manual/4.0.x/index.html">4.0.x</a>
         </li>
       </ul>
     </li>
@@ -1819,7 +1940,7 @@
 <main class="article">
 <div class="toolbar" role="navigation">
 <button class="nav-toggle"></button>
-  <a href="../../manual/index.html" class="home-link"></a>
+  <a href="../../manual/4.10.x/index.html" class="home-link"></a>
 <nav class="breadcrumbs" aria-label="breadcrumbs">
   <ul>
     <li><a href="index.html">Camel Components</a></li>
@@ -1827,6 +1948,16 @@
     <li><a href="http-component.html">HTTP</a></li>
   </ul>
 </nav>
+<div class="page-versions">
+  <button class="version-menu-toggle" title="Show other versions of page">4.8.x</button>
+  <div class="version-menu">
+    <a class="version" href="../4.10.x/http-component.html">4.10.x (LTS)</a>
+    <a class="version is-current" href="http-component.html">4.8.x</a>
+    <a class="version" href="../4.4.x/http-component.html">4.4.x</a>
+    <a class="version is-missing" href="../4.0.x/index.html">4.0.x</a>
+  </div>
+</div>
+<div class="edit-this-page"><a href="https://github.com/rhaetor/rh-camel-jboss/edit/camel-4.8.0-branch/docs/components/modules/ROOT/pages/http-component.adoc">Edit this Page</a></div>
 </div>
   <div class="content">
 <aside class="toc sidebar" data-title="Contents" data-levels="2">
@@ -1843,7 +1974,7 @@
 <p><strong>Only producer is supported</strong></p>
 </div>
 <div class="paragraph">
-<p>The HTTP component provides HTTP based endpoints
+<p>The HTTP component provides HTTP-based endpoints
 for calling external HTTP resources (as a client to call external
 servers using HTTP).</p>
 </div>
@@ -1895,37 +2026,65 @@ for this component:</p>
 <div class="sect2">
 <h3 id="_configuring_component_options"><a class="anchor" href="#_configuring_component_options"></a>Configuring Component Options</h3>
 <div class="paragraph">
-<p>The component level is the highest level which holds general and common configurations that are inherited by the endpoints.
-For example a component may have security settings, credentials for authentication, urls for network connection and so forth.</p>
+<p>At the component level, you set general and shared configurations that are, then, inherited by the endpoints. It is the highest configuration level.</p>
 </div>
 <div class="paragraph">
-<p>Some components only have a few options, and others may have many. Because components typically have pre configured defaults
-that are commonly used, then you may often only need to configure a few options on a component; or none at all.</p>
+<p>For example, a component may have security settings, credentials for authentication, urls for network connection and so forth.</p>
 </div>
 <div class="paragraph">
-<p>Configuring components can be done with the <a href="../../manual/component-dsl.html" class="xref page">Component DSL</a>,
-in a configuration file (application.properties|yaml), or directly with Java code.</p>
+<p>Some components only have a few options, and others may have many.
+Because components typically have pre-configured defaults that are commonly used, then you may often only need to configure a few options on a component; or none at all.</p>
+</div>
+<div class="paragraph">
+<p>You can configure components using:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>the <a href="../../manual/4.10.x/component-dsl.html" class="xref page">Component DSL</a>.</p>
+</li>
+<li>
+<p>in a configuration file (<code>application.properties</code>, <code>*.yaml</code> files, etc).</p>
+</li>
+<li>
+<p>directly in the Java code.</p>
+</li>
+</ul>
 </div>
 </div>
 <div class="sect2">
 <h3 id="_configuring_endpoint_options"><a class="anchor" href="#_configuring_endpoint_options"></a>Configuring Endpoint Options</h3>
 <div class="paragraph">
-<p>Where you find yourself configuring the most is on endpoints, as endpoints often have many options, which allows you to
-configure what you need the endpoint to do. The options are also categorized into whether the endpoint is used as consumer (from)
-or as a producer (to), or used for both.</p>
+<p>You usually spend more time setting up endpoints because they have many options.
+These options help you customize what you want the endpoint to do.
+The options are also categorized into whether the endpoint is used as a consumer (<em>from</em>), as a producer (<em>to</em>), or  both.</p>
 </div>
 <div class="paragraph">
-<p>Configuring endpoints is most often done directly in the endpoint URI as path and query parameters. You can also use
-the <a href="../../manual/Endpoint-dsl.html" class="xref page">Endpoint DSL</a> and <a href="../../manual/dataformat-dsl.html" class="xref page">DataFormat DSL</a>
+<p>Configuring endpoints is most often done directly in the endpoint URI as <em>path</em> and <em>query</em> parameters.
+You can also use the <a href="../../manual/4.10.x/Endpoint-dsl.html" class="xref page">Endpoint DSL</a> and <a href="../../manual/4.10.x/dataformat-dsl.html" class="xref page">DataFormat DSL</a>
 as a <em>type safe</em> way of configuring endpoints and data formats in Java.</p>
 </div>
 <div class="paragraph">
-<p>A good practice when configuring options is to use <a href="../../manual/using-propertyplaceholder.html" class="xref page">Property Placeholders</a>,
-which allows to not hardcode urls, port numbers, sensitive information, and other settings.
-In other words placeholders allows to externalize the configuration from your code, and gives more flexibility and reuse.</p>
+<p>A good practice when configuring options is to use <a href="../../manual/4.10.x/using-propertyplaceholder.html" class="xref page">Property Placeholders</a>.</p>
 </div>
 <div class="paragraph">
-<p>The following two sections lists all the options, firstly for the component followed by the endpoint.</p>
+<p>Property placeholders provide a few benefits:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>They help prevent using hardcoded urls, port numbers, sensitive information, and other settings.</p>
+</li>
+<li>
+<p>They allow externalizing the configuration from the code.</p>
+</li>
+<li>
+<p>They help the code to become more flexible and reusable.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>The following two sections list all the options, firstly for the component followed by the endpoint.</p>
 </div>
 </div>
 </div>
@@ -1953,19 +2112,28 @@ In other words placeholders allows to externalize the configuration from your co
 </thead>
 <tbody>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><a id="_component_option_followRedirects"></a>
-<a href="#_component_option_followRedirects" class="anchor"></a><strong>followRedirects</strong> (producer)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a id="_component_option_lazyStartProducer"></a>
+<a href="#_component_option_lazyStartProducer" class="anchor"></a><strong>lazyStartProducer</strong> (producer)</p></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>Whether to the HTTP request should follow redirects. By default the HTTP request does not follow redirects.</p>
+<p>Whether the producer should be started lazy (on the first message). By starting lazy you can use this to allow CamelContext and routes to startup in situations where a producer may otherwise fail during starting and cause the route to fail being started. By deferring this startup to be lazy then the startup failure can be handled during routing messages via Camel&#8217;s routing error handlers. Beware that when the first message is processed then creating and starting the producer may take a little time and prolong the total processing time of the processing.</p>
 </div></div></td>
 <td class="tableblock halign-center valign-top"><p class="tableblock">false</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">boolean</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><a id="_component_option_lazyStartProducer"></a>
-<a href="#_component_option_lazyStartProducer" class="anchor"></a><strong>lazyStartProducer</strong> (producer)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a id="_component_option_skipRequestHeaders"></a>
+<a href="#_component_option_skipRequestHeaders" class="anchor"></a><strong>skipRequestHeaders</strong> (producer)</p></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>Whether the producer should be started lazy (on the first message). By starting lazy you can use this to allow CamelContext and routes to startup in situations where a producer may otherwise fail during starting and cause the route to fail being started. By deferring this startup to be lazy then the startup failure can be handled during routing messages via Camel&#8217;s routing error handlers. Beware that when the first message is processed then creating and starting the producer may take a little time and prolong the total processing time of the processing.</p>
+<p>Whether to skip mapping all the Camel headers as HTTP request headers. If there are no data from Camel headers needed to be included in the HTTP request then this can avoid parsing overhead with many object allocations for the JVM garbage collector.</p>
+</div></div></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">false</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">boolean</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a id="_component_option_skipResponseHeaders"></a>
+<a href="#_component_option_skipResponseHeaders" class="anchor"></a><strong>skipResponseHeaders</strong> (producer)</p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>Whether to skip mapping all the HTTP response headers to Camel headers. If there are no data needed from HTTP headers then this can avoid parsing overhead with many object allocations for the JVM garbage collector.</p>
 </div></div></td>
 <td class="tableblock halign-center valign-top"><p class="tableblock">false</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">boolean</p></td>
@@ -1989,6 +2157,15 @@ In other words placeholders allows to externalize the configuration from your co
 <td class="tableblock halign-left valign-top"><p class="tableblock">boolean</p></td>
 </tr>
 <tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a id="_component_option_followRedirects"></a>
+<a href="#_component_option_followRedirects" class="anchor"></a><strong>followRedirects</strong> (producer (advanced))</p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>Whether to the HTTP request should follow redirects. By default the HTTP request does not follow redirects.</p>
+</div></div></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">false</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">boolean</p></td>
+</tr>
+<tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><a id="_component_option_responsePayloadStreamingThreshold"></a>
 <a href="#_component_option_responsePayloadStreamingThreshold" class="anchor"></a><strong>responsePayloadStreamingThreshold</strong> (producer (advanced))</p></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
@@ -1996,24 +2173,6 @@ In other words placeholders allows to externalize the configuration from your co
 </div></div></td>
 <td class="tableblock halign-center valign-top"><p class="tableblock">8192</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">int</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><a id="_component_option_skipRequestHeaders"></a>
-<a href="#_component_option_skipRequestHeaders" class="anchor"></a><strong>skipRequestHeaders</strong> (producer (advanced))</p></td>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>Whether to skip mapping all the Camel headers as HTTP request headers. If there are no data from Camel headers needed to be included in the HTTP request then this can avoid parsing overhead with many object allocations for the JVM garbage collector.</p>
-</div></div></td>
-<td class="tableblock halign-center valign-top"><p class="tableblock">false</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">boolean</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><a id="_component_option_skipResponseHeaders"></a>
-<a href="#_component_option_skipResponseHeaders" class="anchor"></a><strong>skipResponseHeaders</strong> (producer (advanced))</p></td>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>Whether to skip mapping all the HTTP response headers to Camel headers. If there are no data needed from HTTP headers then this can avoid parsing overhead with many object allocations for the JVM garbage collector.</p>
-</div></div></td>
-<td class="tableblock halign-center valign-top"><p class="tableblock">false</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">boolean</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><a id="_component_option_allowJavaSerializedObject"></a>
@@ -2082,7 +2241,7 @@ In other words placeholders allows to externalize the configuration from your co
 <td class="tableblock halign-left valign-top"><p class="tableblock"><a id="_component_option_connectionTimeToLive"></a>
 <a href="#_component_option_connectionTimeToLive" class="anchor"></a><strong>connectionTimeToLive</strong> (advanced)</p></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>The time for connection to live, the time unit is millisecond, the default value is always keep alive.</p>
+<p>The time for connection to live, the time unit is millisecond, the default value is always keepAlive.</p>
 </div></div></td>
 <td class="tableblock halign-center valign-top"></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">long</p></td>
@@ -2357,7 +2516,7 @@ In other words placeholders allows to externalize the configuration from your co
 </div>
 </div>
 <div class="paragraph">
-<p>with the following path and query parameters:</p>
+<p>With the following <em>path</em> and <em>query</em> parameters:</p>
 </div>
 <div class="sect2">
 <h3 id="_path_parameters_1_parameters"><a class="anchor" href="#_path_parameters_1_parameters"></a>Path Parameters (1 parameters)</h3>
@@ -2390,7 +2549,7 @@ In other words placeholders allows to externalize the configuration from your co
 </table>
 </div>
 <div class="sect2">
-<h3 id="_query_parameters"><a class="anchor" href="#_query_parameters"></a>Query Parameters (53 parameters)</h3>
+<h3 id="_query_parameters"><a class="anchor" href="#_query_parameters"></a>Query Parameters (54 parameters)</h3>
 <table class="tableblock frame-all grid-all stretch">
 <colgroup>
 <col style="width: 20%;">
@@ -2411,7 +2570,7 @@ In other words placeholders allows to externalize the configuration from your co
 <td class="tableblock halign-left valign-top"><p class="tableblock"><a id="_endpoint_query_option_disableStreamCache"></a>
 <a href="#_endpoint_query_option_disableStreamCache" class="anchor"></a><strong>disableStreamCache</strong> (common)</p></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>Determines whether or not the raw input stream from Servlet is cached or not (Camel will read the stream into a in memory/overflow to file, Stream caching) cache. By default Camel will cache the Servlet input stream to support reading it multiple times to ensure it Camel can retrieve all data from the stream. However you can set this option to true when you for example need to access the raw stream, such as streaming it directly to a file or other persistent store. DefaultHttpBinding will copy the request input stream into a stream cache and put it into message body if this option is false to support reading the stream multiple times. If you use Servlet to bridge/proxy an endpoint then consider enabling this option to improve performance, in case you do not need to read the message payload multiple times. The http producer will by default cache the response body stream. If setting this option to true, then the producers will not cache the response body stream but use the response stream as-is as the message body.</p>
+<p>Determines whether or not the raw input stream is cached or not. The Camel consumer (camel-servlet, camel-jetty etc.) will by default cache the input stream to support reading it multiple times to ensure it Camel can retrieve all data from the stream. However you can set this option to true when you for example need to access the raw stream, such as streaming it directly to a file or other persistent store. DefaultHttpBinding will copy the request input stream into a stream cache and put it into message body if this option is false to support reading the stream multiple times. If you use Servlet to bridge/proxy an endpoint then consider enabling this option to improve performance, in case you do not need to read the message payload multiple times. The producer (camel-http) will by default cache the response body stream. If setting this option to true, then the producers will not cache the response body stream but use the response stream as-is (the stream can only be read once) as the message body.</p>
 </div></div></td>
 <td class="tableblock halign-center valign-top"><p class="tableblock">false</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">boolean</p></td>
@@ -2439,15 +2598,6 @@ In other words placeholders allows to externalize the configuration from your co
 <a href="#_endpoint_query_option_connectionClose" class="anchor"></a><strong>connectionClose</strong> (producer)</p></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p>Specifies whether a Connection Close header must be added to HTTP Request. By default connectionClose is false.</p>
-</div></div></td>
-<td class="tableblock halign-center valign-top"><p class="tableblock">false</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">boolean</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><a id="_endpoint_query_option_followRedirects"></a>
-<a href="#_endpoint_query_option_followRedirects" class="anchor"></a><strong>followRedirects</strong> (producer)</p></td>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>Whether to the HTTP request should follow redirects. By default the HTTP request does not follow redirects.</p>
 </div></div></td>
 <td class="tableblock halign-center valign-top"><p class="tableblock">false</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">boolean</p></td>
@@ -2491,6 +2641,24 @@ In other words placeholders allows to externalize the configuration from your co
 </div></div></td>
 <td class="tableblock halign-center valign-top"></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">HttpMethods</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a id="_endpoint_query_option_skipRequestHeaders"></a>
+<a href="#_endpoint_query_option_skipRequestHeaders" class="anchor"></a><strong>skipRequestHeaders</strong> (producer)</p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>Whether to skip mapping all the Camel headers as HTTP request headers. If there are no data from Camel headers needed to be included in the HTTP request then this can avoid parsing overhead with many object allocations for the JVM garbage collector.</p>
+</div></div></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">false</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">boolean</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a id="_endpoint_query_option_skipResponseHeaders"></a>
+<a href="#_endpoint_query_option_skipResponseHeaders" class="anchor"></a><strong>skipResponseHeaders</strong> (producer)</p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>Whether to skip mapping all the HTTP response headers to Camel headers. If there are no data needed from HTTP headers then this can avoid parsing overhead with many object allocations for the JVM garbage collector.</p>
+</div></div></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">false</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">boolean</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><a id="_endpoint_query_option_throwExceptionOnFailure"></a>
@@ -2556,6 +2724,15 @@ In other words placeholders allows to externalize the configuration from your co
 <td class="tableblock halign-left valign-top"><p class="tableblock">boolean</p></td>
 </tr>
 <tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a id="_endpoint_query_option_followRedirects"></a>
+<a href="#_endpoint_query_option_followRedirects" class="anchor"></a><strong>followRedirects</strong> (producer (advanced))</p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>Whether to the HTTP request should follow redirects. By default the HTTP request does not follow redirects.</p>
+</div></div></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">false</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">boolean</p></td>
+</tr>
+<tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><a id="_endpoint_query_option_getWithBody"></a>
 <a href="#_endpoint_query_option_getWithBody" class="anchor"></a><strong>getWithBody</strong> (producer (advanced))</p></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
@@ -2596,24 +2773,6 @@ In other words placeholders allows to externalize the configuration from your co
 <a href="#_endpoint_query_option_preserveHostHeader" class="anchor"></a><strong>preserveHostHeader</strong> (producer (advanced))</p></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p>If the option is true, HttpProducer will set the Host header to the value contained in the current exchange Host header, useful in reverse proxy applications where you want the Host header received by the downstream server to reflect the URL called by the upstream client, this allows applications which use the Host header to generate accurate URL&#8217;s for a proxied service.</p>
-</div></div></td>
-<td class="tableblock halign-center valign-top"><p class="tableblock">false</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">boolean</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><a id="_endpoint_query_option_skipRequestHeaders"></a>
-<a href="#_endpoint_query_option_skipRequestHeaders" class="anchor"></a><strong>skipRequestHeaders</strong> (producer (advanced))</p></td>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>Whether to skip mapping all the Camel headers as HTTP request headers. If there are no data from Camel headers needed to be included in the HTTP request then this can avoid parsing overhead with many object allocations for the JVM garbage collector.</p>
-</div></div></td>
-<td class="tableblock halign-center valign-top"><p class="tableblock">false</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">boolean</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><a id="_endpoint_query_option_skipResponseHeaders"></a>
-<a href="#_endpoint_query_option_skipResponseHeaders" class="anchor"></a><strong>skipResponseHeaders</strong> (producer (advanced))</p></td>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>Whether to skip mapping all the HTTP response headers to Camel headers. If there are no data needed from HTTP headers then this can avoid parsing overhead with many object allocations for the JVM garbage collector.</p>
 </div></div></td>
 <td class="tableblock halign-center valign-top"><p class="tableblock">false</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">boolean</p></td>
@@ -2934,6 +3093,15 @@ In other words placeholders allows to externalize the configuration from your co
 <td class="tableblock halign-left valign-top"><p class="tableblock">String</p></td>
 </tr>
 <tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a id="_endpoint_query_option_oauth2Scope"></a>
+<a href="#_endpoint_query_option_oauth2Scope" class="anchor"></a><strong>oauth2Scope</strong> (security)</p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>OAuth2 scope.</p>
+</div></div></td>
+<td class="tableblock halign-center valign-top"></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">String</p></td>
+</tr>
+<tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><a id="_endpoint_query_option_oauth2TokenEndpoint"></a>
 <a href="#_endpoint_query_option_oauth2TokenEndpoint" class="anchor"></a><strong>oauth2TokenEndpoint</strong> (security)</p></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
@@ -3163,19 +3331,19 @@ In other words placeholders allows to externalize the configuration from your co
 </div>
 </div>
 <div class="sect1">
-<h2 id="_message_body"><a class="anchor" href="#_message_body"></a>Message Body</h2>
+<h2 id="_usage"><a class="anchor" href="#_usage"></a>Usage</h2>
 <div class="sectionbody">
+<div class="sect2">
+<h3 id="_message_body"><a class="anchor" href="#_message_body"></a>Message Body</h3>
 <div class="paragraph">
-<p>Camel will store the HTTP response from the external server on the OUT
-body. All headers from the IN message will be copied to the OUT message,
+<p>Camel will store the HTTP response from the external server on the <em>OUT</em> body.
+All headers from the <em>IN</em> message will be copied to the <em>OUT</em> message,
 so headers are preserved during routing. Additionally, Camel will add the
-HTTP response headers as well to the OUT message headers.</p>
+HTTP response headers as well to the <em>OUT</em> message headers.</p>
 </div>
 </div>
-</div>
-<div class="sect1">
-<h2 id="_using_system_properties"><a class="anchor" href="#_using_system_properties"></a>Using System Properties</h2>
-<div class="sectionbody">
+<div class="sect2">
+<h3 id="_using_system_properties"><a class="anchor" href="#_using_system_properties"></a>Using System Properties</h3>
 <div class="paragraph">
 <p>When setting useSystemProperties to true, the HTTP Client will look for
 the following System Properties, and it will use it:</p>
@@ -3183,62 +3351,60 @@ the following System Properties, and it will use it:</p>
 <div class="ulist">
 <ul>
 <li>
-<p>ssl.TrustManagerFactory.algorithm</p>
+<p><code>ssl.TrustManagerFactory.algorithm</code></p>
 </li>
 <li>
-<p><a href="http://javax.net/">javax.net</a>.ssl.trustStoreType</p>
+<p><code>javax.net.ssl.trustStoreType</code></p>
 </li>
 <li>
-<p><a href="http://javax.net/">javax.net</a>.ssl.trustStore</p>
+<p><code>javax.net.ssl.trustStore</code></p>
 </li>
 <li>
-<p><a href="http://javax.net/">javax.net</a>.ssl.trustStoreProvider</p>
+<p><code>javax.net.ssl.trustStoreProvider</code></p>
 </li>
 <li>
-<p><a href="http://javax.net/">javax.net</a>.ssl.trustStorePassword</p>
+<p><code>javax.net.ssl.trustStorePassword</code></p>
 </li>
 <li>
-<p>java.home</p>
+<p><code>java.home</code></p>
 </li>
 <li>
-<p>ssl.KeyManagerFactory.algorithm</p>
+<p><code>ssl.KeyManagerFactory.algorithm</code></p>
 </li>
 <li>
-<p><a href="http://javax.net/">javax.net</a>.ssl.keyStoreType</p>
+<p><code>javax.net.ssl.keyStoreType</code></p>
 </li>
 <li>
-<p><a href="http://javax.net/">javax.net</a>.ssl.keyStore</p>
+<p><code>javax.net.ssl.keyStore</code></p>
 </li>
 <li>
-<p><a href="http://javax.net/">javax.net</a>.ssl.keyStoreProvider</p>
+<p><code>javax.net.ssl.keyStoreProvider</code></p>
 </li>
 <li>
-<p><a href="http://javax.net/">javax.net</a>.ssl.keyStorePassword</p>
+<p><code>javax.net.ssl.keyStorePassword</code></p>
 </li>
 <li>
-<p>http.proxyHost</p>
+<p><code>http.proxyHost</code></p>
 </li>
 <li>
-<p>http.proxyPort</p>
+<p><code>http.proxyPort</code></p>
 </li>
 <li>
-<p>http.nonProxyHosts</p>
+<p><code>http.nonProxyHosts</code></p>
 </li>
 <li>
-<p>http.keepAlive</p>
+<p><code>http.keepAlive</code></p>
 </li>
 <li>
-<p>http.maxConnections</p>
+<p><code>http.maxConnections</code></p>
 </li>
 </ul>
 </div>
 </div>
-</div>
-<div class="sect1">
-<h2 id="_response_code"><a class="anchor" href="#_response_code"></a>Response code</h2>
-<div class="sectionbody">
+<div class="sect2">
+<h3 id="_response_code"><a class="anchor" href="#_response_code"></a>Response code</h3>
 <div class="paragraph">
-<p>Camel will handle according to the HTTP response code:</p>
+<p>Camel will handle, according to the HTTP response code:</p>
 </div>
 <div class="ulist">
 <ul>
@@ -3266,10 +3432,8 @@ the <code>HttpOperationFailedException</code> from being thrown for failed respo
 codes. This allows you to get any response from the remote server.</p>
 </div>
 </div>
-</div>
-<div class="sect1">
-<h2 id="_exceptions"><a class="anchor" href="#_exceptions"></a>Exceptions</h2>
-<div class="sectionbody">
+<div class="sect2">
+<h3 id="_exceptions"><a class="anchor" href="#_exceptions"></a>Exceptions</h3>
 <div class="paragraph">
 <p><code>HttpOperationFailedException</code> exception contains the following information:</p>
 </div>
@@ -3282,7 +3446,7 @@ codes. This allows you to get any response from the remote server.</p>
 <p>The HTTP status line (text of the status code)</p>
 </li>
 <li>
-<p>Redirect location, if server returned a redirect</p>
+<p>Redirect location if server returned a redirect</p>
 </li>
 <li>
 <p>Response body as a <code>java.lang.String</code>, if server provided a body as
@@ -3291,10 +3455,8 @@ response</p>
 </ul>
 </div>
 </div>
-</div>
-<div class="sect1">
-<h2 id="_which_http_method_will_be_used"><a class="anchor" href="#_which_http_method_will_be_used"></a>Which HTTP method will be used</h2>
-<div class="sectionbody">
+<div class="sect2">
+<h3 id="_which_http_method_will_be_used"><a class="anchor" href="#_which_http_method_will_be_used"></a>Which HTTP method will be used</h3>
 <div class="paragraph">
 <p>The following algorithm is used to determine what HTTP method should be used:<br>
  1. Use method provided as endpoint configuration (<code>httpMethod</code>).<br>
@@ -3305,10 +3467,8 @@ response</p>
  6. <code>GET</code> otherwise.</p>
 </div>
 </div>
-</div>
-<div class="sect1">
-<h2 id="_configuring_uri_to_call"><a class="anchor" href="#_configuring_uri_to_call"></a>Configuring URI to call</h2>
-<div class="sectionbody">
+<div class="sect2">
+<h3 id="_configuring_uri_to_call"><a class="anchor" href="#_configuring_uri_to_call"></a>Configuring URI to call</h3>
 <div class="paragraph">
 <p>You can set the HTTP producer&#8217;s URI directly from the endpoint URI. In
 the route below, Camel will call out to the external server, <code>oldhost</code>,
@@ -3343,16 +3503,14 @@ using HTTP.</p>
 </div>
 </div>
 <div class="paragraph">
-<p>In the sample above Camel will call the <a href="http://newhost" class="bare">http://newhost</a> despite the
+<p>In the sample above, Camel will call the <a href="http://newhost" class="bare">http://newhost</a> despite the
 endpoint is configured with <a href="http://oldhost" class="bare">http://oldhost</a>.<br>
 If the http endpoint is working in bridge mode, it will ignore the
 message header of <code>Exchange.HTTP_URI</code>.</p>
 </div>
 </div>
-</div>
-<div class="sect1">
-<h2 id="_configuring_uri_parameters"><a class="anchor" href="#_configuring_uri_parameters"></a>Configuring URI Parameters</h2>
-<div class="sectionbody">
+<div class="sect2">
+<h3 id="_configuring_uri_parameters"><a class="anchor" href="#_configuring_uri_parameters"></a>Configuring URI Parameters</h3>
 <div class="paragraph">
 <p>The <strong>http</strong> producer supports URI parameters to be sent to the HTTP
 server. The URI parameters can either be set directly on the endpoint
@@ -3375,10 +3533,8 @@ URI or as a header with the key <code>Exchange.HTTP_QUERY</code> on the message.
 </div>
 </div>
 </div>
-</div>
-<div class="sect1">
-<h2 id="_how_to_set_the_http_method_getpatchpostputdeleteheadoptionstrace_to_the_http_producer"><a class="anchor" href="#_how_to_set_the_http_method_getpatchpostputdeleteheadoptionstrace_to_the_http_producer"></a>How to set the http method (GET/PATCH/POST/PUT/DELETE/HEAD/OPTIONS/TRACE) to the HTTP producer</h2>
-<div class="sectionbody">
+<div class="sect2">
+<h3 id="_how_to_set_the_http_method_getpatchpostputdeleteheadoptionstrace_to_the_http_producer"><a class="anchor" href="#_how_to_set_the_http_method_getpatchpostputdeleteheadoptionstrace_to_the_http_producer"></a>How to set the http method (GET/PATCH/POST/PUT/DELETE/HEAD/OPTIONS/TRACE) to the HTTP producer</h3>
 <div class="paragraph">
 <p>The HTTP component provides a way to set the HTTP request method by
 setting the message header. Here is an example:</p>
@@ -3415,20 +3571,16 @@ setting the message header. Here is an example:</p>
 </div>
 </div>
 </div>
-</div>
-<div class="sect1">
-<h2 id="_using_client_timeout_so_timeout"><a class="anchor" href="#_using_client_timeout_so_timeout"></a>Using client timeout - SO_TIMEOUT</h2>
-<div class="sectionbody">
+<div class="sect2">
+<h3 id="_using_client_timeout_so_timeout"><a class="anchor" href="#_using_client_timeout_so_timeout"></a>Using client timeout - SO_TIMEOUT</h3>
 <div class="paragraph">
 <p>See the
 <a href="https://github.com/apache/camel/blob/main/components/camel-http/src/test/java/org/apache/camel/component/http/HttpSOTimeoutTest.java">HttpSOTimeoutTest</a>
 unit test.</p>
 </div>
 </div>
-</div>
-<div class="sect1">
-<h2 id="_configuring_a_proxy"><a class="anchor" href="#_configuring_a_proxy"></a>Configuring a Proxy</h2>
-<div class="sectionbody">
+<div class="sect2">
+<h3 id="_configuring_a_proxy"><a class="anchor" href="#_configuring_a_proxy"></a>Configuring a Proxy</h3>
 <div class="paragraph">
 <p>The HTTP component provides a way to configure a proxy.</p>
 </div>
@@ -3442,8 +3594,8 @@ unit test.</p>
 <p>There is also support for proxy authentication via the
 <code>proxyAuthUsername</code> and <code>proxyAuthPassword</code> options.</p>
 </div>
-<div class="sect2">
-<h3 id="_using_proxy_settings_outside_of_uri"><a class="anchor" href="#_using_proxy_settings_outside_of_uri"></a>Using proxy settings outside of URI</h3>
+<div class="sect3">
+<h4 id="_using_proxy_settings_outside_of_uri"><a class="anchor" href="#_using_proxy_settings_outside_of_uri"></a>Using proxy settings outside of URI</h4>
 <div class="paragraph">
 <p>To avoid System properties conflicts, you can set proxy configuration
 only from the CamelContext or URI.<br>
@@ -3475,14 +3627,12 @@ So you can override the system properties with the endpoint options.</p>
 </div>
 <div class="paragraph">
 <p>There is also a <code>http.proxyScheme</code> property you
-can set to explicit configure the scheme to use.</p>
+can set to explicitly configure the scheme to use.</p>
 </div>
 </div>
 </div>
-</div>
-<div class="sect1">
-<h2 id="_configuring_charset"><a class="anchor" href="#_configuring_charset"></a>Configuring charset</h2>
-<div class="sectionbody">
+<div class="sect2">
+<h3 id="_configuring_charset"><a class="anchor" href="#_configuring_charset"></a>Configuring charset</h3>
 <div class="paragraph">
 <p>If you are using <code>POST</code> to send data you can configure the <code>charset</code>
 using the <code>Exchange</code> property:</p>
@@ -3492,8 +3642,8 @@ using the <code>Exchange</code> property:</p>
 <pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">exchange.setProperty(Exchange.CHARSET_NAME, "ISO-8859-1");</code></pre>
 </div>
 </div>
-<div class="sect2">
-<h3 id="_sample_with_scheduled_poll"><a class="anchor" href="#_sample_with_scheduled_poll"></a>Sample with scheduled poll</h3>
+<div class="sect3">
+<h4 id="_example_with_scheduled_poll"><a class="anchor" href="#_example_with_scheduled_poll"></a>Example with scheduled poll</h4>
 <div class="paragraph">
 <p>This sample polls the Google homepage every 10 seconds and write the
 page to the file <code>message.html</code>:</p>
@@ -3507,10 +3657,10 @@ page to the file <code>message.html</code>:</p>
 </div>
 </div>
 </div>
-<div class="sect2">
-<h3 id="_uri_parameters_from_the_endpoint_uri"><a class="anchor" href="#_uri_parameters_from_the_endpoint_uri"></a>URI Parameters from the endpoint URI</h3>
+<div class="sect3">
+<h4 id="_uri_parameters_from_the_endpoint_uri"><a class="anchor" href="#_uri_parameters_from_the_endpoint_uri"></a>URI Parameters from the endpoint URI</h4>
 <div class="paragraph">
-<p>In this sample we have the complete URI endpoint that is just what you
+<p>In this sample, we have the complete URI endpoint that is just what you
 would have typed in a web browser. Multiple URI parameters can of course
 be set using the <code>&amp;</code> character as separator, just as you would in the
 web browser. Camel does no tricks here.</p>
@@ -3522,8 +3672,8 @@ template.sendBody("http://www.google.com/search?q=Camel", null);</code></pre>
 </div>
 </div>
 </div>
-<div class="sect2">
-<h3 id="_uri_parameters_from_the_message"><a class="anchor" href="#_uri_parameters_from_the_message"></a>URI Parameters from the Message</h3>
+<div class="sect3">
+<h4 id="_uri_parameters_from_the_message"><a class="anchor" href="#_uri_parameters_from_the_message"></a>URI Parameters from the Message</h4>
 <div class="listingblock">
 <div class="content">
 <pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">Map headers = new HashMap();
@@ -3537,8 +3687,8 @@ template.sendBody("http://www.google.com/search", null, headers);</code></pre>
 <code>?</code> and you can separate parameters as usual with the <code>&amp;</code> char.</p>
 </div>
 </div>
-<div class="sect2">
-<h3 id="_getting_the_response_code"><a class="anchor" href="#_getting_the_response_code"></a>Getting the Response Code</h3>
+<div class="sect3">
+<h4 id="_getting_the_response_code"><a class="anchor" href="#_getting_the_response_code"></a>Getting the Response Code</h4>
 <div class="paragraph">
 <p>You can get the HTTP response code from the HTTP component by getting
 the value from the Out message header with
@@ -3557,42 +3707,37 @@ int responseCode = out.getHeader(Exchange.HTTP_RESPONSE_CODE, Integer.class);</c
 </div>
 </div>
 </div>
-</div>
-<div class="sect1">
-<h2 id="_disabling_cookies"><a class="anchor" href="#_disabling_cookies"></a>Disabling Cookies</h2>
-<div class="sectionbody">
+<div class="sect2">
+<h3 id="_disabling_cookies"><a class="anchor" href="#_disabling_cookies"></a>Disabling Cookies</h3>
 <div class="paragraph">
-<p>To disable cookies in the CookieStore you can set the HTTP Client to ignore cookies by
+<p>To disable cookies in the CookieStore, you can set the HTTP Client to ignore cookies by
 adding this URI option: <code>httpClient.cookieSpec=ignore</code>. This doesn&#8217;t affect cookies manually set in the <code>Cookie</code> header</p>
 </div>
 </div>
-</div>
-<div class="sect1">
-<h2 id="_basic_auth_with_the_streaming_message_body"><a class="anchor" href="#_basic_auth_with_the_streaming_message_body"></a>Basic auth with the streaming message body</h2>
-<div class="sectionbody">
+<div class="sect2">
+<h3 id="_basic_auth_with_the_streaming_message_body"><a class="anchor" href="#_basic_auth_with_the_streaming_message_body"></a>Basic auth with the streaming message body</h3>
 <div class="paragraph">
-<p>In order to avoid the <code>NonRepeatableRequestException</code>, you need to do the
+<p>To avoid the <code>NonRepeatableRequestException</code>, you need to do the
 Preemptive Basic Authentication by adding the option: <code>authenticationPreemptive=true</code></p>
 </div>
 </div>
-</div>
-<div class="sect1">
-<h2 id="_oauth2_support"><a class="anchor" href="#_oauth2_support"></a>OAuth2 Support</h2>
-<div class="sectionbody">
+<div class="sect2">
+<h3 id="_oauth2_support"><a class="anchor" href="#_oauth2_support"></a>OAuth2 Support</h3>
 <div class="paragraph">
-<p>In order to get a access token from a Authorization Server and fill that in Authorization header to do requests to protected services, you will need to use <code>oauth2ClientId</code>, <code>oauth2ClientSecret</code> and  <code>oauth2TokenEndpoint</code> properties, and those should be defined as specified at RFC 6749 and provided by your Authorization Server.</p>
+<p>To get an access token from an Authorization Server and fill that in Authorization header to do requests to protected services, you will need to use <code>oauth2ClientId</code>, <code>oauth2ClientSecret</code> and  <code>oauth2TokenEndpoint</code> properties, and those should be defined as specified at RFC 6749 and provided by your Authorization Server.</p>
 </div>
 <div class="paragraph">
-<p>In below example camel will do a underlying request to <code><a href="https://localhost:8080/realms/master/protocol/openid-connect/token" class="bare">https://localhost:8080/realms/master/protocol/openid-connect/token</a></code> using provided credentials (client id and client secret), then will get <code>access_token</code> from response and lastly will fill it at <code>Authorization</code> header of request which will be done to <code><a href="https://localhost:9090" class="bare">https://localhost:9090</a></code>.</p>
+<p>In below example camel will do an underlying request to <code><a href="https://localhost:8080/realms/master/protocol/openid-connect/token" class="bare">https://localhost:8080/realms/master/protocol/openid-connect/token</a></code> using provided credentials (client id and client secret), then will get <code>access_token</code> from response and lastly will fill it at <code>Authorization</code> header of request which will be done to <code><a href="https://localhost:9090" class="bare">https://localhost:9090</a></code>.</p>
 </div>
 <div class="listingblock">
 <div class="content">
 <pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">String clientId = "my-client-id";
 String clientSecret = "my-client-secret";
 String tokenEndpoint = "https://localhost:8080/realms/master/protocol/openid-connect/token";
+String scope = "my-scope"; // optional scope
 
 from("direct:start")
-  .to("https://localhost:9090/?oauth2ClientId=" + clientId + "&amp;oauth2ClientSecret=" + clientSecret + "&amp;oauth2TokenEndpoint=" + tokenEndpoint);</code></pre>
+  .to("https://localhost:9090/?oauth2ClientId=" + clientId + "&amp;oauth2ClientSecret=" + clientSecret + "&amp;oauth2TokenEndpoint=" + tokenEndpoint + "&amp;oauth2Scope=" + scope);</code></pre>
 </div>
 </div>
 <div class="admonitionblock note">
@@ -3602,34 +3747,41 @@ from("direct:start")
 <i class="fa icon-note" title="Note"></i>
 </td>
 <td class="content">
-Camel only provide support for OAuth2 client credentials flow
+Camel only provides support for OAuth2 client credentials flow
 </td>
 </tr>
 </table>
 </div>
+<div class="admonitionblock important">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-important" title="Important"></i>
+</td>
+<td class="content">
+Camel does not perform any validation in access token. It&#8217;s up to the underlying service to validate it.
+</td>
+</tr>
+</table>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_advanced_usage"><a class="anchor" href="#_advanced_usage"></a>Advanced Usage</h3>
 <div class="paragraph">
-<p>Important: Camel does not perform any validation in access token. It&#8217;s up to the underlying service to validate it.</p>
-</div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="_advanced_usage"><a class="anchor" href="#_advanced_usage"></a>Advanced Usage</h2>
-<div class="sectionbody">
-<div class="paragraph">
-<p>If you need more control over the HTTP producer you should use the
+<p>If you need more control over the HTTP producer, you should use the
 <code>HttpComponent</code> where you can set various classes to give you custom
 behavior.</p>
 </div>
-<div class="sect2">
-<h3 id="_setting_up_ssl_for_http_client"><a class="anchor" href="#_setting_up_ssl_for_http_client"></a>Setting up SSL for HTTP Client</h3>
+<div class="sect3">
+<h4 id="_setting_up_ssl_for_http_client"><a class="anchor" href="#_setting_up_ssl_for_http_client"></a>Setting up SSL for HTTP Client</h4>
 <div id="HTTP-UsingtheJSSEConfigurationUtility" class="paragraph">
 <p>Using the JSSE Configuration Utility</p>
 </div>
 <div class="paragraph">
 <p>The HTTP component supports SSL/TLS configuration
-through the <a href="../../manual/camel-configuration-utilities.html" class="xref page">Camel JSSE
+through the <a href="../../manual/4.10.x/camel-configuration-utilities.html" class="xref page">Camel JSSE
 Configuration Utility</a>.  This utility greatly decreases the amount of
-component specific code you need to write and is configurable at the
+component-specific code you need to write and is configurable at the
 endpoint and component levels.  The following examples demonstrate how
 to use the utility with the HTTP component.</p>
 </div>
@@ -3639,7 +3791,7 @@ to use the utility with the HTTP component.</p>
 <div class="listingblock">
 <div class="content">
 <pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">KeyStoreParameters ksp = new KeyStoreParameters();
-ksp.setResource("/users/home/server/keystore.jks");
+ksp.setResource("file:/users/home/server/keystore.jks");
 ksp.setPassword("keystorePassword");
 
 KeyManagersParameters kmp = new KeyManagersParameters();
@@ -3663,7 +3815,7 @@ httpComponent.setSslContextParameters(scp);</code></pre>
     &lt;camel:keyManagers
         keyPassword="keyPassword"&gt;
       &lt;camel:keyStore
-          resource="/users/home/server/keystore.jks"
+          resource="file:/users/home/server/keystore.jks"
           password="keystorePassword"/&gt;
     &lt;/camel:keyManagers&gt;
   &lt;/camel:sslContextParameters&gt;
@@ -3675,7 +3827,7 @@ httpComponent.setSslContextParameters(scp);</code></pre>
 <p>Configuring Apache HTTP Client Directly</p>
 </div>
 <div class="paragraph">
-<p>Basically camel-http component is built on the top of
+<p>Basically, a camel-http component is built on the top of
 <a href="https://hc.apache.org/httpcomponents-client-5.1.x/">Apache HttpClient</a>.
 Please refer to
 <a href="https://hc.apache.org/httpcomponents-client-4.5.x/current/tutorial/html/connmgmt.html">SSL/TLS
@@ -3687,7 +3839,7 @@ class.<br>
 configuration on the http client if you need full control of it.</p>
 </div>
 <div class="paragraph">
-<p>However, if you <em>just</em> want to specify the keystore and truststore you
+<p>However, if you <em>just</em> want to specify the keystore and truststore, you
 can do this with Apache HTTP <code>HttpClientConfigurer</code>, for example:</p>
 </div>
 <div class="listingblock">
@@ -3702,8 +3854,8 @@ registry.register(new Scheme("https", 443, new SSLSocketFactory(keystore, "mypas
 <div class="paragraph">
 <p>And then you need to create a class that implements
 <code>HttpClientConfigurer</code>, and registers https protocol providing a
-keystore or truststore per example above. Then, from your camel route
-builder class you can hook it up like so:</p>
+keystore or truststore per the example above. Then, from your camel route
+builder class, you can hook it up like so:</p>
 </div>
 <div class="listingblock">
 <div class="content">
@@ -3732,7 +3884,7 @@ keystore and truststore as described above, it will work fine.</p>
 <p>Using HTTPS to authenticate gotchas</p>
 </div>
 <div class="paragraph">
-<p>An end user reported that he had problem with authenticating with HTTPS.
+<p>An end user reported that he had a problem with authenticating with HTTPS.
 The problem was eventually resolved by providing a custom configured
 <code>org.apache.hc.core5.http.protocol.HttpContext</code>:</p>
 </div>
@@ -3802,11 +3954,11 @@ The problem was eventually resolved by providing a custom configured
 <p>Using different SSLContextParameters</p>
 </div>
 <div class="paragraph">
-<p>The <a href="#">HTTP</a> component only support one instance of
+<p>The <a href="#">HTTP</a> component only supports one instance of
 <code>org.apache.camel.support.jsse.SSLContextParameters</code> per component. If you
-need to use 2 or more different instances, then you need to setup
+need to use two or more different instances, then you need to set up
 multiple <a href="#">HTTP</a> components as shown below. Where we have
-2 components, each using their own instance of <code>sslContextParameters</code>
+two components, each using their own instance of <code>sslContextParameters</code>
 property.</p>
 </div>
 <div class="listingblock">
@@ -3825,11 +3977,14 @@ property.</p>
 </div>
 </div>
 </div>
+</div>
 </article>
   </div>
 </main>
 </div>
 <footer class="footer">
+  <p>This page was built using the Antora default UI.</p>
+  <p>The source code for this UI is licensed under the terms of the MPL-2.0 license.</p>
 </footer>
 <script id="site-script" src="../../_/js/site.js" data-ui-root-path="../../_"></script>
 <script async src="../../_/js/vendor/highlight.js"></script>

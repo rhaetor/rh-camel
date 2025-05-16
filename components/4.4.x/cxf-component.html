@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>CXF :: Red Hat Camel Reference</title>
+    <title>CXF :: Red Hat build of Apache Camel</title>
     <meta name="description" content="Expose SOAP WebServices using Apache CXF or connect to external WebServices using CXF WS client.">
     <meta name="generator" content="Antora 3.1.4">
     <link rel="stylesheet" href="../../_/css/site.css">
@@ -12,7 +12,7 @@
 <header class="header">
   <nav class="navbar">
     <div class="navbar-brand">
-      <a class="navbar-item" href="../../manual/index.html">Red Hat build of Apache Camel manual</a>
+      <a class="navbar-item" href="/">Red Hat build of Apache Camel</a>
       <button class="navbar-burger" data-target="topbar-nav">
         <span></span>
         <span></span>
@@ -22,11 +22,12 @@
   </nav>
 </header>
 <div class="body">
-<div class="nav-container" data-component="components" data-version="next">
+<div class="nav-container" data-component="components" data-version="4.4.x">
   <aside class="nav">
     <div class="panels">
 <div class="nav-panel-menu is-active" data-panel="menu">
   <nav class="nav-menu">
+    <button class="nav-menu-toggle" aria-label="Toggle expand/collapse all" style="display: none"></button>
     <h3 class="title"><a href="index.html">Camel Components</a></h3>
 <ul class="nav-list">
   <li class="nav-item" data-depth="0">
@@ -912,6 +913,33 @@
     <a class="nav-link" href="splunk-hec-component.html">Splunk HEC</a>
   </li>
   <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="spring-summary.html">Spring</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="spring-batch-component.html">Spring Batch</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="spring-event-component.html">Spring Event</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="spring-jdbc-component.html">Spring JDBC</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="spring-ldap-component.html">Spring LDAP</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="spring-rabbitmq-component.html">Spring RabbitMQ</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="spring-redis-component.html">Spring Redis</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="spring-ws-component.html">Spring WebService</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
     <a class="nav-link" href="sql-component.html">SQL</a>
   </li>
   <li class="nav-item" data-depth="2">
@@ -1792,22 +1820,40 @@
 <div class="nav-panel-explore" data-panel="explore">
   <div class="context">
     <span class="title">Camel Components</span>
-    <span class="version">Next (Pre-release)</span>
+    <span class="version">4.4.x</span>
   </div>
   <ul class="components">
     <li class="component is-current">
-      <a class="title" href="index.html">Camel Components</a>
+      <div class="title"><a href="../4.10.x/index.html">Camel Components</a></div>
       <ul class="versions">
-        <li class="version is-current is-latest">
-          <a href="index.html">Next (Pre-release)</a>
+        <li class="version is-latest">
+          <a href="../4.10.x/index.html">4.10.x (LTS)</a>
+        </li>
+        <li class="version">
+          <a href="../4.8.x/index.html">4.8.x</a>
+        </li>
+        <li class="version is-current">
+          <a href="index.html">4.4.x</a>
+        </li>
+        <li class="version">
+          <a href="../4.0.x/index.html">4.0.x</a>
         </li>
       </ul>
     </li>
     <li class="component">
-      <a class="title" href="../../manual/index.html">User manual</a>
+      <div class="title"><a href="../../manual/4.10.x/index.html">User manual</a></div>
       <ul class="versions">
         <li class="version is-latest">
-          <a href="../../manual/index.html">default</a>
+          <a href="../../manual/4.10.x/index.html">4.10.x</a>
+        </li>
+        <li class="version">
+          <a href="../../manual/4.8.x/index.html">4.8.x</a>
+        </li>
+        <li class="version">
+          <a href="../../manual/4.4.x/index.html">4.4.x</a>
+        </li>
+        <li class="version">
+          <a href="../../manual/4.0.x/index.html">4.0.x</a>
         </li>
       </ul>
     </li>
@@ -1819,7 +1865,7 @@
 <main class="article">
 <div class="toolbar" role="navigation">
 <button class="nav-toggle"></button>
-  <a href="../../manual/index.html" class="home-link"></a>
+  <a href="../../manual/4.10.x/index.html" class="home-link"></a>
 <nav class="breadcrumbs" aria-label="breadcrumbs">
   <ul>
     <li><a href="index.html">Camel Components</a></li>
@@ -1827,6 +1873,16 @@
     <li><a href="cxf-component.html">CXF</a></li>
   </ul>
 </nav>
+<div class="page-versions">
+  <button class="version-menu-toggle" title="Show other versions of page">4.4.x</button>
+  <div class="version-menu">
+    <a class="version" href="../4.10.x/cxf-component.html">4.10.x (LTS)</a>
+    <a class="version" href="../4.8.x/cxf-component.html">4.8.x</a>
+    <a class="version is-current" href="cxf-component.html">4.4.x</a>
+    <a class="version is-missing" href="../4.0.x/index.html">4.0.x</a>
+  </div>
+</div>
+<div class="edit-this-page"><a href="https://github.com/rhaetor/rh-camel-jboss/edit/camel-4.4.0-branch/docs/components/modules/ROOT/pages/cxf-component.adoc">Edit this Page</a></div>
 </div>
   <div class="content">
 <aside class="toc sidebar" data-title="Contents" data-levels="2">
@@ -1855,8 +1911,8 @@ hosted in CXF.</p>
 </td>
 <td class="content">
 <div class="paragraph">
-<p>When using CXF in streaming modes (see DataFormat option), then also
-read about Stream caching.</p>
+<p>When using CXF in streaming mode - check the DataFormat options below, then also
+read about <a href="../../manual/4.10.x/stream-caching.html" class="xref page">stream caching</a>.</p>
 </div>
 </td>
 </tr>
@@ -1900,7 +1956,7 @@ are specified in the bean definition.</p>
 </div>
 </div>
 <div class="paragraph">
-<p>Where <strong>someAddress</strong> specifies the CXF endpoint&#8217;s address. With this URI
+<p>Where <code>someAddress</code> specifies the CXF endpoint&#8217;s address. With this URI
 format, most of the endpoint details are specified using options.</p>
 </div>
 <div class="paragraph">
@@ -1933,14 +1989,14 @@ format, most of the endpoint details are specified using options.</p>
 <h3 id="_configuring_component_options"><a class="anchor" href="#_configuring_component_options"></a>Configuring Component Options</h3>
 <div class="paragraph">
 <p>The component level is the highest level which holds general and common configurations that are inherited by the endpoints.
-For example a component may have security settings, credentials for authentication, urls for network connection and so forth.</p>
+For example, a component may have security settings, credentials for authentication, urls for network connection and so forth.</p>
 </div>
 <div class="paragraph">
 <p>Some components only have a few options, and others may have many. Because components typically have pre configured defaults
 that are commonly used, then you may often only need to configure a few options on a component; or none at all.</p>
 </div>
 <div class="paragraph">
-<p>Configuring components can be done with the <a href="../../manual/component-dsl.html" class="xref page">Component DSL</a>,
+<p>Configuring components can be done with the <a href="../../manual/4.10.x/component-dsl.html" class="xref page">Component DSL</a>,
 in a configuration file (application.properties|yaml), or directly with Java code.</p>
 </div>
 </div>
@@ -1953,11 +2009,11 @@ or as a producer (to), or used for both.</p>
 </div>
 <div class="paragraph">
 <p>Configuring endpoints is most often done directly in the endpoint URI as path and query parameters. You can also use
-the <a href="../../manual/Endpoint-dsl.html" class="xref page">Endpoint DSL</a> and <a href="../../manual/dataformat-dsl.html" class="xref page">DataFormat DSL</a>
+the <a href="../../manual/4.10.x/Endpoint-dsl.html" class="xref page">Endpoint DSL</a> and <a href="../../manual/4.10.x/dataformat-dsl.html" class="xref page">DataFormat DSL</a>
 as a <em>type safe</em> way of configuring endpoints and data formats in Java.</p>
 </div>
 <div class="paragraph">
-<p>A good practice when configuring options is to use <a href="../../manual/using-propertyplaceholder.html" class="xref page">Property Placeholders</a>,
+<p>A good practice when configuring options is to use <a href="../../manual/4.10.x/using-propertyplaceholder.html" class="xref page">Property Placeholders</a>,
 which allows to not hardcode urls, port numbers, sensitive information, and other settings.
 In other words placeholders allows to externalize the configuration from your code, and gives more flexibility and reuse.</p>
 </div>
@@ -2355,7 +2411,7 @@ In other words placeholders allows to externalize the configuration from your co
 <td class="tableblock halign-left valign-top"><p class="tableblock"><a id="_endpoint_query_option_properties"></a>
 <a href="#_endpoint_query_option_properties" class="anchor"></a><strong>properties</strong> (advanced)</p></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>To set additional CXF options using the key/value pairs from the Map. For example to turn on stacktraces in SOAP faults, properties.faultStackTraceEnabled=true.</p>
+<p>To set additional CXF options using the key/value pairs from the Map. For example, to turn on stacktraces in SOAP faults, properties.faultStackTraceEnabled=true.</p>
 </div></div></td>
 <td class="tableblock halign-center valign-top"></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Map</p></td>
@@ -2569,11 +2625,11 @@ In other words placeholders allows to externalize the configuration from your co
 <div class="paragraph">
 <p>The <code>serviceName</code> and <code>portName</code> are
 <a href="http://en.wikipedia.org/wiki/QName">QNames</a>, so if you provide them be
-sure to prefix them with their {namespace} as shown in the examples
+sure to prefix them with their <em>{namespace}</em> as shown in the examples
 above.</p>
 </div>
 <div class="sect2">
-<h3 id="_descriptions_of_the_dataformats"><a class="anchor" href="#_descriptions_of_the_dataformats"></a>Descriptions of the dataformats</h3>
+<h3 id="_descriptions_of_the_data_formats"><a class="anchor" href="#_descriptions_of_the_data_formats"></a>Descriptions of the data formats</h3>
 <div class="paragraph">
 <p>In Apache Camel, the Camel CXF component is the key to integrating routes with Web services. You can use the Camel CXF component to create a CXF endpoint, which can be used in either of the following ways:</p>
 </div>
@@ -2613,10 +2669,10 @@ JAX-WS handler is supported. Logical JAX-WS handler is not supported.</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>RAW</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>RAW</code> mode provides the raw message stream that is received from the transport layer.
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>RAW</code> mode provides the raw message stream received from the transport layer.
 It is not possible to touch or change the stream, some of the CXF
 interceptors will be removed if you are using this kind of DataFormat, so
-you can&#8217;t see any soap headers after the camel-cxf consumer. JAX-WS
+you can&#8217;t see any soap headers after the Camel CXF consumer. JAX-WS
 handler is not supported. Note that <code>RAW</code> mode is equivalent to deprecated <code>MESSAGE</code> mode.</p></td>
 </tr>
 <tr>
@@ -2637,10 +2693,10 @@ defined in
 </div>
 </div>
 <div class="sect1">
-<h2 id="_how_to_create_simple_cxf_service_with_pojo_data_format"><a class="anchor" href="#_how_to_create_simple_cxf_service_with_pojo_data_format"></a>How to create simple CXF service with POJO data format</h2>
+<h2 id="_how_to_create_a_simple_cxf_service_with_pojo_data_format"><a class="anchor" href="#_how_to_create_a_simple_cxf_service_with_pojo_data_format"></a>How to create a simple CXF service with POJO data format</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>Having simple java web service interface</p>
+<p>Having simple java web service interface:</p>
 </div>
 <div class="listingblock">
 <div class="content">
@@ -2654,7 +2710,7 @@ public interface EchoService {
 </div>
 </div>
 <div class="paragraph">
-<p>and implementation</p>
+<p>And implementation:</p>
 </div>
 <div class="listingblock">
 <div class="content">
@@ -2692,10 +2748,10 @@ public class EchoServiceImpl implements EchoService {
 </div>
 </div>
 <div class="sect1">
-<h2 id="_how_to_consume_a_message_from_a_camel_cxf_endpoint_in_pojo_data_format"><a class="anchor" href="#_how_to_consume_a_message_from_a_camel_cxf_endpoint_in_pojo_data_format"></a>How to consume a message from a camel-cxf endpoint in POJO data format</h2>
+<h2 id="_how_to_consume_a_message_from_a_camel_cxf_endpoint_in_pojo_data_format"><a class="anchor" href="#_how_to_consume_a_message_from_a_camel_cxf_endpoint_in_pojo_data_format"></a>How to consume a message from a Camel CXF endpoint in POJO data format</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>The <code>camel-cxf</code> endpoint consumer POJO data format is based on the
+<p>The Camel CXF endpoint consumer POJO data format is based on the
 <a href="http://cxf.apache.org/docs/invokers.html">CXF invoker</a>, so the
 message header has a property with the name of
 <code>CxfConstants.OPERATION_NAME</code> and the message body is a list of the SEI
@@ -2718,7 +2774,7 @@ method parameters.</p>
         if (boi != null) {
             LOG.info("boi.isUnwrapped" + boi.isUnwrapped());
         }
-        // Get the parameters list which element is the holder.
+        // Get the parameter list which element is the holder.
         MessageContentsList msgList = (MessageContentsList) exchange.getIn().getBody();
         Holder&lt;String&gt; personId = (Holder&lt;String&gt;) msgList.get(0);
         Holder&lt;String&gt; ssn = (Holder&lt;String&gt;) msgList.get(1);
@@ -2739,7 +2795,7 @@ method parameters.</p>
         name.value = "Bonjour";
         ssn.value = "123";
         LOG.info("setting Bonjour as the response");
-        // Set the response message, first element is the return value of the operation,
+        // Set the response message, the first element is the return value of the operation,
         // the others are the holders of method parameters
         exchange.getMessage().setBody(new Object[] { null, personId, ssn, name });
     }
@@ -2750,12 +2806,12 @@ method parameters.</p>
 </div>
 </div>
 <div class="sect1">
-<h2 id="_how_to_prepare_the_message_for_the_camel_cxf_endpoint_in_pojo_data_format"><a class="anchor" href="#_how_to_prepare_the_message_for_the_camel_cxf_endpoint_in_pojo_data_format"></a>How to prepare the message for the camel-cxf endpoint in POJO data format</h2>
+<h2 id="_how_to_prepare_the_message_for_the_camel_cxf_endpoint_in_pojo_data_format"><a class="anchor" href="#_how_to_prepare_the_message_for_the_camel_cxf_endpoint_in_pojo_data_format"></a>How to prepare the message for the Camel CXF endpoint in POJO data format</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>The <code>camel-cxf</code> endpoint producer is based on the
-<a href="https://github.com/apache/cxf/blob/master/core/src/main/java/org/apache/cxf/endpoint/Client.java">CXF
-client API</a>. First you need to specify the operation name in the message
+<p>The Camel CXF endpoint producer is based on the
+<a href="https://github.com/apache/cxf/blob/master/core/src/main/java/org/apache/cxf/endpoint/Client.java">CXF client API</a>.
+First, you need to specify the operation name in the message
 header, then add the method parameters to a list, and initialize the
 message with this parameter list. The response message&#8217;s body is a
 messageContentsList, you can get the result from that list.</p>
@@ -2783,9 +2839,9 @@ senderExchange.getIn().setHeader(CxfConstants.OPERATION_NAME, ECHO_OPERATION);
 Exchange exchange = template.send("direct:EndpointA", senderExchange);
 
 org.apache.camel.Message out = exchange.getMessage();
-// The response message's body is an MessageContentsList which first element is the return value of the operation,
+// The response message's body is a MessageContentsList which first element is the return value of the operation,
 // If there are some holder parameters, the holder parameter will be filled in the reset of List.
-// The result will be extract from the MessageContentsList with the String class type
+// The result will be extracted from the MessageContentsList with the String class type
 MessageContentsList result = (MessageContentsList) out.getBody();
 LOG.info("Received output text: " + result.get(0));
 Map&lt;String, Object&gt; responseContext = CastUtils.cast((Map&lt;?, ?&gt;) out.getHeader(Client.RESPONSE_CONTEXT));
@@ -2798,7 +2854,7 @@ assertEquals("echo " + TEST_MESSAGE, result.get(0), "Reply body on Camel is wron
 </div>
 </div>
 <div class="sect1">
-<h2 id="_how_to_consume_a_message_from_a_camel_cxf_endpoint_in_payload_data_format"><a class="anchor" href="#_how_to_consume_a_message_from_a_camel_cxf_endpoint_in_payload_data_format"></a>How to consume a message from a camel-cxf endpoint in PAYLOAD data format</h2>
+<h2 id="_how_to_consume_a_message_from_a_camel_cxf_endpoint_in_payload_data_format"><a class="anchor" href="#_how_to_consume_a_message_from_a_camel_cxf_endpoint_in_payload_data_format"></a>How to consume a message from a Camel CXF endpoint in PAYLOAD data format</h2>
 <div class="sectionbody">
 <div class="paragraph">
 <p><code>PAYLOAD</code> means that you process the payload from the SOAP
@@ -2825,7 +2881,7 @@ for SOAP message headers and the SOAP body.</p>
                     String documentString = ECHO_RESPONSE;
 
                     Element in = new XmlConverter().toDOMElement(inElements.get(0));
-                    // Just check the element namespace
+                    // Check the element namespace
                     if (!in.getNamespaceURI().equals(ELEMENT_NAMESPACE)) {
                         throw new IllegalArgumentException("Wrong element namespace");
                     }
@@ -2854,22 +2910,22 @@ for SOAP message headers and the SOAP body.</p>
 <h2 id="_how_to_get_and_set_soap_headers_in_pojo_mode"><a class="anchor" href="#_how_to_get_and_set_soap_headers_in_pojo_mode"></a>How to get and set SOAP headers in POJO mode</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p><code>POJO</code> means that the data format is a "list of Java objects" when the
-camel-cxf endpoint produces or consumes Camel exchanges. Even though
-Camel exposes the message body as POJOs in this mode, camel-cxf still
+<p><code>POJO</code> means that the data format is a <em>"list of Java objects"</em> when the
+Camel CXF endpoint produces or consumes Camel exchanges. Even though
+Camel exposes the message body as POJOs in this mode, Camel CXF still
 provides access to read and write SOAP headers. However, since CXF
-interceptors remove in-band SOAP headers from the header list after they
+interceptors remove in-band SOAP headers from the header list, after they
 have been processed, only out-of-band SOAP headers are available to
-camel-cxf in POJO mode.</p>
+Camel CXF in POJO mode.</p>
 </div>
 <div class="paragraph">
 <p>The following example illustrates how to get/set SOAP headers. Suppose we
-have a route that forwards from one Camel-cxf endpoint to another. That
-is, SOAP Client &#8594; Camel &#8594; CXF service. We can attach two processors to
+have a route that forwards from one Camel CXF endpoint to another. That
+is, <code>SOAP Client &#8594; Camel &#8594; CXF service</code>. We can attach two processors to
 obtain/insert SOAP headers at (1) before a request goes out to the CXF
-service and (2) before the response comes back to the SOAP Client. Processor
-(1) and (2) in this example are InsertRequestOutHeaderProcessor and
-InsertResponseOutHeaderProcessor. Our route looks like this:</p>
+service and (2) before the response comes back to the SOAP Client. Processors
+(1) and (2) in this example are <code>InsertRequestOutHeaderProcessor</code> and
+<code>InsertResponseOutHeaderProcessor</code>. Our route looks like this:</p>
 </div>
 <div id="_tabs_1" class="openblock tabs is-sync is-loading">
 <div class="content">
@@ -2909,18 +2965,17 @@ InsertResponseOutHeaderProcessor. Our route looks like this:</p>
 </div>
 <div class="paragraph">
 <p>SOAP headers are propagated to and from Camel Message headers. The Camel
-message header name is "org.apache.cxf.headers.Header.list" which is a
-constant defined in CXF (org.apache.cxf.headers.Header.HEADER_LIST). The
-header value is a List of CXF SoapHeader objects
-(org.apache.cxf.binding.soap.SoapHeader). The following snippet is the
-InsertResponseOutHeaderProcessor (that insert a new SOAP header in the
-response message). The way to access SOAP headers in both
-InsertResponseOutHeaderProcessor and InsertRequestOutHeaderProcessor are
-actually the same. The only difference between the two processors is
-setting the direction of the inserted SOAP header.</p>
+message header name is <code>org.apache.cxf.headers.Header.list</code> which is a
+constant defined in CXF (<code>org.apache.cxf.headers.Header.HEADER_LIST</code>). The
+header value is a List of CXF <code>SoapHeader</code> objects
+(<code>org.apache.cxf.binding.soap.SoapHeader</code>).
+The following snippet is the <code>InsertResponseOutHeaderProcessor</code> (that inserts a new SOAP header in the response message). The way to access SOAP headers in both
+<code>InsertResponseOutHeaderProcessor</code> and <code>InsertRequestOutHeaderProcessor</code> are
+actually the same.
+The only difference between the two processors is setting the direction of the inserted SOAP header.</p>
 </div>
 <div class="paragraph">
-<p>You can find the <code>InsertResponseOutHeaderProcessor</code> example in <a href="https://github.com/apache/camel/blob/main/components/camel-cxf/camel-cxf-spring-soap/src/test/java/org/apache/camel/component/cxf/soap/headers/CxfMessageHeadersRelayTest.java#L731CxfMessageHeadersRelayTest" class="bare">https://github.com/apache/camel/blob/main/components/camel-cxf/camel-cxf-spring-soap/src/test/java/org/apache/camel/component/cxf/soap/headers/CxfMessageHeadersRelayTest.java#L731CxfMessageHeadersRelayTest</a>]:</p>
+<p>You can find the <code>InsertResponseOutHeaderProcessor</code> example in <a href="https://github.com/apache/camel/blob/main/components/camel-cxf/camel-cxf-spring-soap/src/test/java/org/apache/camel/component/cxf/soap/headers/CxfMessageHeadersRelayTest.java#L731">CxfMessageHeadersRelayTest</a>:</p>
 </div>
 <div class="listingblock">
 <div class="content">
@@ -2936,7 +2991,7 @@ setting the direction of the inserted SOAP header.</p>
             + "&lt;name&gt;New_testOobHeader&lt;/name&gt;&lt;value&gt;New_testOobHeaderValue&lt;/value&gt;&lt;/outofbandHeader&gt;";
         SoapHeader newHeader = new SoapHeader(soapHeaders.get(0).getName(),
                        DOMUtils.readXml(new StringReader(xml)).getDocumentElement());
-        // make sure direction is OUT since it is a response message.
+        // make sure the direction is OUT since it is a response message.
         newHeader.setDirection(Direction.DIRECTION_OUT);
         //newHeader.setMustUnderstand(false);
         soapHeaders.add(newHeader);
@@ -2952,16 +3007,16 @@ setting the direction of the inserted SOAP header.</p>
 <h2 id="_how_to_get_and_set_soap_headers_in_payload_mode"><a class="anchor" href="#_how_to_get_and_set_soap_headers_in_payload_mode"></a>How to get and set SOAP headers in PAYLOAD mode</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>We&#8217;ve already shown how to access the SOAP message as CxfPayload object in
-PAYLOAD mode in the section <a href="#_how_to_consume_a_message_from_a_camel_cxf_endpoint_in_payload_data_format">How to consume a message from a camel-cxf endpoint in PAYLOAD data format</a>.</p>
+<p>We&#8217;ve already shown how to access the SOAP message as <code>CxfPayload</code> object in
+PAYLOAD mode in the section <a href="#_how_to_consume_a_message_from_a_camel_cxf_endpoint_in_payload_data_format">How to consume a message from a Camel CXF endpoint in PAYLOAD data format</a>.</p>
 </div>
 <div class="paragraph">
-<p>Once you obtain a CxfPayload object, you can invoke the
-CxfPayload.getHeaders() method that returns a List of DOM Elements (SOAP
+<p>Once you obtain a <code>CxfPayload</code> object, you can invoke the
+<code>CxfPayload.getHeaders()</code> method that returns a List of DOM Elements (SOAP
 headers).</p>
 </div>
 <div class="paragraph">
-<p>For an example see <a href="https://github.com/apache/camel/blob/main/components/camel-cxf/camel-cxf-soap/src/test/java/org/apache/camel/component/cxf/jaxws/CxfPayLoadSoapHeaderTest.java#L53">CxfPayLoadSoapHeaderTest</a>:</p>
+<p>For example, see <a href="https://github.com/apache/camel/blob/main/components/camel-cxf/camel-cxf-soap/src/test/java/org/apache/camel/component/cxf/jaxws/CxfPayLoadSoapHeaderTest.java#L53">CxfPayLoadSoapHeaderTest</a>:</p>
 </div>
 <div class="listingblock">
 <div class="content">
@@ -2982,7 +3037,7 @@ headers).</p>
         assertEquals(1, headers.size(), "Get the wrong headers size");
         assertEquals("http://camel.apache.org/pizza/types",
                 ((Element) (headers.get(0).getObject())).getNamespaceURI(), "Get the wrong namespace URI");
-        // alternatively you can also get the SOAP header via the camel header:
+        // alternatively, you can also get the SOAP header via the camel header:
         headers = exchange.getIn().getHeader(Header.HEADER_LIST, List.class);
         assertNotNull(headers, "We should get the headers here");
         assertEquals(1, headers.size(), "Get the wrong headers size");
@@ -2997,15 +3052,15 @@ headers).</p>
 </div>
 <div class="paragraph">
 <p>You can also use the same way as described in
-sub-chapter "How to get and set SOAP headers in POJO mode" to set or get
+subchapter "How to get and set SOAP headers in POJO mode" to set or get
 the SOAP headers. So, you can use the
-header "org.apache.cxf.headers.Header.list" to get and set a list of
+header <code>org.apache.cxf.headers.Header.list</code> to get and set a list of
 SOAP headers.This does also mean that if you have a route that forwards
-from one Camel-cxf endpoint to another (SOAP Client &#8594; Camel &#8594; CXF
-service), now also the SOAP headers sent by the SOAP client are
+from one Camel CXF endpoint to another (<code>SOAP Client &#8594; Camel &#8594; CXF
+service</code>), now also the SOAP headers sent by the SOAP client are
 forwarded to the CXF service. If you do not want that these headers are
-forwarded you have to remove them in the Camel header
-"org.apache.cxf.headers.Header.list".</p>
+forwarded, you have to remove them in the Camel header
+<code>org.apache.cxf.headers.Header.list</code>.</p>
 </div>
 </div>
 </div>
@@ -3022,7 +3077,7 @@ skipped.</p>
 <h2 id="_how_to_throw_a_soap_fault_from_camel"><a class="anchor" href="#_how_to_throw_a_soap_fault_from_camel"></a>How to throw a SOAP Fault from Camel</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>If you are using a <code>camel-cxf</code> endpoint to consume the SOAP request, you
+<p>If you are using a Camel CXF endpoint to consume the SOAP request, you
 may need to throw the SOAP Fault from the camel context.<br>
  Basically, you can use the <code>throwFault</code> DSL to do that; it works for
 <code>POJO</code>, <code>PAYLOAD</code> and <code>RAW</code> data format.<br>
@@ -3038,7 +3093,7 @@ detail.appendChild(tn);</code></pre>
 </div>
 </div>
 <div class="paragraph">
-<p>Then throw it as you like</p>
+<p>Then throw it as you like:</p>
 </div>
 <div class="listingblock">
 <div class="content">
@@ -3048,7 +3103,7 @@ detail.appendChild(tn);</code></pre>
 <div class="paragraph">
 <p>If your CXF endpoint is working in the <code>RAW</code> data format, you could
 set the SOAP Fault message in the message body and set the response
-code in the message header as demonstrated by <a href="https://github.com/apache/camel/blob/main/components/camel-cxf/camel-cxf-soap/src/test/java/org/apache/camel/component/cxf/jaxws/CxfMessageStreamExceptionTest.java#L43">CxfMessageStreamExceptionTest</a></p>
+code in the message header as demonstrated by <a href="https://github.com/apache/camel/blob/main/components/camel-cxf/camel-cxf-soap/src/test/java/org/apache/camel/component/cxf/jaxws/CxfMessageStreamExceptionTest.java#L43">CxfMessageStreamExceptionTest</a>:</p>
 </div>
 <div class="listingblock">
 <div class="content">
@@ -3056,7 +3111,7 @@ code in the message header as demonstrated by <a href="https://github.com/apache
 
     public void process(Exchange exchange) throws Exception {
         Message out = exchange.getMessage();
-        // Set the message body with the
+        // Set the message body
         out.setBody(this.getClass().getResourceAsStream("SoapFaultMessage.xml"));
         // Set the response code here
         out.setHeader(org.apache.cxf.message.Message.RESPONSE_CODE, new Integer(500));
@@ -3066,18 +3121,17 @@ code in the message header as demonstrated by <a href="https://github.com/apache
 </div>
 </div>
 <div class="paragraph">
-<p>Same for using POJO data format. You can set the SOAPFault on the out
-body.</p>
+<p>Same for using POJO data format. You can set the SOAPFault on the <em>OUT</em> body.</p>
 </div>
 </div>
 </div>
 <div class="sect1">
-<h2 id="propagate-request-response-context"><a class="anchor" href="#propagate-request-response-context"></a>How to propagate a camel-cxf endpoint&#8217;s request and response context</h2>
+<h2 id="propagate-request-response-context"><a class="anchor" href="#propagate-request-response-context"></a>How to propagate a Camel CXF endpoint&#8217;s request and response context</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p><a href="https://github.com/apache/cxf/blob/master/core/src/main/java/org/apache/cxf/endpoint/Client.java">CXF
-client API</a> provides a way to invoke the operation with request and
-response context. If you are using a <code>camel-cxf</code> endpoint producer to
+<p><a href="https://github.com/apache/cxf/blob/master/core/src/main/java/org/apache/cxf/endpoint/Client.java">CXF client API</a> provides a way to invoke the operation with request and
+response context.
+If you are using a Camel CXF endpoint producer to
 invoke the outside web service, you can set the request context and get
 response context with the following code:</p>
 </div>
@@ -3111,20 +3165,25 @@ assertEquals("Get the wrong wsdl operation name", "{http://apache.org/hello_worl
 <div class="sect1">
 <h2 id="_attachment_support"><a class="anchor" href="#_attachment_support"></a>Attachment Support</h2>
 <div class="sectionbody">
+<div class="sect2">
+<h3 id="_pojo_mode"><a class="anchor" href="#_pojo_mode"></a>POJO Mode</h3>
 <div class="paragraph">
-<p><strong>POJO Mode:</strong> Message Transmission Optimization Mechanism (MTOM) is supported if is enabled (see
-example in Payload Mode for enabling MTOM). Since attachments are
-marshalled and unmarshalled into POJOs, the attachments should be
-retrieved from Camel Message Body(As parameter list), and it isn&#8217;t
+<p>Message Transmission Optimization Mechanism (MTOM) is supported if enabled - check
+the example in Payload Mode for enabling MTOM.
+Since attachments are marshaled and unmarshaled into POJOs, the attachments should be
+retrieved from the Apache Camel message body (as a parameter list), and it isn&#8217;t
 possible to retrieve attachments by Camel Message API</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">DataHandler Exchange.getIn(AttachmentMessage.class).getAttachment(String id)</code></pre>
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">DataHandler handler = Exchange.getIn(AttachmentMessage.class).getAttachment("id");</code></pre>
 </div>
 </div>
+</div>
+<div class="sect2">
+<h3 id="_payload_mode"><a class="anchor" href="#_payload_mode"></a>Payload Mode</h3>
 <div class="paragraph">
-<p><strong>Payload Mode:</strong> Message Transmission Optimization Mechanism (MTOM) is supported by this Mode.
+<p>Message Transmission Optimization Mechanism (MTOM) is supported by this Mode.
 Attachments can be retrieved by Camel Message APIs mentioned above.
 SOAP with Attachment (SwA) is supported and attachments can be retrieved.
 SwA is the default (same as setting the CXF endpoint property <code>mtomEnabled</code> to <code>false</code>).</p>
@@ -3191,7 +3250,7 @@ public class CxfSoapMtomRoutes extends RouteBuilder {
     &lt;cxf:properties&gt;
         &lt;!--  enable mtom by setting this property to true --&gt;
         &lt;entry key="mtom-enabled" value="true"/&gt;
-        &lt;!--  set the camel-cxf endpoint data fromat to PAYLOAD mode --&gt;
+        &lt;!--  set the Camel CXF endpoint data fromat to PAYLOAD mode --&gt;
         &lt;entry key="dataFormat" value="PAYLOAD"/&gt;
     &lt;/cxf:properties&gt;
 &lt;/cxf:cxfEndpoint&gt;</code></pre>
@@ -3311,18 +3370,21 @@ The <a href="https://github.com/apache/camel/blob/main/components/camel-cxf/came
 }</code></pre>
 </div>
 </div>
-<div class="paragraph">
-<p><strong>RAW Mode:</strong> Attachments are not supported as it does not process the
-message at all.</p>
 </div>
+<div class="sect2">
+<h3 id="_raw_mode"><a class="anchor" href="#_raw_mode"></a>RAW Mode</h3>
 <div class="paragraph">
-<p><strong>CXF_MESSAGE Mode</strong>: MTOM is supported, and Attachments can be retrieved
-by Camel Message APIs mentioned above. Note that when receiving a
-multipart (i.e. MTOM) message the default SOAPMessage to String
-converter will provide the complete multipart payload on the body. If
-you require just the SOAP XML as a String, you can set the message body
-with message.getSOAPPart(), and Camel convert can do the rest of work
+<p>Attachments are not supported as it does not process the message at all.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_cxf_message_mode"><a class="anchor" href="#_cxf_message_mode"></a>CXF_MESSAGE Mode</h3>
+<div class="paragraph">
+<p>MTOM is supported, and Attachments can be retrieved by Camel Message APIs mentioned above. Note that when receiving a multipart (that is, MTOM) message, the default <code>SOAPMessag`e to `String</code> converter will provide the complete multipart payload on the body.
+If you require just the SOAP XML as a String, you can set the message body
+with <code>message.getSOAPPart()</code>, and the Camel converter can do the rest of the work
 for you.</p>
+</div>
 </div>
 </div>
 </div>
@@ -3330,13 +3392,13 @@ for you.</p>
 <h2 id="_streaming_support_in_payload_mode"><a class="anchor" href="#_streaming_support_in_payload_mode"></a>Streaming Support in PAYLOAD mode</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>The camel-cxf component now supports streaming of incoming
+<p>The Camel CXF component now supports streaming of incoming
 messages when using PAYLOAD mode. Previously, the incoming messages
-would have been completely DOM parsed. For large messages, this is time
-consuming and uses a significant amount of memory. The incoming messages can remain as a javax.xml.transform.Source while
+would have been completely DOM parsed. For large messages, this is time-consuming and uses a significant amount of memory.
+The incoming messages can remain as a <code>javax.xml.transform.Source</code> while
 being routed and, if nothing modifies the payload, can then be directly
 streamed out to the target destination. For common "simple proxy" use
-cases (example: from("cxf:&#8230;&#8203;").to("cxf:&#8230;&#8203;")), this can provide very
+cases (example: <code>from("cxf:&#8230;&#8203;").to("cxf:&#8230;&#8203;")</code>), this can provide very
 significant performance increases as well as significantly lowered
 memory requirements.</p>
 </div>
@@ -3345,17 +3407,17 @@ memory requirements.</p>
 desired. Due to the streaming nature, invalid incoming XML may not be
 caught until later in the processing chain. Also, certain actions may
 require the message to be DOM parsed anyway (like WS-Security or message
-tracing and such) in which case the advantages of the streaming is
+tracing and such) in which case, the advantages of the streaming are
 limited. At this point, there are two ways to control the streaming:</p>
 </div>
 <div class="ulist">
 <ul>
 <li>
-<p>Endpoint property: you can add "allowStreaming=false" as an endpoint
+<p>Endpoint property: you can add <code>allowStreaming=false</code> as an endpoint
 property to turn the streaming on/off.</p>
 </li>
 <li>
-<p>Component property: the CxfComponent object also has an allowStreaming
+<p>Component property: the <code>CxfComponent</code> object also has an <code>allowStreaming</code>
 property that can set the default for endpoints created from that
 component.</p>
 </li>
@@ -3363,7 +3425,7 @@ component.</p>
 </div>
 <div class="paragraph">
 <p>Global system property: you can add a system property of
-"org.apache.camel.component.cxf.streaming" to "false" to turn it off.
+<code>org.apache.camel.component.cxf.streaming</code> to <code>false</code> to turn it off.
 That sets the global default, but setting the endpoint property above
 will override this value for that endpoint.</p>
 </div>
@@ -3373,11 +3435,9 @@ will override this value for that endpoint.</p>
 <h2 id="_using_the_generic_cxf_dispatch_mode"><a class="anchor" href="#_using_the_generic_cxf_dispatch_mode"></a>Using the generic CXF Dispatch mode</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>The camel-cxf component supports the generic
-<a href="https://cxf.apache.org/docs/jax-ws-dispatch-api.html">CXF dispatch
-mode</a> that can transport messages of arbitrary structures (i.e., not
-bound to a specific XML schema). To use this mode, you simply omit
-specifying the wsdlURL and serviceClass attributes of the CXF endpoint.</p>
+<p>The Camel CXF component supports the generic
+<a href="https://cxf.apache.org/docs/jax-ws-dispatch-api.html">CXF dispatch mode</a> that can transport messages of arbitrary structures (that is, not bound to a specific XML schema).
+To use this mode, you omit specifying the <code>wsdlURL</code> and <code>serviceClass</code> attributes of the CXF endpoint.</p>
 </div>
 <div id="_tabs_3" class="openblock tabs is-sync is-loading">
 <div class="content">
@@ -3429,9 +3489,9 @@ CxfEndpoint dispatchEndpoint() {
 </div>
 <div class="paragraph">
 <p>It is noted that the default CXF dispatch client does not send a
-specific SOAPAction header. Therefore, when the target service requires
-a specific SOAPAction value, it is supplied in the Camel header using
-the key SOAPAction (case-insensitive).</p>
+specific <code>SOAPAction</code> header. Therefore, when the target service requires
+a specific <code>SOAPAction</code> value, it is supplied in the Camel header using
+the key <code>SOAPAction</code> (case-insensitive).</p>
 </div>
 <div class="sect2">
 <h3 id="cxf-loggingout-interceptor-in-message-mode"><a class="anchor" href="#cxf-loggingout-interceptor-in-message-mode"></a>How to enable CXF&#8217;s LoggingOutInterceptor in RAW mode</h3>
@@ -3488,7 +3548,7 @@ CxfEndpoint soapMtomEnabledServerPayloadModeEndpoint() {
 <div class="listingblock">
 <div class="content">
 <pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;bean id="loggingOutInterceptor" class="org.apache.cxf.interceptor.LoggingOutInterceptor"&gt;
-    &lt;!--  it really should have been user-prestream but CXF does have such phase! --&gt;
+    &lt;!--  it really should have been user-prestream, but CXF does have such a phase! --&gt;
     &lt;constructor-arg value="write"/&gt;
 &lt;/bean&gt;
 
@@ -3559,13 +3619,13 @@ is unknown to the runtime, the header will be simply relayed.</p>
 <li>
 <p><code>POJO</code> and <code>PAYLOAD</code> modes are supported. In <code>POJO</code> mode, only
 out-of-band message headers are available for filtering as the in-band
-headers have been processed and removed from header list by CXF. The
+headers have been processed and removed from the header list by CXF. The
 in-band headers are incorporated into the <code>MessageContentList</code> in POJO
-mode. The <code>camel-cxf</code> component does make any attempt to remove the
+mode. The Camel CXF component does make any attempt to remove the
 in-band headers from the <code>MessageContentList</code>. If filtering of in-band
 headers is required, please use <code>PAYLOAD</code> mode or plug in a (pretty
 straightforward) CXF interceptor/JAXWS Handler to the CXF endpoint.
- Here is an example of configuring CxfHeaderFilterStrategy.</p>
+ Here is an example of configuring the <code>CxfHeaderFilterStrategy</code>.</p>
 </li>
 </ul>
 </div>
@@ -3580,7 +3640,7 @@ straightforward) CXF interceptor/JAXWS Handler to the CXF endpoint.
 </div>
 </div>
 <div class="paragraph">
-<p>Then, your endpoint can reference the <code>CxfHeaderFilterStrategy</code>.</p>
+<p>Then, your endpoint can reference the <code>CxfHeaderFilterStrategy</code>:</p>
 </div>
 <div class="listingblock">
 <div class="content">
@@ -3593,9 +3653,9 @@ straightforward) CXF interceptor/JAXWS Handler to the CXF endpoint.
 <div class="ulist">
 <ul>
 <li>
-<p>You can plugin your own <code>MessageHeaderFilter</code> implementations overriding
-or adding additional ones to the list of relays. In order to override a
-preloaded relay instance just make sure that your <code>MessageHeaderFilter</code>
+<p>You can plug in your own <code>MessageHeaderFilter</code> implementations overriding
+or adding additional ones to the list of relays. To override a
+preloaded relay instance, make sure that your <code>MessageHeaderFilter</code>
 implementation services the same name spaces as the one you are looking to
 override.</p>
 </li>
@@ -3609,7 +3669,7 @@ override.</p>
 <pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;bean id="customMessageFilterStrategy" class="org.apache.camel.component.cxf.transport.header.CxfHeaderFilterStrategy"&gt;
     &lt;property name="messageHeaderFilters"&gt;
         &lt;list&gt;
-            &lt;!--  SoapMessageHeaderFilter is the built in filter.  It can be removed by omitting it. --&gt;
+            &lt;!--  SoapMessageHeaderFilter is the built-in filter.  It can be removed by omitting it. --&gt;
             &lt;bean class="org.apache.camel.component.cxf.common.header.SoapMessageHeaderFilter"/&gt;
 
             &lt;!--  Add custom filter here --&gt;
@@ -3659,7 +3719,7 @@ Header Filters)
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>allowFilterNamespaceClash</code></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">No</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">If two filters overlap in activation namespace, the property control how
+<td class="tableblock halign-left valign-top"><p class="tableblock">If two filters overlap in activation namespace, the property controls how
 it should be handled. If the value is <code>true</code>, last one wins. If the
 value is <code>false</code>, it will throw an exception
  <em>Type</em>: <code>boolean</code>
@@ -3670,24 +3730,24 @@ value is <code>false</code>, it will throw an exception
 </div>
 </div>
 <div class="sect1">
-<h2 id="_how_to_make_the_camel_cxf_component_use_log4j_instead_of_java_util_logging"><a class="anchor" href="#_how_to_make_the_camel_cxf_component_use_log4j_instead_of_java_util_logging"></a>How to make the camel-cxf component use log4j instead of java.util.logging</h2>
+<h2 id="_how_to_make_the_camel_cxf_component_use_log4j_instead_of_java_util_logging"><a class="anchor" href="#_how_to_make_the_camel_cxf_component_use_log4j_instead_of_java_util_logging"></a>How to make the Camel CXF component use log4j instead of java.util.logging</h2>
 <div class="sectionbody">
 <div class="paragraph">
 <p>CXF&#8217;s default logger is <code>java.util.logging</code>. If you want to change it to
 log4j, proceed as follows. Create a file, in the classpath, named
 <code>META-INF/cxf/org.apache.cxf.logger</code>. This file should contain the
-fully-qualified name of the class,
+fully qualified name of the class,
 <code>org.apache.cxf.common.logging.Log4jLogger</code>, with no comments, on a
 single line.</p>
 </div>
 </div>
 </div>
 <div class="sect1">
-<h2 id="_how_to_let_camel_cxf_response_start_with_xml_processing_instruction"><a class="anchor" href="#_how_to_let_camel_cxf_response_start_with_xml_processing_instruction"></a>How to let camel-cxf response start with xml processing instruction</h2>
+<h2 id="_how_to_let_camel_cxf_response_start_with_xml_processing_instruction"><a class="anchor" href="#_how_to_let_camel_cxf_response_start_with_xml_processing_instruction"></a>How to let Camel CXF response start with xml processing instruction</h2>
 <div class="sectionbody">
 <div class="paragraph">
 <p>If you are using some SOAP client such as PHP, you will get this kind of
-error, because CXF doesn&#8217;t add the XML processing instruction
+error because CXF doesn&#8217;t add the XML processing instruction
 <code>&lt;?xml version="1.0" encoding="utf-8"?&gt;</code>:</p>
 </div>
 <div class="listingblock">
@@ -3696,7 +3756,7 @@ error, because CXF doesn&#8217;t add the XML processing instruction
 </div>
 </div>
 <div class="paragraph">
-<p>To resolve this issue, you just need to tell StaxOutInterceptor to
+<p>To resolve this issue, you need to tell <code>StaxOutInterceptor</code> to
 write the XML start document for you, as in the <a href="https://github.com/apache/camel/blob/main/components/camel-cxf/camel-cxf-soap/src/test/java/org/apache/camel/component/cxf/jaxws/WriteXmlDeclarationInterceptor.java">WriteXmlDeclarationInterceptor</a> below:</p>
 </div>
 <div class="listingblock">
@@ -3715,7 +3775,7 @@ write the XML start document for you, as in the <a href="https://github.com/apac
 </div>
 </div>
 <div class="paragraph">
-<p>As an alternative you can add a message header for it as demonstrated in <a href="https://github.com/apache/camel/blob/main/components/camel-cxf/camel-cxf-soap/src/test/java/org/apache/camel/component/cxf/jaxws/CxfConsumerTest.java#L62">CxfConsumerTest</a>:</p>
+<p>As an alternative, you can add a message header for it as demonstrated in <a href="https://github.com/apache/camel/blob/main/components/camel-cxf/camel-cxf-soap/src/test/java/org/apache/camel/component/cxf/jaxws/CxfConsumerTest.java#L62">CxfConsumerTest</a>:</p>
 </div>
 <div class="listingblock">
 <div class="content">
@@ -3765,7 +3825,7 @@ which operation you are calling.</p>
 </div>
 <div class="paragraph">
 <p>Be sure to include the JAX-WS <code>schemaLocation</code> attribute specified on
-the root beans element. This allows CXF to validate the file and is
+the root <code>beans</code> element. This allows CXF to validate the file and is
 required. Also note the namespace declarations at the end of the
 <code>&lt;cxf:cxfEndpoint/&gt;</code> tag. These declarations are required because the combined <code>{namespace}localName</code> syntax is presently not supported for this tag&#8217;s
 attribute values.</p>
@@ -3868,7 +3928,7 @@ See below.</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>cxf:dataBinding</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">You can specify the which <code>DataBinding</code> will be use in the endpoint.
+<td class="tableblock halign-left valign-top"><p class="tableblock">You can specify which <code>DataBinding</code> will be used in the endpoint.
 This can be supplied using the Spring <code>&lt;bean class="MyDataBinding"/&gt;</code>
 syntax.</p></td>
 </tr>
@@ -3907,7 +3967,7 @@ Configuration page</a>.</p>
 </td>
 <td class="content">
 <div class="paragraph">
-<p>You can use cxf:properties to set the camel-cxf endpoint&#8217;s dataFormat
+<p>You can use <code>cxf:properties</code> to set the Camel CXF endpoint&#8217;s dataFormat
 and setDefaultBus properties from spring configuration file.</p>
 </div>
 <div class="listingblock">
@@ -3928,6 +3988,9 @@ and setDefaultBus properties from spring configuration file.</p>
 </tr>
 </table>
 </div>
+<div class="paragraph">
+<p>Unresolved include directive in modules/ROOT/pages/cxf-component.adoc - include::spring-boot:partial$starter.adoc[]</p>
+</div>
 </div>
 </div>
 </article>
@@ -3935,6 +3998,8 @@ and setDefaultBus properties from spring configuration file.</p>
 </main>
 </div>
 <footer class="footer">
+  <p>This page was built using the Antora default UI.</p>
+  <p>The source code for this UI is licensed under the terms of the MPL-2.0 license.</p>
 </footer>
 <script id="site-script" src="../../_/js/site.js" data-ui-root-path="../../_"></script>
 <script async src="../../_/js/vendor/highlight.js"></script>

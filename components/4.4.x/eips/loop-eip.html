@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>Loop :: Red Hat Camel Reference</title>
+    <title>Loop :: Red Hat build of Apache Camel</title>
     <meta name="description" content="Processes a message multiple times">
     <meta name="generator" content="Antora 3.1.4">
     <link rel="stylesheet" href="../../../_/css/site.css">
@@ -12,7 +12,7 @@
 <header class="header">
   <nav class="navbar">
     <div class="navbar-brand">
-      <a class="navbar-item" href="../../manual/index.html">Red Hat build of Apache Camel manual</a>
+      <a class="navbar-item" href="/">Red Hat build of Apache Camel</a>
       <button class="navbar-burger" data-target="topbar-nav">
         <span></span>
         <span></span>
@@ -22,11 +22,12 @@
   </nav>
 </header>
 <div class="body">
-<div class="nav-container" data-component="components" data-version="next">
+<div class="nav-container" data-component="components" data-version="4.4.x">
   <aside class="nav">
     <div class="panels">
 <div class="nav-panel-menu is-active" data-panel="menu">
   <nav class="nav-menu">
+    <button class="nav-menu-toggle" aria-label="Toggle expand/collapse all" style="display: none"></button>
     <h3 class="title"><a href="../index.html">Camel Components</a></h3>
 <ul class="nav-list">
   <li class="nav-item" data-depth="0">
@@ -1819,22 +1820,40 @@
 <div class="nav-panel-explore" data-panel="explore">
   <div class="context">
     <span class="title">Camel Components</span>
-    <span class="version">Next (Pre-release)</span>
+    <span class="version">4.4.x</span>
   </div>
   <ul class="components">
     <li class="component is-current">
-      <a class="title" href="../index.html">Camel Components</a>
+      <div class="title"><a href="../../4.10.x/index.html">Camel Components</a></div>
       <ul class="versions">
-        <li class="version is-current is-latest">
-          <a href="../index.html">Next (Pre-release)</a>
+        <li class="version is-latest">
+          <a href="../../4.10.x/index.html">4.10.x (LTS)</a>
+        </li>
+        <li class="version">
+          <a href="../../4.8.x/index.html">4.8.x</a>
+        </li>
+        <li class="version is-current">
+          <a href="../index.html">4.4.x</a>
+        </li>
+        <li class="version">
+          <a href="../../4.0.x/index.html">4.0.x</a>
         </li>
       </ul>
     </li>
     <li class="component">
-      <a class="title" href="../../../manual/index.html">User manual</a>
+      <div class="title"><a href="../../../manual/4.10.x/index.html">User manual</a></div>
       <ul class="versions">
         <li class="version is-latest">
-          <a href="../../../manual/index.html">default</a>
+          <a href="../../../manual/4.10.x/index.html">4.10.x</a>
+        </li>
+        <li class="version">
+          <a href="../../../manual/4.8.x/index.html">4.8.x</a>
+        </li>
+        <li class="version">
+          <a href="../../../manual/4.4.x/index.html">4.4.x</a>
+        </li>
+        <li class="version">
+          <a href="../../../manual/4.0.x/index.html">4.0.x</a>
         </li>
       </ul>
     </li>
@@ -1846,7 +1865,7 @@
 <main class="article">
 <div class="toolbar" role="navigation">
 <button class="nav-toggle"></button>
-  <a href="../../../manual/index.html" class="home-link"></a>
+  <a href="../../../manual/4.10.x/index.html" class="home-link"></a>
 <nav class="breadcrumbs" aria-label="breadcrumbs">
   <ul>
     <li><a href="../index.html">Camel Components</a></li>
@@ -1854,6 +1873,16 @@
     <li><a href="loop-eip.html">Loop</a></li>
   </ul>
 </nav>
+<div class="page-versions">
+  <button class="version-menu-toggle" title="Show other versions of page">4.4.x</button>
+  <div class="version-menu">
+    <a class="version" href="../../4.10.x/eips/loop-eip.html">4.10.x (LTS)</a>
+    <a class="version" href="../../4.8.x/eips/loop-eip.html">4.8.x</a>
+    <a class="version is-current" href="loop-eip.html">4.4.x</a>
+    <a class="version" href="../../4.0.x/eips/loop-eip.html">4.0.x</a>
+  </div>
+</div>
+<div class="edit-this-page"><a href="https://github.com/rhaetor/rh-camel-jboss/edit/camel-4.4.0-branch/core/camel-core-engine/src/main/docs/modules/eips/pages/loop-eip.adoc">Edit this Page</a></div>
 </div>
   <div class="content">
 <aside class="toc sidebar" data-title="Contents" data-levels="2">
@@ -2016,7 +2045,7 @@ then send the message repetitively to <code>mock:result</code>.</p>
 or determined at runtime by evaluating an expression.</p>
 </div>
 <div class="paragraph">
-<p>The <a href="../../../manual/expression.html" class="xref page">Expression</a> <strong>must</strong> evaluate to an <code>int</code>,
+<p>The <a href="../../../manual/4.10.x/expression.html" class="xref page">Expression</a> <strong>must</strong> evaluate to an <code>int</code>,
 otherwise a <code>RuntimeCamelException</code> is thrown.</p>
 </div>
 <div class="paragraph">
@@ -2114,7 +2143,7 @@ otherwise a <code>RuntimeCamelException</code> is thrown.</p>
 <div class="sectionbody">
 <div class="paragraph">
 <p>Now suppose we send a message to direct:start endpoint containing the letter A.
-The output of processing this route will be that, each mock:loop endpoint will receive AB as message.</p>
+The output of processing this route will be that, each mock:loop endpoint will receive AB as the message.</p>
 </div>
 <div id="_tabs_3" class="openblock tabs is-sync is-loading">
 <div class="content">
@@ -2163,7 +2192,7 @@ The output of processing this route will be that, each mock:loop endpoint will r
 </div>
 </div>
 <div class="paragraph">
-<p>However, if we do <strong>not</strong> enable copy mode then mock:loop will receive "AB", "ABB", "ABBB", etc. messages.</p>
+<p>However, if we do <strong>not</strong> enable copy mode, then mock:loop will receive <code><em>"AB"</em></code>, <code><em>"ABB"</em></code>, <code><em>"ABBB"</em></code>, etc. messages.</p>
 </div>
 </div>
 </div>
@@ -2174,7 +2203,7 @@ The output of processing this route will be that, each mock:loop endpoint will r
 <p>The loop can act like a while loop that loops until the expression evaluates to <code>false</code> or <code>null</code>.</p>
 </div>
 <div class="paragraph">
-<p>For example the route below loops while the length of the message body is 5 or fewer characters.
+<p>For example, the route below loops while the length of the message body is five or fewer characters.
 Notice that the DSL uses <code>loopDoWhile</code>.</p>
 </div>
 <div id="_tabs_4" class="openblock tabs is-sync is-loading">
@@ -2230,6 +2259,8 @@ Notice that the DSL uses <code>loopDoWhile</code>.</p>
 </main>
 </div>
 <footer class="footer">
+  <p>This page was built using the Antora default UI.</p>
+  <p>The source code for this UI is licensed under the terms of the MPL-2.0 license.</p>
 </footer>
 <script id="site-script" src="../../../_/js/site.js" data-ui-root-path="../../../_"></script>
 <script async src="../../../_/js/vendor/highlight.js"></script>

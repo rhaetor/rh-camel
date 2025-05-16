@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>Mock :: Red Hat Camel Reference</title>
+    <title>Mock :: Red Hat build of Apache Camel</title>
     <meta name="description" content="Test routes and mediation rules using mocks.">
     <meta name="generator" content="Antora 3.1.4">
     <link rel="stylesheet" href="../../_/css/site.css">
@@ -12,7 +12,7 @@
 <header class="header">
   <nav class="navbar">
     <div class="navbar-brand">
-      <a class="navbar-item" href="../../manual/index.html">Red Hat build of Apache Camel manual</a>
+      <a class="navbar-item" href="/">Red Hat build of Apache Camel</a>
       <button class="navbar-burger" data-target="topbar-nav">
         <span></span>
         <span></span>
@@ -22,11 +22,12 @@
   </nav>
 </header>
 <div class="body">
-<div class="nav-container" data-component="components" data-version="next">
+<div class="nav-container" data-component="components" data-version="4.8.x">
   <aside class="nav">
     <div class="panels">
 <div class="nav-panel-menu is-active" data-panel="menu">
   <nav class="nav-menu">
+    <button class="nav-menu-toggle" aria-label="Toggle expand/collapse all" style="display: none"></button>
     <h3 class="title"><a href="index.html">Camel Components</a></h3>
 <ul class="nav-list">
   <li class="nav-item" data-depth="0">
@@ -36,7 +37,46 @@
     <a class="nav-link" href="index.html">Components</a>
 <ul class="nav-list">
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="activemq-component.html">ActiveMQ</a>
+    <a class="nav-link" href="activemq-component.html">ActiveMQ 5.x</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="activemq6-component.html">ActiveMQ 6.x</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="ai-summary.html">AI</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="chatscript-component.html">ChatScript</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="djl-component.html">Deep Java Library</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="langchain4j-chat-component.html">LangChain4j Chat</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="langchain4j-embeddings-component.html">LangChain4j Embeddings</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="langchain4j-tokenizer-component.html">LangChain4j Tokenizer</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="langchain4j-tools-component.html">LangChain4j Tools</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="langchain4j-web-search-component.html">LangChain4j Web Search</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="milvus-component.html">Milvus</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="pinecone-component.html">Pinecone</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="qdrant-component.html">Qdrant</a>
+  </li>
+</ul>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="amqp-component.html">AMQP</a>
@@ -65,6 +105,15 @@
 <ul class="nav-list">
   <li class="nav-item" data-depth="3">
     <a class="nav-link" href="aws2-athena-component.html">AWS Athena</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="aws-bedrock-component.html">AWS Bedrock</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="aws-bedrock-agent-component.html">AWS Bedrock Agent</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="aws-bedrock-agent-runtime-component.html">AWS Bedrock Agent Runtime</a>
   </li>
   <li class="nav-item" data-depth="3">
     <a class="nav-link" href="aws-cloudtrail-component.html">AWS Cloudtrail</a>
@@ -169,7 +218,7 @@
     <a class="nav-link" href="azure-storage-blob-component.html">Azure Storage Blob Service</a>
   </li>
   <li class="nav-item" data-depth="3">
-    <a class="nav-link" href="azure-storage-datalake-component.html">Azure Storage Datalake Service</a>
+    <a class="nav-link" href="azure-storage-datalake-component.html">Azure Storage Data Lake Service</a>
   </li>
   <li class="nav-item" data-depth="3">
     <a class="nav-link" href="azure-storage-queue-component.html">Azure Storage Queue Service</a>
@@ -202,9 +251,6 @@
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="cql-component.html">Cassandra CQL</a>
-  </li>
-  <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="chatscript-component.html">ChatScript</a>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="chunk-component.html">Chunk</a>
@@ -277,9 +323,6 @@
     <a class="nav-link" href="debezium-sqlserver-component.html">Debezium SQL Server Connector</a>
   </li>
 </ul>
-  </li>
-  <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="djl-component.html">Deep Java Library</a>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="dhis2-component.html">DHIS2</a>
@@ -395,6 +438,9 @@
   </li>
   <li class="nav-item" data-depth="3">
     <a class="nav-link" href="google-pubsub-component.html">Google Pubsub</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="google-pubsub-lite-component.html">Google PubSub Lite</a>
   </li>
   <li class="nav-item" data-depth="3">
     <a class="nav-link" href="google-secret-manager-component.html">Google Secret Manager</a>
@@ -687,7 +733,7 @@
     <a class="nav-link" href="ldif-component.html">LDIF</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="log-component.html">Log</a>
+    <a class="nav-link" href="log-component.html">Log Data</a>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="lucene-component.html">Lucene</a>
@@ -900,16 +946,49 @@
     <a class="nav-link" href="smb-component.html">SMB</a>
   </li>
   <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="smooks-component.html">Smooks</a>
+  </li>
+  <li class="nav-item" data-depth="2">
     <a class="nav-link" href="smpp-component.html">SMPP</a>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="snmp-component.html">SNMP</a>
   </li>
   <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="solr-component.html">Solr</a>
+  </li>
+  <li class="nav-item" data-depth="2">
     <a class="nav-link" href="splunk-component.html">Splunk</a>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="splunk-hec-component.html">Splunk HEC</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="spring-summary.html">Spring</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="spring-batch-component.html">Spring Batch</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="spring-event-component.html">Spring Event</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="spring-jdbc-component.html">Spring JDBC</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="spring-ldap-component.html">Spring LDAP</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="spring-rabbitmq-component.html">Spring RabbitMQ</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="spring-redis-component.html">Spring Redis</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="spring-ws-component.html">Spring WebService</a>
+  </li>
+</ul>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="sql-component.html">SQL</a>
@@ -937,6 +1016,18 @@
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="stub-component.html">Stub</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="tahu-summary.html">Tahu</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="tahu-edge-component.html">Tahu Edge Node / Device</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="tahu-host-component.html">Tahu Host Application</a>
+  </li>
+</ul>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="telegram-component.html">Telegram</a>
@@ -999,7 +1090,7 @@
     <a class="nav-link" href="whatsapp-component.html">WhatsApp</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="wordpress-component.html">Wordpress</a>
+    <a class="nav-link" href="wordpress-component.html">WordPress</a>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="workday-component.html">Workday</a>
@@ -1392,7 +1483,13 @@
     <a class="nav-link" href="others/openapi-java.html">Openapi Java</a>
   </li>
   <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="others/openapi-validator.html">Openapi Validator</a>
+  </li>
+  <li class="nav-item" data-depth="2">
     <a class="nav-link" href="others/opentelemetry.html">OpenTelemetry</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="others/platform-http-jolokia.html">Platform HTTP Jolokia</a>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="others/platform-http-main.html">Platform Http Main</a>
@@ -1540,7 +1637,7 @@
     <a class="nav-link" href="eips/event-message.html">Event Message</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="eips/failover-eip.html">Failover</a>
+    <a class="nav-link" href="eips/failoverLoadBalancer-eip.html">Failover Load Balancer</a>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="eips/faultToleranceConfiguration-eip.html">Fault Tolerance Configuration</a>
@@ -1570,13 +1667,13 @@
     <a class="nav-link" href="eips/loadBalance-eip.html">Load Balance</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="eips/log-eip.html">Log</a>
+    <a class="nav-link" href="eips/log-eip.html">Logger</a>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="eips/loop-eip.html">Loop</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="eips/marshal-eip.html">Marshal EIP</a>
+    <a class="nav-link" href="eips/marshal-eip.html">Marshal</a>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="eips/message.html">Message</a>
@@ -1633,6 +1730,9 @@
     <a class="nav-link" href="eips/point-to-point-channel.html">Point to Point Channel</a>
   </li>
   <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="eips/poll-eip.html">Poll</a>
+  </li>
+  <li class="nav-item" data-depth="2">
     <a class="nav-link" href="eips/pollEnrich-eip.html">Poll Enrich</a>
   </li>
   <li class="nav-item" data-depth="2">
@@ -1648,7 +1748,7 @@
     <a class="nav-link" href="eips/publish-subscribe-channel.html">Publish Subscribe Channel</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="eips/random-eip.html">Random</a>
+    <a class="nav-link" href="eips/randomLoadBalancer-eip.html">Random Load Balancer</a>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="eips/recipientList-eip.html">Recipient List</a>
@@ -1690,7 +1790,7 @@
     <a class="nav-link" href="eips/rollback-eip.html">Rollback</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="eips/roundRobin-eip.html">Round Robin</a>
+    <a class="nav-link" href="eips/roundRobinLoadBalancer-eip.html">Round Robin Load Balancer</a>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="eips/routingSlip-eip.html">Routing Slip</a>
@@ -1702,7 +1802,7 @@
     <a class="nav-link" href="eips/sample-eip.html">Sample</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="eips/scatter-gather.html">Scatter Gather</a>
+    <a class="nav-link" href="eips/scatter-gather.html">Scatter-Gather</a>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="eips/script-eip.html">Script</a>
@@ -1732,6 +1832,9 @@
     <a class="nav-link" href="eips/setVariable-eip.html">Set Variable</a>
   </li>
   <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="eips/setVariables-eip.html">Set Variables</a>
+  </li>
+  <li class="nav-item" data-depth="2">
     <a class="nav-link" href="eips/sort-eip.html">Sort</a>
   </li>
   <li class="nav-item" data-depth="2">
@@ -1741,7 +1844,7 @@
     <a class="nav-link" href="eips/step-eip.html">Step</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="eips/sticky-eip.html">Sticky</a>
+    <a class="nav-link" href="eips/stickyLoadBalancer-eip.html">Sticky Load Balancer</a>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="eips/stop-eip.html">Stop</a>
@@ -1762,7 +1865,7 @@
     <a class="nav-link" href="eips/toD-eip.html">To D</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="eips/topic-eip.html">Topic</a>
+    <a class="nav-link" href="eips/topicLoadBalancer-eip.html">Topic Load Balancer</a>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="eips/transactional-client.html">Transactional Client</a>
@@ -1771,13 +1874,13 @@
     <a class="nav-link" href="eips/transform-eip.html">Transform</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="eips/unmarshal-eip.html">Unmarshal EIP</a>
+    <a class="nav-link" href="eips/unmarshal-eip.html">Unmarshal</a>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="eips/validate-eip.html">Validate</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="eips/weighted-eip.html">Weighted</a>
+    <a class="nav-link" href="eips/weightedLoadBalancer-eip.html">Weighted Load Balancer</a>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="eips/wireTap-eip.html">Wire Tap</a>
@@ -1792,22 +1895,40 @@
 <div class="nav-panel-explore" data-panel="explore">
   <div class="context">
     <span class="title">Camel Components</span>
-    <span class="version">Next (Pre-release)</span>
+    <span class="version">4.8.x</span>
   </div>
   <ul class="components">
     <li class="component is-current">
-      <a class="title" href="index.html">Camel Components</a>
+      <div class="title"><a href="../4.10.x/index.html">Camel Components</a></div>
       <ul class="versions">
-        <li class="version is-current is-latest">
-          <a href="index.html">Next (Pre-release)</a>
+        <li class="version is-latest">
+          <a href="../4.10.x/index.html">4.10.x (LTS)</a>
+        </li>
+        <li class="version is-current">
+          <a href="index.html">4.8.x</a>
+        </li>
+        <li class="version">
+          <a href="../4.4.x/index.html">4.4.x</a>
+        </li>
+        <li class="version">
+          <a href="../4.0.x/index.html">4.0.x</a>
         </li>
       </ul>
     </li>
     <li class="component">
-      <a class="title" href="../../manual/index.html">User manual</a>
+      <div class="title"><a href="../../manual/4.10.x/index.html">User manual</a></div>
       <ul class="versions">
         <li class="version is-latest">
-          <a href="../../manual/index.html">default</a>
+          <a href="../../manual/4.10.x/index.html">4.10.x</a>
+        </li>
+        <li class="version">
+          <a href="../../manual/4.8.x/index.html">4.8.x</a>
+        </li>
+        <li class="version">
+          <a href="../../manual/4.4.x/index.html">4.4.x</a>
+        </li>
+        <li class="version">
+          <a href="../../manual/4.0.x/index.html">4.0.x</a>
         </li>
       </ul>
     </li>
@@ -1819,7 +1940,7 @@
 <main class="article">
 <div class="toolbar" role="navigation">
 <button class="nav-toggle"></button>
-  <a href="../../manual/index.html" class="home-link"></a>
+  <a href="../../manual/4.10.x/index.html" class="home-link"></a>
 <nav class="breadcrumbs" aria-label="breadcrumbs">
   <ul>
     <li><a href="index.html">Camel Components</a></li>
@@ -1827,6 +1948,16 @@
     <li><a href="mock-component.html">Mock</a></li>
   </ul>
 </nav>
+<div class="page-versions">
+  <button class="version-menu-toggle" title="Show other versions of page">4.8.x</button>
+  <div class="version-menu">
+    <a class="version" href="../4.10.x/mock-component.html">4.10.x (LTS)</a>
+    <a class="version is-current" href="mock-component.html">4.8.x</a>
+    <a class="version" href="../4.4.x/mock-component.html">4.4.x</a>
+    <a class="version is-missing" href="../4.0.x/index.html">4.0.x</a>
+  </div>
+</div>
+<div class="edit-this-page"><a href="https://github.com/rhaetor/rh-camel-jboss/edit/camel-4.8.0-branch/docs/components/modules/ROOT/pages/mock-component.adoc">Edit this Page</a></div>
 </div>
   <div class="content">
 <aside class="toc sidebar" data-title="Contents" data-levels="2">
@@ -1844,92 +1975,13 @@
 </div>
 <div class="paragraph">
 <p>Testing of distributed and asynchronous processing is
-notoriously difficult. The <a href="#">Mock</a>,
-and <a href="dataset-component.html" class="xref page">DataSet</a> endpoints work great with the
+notoriously challenging. The <a href="#">Mock</a>
+and <a href="dataset-component.html" class="xref page">DataSet</a> endpoints work with the
 Camel Testing Framework to simplify your unit and
 integration testing using
 <a href="eips/enterprise-integration-patterns.html" class="xref page">Enterprise Integration
 Patterns</a> and Camel&#8217;s large range of Components
 together with the powerful Bean Integration.</p>
-</div>
-<div class="paragraph">
-<p>The Mock component provides a powerful declarative testing mechanism,
-which is similar to <a href="http://www.jmock.org">jMock</a> in
-that it allows declarative expectations to be created on any Mock
-endpoint before a test begins. Then the test is run, which typically
-fires messages to one or more endpoints, and finally the expectations
-can be asserted in a test case to ensure the system worked as expected.</p>
-</div>
-<div class="paragraph">
-<p>This allows you to test various things like:</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>The correct number of messages are received on each endpoint,</p>
-</li>
-<li>
-<p>The correct payloads are received, in the right order,</p>
-</li>
-<li>
-<p>Messages arrive on an endpoint in order, using some
-Expression to create an order testing function,</p>
-</li>
-<li>
-<p>Messages arrive match some kind of Predicate such
-as that specific headers have certain values, or that parts of the
-messages match some predicate, such as by evaluating an
-<a href="languages/xpath-language.html" class="xref page">XPath</a> or <a href="languages/xquery-language.html" class="xref page">XQuery</a>
-Expression.</p>
-</li>
-</ul>
-</div>
-<div class="admonitionblock note">
-<table>
-<tr>
-<td class="icon">
-<i class="fa icon-note" title="Note"></i>
-</td>
-<td class="content">
-<div class="paragraph">
-<p>There is also the <a href="others/test-junit5.html" class="xref page">Test endpoint</a> which is a
-Mock endpoint, but which uses a second endpoint to provide the list of
-expected message bodies and automatically sets up the Mock endpoint
-assertions. In other words, it&#8217;s a Mock endpoint that automatically sets
-up its assertions from some sample messages in a File
-or <a href="jpa-component.html" class="xref page">database</a>, for example.</p>
-</div>
-</td>
-</tr>
-</table>
-</div>
-<div class="admonitionblock caution">
-<table>
-<tr>
-<td class="icon">
-<i class="fa icon-caution" title="Caution"></i>
-</td>
-<td class="content">
-<div class="paragraph">
-<p><strong>Mock endpoints keep received Exchanges in memory indefinitely.</strong></p>
-</div>
-<div class="paragraph">
-<p>Remember that Mock is designed for testing. When you add Mock endpoints
-to a route, each Exchange sent to the endpoint will
-be stored (to allow for later validation) in memory until explicitly
-reset or the JVM is restarted. If you are sending high volume and/or
-large messages, this may cause excessive memory use. If your goal is to
-test deployable routes inline, consider using
-NotifyBuilder or
-AdviceWith in your tests instead of adding Mock
-endpoints to routes directly.
-There are two new options <code>retainFirst</code>, and
-<code>retainLast</code> that can be used to limit the number of messages the Mock
-endpoints keep in memory.</p>
-</div>
-</td>
-</tr>
-</table>
 </div>
 </div>
 </div>
@@ -1966,37 +2018,65 @@ endpoint.</p>
 <div class="sect2">
 <h3 id="_configuring_component_options"><a class="anchor" href="#_configuring_component_options"></a>Configuring Component Options</h3>
 <div class="paragraph">
-<p>The component level is the highest level which holds general and common configurations that are inherited by the endpoints.
-For example a component may have security settings, credentials for authentication, urls for network connection and so forth.</p>
+<p>At the component level, you set general and shared configurations that are, then, inherited by the endpoints. It is the highest configuration level.</p>
 </div>
 <div class="paragraph">
-<p>Some components only have a few options, and others may have many. Because components typically have pre configured defaults
-that are commonly used, then you may often only need to configure a few options on a component; or none at all.</p>
+<p>For example, a component may have security settings, credentials for authentication, urls for network connection and so forth.</p>
 </div>
 <div class="paragraph">
-<p>Configuring components can be done with the <a href="../../manual/component-dsl.html" class="xref page">Component DSL</a>,
-in a configuration file (application.properties|yaml), or directly with Java code.</p>
+<p>Some components only have a few options, and others may have many.
+Because components typically have pre-configured defaults that are commonly used, then you may often only need to configure a few options on a component; or none at all.</p>
+</div>
+<div class="paragraph">
+<p>You can configure components using:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>the <a href="../../manual/4.10.x/component-dsl.html" class="xref page">Component DSL</a>.</p>
+</li>
+<li>
+<p>in a configuration file (<code>application.properties</code>, <code>*.yaml</code> files, etc).</p>
+</li>
+<li>
+<p>directly in the Java code.</p>
+</li>
+</ul>
 </div>
 </div>
 <div class="sect2">
 <h3 id="_configuring_endpoint_options"><a class="anchor" href="#_configuring_endpoint_options"></a>Configuring Endpoint Options</h3>
 <div class="paragraph">
-<p>Where you find yourself configuring the most is on endpoints, as endpoints often have many options, which allows you to
-configure what you need the endpoint to do. The options are also categorized into whether the endpoint is used as consumer (from)
-or as a producer (to), or used for both.</p>
+<p>You usually spend more time setting up endpoints because they have many options.
+These options help you customize what you want the endpoint to do.
+The options are also categorized into whether the endpoint is used as a consumer (<em>from</em>), as a producer (<em>to</em>), or  both.</p>
 </div>
 <div class="paragraph">
-<p>Configuring endpoints is most often done directly in the endpoint URI as path and query parameters. You can also use
-the <a href="../../manual/Endpoint-dsl.html" class="xref page">Endpoint DSL</a> and <a href="../../manual/dataformat-dsl.html" class="xref page">DataFormat DSL</a>
+<p>Configuring endpoints is most often done directly in the endpoint URI as <em>path</em> and <em>query</em> parameters.
+You can also use the <a href="../../manual/4.10.x/Endpoint-dsl.html" class="xref page">Endpoint DSL</a> and <a href="../../manual/4.10.x/dataformat-dsl.html" class="xref page">DataFormat DSL</a>
 as a <em>type safe</em> way of configuring endpoints and data formats in Java.</p>
 </div>
 <div class="paragraph">
-<p>A good practice when configuring options is to use <a href="../../manual/using-propertyplaceholder.html" class="xref page">Property Placeholders</a>,
-which allows to not hardcode urls, port numbers, sensitive information, and other settings.
-In other words placeholders allows to externalize the configuration from your code, and gives more flexibility and reuse.</p>
+<p>A good practice when configuring options is to use <a href="../../manual/4.10.x/using-propertyplaceholder.html" class="xref page">Property Placeholders</a>.</p>
 </div>
 <div class="paragraph">
-<p>The following two sections lists all the options, firstly for the component followed by the endpoint.</p>
+<p>Property placeholders provide a few benefits:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>They help prevent using hardcoded urls, port numbers, sensitive information, and other settings.</p>
+</li>
+<li>
+<p>They allow externalizing the configuration from the code.</p>
+</li>
+<li>
+<p>They help the code to become more flexible and reusable.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>The following two sections list all the options, firstly for the component followed by the endpoint.</p>
 </div>
 </div>
 </div>
@@ -2036,7 +2116,7 @@ In other words placeholders allows to externalize the configuration from your co
 <td class="tableblock halign-left valign-top"><p class="tableblock"><a id="_component_option_log"></a>
 <a href="#_component_option_log" class="anchor"></a><strong>log</strong> (producer)</p></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>To turn on logging when the mock receives an incoming message. This will log only one time at INFO level for the incoming message. For more detailed logging then set the logger to DEBUG level for the org.apache.camel.component.mock.MockEndpoint class.</p>
+<p>To turn on logging when the mock receives an incoming message. This will log only one time at INFO level for the incoming message. For more detailed logging, then set the logger to DEBUG level for the org.apache.camel.component.mock.MockEndpoint class.</p>
 </div></div></td>
 <td class="tableblock halign-center valign-top"><p class="tableblock">false</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">boolean</p></td>
@@ -2075,7 +2155,7 @@ In other words placeholders allows to externalize the configuration from your co
 </div>
 </div>
 <div class="paragraph">
-<p>with the following path and query parameters:</p>
+<p>With the following <em>path</em> and <em>query</em> parameters:</p>
 </div>
 <div class="sect2">
 <h3 id="_path_parameters_1_parameters"><a class="anchor" href="#_path_parameters_1_parameters"></a>Path Parameters (1 parameters)</h3>
@@ -2129,7 +2209,7 @@ In other words placeholders allows to externalize the configuration from your co
 <td class="tableblock halign-left valign-top"><p class="tableblock"><a id="_endpoint_query_option_assertPeriod"></a>
 <a href="#_endpoint_query_option_assertPeriod" class="anchor"></a><strong>assertPeriod</strong> (producer)</p></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>Sets a grace period after which the mock endpoint will re-assert to ensure the preliminary assertion is still valid. This is used for example to assert that exactly a number of messages arrives. For example if expected count was set to 5, then the assertion is satisfied when 5 or more message arrives. To ensure that exactly 5 messages arrives, then you would need to wait a little period to ensure no further message arrives. This is what you can use this method for. By default this period is disabled.</p>
+<p>Sets a grace period after which the mock endpoint will re-assert to ensure the preliminary assertion is still valid. This is used, for example, to assert that exactly a number of messages arrive. For example, if the expected count was set to 5, then the assertion is satisfied when five or more messages arrive. To ensure that exactly 5 messages arrive, then you would need to wait a little period to ensure no further message arrives. This is what you can use this method for. By default, this period is disabled.</p>
 </div></div></td>
 <td class="tableblock halign-center valign-top"></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">long</p></td>
@@ -2239,8 +2319,94 @@ In other words placeholders allows to externalize the configuration from your co
 </div>
 </div>
 <div class="sect1">
-<h2 id="_simple_example"><a class="anchor" href="#_simple_example"></a>Simple Example</h2>
+<h2 id="_usage"><a class="anchor" href="#_usage"></a>Usage</h2>
 <div class="sectionbody">
+<div class="paragraph">
+<p>The Mock component provides a powerful declarative testing mechanism,
+which is similar to <a href="http://www.jmock.org">jMock</a> in
+that it allows declarative expectations to be created on any Mock
+endpoint before a test begins. Then the test is run, which typically
+fires messages to one or more endpoints, and finally the expectations
+can be asserted in a test case to ensure the system worked as expected.</p>
+</div>
+<div class="paragraph">
+<p>This allows you to test various things like:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>The correct number of messages is received on each endpoint.</p>
+</li>
+<li>
+<p>The correct payloads are received, in the right order.</p>
+</li>
+<li>
+<p>Messages arrive at an endpoint in order, using some
+Expression to create an order testing function.</p>
+</li>
+<li>
+<p>Messages arrive match some kind of Predicate such
+as that specific headers have certain values, or that parts of the
+messages match some predicate, such as by evaluating an
+<a href="languages/xpath-language.html" class="xref page">XPath</a> or <a href="languages/xquery-language.html" class="xref page">XQuery</a>
+Expression.</p>
+</li>
+</ul>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>There is also the <a href="others/test-junit5.html" class="xref page">Test endpoint</a>, which is a
+Mock endpoint, but which uses a second endpoint to provide the list of
+expected message bodies and automatically sets up the Mock endpoint
+assertions. In other words, it&#8217;s a Mock endpoint that automatically sets
+up its assertions from some sample messages in a File
+or <a href="jpa-component.html" class="xref page">database</a>, for example.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="admonitionblock caution">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-caution" title="Caution"></i>
+</td>
+<td class="content">
+<div class="paragraph">
+<p><strong>Mock endpoints keep received Exchanges in memory indefinitely.</strong></p>
+</div>
+<div class="paragraph">
+<p>Remember that Mock is designed for testing. When you add Mock endpoints
+to a route, each Exchange sent to the endpoint will
+be stored (to allow for later validation) in memory until explicitly
+reset or the JVM is restarted. If you are sending high volume and/or
+large messages, this may cause excessive memory use. If your goal is to
+test deployable routes inline, consider using
+NotifyBuilder or
+AdviceWith in your tests instead of adding Mock
+endpoints to routes directly.
+There are two new options <code>retainFirst</code>, and
+<code>retainLast</code> that can be used to limit the number of messages the Mock
+endpoints keep in memory.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_examples"><a class="anchor" href="#_examples"></a>Examples</h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="_simple_example"><a class="anchor" href="#_simple_example"></a>Simple Example</h3>
 <div class="paragraph">
 <p>Here&#8217;s a simple example of Mock endpoint in use. First, the endpoint is
 resolved on the context. Then we set an expectation, and then, after the
@@ -2255,7 +2421,7 @@ resultEndpoint.expectedMessageCount(2);
 
 // send some messages
 
-// now lets assert that the mock:foo endpoint received 2 messages
+// now let's assert that the mock:foo endpoint received 2 messages
 resultEndpoint.assertIsSatisfied();</code></pre>
 </div>
 </div>
@@ -2270,14 +2436,12 @@ invoked. This can be configured by setting the
 <code>setResultWaitTime(millis)</code> method.</p>
 </div>
 </div>
-</div>
-<div class="sect1">
-<h2 id="_using_assertperiod"><a class="anchor" href="#_using_assertperiod"></a>Using assertPeriod</h2>
-<div class="sectionbody">
+<div class="sect2">
+<h3 id="_using_assertperiod"><a class="anchor" href="#_using_assertperiod"></a>Using assertPeriod</h3>
 <div class="paragraph">
 <p>When the assertion is satisfied then Camel will stop waiting and
 continue from the <code>assertIsSatisfied</code> method. That means if a new
-message arrives on the mock endpoint, just a bit later, that arrival
+message arrives at the mock endpoint, just a bit later. That arrival
 will not affect the outcome of the assertion. Suppose you do want to
 test that no new messages arrives after a period thereafter, then you
 can do that by setting the <code>setAssertPeriod</code> method, for example:</p>
@@ -2290,15 +2454,13 @@ resultEndpoint.expectedMessageCount(2);
 
 // send some messages
 
-// now lets assert that the mock:foo endpoint received 2 messages
+// now let's assert that the mock:foo endpoint received 2 messages
 resultEndpoint.assertIsSatisfied();</code></pre>
 </div>
 </div>
 </div>
-</div>
-<div class="sect1">
-<h2 id="_setting_expectations"><a class="anchor" href="#_setting_expectations"></a>Setting expectations</h2>
-<div class="sectionbody">
+<div class="sect2">
+<h3 id="_setting_expectations"><a class="anchor" href="#_setting_expectations"></a>Setting expectations</h3>
 <div class="paragraph">
 <p>You can see from the Javadoc of
 <a href="https://www.javadoc.io/doc/org.apache.camel/camel-mock/current/org/apache/camel/component/mock/MockEndpoint.html">MockEndpoint</a>
@@ -2319,7 +2481,7 @@ methods are as follows:</p>
 <tbody>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code><a href="https://www.javadoc.io/doc/org.apache.camel/camel-mock/current/org/apache/camel/component/mock/MockEndpoint.html#expectedMessageCount(int)">expectedMessageCount(int)</a></code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">To define the expected message count on the endpoint.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">To define the expected count of messages on the endpoint.</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code><a href="https://www.javadoc.io/doc/org.apache.camel/camel-mock/current/org/apache/camel/component/mock/MockEndpoint.html#expectedMinimumMessageCount(int)">expectedMinimumMessageCount(int)</a></code></p></td>
@@ -2361,10 +2523,8 @@ JMS, or some unique reference number within the message.</p></td>
 </div>
 </div>
 </div>
-</div>
-<div class="sect1">
-<h2 id="_adding_expectations_to_specific_messages"><a class="anchor" href="#_adding_expectations_to_specific_messages"></a>Adding expectations to specific messages</h2>
-<div class="sectionbody">
+<div class="sect2">
+<h3 id="_adding_expectations_to_specific_messages"><a class="anchor" href="#_adding_expectations_to_specific_messages"></a>Adding expectations to specific messages</h3>
 <div class="paragraph">
 <p>In addition, you can use the
 <a href="https://javadoc.io/doc/org.apache.camel/camel-mock/latest/org/apache/camel/component/mock/MockEndpoint.html"><code>message(int
@@ -2387,10 +2547,8 @@ the following code:</p>
 processor tests</a>.</p>
 </div>
 </div>
-</div>
-<div class="sect1">
-<h2 id="_mocking_existing_endpoints"><a class="anchor" href="#_mocking_existing_endpoints"></a>Mocking existing endpoints</h2>
-<div class="sectionbody">
+<div class="sect2">
+<h3 id="_mocking_existing_endpoints"><a class="anchor" href="#_mocking_existing_endpoints"></a>Mocking existing endpoints</h3>
 <div class="paragraph">
 <p>Camel now allows you to automatically mock existing endpoints in your
 Camel routes.</p>
@@ -2468,7 +2626,7 @@ endpoints in a given route from your unit test, as shown below:</p>
 </div>
 </div>
 <div class="paragraph">
-<p>Notice that the mock endpoints is given the URI <code>mock:&lt;endpoint&gt;</code>, for
+<p>Notice that the mock endpoint is given the URI <code>mock:&lt;endpoint&gt;</code>, for
 example <code>mock:direct:foo</code>. Camel logs at <code>INFO</code> level the endpoints
 being mocked:</p>
 </div>
@@ -2486,7 +2644,7 @@ being mocked:</p>
 <td class="content">
  <strong>Mocked endpoints are without parameters</strong><br>
 Endpoints which are mocked will have their parameters stripped off. For
-example the endpoint <code>log:foo?showAll=true</code> will be mocked to the
+example, the endpoint <code>log:foo?showAll=true</code> will be mocked to the
 following endpoint <code>mock:log:foo</code>. Notice the parameters have been
 removed.
 </td>
@@ -2494,7 +2652,7 @@ removed.
 </table>
 </div>
 <div class="paragraph">
-<p>Its also possible to only mock certain endpoints using a pattern. For
+<p>It&#8217;s also possible to only mock certain endpoints using a pattern. For
 example to mock all <code>log</code> endpoints you do as shown:</p>
 </div>
 <div class="listingblock">
@@ -2531,7 +2689,7 @@ example to mock all <code>log</code> endpoints you do as shown:</p>
 </div>
 <div class="paragraph">
 <p>The pattern supported can be a wildcard or a regular expression. See
-more details about this at Intercept as its the
+more details about this at Intercept as it is the
 same matching function used by Camel.</p>
 </div>
 <div class="admonitionblock note">
@@ -2542,7 +2700,7 @@ same matching function used by Camel.</p>
 </td>
 <td class="content">
 Mind that mocking endpoints causes the messages to be copied when they
-arrive on the mock.<br>
+arrive at the mock.
 That means Camel will use more memory. This may not be suitable when you
 send in a lot of messages.
 </td>
@@ -2550,10 +2708,8 @@ send in a lot of messages.
 </table>
 </div>
 </div>
-</div>
-<div class="sect1">
-<h2 id="_mocking_existing_endpoints_using_the_camel_test_component"><a class="anchor" href="#_mocking_existing_endpoints_using_the_camel_test_component"></a>Mocking existing endpoints using the <code>camel-test</code> component</h2>
-<div class="sectionbody">
+<div class="sect2">
+<h3 id="_mocking_existing_endpoints_using_the_camel_test_component"><a class="anchor" href="#_mocking_existing_endpoints_using_the_camel_test_component"></a>Mocking existing endpoints using the <code>camel-test</code> component</h3>
 <div class="paragraph">
 <p>Instead of using the <code>adviceWith</code> to instruct Camel to mock endpoints,
 you can easily enable this behavior when using the <code>camel-test</code> Test
@@ -2620,15 +2776,15 @@ instead.</p>
 </div>
 </div>
 </div>
-</div>
-<div class="sect1">
-<h2 id="_mocking_existing_endpoints_with_xml_dsl"><a class="anchor" href="#_mocking_existing_endpoints_with_xml_dsl"></a>Mocking existing endpoints with XML DSL</h2>
-<div class="sectionbody">
+<div class="sect2">
+<h3 id="_mocking_existing_endpoints_with_xml_dsl"><a class="anchor" href="#_mocking_existing_endpoints_with_xml_dsl"></a>Mocking existing endpoints with XML DSL</h3>
 <div class="paragraph">
 <p>If you do not use the <code>camel-test</code> component for unit testing (as shown
 above) you can use a different approach when using XML files for
-routes.<br>
-The solution is to create a new XML file used by the unit test and then
+routes.</p>
+</div>
+<div class="paragraph">
+<p>The solution is to create a new XML file used by the unit test and then
 include the intended XML file which has the route you want to test.</p>
 </div>
 <div class="paragraph">
@@ -2679,7 +2835,7 @@ Camel to mock all endpoints:</p>
 (<code>test-camel-route.xml</code>) instead of <code>camel-route.xml</code>.</p>
 </div>
 <div class="paragraph">
-<p>To only mock all <a href="log-component.html" class="xref page">Log</a> endpoints you can define the pattern
+<p>To only mock all <a href="log-component.html" class="xref page">Log</a> endpoints, you can define the pattern
 in the constructor for the bean:</p>
 </div>
 <div class="listingblock">
@@ -2690,12 +2846,10 @@ in the constructor for the bean:</p>
 </div>
 </div>
 </div>
-</div>
-<div class="sect1">
-<h2 id="_mocking_endpoints_and_skip_sending_to_original_endpoint"><a class="anchor" href="#_mocking_endpoints_and_skip_sending_to_original_endpoint"></a>Mocking endpoints and skip sending to original endpoint</h2>
-<div class="sectionbody">
+<div class="sect2">
+<h3 id="_mocking_endpoints_and_skip_sending_to_original_endpoint"><a class="anchor" href="#_mocking_endpoints_and_skip_sending_to_original_endpoint"></a>Mocking endpoints and skip sending to original endpoint</h3>
 <div class="paragraph">
-<p>Sometimes you want to easily mock and skip sending to a certain
+<p>Sometimes you want to easily mock and skip sending to certain
 endpoints. So the message is detoured and send to the mock endpoint
 only. You can now use the <code>mockEndpointsAndSkip</code>
 method using AdviceWith. The example below will skip sending to the two endpoints
@@ -2779,21 +2933,19 @@ method using AdviceWith. The example below will skip sending to the two endpoint
 </div>
 </div>
 </div>
-</div>
-<div class="sect1">
-<h2 id="_limiting_the_number_of_messages_to_keep"><a class="anchor" href="#_limiting_the_number_of_messages_to_keep"></a>Limiting the number of messages to keep</h2>
-<div class="sectionbody">
+<div class="sect2">
+<h3 id="_limiting_the_number_of_messages_to_keep"><a class="anchor" href="#_limiting_the_number_of_messages_to_keep"></a>Limiting the number of messages to keep</h3>
 <div class="paragraph">
 <p>The <a href="#">Mock</a> endpoints will by default keep a copy of every
 Exchange that it received. So if you test with a lot
 of messages, then it will consume memory.<br>
 We have introduced two options <code>retainFirst</code> and
-<code>retainLast</code> that can be used to specify to only keep N&#8217;th of the first
+<code>retainLast</code> that can be used to specify to only keep Nth of the first
 and/or last Exchanges.</p>
 </div>
 <div class="paragraph">
-<p>For example in the code below, we only want to retain a copy of the
-first 5 and last 5 Exchanges the mock receives.</p>
+<p>For example, in the code below, we only want to retain a copy of the
+first five and last five Exchanges the mock receives.</p>
 </div>
 <div class="listingblock">
 <div class="content">
@@ -2812,16 +2964,14 @@ the retained copies of the Exchanges. So in the
 example above, the list will contain 10 Exchanges;
 the first five, and the last five.<br>
 The <code>retainFirst</code> and <code>retainLast</code> options also have limitations on
-which expectation methods you can use. For example the <code>expectedXXX</code>
+which expectation methods you can use. For example, the <code>expectedXXX</code>
 methods that work on message bodies, headers, etc. will only operate on
-the retained messages. In the example above they can test only the
+the retained messages. In the example above, they can test only the
 expectations on the 10 retained messages.</p>
 </div>
 </div>
-</div>
-<div class="sect1">
-<h2 id="_testing_with_arrival_times"><a class="anchor" href="#_testing_with_arrival_times"></a>Testing with arrival times</h2>
-<div class="sectionbody">
+<div class="sect2">
+<h3 id="_testing_with_arrival_times"><a class="anchor" href="#_testing_with_arrival_times"></a>Testing with arrival times</h3>
 <div class="paragraph">
 <p>The <a href="#">Mock</a> endpoint stores the arrival time of the message
 as a property on the Exchange.</p>
@@ -2832,14 +2982,14 @@ as a property on the Exchange.</p>
 </div>
 </div>
 <div class="paragraph">
-<p>You can use this information to know when the message arrived on the
+<p>You can use this information to know when the message arrived at the
 mock. But it also provides foundation to know the time interval between
-the previous and next message arrived on the mock. You can use this to
+the previous and next message arrived at the mock. You can use this to
 set expectations using the <code>arrives</code> DSL on the <a href="#">Mock</a>
 endpoint.</p>
 </div>
 <div class="paragraph">
-<p>For example to say that the first message should arrive between 0-2
+<p>For example, to say that the first message should arrive between 0 and 2
 seconds before the next you can do:</p>
 </div>
 <div class="listingblock">
@@ -2848,8 +2998,8 @@ seconds before the next you can do:</p>
 </div>
 </div>
 <div class="paragraph">
-<p>You can also define this as that 2nd message (0 index based) should
-arrive no later than 0-2 seconds after the previous:</p>
+<p>You can also define this as that second message (0 index based) should
+arrive no later than 0 and 2 seconds after the previous:</p>
 </div>
 <div class="listingblock">
 <div class="content">
@@ -2857,8 +3007,8 @@ arrive no later than 0-2 seconds after the previous:</p>
 </div>
 </div>
 <div class="paragraph">
-<p>You can also use between to set a lower bound. For example suppose that
-it should be between 1-4 seconds:</p>
+<p>You can also use between to set a lower bound. For example, suppose that
+it should be between 1 and 4 seconds:</p>
 </div>
 <div class="listingblock">
 <div class="content">
@@ -2866,7 +3016,7 @@ it should be between 1-4 seconds:</p>
 </div>
 </div>
 <div class="paragraph">
-<p>You can also set the expectation on all messages, for example to say
+<p>You can also set the expectation on all messages, for example, to say
 that the gap between them should be at most 1 second:</p>
 </div>
 <div class="listingblock">
@@ -2894,11 +3044,14 @@ that the gap between them should be at most 1 second:</p>
 </div>
 </div>
 </div>
+</div>
 </article>
   </div>
 </main>
 </div>
 <footer class="footer">
+  <p>This page was built using the Antora default UI.</p>
+  <p>The source code for this UI is licensed under the terms of the MPL-2.0 license.</p>
 </footer>
 <script id="site-script" src="../../_/js/site.js" data-ui-root-path="../../_"></script>
 <script async src="../../_/js/vendor/highlight.js"></script>

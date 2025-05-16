@@ -3,8 +3,8 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>JAXB :: Red Hat Camel Reference</title>
-    <meta name="description" content="Unmarshal XML payloads to POJOs and back using JAXB2 XML marshalling standard.">
+    <title>JAXB :: Red Hat build of Apache Camel</title>
+    <meta name="description" content="Unmarshal XML payloads to POJOs and back using JAXB2 XML marshaling standard.">
     <meta name="generator" content="Antora 3.1.4">
     <link rel="stylesheet" href="../../../_/css/site.css">
   </head>
@@ -12,7 +12,7 @@
 <header class="header">
   <nav class="navbar">
     <div class="navbar-brand">
-      <a class="navbar-item" href="../../manual/index.html">Red Hat build of Apache Camel manual</a>
+      <a class="navbar-item" href="/">Red Hat build of Apache Camel</a>
       <button class="navbar-burger" data-target="topbar-nav">
         <span></span>
         <span></span>
@@ -22,11 +22,12 @@
   </nav>
 </header>
 <div class="body">
-<div class="nav-container" data-component="components" data-version="next">
+<div class="nav-container" data-component="components" data-version="4.4.x">
   <aside class="nav">
     <div class="panels">
 <div class="nav-panel-menu is-active" data-panel="menu">
   <nav class="nav-menu">
+    <button class="nav-menu-toggle" aria-label="Toggle expand/collapse all" style="display: none"></button>
     <h3 class="title"><a href="../index.html">Camel Components</a></h3>
 <ul class="nav-list">
   <li class="nav-item" data-depth="0">
@@ -1819,22 +1820,40 @@
 <div class="nav-panel-explore" data-panel="explore">
   <div class="context">
     <span class="title">Camel Components</span>
-    <span class="version">Next (Pre-release)</span>
+    <span class="version">4.4.x</span>
   </div>
   <ul class="components">
     <li class="component is-current">
-      <a class="title" href="../index.html">Camel Components</a>
+      <div class="title"><a href="../../4.10.x/index.html">Camel Components</a></div>
       <ul class="versions">
-        <li class="version is-current is-latest">
-          <a href="../index.html">Next (Pre-release)</a>
+        <li class="version is-latest">
+          <a href="../../4.10.x/index.html">4.10.x (LTS)</a>
+        </li>
+        <li class="version">
+          <a href="../../4.8.x/index.html">4.8.x</a>
+        </li>
+        <li class="version is-current">
+          <a href="../index.html">4.4.x</a>
+        </li>
+        <li class="version">
+          <a href="../../4.0.x/index.html">4.0.x</a>
         </li>
       </ul>
     </li>
     <li class="component">
-      <a class="title" href="../../../manual/index.html">User manual</a>
+      <div class="title"><a href="../../../manual/4.10.x/index.html">User manual</a></div>
       <ul class="versions">
         <li class="version is-latest">
-          <a href="../../../manual/index.html">default</a>
+          <a href="../../../manual/4.10.x/index.html">4.10.x</a>
+        </li>
+        <li class="version">
+          <a href="../../../manual/4.8.x/index.html">4.8.x</a>
+        </li>
+        <li class="version">
+          <a href="../../../manual/4.4.x/index.html">4.4.x</a>
+        </li>
+        <li class="version">
+          <a href="../../../manual/4.0.x/index.html">4.0.x</a>
         </li>
       </ul>
     </li>
@@ -1846,7 +1865,7 @@
 <main class="article">
 <div class="toolbar" role="navigation">
 <button class="nav-toggle"></button>
-  <a href="../../../manual/index.html" class="home-link"></a>
+  <a href="../../../manual/4.10.x/index.html" class="home-link"></a>
 <nav class="breadcrumbs" aria-label="breadcrumbs">
   <ul>
     <li><a href="../index.html">Camel Components</a></li>
@@ -1854,6 +1873,16 @@
     <li><a href="jaxb-dataformat.html">JAXB</a></li>
   </ul>
 </nav>
+<div class="page-versions">
+  <button class="version-menu-toggle" title="Show other versions of page">4.4.x</button>
+  <div class="version-menu">
+    <a class="version" href="../../4.10.x/dataformats/jaxb-dataformat.html">4.10.x (LTS)</a>
+    <a class="version" href="../../4.8.x/dataformats/jaxb-dataformat.html">4.8.x</a>
+    <a class="version is-current" href="jaxb-dataformat.html">4.4.x</a>
+    <a class="version is-missing" href="../../4.0.x/index.html">4.0.x</a>
+  </div>
+</div>
+<div class="edit-this-page"><a href="https://github.com/rhaetor/rh-camel-jboss/edit/camel-4.4.0-branch/docs/components/modules/dataformats/pages/jaxb-dataformat.adoc">Edit this Page</a></div>
 </div>
   <div class="content">
 <aside class="toc sidebar" data-title="Contents" data-levels="2">
@@ -1867,7 +1896,7 @@
 <p><strong>Since Camel 1.0</strong></p>
 </div>
 <div class="paragraph">
-<p>JAXB is a Data Format which uses the JAXB XML marshalling standard to unmarshal an XML
+<p>JAXB is a Data Format which uses the JAXB XML marshaling standard to unmarshal an XML
 payload into Java objects or to marshal Java objects into an XML payload.</p>
 </div>
 </div>
@@ -1967,7 +1996,7 @@ payload into Java objects or to marshal Java objects into an XML payload.</p>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>false</code></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>Boolean</code></p></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>Whether to allow using ObjectFactory classes to create the POJO classes during marshalling. This only applies to POJO classes that has not been annotated with JAXB and providing jaxb.index descriptor files.</p>
+<p>Whether to allow using ObjectFactory classes to create the POJO classes during marshaling. This only applies to POJO classes that has not been annotated with JAXB and providing jaxb.index descriptor files.</p>
 </div></div></td>
 </tr>
 <tr>
@@ -2017,7 +2046,7 @@ payload into Java objects or to marshal Java objects into an XML payload.</p>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>false</code></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>Boolean</code></p></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>To turn on marshalling XML fragment trees. By default JAXB looks for XmlRootElement annotation on given class to operate on whole XML tree. This is useful but not always - sometimes generated code does not have XmlRootElement annotation, sometimes you need unmarshall only part of tree. In that case you can use partial unmarshalling. To enable this behaviours you need set property partClass. Camel will pass this class to JAXB&#8217;s unmarshaler.</p>
+<p>To turn on marshaling XML fragment trees. By default JAXB looks for XmlRootElement annotation on given class to operate on whole XML tree. This is useful but not always - sometimes generated code does not have XmlRootElement annotation, sometimes you need unmarshal only part of tree. In that case you can use partial unmarshaling. To enable this behaviours you need set property partClass. Camel will pass this class to JAXB&#8217;s unmarshaler.</p>
 </div></div></td>
 </tr>
 <tr>
@@ -2047,7 +2076,7 @@ payload into Java objects or to marshal Java objects into an XML payload.</p>
 <td class="tableblock halign-left valign-top"></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>String</code></p></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>When marshalling using JAXB or SOAP then the JAXB implementation will automatic assign namespace prefixes, such as ns2, ns3, ns4 etc. To control this mapping, Camel allows you to refer to a map which contains the desired mapping.</p>
+<p>When marshaling using JAXB or SOAP then the JAXB implementation will automatic assign namespace prefixes, such as ns2, ns3, ns4 etc. To control this mapping, Camel allows you to refer to a map which contains the desired mapping.</p>
 </div></div></td>
 </tr>
 <tr>
@@ -2087,7 +2116,7 @@ payload into Java objects or to marshal Java objects into an XML payload.</p>
 <td class="tableblock halign-left valign-top"></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>String</code></p></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>Refers to a custom java.util.Map to lookup in the registry containing custom JAXB provider properties to be used with the JAXB marshaller.</p>
+<p>Refers to a custom java.util.Map to lookup in the registry containing custom JAXB provider properties to be used with the JAXB marshaler.</p>
 </div></div></td>
 </tr>
 <tr>
@@ -2097,7 +2126,7 @@ payload into Java objects or to marshal Java objects into an XML payload.</p>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>true</code></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>Boolean</code></p></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>Whether the data format should set the Content-Type header with the type from the data format. For example application/xml for data formats marshalling to XML, or application/json for data formats marshalling to JSON.</p>
+<p>Whether the data format should set the Content-Type header with the type from the data format. For example, application/xml for data formats marshaling to XML, or application/json for data formats marshaling to JSON.</p>
 </div></div></td>
 </tr>
 <tr>
@@ -2132,7 +2161,7 @@ from("activemq:My.Queue").
 </div>
 </div>
 <div class="paragraph">
-<p>You can if you prefer use a named reference to a data format which can
+<p>You can, if you prefer, use a named reference to a data format which can
 then be defined in your Registry such as via your
 Spring XML file. e.g.</p>
 </div>
@@ -2166,10 +2195,10 @@ Spring XML file. e.g.</p>
     &lt;route&gt;
       &lt;from uri="direct:start"/&gt;
       &lt;marshal&gt;&lt;custom ref="myJaxb"/&gt;&lt;/marshal&gt;
-      &lt;to uri="direct:marshalled"/&gt;
+      &lt;to uri="direct:marshaled"/&gt;
     &lt;/route&gt;
     &lt;route&gt;
-      &lt;from uri="direct:marshalled"/&gt;
+      &lt;from uri="direct:marshaled"/&gt;
       &lt;unmarshal&gt;&lt;custom ref="myJaxb"/&gt;&lt;/unmarshal&gt;
       &lt;to uri="mock:result"/&gt;
     &lt;/route&gt;
@@ -2191,24 +2220,24 @@ You can specify multiple context paths using <code>:</code> as a separator, for 
 </div>
 </div>
 <div class="sect1">
-<h2 id="_partial_marshalling_unmarshalling"><a class="anchor" href="#_partial_marshalling_unmarshalling"></a>Partial marshalling / unmarshalling</h2>
+<h2 id="_partial_marshaling_unmarshaling"><a class="anchor" href="#_partial_marshaling_unmarshaling"></a>Partial marshaling / unmarshaling</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>JAXB 2 supports marshalling and unmarshalling XML tree fragments. By
-default JAXB looks for the <code>@XmlRootElement</code> annotation on a given class to
-operate on whole XML tree. This is useful, but not always. Sometimes the
-generated code does not have the <code>@XmlRootElement</code> annotation and sometimes you
-need to unmarshall only part of the tree.</p>
+<p>JAXB 2 supports marshaling and unmarshaling XML tree fragments. By
+default, JAXB looks for the <code>@XmlRootElement</code> annotation on a given class to
+operate on the whole XML tree. This is useful, but not always. Sometimes the
+generated code does not have the <code>@XmlRootElement</code> annotation, and sometimes you
+need to unmarshal only part of the tree.</p>
 </div>
 <div class="paragraph">
-<p>In that case you can use partial unmarshalling. To enable this
-behaviour you need set property <code>partClass</code> on the <code>JaxbDataFormat</code>. Camel will pass this class
-to the JAXB unmarshaller. If <code>JaxbConstants.JAXB_PART_CLASS</code> is set as
+<p>In that case, you can use partial unmarshaling. To enable this
+behavior, you need set property <code>partClass</code> on the <code>JaxbDataFormat</code>. Camel will pass this class
+to the JAXB unmarshaler. If <code>JaxbConstants.JAXB_PART_CLASS</code> is set as
 one of the exchange headers, its value is used to override the <code>partClass</code> property
 on the <code>JaxbDataFormat</code>.</p>
 </div>
 <div class="paragraph">
-<p>For marshalling you have to add the <code>partNamespace</code> attribute with the <code>QName</code> of
+<p>For marshaling you have to add the <code>partNamespace</code> attribute with the <code>QName</code> of
 the destination namespace.</p>
 </div>
 <div class="paragraph">
@@ -2231,8 +2260,8 @@ note that you need to specify its value in the format <code>{namespaceUri}localP
 <h2 id="_fragment"><a class="anchor" href="#_fragment"></a>Fragment</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p><code>JaxbDataFormat</code> has a property named <code>fragment</code> which can set the <code>Marshaller.JAXB_FRAGMENT</code>
-property on the JAXB Marshaller. If you don&#8217;t want the JAXB Marshaller to generate
+<p><code>JaxbDataFormat</code> has a property named <code>fragment</code> which can set the <code>Marshaler.JAXB_FRAGMENT</code>
+property on the JAXB Marshaler. If you don&#8217;t want the JAXB Marshaler to generate
 the XML declaration, you can set this option to be <code>true</code>. The default value of this property is <code>false</code>.</p>
 </div>
 </div>
@@ -2243,9 +2272,9 @@ the XML declaration, you can set this option to be <code>true</code>. The defaul
 <div class="paragraph">
 <p><code>JaxbDataFormat</code> supports ignoring
 <a href="https://www.w3.org/TR/xml/#NT-Char">Non-XML Characters</a>,
-you just need to set the <code>filterNonXmlChars</code> property to <code>true</code>.
+you need to set the <code>filterNonXmlChars</code> property to <code>true</code>.
 The <code>JaxbDataFormat</code> will replace any non-XML character with a space character (<code>" "</code>) during message
-marshalling or unmarshalling. You can also set the Exchange property <code>Exchange.FILTER_NON_XML_CHARS</code>.</p>
+marshaling or unmarshaling. You can also set the Exchange property <code>Exchange.FILTER_NON_XML_CHARS</code>.</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
 <colgroup>
@@ -2309,7 +2338,7 @@ Camel&#8217;s non-XML filtering:</p>
 <code>ObjectFactory</code> for your JAXB context. Since the <code>ObjectFactory</code> uses
 <a href="https://jakarta.ee/specifications/xml-binding/2.3/apidocs/javax/xml/bind/jaxbelement">JAXBElement</a>
 to hold the reference of the schema and element instance value,
-<code>JaxbDataformat</code> will ignore the <code>JAXBElement</code> by default and you will get
+<code>JaxbDataformat</code> will ignore the <code>JAXBElement</code> by default, and you will get
 the element instance value instead of the <code>JAXBElement</code> object from the
 unmarshaled message body.</p>
 </div>
@@ -2325,10 +2354,10 @@ property to be <code>false</code>.</p>
 <div class="sectionbody">
 <div class="paragraph">
 <p>You can set the <code>encoding</code> option on the <code>JaxbDataFormat</code> to configure the
-<code>Marshaller.JAXB_ENCODING</code> encoding property on the JAXB Marshaller.</p>
+<code>Marshaler.JAXB_ENCODING</code> encoding property on the JAXB Marshaler.</p>
 </div>
 <div class="paragraph">
-<p>You can setup which encoding to use when you declare the <code>JaxbDataFormat</code>. You can also provide the encoding in the
+<p>You can set up which encoding to use when you declare the <code>JaxbDataFormat</code>. You can also provide the encoding in the
 Exchange property <code>Exchange.CHARSET_NAME</code>. This property will override the encoding set on the <code>JaxbDataFormat</code>.</p>
 </div>
 </div>
@@ -2337,14 +2366,14 @@ Exchange property <code>Exchange.CHARSET_NAME</code>. This property will overrid
 <h2 id="_controlling_namespace_prefix_mapping"><a class="anchor" href="#_controlling_namespace_prefix_mapping"></a>Controlling namespace prefix mapping</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>When marshalling using <a href="#">JAXB</a> or <a href="#">SOAP</a> then
+<p>When marshaling using <a href="#">JAXB</a> or <a href="#">SOAP</a> then
 the JAXB implementation will automatically assign namespace prefixes, such
 as <code>ns2</code>, <code>ns3</code>, <code>ns4</code> etc. To control this mapping, Camel allows you to refer
 to a map which contains the desired mapping.</p>
 </div>
 <div class="paragraph">
 <p>For example, in Spring XML we can define a <code>Map</code> with the mapping. In the
-mapping file below, we map SOAP to use soap as as a prefix. While our custom
+mapping file below, we map SOAP to use soap as a prefix. While our custom
 namespace <code><a href="http://www.mycompany.com/foo/2" class="bare">http://www.mycompany.com/foo/2</a></code> is not using any prefix.</p>
 </div>
 <div class="listingblock">
@@ -2357,9 +2386,9 @@ namespace <code><a href="http://www.mycompany.com/foo/2" class="bare">http://www
 </div>
 </div>
 <div class="paragraph">
-<p>To use this in JAXB or SOAP data formats you refer to
+<p>To use this in JAXB or SOAP data formats, you refer to
 this map, using the <code>namespacePrefixRef</code> attribute as shown below. Then
-Camel will lookup in the Registry a <code>java.util.Map</code>
+Camel will look up in the Registry a <code>java.util.Map</code>
 with the id <code>myMap</code>, which was what we defined above.</p>
 </div>
 <div class="listingblock">
@@ -2376,7 +2405,7 @@ with the id <code>myMap</code>, which was what we defined above.</p>
 <div class="sectionbody">
 <div class="paragraph">
 <p>The <code>JaxbDataFormat</code> supports validation by
-marshalling and unmarshalling from / to XML. You can use the prefix
+marshaling and unmarshaling from / to XML. You can use the prefix
 <code>classpath:</code>, <code>file:</code> or <code>http:</code> to specify how the resource should be
 resolved. You can separate multiple schema files by using the <code>,</code> character.</p>
 </div>
@@ -2421,7 +2450,7 @@ jaxbDataFormat.setAccessExternalSchemaProtocols("file");</code></pre>
 <h2 id="_schema_location"><a class="anchor" href="#_schema_location"></a>Schema Location</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>The <code>JaxbDataFormat</code> supports to specify the <code>SchemaLocation</code> when marshalling the XML.</p>
+<p>The <code>JaxbDataFormat</code> supports to specify the <code>SchemaLocation</code> when marshaling the XML.</p>
 </div>
 <div class="paragraph">
 <p>Using the Java DSL, you can configure it in the following way:</p>
@@ -2449,15 +2478,15 @@ jaxbDataFormat.setSchemaLocation("schema/person.xsd");</code></pre>
 <h2 id="_marshal_data_that_is_already_xml"><a class="anchor" href="#_marshal_data_that_is_already_xml"></a>Marshal data that is already XML</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>The JAXB marshaller requires that the message body is JAXB compatible,
-e.g it is a <code>JAXBElement</code>, a java instance that has JAXB annotations, or
+<p>The JAXB marshaler requires that the message body is JAXB compatible,
+for example, it is a <code>JAXBElement</code>, a java instance that has JAXB annotations, or
 extends <code>JAXBElement</code>. There can be situations where the message body is
-already in XML, e.g from a <code>String</code> type.</p>
+already in XML, for example, from a <code>String</code> type.</p>
 </div>
 <div class="paragraph">
 <p><code>JaxbDataFormat</code> has an option named <code>mustBeJAXBElement</code> which you can set to <code>false</code> to relax this check and
-have the JAXB marshaller only attempt marshalling on <code>JAXBElement</code> (<code>javax.xml.bind.JAXBIntrospector#isElement</code> returns <code>true</code>).
-In those situations the marshaller will fallback to marshal the message body as-is.</p>
+have the JAXB marshaler only attempt marshaling on <code>JAXBElement</code> (<code>javax.xml.bind.JAXBIntrospector#isElement</code> returns <code>true</code>).
+In those situations, the marshaler will fall back to marshal the message body as-is.</p>
 </div>
 </div>
 </div>
@@ -2465,13 +2494,12 @@ In those situations the marshaller will fallback to marshal the message body as-
 <h2 id="_dependencies"><a class="anchor" href="#_dependencies"></a>Dependencies</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>To use JAXB in your camel routes you need to add dependency on
-<strong>camel-jaxb</strong> which implements this data format.</p>
+<p>To use JAXB in your Camel routes, you need to add a dependency on
+<strong>camel-jaxb</strong>, which implements this data format.</p>
 </div>
 <div class="paragraph">
-<p>If you use maven you could just add the following to your pom.xml,
-substituting the version number for the latest &amp; greatest release (see
-the download page for the latest versions).</p>
+<p>If you use Maven, you could add the following to your <code>pom.xml</code>,
+substituting the version number for the latest &amp; greatest release.</p>
 </div>
 <div class="listingblock">
 <div class="content">
@@ -2482,6 +2510,9 @@ the download page for the latest versions).</p>
 &lt;/dependency&gt;</code></pre>
 </div>
 </div>
+<div class="paragraph">
+<p>Unresolved include directive in modules/dataformats/pages/jaxb-dataformat.adoc - include::spring-boot:partial$starter.adoc[]</p>
+</div>
 </div>
 </div>
 </article>
@@ -2489,6 +2520,8 @@ the download page for the latest versions).</p>
 </main>
 </div>
 <footer class="footer">
+  <p>This page was built using the Antora default UI.</p>
+  <p>The source code for this UI is licensed under the terms of the MPL-2.0 license.</p>
 </footer>
 <script id="site-script" src="../../../_/js/site.js" data-ui-root-path="../../../_"></script>
 <script async src="../../../_/js/vendor/highlight.js"></script>

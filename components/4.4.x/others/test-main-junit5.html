@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>Test Main JUnit5 :: Red Hat Camel Reference</title>
+    <title>Test Main JUnit5 :: Red Hat build of Apache Camel</title>
     <meta name="description" content="Camel unit testing with Main and JUnit 5">
     <meta name="generator" content="Antora 3.1.4">
     <link rel="stylesheet" href="../../../_/css/site.css">
@@ -12,7 +12,7 @@
 <header class="header">
   <nav class="navbar">
     <div class="navbar-brand">
-      <a class="navbar-item" href="../../manual/index.html">Red Hat build of Apache Camel manual</a>
+      <a class="navbar-item" href="/">Red Hat build of Apache Camel</a>
       <button class="navbar-burger" data-target="topbar-nav">
         <span></span>
         <span></span>
@@ -22,11 +22,12 @@
   </nav>
 </header>
 <div class="body">
-<div class="nav-container" data-component="components" data-version="next">
+<div class="nav-container" data-component="components" data-version="4.4.x">
   <aside class="nav">
     <div class="panels">
 <div class="nav-panel-menu is-active" data-panel="menu">
   <nav class="nav-menu">
+    <button class="nav-menu-toggle" aria-label="Toggle expand/collapse all" style="display: none"></button>
     <h3 class="title"><a href="../index.html">Camel Components</a></h3>
 <ul class="nav-list">
   <li class="nav-item" data-depth="0">
@@ -1819,22 +1820,40 @@
 <div class="nav-panel-explore" data-panel="explore">
   <div class="context">
     <span class="title">Camel Components</span>
-    <span class="version">Next (Pre-release)</span>
+    <span class="version">4.4.x</span>
   </div>
   <ul class="components">
     <li class="component is-current">
-      <a class="title" href="../index.html">Camel Components</a>
+      <div class="title"><a href="../../4.10.x/index.html">Camel Components</a></div>
       <ul class="versions">
-        <li class="version is-current is-latest">
-          <a href="../index.html">Next (Pre-release)</a>
+        <li class="version is-latest">
+          <a href="../../4.10.x/index.html">4.10.x (LTS)</a>
+        </li>
+        <li class="version">
+          <a href="../../4.8.x/index.html">4.8.x</a>
+        </li>
+        <li class="version is-current">
+          <a href="../index.html">4.4.x</a>
+        </li>
+        <li class="version">
+          <a href="../../4.0.x/index.html">4.0.x</a>
         </li>
       </ul>
     </li>
     <li class="component">
-      <a class="title" href="../../../manual/index.html">User manual</a>
+      <div class="title"><a href="../../../manual/4.10.x/index.html">User manual</a></div>
       <ul class="versions">
         <li class="version is-latest">
-          <a href="../../../manual/index.html">default</a>
+          <a href="../../../manual/4.10.x/index.html">4.10.x</a>
+        </li>
+        <li class="version">
+          <a href="../../../manual/4.8.x/index.html">4.8.x</a>
+        </li>
+        <li class="version">
+          <a href="../../../manual/4.4.x/index.html">4.4.x</a>
+        </li>
+        <li class="version">
+          <a href="../../../manual/4.0.x/index.html">4.0.x</a>
         </li>
       </ul>
     </li>
@@ -1846,7 +1865,7 @@
 <main class="article">
 <div class="toolbar" role="navigation">
 <button class="nav-toggle"></button>
-  <a href="../../../manual/index.html" class="home-link"></a>
+  <a href="../../../manual/4.10.x/index.html" class="home-link"></a>
 <nav class="breadcrumbs" aria-label="breadcrumbs">
   <ul>
     <li><a href="../index.html">Camel Components</a></li>
@@ -1854,6 +1873,16 @@
     <li><a href="test-main-junit5.html">Test Main JUnit5</a></li>
   </ul>
 </nav>
+<div class="page-versions">
+  <button class="version-menu-toggle" title="Show other versions of page">4.4.x</button>
+  <div class="version-menu">
+    <a class="version" href="../../4.10.x/others/test-main-junit5.html">4.10.x (LTS)</a>
+    <a class="version" href="../../4.8.x/others/test-main-junit5.html">4.8.x</a>
+    <a class="version is-current" href="test-main-junit5.html">4.4.x</a>
+    <a class="version is-missing" href="../../4.0.x/index.html">4.0.x</a>
+  </div>
+</div>
+<div class="edit-this-page"><a href="https://github.com/rhaetor/rh-camel-jboss/edit/camel-4.4.0-branch/docs/components/modules/others/pages/test-main-junit5.adoc">Edit this Page</a></div>
 </div>
   <div class="content">
 <aside class="toc sidebar" data-title="Contents" data-levels="2">
@@ -1870,20 +1899,24 @@
 <p>The <code>camel-test-main-junit5</code> module is used for unit testing Camel launched in Standalone mode with Camel Main.</p>
 </div>
 <div class="paragraph">
-<p>This module proposes 2 approaches to configure and launch Camel like a Camel Main application for testing purpose.</p>
+<p>This module proposes two approaches to configure and launch Camel like a Camel Main application for testing purpose.</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>Legacy</strong>: This approach consists of extending the base class <code>org.apache.camel.test.main.junit5.CamelMainTestSupport</code> and overriding the appropriate methods to enable or disable a feature.</p>
+</li>
+<li>
+<p><strong>Annotation</strong>: This approach consists of annotating the test classes with <code>org.apache.camel.test.main.junit5.CamelMainTest</code> with the appropriate attributes to enable or disable a feature.</p>
+</li>
+</ul>
 </div>
 <div class="paragraph">
-<p>The <strong>legacy</strong> approach consisting of extending the base class <code>org.apache.camel.test.main.junit5.CamelMainTestSupport</code> and overriding the appropriate methods to enable or disable a feature.</p>
+<p>In the next section,
+for each use case both approaches are proposed with the labels <strong>legacy</strong> and <strong>annotation</strong> to differentiate them.</p>
 </div>
 <div class="paragraph">
-<p>The <strong>annotation</strong> based approach consisting of annotating the test classes with <code>org.apache.camel.test.main.junit5.CamelMainTest</code> with the appropriate attributes to enable or disable a feature.</p>
-</div>
-<div class="paragraph">
-<p>In the next sections, for each use case both approaches are proposed with the labels <strong>legacy</strong> and <strong>annotation</strong> to differentiate them.</p>
-</div>
-<div class="paragraph">
-<p>Maven users will need to add the following dependency to
-their <code>pom.xml</code> for this component:</p>
+<p>Maven users will need to add the following dependency to their <code>pom.xml</code> for this component:</p>
 </div>
 <div class="listingblock">
 <div class="content">
@@ -1918,12 +1951,25 @@ their <code>pom.xml</code> for this component:</p>
 <div class="paragraph">
 <p>The same behavior can be simulated with <code>CamelMainTest</code> by setting the attribute <code>mainClass</code> to provide the main class of the application to test.</p>
 </div>
+</div>
+<div class="sect2">
+<h3 id="_examples"><a class="anchor" href="#_examples"></a>Examples</h3>
 <div class="paragraph">
 <p>In the next examples, the main class of the application to test is the class <code>SomeMainClass</code>.</p>
 </div>
+<div id="_tabs_1" class="openblock tabs is-sync is-loading">
+<div class="content">
+<div class="ulist tablist">
+<ul>
+<li id="_tabs_1_legacy" class="tab">
+<p>Legacy</p>
+</li>
+<li id="_tabs_1_annotation" class="tab">
+<p>Annotation</p>
+</li>
+</ul>
 </div>
-<div class="sect2">
-<h3 id="_legacy_2"><a class="anchor" href="#_legacy_2"></a>Legacy</h3>
+<div id="_tabs_1_legacy--panel" class="tabpanel" aria-labelledby="_tabs_1_legacy">
 <div class="listingblock">
 <div class="content">
 <pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">class SomeTest extends CamelMainTestSupport {
@@ -1938,8 +1984,7 @@ their <code>pom.xml</code> for this component:</p>
 </div>
 </div>
 </div>
-<div class="sect2">
-<h3 id="_annotation_2"><a class="anchor" href="#_annotation_2"></a>Annotation</h3>
+<div id="_tabs_1_annotation--panel" class="tabpanel" aria-labelledby="_tabs_1_annotation">
 <div class="listingblock">
 <div class="content">
 <pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">@CamelMainTest(mainClass = SomeMainClass.class)
@@ -1952,6 +1997,9 @@ class SomeTest {
 </div>
 </div>
 </div>
+</div>
+</div>
+</div>
 <div class="sect1">
 <h2 id="_configure_camel_as_a_camel_main_application"><a class="anchor" href="#_configure_camel_as_a_camel_main_application"></a>Configure Camel as a Camel Main application</h2>
 <div class="sectionbody">
@@ -1959,22 +2007,39 @@ class SomeTest {
 <p>A Camel Main application has access to many specific configuration properties that are not available from the base class <code>CamelTestSupport</code>.</p>
 </div>
 <div class="sect2">
-<h3 id="_legacy_3"><a class="anchor" href="#_legacy_3"></a>Legacy</h3>
+<h3 id="_legacy_2"><a class="anchor" href="#_legacy_2"></a>Legacy</h3>
 <div class="paragraph">
-<p>The base class <code>CamelMainTestSupport</code> provides the method <code>configure(MainConfigurationProperties configuration)</code> that can be overridden in order to configure Camel for the test like a Camel Main application.</p>
+<p>The base class <code>CamelMainTestSupport</code> provides the method <code>configure(MainConfigurationProperties configuration)</code>
+that can be overridden to configure Camel for the test like a Camel Main application.</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="_annotation_3"><a class="anchor" href="#_annotation_3"></a>Annotation</h3>
+<h3 id="_annotation_2"><a class="anchor" href="#_annotation_2"></a>Annotation</h3>
 <div class="paragraph">
-<p>The annotation <code>Configure</code> allows to mark a method with an arbitrary name and a parameter of type <code>MainConfigurationProperties</code> to be called in order to configure Camel for the test like a Camel Main application. Several methods in the test class and/or its parent classes can be annotated.</p>
+<p>The annotation <code>Configure</code> allows
+to mark a method with an arbitrary name and a parameter of type <code>MainConfigurationProperties</code>
+to be called to configure Camel for the test like a Camel Main application.
+Several methods in the test class and/or its parent classes can be annotated.</p>
 </div>
+</div>
+<div class="sect2">
+<h3 id="_examples_2"><a class="anchor" href="#_examples_2"></a>Examples</h3>
 <div class="paragraph">
 <p>In the next examples, the test class <code>SomeTest</code> adds a configuration class and specifies the xml routes to include.</p>
 </div>
+<div id="_tabs_2" class="openblock tabs is-sync is-loading">
+<div class="content">
+<div class="ulist tablist">
+<ul>
+<li id="_tabs_2_legacy" class="tab">
+<p>Legacy</p>
+</li>
+<li id="_tabs_2_annotation" class="tab">
+<p>Annotation</p>
+</li>
+</ul>
 </div>
-<div class="sect2">
-<h3 id="_legacy_4"><a class="anchor" href="#_legacy_4"></a>Legacy</h3>
+<div id="_tabs_2_legacy--panel" class="tabpanel" aria-labelledby="_tabs_2_legacy">
 <div class="listingblock">
 <div class="content">
 <pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java"><span class="fold-block is-hidden-folded">import org.apache.camel.main.MainConfigurationProperties;
@@ -1994,8 +2059,7 @@ class SomeTest {
 </div>
 </div>
 </div>
-<div class="sect2">
-<h3 id="_annotation_4"><a class="anchor" href="#_annotation_4"></a>Annotation</h3>
+<div id="_tabs_2_annotation--panel" class="tabpanel" aria-labelledby="_tabs_2_annotation">
 <div class="listingblock">
 <div class="content">
 <pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java"><span class="fold-block is-hidden-folded">import org.apache.camel.main.MainConfigurationProperties;
@@ -2019,6 +2083,9 @@ class SomeTest {
 </div>
 </div>
 </div>
+</div>
+</div>
+</div>
 <div class="sect1">
 <h2 id="_configure_a_custom_property_placeholder_location"><a class="anchor" href="#_configure_a_custom_property_placeholder_location"></a>Configure a custom property placeholder location</h2>
 <div class="sectionbody">
@@ -2030,25 +2097,38 @@ class SomeTest {
 
 </div>
 <div class="sect2">
-<h3 id="_legacy_5"><a class="anchor" href="#_legacy_5"></a>Legacy</h3>
+<h3 id="_legacy_3"><a class="anchor" href="#_legacy_3"></a>Legacy</h3>
 <div class="paragraph">
 <p>The method <code>getPropertyPlaceholderLocations()</code> can be overridden to provide a comma separated list of locations.</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="_annotation_5"><a class="anchor" href="#_annotation_5"></a>Annotation</h3>
+<h3 id="_annotation_3"><a class="anchor" href="#_annotation_3"></a>Annotation</h3>
 <div class="paragraph">
 <p>The attribute <code>propertyPlaceholderLocations</code> can be set to provide a list of locations.</p>
 </div>
 <div class="paragraph">
-<p>The order in the list matter especially in case of a property defined at several locations, the value of the property found in the first location where it is defined, is used.</p>
-</div>
-<div class="paragraph">
-<p>In the next examples, the property placeholder locations configured are <code>extra-application.properties</code> and <code>application.properties</code> both available in the default package.</p>
+<p>The order in the list matters, especially in case of a property defined at several locations, the value of the property found in the first location where it is defined, is used.</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="_legacy_6"><a class="anchor" href="#_legacy_6"></a>Legacy</h3>
+<h3 id="_examples_3"><a class="anchor" href="#_examples_3"></a>Examples</h3>
+<div class="paragraph">
+<p>In the next examples, the property placeholder locations configured are <code>extra-application.properties</code> and <code>application.properties</code> both available in the default package.</p>
+</div>
+<div id="_tabs_3" class="openblock tabs is-sync is-loading">
+<div class="content">
+<div class="ulist tablist">
+<ul>
+<li id="_tabs_3_legacy" class="tab">
+<p>Legacy</p>
+</li>
+<li id="_tabs_3_annotation" class="tab">
+<p>Annotation</p>
+</li>
+</ul>
+</div>
+<div id="_tabs_3_legacy--panel" class="tabpanel" aria-labelledby="_tabs_3_legacy">
 <div class="listingblock">
 <div class="content">
 <pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">class SomeTest extends CamelMainTestSupport {
@@ -2063,8 +2143,7 @@ class SomeTest {
 </div>
 </div>
 </div>
-<div class="sect2">
-<h3 id="_annotation_6"><a class="anchor" href="#_annotation_6"></a>Annotation</h3>
+<div id="_tabs_3_annotation--panel" class="tabpanel" aria-labelledby="_tabs_3_annotation">
 <div class="listingblock">
 <div class="content">
 <pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">@CamelMainTest(propertyPlaceholderLocations = { "classpath:extra-application.properties", "classpath:application.properties" })
@@ -2075,6 +2154,9 @@ class SomeTest {
 </div>
 </div>
 </div>
+</div>
+</div>
+</div>
 <div class="sect2">
 <h3 id="_the_file_name_of_the_property_placeholder"><a class="anchor" href="#_the_file_name_of_the_property_placeholder"></a>The file name of the property placeholder</h3>
 <div class="paragraph">
@@ -2082,19 +2164,22 @@ class SomeTest {
 </div>
 </div>
 <div class="sect2">
-<h3 id="_legacy_7"><a class="anchor" href="#_legacy_7"></a>Legacy</h3>
+<h3 id="_legacy_4"><a class="anchor" href="#_legacy_4"></a>Legacy</h3>
 <div class="paragraph">
 <p>The method <code>getPropertyPlaceholderFileName()</code> can be overridden to provide the file name of the property placeholder.</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="_annotation_7"><a class="anchor" href="#_annotation_7"></a>Annotation</h3>
+<h3 id="_annotation_4"><a class="anchor" href="#_annotation_4"></a>Annotation</h3>
 <div class="paragraph">
 <p>The attribute <code>propertyPlaceholderFileName</code> can be set to provide the file name of the property placeholder.</p>
 </div>
 <div class="paragraph">
 <p>It can then infer the locations of the property placeholder as it assumes that it is located either in the same package as the test class or directly in the default package.</p>
 </div>
+</div>
+<div class="sect2">
+<h3 id="_examples_4"><a class="anchor" href="#_examples_4"></a>Examples</h3>
 <div class="paragraph">
 <p>In the next examples, since the test class is <code>com.somecompany.SomeTest</code> and the file name of the property placeholder is <code>custom-application.properties</code> , the actual possible locations of the property placeholder are <code>classpath:com/somecompany/custom-application.properties;optional=true,classpath:custom-application.properties;optional=true</code> which means that for each property to find, it tries to get it first from the properties file of the same package if it exists and if it cannot be found, it tries to get it from the properties file with the same name but in the default package if it exists.</p>
 </div>
@@ -2105,14 +2190,26 @@ class SomeTest {
 <i class="fa icon-note" title="Note"></i>
 </td>
 <td class="content">
-Since the properties files are declared as optional, no exception is raised if they are both absent.
+<div class="paragraph">
+<p>Since the properties files are declared as optional, no exception is raised if they are both absent.</p>
+</div>
 </td>
 </tr>
 </table>
 </div>
+<div id="_tabs_4" class="openblock tabs is-sync is-loading">
+<div class="content">
+<div class="ulist tablist">
+<ul>
+<li id="_tabs_4_legacy" class="tab">
+<p>Legacy</p>
+</li>
+<li id="_tabs_4_annotation" class="tab">
+<p>Annotation</p>
+</li>
+</ul>
 </div>
-<div class="sect2">
-<h3 id="_legacy_8"><a class="anchor" href="#_legacy_8"></a>Legacy</h3>
+<div id="_tabs_4_legacy--panel" class="tabpanel" aria-labelledby="_tabs_4_legacy">
 <div class="listingblock">
 <div class="content">
 <pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">package com.somecompany;
@@ -2129,8 +2226,7 @@ class SomeTest extends CamelMainTestSupport {
 </div>
 </div>
 </div>
-<div class="sect2">
-<h3 id="_annotation_8"><a class="anchor" href="#_annotation_8"></a>Annotation</h3>
+<div id="_tabs_4_annotation--panel" class="tabpanel" aria-labelledby="_tabs_4_annotation">
 <div class="listingblock">
 <div class="content">
 <pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">package com.somecompany;
@@ -2145,39 +2241,60 @@ class SomeTest {
 </div>
 </div>
 </div>
+</div>
+</div>
+</div>
 <div class="sect1">
 <h2 id="_replace_an_existing_bean"><a class="anchor" href="#_replace_an_existing_bean"></a>Replace an existing bean</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>In Camel Main, you have the opportunity to bind custom beans dynamically using the specific annotation <code>@BindToRegistry</code> which is very helpful but for testing purpose, you may need to replace the bean by a mock or a test implementation.</p>
+<p>In Camel Main,
+you have the opportunity to bind custom beans dynamically using the specific annotation <code>@BindToRegistry</code> which is very helpful
+but for testing purpose, you may need to replace the bean by a mock, or test implementation.</p>
 </div>
 <div class="sect2">
-<h3 id="_legacy_9"><a class="anchor" href="#_legacy_9"></a>Legacy</h3>
+<h3 id="_legacy_5"><a class="anchor" href="#_legacy_5"></a>Legacy</h3>
 <div class="paragraph">
 <p>To bind additional beans, you can still override the well known method <code>bindToRegistry(Registry registry)</code> but this method cannot be used to replace a bean created and bound automatically by Camel as it is called too early in the initialization process of Camel. To work around this problem, you can instead bind your beans by overriding the new method <code>bindToRegistryAfterInjections(Registry registry)</code> which is called after existing injections and automatic binding have been done.</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="_annotation_9"><a class="anchor" href="#_annotation_9"></a>Annotation</h3>
+<h3 id="_annotation_5"><a class="anchor" href="#_annotation_5"></a>Annotation</h3>
 <div class="paragraph">
 <p>The annotation <code>ReplaceInRegistry</code> allows to mark a method or a field to replace an existing bean in the registry.</p>
 </div>
 <div class="ulist">
 <ul>
 <li>
-<p>In case of a field, the name and its type are used to identify the bean to replace, and the value of the field is the new value of the bean. The field can be in the test class or in a parent class.</p>
+<p>In the case of a field, the name and its type are used to identify the bean to replace, and the value of the field is the new value of the bean. The field can be in the test class or in a parent class.</p>
 </li>
 <li>
-<p>In case of a method, the name and its return type are used to identify the bean to replace, and the return value of the method is the new value of the bean. The method can be in the test class or in a parent class.</p>
+<p>In the case of a method, the name and its return type are used to identify the bean to replace, and the return value of the method is the new value of the bean. The method can be in the test class or in a parent class.</p>
 </li>
 </ul>
 </div>
+</div>
+<div class="sect2">
+<h3 id="_examples_5"><a class="anchor" href="#_examples_5"></a>Examples</h3>
 <div class="paragraph">
 <p>In the next examples, an instance of a custom bean of type <code>CustomGreetings</code> is used to replace the bean of type <code>Greetings</code> automatically bound by Camel with the name <code>myGreetings</code>.</p>
 </div>
+<div id="_tabs_5" class="openblock tabs is-sync is-loading">
+<div class="content">
+<div class="ulist tablist">
+<ul>
+<li id="_tabs_5_legacy" class="tab">
+<p>Legacy</p>
+</li>
+<li id="_tabs_5_annotation_field" class="tab">
+<p>Annotation (field)</p>
+</li>
+<li id="_tabs_5_annotation_method" class="tab">
+<p>Annotation (method)</p>
+</li>
+</ul>
 </div>
-<div class="sect2">
-<h3 id="_legacy_10"><a class="anchor" href="#_legacy_10"></a>Legacy</h3>
+<div id="_tabs_5_legacy--panel" class="tabpanel" aria-labelledby="_tabs_5_legacy">
 <div class="listingblock">
 <div class="content">
 <pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">class SomeTest extends CamelMainTestSupport {
@@ -2195,11 +2312,9 @@ class SomeTest {
 </div>
 </div>
 </div>
-<div class="sect2">
-<h3 id="_annotation_10"><a class="anchor" href="#_annotation_10"></a>Annotation</h3>
-<div class="sect3">
-<h4 id="_using_a_field"><a class="anchor" href="#_using_a_field"></a>Using a field</h4>
+<div id="_tabs_5_annotation_field--panel" class="tabpanel" aria-labelledby="_tabs_5_annotation_field">
 <div class="listingblock">
+<div class="title">Using a field</div>
 <div class="content">
 <pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java"><span class="fold-block is-hidden-folded">import org.apache.camel.test.main.junit5.ReplaceInRegistry;
 
@@ -2222,9 +2337,9 @@ class SomeTest {
 </table>
 </div>
 </div>
-<div class="sect3">
-<h4 id="_using_a_method"><a class="anchor" href="#_using_a_method"></a>Using a method</h4>
+<div id="_tabs_5_annotation_method--panel" class="tabpanel" aria-labelledby="_tabs_5_annotation_method">
 <div class="listingblock">
+<div class="title">Using a method</div>
 <div class="content">
 <pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java"><span class="fold-block is-hidden-folded">import org.apache.camel.test.main.junit5.ReplaceInRegistry;
 
@@ -2247,6 +2362,8 @@ class SomeTest {
 </div>
 </div>
 </div>
+</div>
+</div>
 <div class="sect1">
 <h2 id="_override_existing_properties"><a class="anchor" href="#_override_existing_properties"></a>Override existing properties</h2>
 <div class="sectionbody">
@@ -2254,22 +2371,35 @@ class SomeTest {
 <p>Some properties are inherited from properties file like the <code>application.properties</code> and need to be overridden within the context of the test.</p>
 </div>
 <div class="sect2">
-<h3 id="_legacy_11"><a class="anchor" href="#_legacy_11"></a>Legacy</h3>
+<h3 id="_legacy_6"><a class="anchor" href="#_legacy_6"></a>Legacy</h3>
 <div class="paragraph">
 <p>The method <code>useOverridePropertiesWithPropertiesComponent()</code> can be overridden to provide an instance of type <code>java.util.Properties</code> that contains the properties to override.</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="_annotation_11"><a class="anchor" href="#_annotation_11"></a>Annotation</h3>
+<h3 id="_annotation_6"><a class="anchor" href="#_annotation_6"></a>Annotation</h3>
 <div class="paragraph">
 <p>The attribute <code>properties</code> can be set to provide an array of <code>String</code> representing the key/value pairs of properties to override in the following format <code>"property-key-1=property-value-1", "property-key-2=property-value-1", &#8230;&#8203;</code>.</p>
 </div>
+</div>
+<div class="sect2">
+<h3 id="_examples_6"><a class="anchor" href="#_examples_6"></a>Examples</h3>
 <div class="paragraph">
 <p>In the next examples, the value of the property whose name is <code>host</code> is replaced with <code>localhost</code>.</p>
 </div>
+<div id="_tabs_6" class="openblock tabs is-sync is-loading">
+<div class="content">
+<div class="ulist tablist">
+<ul>
+<li id="_tabs_6_legacy" class="tab">
+<p>Legacy</p>
+</li>
+<li id="_tabs_6_annotation" class="tab">
+<p>Annotation</p>
+</li>
+</ul>
 </div>
-<div class="sect2">
-<h3 id="_legacy_12"><a class="anchor" href="#_legacy_12"></a>Legacy</h3>
+<div id="_tabs_6_legacy--panel" class="tabpanel" aria-labelledby="_tabs_6_legacy">
 <div class="listingblock">
 <div class="content">
 <pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java"><span class="fold-block is-hidden-folded">import static org.apache.camel.util.PropertiesHelper.asProperties;
@@ -2286,8 +2416,7 @@ class SomeTest {
 </div>
 </div>
 </div>
-<div class="sect2">
-<h3 id="_annotation_12"><a class="anchor" href="#_annotation_12"></a>Annotation</h3>
+<div id="_tabs_6_annotation--panel" class="tabpanel" aria-labelledby="_tabs_6_annotation">
 <div class="listingblock">
 <div class="content">
 <pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">@CamelMainTest(properties = { "host=localhost" })
@@ -2300,29 +2429,51 @@ class SomeTest {
 </div>
 </div>
 </div>
+</div>
+</div>
+</div>
 <div class="sect1">
 <h2 id="_replace_from_endpoints"><a class="anchor" href="#_replace_from_endpoints"></a>Replace from endpoints</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>To be able to test easily the behavior of a route without being affected by the type of from endpoint used in the route, it can be very helpful to replace the from endpoint with an endpoint more test friendly.</p>
+<p>To be able to test easily the behavior of a route without being affected by the type of <code><em>from</em></code> endpoint used in the route,
+it can be very helpful to replace the <code><em>from</em></code> endpoint with an endpoint more test friendly.</p>
 </div>
 <div class="sect2">
-<h3 id="_legacy_13"><a class="anchor" href="#_legacy_13"></a>Legacy</h3>
+<h3 id="_legacy_7"><a class="anchor" href="#_legacy_7"></a>Legacy</h3>
 <div class="paragraph">
-<p>The method <code>replaceRouteFromWith()</code> can be called to provide the id of the route to modify and the URI of the new from endpoint.</p>
+<p>The method <code>replaceRouteFromWith()</code> can be called
+to provide the id of the route to modify and the URI of the new <code><em>from</em></code> endpoint.</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="_annotation_13"><a class="anchor" href="#_annotation_13"></a>Annotation</h3>
+<h3 id="_annotation_7"><a class="anchor" href="#_annotation_7"></a>Annotation</h3>
 <div class="paragraph">
-<p>The attribute <code>replaceRouteFromWith</code> can be set to provide an array of <code>String</code> representing a list of id of the route to modify and the URI of the new from endpoint in the following format <code>"route-id-1=new-uri-1", "route-id-2=new-uri-2", &#8230;&#8203;</code>.</p>
+<p>The attribute <code>replaceRouteFromWith</code> can be set
+to provide an array
+of <code>String</code> representing a list of route IDs
+to modify and the URI of the new <code><em>from</em></code> endpoint in the following format <code>"route-id-1=new-uri-1",
+"route-id-2=new-uri-2", &#8230;&#8203;</code>.</p>
 </div>
+</div>
+<div class="sect2">
+<h3 id="_examples_7"><a class="anchor" href="#_examples_7"></a>Examples</h3>
 <div class="paragraph">
 <p>In the next examples, the route whose id is <code>main-route</code> is advised to replace its current from endpoint with a <code>direct:main</code> endpoint.</p>
 </div>
+<div id="_tabs_7" class="openblock tabs is-sync is-loading">
+<div class="content">
+<div class="ulist tablist">
+<ul>
+<li id="_tabs_7_legacy" class="tab">
+<p>Legacy</p>
+</li>
+<li id="_tabs_7_annotation" class="tab">
+<p>Annotation</p>
+</li>
+</ul>
 </div>
-<div class="sect2">
-<h3 id="_legacy_14"><a class="anchor" href="#_legacy_14"></a>Legacy</h3>
+<div id="_tabs_7_legacy--panel" class="tabpanel" aria-labelledby="_tabs_7_legacy">
 <div class="listingblock">
 <div class="content">
 <pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">class SomeTest extends CamelMainTestSupport {
@@ -2339,8 +2490,7 @@ class SomeTest {
 </div>
 </div>
 </div>
-<div class="sect2">
-<h3 id="_annotation_14"><a class="anchor" href="#_annotation_14"></a>Annotation</h3>
+<div id="_tabs_7_annotation--panel" class="tabpanel" aria-labelledby="_tabs_7_annotation">
 <div class="listingblock">
 <div class="content">
 <pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">@CamelMainTest(replaceRouteFromWith = { "main-route=direct:main" })
@@ -2353,6 +2503,9 @@ class SomeTest {
 </div>
 </div>
 </div>
+</div>
+</div>
+</div>
 <div class="sect1">
 <h2 id="_configure_additional_camel_configuration_classes"><a class="anchor" href="#_configure_additional_camel_configuration_classes"></a>Configure additional camel configuration classes</h2>
 <div class="sectionbody">
@@ -2360,22 +2513,35 @@ class SomeTest {
 <p>In practice, additional camel configuration classes can be provided for the sake of simplicity directly from the constructor of the Camel Main like for example <code>new Main(SomeApplication.class, SomeCamelConfiguration.class)</code> where <code>SomeApplication.class</code> is the main class of the application and <code>SomeCamelConfiguration.class</code> is an additional camel configuration class.</p>
 </div>
 <div class="sect2">
-<h3 id="_legacy_15"><a class="anchor" href="#_legacy_15"></a>Legacy</h3>
+<h3 id="_legacy_8"><a class="anchor" href="#_legacy_8"></a>Legacy</h3>
 <div class="paragraph">
 <p>There is no specific method for that, but it can be done by overriding the method <code>configure(MainConfigurationProperties configuration)</code> like described in a previous section.</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="_annotation_15"><a class="anchor" href="#_annotation_15"></a>Annotation</h3>
+<h3 id="_annotation_8"><a class="anchor" href="#_annotation_8"></a>Annotation</h3>
 <div class="paragraph">
 <p>The attribute <code>configurationClasses</code> can be set to provide an array of additional camel configuration classes.</p>
 </div>
+</div>
+<div class="sect2">
+<h3 id="_examples_8"><a class="anchor" href="#_examples_8"></a>Examples</h3>
 <div class="paragraph">
 <p>In the next examples, the camel configuration class <code>SomeCamelConfiguration</code> is added to the global configuration.</p>
 </div>
+<div id="_tabs_8" class="openblock tabs is-sync is-loading">
+<div class="content">
+<div class="ulist tablist">
+<ul>
+<li id="_tabs_8_legacy" class="tab">
+<p>Legacy</p>
+</li>
+<li id="_tabs_8_annotation" class="tab">
+<p>Annotation</p>
+</li>
+</ul>
 </div>
-<div class="sect2">
-<h3 id="_legacy_16"><a class="anchor" href="#_legacy_16"></a>Legacy</h3>
+<div id="_tabs_8_legacy--panel" class="tabpanel" aria-labelledby="_tabs_8_legacy">
 <div class="listingblock">
 <div class="content">
 <pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">class SomeTest extends CamelMainTestSupport {
@@ -2391,8 +2557,7 @@ class SomeTest {
 </div>
 </div>
 </div>
-<div class="sect2">
-<h3 id="_annotation_16"><a class="anchor" href="#_annotation_16"></a>Annotation</h3>
+<div id="_tabs_8_annotation--panel" class="tabpanel" aria-labelledby="_tabs_8_annotation">
 <div class="listingblock">
 <div class="content">
 <pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">@CamelMainTest(configurationClasses = SomeCamelConfiguration.class)
@@ -2405,6 +2570,9 @@ class SomeTest {
 </div>
 </div>
 </div>
+</div>
+</div>
+</div>
 <div class="sect1">
 <h2 id="_advice_a_route"><a class="anchor" href="#_advice_a_route"></a>Advice a route</h2>
 <div class="sectionbody">
@@ -2412,22 +2580,35 @@ class SomeTest {
 <p>It is possible to modify a route within the context of a test by using advices generally represented by specific route builders of type <code>AdviceWithRouteBuilder</code> as it proposes out-of-box utility methods allowing to advice a route easily.</p>
 </div>
 <div class="sect2">
-<h3 id="_legacy_17"><a class="anchor" href="#_legacy_17"></a>Legacy</h3>
+<h3 id="_legacy_9"><a class="anchor" href="#_legacy_9"></a>Legacy</h3>
 <div class="paragraph">
 <p>A route needs to be advised directly in the test method using one of the utility method <code>AdviceWith.adviceWith</code> and the Camel context has to be started explicitly once the route has been advised to take it into account.</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="_annotation_17"><a class="anchor" href="#_annotation_17"></a>Annotation</h3>
+<h3 id="_annotation_9"><a class="anchor" href="#_annotation_9"></a>Annotation</h3>
 <div class="paragraph">
 <p>The attribute <code>advices</code> can be set to provide an array of annotations of type <code>AdviceRouteMapping</code> representing a mapping between a route to advice and the corresponding route builders to call to advice the route. As the route builders are instantiated using the default constructor, make sure that the default constructor exists.</p>
 </div>
+</div>
+<div class="sect2">
+<h3 id="_examples_9"><a class="anchor" href="#_examples_9"></a>Examples</h3>
 <div class="paragraph">
 <p>In the next examples, the route whose id is <code>main-route</code> is advised to replace its current from endpoint with a <code>direct:main</code> endpoint.</p>
 </div>
+<div id="_tabs_9" class="openblock tabs is-sync is-loading">
+<div class="content">
+<div class="ulist tablist">
+<ul>
+<li id="_tabs_9_legacy" class="tab">
+<p>Legacy</p>
+</li>
+<li id="_tabs_9_annotation" class="tab">
+<p>Annotation</p>
+</li>
+</ul>
 </div>
-<div class="sect2">
-<h3 id="_legacy_18"><a class="anchor" href="#_legacy_18"></a>Legacy</h3>
+<div id="_tabs_9_legacy--panel" class="tabpanel" aria-labelledby="_tabs_9_legacy">
 <div class="listingblock">
 <div class="content">
 <pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">class SomeTest extends CamelMainTestSupport {
@@ -2439,7 +2620,7 @@ class SomeTest {
 
     @Test
     void someTest() throws Exception {
-        // Advice the route by replace the from endpoint
+        // Advice the route to replace the from endpoint
         AdviceWith.adviceWith(context, "main-route", ad -&gt; ad.replaceFromWith("direct:main")); <i class="conum" data-value="2"></i><b>(2)</b>
 
         // must start Camel after we are done using advice-with
@@ -2469,8 +2650,7 @@ class SomeTest {
 </table>
 </div>
 </div>
-<div class="sect2">
-<h3 id="_annotation_18"><a class="anchor" href="#_annotation_18"></a>Annotation</h3>
+<div id="_tabs_9_annotation--panel" class="tabpanel" aria-labelledby="_tabs_9_annotation">
 <div class="listingblock">
 <div class="content">
 <pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">@CamelMainTest(advices = @AdviceRouteMapping(route = "main-route", advice = SomeTest.SomeRouteBuilder.class))
@@ -2491,6 +2671,9 @@ class SomeTest {
 </div>
 </div>
 </div>
+</div>
+</div>
+</div>
 <div class="sect1">
 <h2 id="_mock_and_skip_an_endpoint"><a class="anchor" href="#_mock_and_skip_an_endpoint"></a>Mock and skip an endpoint</h2>
 <div class="sectionbody">
@@ -2498,24 +2681,37 @@ class SomeTest {
 <p>For testing purpose, it can be helpful to mock only or to mock and skip all the endpoints matching with a given pattern.</p>
 </div>
 <div class="sect2">
-<h3 id="_legacy_19"><a class="anchor" href="#_legacy_19"></a>Legacy</h3>
+<h3 id="_legacy_10"><a class="anchor" href="#_legacy_10"></a>Legacy</h3>
 <div class="paragraph">
 <p>The method <code>isMockEndpoints()</code> can be overridden to provide the pattern that should match with the endpoints to mock.
 The method <code>isMockEndpointsAndSkip()</code> can be overridden to provide the pattern that should match with the endpoints to mock and skip.</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="_annotation_19"><a class="anchor" href="#_annotation_19"></a>Annotation</h3>
+<h3 id="_annotation_10"><a class="anchor" href="#_annotation_10"></a>Annotation</h3>
 <div class="paragraph">
 <p>The attribute <code>mockEndpoints</code> can be set to provide the pattern that should match with the endpoints to mock.
 The attribute <code>mockEndpointsAndSkip</code> can be set to provide the pattern that should match with the endpoints to mock and skip.</p>
 </div>
+</div>
+<div class="sect2">
+<h3 id="_examples_10"><a class="anchor" href="#_examples_10"></a>Examples</h3>
 <div class="paragraph">
 <p>In the next examples, the endpoints whose URI starts with <code>direct:</code> are mocked.</p>
 </div>
+<div id="_tabs_10" class="openblock tabs is-sync is-loading">
+<div class="content">
+<div class="ulist tablist">
+<ul>
+<li id="_tabs_10_legacy" class="tab">
+<p>Legacy</p>
+</li>
+<li id="_tabs_10_annotation" class="tab">
+<p>Annotation</p>
+</li>
+</ul>
 </div>
-<div class="sect2">
-<h3 id="_legacy_20"><a class="anchor" href="#_legacy_20"></a>Legacy</h3>
+<div id="_tabs_10_legacy--panel" class="tabpanel" aria-labelledby="_tabs_10_legacy">
 <div class="listingblock">
 <div class="content">
 <pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">class SomeTest extends CamelMainTestSupport {
@@ -2530,8 +2726,7 @@ The attribute <code>mockEndpointsAndSkip</code> can be set to provide the patter
 </div>
 </div>
 </div>
-<div class="sect2">
-<h3 id="_annotation_20"><a class="anchor" href="#_annotation_20"></a>Annotation</h3>
+<div id="_tabs_10_annotation--panel" class="tabpanel" aria-labelledby="_tabs_10_annotation">
 <div class="listingblock">
 <div class="content">
 <pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">@CamelMainTest(mockEndpoints = "direct:*")
@@ -2539,6 +2734,9 @@ class SomeTest {
 
     // Rest of the test class
 }</code></pre>
+</div>
+</div>
+</div>
 </div>
 </div>
 </div>
@@ -2554,13 +2752,13 @@ class SomeTest {
 <p>The result is generated in <code>target/camel-route-coverage/<em>class-name</em>-<em>test-name</em>.xml</code>.</p>
 </div>
 <div class="sect2">
-<h3 id="_legacy_21"><a class="anchor" href="#_legacy_21"></a>Legacy</h3>
+<h3 id="_legacy_11"><a class="anchor" href="#_legacy_11"></a>Legacy</h3>
 <div class="paragraph">
 <p>The method <code>isDumpRouteCoverage()</code> can be overridden to return <code>true</code> indicating that the feature is enabled.</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="_annotation_21"><a class="anchor" href="#_annotation_21"></a>Annotation</h3>
+<h3 id="_annotation_11"><a class="anchor" href="#_annotation_11"></a>Annotation</h3>
 <div class="paragraph">
 <p>The attribute <code>dumpRouteCoverage</code> can be set to <code>true</code> indicating that the feature is enabled.</p>
 </div>
@@ -2571,16 +2769,18 @@ class SomeTest {
 <h2 id="_override_the_shutdown_timeout"><a class="anchor" href="#_override_the_shutdown_timeout"></a>Override the shutdown timeout</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>The default shutdown timeout of Camel is not really adapted for a test as it can be very long. This feature allows to override it to 10 seconds by default, but it can also be set to a custom value knowing that it is expressed in seconds.</p>
+<p>The default shutdown timeout of Camel is not really adapted for a test as it can be very long.
+This feature allows overriding it to 10 seconds by default,
+but it can also be set to a custom value knowing that it is expressed in seconds.</p>
 </div>
 <div class="sect2">
-<h3 id="_legacy_22"><a class="anchor" href="#_legacy_22"></a>Legacy</h3>
+<h3 id="_legacy_12"><a class="anchor" href="#_legacy_12"></a>Legacy</h3>
 <div class="paragraph">
 <p>The method <code>getShutdownTimeout()</code> can be overridden to return the expected shutdown timeout.</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="_annotation_22"><a class="anchor" href="#_annotation_22"></a>Annotation</h3>
+<h3 id="_annotation_12"><a class="anchor" href="#_annotation_12"></a>Annotation</h3>
 <div class="paragraph">
 <p>The attribute <code>shutdownTimeout</code> can be set to the expected shutdown timeout.</p>
 </div>
@@ -2591,18 +2791,22 @@ class SomeTest {
 <h2 id="_debug_mode"><a class="anchor" href="#_debug_mode"></a>Debug mode</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>For debugging purpose, it is possible to be called before and after invoking a processor allowing to log specific messages or add breakpoints in your favorite IDE.</p>
+<p>For debugging purpose,
+it is possible to be called before
+and after invoking a processor allowing you to log specific messages or add breakpoints in your favorite IDE.</p>
 </div>
 <div class="sect2">
-<h3 id="_legacy_23"><a class="anchor" href="#_legacy_23"></a>Legacy</h3>
+<h3 id="_legacy_13"><a class="anchor" href="#_legacy_13"></a>Legacy</h3>
 <div class="paragraph">
-<p>The method <code>isUseDebugger()</code> can be overridden to return <code>true</code> indicating that the feature is enabled. The methods <code>debugBefore</code> and <code>debugAfter</code> can then be overridden to execute some specific code for debugging purpose.</p>
+<p>The method <code>isUseDebugger()</code> can be overridden to return <code>true</code> indicating that the feature is enabled.
+The methods <code>debugBefore</code> and <code>debugAfter</code> can then be overridden to execute some specific code for debugging purpose.</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="_annotation_23"><a class="anchor" href="#_annotation_23"></a>Annotation</h3>
+<h3 id="_annotation_13"><a class="anchor" href="#_annotation_13"></a>Annotation</h3>
 <div class="paragraph">
-<p>The test class needs to implement the interface <code>org.apache.camel.test.main.junit5.DebuggerCallback</code> to enable the feature. The methods <code>debugBefore</code> and <code>debugAfter</code> can then be implemented to execute some specific code for debugging purpose.</p>
+<p>The test class needs to implement the interface <code>org.apache.camel.test.main.junit5.DebuggerCallback</code> to enable the feature.
+The methods <code>debugBefore</code> and <code>debugAfter</code> can then be implemented to execute some specific code for debugging purpose.</p>
 </div>
 </div>
 </div>
@@ -2611,25 +2815,38 @@ class SomeTest {
 <h2 id="_enable_jmx"><a class="anchor" href="#_enable_jmx"></a>Enable JMX</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>JMX is disabled by default when launching the tests, however if needed, it is still possible to enable it.</p>
+<p>JMX is disabled by default when launching the tests, however, if needed, it is still possible to enable it.</p>
 </div>
 <div class="sect2">
-<h3 id="_legacy_24"><a class="anchor" href="#_legacy_24"></a>Legacy</h3>
+<h3 id="_legacy_14"><a class="anchor" href="#_legacy_14"></a>Legacy</h3>
 <div class="paragraph">
 <p>The method <code>useJmx()</code> can be overridden to return <code>true</code>. It returns <code>false</code> by default.</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="_annotation_24"><a class="anchor" href="#_annotation_24"></a>Annotation</h3>
+<h3 id="_annotation_14"><a class="anchor" href="#_annotation_14"></a>Annotation</h3>
 <div class="paragraph">
 <p>The attribute <code>useJmx</code> can be set to <code>true</code>. It is set to <code>false</code> by default.</p>
 </div>
+</div>
+<div class="sect2">
+<h3 id="_examples_11"><a class="anchor" href="#_examples_11"></a>Examples</h3>
 <div class="paragraph">
 <p>In the next examples, JMX has been enabled for the test.</p>
 </div>
+<div id="_tabs_11" class="openblock tabs is-sync is-loading">
+<div class="content">
+<div class="ulist tablist">
+<ul>
+<li id="_tabs_11_legacy" class="tab">
+<p>Legacy</p>
+</li>
+<li id="_tabs_11_annotation" class="tab">
+<p>Annotation</p>
+</li>
+</ul>
 </div>
-<div class="sect2">
-<h3 id="_legacy_25"><a class="anchor" href="#_legacy_25"></a>Legacy</h3>
+<div id="_tabs_11_legacy--panel" class="tabpanel" aria-labelledby="_tabs_11_legacy">
 <div class="listingblock">
 <div class="content">
 <pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">class SomeTest extends CamelMainTestSupport {
@@ -2644,8 +2861,7 @@ class SomeTest {
 </div>
 </div>
 </div>
-<div class="sect2">
-<h3 id="_annotation_25"><a class="anchor" href="#_annotation_25"></a>Annotation</h3>
+<div id="_tabs_11_annotation--panel" class="tabpanel" aria-labelledby="_tabs_11_annotation">
 <div class="listingblock">
 <div class="content">
 <pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">@CamelMainTest(useJmx = true)
@@ -2658,14 +2874,23 @@ class SomeTest {
 </div>
 </div>
 </div>
+</div>
+</div>
+</div>
 <div class="sect1">
 <h2 id="_nested_tests"><a class="anchor" href="#_nested_tests"></a>Nested tests</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>The annotation based approach supports natively <a href="https://junit.org/junit5/docs/current/user-guide/#writing-tests-nested">Nested tests</a>. It is even possible to annotate <code>@Nested</code> test class with <code>@CamelMainTest</code> to change the configuration inherited from the outer class however please note that not all attributes can be set at nested test class level. Indeed, for the sake of simplicity, the attributes <code>dumpRouteCoverage</code> and <code>shutdownTimeout</code> can only be set at outer class level.</p>
+<p>The annotation-based approach supports natively <a href="https://junit.org/junit5/docs/current/user-guide/#writing-tests-nested">Nested tests</a>.
+It is even possible to annotate <code>@Nested</code> test class
+with <code>@CamelMainTest</code> to change the configuration inherited from the outer class.
+However, please note that not all attributes can be set at nested test class level.
+Indeed, for the sake of simplicity,
+the attributes <code>dumpRouteCoverage</code> and <code>shutdownTimeout</code> can only be set at outer class level.</p>
 </div>
 <div class="paragraph">
-<p>According to the total amount of values accepted by an attribute, if a <code>@Nested</code> test class set this attribute, the behavior can change:</p>
+<p>According to the total number of values accepted by an attribute,
+if a <code>@Nested</code> test class set this attribute, the behavior can change:</p>
 </div>
 <div class="ulist">
 <ul>
@@ -2678,7 +2903,8 @@ class SomeTest {
 </ul>
 </div>
 <div class="paragraph">
-<p>The only exception is the attribute <code>propertyPlaceholderLocations</code> that behaves like a mono-valued attribute because it is tightly coupled with <code>propertyPlaceholderFileName</code> so it must have the same behavior for the sake of consistency.</p>
+<p>The only exception is the attribute <code>propertyPlaceholderLocations</code> that behaves like a mono-valued attribute.
+Because it is tightly coupled with <code>propertyPlaceholderFileName</code>, so it must have the same behavior for the sake of consistency.</p>
 </div>
 <div class="paragraph">
 <p>To have a better understanding of the behavior for each type of attribute, please check the following examples:</p>
@@ -2686,7 +2912,9 @@ class SomeTest {
 <div class="sect2">
 <h3 id="_multivalued"><a class="anchor" href="#_multivalued"></a>Multivalued</h3>
 <div class="paragraph">
-<p>In the next example, the property <code>some-property</code> is set to <code>foo</code> for all the tests in <code>SomeTest</code> including the tests in <code>SomeNestedTest</code>. Additionally, the property <code>some-other-property</code> is set to <code>bar</code> but only for all the tests in <code>SomeNestedTest</code>.</p>
+<p>In the next example,
+the property <code>some-property</code> is set to <code>foo</code> for all the tests in <code>SomeTest</code> including the tests in <code>SomeNestedTest</code>.
+Additionally, the property <code>some-other-property</code> is set to <code>bar</code> but only for all the tests in <code>SomeNestedTest</code>.</p>
 </div>
 <div class="listingblock">
 <div class="content">
@@ -2708,7 +2936,10 @@ class SomeTest {
 <div class="sect2">
 <h3 id="_mono_valued"><a class="anchor" href="#_mono_valued"></a>Mono-valued</h3>
 <div class="paragraph">
-<p>In the next example, <code>SomeMainClass</code> is used as main class for all the tests directly inside <code>SomeTest</code> but also the tests in the <code>@Nested</code> test class <code>SomeOtherNestedTest</code> as it is not redefined. <code>SomeOtherMainClass</code> is used as main class for all the tests directly inside <code>SomeNestedTest</code> but also the tests in the <code>@Nested</code> test class <code>SomeDeeplyNestedTest</code> as it is not redefined.</p>
+<p>In the next example, <code>SomeMainClass</code> is used as the main class for all the tests directly inside <code>SomeTest</code>,
+but also the tests in the <code>@Nested</code> test class <code>SomeOtherNestedTest</code> as it is not redefined.
+<code>SomeOtherMainClass</code> is used as the main class for all the tests directly inside <code>SomeNestedTest</code>,
+but also the tests in the <code>@Nested</code> test class <code>SomeDeeplyNestedTest</code> as it is not redefined.</p>
 </div>
 <div class="listingblock">
 <div class="content">
@@ -2739,7 +2970,9 @@ class SomeTest {
 </div>
 </div>
 <div class="paragraph">
-<p>The annotations <code>@Configure</code> and <code>@ReplaceInRegistry</code> can also be used on methods or fields inside <code>@Nested</code> test classes knowing that the annotations of outer classes are processed before the annotations of inner classes.</p>
+<p>The annotations <code>@Configure</code> and <code>@ReplaceInRegistry</code> can also be used on methods or fields
+inside <code>@Nested</code> test classes knowing that the annotations of outer classes are processed
+before the annotations of inner classes.</p>
 </div>
 </div>
 </div>
@@ -2749,6 +2982,8 @@ class SomeTest {
 </main>
 </div>
 <footer class="footer">
+  <p>This page was built using the Antora default UI.</p>
+  <p>The source code for this UI is licensed under the terms of the MPL-2.0 license.</p>
 </footer>
 <script id="site-script" src="../../../_/js/site.js" data-ui-root-path="../../../_"></script>
 <script async src="../../../_/js/vendor/highlight.js"></script>

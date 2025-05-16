@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>MIME Multipart :: Red Hat Camel Reference</title>
+    <title>MIME Multipart :: Red Hat build of Apache Camel</title>
     <meta name="description" content="Marshal Camel messages with attachments into MIME-Multipart messages and back.">
     <meta name="generator" content="Antora 3.1.4">
     <link rel="stylesheet" href="../../../_/css/site.css">
@@ -12,7 +12,7 @@
 <header class="header">
   <nav class="navbar">
     <div class="navbar-brand">
-      <a class="navbar-item" href="../../manual/index.html">Red Hat build of Apache Camel manual</a>
+      <a class="navbar-item" href="/">Red Hat build of Apache Camel</a>
       <button class="navbar-burger" data-target="topbar-nav">
         <span></span>
         <span></span>
@@ -22,11 +22,12 @@
   </nav>
 </header>
 <div class="body">
-<div class="nav-container" data-component="components" data-version="next">
+<div class="nav-container" data-component="components" data-version="4.4.x">
   <aside class="nav">
     <div class="panels">
 <div class="nav-panel-menu is-active" data-panel="menu">
   <nav class="nav-menu">
+    <button class="nav-menu-toggle" aria-label="Toggle expand/collapse all" style="display: none"></button>
     <h3 class="title"><a href="../index.html">Camel Components</a></h3>
 <ul class="nav-list">
   <li class="nav-item" data-depth="0">
@@ -1819,22 +1820,40 @@
 <div class="nav-panel-explore" data-panel="explore">
   <div class="context">
     <span class="title">Camel Components</span>
-    <span class="version">Next (Pre-release)</span>
+    <span class="version">4.4.x</span>
   </div>
   <ul class="components">
     <li class="component is-current">
-      <a class="title" href="../index.html">Camel Components</a>
+      <div class="title"><a href="../../4.10.x/index.html">Camel Components</a></div>
       <ul class="versions">
-        <li class="version is-current is-latest">
-          <a href="../index.html">Next (Pre-release)</a>
+        <li class="version is-latest">
+          <a href="../../4.10.x/index.html">4.10.x (LTS)</a>
+        </li>
+        <li class="version">
+          <a href="../../4.8.x/index.html">4.8.x</a>
+        </li>
+        <li class="version is-current">
+          <a href="../index.html">4.4.x</a>
+        </li>
+        <li class="version">
+          <a href="../../4.0.x/index.html">4.0.x</a>
         </li>
       </ul>
     </li>
     <li class="component">
-      <a class="title" href="../../../manual/index.html">User manual</a>
+      <div class="title"><a href="../../../manual/4.10.x/index.html">User manual</a></div>
       <ul class="versions">
         <li class="version is-latest">
-          <a href="../../../manual/index.html">default</a>
+          <a href="../../../manual/4.10.x/index.html">4.10.x</a>
+        </li>
+        <li class="version">
+          <a href="../../../manual/4.8.x/index.html">4.8.x</a>
+        </li>
+        <li class="version">
+          <a href="../../../manual/4.4.x/index.html">4.4.x</a>
+        </li>
+        <li class="version">
+          <a href="../../../manual/4.0.x/index.html">4.0.x</a>
         </li>
       </ul>
     </li>
@@ -1846,7 +1865,7 @@
 <main class="article">
 <div class="toolbar" role="navigation">
 <button class="nav-toggle"></button>
-  <a href="../../../manual/index.html" class="home-link"></a>
+  <a href="../../../manual/4.10.x/index.html" class="home-link"></a>
 <nav class="breadcrumbs" aria-label="breadcrumbs">
   <ul>
     <li><a href="../index.html">Camel Components</a></li>
@@ -1854,6 +1873,16 @@
     <li><a href="mimeMultipart-dataformat.html">MIME Multipart</a></li>
   </ul>
 </nav>
+<div class="page-versions">
+  <button class="version-menu-toggle" title="Show other versions of page">4.4.x</button>
+  <div class="version-menu">
+    <a class="version" href="../../4.10.x/dataformats/mimeMultipart-dataformat.html">4.10.x (LTS)</a>
+    <a class="version" href="../../4.8.x/dataformats/mimeMultipart-dataformat.html">4.8.x</a>
+    <a class="version is-current" href="mimeMultipart-dataformat.html">4.4.x</a>
+    <a class="version is-missing" href="../../4.0.x/index.html">4.0.x</a>
+  </div>
+</div>
+<div class="edit-this-page"><a href="https://github.com/rhaetor/rh-camel-jboss/edit/camel-4.4.0-branch/docs/components/modules/dataformats/pages/mimeMultipart-dataformat.adoc">Edit this Page</a></div>
 </div>
   <div class="content">
 <aside class="toc sidebar" data-title="Contents" data-levels="2">
@@ -1868,46 +1897,44 @@
 </div>
 <div class="paragraph">
 <p>This data format that can convert a Camel message with attachments into
-a Camel message having a MIME-Multipart message as message body (and no
+a Camel message that has a MIME-Multipart message as message body (and no
 attachments).</p>
 </div>
 <div class="paragraph">
 <p>The use case for this is to enable the user to send attachments over
 endpoints that do not directly support attachments, either as special
-protocol implementation (e.g. send a MIME-multipart over an HTTP
-endpoint) or as a kind of tunneling solution (e.g. because camel-jms
-does not support attachments but by marshalling the message with
+protocol implementation (for example, send a MIME-multipart over an HTTP
+endpoint) or as a kind of tunneling solution (for example, because camel-jms
+does not support attachments but by marshaling the message with
 attachments into a MIME-Multipart, sending that to a JMS queue,
-receiving the message from the JMS queue and unmarshalling it again
+receiving the message from the JMS queue and unmarshaling it again
 (into a message body with attachments).</p>
 </div>
 <div class="paragraph">
-<p>The marshal option of the mimeMultipart data format will convert a
+<p>The marshaloption of the mimeMultipart data format will convert a
 message with attachments into a MIME-Multipart message. If the parameter
-"multipartWithoutAttachment" is set to true it will also marshal
+<code>multipartWithoutAttachment</code> is set to true, it will also marshal
 messages without attachments into a multipart message with a single
 part, if the parameter is set to false it will leave the message alone.</p>
 </div>
 <div class="paragraph">
-<p>MIME headers of the mulitpart as "MIME-Version" and "Content-Type" are
+<p>MIME headers of the multipart as "MIME-Version" and "Content-Type" are
 set as camel headers to the message. If the parameter "headersInline" is
-set to true it will also create a MIME multipart message in any case. <br>
-Furthermore the MIME headers of the multipart are written as part of the
+set to true, it will also create a MIME multipart message in any case. <br>
+Furthermore, the MIME headers of the multipart are written as part of the
 message body, not as camel headers.</p>
 </div>
 <div class="paragraph">
-<p>The unmarshal option of the mimeMultipart data format will convert a
-MIME-Multipart message into a camel message with attachments and leaves
+<p>The unmarshaloption of the mimeMultipart data format will convert a
+MIME-Multipart message into a camel message with attachments and leave
 other messages alone. MIME-Headers of the MIME-Multipart message have to
-be set as Camel headers. The unmarshalling will only take place if the
+be set as Camel headers. The unmarshaling will only take place if the
 "Content-Type" header is set to a "multipart" type. If the option
 "headersInline" is set to true, the body is always parsed as a MIME
-message.As a consequence if the message body is a stream and stream
+message. As a consequence, if the message body is a stream and stream
 caching is not enabled, a message body that is actually not a MIME
 message with MIME headers in the message body will be replaced by an
-empty message. Up to Camel version 2.17.1 this will happen all message
-bodies that do not contain a MIME multipart message regardless of body
-type and stream cache setting.</p>
+empty message.</p>
 </div>
 </div>
 </div>
@@ -2021,7 +2048,7 @@ version (1.0) if the "headersInline" parameter is set to false.</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">String</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">The content of this header will be used as a content type for the
 message body part. If no content type is set, "application/octet-stream"
-is assumed. After the marshal operation the content type is set to
+is assumed. After the marshal operation, the content type is set to
 "multipart/related" or empty if the "headersInline" parameter is set to
 true.</p></td>
 </tr>
@@ -2030,7 +2057,7 @@ true.</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">String</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">If the incoming content type is "text/*" the content encoding will be
 set to the encoding parameter of the Content-Type MIME header of the
-body part. Furthermore the given charset is applied for text to binary
+body part. Furthermore, the given charset is applied for text to binary
 conversions.</p></td>
 </tr>
 </tbody>
@@ -2057,24 +2084,24 @@ conversions.</p></td>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Content-Type</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">String</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">If this header is not set to "multipart/*" the unmarshal operation will
-not do anything. In other cases the multipart will be parsed into a
+<td class="tableblock halign-left valign-top"><p class="tableblock">If this header is not set to <code>multipart/*</code> the unmarshal operation will
+not do anything. In other cases, the multipart will be parsed into a
 camel message with attachments and the header is set to the Content-Type
 header of the body part, except if this is application/octet-stream. In
-the latter case the header is removed.</p></td>
+the latter case, the header is removed.</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Content-Encoding</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">String</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">If the content-type of the body part contains an encoding parameter this
+<td class="tableblock halign-left valign-top"><p class="tableblock">If the content-type of the body part contains an encoding parameter, this
 header will be set to the value of this encoding parameter (converted
-from MIME endoding descriptor to Java encoding descriptor)</p></td>
+from MIME encoding descriptor to Java encoding descriptor)</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">MIME-Version</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">String</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">The unmarshal operation will read this header and use it for parsing the
-MIME multipart. The header is removed afterwards</p></td>
+MIME multipart. The header is removed afterward</p></td>
 </tr>
 </tbody>
 </table>
@@ -2172,11 +2199,11 @@ Content-Disposition: attachment; filename="Attachment File Name"
 <h2 id="_dependencies"><a class="anchor" href="#_dependencies"></a>Dependencies</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>To use MIME-Multipart in your Camel routes you need to add a dependency
-on <strong>camel-mail</strong> which implements this data format.</p>
+<p>To use MIME-Multipart in your Camel routes, you need to add a dependency
+on <strong>camel-mail</strong>, which implements this data format.</p>
 </div>
 <div class="paragraph">
-<p>If you use Maven you can just add the following to your pom.xml:</p>
+<p>If you use Maven, you can add the following to your pom.xml:</p>
 </div>
 <div class="listingblock">
 <div class="content">
@@ -2187,6 +2214,9 @@ on <strong>camel-mail</strong> which implements this data format.</p>
 &lt;/dependency&gt;</code></pre>
 </div>
 </div>
+<div class="paragraph">
+<p>Unresolved include directive in modules/dataformats/pages/mimeMultipart-dataformat.adoc - include::spring-boot:partial$starter.adoc[]</p>
+</div>
 </div>
 </div>
 </article>
@@ -2194,6 +2224,8 @@ on <strong>camel-mail</strong> which implements this data format.</p>
 </main>
 </div>
 <footer class="footer">
+  <p>This page was built using the Antora default UI.</p>
+  <p>The source code for this UI is licensed under the terms of the MPL-2.0 license.</p>
 </footer>
 <script id="site-script" src="../../../_/js/site.js" data-ui-root-path="../../../_"></script>
 <script async src="../../../_/js/vendor/highlight.js"></script>

@@ -3,8 +3,8 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>Jackson XML :: Red Hat Camel Reference</title>
-    <meta name="description" content="Unmarshal an XML payloads to POJOs and back using XMLMapper extension of Jackson.">
+    <title>Jackson XML :: Red Hat build of Apache Camel</title>
+    <meta name="description" content="Unmarshal XML payload to POJOs and back using XMLMapper extension of Jackson.">
     <meta name="generator" content="Antora 3.1.4">
     <link rel="stylesheet" href="../../../_/css/site.css">
   </head>
@@ -12,7 +12,7 @@
 <header class="header">
   <nav class="navbar">
     <div class="navbar-brand">
-      <a class="navbar-item" href="../../manual/index.html">Red Hat build of Apache Camel manual</a>
+      <a class="navbar-item" href="/">Red Hat build of Apache Camel</a>
       <button class="navbar-burger" data-target="topbar-nav">
         <span></span>
         <span></span>
@@ -22,11 +22,12 @@
   </nav>
 </header>
 <div class="body">
-<div class="nav-container" data-component="components" data-version="next">
+<div class="nav-container" data-component="components" data-version="4.4.x">
   <aside class="nav">
     <div class="panels">
 <div class="nav-panel-menu is-active" data-panel="menu">
   <nav class="nav-menu">
+    <button class="nav-menu-toggle" aria-label="Toggle expand/collapse all" style="display: none"></button>
     <h3 class="title"><a href="../index.html">Camel Components</a></h3>
 <ul class="nav-list">
   <li class="nav-item" data-depth="0">
@@ -1819,22 +1820,40 @@
 <div class="nav-panel-explore" data-panel="explore">
   <div class="context">
     <span class="title">Camel Components</span>
-    <span class="version">Next (Pre-release)</span>
+    <span class="version">4.4.x</span>
   </div>
   <ul class="components">
     <li class="component is-current">
-      <a class="title" href="../index.html">Camel Components</a>
+      <div class="title"><a href="../../4.10.x/index.html">Camel Components</a></div>
       <ul class="versions">
-        <li class="version is-current is-latest">
-          <a href="../index.html">Next (Pre-release)</a>
+        <li class="version is-latest">
+          <a href="../../4.10.x/index.html">4.10.x (LTS)</a>
+        </li>
+        <li class="version">
+          <a href="../../4.8.x/index.html">4.8.x</a>
+        </li>
+        <li class="version is-current">
+          <a href="../index.html">4.4.x</a>
+        </li>
+        <li class="version">
+          <a href="../../4.0.x/index.html">4.0.x</a>
         </li>
       </ul>
     </li>
     <li class="component">
-      <a class="title" href="../../../manual/index.html">User manual</a>
+      <div class="title"><a href="../../../manual/4.10.x/index.html">User manual</a></div>
       <ul class="versions">
         <li class="version is-latest">
-          <a href="../../../manual/index.html">default</a>
+          <a href="../../../manual/4.10.x/index.html">4.10.x</a>
+        </li>
+        <li class="version">
+          <a href="../../../manual/4.8.x/index.html">4.8.x</a>
+        </li>
+        <li class="version">
+          <a href="../../../manual/4.4.x/index.html">4.4.x</a>
+        </li>
+        <li class="version">
+          <a href="../../../manual/4.0.x/index.html">4.0.x</a>
         </li>
       </ul>
     </li>
@@ -1846,7 +1865,7 @@
 <main class="article">
 <div class="toolbar" role="navigation">
 <button class="nav-toggle"></button>
-  <a href="../../../manual/index.html" class="home-link"></a>
+  <a href="../../../manual/4.10.x/index.html" class="home-link"></a>
 <nav class="breadcrumbs" aria-label="breadcrumbs">
   <ul>
     <li><a href="../index.html">Camel Components</a></li>
@@ -1854,6 +1873,16 @@
     <li><a href="jacksonXml-dataformat.html">Jackson XML</a></li>
   </ul>
 </nav>
+<div class="page-versions">
+  <button class="version-menu-toggle" title="Show other versions of page">4.4.x</button>
+  <div class="version-menu">
+    <a class="version" href="../../4.10.x/dataformats/jacksonXml-dataformat.html">4.10.x (LTS)</a>
+    <a class="version" href="../../4.8.x/dataformats/jacksonXml-dataformat.html">4.8.x</a>
+    <a class="version is-current" href="jacksonXml-dataformat.html">4.4.x</a>
+    <a class="version is-missing" href="../../4.0.x/index.html">4.0.x</a>
+  </div>
+</div>
+<div class="edit-this-page"><a href="https://github.com/rhaetor/rh-camel-jboss/edit/camel-4.4.0-branch/docs/components/modules/dataformats/pages/jacksonXml-dataformat.adoc">Edit this Page</a></div>
 </div>
   <div class="content">
 <aside class="toc sidebar" data-title="Contents" data-levels="2">
@@ -1867,7 +1896,7 @@
 <p><strong>Since Camel 2.16</strong></p>
 </div>
 <div class="paragraph">
-<p>Jackson XML is a Data Format which uses the
+<p>Jackson XML is a data format that uses the
 <a href="https://github.com/FasterXML/jackson/">Jackson library</a> with the
 <a href="https://github.com/FasterXML/jackson-dataformat-xml">XMLMapper extension</a>
 to unmarshal an XML payload into Java objects or to marshal Java objects
@@ -1957,17 +1986,17 @@ features like pretty printing), a fast and efficient XML processor.</p>
 <td class="tableblock halign-left valign-top"></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>String</code></p></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>Class name of the java type to use when unmarshalling.</p>
+<p>Class name of the java type to use when unmarshaling.</p>
 </div></div></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><div class="content"><div id="_dataformat_option_allowUnmarshallType" class="paragraph">
-<p><a href="#_dataformat_option_allowUnmarshallType" class="anchor"></a><strong>allowUnmarshallType</strong></p>
+<td class="tableblock halign-left valign-top"><div class="content"><div id="_dataformat_option_allowUnmarshalType" class="paragraph">
+<p><a href="#_dataformat_option_allowUnmarshalType" class="anchor"></a><strong>allowUnmarshalType</strong></p>
 </div></div></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>false</code></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>Boolean</code></p></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>If enabled then Jackson is allowed to attempt to use the CamelJacksonUnmarshalType header during the unmarshalling. This should only be enabled when desired to be used.</p>
+<p>If enabled then Jackson is allowed to attempt to use the CamelJacksonUnmarshalType header during the unmarshaling. This should only be enabled when desired to be used.</p>
 </div></div></td>
 </tr>
 <tr>
@@ -1977,7 +2006,7 @@ features like pretty printing), a fast and efficient XML processor.</p>
 <td class="tableblock halign-left valign-top"></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>String</code></p></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>When marshalling a POJO to JSON you might want to exclude certain fields from the JSON output. With Jackson you can use JSON views to accomplish this. This option is to refer to the class which has JsonView annotations.</p>
+<p>When marshaling a POJO to JSON you might want to exclude certain fields from the JSON output. With Jackson you can use JSON views to accomplish this. This option is to refer to the class which has JsonView annotations.</p>
 </div></div></td>
 </tr>
 <tr>
@@ -2027,7 +2056,7 @@ features like pretty printing), a fast and efficient XML processor.</p>
 <td class="tableblock halign-left valign-top"></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>String</code></p></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>If set then Jackson will use the Timezone when marshalling/unmarshalling.</p>
+<p>If set then Jackson will use the Timezone when marshaling/unmarshaling.</p>
 </div></div></td>
 </tr>
 <tr>
@@ -2087,7 +2116,7 @@ features like pretty printing), a fast and efficient XML processor.</p>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>true</code></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>Boolean</code></p></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>Whether the data format should set the Content-Type header with the type from the data format. For example application/xml for data formats marshalling to XML, or application/json for data formats marshalling to JSON.</p>
+<p>Whether the data format should set the Content-Type header with the type from the data format. For example, application/xml for data formats marshaling to XML, or application/json for data formats marshaling to JSON.</p>
 </div></div></td>
 </tr>
 </tbody>
@@ -2095,14 +2124,13 @@ features like pretty printing), a fast and efficient XML processor.</p>
 <div class="sect2">
 <h3 id="_using_jackson_xml_in_spring_dsl"><a class="anchor" href="#_using_jackson_xml_in_spring_dsl"></a>Using Jackson XML in Spring DSL</h3>
 <div class="paragraph">
-<p>When using Data Format in Spring DSL you need to
-declare the data formats first. This is done in the <strong>DataFormats</strong> XML
-tag.</p>
+<p>When using Data Format in Spring DSL, you need to
+declare the data formats first. This is done in the <code>dataFormats</code> XML tag:</p>
 </div>
 <div class="listingblock">
 <div class="content">
 <pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">        &lt;dataFormats&gt;
-            &lt;!-- here we define a Xml data format with the id jack and that it should use the TestPojo as the class type when
+            &lt;!-- here we define an XML data format with the id jack and that it should use the TestPojo as the class type when
                  doing unmarshal. The unmarshalType is optional, if not provided Camel will use a Map as the type --&gt;
             &lt;jacksonXml id="jack" unmarshalType="org.apache.camel.component.jacksonxml.TestPojo"/&gt;
         &lt;/dataFormats&gt;</code></pre>
@@ -2124,20 +2152,20 @@ tag.</p>
 </div>
 </div>
 <div class="sect1">
-<h2 id="_excluding_pojo_fields_from_marshalling"><a class="anchor" href="#_excluding_pojo_fields_from_marshalling"></a>Excluding POJO fields from marshalling</h2>
+<h2 id="_excluding_pojo_fields_from_marshaling"><a class="anchor" href="#_excluding_pojo_fields_from_marshaling"></a>Excluding POJO fields from marshaling</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>When marshalling a POJO to XML you might want to exclude certain fields
-from the XML output. With Jackson you can
+<p>When marshaling a POJO to XML, you might want to exclude certain fields
+from the XML output. With Jackson, you can
 use <a href="https://github.com/FasterXML/jackson-annotations/blob/master/src/main/java/com/fasterxml/jackson/annotation/JsonView.java">JSON views</a> to accomplish
-this. First create one or more marker classes.</p>
+this. First, create one or more marker classes.</p>
 </div>
 <div class="paragraph">
 <p>Use the marker classes with the <code>@JsonView</code> annotation to
 include/exclude certain fields. The annotation also works on getters.</p>
 </div>
 <div class="paragraph">
-<p>Finally use the Camel <code>JacksonXMLDataFormat</code> to marshall the above POJO
+<p>Finally, use the Camel <code>JacksonXMLDataFormat</code> to marshal the above POJO
 to XML.</p>
 </div>
 <div class="paragraph">
@@ -2154,7 +2182,7 @@ to XML.</p>
 <h2 id="_includeexclude_fields_using_the_jsonview_attribute_with_jacksonxmldataformat"><a class="anchor" href="#_includeexclude_fields_using_the_jsonview_attribute_with_jacksonxmldataformat"></a>Include/Exclude fields using the <code>jsonView</code> attribute with <code>JacksonXML</code>DataFormat</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>As an example of using this attribute you can instead of:</p>
+<p>As an example of using this attribute, you can instead of:</p>
 </div>
 <div class="listingblock">
 <div class="content">
@@ -2195,7 +2223,7 @@ view</a> inside the Java DSL as:</p>
 <div class="paragraph">
 <p>If you want to marshal a POJO to XML, and the POJO has some fields with
 null values. And you want to skip these null values, then you need to
-set either an annotation on the POJO,</p>
+set either an annotation on the POJO:</p>
 </div>
 <div class="listingblock">
 <div class="content">
@@ -2208,7 +2236,7 @@ public class MyPojo {
 <div class="paragraph">
 <p>But this requires you to include that annotation in your POJO source
 code. You can also configure the Camel JacksonXMLDataFormat to set the
-include option, as shown below:</p>
+<code>include</code> option, as shown below:</p>
 </div>
 <div class="listingblock">
 <div class="content">
@@ -2229,21 +2257,19 @@ format.setInclude("NON_NULL");</code></pre>
 </div>
 </div>
 <div class="sect1">
-<h2 id="_unmarshalling_from_xml_to_pojo_with_dynamic_class_name"><a class="anchor" href="#_unmarshalling_from_xml_to_pojo_with_dynamic_class_name"></a>Unmarshalling from XML to POJO with dynamic class name</h2>
+<h2 id="_unmarshaling_from_xml_to_pojo_with_dynamic_class_name"><a class="anchor" href="#_unmarshaling_from_xml_to_pojo_with_dynamic_class_name"></a>Unmarshaling from XML to POJO with dynamic class name</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>If you use jackson to unmarshal XML to POJO, then you can now specify a
-header in the message that indicate which class name to unmarshal to.<br>
+<p>If you use Jackson to unmarshal XML to POJO, then you can now specify a
+header in the message that indicates which class name to unmarshalto.
 The header has key <code>CamelJacksonUnmarshalType</code> if that header is present
 in the message, then Jackson will use that as FQN for the POJO class to
 unmarshal the XML payload as.</p>
 </div>
-<div class="literalblock">
-<div class="content">
-<pre> For JMS end users there is the JMSType header from the JMS spec that
-indicates that also. To enable support for JMSType you would need to
-turn that on, on the jackson data format as shown:</pre>
-</div>
+<div class="paragraph">
+<p>For JMS end users, there is the <code>JMSType</code> header from the JMS spec that
+indicates that also. To enable support for <code>JMSType</code> you would need to
+turn that on, on the Jackson data format as shown:</p>
 </div>
 <div class="listingblock">
 <div class="content">
@@ -2252,7 +2278,7 @@ format.setAllowJmsType(true);</code></pre>
 </div>
 </div>
 <div class="paragraph">
-<p>Or from XML DSL you configure this as</p>
+<p>Or from XML DSL you configure this as:</p>
 </div>
 <div class="listingblock">
 <div class="content">
@@ -2264,13 +2290,13 @@ format.setAllowJmsType(true);</code></pre>
 </div>
 </div>
 <div class="sect1">
-<h2 id="_unmarshalling_from_xml_to_listmap_or_listpojo"><a class="anchor" href="#_unmarshalling_from_xml_to_listmap_or_listpojo"></a>Unmarshalling from XML to List&lt;Map&gt; or List&lt;POJO&gt;</h2>
+<h2 id="_unmarshaling_from_xml_to_listmap_or_listpojo"><a class="anchor" href="#_unmarshaling_from_xml_to_listmap_or_listpojo"></a>Unmarshaling from XML to <code>List&lt;Map&gt;</code> or <code>List&lt;POJO&gt;</code></h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>If you are using Jackson to unmarshal XML to a list of map/POJO, you can
+<p>If you are using Jackson to Unmarshal XML to a list of map/POJO, you can
 now specify this by setting <code>useList="true"</code> or use
 the <code>org.apache.camel.component.jacksonxml.ListJacksonXMLDataFormat</code>.
-For example with Java you can do as shown below:</p>
+For example, with Java, you can do as shown below:</p>
 </div>
 <div class="listingblock">
 <div class="content">
@@ -2283,7 +2309,7 @@ format.setUnmarshalType(MyPojo.class);</code></pre>
 </div>
 </div>
 <div class="paragraph">
-<p>And if you use XML DSL then you configure to use list
+<p>And if you use XML DSL then you configure to use a list
 using <code>useList</code> attribute as shown below:</p>
 </div>
 <div class="listingblock">
@@ -2320,7 +2346,7 @@ those using the moduleClassNames option as shown below.</p>
 </div>
 </div>
 <div class="paragraph">
-<p>When using moduleClassNames then the custom jackson modules are not
+<p>When using <code>moduleClassNames</code> then the custom Jackson modules are not
 configured, by created using default constructor and used as-is. If a
 custom module needs any custom configuration, then an instance of the
 module can be created and configured, and then use modulesRefs to refer
@@ -2347,8 +2373,9 @@ to the module as shown below:</p>
 <div class="sectionbody">
 <div class="paragraph">
 <p>Jackson XML has a number of features you can enable or disable, which its
-XmlMapper uses. For example to disable failing on unknown properties
-when marshalling, you can configure this using the disableFeatures:</p>
+XmlMapper uses.
+For example, to disable failing on unknown properties
+when marshaling, you can configure this using the disableFeatures:</p>
 </div>
 <div class="listingblock">
 <div class="content">
@@ -2379,11 +2406,10 @@ from the following enum classes:</p>
 </ul>
 </div>
 <div class="paragraph">
-<p>To enable a feature use the enableFeatures options instead.</p>
+<p>To enable a feature, use the enableFeatures options instead.</p>
 </div>
 <div class="paragraph">
-<p>From Java code you can use the type safe methods from camel-jackson
-module:</p>
+<p>From Java code, you can use the type safe methods from camel-jackson module:</p>
 </div>
 <div class="listingblock">
 <div class="content">
@@ -2415,17 +2441,16 @@ Invoice invoice = exchange.getIn().getBody(Invoice.class);</code></pre>
 </div>
 <div class="paragraph">
 <p>If there is a single <code>XmlMapper</code> instance available in the Camel
-registry, it will used by the converter to perform the conversion.
-Otherwise the default mapper will be used.</p>
+registry, it will be used by the converter to perform the conversion.
+Otherwise, the default mapper will be used.</p>
 </div>
 </div>
 </div>
 <div class="sect1">
-<h2 id="_formatted_xml_marshalling_pretty_printing"><a class="anchor" href="#_formatted_xml_marshalling_pretty_printing"></a>Formatted XML marshalling (pretty-printing)</h2>
+<h2 id="_formatted_xml_marshaling_pretty_printing"><a class="anchor" href="#_formatted_xml_marshaling_pretty_printing"></a>Formatted XML marshaling (pretty-printing)</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>Using the <code>prettyPrint</code> option one can output a well formatted XML while
-marshalling:</p>
+<p>Using the <code>prettyPrint</code> option one can output a well-formatted XML while marshaling:</p>
 </div>
 <div class="listingblock">
 <div class="content">
@@ -2453,13 +2478,12 @@ settings for <code>unmarshalType</code>, <code>jsonView</code> etc.</p>
 <h2 id="_dependencies"><a class="anchor" href="#_dependencies"></a>Dependencies</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>To use Jackson XML in your camel routes you need to add the dependency
+<p>To use Jackson XML in your Camel routes, you need to add the dependency
 on <strong>camel-jacksonxml</strong> which implements this data format.</p>
 </div>
 <div class="paragraph">
-<p>If you use maven you could just add the following to your pom.xml,
-substituting the version number for the latest &amp; greatest release (see
-the download page for the latest versions).</p>
+<p>If you use Maven, you could add the following to your <code>pom.xml</code>,
+substituting the version number for the latest &amp; greatest release.</p>
 </div>
 <div class="listingblock">
 <div class="content">
@@ -2471,6 +2495,9 @@ the download page for the latest versions).</p>
 &lt;/dependency&gt;</code></pre>
 </div>
 </div>
+<div class="paragraph">
+<p>Unresolved include directive in modules/dataformats/pages/jacksonXml-dataformat.adoc - include::spring-boot:partial$starter.adoc[]</p>
+</div>
 </div>
 </div>
 </article>
@@ -2478,6 +2505,8 @@ the download page for the latest versions).</p>
 </main>
 </div>
 <footer class="footer">
+  <p>This page was built using the Antora default UI.</p>
+  <p>The source code for this UI is licensed under the terms of the MPL-2.0 license.</p>
 </footer>
 <script id="site-script" src="../../../_/js/site.js" data-ui-root-path="../../../_"></script>
 <script async src="../../../_/js/vendor/highlight.js"></script>

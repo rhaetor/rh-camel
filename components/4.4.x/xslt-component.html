@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>XSLT :: Red Hat Camel Reference</title>
+    <title>XSLT :: Red Hat build of Apache Camel</title>
     <meta name="description" content="Transforms XML payload using an XSLT template.">
     <meta name="generator" content="Antora 3.1.4">
     <link rel="stylesheet" href="../../_/css/site.css">
@@ -12,7 +12,7 @@
 <header class="header">
   <nav class="navbar">
     <div class="navbar-brand">
-      <a class="navbar-item" href="../../manual/index.html">Red Hat build of Apache Camel manual</a>
+      <a class="navbar-item" href="/">Red Hat build of Apache Camel</a>
       <button class="navbar-burger" data-target="topbar-nav">
         <span></span>
         <span></span>
@@ -22,11 +22,12 @@
   </nav>
 </header>
 <div class="body">
-<div class="nav-container" data-component="components" data-version="next">
+<div class="nav-container" data-component="components" data-version="4.4.x">
   <aside class="nav">
     <div class="panels">
 <div class="nav-panel-menu is-active" data-panel="menu">
   <nav class="nav-menu">
+    <button class="nav-menu-toggle" aria-label="Toggle expand/collapse all" style="display: none"></button>
     <h3 class="title"><a href="index.html">Camel Components</a></h3>
 <ul class="nav-list">
   <li class="nav-item" data-depth="0">
@@ -912,6 +913,33 @@
     <a class="nav-link" href="splunk-hec-component.html">Splunk HEC</a>
   </li>
   <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="spring-summary.html">Spring</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="spring-batch-component.html">Spring Batch</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="spring-event-component.html">Spring Event</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="spring-jdbc-component.html">Spring JDBC</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="spring-ldap-component.html">Spring LDAP</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="spring-rabbitmq-component.html">Spring RabbitMQ</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="spring-redis-component.html">Spring Redis</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="spring-ws-component.html">Spring WebService</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
     <a class="nav-link" href="sql-component.html">SQL</a>
   </li>
   <li class="nav-item" data-depth="2">
@@ -1792,22 +1820,40 @@
 <div class="nav-panel-explore" data-panel="explore">
   <div class="context">
     <span class="title">Camel Components</span>
-    <span class="version">Next (Pre-release)</span>
+    <span class="version">4.4.x</span>
   </div>
   <ul class="components">
     <li class="component is-current">
-      <a class="title" href="index.html">Camel Components</a>
+      <div class="title"><a href="../4.10.x/index.html">Camel Components</a></div>
       <ul class="versions">
-        <li class="version is-current is-latest">
-          <a href="index.html">Next (Pre-release)</a>
+        <li class="version is-latest">
+          <a href="../4.10.x/index.html">4.10.x (LTS)</a>
+        </li>
+        <li class="version">
+          <a href="../4.8.x/index.html">4.8.x</a>
+        </li>
+        <li class="version is-current">
+          <a href="index.html">4.4.x</a>
+        </li>
+        <li class="version">
+          <a href="../4.0.x/index.html">4.0.x</a>
         </li>
       </ul>
     </li>
     <li class="component">
-      <a class="title" href="../../manual/index.html">User manual</a>
+      <div class="title"><a href="../../manual/4.10.x/index.html">User manual</a></div>
       <ul class="versions">
         <li class="version is-latest">
-          <a href="../../manual/index.html">default</a>
+          <a href="../../manual/4.10.x/index.html">4.10.x</a>
+        </li>
+        <li class="version">
+          <a href="../../manual/4.8.x/index.html">4.8.x</a>
+        </li>
+        <li class="version">
+          <a href="../../manual/4.4.x/index.html">4.4.x</a>
+        </li>
+        <li class="version">
+          <a href="../../manual/4.0.x/index.html">4.0.x</a>
         </li>
       </ul>
     </li>
@@ -1819,7 +1865,7 @@
 <main class="article">
 <div class="toolbar" role="navigation">
 <button class="nav-toggle"></button>
-  <a href="../../manual/index.html" class="home-link"></a>
+  <a href="../../manual/4.10.x/index.html" class="home-link"></a>
 <nav class="breadcrumbs" aria-label="breadcrumbs">
   <ul>
     <li><a href="index.html">Camel Components</a></li>
@@ -1827,6 +1873,16 @@
     <li><a href="xslt-component.html">XSLT</a></li>
   </ul>
 </nav>
+<div class="page-versions">
+  <button class="version-menu-toggle" title="Show other versions of page">4.4.x</button>
+  <div class="version-menu">
+    <a class="version" href="../4.10.x/xslt-component.html">4.10.x (LTS)</a>
+    <a class="version" href="../4.8.x/xslt-component.html">4.8.x</a>
+    <a class="version is-current" href="xslt-component.html">4.4.x</a>
+    <a class="version is-missing" href="../4.0.x/index.html">4.0.x</a>
+  </div>
+</div>
+<div class="edit-this-page"><a href="https://github.com/rhaetor/rh-camel-jboss/edit/camel-4.4.0-branch/docs/components/modules/ROOT/pages/xslt-component.adoc">Edit this Page</a></div>
 </div>
   <div class="content">
 <aside class="toc sidebar" data-title="Contents" data-levels="2">
@@ -1925,14 +1981,14 @@ Templating to generate response for requests.</p>
 <h3 id="_configuring_component_options"><a class="anchor" href="#_configuring_component_options"></a>Configuring Component Options</h3>
 <div class="paragraph">
 <p>The component level is the highest level which holds general and common configurations that are inherited by the endpoints.
-For example a component may have security settings, credentials for authentication, urls for network connection and so forth.</p>
+For example, a component may have security settings, credentials for authentication, urls for network connection and so forth.</p>
 </div>
 <div class="paragraph">
 <p>Some components only have a few options, and others may have many. Because components typically have pre configured defaults
 that are commonly used, then you may often only need to configure a few options on a component; or none at all.</p>
 </div>
 <div class="paragraph">
-<p>Configuring components can be done with the <a href="../../manual/component-dsl.html" class="xref page">Component DSL</a>,
+<p>Configuring components can be done with the <a href="../../manual/4.10.x/component-dsl.html" class="xref page">Component DSL</a>,
 in a configuration file (application.properties|yaml), or directly with Java code.</p>
 </div>
 </div>
@@ -1945,11 +2001,11 @@ or as a producer (to), or used for both.</p>
 </div>
 <div class="paragraph">
 <p>Configuring endpoints is most often done directly in the endpoint URI as path and query parameters. You can also use
-the <a href="../../manual/Endpoint-dsl.html" class="xref page">Endpoint DSL</a> and <a href="../../manual/dataformat-dsl.html" class="xref page">DataFormat DSL</a>
+the <a href="../../manual/4.10.x/Endpoint-dsl.html" class="xref page">Endpoint DSL</a> and <a href="../../manual/4.10.x/dataformat-dsl.html" class="xref page">DataFormat DSL</a>
 as a <em>type safe</em> way of configuring endpoints and data formats in Java.</p>
 </div>
 <div class="paragraph">
-<p>A good practice when configuring options is to use <a href="../../manual/using-propertyplaceholder.html" class="xref page">Property Placeholders</a>,
+<p>A good practice when configuring options is to use <a href="../../manual/4.10.x/using-propertyplaceholder.html" class="xref page">Property Placeholders</a>,
 which allows to not hardcode urls, port numbers, sensitive information, and other settings.
 In other words placeholders allows to externalize the configuration from your code, and gives more flexibility and reuse.</p>
 </div>
@@ -2141,7 +2197,7 @@ In other words placeholders allows to externalize the configuration from your co
 <td class="tableblock halign-left valign-top"><p class="tableblock"><a id="_endpoint_query_option_deleteOutputFile"></a>
 <a href="#_endpoint_query_option_deleteOutputFile" class="anchor"></a><strong>deleteOutputFile</strong> (producer)</p></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>If you have output=file then this option dictates whether or not the output file should be deleted when the Exchange is done processing. For example suppose the output file is a temporary file, then it can be a good idea to delete it after use.</p>
+<p>If you have output=file then this option dictates whether or not the output file should be deleted when the Exchange is done processing. For example, suppose the output file is a temporary file, then it can be a good idea to delete it after use.</p>
 </div></div></td>
 <td class="tableblock halign-center valign-top"><p class="tableblock">false</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">boolean</p></td>
@@ -2352,7 +2408,7 @@ message exchanges (where there is a <code>JMSReplyTo</code> header)</p>
 </div>
 <div class="paragraph">
 <p>If you want to use InOnly and consume the message and send it to another
-destination you could use the following route:</p>
+destination, you could use the following route:</p>
 </div>
 <div class="listingblock">
 <div class="content">
@@ -2364,12 +2420,12 @@ destination you could use the following route:</p>
 </div>
 </div>
 <div class="sect1">
-<h2 id="_getting_useable_parameters_into_the_xslt"><a class="anchor" href="#_getting_useable_parameters_into_the_xslt"></a>Getting Useable Parameters into the XSLT</h2>
+<h2 id="_getting_usable_parameters_into_the_xslt"><a class="anchor" href="#_getting_usable_parameters_into_the_xslt"></a>Getting Usable Parameters into the XSLT</h2>
 <div class="sectionbody">
 <div class="paragraph">
 <p>By default, all headers are added as parameters which are then available in
 the XSLT.<br>
-To make the parameters useable, you will need to declare them.</p>
+To make the parameters usable, you will need to declare them.</p>
 </div>
 <div class="listingblock">
 <div class="content">
@@ -2396,7 +2452,7 @@ available:</p>
 <h2 id="_spring_xml_versions"><a class="anchor" href="#_spring_xml_versions"></a>Spring XML versions</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>To use the above examples in Spring XML you would use something like the following code:</p>
+<p>To use the above examples in Spring XML, you would use something like the following code:</p>
 </div>
 <div class="listingblock">
 <div class="content">
@@ -2419,7 +2475,7 @@ available:</p>
 Camel to load included files from the classpath.</p>
 </div>
 <div class="paragraph">
-<p>For example the include file in the following code will be located relative to the starting endpoint.</p>
+<p>For example, the included file in the following code will be located relative to the starting endpoint.</p>
 </div>
 <div class="listingblock">
 <div class="content">
@@ -2432,11 +2488,12 @@ Camel to load included files from the classpath.</p>
 </div>
 <div class="paragraph">
 <p>You can use <code>classpath:</code> or <code>file:</code> to instruct Camel to look either in the classpath or file system. If you omit
-the prefix then Camel uses the prefix from the endpoint configuration.
+the prefix, then Camel uses the prefix from the endpoint configuration.
 If no prefix is specified in the endpoint configuration, the default is <code>classpath:</code>.</p>
 </div>
 <div class="paragraph">
-<p>You can also refer backwards in the include paths. In the following example, the xsl file will be resolved  under <code>org/apache/camel/component</code>.</p>
+<p>You can also refer backwards in the included paths.
+In the following example, the xsl file will be resolved under <code>org/apache/camel/component</code>.</p>
 </div>
 <div class="listingblock">
 <div class="content">
@@ -2452,7 +2509,7 @@ If no prefix is specified in the endpoint configuration, the default is <code>cl
 <p>Camel will use the prefix from the endpoint configuration as the default prefix.</p>
 </div>
 <div class="paragraph">
-<p>You can explicitly specify <code>file:</code> or <code>classpath:</code> loading. The two loading types can be mixed in a XSLT script, if necessary.</p>
+<p>You can explicitly specify <code>file:</code> or <code>classpath:</code> loading. The two loading types can be mixed in an XSLT script, if necessary.</p>
 </div>
 </div>
 </div>
@@ -2460,12 +2517,12 @@ If no prefix is specified in the endpoint configuration, the default is <code>cl
 <h2 id="_dynamic_stylesheets"><a class="anchor" href="#_dynamic_stylesheets"></a>Dynamic stylesheets</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>To provide a dynamic stylesheet at runtime you can either</p>
+<p>To provide a dynamic stylesheet at runtime, you can either:</p>
 </div>
 <div class="ulist">
 <ul>
 <li>
-<p>Define a dynamic URI. See <a href="../../manual/faq/how-to-use-a-dynamic-uri-in-to.html" class="xref page">How to use a dynamic URI in
+<p>Define a dynamic URI. See <a href="../../manual/4.10.x/faq/how-to-use-a-dynamic-uri-in-to.html" class="xref page">How to use a dynamic URI in
 to()</a> for more information.</p>
 </li>
 <li>
@@ -2504,7 +2561,7 @@ to use, instead of referring to a file as the example from above.</p>
 <td class="content">
 You can set <code>contentCache=false</code> and refer to a non-existing template, such as <code>"xslt:dummy.xsl?contentCache=false&amp;allowTemplateFromHeader=true"</code>
 as this will tell Camel to not load <code>dummy.xsl</code> on startup but to load the stylesheet on demand. And because you
-provide the stylesheet via headers then its fully dynamic.
+provide the stylesheet via headers, then its fully dynamic.
 </td>
 </tr>
 </table>
@@ -2522,7 +2579,7 @@ or <code>Exchange.XSLT_WARNING</code> which allows end users to get hold of any
 errors happening during transformation.</p>
 </div>
 <div class="paragraph">
-<p>For example in the stylesheet below, we want to terminate if a staff has
+<p>For example, in the stylesheet below, we want to terminate if a staff has
 an empty dob field. And to include a custom error message using
 xsl:message.</p>
 </div>
@@ -2547,6 +2604,9 @@ xsl:message.</p>
 <p>The exception is stored on the Exchange as a warning with the
 key <code>Exchange.XSLT_WARNING.</code></p>
 </div>
+<div class="paragraph">
+<p>Unresolved include directive in modules/ROOT/pages/xslt-component.adoc - include::spring-boot:partial$starter.adoc[]</p>
+</div>
 </div>
 </div>
 </article>
@@ -2554,6 +2614,8 @@ key <code>Exchange.XSLT_WARNING.</code></p>
 </main>
 </div>
 <footer class="footer">
+  <p>This page was built using the Antora default UI.</p>
+  <p>The source code for this UI is licensed under the terms of the MPL-2.0 license.</p>
 </footer>
 <script id="site-script" src="../../_/js/site.js" data-ui-root-path="../../_"></script>
 <script async src="../../_/js/vendor/highlight.js"></script>

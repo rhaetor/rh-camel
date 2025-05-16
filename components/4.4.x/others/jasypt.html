@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>Jasypt :: Red Hat Camel Reference</title>
+    <title>Jasypt :: Red Hat build of Apache Camel</title>
     <meta name="description" content="Security using Jasypt">
     <meta name="generator" content="Antora 3.1.4">
     <link rel="stylesheet" href="../../../_/css/site.css">
@@ -12,7 +12,7 @@
 <header class="header">
   <nav class="navbar">
     <div class="navbar-brand">
-      <a class="navbar-item" href="../../manual/index.html">Red Hat build of Apache Camel manual</a>
+      <a class="navbar-item" href="/">Red Hat build of Apache Camel</a>
       <button class="navbar-burger" data-target="topbar-nav">
         <span></span>
         <span></span>
@@ -22,11 +22,12 @@
   </nav>
 </header>
 <div class="body">
-<div class="nav-container" data-component="components" data-version="next">
+<div class="nav-container" data-component="components" data-version="4.4.x">
   <aside class="nav">
     <div class="panels">
 <div class="nav-panel-menu is-active" data-panel="menu">
   <nav class="nav-menu">
+    <button class="nav-menu-toggle" aria-label="Toggle expand/collapse all" style="display: none"></button>
     <h3 class="title"><a href="../index.html">Camel Components</a></h3>
 <ul class="nav-list">
   <li class="nav-item" data-depth="0">
@@ -1819,22 +1820,40 @@
 <div class="nav-panel-explore" data-panel="explore">
   <div class="context">
     <span class="title">Camel Components</span>
-    <span class="version">Next (Pre-release)</span>
+    <span class="version">4.4.x</span>
   </div>
   <ul class="components">
     <li class="component is-current">
-      <a class="title" href="../index.html">Camel Components</a>
+      <div class="title"><a href="../../4.10.x/index.html">Camel Components</a></div>
       <ul class="versions">
-        <li class="version is-current is-latest">
-          <a href="../index.html">Next (Pre-release)</a>
+        <li class="version is-latest">
+          <a href="../../4.10.x/index.html">4.10.x (LTS)</a>
+        </li>
+        <li class="version">
+          <a href="../../4.8.x/index.html">4.8.x</a>
+        </li>
+        <li class="version is-current">
+          <a href="../index.html">4.4.x</a>
+        </li>
+        <li class="version">
+          <a href="../../4.0.x/index.html">4.0.x</a>
         </li>
       </ul>
     </li>
     <li class="component">
-      <a class="title" href="../../../manual/index.html">User manual</a>
+      <div class="title"><a href="../../../manual/4.10.x/index.html">User manual</a></div>
       <ul class="versions">
         <li class="version is-latest">
-          <a href="../../../manual/index.html">default</a>
+          <a href="../../../manual/4.10.x/index.html">4.10.x</a>
+        </li>
+        <li class="version">
+          <a href="../../../manual/4.8.x/index.html">4.8.x</a>
+        </li>
+        <li class="version">
+          <a href="../../../manual/4.4.x/index.html">4.4.x</a>
+        </li>
+        <li class="version">
+          <a href="../../../manual/4.0.x/index.html">4.0.x</a>
         </li>
       </ul>
     </li>
@@ -1846,7 +1865,7 @@
 <main class="article">
 <div class="toolbar" role="navigation">
 <button class="nav-toggle"></button>
-  <a href="../../../manual/index.html" class="home-link"></a>
+  <a href="../../../manual/4.10.x/index.html" class="home-link"></a>
 <nav class="breadcrumbs" aria-label="breadcrumbs">
   <ul>
     <li><a href="../index.html">Camel Components</a></li>
@@ -1854,6 +1873,16 @@
     <li><a href="jasypt.html">Jasypt</a></li>
   </ul>
 </nav>
+<div class="page-versions">
+  <button class="version-menu-toggle" title="Show other versions of page">4.4.x</button>
+  <div class="version-menu">
+    <a class="version" href="../../4.10.x/others/jasypt.html">4.10.x (LTS)</a>
+    <a class="version" href="../../4.8.x/others/jasypt.html">4.8.x</a>
+    <a class="version is-current" href="jasypt.html">4.4.x</a>
+    <a class="version is-missing" href="../../4.0.x/index.html">4.0.x</a>
+  </div>
+</div>
+<div class="edit-this-page"><a href="https://github.com/rhaetor/rh-camel-jboss/edit/camel-4.4.0-branch/docs/components/modules/others/pages/jasypt.adoc">Edit this Page</a></div>
 </div>
   <div class="content">
 <aside class="toc sidebar" data-title="Contents" data-levels="2">
@@ -1867,7 +1896,7 @@
 <p><strong>Since Camel 2.5</strong></p>
 </div>
 <div class="paragraph">
-<p><a href="http://www.jasypt.org/">Jasypt</a> is a simplified encryption library which
+<p><a href="http://www.jasypt.org/">Jasypt</a> is a simplified encryption library that
 makes encryption and decryption easy. Camel integrates with Jasypt to
 allow sensitive information in <a href="../properties-component.html" class="xref page">Properties</a> files to
 be encrypted. By dropping <strong><code>camel-jasypt</code></strong> on the classpath those
@@ -1934,7 +1963,7 @@ for this component:</p>
 </div>
 <div class="paragraph">
 <p>This means the encrypted representation <code>qaEEacuW7BUti8LcMgyjKw==</code> can
-be decrypted back to <code>tiger</code> if you know the master password which was
+be decrypted back to <code>tiger</code> if you know the <em>master</em> password which was
 <code>secret</code>.<br>
  If you run the tool again, then the encrypted value will return a
 different result. But decrypting the value will always return the
@@ -1972,14 +2001,22 @@ my.secret = ENC(qaEEacuW7BUti8LcMgyjKw==)</code></pre>
 <h2 id="_protecting_the_master_password"><a class="anchor" href="#_protecting_the_master_password"></a>Protecting the master password</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>The master password used by Jasypt must be provided,
+<p>The <em>master</em> password used by Jasypt must be provided,
 so that it&#8217;s capable of decrypting the values. However, having this
-master password out in the open may not be an ideal solution. Therefore,
+<em>master</em> password out in the open may not be an ideal solution. Therefore,
 you can provide it as a JVM system property or as an OS
 environment setting. If you decide to do so then the <code>password</code> option
-supports prefixes which dictates this. <code>sysenv:</code> means to lookup the OS
-system environment with the given key. <code>sys:</code> means to lookup a JVM
-system property.</p>
+supports prefix that dictates this:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>sysenv:</code> means to look up the OS system environment with the given key.</p>
+</li>
+<li>
+<p><code>sys:</code> means to look up a JVM system property.</p>
+</li>
+</ul>
 </div>
 <div class="paragraph">
 <p>For example, you could provide the password before you start the
@@ -1994,7 +2031,7 @@ application</p>
 <p>Then start the application, such as running the start script.</p>
 </div>
 <div class="paragraph">
-<p>When the application is up and running you can unset the environment</p>
+<p>When the application is up and running, you can unset the environment</p>
 </div>
 <div class="listingblock">
 <div class="content">
@@ -2039,7 +2076,7 @@ application</p>
 <p>On the Spring Boot and Quarkus runtimes, Camel Jasypt can be configured via configuration properties. Refer to their respective documentation pages for more information.</p>
 </div>
 <div class="paragraph">
-<p>Else, in Java DSL you need to configure Jasypt as a <code>JasyptPropertiesParser</code> instance and set it on the <a href="../properties-component.html" class="xref page">Properties</a> component as show below:</p>
+<p>Else, in Java DSL you need to configure Jasypt as a <code>JasyptPropertiesParser</code> instance and set it on the <a href="../properties-component.html" class="xref page">Properties</a> component as shown below:</p>
 </div>
 <div class="listingblock">
 <div class="content">
@@ -2048,10 +2085,10 @@ JasyptPropertiesParser jasypt = new JasyptPropertiesParser();
 // set the master password (see above for how to do this in a secure way)
 jasypt.setPassword("secret");
 
-// create the properties component
+// create the properties' component
 PropertiesComponent pc = new PropertiesComponent();
 pc.setLocation("classpath:org/apache/camel/component/jasypt/secret.properties");
-// and use the jasypt properties parser so we can decrypt values
+// and use the jasypt properties parser, so we can decrypt values
 pc.setPropertiesParser(jasypt);
 // end enable nested placeholder support
 pc.setNestedPlaceholder(true);
@@ -2087,7 +2124,7 @@ and is surrounded like <code>ENC(value here)</code>.</p>
 <div class="paragraph">
 <p>In Spring XML you need to configure the <code>JasyptPropertiesParser</code> which
 is shown below. Then the Camel <a href="../properties-component.html" class="xref page">Properties</a>
-component is told to use <code>jasypt</code> as the properties parser, which means
+component is told to use <code>jasypt</code> as the property parser, which means
 Jasypt has its chance to decrypt values looked up in
 the properties file.</p>
 </div>
@@ -2120,7 +2157,7 @@ Jasypt.</p>
 <pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;!-- define the jasypt properties parser with the given password to be used --&gt;
 &lt;bean id="jasypt" class="org.apache.camel.component.jasypt.JasyptPropertiesParser"&gt;
     &lt;!-- password is mandatory, you can prefix it with sysenv: or sys: to indicate it should use
-         an OS environment or JVM system property value, so you dont have the master password defined here --&gt;
+         an OS environment or JVM system property value, so you don't have the master password defined here --&gt;
     &lt;property name="password" value="secret"/&gt;
 &lt;/bean&gt;
 
@@ -2140,6 +2177,9 @@ Jasypt.</p>
 </div>
 </div>
 </div>
+<div class="paragraph">
+<p>Unresolved include directive in modules/others/pages/jasypt.adoc - include::spring-boot:partial$starter.adoc[]</p>
+</div>
 </div>
 </div>
 </article>
@@ -2147,6 +2187,8 @@ Jasypt.</p>
 </main>
 </div>
 <footer class="footer">
+  <p>This page was built using the Antora default UI.</p>
+  <p>The source code for this UI is licensed under the terms of the MPL-2.0 license.</p>
 </footer>
 <script id="site-script" src="../../../_/js/site.js" data-ui-root-path="../../../_"></script>
 <script async src="../../../_/js/vendor/highlight.js"></script>

@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>Claim Check :: Red Hat Camel Reference</title>
+    <title>Claim Check :: Red Hat build of Apache Camel</title>
     <meta name="description" content="The Claim Check EIP allows you to replace message content with a claim check (a unique key), which can be used to retrieve the message content at a later time.">
     <meta name="generator" content="Antora 3.1.4">
     <link rel="stylesheet" href="../../../_/css/site.css">
@@ -12,7 +12,7 @@
 <header class="header">
   <nav class="navbar">
     <div class="navbar-brand">
-      <a class="navbar-item" href="../../manual/index.html">Red Hat build of Apache Camel manual</a>
+      <a class="navbar-item" href="/">Red Hat build of Apache Camel</a>
       <button class="navbar-burger" data-target="topbar-nav">
         <span></span>
         <span></span>
@@ -22,11 +22,12 @@
   </nav>
 </header>
 <div class="body">
-<div class="nav-container" data-component="components" data-version="next">
+<div class="nav-container" data-component="components" data-version="4.4.x">
   <aside class="nav">
     <div class="panels">
 <div class="nav-panel-menu is-active" data-panel="menu">
   <nav class="nav-menu">
+    <button class="nav-menu-toggle" aria-label="Toggle expand/collapse all" style="display: none"></button>
     <h3 class="title"><a href="../index.html">Camel Components</a></h3>
 <ul class="nav-list">
   <li class="nav-item" data-depth="0">
@@ -1819,22 +1820,40 @@
 <div class="nav-panel-explore" data-panel="explore">
   <div class="context">
     <span class="title">Camel Components</span>
-    <span class="version">Next (Pre-release)</span>
+    <span class="version">4.4.x</span>
   </div>
   <ul class="components">
     <li class="component is-current">
-      <a class="title" href="../index.html">Camel Components</a>
+      <div class="title"><a href="../../4.10.x/index.html">Camel Components</a></div>
       <ul class="versions">
-        <li class="version is-current is-latest">
-          <a href="../index.html">Next (Pre-release)</a>
+        <li class="version is-latest">
+          <a href="../../4.10.x/index.html">4.10.x (LTS)</a>
+        </li>
+        <li class="version">
+          <a href="../../4.8.x/index.html">4.8.x</a>
+        </li>
+        <li class="version is-current">
+          <a href="../index.html">4.4.x</a>
+        </li>
+        <li class="version">
+          <a href="../../4.0.x/index.html">4.0.x</a>
         </li>
       </ul>
     </li>
     <li class="component">
-      <a class="title" href="../../../manual/index.html">User manual</a>
+      <div class="title"><a href="../../../manual/4.10.x/index.html">User manual</a></div>
       <ul class="versions">
         <li class="version is-latest">
-          <a href="../../../manual/index.html">default</a>
+          <a href="../../../manual/4.10.x/index.html">4.10.x</a>
+        </li>
+        <li class="version">
+          <a href="../../../manual/4.8.x/index.html">4.8.x</a>
+        </li>
+        <li class="version">
+          <a href="../../../manual/4.4.x/index.html">4.4.x</a>
+        </li>
+        <li class="version">
+          <a href="../../../manual/4.0.x/index.html">4.0.x</a>
         </li>
       </ul>
     </li>
@@ -1846,7 +1865,7 @@
 <main class="article">
 <div class="toolbar" role="navigation">
 <button class="nav-toggle"></button>
-  <a href="../../../manual/index.html" class="home-link"></a>
+  <a href="../../../manual/4.10.x/index.html" class="home-link"></a>
 <nav class="breadcrumbs" aria-label="breadcrumbs">
   <ul>
     <li><a href="../index.html">Camel Components</a></li>
@@ -1854,6 +1873,16 @@
     <li><a href="claimCheck-eip.html">Claim Check</a></li>
   </ul>
 </nav>
+<div class="page-versions">
+  <button class="version-menu-toggle" title="Show other versions of page">4.4.x</button>
+  <div class="version-menu">
+    <a class="version" href="../../4.10.x/eips/claimCheck-eip.html">4.10.x (LTS)</a>
+    <a class="version" href="../../4.8.x/eips/claimCheck-eip.html">4.8.x</a>
+    <a class="version is-current" href="claimCheck-eip.html">4.4.x</a>
+    <a class="version" href="../../4.0.x/eips/claimCheck-eip.html">4.0.x</a>
+  </div>
+</div>
+<div class="edit-this-page"><a href="https://github.com/rhaetor/rh-camel-jboss/edit/camel-4.4.0-branch/core/camel-core-engine/src/main/docs/modules/eips/pages/claimCheck-eip.adoc">Edit this Page</a></div>
 </div>
   <div class="content">
 <aside class="toc sidebar" data-title="Contents" data-levels="2">
@@ -1994,24 +2023,24 @@ allows you to replace message content with a claim check (a unique key), which c
 <h2 id="_claim_check_operation"><a class="anchor" href="#_claim_check_operation"></a>Claim Check Operation</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>When using this EIP you must specify the operation to use which can be of the following:</p>
+<p>When using this EIP, you must specify the operation to use which can be of the following:</p>
 </div>
 <div class="ulist">
 <ul>
 <li>
-<p><strong>Get</strong> - Gets (does not remove) the claim check by the given key.</p>
+<p><code><strong>Get</strong></code>: Gets (does not remove) the claim check by the given key.</p>
 </li>
 <li>
-<p><strong>GetAndRemove</strong> - Gets and removes the claim check by the given key.</p>
+<p><code><strong>GetAndRemove</strong></code>: Gets and removes the claim check by the given key.</p>
 </li>
 <li>
-<p><strong>Set</strong> - Sets a new (will override if key already exists) claim check with the given key.</p>
+<p><code><strong>Set</strong></code>: Sets a new (will override if key already exists) claim check with the given key.</p>
 </li>
 <li>
-<p><strong>Push</strong> - Sets a new claim check on the stack (does not use key).</p>
+<p><code><strong>Push</strong></code>: Sets a new claim check on the stack (does not use key).</p>
 </li>
 <li>
-<p><strong>Pop</strong> - Gets the latest claim check from the stack (does not use key).</p>
+<p><code><strong>Pop</strong></code>: Gets the latest claim check from the stack (does not use key).</p>
 </li>
 </ul>
 </div>
@@ -2038,16 +2067,16 @@ The default strategy uses the <code>filter</code> option to easily specify what 
 <div class="ulist">
 <ul>
 <li>
-<p><code>body</code> - to aggregate the message body.</p>
+<p><code>body</code>: to aggregate the message body.</p>
 </li>
 <li>
-<p><code>attachments</code> - to aggregate all the message attachments.</p>
+<p><code>attachments</code>: to aggregate all the message attachments.</p>
 </li>
 <li>
-<p><code>headers</code> - to aggregate all the message headers.</p>
+<p><code>headers</code>: to aggregate all the message headers.</p>
 </li>
 <li>
-<p><code>header:pattern</code> - to aggregate all the message headers that matches the pattern.</p>
+<p><code>header:pattern</code>: to aggregate all the message headers that match the pattern.</p>
 </li>
 </ul>
 </div>
@@ -2070,7 +2099,7 @@ The default strategy uses the <code>filter</code> option to easily specify what 
 <div class="sect2">
 <h3 id="_basic_filter_examples"><a class="anchor" href="#_basic_filter_examples"></a>Basic filter examples</h3>
 <div class="paragraph">
-<p>For example to include the message body and all headers starting with <em>foo</em>:</p>
+<p>For example, to include the message body and all headers starting with <em>foo</em>:</p>
 </div>
 <div class="listingblock">
 <div class="content">
@@ -2110,7 +2139,7 @@ The default strategy uses the <code>filter</code> option to easily specify what 
 </div>
 </div>
 <div class="paragraph">
-<p>If the filter rule is specified as empty or as wildcard then everything is merged.</p>
+<p>If the filter rule is specified as empty or as wildcard, then everything is merged.</p>
 </div>
 <div class="paragraph">
 <p>Notice that when merging back data, any data in the Message that is not overwritten is preserved.</p>
@@ -2119,7 +2148,7 @@ The default strategy uses the <code>filter</code> option to easily specify what 
 <div class="sect2">
 <h3 id="_filtering_with_include_and_exclude_patterns"><a class="anchor" href="#_filtering_with_include_and_exclude_patterns"></a>Filtering with include and exclude patterns</h3>
 <div class="paragraph">
-<p>The syntax also supports the following prefixes which can be used to specify include, exclude, or remove</p>
+<p>The syntax also supports the following prefixes which can be used to specify include, exclude, or remove patterns:</p>
 </div>
 <div class="ulist">
 <ul>
@@ -2135,7 +2164,7 @@ The default strategy uses the <code>filter</code> option to easily specify what 
 </ul>
 </div>
 <div class="paragraph">
-<p>For example to skip the message body, and merge back everything else</p>
+<p>For example, to skip the message body, and merge back everything else</p>
 </div>
 <div class="listingblock">
 <div class="content">
@@ -2458,6 +2487,8 @@ to get the data once, you can use <code>GetAndRemove</code>.</p>
 </main>
 </div>
 <footer class="footer">
+  <p>This page was built using the Antora default UI.</p>
+  <p>The source code for this UI is licensed under the terms of the MPL-2.0 license.</p>
 </footer>
 <script id="site-script" src="../../../_/js/site.js" data-ui-root-path="../../../_"></script>
 <script async src="../../../_/js/vendor/highlight.js"></script>

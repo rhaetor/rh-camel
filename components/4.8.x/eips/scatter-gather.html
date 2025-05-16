@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>Scatter Gather :: Red Hat Camel Reference</title>
+    <title>Scatter-Gather :: Red Hat build of Apache Camel</title>
     <meta name="generator" content="Antora 3.1.4">
     <link rel="stylesheet" href="../../../_/css/site.css">
   </head>
@@ -11,7 +11,7 @@
 <header class="header">
   <nav class="navbar">
     <div class="navbar-brand">
-      <a class="navbar-item" href="../../manual/index.html">Red Hat build of Apache Camel manual</a>
+      <a class="navbar-item" href="/">Red Hat build of Apache Camel</a>
       <button class="navbar-burger" data-target="topbar-nav">
         <span></span>
         <span></span>
@@ -21,11 +21,12 @@
   </nav>
 </header>
 <div class="body">
-<div class="nav-container" data-component="components" data-version="next">
+<div class="nav-container" data-component="components" data-version="4.8.x">
   <aside class="nav">
     <div class="panels">
 <div class="nav-panel-menu is-active" data-panel="menu">
   <nav class="nav-menu">
+    <button class="nav-menu-toggle" aria-label="Toggle expand/collapse all" style="display: none"></button>
     <h3 class="title"><a href="../index.html">Camel Components</a></h3>
 <ul class="nav-list">
   <li class="nav-item" data-depth="0">
@@ -35,7 +36,46 @@
     <a class="nav-link" href="../index.html">Components</a>
 <ul class="nav-list">
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="../activemq-component.html">ActiveMQ</a>
+    <a class="nav-link" href="../activemq-component.html">ActiveMQ 5.x</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../activemq6-component.html">ActiveMQ 6.x</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../ai-summary.html">AI</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../chatscript-component.html">ChatScript</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../djl-component.html">Deep Java Library</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../langchain4j-chat-component.html">LangChain4j Chat</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../langchain4j-embeddings-component.html">LangChain4j Embeddings</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../langchain4j-tokenizer-component.html">LangChain4j Tokenizer</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../langchain4j-tools-component.html">LangChain4j Tools</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../langchain4j-web-search-component.html">LangChain4j Web Search</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../milvus-component.html">Milvus</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../pinecone-component.html">Pinecone</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../qdrant-component.html">Qdrant</a>
+  </li>
+</ul>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="../amqp-component.html">AMQP</a>
@@ -64,6 +104,15 @@
 <ul class="nav-list">
   <li class="nav-item" data-depth="3">
     <a class="nav-link" href="../aws2-athena-component.html">AWS Athena</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../aws-bedrock-component.html">AWS Bedrock</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../aws-bedrock-agent-component.html">AWS Bedrock Agent</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../aws-bedrock-agent-runtime-component.html">AWS Bedrock Agent Runtime</a>
   </li>
   <li class="nav-item" data-depth="3">
     <a class="nav-link" href="../aws-cloudtrail-component.html">AWS Cloudtrail</a>
@@ -168,7 +217,7 @@
     <a class="nav-link" href="../azure-storage-blob-component.html">Azure Storage Blob Service</a>
   </li>
   <li class="nav-item" data-depth="3">
-    <a class="nav-link" href="../azure-storage-datalake-component.html">Azure Storage Datalake Service</a>
+    <a class="nav-link" href="../azure-storage-datalake-component.html">Azure Storage Data Lake Service</a>
   </li>
   <li class="nav-item" data-depth="3">
     <a class="nav-link" href="../azure-storage-queue-component.html">Azure Storage Queue Service</a>
@@ -201,9 +250,6 @@
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="../cql-component.html">Cassandra CQL</a>
-  </li>
-  <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="../chatscript-component.html">ChatScript</a>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="../chunk-component.html">Chunk</a>
@@ -276,9 +322,6 @@
     <a class="nav-link" href="../debezium-sqlserver-component.html">Debezium SQL Server Connector</a>
   </li>
 </ul>
-  </li>
-  <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="../djl-component.html">Deep Java Library</a>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="../dhis2-component.html">DHIS2</a>
@@ -394,6 +437,9 @@
   </li>
   <li class="nav-item" data-depth="3">
     <a class="nav-link" href="../google-pubsub-component.html">Google Pubsub</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../google-pubsub-lite-component.html">Google PubSub Lite</a>
   </li>
   <li class="nav-item" data-depth="3">
     <a class="nav-link" href="../google-secret-manager-component.html">Google Secret Manager</a>
@@ -686,7 +732,7 @@
     <a class="nav-link" href="../ldif-component.html">LDIF</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="../log-component.html">Log</a>
+    <a class="nav-link" href="../log-component.html">Log Data</a>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="../lucene-component.html">Lucene</a>
@@ -899,10 +945,16 @@
     <a class="nav-link" href="../smb-component.html">SMB</a>
   </li>
   <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../smooks-component.html">Smooks</a>
+  </li>
+  <li class="nav-item" data-depth="2">
     <a class="nav-link" href="../smpp-component.html">SMPP</a>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="../snmp-component.html">SNMP</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../solr-component.html">Solr</a>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="../splunk-component.html">Splunk</a>
@@ -965,6 +1017,18 @@
     <a class="nav-link" href="../stub-component.html">Stub</a>
   </li>
   <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../tahu-summary.html">Tahu</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../tahu-edge-component.html">Tahu Edge Node / Device</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../tahu-host-component.html">Tahu Host Application</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
     <a class="nav-link" href="../telegram-component.html">Telegram</a>
   </li>
   <li class="nav-item" data-depth="2">
@@ -1025,7 +1089,7 @@
     <a class="nav-link" href="../whatsapp-component.html">WhatsApp</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="../wordpress-component.html">Wordpress</a>
+    <a class="nav-link" href="../wordpress-component.html">WordPress</a>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="../workday-component.html">Workday</a>
@@ -1418,7 +1482,13 @@
     <a class="nav-link" href="../others/openapi-java.html">Openapi Java</a>
   </li>
   <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../others/openapi-validator.html">Openapi Validator</a>
+  </li>
+  <li class="nav-item" data-depth="2">
     <a class="nav-link" href="../others/opentelemetry.html">OpenTelemetry</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../others/platform-http-jolokia.html">Platform HTTP Jolokia</a>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="../others/platform-http-main.html">Platform Http Main</a>
@@ -1566,7 +1636,7 @@
     <a class="nav-link" href="event-message.html">Event Message</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="failover-eip.html">Failover</a>
+    <a class="nav-link" href="failoverLoadBalancer-eip.html">Failover Load Balancer</a>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="faultToleranceConfiguration-eip.html">Fault Tolerance Configuration</a>
@@ -1596,13 +1666,13 @@
     <a class="nav-link" href="loadBalance-eip.html">Load Balance</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="log-eip.html">Log</a>
+    <a class="nav-link" href="log-eip.html">Logger</a>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="loop-eip.html">Loop</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="marshal-eip.html">Marshal EIP</a>
+    <a class="nav-link" href="marshal-eip.html">Marshal</a>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="message.html">Message</a>
@@ -1659,6 +1729,9 @@
     <a class="nav-link" href="point-to-point-channel.html">Point to Point Channel</a>
   </li>
   <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="poll-eip.html">Poll</a>
+  </li>
+  <li class="nav-item" data-depth="2">
     <a class="nav-link" href="pollEnrich-eip.html">Poll Enrich</a>
   </li>
   <li class="nav-item" data-depth="2">
@@ -1674,7 +1747,7 @@
     <a class="nav-link" href="publish-subscribe-channel.html">Publish Subscribe Channel</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="random-eip.html">Random</a>
+    <a class="nav-link" href="randomLoadBalancer-eip.html">Random Load Balancer</a>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="recipientList-eip.html">Recipient List</a>
@@ -1716,7 +1789,7 @@
     <a class="nav-link" href="rollback-eip.html">Rollback</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="roundRobin-eip.html">Round Robin</a>
+    <a class="nav-link" href="roundRobinLoadBalancer-eip.html">Round Robin Load Balancer</a>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="routingSlip-eip.html">Routing Slip</a>
@@ -1728,7 +1801,7 @@
     <a class="nav-link" href="sample-eip.html">Sample</a>
   </li>
   <li class="nav-item is-current-page" data-depth="2">
-    <a class="nav-link" href="scatter-gather.html">Scatter Gather</a>
+    <a class="nav-link" href="scatter-gather.html">Scatter-Gather</a>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="script-eip.html">Script</a>
@@ -1758,6 +1831,9 @@
     <a class="nav-link" href="setVariable-eip.html">Set Variable</a>
   </li>
   <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="setVariables-eip.html">Set Variables</a>
+  </li>
+  <li class="nav-item" data-depth="2">
     <a class="nav-link" href="sort-eip.html">Sort</a>
   </li>
   <li class="nav-item" data-depth="2">
@@ -1767,7 +1843,7 @@
     <a class="nav-link" href="step-eip.html">Step</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="sticky-eip.html">Sticky</a>
+    <a class="nav-link" href="stickyLoadBalancer-eip.html">Sticky Load Balancer</a>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="stop-eip.html">Stop</a>
@@ -1788,7 +1864,7 @@
     <a class="nav-link" href="toD-eip.html">To D</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="topic-eip.html">Topic</a>
+    <a class="nav-link" href="topicLoadBalancer-eip.html">Topic Load Balancer</a>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="transactional-client.html">Transactional Client</a>
@@ -1797,13 +1873,13 @@
     <a class="nav-link" href="transform-eip.html">Transform</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="unmarshal-eip.html">Unmarshal EIP</a>
+    <a class="nav-link" href="unmarshal-eip.html">Unmarshal</a>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="validate-eip.html">Validate</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="weighted-eip.html">Weighted</a>
+    <a class="nav-link" href="weightedLoadBalancer-eip.html">Weighted Load Balancer</a>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="wireTap-eip.html">Wire Tap</a>
@@ -1818,22 +1894,40 @@
 <div class="nav-panel-explore" data-panel="explore">
   <div class="context">
     <span class="title">Camel Components</span>
-    <span class="version">Next (Pre-release)</span>
+    <span class="version">4.8.x</span>
   </div>
   <ul class="components">
     <li class="component is-current">
-      <a class="title" href="../index.html">Camel Components</a>
+      <div class="title"><a href="../../4.10.x/index.html">Camel Components</a></div>
       <ul class="versions">
-        <li class="version is-current is-latest">
-          <a href="../index.html">Next (Pre-release)</a>
+        <li class="version is-latest">
+          <a href="../../4.10.x/index.html">4.10.x (LTS)</a>
+        </li>
+        <li class="version is-current">
+          <a href="../index.html">4.8.x</a>
+        </li>
+        <li class="version">
+          <a href="../../4.4.x/index.html">4.4.x</a>
+        </li>
+        <li class="version">
+          <a href="../../4.0.x/index.html">4.0.x</a>
         </li>
       </ul>
     </li>
     <li class="component">
-      <a class="title" href="../../../manual/index.html">User manual</a>
+      <div class="title"><a href="../../../manual/4.10.x/index.html">User manual</a></div>
       <ul class="versions">
         <li class="version is-latest">
-          <a href="../../../manual/index.html">default</a>
+          <a href="../../../manual/4.10.x/index.html">4.10.x</a>
+        </li>
+        <li class="version">
+          <a href="../../../manual/4.8.x/index.html">4.8.x</a>
+        </li>
+        <li class="version">
+          <a href="../../../manual/4.4.x/index.html">4.4.x</a>
+        </li>
+        <li class="version">
+          <a href="../../../manual/4.0.x/index.html">4.0.x</a>
         </li>
       </ul>
     </li>
@@ -1845,30 +1939,40 @@
 <main class="article">
 <div class="toolbar" role="navigation">
 <button class="nav-toggle"></button>
-  <a href="../../../manual/index.html" class="home-link"></a>
+  <a href="../../../manual/4.10.x/index.html" class="home-link"></a>
 <nav class="breadcrumbs" aria-label="breadcrumbs">
   <ul>
     <li><a href="../index.html">Camel Components</a></li>
     <li><a href="enterprise-integration-patterns.html">Enterprise Integration Patterns</a></li>
-    <li><a href="scatter-gather.html">Scatter Gather</a></li>
+    <li><a href="scatter-gather.html">Scatter-Gather</a></li>
   </ul>
 </nav>
+<div class="page-versions">
+  <button class="version-menu-toggle" title="Show other versions of page">4.8.x</button>
+  <div class="version-menu">
+    <a class="version" href="../../4.10.x/eips/scatter-gather.html">4.10.x (LTS)</a>
+    <a class="version is-current" href="scatter-gather.html">4.8.x</a>
+    <a class="version" href="../../4.4.x/eips/scatter-gather.html">4.4.x</a>
+    <a class="version" href="../../4.0.x/eips/scatter-gather.html">4.0.x</a>
+  </div>
+</div>
+<div class="edit-this-page"><a href="https://github.com/rhaetor/rh-camel-jboss/edit/camel-4.8.0-branch/core/camel-core-engine/src/main/docs/modules/eips/pages/scatter-gather.adoc">Edit this Page</a></div>
 </div>
   <div class="content">
 <aside class="toc sidebar" data-title="Contents" data-levels="2">
   <div class="toc-menu"></div>
 </aside>
 <article class="doc">
-<h1 class="page">Scatter Gather</h1>
+<h1 class="page">Scatter-Gather</h1>
 <div id="preamble">
 <div class="sectionbody">
 <div class="paragraph">
 <p>Camel supports the
-<a href="https://www.enterpriseintegrationpatterns.com/patterns/messaging/BroadcastAggregate.html">Scatter Gather</a>
+<a href="https://www.enterpriseintegrationpatterns.com/patterns/messaging/BroadcastAggregate.html">Scatter-Gather</a>
 from the <a href="enterprise-integration-patterns.html" class="xref page">EIP patterns</a> book.</p>
 </div>
 <div class="paragraph">
-<p>The Scatter Gather from the EIP patterns allows you to route messages to a number of dynamically
+<p>The Scatter-Gather from the EIP patterns allows you to route messages to a number of dynamically
 specified recipients and re-aggregate the responses back into a single message.</p>
 </div>
 <div class="imageblock">
@@ -1877,13 +1981,13 @@ specified recipients and re-aggregate the responses back into a single message.<
 </div>
 </div>
 <div class="paragraph">
-<p>In Camel the Scatter Gather EIP is supported in two different synchronous modes.</p>
+<p>In Camel, the Scatter-Gather EIP is supported in two different synchronous modes.</p>
 </div>
 <div class="ulist">
 <ul>
 <li>
 <p>request/reply mode, where the re-aggregated response message continues being routed synchronously
-after the Scatter Gather is complete.</p>
+after the Scatter-Gather is complete.</p>
 </li>
 <li>
 <p>one-way mode, where the response message is being routed asynchronous separately from
@@ -1894,25 +1998,25 @@ the incoming message thread.</p>
 </div>
 </div>
 <div class="sect1">
-<h2 id="_requestreply_vs_one_way_messaging_modes"><a class="anchor" href="#_requestreply_vs_one_way_messaging_modes"></a>Request/Reply vs One-Way messaging modes</h2>
+<h2 id="_requestreply_vs_one_way_messaging_modes"><a class="anchor" href="#_requestreply_vs_one_way_messaging_modes"></a>Request/Reply vs. One-Way messaging modes</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>In Camel the request/reply mode is done by using only the <a href="recipientList-eip.html" class="xref page">Recipient List</a>
+<p>In Camel, the request/reply mode is done by using only the <a href="recipientList-eip.html" class="xref page">Recipient List</a>
 which comes with aggregation built-in (which is often the simplest solution).</p>
 </div>
 <div class="paragraph">
-<p>The request/reply mode refers to the fact that the response message, is tied synchronously
-to the incoming message (that would wait), until the response message is ready, and then continue being routed.
+<p>The request/reply mode refers to the fact that the response message is tied synchronously
+to the incoming message (that would wait) until the response message is ready, and then continue being routed.
 This allows for <a href="requestReply-eip.html" class="xref page">Request Reply</a> messaging style.</p>
 </div>
 <div class="paragraph">
-<p>The one-way mode refers to the fact that the response message, is not tied to the incoming message (which will continue).
+<p>The one-way mode refers to the fact that the response message is not tied to the incoming message (which will continue).
 And the response message (when its ready) will continue being routed independently of the incoming message.
 This only allows for <a href="event-message.html" class="xref page">Event Message</a> messaging style.</p>
 </div>
 <div class="paragraph">
 <p>In the one-way mode, then you combine the <a href="recipientList-eip.html" class="xref page">Recipient List</a> and <a href="aggregate-eip.html" class="xref page">Aggregate</a> EIPs
-together as the Scatter Gather EIP solution.</p>
+together as the Scatter-Gather EIP solution.</p>
 </div>
 </div>
 </div>
@@ -1920,7 +2024,7 @@ together as the Scatter Gather EIP solution.</p>
 <h2 id="_using_recipient_list_only"><a class="anchor" href="#_using_recipient_list_only"></a>Using Recipient List only</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>In the following example we want to call two HTTP services and gather their responses into a single message,
+<p>In the following example, we want to call two HTTP services and gather their responses into a single message,
 as the response:</p>
 </div>
 <div class="listingblock">
@@ -1940,7 +2044,7 @@ as the response:</p>
 </div>
 <div class="paragraph">
 <p>This is a basic example that only uses basic functionality of the <a href="recipientList-eip.html" class="xref page">Recipient List</a>.
-For more details how the aggregation works, see the <a href="recipientList-eip.html" class="xref page">Recipient List</a> documentation.</p>
+For more details on how the aggregation works, see the <a href="recipientList-eip.html" class="xref page">Recipient List</a> documentation.</p>
 </div>
 </div>
 </div>
@@ -1948,7 +2052,7 @@ For more details how the aggregation works, see the <a href="recipientList-eip.h
 <h2 id="_using_recipient_list_and_aggregate_eip"><a class="anchor" href="#_using_recipient_list_and_aggregate_eip"></a>Using Recipient List and Aggregate EIP</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>In this example we want to get the best quote for beer from several vendors.</p>
+<p>In this example, we want to get the best quote for beer from several vendors.</p>
 </div>
 <div class="paragraph">
 <p>We use <a href="recipientList-eip.html" class="xref page">Recipient List</a> to get the request for a quote to all vendors
@@ -1982,7 +2086,7 @@ and an <a href="aggregate-eip.html" class="xref page">Aggregate</a> to pick the 
 </div>
 </div>
 <div class="paragraph">
-<p>So in the first route you see that the <a href="recipientList-eip.html" class="xref page">Recipient List</a> is looking at the
+<p>So in the first route, you see that the <a href="recipientList-eip.html" class="xref page">Recipient List</a> is looking at the
 listOfVendors header for the list of recipients. So, we need to send a message like:</p>
 </div>
 <div class="listingblock">
@@ -1996,7 +2100,7 @@ template.sendBodyAndHeaders("direct:start", "&lt;quote_request item=\"beer\"/&gt
 </div>
 <div class="paragraph">
 <p>This message will be distributed to the following Endpoints: bean:vendor1, bean:vendor2, and bean:vendor3.
-These are all Java beans (called via the Camel <a href="../bean-component.html" class="xref page">Bean</a> endpoint), which look like:</p>
+These are all Java beans (called via the Camel <a href="../../4.10.x/bean-component.html" class="xref page">Bean</a> endpoint), which look like:</p>
 </div>
 <div class="listingblock">
 <div class="content">
@@ -2049,12 +2153,13 @@ These are all Java beans (called via the Camel <a href="../bean-component.html" 
 <p>Each bean is loaded with a different price for beer. When the message is sent to each bean endpoint,
 it will arrive at the <code>MyVendor.quote</code> method. This method does a simple check whether this quote
 request is for beer and then sets the price of beer on the exchange for retrieval at a later step.
-The message is forwarded on to the next step using <a href="../../../manual/pojo-producing.html" class="xref page">POJO Producing</a>
+The message is forwarded on to the next step using <a href="../../../manual/4.10.x/pojo-producing.html" class="xref page">POJO Producing</a>
 (see the <code>@Produce</code> annotation).</p>
 </div>
 <div class="paragraph">
-<p>At the next step we want to take the beer quotes from all vendors and find out which one was the best
-(i.e. the lowest!). To do this we use the <a href="aggregate-eip.html" class="xref page">Aggregate</a> EIP with a custom
+<p>At the next step, we want to take the beer quotes from all vendors and find out which one was the best
+(i.e., the lowest!).
+To do this, we use the <a href="aggregate-eip.html" class="xref page">Aggregate</a> EIP with a custom
 <code>AggregationStrategy</code>.</p>
 </div>
 <div class="paragraph">
@@ -2084,7 +2189,7 @@ To pick the lowest quote out of the set, we use a custom <code>AggregationStrate
 </div>
 </div>
 <div class="paragraph">
-<p>And finally the aggregator will assemble the response message with the best beer price (the lowest).
+<p>And finally, the aggregator will assemble the response message with the best beer price (the lowest).
 Notice how the aggregator has timeout built-in, meaning that if one or more of the beer vendors does
 not respond, then the aggregator will discard those <em>late</em> responses, and send out a message with the <em>best price so far</em>.</p>
 </div>
@@ -2097,7 +2202,7 @@ not respond, then the aggregator will discard those <em>late</em> responses, and
 <h2 id="_see_also"><a class="anchor" href="#_see_also"></a>See Also</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>The Scatter Gather EIP is a composite pattern that is built by exiting EIPs:</p>
+<p>The Scatter-Gather EIP is a composite pattern built by exiting EIPs:</p>
 </div>
 <div class="ulist">
 <ul>
@@ -2116,6 +2221,8 @@ not respond, then the aggregator will discard those <em>late</em> responses, and
 </main>
 </div>
 <footer class="footer">
+  <p>This page was built using the Antora default UI.</p>
+  <p>The source code for this UI is licensed under the terms of the MPL-2.0 license.</p>
 </footer>
 <script id="site-script" src="../../../_/js/site.js" data-ui-root-path="../../../_"></script>
 <script async src="../../../_/js/vendor/highlight.js"></script>

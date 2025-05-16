@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>Infinispan :: Red Hat Camel Reference</title>
+    <title>Infinispan :: Red Hat build of Apache Camel</title>
     <meta name="description" content="Read and write from/to Infinispan distributed key/value store and data grid.">
     <meta name="generator" content="Antora 3.1.4">
     <link rel="stylesheet" href="../../_/css/site.css">
@@ -12,7 +12,7 @@
 <header class="header">
   <nav class="navbar">
     <div class="navbar-brand">
-      <a class="navbar-item" href="../../manual/index.html">Red Hat build of Apache Camel manual</a>
+      <a class="navbar-item" href="/">Red Hat build of Apache Camel</a>
       <button class="navbar-burger" data-target="topbar-nav">
         <span></span>
         <span></span>
@@ -22,11 +22,12 @@
   </nav>
 </header>
 <div class="body">
-<div class="nav-container" data-component="components" data-version="next">
+<div class="nav-container" data-component="components" data-version="4.4.x">
   <aside class="nav">
     <div class="panels">
 <div class="nav-panel-menu is-active" data-panel="menu">
   <nav class="nav-menu">
+    <button class="nav-menu-toggle" aria-label="Toggle expand/collapse all" style="display: none"></button>
     <h3 class="title"><a href="index.html">Camel Components</a></h3>
 <ul class="nav-list">
   <li class="nav-item" data-depth="0">
@@ -912,6 +913,33 @@
     <a class="nav-link" href="splunk-hec-component.html">Splunk HEC</a>
   </li>
   <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="spring-summary.html">Spring</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="spring-batch-component.html">Spring Batch</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="spring-event-component.html">Spring Event</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="spring-jdbc-component.html">Spring JDBC</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="spring-ldap-component.html">Spring LDAP</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="spring-rabbitmq-component.html">Spring RabbitMQ</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="spring-redis-component.html">Spring Redis</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="spring-ws-component.html">Spring WebService</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
     <a class="nav-link" href="sql-component.html">SQL</a>
   </li>
   <li class="nav-item" data-depth="2">
@@ -1792,22 +1820,40 @@
 <div class="nav-panel-explore" data-panel="explore">
   <div class="context">
     <span class="title">Camel Components</span>
-    <span class="version">Next (Pre-release)</span>
+    <span class="version">4.4.x</span>
   </div>
   <ul class="components">
     <li class="component is-current">
-      <a class="title" href="index.html">Camel Components</a>
+      <div class="title"><a href="../4.10.x/index.html">Camel Components</a></div>
       <ul class="versions">
-        <li class="version is-current is-latest">
-          <a href="index.html">Next (Pre-release)</a>
+        <li class="version is-latest">
+          <a href="../4.10.x/index.html">4.10.x (LTS)</a>
+        </li>
+        <li class="version">
+          <a href="../4.8.x/index.html">4.8.x</a>
+        </li>
+        <li class="version is-current">
+          <a href="index.html">4.4.x</a>
+        </li>
+        <li class="version">
+          <a href="../4.0.x/index.html">4.0.x</a>
         </li>
       </ul>
     </li>
     <li class="component">
-      <a class="title" href="../../manual/index.html">User manual</a>
+      <div class="title"><a href="../../manual/4.10.x/index.html">User manual</a></div>
       <ul class="versions">
         <li class="version is-latest">
-          <a href="../../manual/index.html">default</a>
+          <a href="../../manual/4.10.x/index.html">4.10.x</a>
+        </li>
+        <li class="version">
+          <a href="../../manual/4.8.x/index.html">4.8.x</a>
+        </li>
+        <li class="version">
+          <a href="../../manual/4.4.x/index.html">4.4.x</a>
+        </li>
+        <li class="version">
+          <a href="../../manual/4.0.x/index.html">4.0.x</a>
         </li>
       </ul>
     </li>
@@ -1819,7 +1865,7 @@
 <main class="article">
 <div class="toolbar" role="navigation">
 <button class="nav-toggle"></button>
-  <a href="../../manual/index.html" class="home-link"></a>
+  <a href="../../manual/4.10.x/index.html" class="home-link"></a>
 <nav class="breadcrumbs" aria-label="breadcrumbs">
   <ul>
     <li><a href="index.html">Camel Components</a></li>
@@ -1827,6 +1873,16 @@
     <li><a href="infinispan-component.html">Infinispan</a></li>
   </ul>
 </nav>
+<div class="page-versions">
+  <button class="version-menu-toggle" title="Show other versions of page">4.4.x</button>
+  <div class="version-menu">
+    <a class="version" href="../4.10.x/infinispan-component.html">4.10.x (LTS)</a>
+    <a class="version" href="../4.8.x/infinispan-component.html">4.8.x</a>
+    <a class="version is-current" href="infinispan-component.html">4.4.x</a>
+    <a class="version is-missing" href="../4.0.x/index.html">4.0.x</a>
+  </div>
+</div>
+<div class="edit-this-page"><a href="https://github.com/rhaetor/rh-camel-jboss/edit/camel-4.4.0-branch/docs/components/modules/ROOT/pages/infinispan-component.adoc">Edit this Page</a></div>
 </div>
   <div class="content">
 <aside class="toc sidebar" data-title="Contents" data-levels="2">
@@ -1843,7 +1899,7 @@
 <p><strong>Both producer and consumer are supported</strong></p>
 </div>
 <div class="paragraph">
-<p>This component allows you to interact with <a href="http://infinispan.org/">Infinispan</a> distributed data grid / cache using the Hot Rod procol.
+<p>This component allows you to interact with <a href="http://infinispan.org/">Infinispan</a> distributed data grid / cache using the Hot Rod protocol.
 Infinispan is an extremely scalable, highly available key/value data store and data grid platform written in Java.</p>
 </div>
 <div class="paragraph">
@@ -1895,14 +1951,14 @@ The consumer allows listening for events from a remote cache using the HotRod pr
 <h3 id="_configuring_component_options"><a class="anchor" href="#_configuring_component_options"></a>Configuring Component Options</h3>
 <div class="paragraph">
 <p>The component level is the highest level which holds general and common configurations that are inherited by the endpoints.
-For example a component may have security settings, credentials for authentication, urls for network connection and so forth.</p>
+For example, a component may have security settings, credentials for authentication, urls for network connection and so forth.</p>
 </div>
 <div class="paragraph">
 <p>Some components only have a few options, and others may have many. Because components typically have pre configured defaults
 that are commonly used, then you may often only need to configure a few options on a component; or none at all.</p>
 </div>
 <div class="paragraph">
-<p>Configuring components can be done with the <a href="../../manual/component-dsl.html" class="xref page">Component DSL</a>,
+<p>Configuring components can be done with the <a href="../../manual/4.10.x/component-dsl.html" class="xref page">Component DSL</a>,
 in a configuration file (application.properties|yaml), or directly with Java code.</p>
 </div>
 </div>
@@ -1915,11 +1971,11 @@ or as a producer (to), or used for both.</p>
 </div>
 <div class="paragraph">
 <p>Configuring endpoints is most often done directly in the endpoint URI as path and query parameters. You can also use
-the <a href="../../manual/Endpoint-dsl.html" class="xref page">Endpoint DSL</a> and <a href="../../manual/dataformat-dsl.html" class="xref page">DataFormat DSL</a>
+the <a href="../../manual/4.10.x/Endpoint-dsl.html" class="xref page">Endpoint DSL</a> and <a href="../../manual/4.10.x/dataformat-dsl.html" class="xref page">DataFormat DSL</a>
 as a <em>type safe</em> way of configuring endpoints and data formats in Java.</p>
 </div>
 <div class="paragraph">
-<p>A good practice when configuring options is to use <a href="../../manual/using-propertyplaceholder.html" class="xref page">Property Placeholders</a>,
+<p>A good practice when configuring options is to use <a href="../../manual/4.10.x/using-propertyplaceholder.html" class="xref page">Property Placeholders</a>,
 which allows to not hardcode urls, port numbers, sensitive information, and other settings.
 In other words placeholders allows to externalize the configuration from your code, and gives more flexibility and reuse.</p>
 </div>
@@ -2995,25 +3051,25 @@ In other words placeholders allows to externalize the configuration from your co
 </thead>
 <tbody>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">InfinispanOperation.PUT</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>InfinispanOperation.PUT</code></p></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>Puts a key/value pair in the cache, optionally with expiration</p>
+<p>Put a key/value pair in the cache, optionally with expiration</p>
 </div></div></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">InfinispanOperation.PUTASYNC</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>InfinispanOperation.PUTASYNC</code></p></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p>Asynchronously puts a key/value pair in the cache, optionally with expiration</p>
 </div></div></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">InfinispanOperation.PUTIFABSENT</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>InfinispanOperation.PUTIFABSENT</code></p></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>Puts a key/value pair in the cache if it did not exist, optionally with expiration</p>
+<p>Put a key/value pair in the cache if it did not exist, optionally with expiration</p>
 </div></div></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">InfinispanOperation.PUTIFABSENTASYNC</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>InfinispanOperation.PUTIFABSENTASYNC</code></p></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p>Asynchronously puts a key/value pair in the cache if it did not exist, optionally with expiration</p>
 </div></div></td>
@@ -3027,10 +3083,10 @@ In other words placeholders allows to externalize the configuration from your co
 <div class="ulist">
 <ul>
 <li>
-<p>CamelInfinispanKey</p>
+<p><code>CamelInfinispanKey</code></p>
 </li>
 <li>
-<p>CamelInfinispanValue</p>
+<p><code>CamelInfinispanValue</code></p>
 </li>
 </ul>
 </div>
@@ -3040,16 +3096,16 @@ In other words placeholders allows to externalize the configuration from your co
 <div class="ulist">
 <ul>
 <li>
-<p>CamelInfinispanLifespanTime</p>
+<p><code>CamelInfinispanLifespanTime</code></p>
 </li>
 <li>
-<p>CamelInfinispanLifespanTimeUnit</p>
+<p><code>CamelInfinispanLifespanTimeUnit</code></p>
 </li>
 <li>
-<p>CamelInfinispanMaxIdleTime</p>
+<p><code>CamelInfinispanMaxIdleTime</code></p>
 </li>
 <li>
-<p>CamelInfinispanMaxIdleTimeUnit</p>
+<p><code>CamelInfinispanMaxIdleTimeUnit</code></p>
 </li>
 </ul>
 </div>
@@ -3059,7 +3115,7 @@ In other words placeholders allows to externalize the configuration from your co
 <div class="ulist">
 <ul>
 <li>
-<p>CamelInfinispanOperationResult</p>
+<p><code>CamelInfinispanOperationResult</code></p>
 </li>
 </ul>
 </div>
@@ -3080,13 +3136,13 @@ In other words placeholders allows to externalize the configuration from your co
 </thead>
 <tbody>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">InfinispanOperation.PUTALL</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>InfinispanOperation.PUTALL</code></p></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p>Adds multiple entries to a cache, optionally with expiration</p>
 </div></div></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">CamelInfinispanOperation.PUTALLASYNC</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>CamelInfinispanOperation.PUTALLASYNC</code></p></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p>Asynchronously adds multiple entries to a cache, optionally with expiration</p>
 </div></div></td>
@@ -3100,7 +3156,7 @@ In other words placeholders allows to externalize the configuration from your co
 <div class="ulist">
 <ul>
 <li>
-<p>CamelInfinispanMap</p>
+<p><code>CamelInfinispanMap</code></p>
 </li>
 </ul>
 </div>
@@ -3110,16 +3166,16 @@ In other words placeholders allows to externalize the configuration from your co
 <div class="ulist">
 <ul>
 <li>
-<p>CamelInfinispanLifespanTime</p>
+<p><code>CamelInfinispanLifespanTime</code></p>
 </li>
 <li>
-<p>CamelInfinispanLifespanTimeUnit</p>
+<p><code>CamelInfinispanLifespanTimeUnit</code></p>
 </li>
 <li>
-<p>CamelInfinispanMaxIdleTime</p>
+<p><code>CamelInfinispanMaxIdleTime</code></p>
 </li>
 <li>
-<p>CamelInfinispanMaxIdleTimeUnit</p>
+<p><code>CamelInfinispanMaxIdleTimeUnit</code></p>
 </li>
 </ul>
 </div>
@@ -3140,13 +3196,13 @@ In other words placeholders allows to externalize the configuration from your co
 </thead>
 <tbody>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">InfinispanOperation.GET</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>InfinispanOperation.GET</code></p></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>Retrieves the value associated with a specific key from the cache</p>
+<p>Retrieve the value associated with a specific key from the cache</p>
 </div></div></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">InfinispanOperation.GETORDEFAULT</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>InfinispanOperation.GETORDEFAULT</code></p></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p>Retrieves the value, or default value, associated with a specific key from the cache</p>
 </div></div></td>
@@ -3160,8 +3216,8 @@ In other words placeholders allows to externalize the configuration from your co
 <div class="ulist">
 <ul>
 <li>
-<p>CamelInfinispanKey
-Resulting value is returned in the exchange <strong>body</strong>.</p>
+<p><code>CamelInfinispanKey</code>
+The resulting value is returned in the exchange <strong>body</strong>.</p>
 </li>
 </ul>
 </div>
@@ -3182,7 +3238,7 @@ Resulting value is returned in the exchange <strong>body</strong>.</p>
 </thead>
 <tbody>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">InfinispanOperation.CONTAINSKEY</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>InfinispanOperation.CONTAINSKEY</code></p></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p>Determines whether a cache contains a specific key</p>
 </div></div></td>
@@ -3196,7 +3252,7 @@ Resulting value is returned in the exchange <strong>body</strong>.</p>
 <div class="ulist">
 <ul>
 <li>
-<p>CamelInfinispanKey</p>
+<p><code>CamelInfinispanKey</code></p>
 </li>
 </ul>
 </div>
@@ -3206,7 +3262,7 @@ Resulting value is returned in the exchange <strong>body</strong>.</p>
 <div class="ulist">
 <ul>
 <li>
-<p>CamelInfinispanOperationResult</p>
+<p><code>CamelInfinispanOperationResult</code></p>
 </li>
 </ul>
 </div>
@@ -3227,7 +3283,7 @@ Resulting value is returned in the exchange <strong>body</strong>.</p>
 </thead>
 <tbody>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">InfinispanOperation.CONTAINSVALUE</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>InfinispanOperation.CONTAINSVALUE</code></p></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p>Determines whether a cache contains a specific value</p>
 </div></div></td>
@@ -3241,7 +3297,7 @@ Resulting value is returned in the exchange <strong>body</strong>.</p>
 <div class="ulist">
 <ul>
 <li>
-<p>CamelInfinispanValue</p>
+<p><code>CamelInfinispanValue</code></p>
 </li>
 </ul>
 </div>
@@ -3251,7 +3307,7 @@ Resulting value is returned in the exchange <strong>body</strong>.</p>
 <div class="ulist">
 <ul>
 <li>
-<p>CamelInfinispanOperationResult</p>
+<p><code>CamelInfinispanOperationResult</code></p>
 </li>
 </ul>
 </div>
@@ -3272,13 +3328,13 @@ Resulting value is returned in the exchange <strong>body</strong>.</p>
 </thead>
 <tbody>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">InfinispanOperation.REMOVE</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>InfinispanOperation.REMOVE</code></p></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p>Removes an entry from a cache, optionally only if the value matches a given one</p>
 </div></div></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">InfinispanOperation.REMOVEASYNC</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>InfinispanOperation.REMOVEASYNC</code></p></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p>Asynchronously removes an entry from a cache, optionally only if the value matches a given one</p>
 </div></div></td>
@@ -3292,7 +3348,7 @@ Resulting value is returned in the exchange <strong>body</strong>.</p>
 <div class="ulist">
 <ul>
 <li>
-<p>CamelInfinispanKey</p>
+<p><code>CamelInfinispanValue</code></p>
 </li>
 </ul>
 </div>
@@ -3302,7 +3358,7 @@ Resulting value is returned in the exchange <strong>body</strong>.</p>
 <div class="ulist">
 <ul>
 <li>
-<p>CamelInfinispanValue</p>
+<p><code>CamelInfinispanValue</code></p>
 </li>
 </ul>
 </div>
@@ -3312,7 +3368,7 @@ Resulting value is returned in the exchange <strong>body</strong>.</p>
 <div class="ulist">
 <ul>
 <li>
-<p>CamelInfinispanOperationResult</p>
+<p><code>CamelInfinispanOperationResult</code></p>
 </li>
 </ul>
 </div>
@@ -3333,13 +3389,13 @@ Resulting value is returned in the exchange <strong>body</strong>.</p>
 </thead>
 <tbody>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">InfinispanOperation.REPLACE</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>InfinispanOperation.REPLACE</code></p></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p>Conditionally replaces an entry in the cache, optionally with expiration</p>
 </div></div></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">InfinispanOperation.REPLACEASYNC</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>InfinispanOperation.REPLACEASYNC</code></p></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p>Asynchronously conditionally replaces an entry in the cache, optionally with expiration</p>
 </div></div></td>
@@ -3353,13 +3409,13 @@ Resulting value is returned in the exchange <strong>body</strong>.</p>
 <div class="ulist">
 <ul>
 <li>
-<p>CamelInfinispanKey</p>
+<p><code>CamelInfinispanKey</code></p>
 </li>
 <li>
-<p>CamelInfinispanValue</p>
+<p><code>CamelInfinispanValue</code></p>
 </li>
 <li>
-<p>CamelInfinispanOldValue</p>
+<p><code>CamelInfinispanOldValue</code></p>
 </li>
 </ul>
 </div>
@@ -3369,16 +3425,16 @@ Resulting value is returned in the exchange <strong>body</strong>.</p>
 <div class="ulist">
 <ul>
 <li>
-<p>CamelInfinispanLifespanTime</p>
+<p><code>CamelInfinispanLifespanTime</code></p>
 </li>
 <li>
-<p>CamelInfinispanLifespanTimeUnit</p>
+<p><code>CamelInfinispanLifespanTimeUnit</code></p>
 </li>
 <li>
-<p>CamelInfinispanMaxIdleTime</p>
+<p><code>CamelInfinispanMaxIdleTime</code></p>
 </li>
 <li>
-<p>CamelInfinispanMaxIdleTimeUnit</p>
+<p><code>CamelInfinispanMaxIdleTimeUnit</code></p>
 </li>
 </ul>
 </div>
@@ -3388,7 +3444,7 @@ Resulting value is returned in the exchange <strong>body</strong>.</p>
 <div class="ulist">
 <ul>
 <li>
-<p>CamelInfinispanOperationResult</p>
+<p><code>CamelInfinispanOperationResult</code></p>
 </li>
 </ul>
 </div>
@@ -3409,13 +3465,13 @@ Resulting value is returned in the exchange <strong>body</strong>.</p>
 </thead>
 <tbody>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">InfinispanOperation.CLEAR</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>InfinispanOperation.CLEAR</code></p></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p>Clears the cache</p>
 </div></div></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">InfinispanOperation.CLEARASYNC</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>InfinispanOperation.CLEARASYNC</code></p></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p>Asynchronously clears the cache</p>
 </div></div></td>
@@ -3436,7 +3492,7 @@ Resulting value is returned in the exchange <strong>body</strong>.</p>
 </thead>
 <tbody>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">InfinispanOperation.SIZE</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>InfinispanOperation.SIZE</code></p></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p>Returns the number of entries in the cache</p>
 </div></div></td>
@@ -3450,7 +3506,7 @@ Resulting value is returned in the exchange <strong>body</strong>.</p>
 <div class="ulist">
 <ul>
 <li>
-<p>CamelInfinispanOperationResult</p>
+<p><code>CamelInfinispanOperationResult</code></p>
 </li>
 </ul>
 </div>
@@ -3471,7 +3527,7 @@ Resulting value is returned in the exchange <strong>body</strong>.</p>
 </thead>
 <tbody>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">InfinispanOperation.STATS</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>InfinispanOperation.STATS</code></p></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p>Returns statistics about the cache</p>
 </div></div></td>
@@ -3485,7 +3541,7 @@ Resulting value is returned in the exchange <strong>body</strong>.</p>
 <div class="ulist">
 <ul>
 <li>
-<p>CamelInfinispanOperationResult</p>
+<p><code>CamelInfinispanOperationResult</code></p>
 </li>
 </ul>
 </div>
@@ -3506,7 +3562,7 @@ Resulting value is returned in the exchange <strong>body</strong>.</p>
 </thead>
 <tbody>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">InfinispanOperation.QUERY</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>InfinispanOperation.QUERY</code></p></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p>Executes a query on the cache</p>
 </div></div></td>
@@ -3520,8 +3576,8 @@ Resulting value is returned in the exchange <strong>body</strong>.</p>
 <div class="ulist">
 <ul>
 <li>
-<p>CamelInfinispanQueryBuilder
-Resulting value is returned in the exchange <strong>body</strong>.</p>
+<p><code>CamelInfinispanQueryBuilder</code>
+The resulting value is returned in the exchange <strong>body</strong>.</p>
 </li>
 </ul>
 </div>
@@ -3641,7 +3697,7 @@ Resulting value is returned in the exchange <strong>body</strong>.</p>
 </div>
 <div class="paragraph">
 <p>The instance of <code>myCustomListener</code> must exist and Camel should be able to look it up from the  <code>Registry</code>.
-Users are encouraged to extend the <code>org.apache.camel.component.infinispan.remote.InfinispanRemoteCustomListener</code> class and annotate the resulting class with <code>@ClientListener</code> which can be found found in package <code>org.infinispan.client.hotrod.annotation</code>.</p>
+Users are encouraged to extend the <code>org.apache.camel.component.infinispan.remote.InfinispanRemoteCustomListener</code> class and annotate the resulting class with <code>@ClientListener</code> which can be found in the package <code>org.infinispan.client.hotrod.annotation</code>.</p>
 </div>
 </li>
 </ul>
@@ -3652,13 +3708,25 @@ Users are encouraged to extend the <code>org.apache.camel.component.infinispan.r
 <h2 id="_using_the_infinispan_based_idempotent_repository"><a class="anchor" href="#_using_the_infinispan_based_idempotent_repository"></a>Using the Infinispan based idempotent repository</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>In this section we will use the Infinispan based idempotent repository.</p>
+<p>In this section, we will use the Infinispan based idempotent repository.</p>
 </div>
+<div id="_tabs_1" class="openblock tabs is-sync is-loading">
+<div class="content">
+<div class="ulist tablist">
+<ul>
+<li id="_tabs_1_java" class="tab">
+<p>Java</p>
+</li>
+<li id="_tabs_1_xml" class="tab">
+<p>XML</p>
+</li>
+</ul>
+</div>
+<div id="_tabs_1_java--panel" class="tabpanel" aria-labelledby="_tabs_1_java">
 <div class="listingblock">
-<div class="title">Java Example</div>
 <div class="content">
 <pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">InfinispanRemoteConfiguration conf = new InfinispanRemoteConfiguration(); <i class="conum" data-value="1"></i><b>(1)</b>
-conf.setHosts("localhost:1122")
+conf.setHosts("localhost:1122");
 
 InfinispanRemoteIdempotentRepository repo = new InfinispanRemoteIdempotentRepository("idempotent");  <i class="conum" data-value="2"></i><b>(2)</b>
 repo.setConfiguration(conf);
@@ -3673,24 +3741,22 @@ context.addRoutes(new RouteBuilder() {
 });</code></pre>
 </div>
 </div>
-<div class="colist arabic">
-<table>
-<tr>
-<td><i class="conum" data-value="1"></i><b>1</b></td>
-<td>Configure the cache</td>
-</tr>
-<tr>
-<td><i class="conum" data-value="2"></i><b>2</b></td>
-<td>Configure the repository bean</td>
-</tr>
-<tr>
-<td><i class="conum" data-value="3"></i><b>3</b></td>
-<td>Set the repository to the route</td>
-</tr>
-</table>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Configure the cache</p>
+</li>
+<li>
+<p>Configure the repository bean</p>
+</li>
+<li>
+<p>Set the repository to the route</p>
+</li>
+</ol>
 </div>
+</div>
+<div id="_tabs_1_xml--panel" class="tabpanel" aria-labelledby="_tabs_1_xml">
 <div class="listingblock">
-<div class="title">XML Example</div>
 <div class="content">
 <pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;bean id="infinispanRepo" class="org.apache.camel.component.infinispan.remote.InfinispanRemoteIdempotentRepository" destroy-method="stop"&gt;
   &lt;constructor-arg value="idempotent"/&gt; <i class="conum" data-value="1"></i><b>(1)</b>
@@ -3712,21 +3778,21 @@ context.addRoutes(new RouteBuilder() {
 &lt;/camelContext&gt;</code></pre>
 </div>
 </div>
-<div class="colist arabic">
-<table>
-<tr>
-<td><i class="conum" data-value="1"></i><b>1</b></td>
-<td>Set the name of the cache that will be used by the repository</td>
-</tr>
-<tr>
-<td><i class="conum" data-value="2"></i><b>2</b></td>
-<td>Configure the repository bean</td>
-</tr>
-<tr>
-<td><i class="conum" data-value="3"></i><b>3</b></td>
-<td>Set the repository to the route</td>
-</tr>
-</table>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Set the name of the cache that will be used by the repository</p>
+</li>
+<li>
+<p>Configure the repository bean</p>
+</li>
+<li>
+<p>Set the repository to the route</p>
+</li>
+</ol>
+</div>
+</div>
+</div>
 </div>
 </div>
 </div>
@@ -3734,13 +3800,25 @@ context.addRoutes(new RouteBuilder() {
 <h2 id="_using_the_infinispan_based_aggregation_repository"><a class="anchor" href="#_using_the_infinispan_based_aggregation_repository"></a>Using the Infinispan based aggregation repository</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>In this section we will use the Infinispan based aggregation repository.</p>
+<p>In this section, we will use the Infinispan based aggregation repository.</p>
 </div>
+<div id="_tabs_2" class="openblock tabs is-sync is-loading">
+<div class="content">
+<div class="ulist tablist">
+<ul>
+<li id="_tabs_2_java" class="tab">
+<p>Java</p>
+</li>
+<li id="_tabs_2_xml" class="tab">
+<p>XML</p>
+</li>
+</ul>
+</div>
+<div id="_tabs_2_java--panel" class="tabpanel" aria-labelledby="_tabs_2_java">
 <div class="listingblock">
-<div class="title">Java Example</div>
 <div class="content">
 <pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">InfinispanRemoteConfiguration conf = new InfinispanRemoteConfiguration(); <i class="conum" data-value="1"></i><b>(1)</b>
-conf.setHosts("localhost:1122")
+conf.setHosts("localhost:1122");
 
 InfinispanRemoteAggregationRepository repo = new InfinispanRemoteAggregationRepository();  <i class="conum" data-value="2"></i><b>(2)</b>
 repo.setCacheName("aggregation");
@@ -3759,24 +3837,22 @@ context.addRoutes(new RouteBuilder() {
 });</code></pre>
 </div>
 </div>
-<div class="colist arabic">
-<table>
-<tr>
-<td><i class="conum" data-value="1"></i><b>1</b></td>
-<td>Configure the cache</td>
-</tr>
-<tr>
-<td><i class="conum" data-value="2"></i><b>2</b></td>
-<td>Create the repository bean</td>
-</tr>
-<tr>
-<td><i class="conum" data-value="3"></i><b>3</b></td>
-<td>Set the repository to the route</td>
-</tr>
-</table>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Configure the cache</p>
+</li>
+<li>
+<p>Create the repository bean</p>
+</li>
+<li>
+<p>Set the repository to the route</p>
+</li>
+</ol>
 </div>
+</div>
+<div id="_tabs_2_xml--panel" class="tabpanel" aria-labelledby="_tabs_2_xml">
 <div class="listingblock">
-<div class="title">XML Example</div>
 <div class="content">
 <pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;bean id="infinispanRepo" class="org.apache.camel.component.infinispan.remote.InfinispanRemoteAggregationRepository" destroy-method="stop"&gt;
   &lt;constructor-arg value="aggregation"/&gt; <i class="conum" data-value="1"></i><b>(1)</b>
@@ -3802,21 +3878,21 @@ context.addRoutes(new RouteBuilder() {
 &lt;/camelContext&gt;</code></pre>
 </div>
 </div>
-<div class="colist arabic">
-<table>
-<tr>
-<td><i class="conum" data-value="1"></i><b>1</b></td>
-<td>Set the name of the cache that will be used by the repository</td>
-</tr>
-<tr>
-<td><i class="conum" data-value="2"></i><b>2</b></td>
-<td>Configure the repository bean</td>
-</tr>
-<tr>
-<td><i class="conum" data-value="3"></i><b>3</b></td>
-<td>Set the repository to the route</td>
-</tr>
-</table>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Set the name of the cache that will be used by the repository</p>
+</li>
+<li>
+<p>Configure the repository bean</p>
+</li>
+<li>
+<p>Set the repository to the route</p>
+</li>
+</ol>
+</div>
+</div>
+</div>
 </div>
 <div class="admonitionblock note">
 <table>
@@ -3827,11 +3903,14 @@ context.addRoutes(new RouteBuilder() {
 <td class="content">
 <div class="paragraph">
 <p>With the release of Infinispan 11, it is required to set the encoding configuration on any cache created. This is critical for consuming events too.
-For more information have a look at <a href="https://infinispan.org/docs/stable/titles/developing/developing.html#data_encoding">Data Encoding and MediaTypes</a> in the official Infinispan documentation.</p>
+For more information, have a look at <a href="https://infinispan.org/docs/stable/titles/developing/developing.html#data_encoding">Data Encoding and MediaTypes</a> in the official Infinispan documentation.</p>
 </div>
 </td>
 </tr>
 </table>
+</div>
+<div class="paragraph">
+<p>Unresolved include directive in modules/ROOT/pages/infinispan-component.adoc - include::spring-boot:partial$starter.adoc[]</p>
 </div>
 </div>
 </div>
@@ -3840,6 +3919,8 @@ For more information have a look at <a href="https://infinispan.org/docs/stable/
 </main>
 </div>
 <footer class="footer">
+  <p>This page was built using the Antora default UI.</p>
+  <p>The source code for this UI is licensed under the terms of the MPL-2.0 license.</p>
 </footer>
 <script id="site-script" src="../../_/js/site.js" data-ui-root-path="../../_"></script>
 <script async src="../../_/js/vendor/highlight.js"></script>

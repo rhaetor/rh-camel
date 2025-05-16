@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>Aggregate :: Red Hat Camel Reference</title>
+    <title>Aggregate :: Red Hat build of Apache Camel</title>
     <meta name="description" content="Aggregates many messages into a single message">
     <meta name="generator" content="Antora 3.1.4">
     <link rel="stylesheet" href="../../../_/css/site.css">
@@ -12,7 +12,7 @@
 <header class="header">
   <nav class="navbar">
     <div class="navbar-brand">
-      <a class="navbar-item" href="../../manual/index.html">Red Hat build of Apache Camel manual</a>
+      <a class="navbar-item" href="/">Red Hat build of Apache Camel</a>
       <button class="navbar-burger" data-target="topbar-nav">
         <span></span>
         <span></span>
@@ -22,11 +22,12 @@
   </nav>
 </header>
 <div class="body">
-<div class="nav-container" data-component="components" data-version="next">
+<div class="nav-container" data-component="components" data-version="4.8.x">
   <aside class="nav">
     <div class="panels">
 <div class="nav-panel-menu is-active" data-panel="menu">
   <nav class="nav-menu">
+    <button class="nav-menu-toggle" aria-label="Toggle expand/collapse all" style="display: none"></button>
     <h3 class="title"><a href="../index.html">Camel Components</a></h3>
 <ul class="nav-list">
   <li class="nav-item" data-depth="0">
@@ -36,7 +37,46 @@
     <a class="nav-link" href="../index.html">Components</a>
 <ul class="nav-list">
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="../activemq-component.html">ActiveMQ</a>
+    <a class="nav-link" href="../activemq-component.html">ActiveMQ 5.x</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../activemq6-component.html">ActiveMQ 6.x</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../ai-summary.html">AI</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../chatscript-component.html">ChatScript</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../djl-component.html">Deep Java Library</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../langchain4j-chat-component.html">LangChain4j Chat</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../langchain4j-embeddings-component.html">LangChain4j Embeddings</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../langchain4j-tokenizer-component.html">LangChain4j Tokenizer</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../langchain4j-tools-component.html">LangChain4j Tools</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../langchain4j-web-search-component.html">LangChain4j Web Search</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../milvus-component.html">Milvus</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../pinecone-component.html">Pinecone</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../qdrant-component.html">Qdrant</a>
+  </li>
+</ul>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="../amqp-component.html">AMQP</a>
@@ -65,6 +105,15 @@
 <ul class="nav-list">
   <li class="nav-item" data-depth="3">
     <a class="nav-link" href="../aws2-athena-component.html">AWS Athena</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../aws-bedrock-component.html">AWS Bedrock</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../aws-bedrock-agent-component.html">AWS Bedrock Agent</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../aws-bedrock-agent-runtime-component.html">AWS Bedrock Agent Runtime</a>
   </li>
   <li class="nav-item" data-depth="3">
     <a class="nav-link" href="../aws-cloudtrail-component.html">AWS Cloudtrail</a>
@@ -169,7 +218,7 @@
     <a class="nav-link" href="../azure-storage-blob-component.html">Azure Storage Blob Service</a>
   </li>
   <li class="nav-item" data-depth="3">
-    <a class="nav-link" href="../azure-storage-datalake-component.html">Azure Storage Datalake Service</a>
+    <a class="nav-link" href="../azure-storage-datalake-component.html">Azure Storage Data Lake Service</a>
   </li>
   <li class="nav-item" data-depth="3">
     <a class="nav-link" href="../azure-storage-queue-component.html">Azure Storage Queue Service</a>
@@ -202,9 +251,6 @@
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="../cql-component.html">Cassandra CQL</a>
-  </li>
-  <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="../chatscript-component.html">ChatScript</a>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="../chunk-component.html">Chunk</a>
@@ -277,9 +323,6 @@
     <a class="nav-link" href="../debezium-sqlserver-component.html">Debezium SQL Server Connector</a>
   </li>
 </ul>
-  </li>
-  <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="../djl-component.html">Deep Java Library</a>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="../dhis2-component.html">DHIS2</a>
@@ -395,6 +438,9 @@
   </li>
   <li class="nav-item" data-depth="3">
     <a class="nav-link" href="../google-pubsub-component.html">Google Pubsub</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../google-pubsub-lite-component.html">Google PubSub Lite</a>
   </li>
   <li class="nav-item" data-depth="3">
     <a class="nav-link" href="../google-secret-manager-component.html">Google Secret Manager</a>
@@ -687,7 +733,7 @@
     <a class="nav-link" href="../ldif-component.html">LDIF</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="../log-component.html">Log</a>
+    <a class="nav-link" href="../log-component.html">Log Data</a>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="../lucene-component.html">Lucene</a>
@@ -900,10 +946,16 @@
     <a class="nav-link" href="../smb-component.html">SMB</a>
   </li>
   <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../smooks-component.html">Smooks</a>
+  </li>
+  <li class="nav-item" data-depth="2">
     <a class="nav-link" href="../smpp-component.html">SMPP</a>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="../snmp-component.html">SNMP</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../solr-component.html">Solr</a>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="../splunk-component.html">Splunk</a>
@@ -966,6 +1018,18 @@
     <a class="nav-link" href="../stub-component.html">Stub</a>
   </li>
   <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../tahu-summary.html">Tahu</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../tahu-edge-component.html">Tahu Edge Node / Device</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../tahu-host-component.html">Tahu Host Application</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
     <a class="nav-link" href="../telegram-component.html">Telegram</a>
   </li>
   <li class="nav-item" data-depth="2">
@@ -1026,7 +1090,7 @@
     <a class="nav-link" href="../whatsapp-component.html">WhatsApp</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="../wordpress-component.html">Wordpress</a>
+    <a class="nav-link" href="../wordpress-component.html">WordPress</a>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="../workday-component.html">Workday</a>
@@ -1419,7 +1483,13 @@
     <a class="nav-link" href="../others/openapi-java.html">Openapi Java</a>
   </li>
   <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../others/openapi-validator.html">Openapi Validator</a>
+  </li>
+  <li class="nav-item" data-depth="2">
     <a class="nav-link" href="../others/opentelemetry.html">OpenTelemetry</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../others/platform-http-jolokia.html">Platform HTTP Jolokia</a>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="../others/platform-http-main.html">Platform Http Main</a>
@@ -1567,7 +1637,7 @@
     <a class="nav-link" href="event-message.html">Event Message</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="failover-eip.html">Failover</a>
+    <a class="nav-link" href="failoverLoadBalancer-eip.html">Failover Load Balancer</a>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="faultToleranceConfiguration-eip.html">Fault Tolerance Configuration</a>
@@ -1597,13 +1667,13 @@
     <a class="nav-link" href="loadBalance-eip.html">Load Balance</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="log-eip.html">Log</a>
+    <a class="nav-link" href="log-eip.html">Logger</a>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="loop-eip.html">Loop</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="marshal-eip.html">Marshal EIP</a>
+    <a class="nav-link" href="marshal-eip.html">Marshal</a>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="message.html">Message</a>
@@ -1660,6 +1730,9 @@
     <a class="nav-link" href="point-to-point-channel.html">Point to Point Channel</a>
   </li>
   <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="poll-eip.html">Poll</a>
+  </li>
+  <li class="nav-item" data-depth="2">
     <a class="nav-link" href="pollEnrich-eip.html">Poll Enrich</a>
   </li>
   <li class="nav-item" data-depth="2">
@@ -1675,7 +1748,7 @@
     <a class="nav-link" href="publish-subscribe-channel.html">Publish Subscribe Channel</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="random-eip.html">Random</a>
+    <a class="nav-link" href="randomLoadBalancer-eip.html">Random Load Balancer</a>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="recipientList-eip.html">Recipient List</a>
@@ -1717,7 +1790,7 @@
     <a class="nav-link" href="rollback-eip.html">Rollback</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="roundRobin-eip.html">Round Robin</a>
+    <a class="nav-link" href="roundRobinLoadBalancer-eip.html">Round Robin Load Balancer</a>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="routingSlip-eip.html">Routing Slip</a>
@@ -1729,7 +1802,7 @@
     <a class="nav-link" href="sample-eip.html">Sample</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="scatter-gather.html">Scatter Gather</a>
+    <a class="nav-link" href="scatter-gather.html">Scatter-Gather</a>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="script-eip.html">Script</a>
@@ -1759,6 +1832,9 @@
     <a class="nav-link" href="setVariable-eip.html">Set Variable</a>
   </li>
   <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="setVariables-eip.html">Set Variables</a>
+  </li>
+  <li class="nav-item" data-depth="2">
     <a class="nav-link" href="sort-eip.html">Sort</a>
   </li>
   <li class="nav-item" data-depth="2">
@@ -1768,7 +1844,7 @@
     <a class="nav-link" href="step-eip.html">Step</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="sticky-eip.html">Sticky</a>
+    <a class="nav-link" href="stickyLoadBalancer-eip.html">Sticky Load Balancer</a>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="stop-eip.html">Stop</a>
@@ -1789,7 +1865,7 @@
     <a class="nav-link" href="toD-eip.html">To D</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="topic-eip.html">Topic</a>
+    <a class="nav-link" href="topicLoadBalancer-eip.html">Topic Load Balancer</a>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="transactional-client.html">Transactional Client</a>
@@ -1798,13 +1874,13 @@
     <a class="nav-link" href="transform-eip.html">Transform</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="unmarshal-eip.html">Unmarshal EIP</a>
+    <a class="nav-link" href="unmarshal-eip.html">Unmarshal</a>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="validate-eip.html">Validate</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="weighted-eip.html">Weighted</a>
+    <a class="nav-link" href="weightedLoadBalancer-eip.html">Weighted Load Balancer</a>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="wireTap-eip.html">Wire Tap</a>
@@ -1819,22 +1895,40 @@
 <div class="nav-panel-explore" data-panel="explore">
   <div class="context">
     <span class="title">Camel Components</span>
-    <span class="version">Next (Pre-release)</span>
+    <span class="version">4.8.x</span>
   </div>
   <ul class="components">
     <li class="component is-current">
-      <a class="title" href="../index.html">Camel Components</a>
+      <div class="title"><a href="../../4.10.x/index.html">Camel Components</a></div>
       <ul class="versions">
-        <li class="version is-current is-latest">
-          <a href="../index.html">Next (Pre-release)</a>
+        <li class="version is-latest">
+          <a href="../../4.10.x/index.html">4.10.x (LTS)</a>
+        </li>
+        <li class="version is-current">
+          <a href="../index.html">4.8.x</a>
+        </li>
+        <li class="version">
+          <a href="../../4.4.x/index.html">4.4.x</a>
+        </li>
+        <li class="version">
+          <a href="../../4.0.x/index.html">4.0.x</a>
         </li>
       </ul>
     </li>
     <li class="component">
-      <a class="title" href="../../../manual/index.html">User manual</a>
+      <div class="title"><a href="../../../manual/4.10.x/index.html">User manual</a></div>
       <ul class="versions">
         <li class="version is-latest">
-          <a href="../../../manual/index.html">default</a>
+          <a href="../../../manual/4.10.x/index.html">4.10.x</a>
+        </li>
+        <li class="version">
+          <a href="../../../manual/4.8.x/index.html">4.8.x</a>
+        </li>
+        <li class="version">
+          <a href="../../../manual/4.4.x/index.html">4.4.x</a>
+        </li>
+        <li class="version">
+          <a href="../../../manual/4.0.x/index.html">4.0.x</a>
         </li>
       </ul>
     </li>
@@ -1846,7 +1940,7 @@
 <main class="article">
 <div class="toolbar" role="navigation">
 <button class="nav-toggle"></button>
-  <a href="../../../manual/index.html" class="home-link"></a>
+  <a href="../../../manual/4.10.x/index.html" class="home-link"></a>
 <nav class="breadcrumbs" aria-label="breadcrumbs">
   <ul>
     <li><a href="../index.html">Camel Components</a></li>
@@ -1854,6 +1948,16 @@
     <li><a href="aggregate-eip.html">Aggregate</a></li>
   </ul>
 </nav>
+<div class="page-versions">
+  <button class="version-menu-toggle" title="Show other versions of page">4.8.x</button>
+  <div class="version-menu">
+    <a class="version" href="../../4.10.x/eips/aggregate-eip.html">4.10.x (LTS)</a>
+    <a class="version is-current" href="aggregate-eip.html">4.8.x</a>
+    <a class="version" href="../../4.4.x/eips/aggregate-eip.html">4.4.x</a>
+    <a class="version" href="../../4.0.x/eips/aggregate-eip.html">4.0.x</a>
+  </div>
+</div>
+<div class="edit-this-page"><a href="https://github.com/rhaetor/rh-camel-jboss/edit/camel-4.8.0-branch/core/camel-core-engine/src/main/docs/modules/eips/pages/aggregate-eip.adoc">Edit this Page</a></div>
 </div>
   <div class="content">
 <aside class="toc sidebar" data-title="Contents" data-levels="2">
@@ -1867,10 +1971,10 @@
 <p>The
 <a href="http://www.enterpriseintegrationpatterns.com/Aggregator.html">Aggregator</a>
 from the <a href="enterprise-integration-patterns.html" class="xref page">EIP patterns</a> allows
-you to combine a number of messages together into a single message.</p>
+you to combine a number of messages into a single message.</p>
 </div>
 <div class="paragraph">
-<p>How do we combine the results of individual, but related messages so that they can be processed as a whole?</p>
+<p>How do we combine the results of individual, but related, messages so that they can be processed as a whole?</p>
 </div>
 <div class="imageblock">
 <div class="content">
@@ -1885,7 +1989,7 @@ you to combine a number of messages together into a single message.</p>
 </div>
 <div class="paragraph">
 <p>The logic for combing messages together is <em>correlated</em> in buckets based on a <em>correlation key</em>.
-Messages with the same correlation key is aggregated together, using an <code>AggregationStrategy</code>.</p>
+Messages with the same correlation key are aggregated together, using an <code>AggregationStrategy</code>.</p>
 </div>
 </div>
 </div>
@@ -1893,7 +1997,7 @@ Messages with the same correlation key is aggregated together, using an <code>Ag
 <h2 id="_aggregate_options"><a class="anchor" href="#_aggregate_options"></a>Aggregate options</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>The Aggregate eip supports 28 options, which are listed below.</p>
+<p>The Aggregate eip supports 7 options, which are listed below.</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
 <colgroup>
@@ -2156,10 +2260,96 @@ Messages with the same correlation key is aggregated together, using an <code>Ag
 </div>
 </div>
 <div class="sect1">
+<h2 id="_exchange_properties"><a class="anchor" href="#_exchange_properties"></a>Exchange properties</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>The Aggregate eip supports 7 exchange properties, which are listed below.</p>
+</div>
+<div class="paragraph">
+<p>The exchange properties are set on the <code>Exchange</code> by the EIP, unless otherwise specified in the description.
+This means those properties are available after this EIP has completed processing the <code>Exchange</code>.</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 20%;">
+<col style="width: 50%;">
+<col style="width: 10%;">
+<col style="width: 20%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Name</th>
+<th class="tableblock halign-left valign-top">Description</th>
+<th class="tableblock halign-center valign-top">Default</th>
+<th class="tableblock halign-left valign-top">Type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong id="_option_CamelAggregatedSize">CamelAggregatedSize</strong></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>Number of exchanges that was grouped together.</p>
+</div></div></td>
+<td class="tableblock halign-center valign-top"></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">int</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong id="_option_CamelAggregatedTimeout">CamelAggregatedTimeout</strong></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>The time in millis this group will timeout.</p>
+</div></div></td>
+<td class="tableblock halign-center valign-top"></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">long</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong id="_option_CamelAggregatedCompletedBy">CamelAggregatedCompletedBy</strong></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>Enum that tell how this group was completed.</p>
+</div></div></td>
+<td class="tableblock halign-center valign-top"></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">String</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong id="_option_CamelAggregatedCorrelationKey">CamelAggregatedCorrelationKey</strong></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>The correlation key for this aggregation group.</p>
+</div></div></td>
+<td class="tableblock halign-center valign-top"></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">String</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong id="_option_CamelAggregationCompleteCurrentGroup">CamelAggregationCompleteCurrentGroup</strong></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>Input property. Set to true to force completing the current group. This allows to overrule any existing completion predicates, sizes, timeouts etc, and complete the group.</p>
+</div></div></td>
+<td class="tableblock halign-center valign-top"></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">boolean</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong id="_option_CamelAggregationCompleteAllGroups">CamelAggregationCompleteAllGroups</strong></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>Input property. Set to true to force completing all the groups (excluding this message). This allows to overrule any existing completion predicates, sizes, timeouts etc, and complete the group. This message is considered a signal message only, the message headers/contents will not be processed otherwise. Instead use CamelAggregationCompleteAllGroupsInclusive if this message should be included in the aggregator.</p>
+</div></div></td>
+<td class="tableblock halign-center valign-top"></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">boolean</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong id="_option_CamelAggregationCompleteAllGroupsInclusive">CamelAggregationCompleteAllGroupsInclusive</strong></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>Input property. Set to true to force completing all the groups (including this message). This allows to overrule any existing completion predicates, sizes, timeouts etc, and complete the group.</p>
+</div></div></td>
+<td class="tableblock halign-center valign-top"></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">boolean</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="sect1">
 <h2 id="_worker_pools"><a class="anchor" href="#_worker_pools"></a>Worker pools</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>The aggregate EIP will always use a worker pool, that is used to process all the outgoing messages from the aggregator.
+<p>The aggregate EIP will always use a worker pool used to process all the outgoing messages from the aggregator.
 The worker pool is determined accordingly:</p>
 </div>
 <div class="ulist">
@@ -2175,7 +2365,7 @@ However, the thread pool size and other configurations can be configured using <
 <p>Otherwise, a single threaded worker pool is created.</p>
 </li>
 <li>
-<p>In order to achieve synchronous aggregation, use an instance of <code>SynchronousExecutorService</code> for the
+<p>To achieve synchronous aggregation, use an instance of <code>SynchronousExecutorService</code> for the
 <code>executorService</code> option. The aggregated output will execute in the same thread that called the aggregator.</p>
 </li>
 </ul>
@@ -2191,9 +2381,10 @@ that becomes the next old, when the next message is aggregated, and so forth.</p
 </div>
 <div class="paragraph">
 <p>Possible implementations include performing some kind of combining or
-delta processing, such as adding line items together into an invoice or
+delta processing.
+For instance, adding line items together into an invoice or
 just using the newest exchange and removing old exchanges such as for
-state tracking or market data prices; where old values are of little
+state tracking or market data prices, where old values are of little
 use.</p>
 </div>
 <div class="paragraph">
@@ -2269,50 +2460,6 @@ be used for creating commonly used aggregation strategies without having to crea
 </table>
 </div>
 <div class="sect2">
-<h3 id="_exchange_properties"><a class="anchor" href="#_exchange_properties"></a>Exchange Properties</h3>
-<div class="paragraph">
-<p>The completed (outgoing) exchange from the Aggregate EIP contains the following information
-as exchange properties, allowing you to know how the exchange was completed, and how
-many messages were combined.</p>
-</div>
-<table class="tableblock frame-all grid-all stretch">
-<colgroup>
-<col style="width: 30%;">
-<col style="width: 10%;">
-<col style="width: 60%;">
-</colgroup>
-<thead>
-<tr>
-<th class="tableblock halign-left valign-top">Property</th>
-<th class="tableblock halign-left valign-top">Type</th>
-<th class="tableblock halign-left valign-top">Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>CamelAggregatedSize</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code><code>int</code></code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">The total number of messages aggregated.</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>CamelAggregatedCompletedBy</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code><code>String</code></code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">The condition that triggered the completion. Possible values are size, timeout, interval, predicate, force, strategy, and consumer. The consumer value represents the completion from batch consumer.</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>CamelAggregatedCorrelationKey</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code><code>String</code></code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">The correlation identifier as a <code>String</code>.</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>CamelAggregatedTimeout</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code><code>long</code></code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">The time-out in milliseconds as set by the completion time-out.</p></td>
-</tr>
-</tbody>
-</table>
-</div>
-<div class="sect2">
 <h3 id="_aggregate_by_grouping_exchanges"><a class="anchor" href="#_aggregate_by_grouping_exchanges"></a>Aggregate by grouping exchanges</h3>
 <div class="paragraph">
 <p>In the route below we group all the exchanges together using
@@ -2321,8 +2468,8 @@ many messages were combined.</p>
 <div class="listingblock">
 <div class="content">
 <pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">from("direct:start")
-    // aggregate all using same expression and group the
-    // exchanges so we get one single exchange containing all
+    // aggregates all using the same expression and group the
+    // exchanges, so we get one single exchange containing all
     // the others
     .aggregate(new GroupedExchangeAggregationStrategy()).constant(true)
     // wait for 0.5 seconds to aggregate
@@ -2353,11 +2500,11 @@ then you can use the
 abstract class.</p>
 </div>
 <div class="paragraph">
-<p>The completed Exchange that is sent out of the aggregator will contain the <code>List&lt;V&gt;</code> in
+<p>The completed Exchange sent out of the aggregator will contain the <code>List&lt;V&gt;</code> in
 the message body.</p>
 </div>
 <div class="paragraph">
-<p>For example to aggregate a <code>List&lt;Integer&gt;</code> you can extend this class as
+<p>For example, to aggregate a <code>List&lt;Integer&gt;</code> you can extend this class as
 shown below, and implement the <code>getValue</code> method:</p>
 </div>
 <div class="listingblock">
@@ -2366,7 +2513,7 @@ shown below, and implement the <code>getValue</code> method:</p>
 
     @Override
     public Integer getValue(Exchange exchange) {
-        // the message body contains a number, so just return that as-is
+        // the message body contains a number, so return that as-is
         return exchange.getIn().getBody(Integer.class);
     }
 }</code></pre>
@@ -2405,7 +2552,7 @@ from the <code>timeout</code> method.</p>
 your own <code>org.apache.camel.spi.AggregationRepository</code>.</p>
 </div>
 <div class="paragraph">
-<p>If you need persistent repository then Camel provides numerous implementations, such as from the
+<p>If you need a persistent repository, then Camel provides numerous implementations, such as from the
 <a href="../caffeine-cache-component.html" class="xref page">Caffeine</a>,
 <a href="../cql-component.html" class="xref page">CassandraQL</a>,
 <a href="../ehcache-component.html" class="xref page">EHCache</a>,
@@ -2422,28 +2569,28 @@ or <a href="../sql-component.html" class="xref page">SQL</a> components.</p>
 <h2 id="_completion"><a class="anchor" href="#_completion"></a>Completion</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>When aggregation <a href="../../../manual/exchange.html" class="xref page">Exchange</a>s at some point you need to
-indicate that the aggregated exchanges is complete, so they can be sent
+<p>When aggregation <a href="../../../manual/4.10.x/exchange.html" class="xref page">Exchange</a>s at some point, you need to
+indicate that the aggregated exchanges are complete, so they can be sent
 out of the aggregator. Camel allows you to indicate completion in
 various ways as follows:</p>
 </div>
 <div class="ulist">
 <ul>
 <li>
-<p><em>completionTimeout</em> - Is an inactivity timeout in which is triggered if
+<p><em>completionTimeout</em>: Is an inactivity timeout in that is triggered if
 no new exchanges have been aggregated for that particular correlation
 key within the period.</p>
 </li>
 <li>
-<p><em>completionInterval</em> - Once every X period all the current aggregated
+<p><em>completionInterval</em>: Once every X period all the current aggregated
 exchanges are completed.</p>
 </li>
 <li>
-<p><em>completionSize</em> - Is a number indicating that after X aggregated
+<p><em>completionSize</em>: Is a number indicating that after X aggregated
 exchanges its complete.</p>
 </li>
 <li>
-<p><em>completionPredicate</em> - Runs a <a href="../../../manual/predicate.html" class="xref page">Predicate</a> when a new
+<p><em>completionPredicate</em>: Runs a <a href="../../../manual/4.10.x/predicate.html" class="xref page">Predicate</a> when a new
 exchange is aggregated to determine if we are complete or not.
 The configured aggregationStrategy can implement the
 Predicate interface and will be used as the completionPredicate if no
@@ -2453,23 +2600,23 @@ the completionPredicate in pre-complete check mode. See further below
 for more details.</p>
 </li>
 <li>
-<p><em>completionFromBatchConsumer</em> - Special option for
-<a href="../../../manual/batch-consumer.html" class="xref page">Batch Consumer</a> which allows you to complete
-when all the messages from the batch has been aggregated.</p>
+<p><em>completionFromBatchConsumer</em>: Special option for
+<a href="../../../manual/4.10.x/batch-consumer.html" class="xref page">Batch Consumer</a>, which allows you to complete
+when all the messages from the batch have been aggregated.</p>
 </li>
 <li>
-<p><em>forceCompletionOnStop</em> - Indicates to complete all current
+<p><em>forceCompletionOnStop</em>: Indicates to complete all current
 aggregated exchanges when the context is stopped</p>
 </li>
 <li>
-<p><em>AggregateController</em> - which allows to use an external source (<code>AggregateController</code> implementation) to complete groups or all groups.
+<p><em>AggregateController</em>: which allows to use an external source (<code>AggregateController</code> implementation) to complete groups or all groups.
 This can be done using Java or JMX API.</p>
 </li>
 </ul>
 </div>
 <div class="paragraph">
 <p>All the different completions are per correlation key. You can
-combine them in any way you like. It&#8217;s basically the first which
+combine them in any way you like. It&#8217;s basically the first that
 triggers that wins. So you can use a completion size together with a
 completion timeout. Only completionTimeout and completionInterval cannot
 be used at the same time.</p>
@@ -2481,14 +2628,14 @@ be used at the same time.</p>
 <h3 id="_pre_completion_mode"><a class="anchor" href="#_pre_completion_mode"></a>Pre-completion mode</h3>
 <div class="paragraph">
 <p>There can be use-cases where you want the incoming
-<a href="../../../manual/exchange.html" class="xref page">Exchange</a> to determine if the correlation group
+<a href="../../../manual/4.10.x/exchange.html" class="xref page">Exchange</a> to determine if the correlation group
 should pre-complete, and then the incoming
-<a href="../../../manual/exchange.html" class="xref page">Exchange</a> is starting a new group from scratch.
+<a href="../../../manual/4.10.x/exchange.html" class="xref page">Exchange</a> is starting a new group from scratch.
 The pre-completion mode must be enabled by the <code>AggregationStrategy</code> by overriding the <code>canPreComplete</code> method
 to return a <code>true</code> value.</p>
 </div>
 <div class="paragraph">
-<p>When pre completion is enabled then the <code>preComplete</code> method is invoked:</p>
+<p>When pre-completion is enabled then the <code>preComplete</code> method is invoked:</p>
 </div>
 <div class="listingblock">
 <div class="content">
@@ -2504,7 +2651,7 @@ boolean preComplete(Exchange oldExchange, Exchange newExchange);</code></pre>
 </div>
 </div>
 <div class="paragraph">
-<p>If the <code>preComplete</code> method returns <code>true</code>, then the existing correlation groups is
+<p>If the <code>preComplete</code> method returns <code>true</code>, then the existing correlation group is
 completed (without aggregating the incoming exchange (<code>newExchange</code>).
 Then the <code>newExchange</code> is used to start the correlation group from scratch,
 so the group would contain only that new incoming exchange. This is
@@ -2550,7 +2697,7 @@ to determine whether to pre complete.</p>
 completions</p>
 </li>
 <li>
-<p>any other completion are not used (such as by size, from batch consumer etc)</p>
+<p>any other completions are not used (such as by size, from batch consumer, etc.)</p>
 </li>
 <li>
 <p><em>eagerCheckCompletion</em> is implied as <code>true</code>, but the option has no effect</p>
@@ -2570,18 +2717,15 @@ You must <strong>not</strong> throw any exceptions from the <code>onCompletion</
 </div>
 </div>
 <div class="sect2">
-<h3 id="_completing_current_group_decided_from_the_aggregationstrategy"><a class="anchor" href="#_completing_current_group_decided_from_the_aggregationstrategy"></a>Completing current group decided from the AggregationStrategy</h3>
+<h3 id="_completing_the_current_group_decided_from_the_aggregationstrategy"><a class="anchor" href="#_completing_the_current_group_decided_from_the_aggregationstrategy"></a>Completing the current group decided from the AggregationStrategy</h3>
 <div class="paragraph">
-<p>The <code>AggregationStrategy</code> supports checking for the</p>
-</div>
-<div class="paragraph">
-<p>the exchange property (<code>Exchange.AGGREGATION_COMPLETE_CURRENT_GROUP</code>)
+<p>The <code>AggregationStrategy</code> supports checking for the exchange property (<code>Exchange.AGGREGATION_COMPLETE_CURRENT_GROUP</code>)
 on the returned <code>Exchange</code> that contains a boolean to indicate if the current
 group should be completed. This allows to overrule any existing
-completion predicates / sizes / timeouts etc, and complete the group.</p>
+completion predicates / sizes / timeouts etc., and complete the group.</p>
 </div>
 <div class="paragraph">
-<p>For example the following logic will complete the
+<p>For example, the following logic will complete the
 group if the message body size is larger than 5. This is done by setting
 the exchange property <code>Exchange.AGGREGATION_COMPLETE_CURRENT_GROUP</code> to <code>true</code>.</p>
 </div>
@@ -2613,7 +2757,7 @@ indicating if all previous groups should be completed.</p>
 </div>
 <div class="paragraph">
 <p>This allows to overrule any existing
-completion predicates / sizes / timeouts etc, and complete all the existing
+completion predicates / sizes / timeouts etc., and complete all the existing
 previous group.</p>
 </div>
 <div class="paragraph">
@@ -2669,7 +2813,7 @@ be used to force completing groups of exchanges, or query its current
 runtime statistics.</p>
 </div>
 <div class="paragraph">
-<p>The aggregator provides a default implementation if no custom have been
+<p>The aggregator provides a default implementation if no custom one has been
 configured, which can be accessed using <code>getAggregateController()</code> method.
 Though it may be easier to configure a controller in the route using
 <code>aggregateController</code> as shown below:</p>
@@ -2687,7 +2831,7 @@ from("direct:start")
 </div>
 <div class="paragraph">
 <p>Then there is API on <code>AggregateController</code> to force completion. For
-example to complete a group with key foo:</p>
+example, to complete a group with key foo:</p>
 </div>
 <div class="listingblock">
 <div class="content">
@@ -2711,7 +2855,7 @@ A value of 1 is returned if the foo group existed, otherwise 0 is returned.</p>
 refer to a bean with the controller implementation, which is looked up in the registry.</p>
 </div>
 <div class="paragraph">
-<p>When using Spring XML you can create the bean with <code>&lt;bean&gt;</code> as shown:</p>
+<p>When using Spring XML, you can create the bean with <code>&lt;bean&gt;</code> as shown:</p>
 </div>
 <div class="listingblock">
 <div class="content">
@@ -2745,7 +2889,7 @@ refer to a bean with the controller implementation, which is looked up in the re
 <code>org.apache.camel.AggregationStrategy</code> interface,
 which means your logic would be tied to the Camel API.
 You can use a bean for the logic and let Camel adapt to your
-bean. To use a bean a convention must be followed:</p>
+bean. To use a bean, then a convention must be followed:</p>
 </div>
 <div class="ulist">
 <ul>
@@ -2759,17 +2903,17 @@ bean. To use a bean a convention must be followed:</p>
 <p>the method can be static or non-static</p>
 </li>
 <li>
-<p>the method must have 2 or more parameters</p>
+<p>the method must have two or more parameters</p>
 </li>
 <li>
 <p>the parameters are paired, so the first half is applied to the
 <code>oldExchange</code>, and the reminder half is for the <code>newExchange</code>.
- Therefore, there must be an equal number of parameters, eg 2, 4, 6 etc.</p>
+ Therefore, there must be an equal number of parameters, e.g., 2, 4, 6, etc.</p>
 </li>
 </ul>
 </div>
 <div class="paragraph">
-<p>The paired methods is expected to be ordered as follows:</p>
+<p>The paired methods are expected to be ordered as follows:</p>
 </div>
 <div class="ulist">
 <ul>
@@ -2777,10 +2921,10 @@ bean. To use a bean a convention must be followed:</p>
 <p>the first parameter is the message body</p>
 </li>
 <li>
-<p>optional, the 2nd parameter is a <code>Map</code> of the headers</p>
+<p>optional, the second parameter is a <code>Map</code> of the headers</p>
 </li>
 <li>
-<p>optional, the 3rd parameter is a <code>Map</code> of the exchange properties</p>
+<p>optional, the third parameter is a <code>Map</code> of the exchange properties</p>
 </li>
 </ul>
 </div>
@@ -2788,8 +2932,8 @@ bean. To use a bean a convention must be followed:</p>
 <p>This convention is best explained with some examples.</p>
 </div>
 <div class="paragraph">
-<p>In the method below, we have only 2 parameters, so the 1st parameter is
-the body of the <code>oldExchange</code>, and the 2nd is paired to the body of the
+<p>In the method below, we have only two parameters, so the first parameter is
+the body of the <code>oldExchange</code>, and the second is paired to the body of the
 <code>newExchange</code>:</p>
 </div>
 <div class="listingblock">
@@ -2800,10 +2944,10 @@ the body of the <code>oldExchange</code>, and the 2nd is paired to the body of t
 </div>
 </div>
 <div class="paragraph">
-<p>In the method below, we have only 4 parameters, so the 1st parameter is
-the body of the <code>oldExchange</code>, and the 2nd is the <code>Map</code> of the
-<code>oldExchange</code> headers, and the 3rd is paired to the body of the <code>newExchange</code>,
-and the 4th parameter is the <code>Map</code> of the <code>newExchange</code> headers:</p>
+<p>In the method below, we have only four parameters, so the first parameter is
+the body of the <code>oldExchange</code>, and the second is the <code>Map</code> of the
+<code>oldExchange</code> headers, and the third is paired to the body of the <code>newExchange</code>,
+and the fourth parameter is the <code>Map</code> of the <code>newExchange</code> headers:</p>
 </div>
 <div class="listingblock">
 <div class="content">
@@ -2813,7 +2957,7 @@ and the 4th parameter is the <code>Map</code> of the <code>newExchange</code> he
 </div>
 </div>
 <div class="paragraph">
-<p>And finally if we have 6 parameters, that includes the exchange properties:</p>
+<p>And finally, if we have six parameters, that includes the exchange properties:</p>
 </div>
 <div class="listingblock">
 <div class="content">
@@ -2824,7 +2968,7 @@ and the 4th parameter is the <code>Map</code> of the <code>newExchange</code> he
 </div>
 </div>
 <div class="paragraph">
-<p>To use this with the aggregate EIP we can use a bean with the aggregate logic as follows:</p>
+<p>To use this with the aggregate EIP, we can use a bean with the aggregate logic as follows:</p>
 </div>
 <div class="listingblock">
 <div class="content">
@@ -2868,7 +3012,7 @@ public void configure() throws Exception {
 </div>
 </div>
 <div class="paragraph">
-<p>And if the bean has only one method we do not need to specify the name
+<p>And if the bean has only one method, we do not need to specify the name
 of the method:</p>
 </div>
 <div class="listingblock">
@@ -2896,7 +3040,7 @@ of the method:</p>
 </div>
 </div>
 <div class="paragraph">
-<p>If you are using XML DSL then we need to declare a <code>&lt;bean&gt;</code> with the bean:</p>
+<p>If you are using XML DSL, then we need to declare a <code>&lt;bean&gt;</code> with the bean:</p>
 </div>
 <div class="listingblock">
 <div class="content">
@@ -2924,7 +3068,7 @@ to call:</p>
 </div>
 </div>
 <div class="paragraph">
-<p>When using XML DSL you can also specify the bean class directly in <code>aggregationStrategy</code>
+<p>When using XML DSL, you can also specify the bean class directly in <code>aggregationStrategy</code>
 using the <code>#class:</code> syntax as shown:</p>
 </div>
 <div class="listingblock">
@@ -2941,8 +3085,8 @@ using the <code>#class:</code> syntax as shown:</p>
 </div>
 </div>
 <div class="paragraph">
-<p>You can use this in XML DSL when you are not using the classic Spring XML files;
-where you use XML only for Camel routes.</p>
+<p>You can use this in XML DSL when you are not using the classic Spring XML files (
+where you use XML only for Camel routes).</p>
 </div>
 <div class="sect2">
 <h3 id="_aggregating_when_no_data"><a class="anchor" href="#_aggregating_when_no_data"></a>Aggregating when no data</h3>
@@ -2953,7 +3097,7 @@ is not <code>null</code>. In cases where you want to have the method invoked, ev
 then set the <code>strategyMethodAllowNull</code> to <code>true</code>.</p>
 </div>
 <div class="paragraph">
-<p>When using beans this can be configured a bit easier using the <code>beanAllowNull</code> method
+<p>When using beans, this can be configured a bit easier using the <code>beanAllowNull</code> method
 from <code>AggregationStrategies</code> as shown:</p>
 </div>
 <div class="listingblock">
@@ -2991,8 +3135,8 @@ situation we could not get any data from the "seda:foo" endpoint, and
 a timeout was hit after 1 second.</p>
 </div>
 <div class="paragraph">
-<p>So if we need to do special merge logic we would need to set <code>setAllowNullNewExchange=true</code>.
-If we don&#8217;t do this then on timeout the append method would normally not be
+<p>So if we need to do special merge logic, we would need to set <code>setAllowNullNewExchange=true</code>.
+If we didn&#8217;t do this, then on timeout the append method would normally not be
 invoked, meaning the <a href="content-enricher.html" class="xref page">Content Enricher</a> did
 not merge/change the message.</p>
 </div>
@@ -3022,9 +3166,9 @@ set it to <code>true</code> as shown below:</p>
 <div class="sect2">
 <h3 id="_aggregating_with_different_body_types"><a class="anchor" href="#_aggregating_with_different_body_types"></a>Aggregating with different body types</h3>
 <div class="paragraph">
-<p>When for example using <code>strategyMethodAllowNull</code> as <code>true</code>, then the
-parameter types of the message bodies does not have to be the same. For
-example suppose we want to aggregate from a <code>com.foo.User</code> type to a
+<p>When, for example, using <code>strategyMethodAllowNull</code> as <code>true</code>, then the
+parameter type of the message bodies does not have to be the same.
+For example suppose we want to aggregate from a <code>com.foo.User</code> type to a
 <code>List&lt;String&gt;</code> that contains the name of the user. We could code a bean as follows:</p>
 </div>
 <div class="listingblock">
@@ -3043,7 +3187,7 @@ example suppose we want to aggregate from a <code>com.foo.User</code> type to a
 </div>
 <div class="paragraph">
 <p>Notice that the return type is a <code>List</code> which we want to contain the name of the users.
-The 1st parameter is the <code>List</code> of names, and the 2nd parameter is the incoming <code>com.foo.User</code> type.</p>
+The first parameter is the <code>List</code> of names, and the second parameter is the incoming <code>com.foo.User</code> type.</p>
 </div>
 </div>
 </div>
@@ -3053,6 +3197,8 @@ The 1st parameter is the <code>List</code> of names, and the 2nd parameter is th
 </main>
 </div>
 <footer class="footer">
+  <p>This page was built using the Antora default UI.</p>
+  <p>The source code for this UI is licensed under the terms of the MPL-2.0 license.</p>
 </footer>
 <script id="site-script" src="../../../_/js/site.js" data-ui-root-path="../../../_"></script>
 <script async src="../../../_/js/vendor/highlight.js"></script>

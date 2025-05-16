@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>Components :: Red Hat Camel Reference</title>
+    <title>Components :: Red Hat build of Apache Camel</title>
     <meta name="generator" content="Antora 3.1.4">
     <link rel="stylesheet" href="../../_/css/site.css">
   </head>
@@ -11,7 +11,7 @@
 <header class="header">
   <nav class="navbar">
     <div class="navbar-brand">
-      <a class="navbar-item" href="../../manual/index.html">Red Hat build of Apache Camel manual</a>
+      <a class="navbar-item" href="/">Red Hat build of Apache Camel</a>
       <button class="navbar-burger" data-target="topbar-nav">
         <span></span>
         <span></span>
@@ -21,11 +21,12 @@
   </nav>
 </header>
 <div class="body">
-<div class="nav-container" data-component="components" data-version="next">
+<div class="nav-container" data-component="components" data-version="4.8.x">
   <aside class="nav">
     <div class="panels">
 <div class="nav-panel-menu is-active" data-panel="menu">
   <nav class="nav-menu">
+    <button class="nav-menu-toggle" aria-label="Toggle expand/collapse all" style="display: none"></button>
     <h3 class="title"><a href="index.html">Camel Components</a></h3>
 <ul class="nav-list">
   <li class="nav-item" data-depth="0">
@@ -35,7 +36,46 @@
     <a class="nav-link" href="index.html">Components</a>
 <ul class="nav-list">
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="activemq-component.html">ActiveMQ</a>
+    <a class="nav-link" href="activemq-component.html">ActiveMQ 5.x</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="activemq6-component.html">ActiveMQ 6.x</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="ai-summary.html">AI</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="chatscript-component.html">ChatScript</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="djl-component.html">Deep Java Library</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="langchain4j-chat-component.html">LangChain4j Chat</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="langchain4j-embeddings-component.html">LangChain4j Embeddings</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="langchain4j-tokenizer-component.html">LangChain4j Tokenizer</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="langchain4j-tools-component.html">LangChain4j Tools</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="langchain4j-web-search-component.html">LangChain4j Web Search</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="milvus-component.html">Milvus</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="pinecone-component.html">Pinecone</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="qdrant-component.html">Qdrant</a>
+  </li>
+</ul>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="amqp-component.html">AMQP</a>
@@ -64,6 +104,15 @@
 <ul class="nav-list">
   <li class="nav-item" data-depth="3">
     <a class="nav-link" href="aws2-athena-component.html">AWS Athena</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="aws-bedrock-component.html">AWS Bedrock</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="aws-bedrock-agent-component.html">AWS Bedrock Agent</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="aws-bedrock-agent-runtime-component.html">AWS Bedrock Agent Runtime</a>
   </li>
   <li class="nav-item" data-depth="3">
     <a class="nav-link" href="aws-cloudtrail-component.html">AWS Cloudtrail</a>
@@ -168,7 +217,7 @@
     <a class="nav-link" href="azure-storage-blob-component.html">Azure Storage Blob Service</a>
   </li>
   <li class="nav-item" data-depth="3">
-    <a class="nav-link" href="azure-storage-datalake-component.html">Azure Storage Datalake Service</a>
+    <a class="nav-link" href="azure-storage-datalake-component.html">Azure Storage Data Lake Service</a>
   </li>
   <li class="nav-item" data-depth="3">
     <a class="nav-link" href="azure-storage-queue-component.html">Azure Storage Queue Service</a>
@@ -201,9 +250,6 @@
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="cql-component.html">Cassandra CQL</a>
-  </li>
-  <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="chatscript-component.html">ChatScript</a>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="chunk-component.html">Chunk</a>
@@ -276,9 +322,6 @@
     <a class="nav-link" href="debezium-sqlserver-component.html">Debezium SQL Server Connector</a>
   </li>
 </ul>
-  </li>
-  <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="djl-component.html">Deep Java Library</a>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="dhis2-component.html">DHIS2</a>
@@ -394,6 +437,9 @@
   </li>
   <li class="nav-item" data-depth="3">
     <a class="nav-link" href="google-pubsub-component.html">Google Pubsub</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="google-pubsub-lite-component.html">Google PubSub Lite</a>
   </li>
   <li class="nav-item" data-depth="3">
     <a class="nav-link" href="google-secret-manager-component.html">Google Secret Manager</a>
@@ -686,7 +732,7 @@
     <a class="nav-link" href="ldif-component.html">LDIF</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="log-component.html">Log</a>
+    <a class="nav-link" href="log-component.html">Log Data</a>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="lucene-component.html">Lucene</a>
@@ -899,16 +945,49 @@
     <a class="nav-link" href="smb-component.html">SMB</a>
   </li>
   <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="smooks-component.html">Smooks</a>
+  </li>
+  <li class="nav-item" data-depth="2">
     <a class="nav-link" href="smpp-component.html">SMPP</a>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="snmp-component.html">SNMP</a>
   </li>
   <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="solr-component.html">Solr</a>
+  </li>
+  <li class="nav-item" data-depth="2">
     <a class="nav-link" href="splunk-component.html">Splunk</a>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="splunk-hec-component.html">Splunk HEC</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="spring-summary.html">Spring</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="spring-batch-component.html">Spring Batch</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="spring-event-component.html">Spring Event</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="spring-jdbc-component.html">Spring JDBC</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="spring-ldap-component.html">Spring LDAP</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="spring-rabbitmq-component.html">Spring RabbitMQ</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="spring-redis-component.html">Spring Redis</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="spring-ws-component.html">Spring WebService</a>
+  </li>
+</ul>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="sql-component.html">SQL</a>
@@ -936,6 +1015,18 @@
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="stub-component.html">Stub</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="tahu-summary.html">Tahu</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="tahu-edge-component.html">Tahu Edge Node / Device</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="tahu-host-component.html">Tahu Host Application</a>
+  </li>
+</ul>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="telegram-component.html">Telegram</a>
@@ -998,7 +1089,7 @@
     <a class="nav-link" href="whatsapp-component.html">WhatsApp</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="wordpress-component.html">Wordpress</a>
+    <a class="nav-link" href="wordpress-component.html">WordPress</a>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="workday-component.html">Workday</a>
@@ -1391,7 +1482,13 @@
     <a class="nav-link" href="others/openapi-java.html">Openapi Java</a>
   </li>
   <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="others/openapi-validator.html">Openapi Validator</a>
+  </li>
+  <li class="nav-item" data-depth="2">
     <a class="nav-link" href="others/opentelemetry.html">OpenTelemetry</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="others/platform-http-jolokia.html">Platform HTTP Jolokia</a>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="others/platform-http-main.html">Platform Http Main</a>
@@ -1539,7 +1636,7 @@
     <a class="nav-link" href="eips/event-message.html">Event Message</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="eips/failover-eip.html">Failover</a>
+    <a class="nav-link" href="eips/failoverLoadBalancer-eip.html">Failover Load Balancer</a>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="eips/faultToleranceConfiguration-eip.html">Fault Tolerance Configuration</a>
@@ -1569,13 +1666,13 @@
     <a class="nav-link" href="eips/loadBalance-eip.html">Load Balance</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="eips/log-eip.html">Log</a>
+    <a class="nav-link" href="eips/log-eip.html">Logger</a>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="eips/loop-eip.html">Loop</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="eips/marshal-eip.html">Marshal EIP</a>
+    <a class="nav-link" href="eips/marshal-eip.html">Marshal</a>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="eips/message.html">Message</a>
@@ -1632,6 +1729,9 @@
     <a class="nav-link" href="eips/point-to-point-channel.html">Point to Point Channel</a>
   </li>
   <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="eips/poll-eip.html">Poll</a>
+  </li>
+  <li class="nav-item" data-depth="2">
     <a class="nav-link" href="eips/pollEnrich-eip.html">Poll Enrich</a>
   </li>
   <li class="nav-item" data-depth="2">
@@ -1647,7 +1747,7 @@
     <a class="nav-link" href="eips/publish-subscribe-channel.html">Publish Subscribe Channel</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="eips/random-eip.html">Random</a>
+    <a class="nav-link" href="eips/randomLoadBalancer-eip.html">Random Load Balancer</a>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="eips/recipientList-eip.html">Recipient List</a>
@@ -1689,7 +1789,7 @@
     <a class="nav-link" href="eips/rollback-eip.html">Rollback</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="eips/roundRobin-eip.html">Round Robin</a>
+    <a class="nav-link" href="eips/roundRobinLoadBalancer-eip.html">Round Robin Load Balancer</a>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="eips/routingSlip-eip.html">Routing Slip</a>
@@ -1701,7 +1801,7 @@
     <a class="nav-link" href="eips/sample-eip.html">Sample</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="eips/scatter-gather.html">Scatter Gather</a>
+    <a class="nav-link" href="eips/scatter-gather.html">Scatter-Gather</a>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="eips/script-eip.html">Script</a>
@@ -1731,6 +1831,9 @@
     <a class="nav-link" href="eips/setVariable-eip.html">Set Variable</a>
   </li>
   <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="eips/setVariables-eip.html">Set Variables</a>
+  </li>
+  <li class="nav-item" data-depth="2">
     <a class="nav-link" href="eips/sort-eip.html">Sort</a>
   </li>
   <li class="nav-item" data-depth="2">
@@ -1740,7 +1843,7 @@
     <a class="nav-link" href="eips/step-eip.html">Step</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="eips/sticky-eip.html">Sticky</a>
+    <a class="nav-link" href="eips/stickyLoadBalancer-eip.html">Sticky Load Balancer</a>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="eips/stop-eip.html">Stop</a>
@@ -1761,7 +1864,7 @@
     <a class="nav-link" href="eips/toD-eip.html">To D</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="eips/topic-eip.html">Topic</a>
+    <a class="nav-link" href="eips/topicLoadBalancer-eip.html">Topic Load Balancer</a>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="eips/transactional-client.html">Transactional Client</a>
@@ -1770,13 +1873,13 @@
     <a class="nav-link" href="eips/transform-eip.html">Transform</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="eips/unmarshal-eip.html">Unmarshal EIP</a>
+    <a class="nav-link" href="eips/unmarshal-eip.html">Unmarshal</a>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="eips/validate-eip.html">Validate</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="eips/weighted-eip.html">Weighted</a>
+    <a class="nav-link" href="eips/weightedLoadBalancer-eip.html">Weighted Load Balancer</a>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="eips/wireTap-eip.html">Wire Tap</a>
@@ -1791,22 +1894,40 @@
 <div class="nav-panel-explore" data-panel="explore">
   <div class="context">
     <span class="title">Camel Components</span>
-    <span class="version">Next (Pre-release)</span>
+    <span class="version">4.8.x</span>
   </div>
   <ul class="components">
     <li class="component is-current">
-      <a class="title" href="index.html">Camel Components</a>
+      <div class="title"><a href="../4.10.x/index.html">Camel Components</a></div>
       <ul class="versions">
-        <li class="version is-current is-latest">
-          <a href="index.html">Next (Pre-release)</a>
+        <li class="version is-latest">
+          <a href="../4.10.x/index.html">4.10.x (LTS)</a>
+        </li>
+        <li class="version is-current">
+          <a href="index.html">4.8.x</a>
+        </li>
+        <li class="version">
+          <a href="../4.4.x/index.html">4.4.x</a>
+        </li>
+        <li class="version">
+          <a href="../4.0.x/index.html">4.0.x</a>
         </li>
       </ul>
     </li>
     <li class="component">
-      <a class="title" href="../../manual/index.html">User manual</a>
+      <div class="title"><a href="../../manual/4.10.x/index.html">User manual</a></div>
       <ul class="versions">
         <li class="version is-latest">
-          <a href="../../manual/index.html">default</a>
+          <a href="../../manual/4.10.x/index.html">4.10.x</a>
+        </li>
+        <li class="version">
+          <a href="../../manual/4.8.x/index.html">4.8.x</a>
+        </li>
+        <li class="version">
+          <a href="../../manual/4.4.x/index.html">4.4.x</a>
+        </li>
+        <li class="version">
+          <a href="../../manual/4.0.x/index.html">4.0.x</a>
         </li>
       </ul>
     </li>
@@ -1818,13 +1939,23 @@
 <main class="article">
 <div class="toolbar" role="navigation">
 <button class="nav-toggle"></button>
-  <a href="../../manual/index.html" class="home-link"></a>
+  <a href="../../manual/4.10.x/index.html" class="home-link"></a>
 <nav class="breadcrumbs" aria-label="breadcrumbs">
   <ul>
     <li><a href="index.html">Camel Components</a></li>
     <li><a href="index.html">Components</a></li>
   </ul>
 </nav>
+<div class="page-versions">
+  <button class="version-menu-toggle" title="Show other versions of page">4.8.x</button>
+  <div class="version-menu">
+    <a class="version" href="../4.10.x/index.html">4.10.x (LTS)</a>
+    <a class="version is-current" href="index.html">4.8.x</a>
+    <a class="version" href="../4.4.x/index.html">4.4.x</a>
+    <a class="version" href="../4.0.x/index.html">4.0.x</a>
+  </div>
+</div>
+<div class="edit-this-page"><a href="https://github.com/rhaetor/rh-camel-jboss/edit/camel-4.8.0-branch/docs/components/modules/ROOT/pages/index.adoc">Edit this Page</a></div>
 </div>
   <div class="content">
 <aside class="toc sidebar" data-title="Contents" data-levels="2">
@@ -1832,15 +1963,6 @@
 </aside>
 <article class="doc">
 <h1 class="page">Components</h1>
-<div id="preamble">
-<div class="sectionbody">
-<div class="paragraph">
-<p>Component references are references used to place a component in an assembly. Apache Component references
-provides various references that offers services for messaging, sending data, notifications and various other
-services that can not only resolve easy messaging and transferring data but also provide securing of data.</p>
-</div>
-</div>
-</div>
 <div class="sect1">
 <h2 id="_core_components"><a class="anchor" href="#_core_components"></a>Core Components</h2>
 <div class="sectionbody">
@@ -1960,11 +2082,11 @@ services that can not only resolve easy messaging and transferring data but also
 <td class="tableblock halign-left valign-top"><p class="tableblock">Execute scripts in any of the languages supported by Camel.</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="log-component.html" class="xref page">Log</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="log-component.html" class="xref page">Log Data</a></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">camel-log</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Stable</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">1.1</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Log messages to the underlying logging mechanism.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Prints data form the routed message (such as body and headers) to the logger.</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><a href="mock-component.html" class="xref page">Mock</a></p></td>
@@ -2068,7 +2190,7 @@ services that can not only resolve easy messaging and transferring data but also
 <p>Below is the list of non-core components that are provided by Apache Camel.</p>
 </div>
 <div class="paragraph">
-<p>Number of Non-Core Components: 307 in 242 JAR artifacts (1 deprecated)</p>
+<p>Number of Non-Core Components: 326 in 256 JAR artifacts (3 deprecated)</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
 <colgroup>
@@ -2089,11 +2211,25 @@ services that can not only resolve easy messaging and transferring data but also
 </thead>
 <tbody>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="activemq-component.html" class="xref page">ActiveMQ</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="activemq-component.html" class="xref page">ActiveMQ 5.x</a></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">camel-activemq</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Stable</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">1.0</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Send messages to (or consume from) Apache ActiveMQ. This component extends the Camel JMS component.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Send messages to (or consume from) Apache ActiveMQ 5.x. This component extends the Camel JMS component.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="activemq6-component.html" class="xref page">ActiveMQ 6.x</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">camel-activemq6</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Preview</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">4.7</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Send messages to (or consume from) Apache ActiveMQ 6.x. This component extends the Camel JMS component.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="ai-summary.html" class="xref page">AI</a></p></td>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><a href="amqp-component.html" class="xref page">AMQP</a></p></td>
@@ -2159,6 +2295,27 @@ services that can not only resolve easy messaging and transferring data but also
 <td class="tableblock halign-left valign-top"><p class="tableblock">Access AWS Athena.</p></td>
 </tr>
 <tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="aws-bedrock-component.html" class="xref page">AWS Bedrock</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">camel-aws-bedrock</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Stable</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">4.5</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Invoke Model of AWS Bedrock service.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="aws-bedrock-agent-component.html" class="xref page">AWS Bedrock Agent</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">camel-aws-bedrock</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Stable</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">4.5</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Operate on AWS Bedrock through its Agent.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="aws-bedrock-agent-runtime-component.html" class="xref page">AWS Bedrock Agent Runtime</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">camel-aws-bedrock</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Stable</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">4.5</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Invoke Model of AWS Bedrock Agent Runtime service.</p></td>
+</tr>
+<tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><a href="aws-cloudtrail-component.html" class="xref page">AWS Cloudtrail</a></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">camel-aws-cloudtrail</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Stable</p></td>
@@ -2175,7 +2332,7 @@ services that can not only resolve easy messaging and transferring data but also
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><a href="aws-config-component.html" class="xref page">AWS Config Service</a></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">camel-aws-config</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Preview</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Stable</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">4.3</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Manage AWS Config service.</p></td>
 </tr>
@@ -2390,11 +2547,11 @@ services that can not only resolve easy messaging and transferring data but also
 <td class="tableblock halign-left valign-top"><p class="tableblock">Store and retrieve blobs from Azure Storage Blob Service.</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="azure-storage-datalake-component.html" class="xref page">Azure Storage Datalake Service</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="azure-storage-datalake-component.html" class="xref page">Azure Storage Data Lake Service</a></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">camel-azure-storage-datalake</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Stable</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">3.8</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Sends and receives files to/from Azure DataLake Storage.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Sends and receives files to/from Azure Data Lake Storage.</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><a href="azure-storage-queue-component.html" class="xref page">Azure Storage Queue Service</a></p></td>
@@ -2478,7 +2635,7 @@ services that can not only resolve easy messaging and transferring data but also
 <td class="tableblock halign-left valign-top"><p class="tableblock">camel-coap</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Stable</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">2.16</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Send and receive messages to/from COAP capable devices.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Send and receive messages to/from CoAP (Constrained Application Protocol) capable devices.</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><a href="cometd-component.html" class="xref page">CometD</a></p></td>
@@ -2569,7 +2726,7 @@ services that can not only resolve easy messaging and transferring data but also
 <td class="tableblock halign-left valign-top"><p class="tableblock">camel-debezium-oracle</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Stable</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">3.17</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Capture changes from a Oracle database.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Capture changes from an Oracle database.</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><a href="debezium-postgres-component.html" class="xref page">Debezium PostgresSQL Connector</a></p></td>
@@ -2651,7 +2808,7 @@ services that can not only resolve easy messaging and transferring data but also
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><a href="dynamic-router-control-component.html" class="xref page">Dynamic Router Control</a></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">camel-dynamic-router</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Preview</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Stable</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">4.4</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">The Dynamic Router control endpoint for operations that allow routing participants to subscribe or unsubscribe to participate in dynamic message routing.</p></td>
 </tr>
@@ -2672,7 +2829,7 @@ services that can not only resolve easy messaging and transferring data but also
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><a href="elasticsearch-rest-client-component.html" class="xref page">Elasticsearch Low level Rest Client</a></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">camel-elasticsearch-rest-client</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Preview</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Stable</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">4.3</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Perform queries and other operations on Elasticsearch or OpenSearch (uses low-level client).</p></td>
 </tr>
@@ -2831,6 +2988,13 @@ services that can not only resolve easy messaging and transferring data but also
 <td class="tableblock halign-left valign-top"><p class="tableblock">Send and receive messages to/from Google Cloud Platform PubSub Service.</p></td>
 </tr>
 <tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="google-pubsub-lite-component.html" class="xref page">Google PubSub Lite</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">camel-google-pubsub-lite</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Stable</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">4.6</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Send and receive messages to/from Google Cloud Platform PubSub Lite Service.</p></td>
+</tr>
+<tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><a href="google-secret-manager-component.html" class="xref page">Google Secret Manager</a></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">camel-google-secret-manager</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Stable</p></td>
@@ -2882,7 +3046,7 @@ services that can not only resolve easy messaging and transferring data but also
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><a href="guava-eventbus-component.html" class="xref page">Guava EventBus</a></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">camel-guava-eventbus</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Stable</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Stable-deprecated</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">2.10</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Send and receive messages to/from Guava EventBus.</p></td>
 </tr>
@@ -3241,7 +3405,7 @@ services that can not only resolve easy messaging and transferring data but also
 <td class="tableblock halign-left valign-top"><p class="tableblock">camel-jslt</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Stable</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">3.1</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Query or transform JSON payloads using an JSLT.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Query or transform JSON payloads using JSLT.</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><a href="json-validator-component.html" class="xref page">JSON Schema Validator</a></p></td>
@@ -3274,7 +3438,7 @@ services that can not only resolve easy messaging and transferring data but also
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><a href="jte-component.html" class="xref page">JTE</a></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">camel-jte</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Preview</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Stable</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">4.4</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Transform messages using a Java based template engine (JTE).</p></td>
 </tr>
@@ -3309,7 +3473,7 @@ services that can not only resolve easy messaging and transferring data but also
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><a href="kubernetes-cronjob-component.html" class="xref page">Kubernetes Cronjob</a></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">camel-kubernetes</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Preview</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Stable</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">4.3</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Perform operations on Kubernetes CronJob.</p></td>
 </tr>
@@ -3426,6 +3590,41 @@ services that can not only resolve easy messaging and transferring data but also
 <td class="tableblock halign-left valign-top"><p class="tableblock">Interact with Apache Kudu, a free and open source column-oriented data store of the Apache Hadoop ecosystem.</p></td>
 </tr>
 <tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="langchain4j-chat-component.html" class="xref page">LangChain4j Chat</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">camel-langchain4j-chat</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Stable</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">4.5</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">LangChain4j Chat component</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="langchain4j-embeddings-component.html" class="xref page">LangChain4j Embeddings</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">camel-langchain4j-embeddings</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Stable</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">4.5</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">LangChain4j Embeddings</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="langchain4j-tokenizer-component.html" class="xref page">LangChain4j Tokenizer</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">camel-langchain4j-tokenizer</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Experimental</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">4.8</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">LangChain4j Tokenizer</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="langchain4j-tools-component.html" class="xref page">LangChain4j Tools</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">camel-langchain4j-tools</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Experimental</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">4.8</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">LangChain4j Tools and Function Calling Features</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="langchain4j-web-search-component.html" class="xref page">LangChain4j Web Search</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">camel-langchain4j-web-search</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Preview</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">4.8</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">LangChain4j Web Search Engine</p></td>
+</tr>
+<tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><a href="ldap-component.html" class="xref page">LDAP</a></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">camel-ldap</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Stable</p></td>
@@ -3487,6 +3686,13 @@ services that can not only resolve easy messaging and transferring data but also
 <td class="tableblock halign-left valign-top"><p class="tableblock">Stable</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">2.22</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Collect various metrics directly from Camel routes using the Micrometer library.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="milvus-component.html" class="xref page">Milvus</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">camel-milvus</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Stable</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">4.5</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Perform operations on the Milvus Vector Database.</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><a href="mina-component.html" class="xref page">Mina</a></p></td>
@@ -3575,7 +3781,7 @@ services that can not only resolve easy messaging and transferring data but also
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><a href="nitrite-component.html" class="xref page">Nitrite</a></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">camel-nitrite</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Stable</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Stable-deprecated</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">3.0</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Access Nitrite databases.</p></td>
 </tr>
@@ -3706,6 +3912,13 @@ services that can not only resolve easy messaging and transferring data but also
 <td class="tableblock halign-left valign-top"><p class="tableblock">Create, modify or extract content from PDF documents.</p></td>
 </tr>
 <tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="pinecone-component.html" class="xref page">Pinecone</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">camel-pinecone</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Stable</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">4.6</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Perform operations on the Pinecone Vector Database.</p></td>
+</tr>
+<tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><a href="platform-http-component.html" class="xref page">Platform HTTP</a></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">camel-platform-http</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Stable</p></td>
@@ -3762,6 +3975,13 @@ services that can not only resolve easy messaging and transferring data but also
 <td class="tableblock halign-left valign-top"><p class="tableblock">Send and receive messages from/to Apache Pulsar messaging system.</p></td>
 </tr>
 <tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="qdrant-component.html" class="xref page">Qdrant</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">camel-qdrant</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Stable</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">4.5</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Perform operations on the Qdrant Vector Database.</p></td>
+</tr>
+<tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><a href="quartz-component.html" class="xref page">Quartz</a></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">camel-quartz</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Stable</p></td>
@@ -3787,7 +4007,7 @@ services that can not only resolve easy messaging and transferring data but also
 <td class="tableblock halign-left valign-top"><p class="tableblock">camel-rest-openapi</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Stable</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">3.1</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Configure REST producers based on an OpenAPI specification document delegating to a component implementing the RestProducerFactory interface.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">To call REST services using OpenAPI specification as contract.</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><a href="robotframework-component.html" class="xref page">Robot Framework</a></p></td>
@@ -3897,9 +4117,16 @@ services that can not only resolve easy messaging and transferring data but also
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><a href="smb-component.html" class="xref page">SMB</a></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">camel-smb</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Preview</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Stable</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">4.3</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Receive files from SMB (Server Message Block) shares.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="smooks-component.html" class="xref page">Smooks</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">camel-smooks</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Preview</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">4.7</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">EDI, XML, CSV, etc. based data transformation using Smooks.</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><a href="smpp-component.html" class="xref page">SMPP</a></p></td>
@@ -3916,6 +4143,13 @@ services that can not only resolve easy messaging and transferring data but also
 <td class="tableblock halign-left valign-top"><p class="tableblock">Receive traps and poll SNMP (Simple Network Management Protocol) capable devices.</p></td>
 </tr>
 <tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="solr-component.html" class="xref page">Solr</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">camel-solr</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Preview</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">4.8</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Perform operations against Apache Lucene Solr.</p></td>
+</tr>
+<tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><a href="splunk-component.html" class="xref page">Splunk</a></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">camel-splunk</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Stable</p></td>
@@ -3927,7 +4161,7 @@ services that can not only resolve easy messaging and transferring data but also
 <td class="tableblock halign-left valign-top"><p class="tableblock">camel-splunk-hec</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Stable</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">3.3</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">The splunk component allows to publish events in Splunk using the HTTP Event Collector.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The splunk component allows publishing events in Splunk using the HTTP Event Collector.</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><a href="spring-summary.html" class="xref page">Spring</a></p></td>
@@ -3969,7 +4203,7 @@ services that can not only resolve easy messaging and transferring data but also
 <td class="tableblock halign-left valign-top"><p class="tableblock">camel-spring-rabbitmq</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Stable</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">3.8</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Send and receive messages from RabbitMQ using Spring RabbitMQ client.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Send and receive messages from RabbitMQ using the Spring RabbitMQ client.</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><a href="spring-redis-component.html" class="xref page">Spring Redis</a></p></td>
@@ -4025,7 +4259,7 @@ services that can not only resolve easy messaging and transferring data but also
 <td class="tableblock halign-left valign-top"><p class="tableblock">camel-stomp</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Stable</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">2.12</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Send and rececive messages to/from STOMP (Simple Text Oriented Messaging Protocol) compliant message brokers.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Send and receive messages to/from STOMP (Simple Text Oriented Messaging Protocol) compliant message brokers.</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><a href="string-template-component.html" class="xref page">String Template</a></p></td>
@@ -4035,11 +4269,32 @@ services that can not only resolve easy messaging and transferring data but also
 <td class="tableblock halign-left valign-top"><p class="tableblock">Transform messages using StringTemplate engine.</p></td>
 </tr>
 <tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="tahu-summary.html" class="xref page">Tahu</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">camel-tahu</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Preview</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">4.8</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Sparkplug B Edge Node and Host Application support over MQTT using Eclipse Tahu</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="tahu-edge-component.html" class="xref page">Tahu Edge Node / Device</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">camel-tahu</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Preview</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">4.8</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Sparkplug B Edge Node and Device support over MQTT using Eclipse Tahu</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="tahu-host-component.html" class="xref page">Tahu Host Application</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">camel-tahu</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Preview</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">4.8</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Sparkplug B Host Application support over MQTT using Eclipse Tahu</p></td>
+</tr>
+<tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><a href="telegram-component.html" class="xref page">Telegram</a></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">camel-telegram</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Stable</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">2.18</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Send and receive messages acting as a Telegram Bot Telegram Bot API.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Send and receive messages using the Telegram Bot API.</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><a href="thrift-component.html" class="xref page">Thrift</a></p></td>
@@ -4154,11 +4409,11 @@ services that can not only resolve easy messaging and transferring data but also
 <td class="tableblock halign-left valign-top"><p class="tableblock">Send messages to WhatsApp.</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="wordpress-component.html" class="xref page">Wordpress</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="wordpress-component.html" class="xref page">WordPress</a></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">camel-wordpress</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Stable</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">2.21</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Manage posts and users using Wordpress API.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Manage posts and users using the WordPress API.</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><a href="workday-component.html" class="xref page">Workday</a></p></td>
@@ -4214,7 +4469,7 @@ services that can not only resolve easy messaging and transferring data but also
 <td class="tableblock halign-left valign-top"><p class="tableblock">camel-zeebe</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Experimental</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">3.21</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Zeebe component which does integrage with Camunda Zeebe to interact with the API.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Zeebe component which integrates with Camunda Zeebe to interact with the API.</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><a href="zendesk-component.html" class="xref page">Zendesk</a></p></td>
@@ -4246,6 +4501,8 @@ services that can not only resolve easy messaging and transferring data but also
 </main>
 </div>
 <footer class="footer">
+  <p>This page was built using the Antora default UI.</p>
+  <p>The source code for this UI is licensed under the terms of the MPL-2.0 license.</p>
 </footer>
 <script id="site-script" src="../../_/js/site.js" data-ui-root-path="../../_"></script>
 <script async src="../../_/js/vendor/highlight.js"></script>

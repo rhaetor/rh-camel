@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>JAXB :: Red Hat Camel Reference</title>
+    <title>JAXB :: Red Hat build of Apache Camel</title>
     <meta name="description" content="Unmarshal XML payloads to POJOs and back using JAXB2 XML marshalling standard.">
     <meta name="generator" content="Antora 3.1.4">
     <link rel="stylesheet" href="../../../_/css/site.css">
@@ -12,7 +12,7 @@
 <header class="header">
   <nav class="navbar">
     <div class="navbar-brand">
-      <a class="navbar-item" href="../../manual/index.html">Red Hat build of Apache Camel manual</a>
+      <a class="navbar-item" href="/">Red Hat build of Apache Camel</a>
       <button class="navbar-burger" data-target="topbar-nav">
         <span></span>
         <span></span>
@@ -22,11 +22,12 @@
   </nav>
 </header>
 <div class="body">
-<div class="nav-container" data-component="components" data-version="next">
+<div class="nav-container" data-component="components" data-version="4.8.x">
   <aside class="nav">
     <div class="panels">
 <div class="nav-panel-menu is-active" data-panel="menu">
   <nav class="nav-menu">
+    <button class="nav-menu-toggle" aria-label="Toggle expand/collapse all" style="display: none"></button>
     <h3 class="title"><a href="../index.html">Camel Components</a></h3>
 <ul class="nav-list">
   <li class="nav-item" data-depth="0">
@@ -36,7 +37,46 @@
     <a class="nav-link" href="../index.html">Components</a>
 <ul class="nav-list">
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="../activemq-component.html">ActiveMQ</a>
+    <a class="nav-link" href="../activemq-component.html">ActiveMQ 5.x</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../activemq6-component.html">ActiveMQ 6.x</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../ai-summary.html">AI</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../chatscript-component.html">ChatScript</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../djl-component.html">Deep Java Library</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../langchain4j-chat-component.html">LangChain4j Chat</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../langchain4j-embeddings-component.html">LangChain4j Embeddings</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../langchain4j-tokenizer-component.html">LangChain4j Tokenizer</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../langchain4j-tools-component.html">LangChain4j Tools</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../langchain4j-web-search-component.html">LangChain4j Web Search</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../milvus-component.html">Milvus</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../pinecone-component.html">Pinecone</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../qdrant-component.html">Qdrant</a>
+  </li>
+</ul>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="../amqp-component.html">AMQP</a>
@@ -65,6 +105,15 @@
 <ul class="nav-list">
   <li class="nav-item" data-depth="3">
     <a class="nav-link" href="../aws2-athena-component.html">AWS Athena</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../aws-bedrock-component.html">AWS Bedrock</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../aws-bedrock-agent-component.html">AWS Bedrock Agent</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../aws-bedrock-agent-runtime-component.html">AWS Bedrock Agent Runtime</a>
   </li>
   <li class="nav-item" data-depth="3">
     <a class="nav-link" href="../aws-cloudtrail-component.html">AWS Cloudtrail</a>
@@ -169,7 +218,7 @@
     <a class="nav-link" href="../azure-storage-blob-component.html">Azure Storage Blob Service</a>
   </li>
   <li class="nav-item" data-depth="3">
-    <a class="nav-link" href="../azure-storage-datalake-component.html">Azure Storage Datalake Service</a>
+    <a class="nav-link" href="../azure-storage-datalake-component.html">Azure Storage Data Lake Service</a>
   </li>
   <li class="nav-item" data-depth="3">
     <a class="nav-link" href="../azure-storage-queue-component.html">Azure Storage Queue Service</a>
@@ -202,9 +251,6 @@
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="../cql-component.html">Cassandra CQL</a>
-  </li>
-  <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="../chatscript-component.html">ChatScript</a>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="../chunk-component.html">Chunk</a>
@@ -277,9 +323,6 @@
     <a class="nav-link" href="../debezium-sqlserver-component.html">Debezium SQL Server Connector</a>
   </li>
 </ul>
-  </li>
-  <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="../djl-component.html">Deep Java Library</a>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="../dhis2-component.html">DHIS2</a>
@@ -395,6 +438,9 @@
   </li>
   <li class="nav-item" data-depth="3">
     <a class="nav-link" href="../google-pubsub-component.html">Google Pubsub</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../google-pubsub-lite-component.html">Google PubSub Lite</a>
   </li>
   <li class="nav-item" data-depth="3">
     <a class="nav-link" href="../google-secret-manager-component.html">Google Secret Manager</a>
@@ -687,7 +733,7 @@
     <a class="nav-link" href="../ldif-component.html">LDIF</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="../log-component.html">Log</a>
+    <a class="nav-link" href="../log-component.html">Log Data</a>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="../lucene-component.html">Lucene</a>
@@ -900,10 +946,16 @@
     <a class="nav-link" href="../smb-component.html">SMB</a>
   </li>
   <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../smooks-component.html">Smooks</a>
+  </li>
+  <li class="nav-item" data-depth="2">
     <a class="nav-link" href="../smpp-component.html">SMPP</a>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="../snmp-component.html">SNMP</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../solr-component.html">Solr</a>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="../splunk-component.html">Splunk</a>
@@ -966,6 +1018,18 @@
     <a class="nav-link" href="../stub-component.html">Stub</a>
   </li>
   <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../tahu-summary.html">Tahu</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../tahu-edge-component.html">Tahu Edge Node / Device</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../tahu-host-component.html">Tahu Host Application</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
     <a class="nav-link" href="../telegram-component.html">Telegram</a>
   </li>
   <li class="nav-item" data-depth="2">
@@ -1026,7 +1090,7 @@
     <a class="nav-link" href="../whatsapp-component.html">WhatsApp</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="../wordpress-component.html">Wordpress</a>
+    <a class="nav-link" href="../wordpress-component.html">WordPress</a>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="../workday-component.html">Workday</a>
@@ -1419,7 +1483,13 @@
     <a class="nav-link" href="../others/openapi-java.html">Openapi Java</a>
   </li>
   <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../others/openapi-validator.html">Openapi Validator</a>
+  </li>
+  <li class="nav-item" data-depth="2">
     <a class="nav-link" href="../others/opentelemetry.html">OpenTelemetry</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../others/platform-http-jolokia.html">Platform HTTP Jolokia</a>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="../others/platform-http-main.html">Platform Http Main</a>
@@ -1567,7 +1637,7 @@
     <a class="nav-link" href="../eips/event-message.html">Event Message</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="../eips/failover-eip.html">Failover</a>
+    <a class="nav-link" href="../eips/failoverLoadBalancer-eip.html">Failover Load Balancer</a>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="../eips/faultToleranceConfiguration-eip.html">Fault Tolerance Configuration</a>
@@ -1597,13 +1667,13 @@
     <a class="nav-link" href="../eips/loadBalance-eip.html">Load Balance</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="../eips/log-eip.html">Log</a>
+    <a class="nav-link" href="../eips/log-eip.html">Logger</a>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="../eips/loop-eip.html">Loop</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="../eips/marshal-eip.html">Marshal EIP</a>
+    <a class="nav-link" href="../eips/marshal-eip.html">Marshal</a>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="../eips/message.html">Message</a>
@@ -1660,6 +1730,9 @@
     <a class="nav-link" href="../eips/point-to-point-channel.html">Point to Point Channel</a>
   </li>
   <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../eips/poll-eip.html">Poll</a>
+  </li>
+  <li class="nav-item" data-depth="2">
     <a class="nav-link" href="../eips/pollEnrich-eip.html">Poll Enrich</a>
   </li>
   <li class="nav-item" data-depth="2">
@@ -1675,7 +1748,7 @@
     <a class="nav-link" href="../eips/publish-subscribe-channel.html">Publish Subscribe Channel</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="../eips/random-eip.html">Random</a>
+    <a class="nav-link" href="../eips/randomLoadBalancer-eip.html">Random Load Balancer</a>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="../eips/recipientList-eip.html">Recipient List</a>
@@ -1717,7 +1790,7 @@
     <a class="nav-link" href="../eips/rollback-eip.html">Rollback</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="../eips/roundRobin-eip.html">Round Robin</a>
+    <a class="nav-link" href="../eips/roundRobinLoadBalancer-eip.html">Round Robin Load Balancer</a>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="../eips/routingSlip-eip.html">Routing Slip</a>
@@ -1729,7 +1802,7 @@
     <a class="nav-link" href="../eips/sample-eip.html">Sample</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="../eips/scatter-gather.html">Scatter Gather</a>
+    <a class="nav-link" href="../eips/scatter-gather.html">Scatter-Gather</a>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="../eips/script-eip.html">Script</a>
@@ -1759,6 +1832,9 @@
     <a class="nav-link" href="../eips/setVariable-eip.html">Set Variable</a>
   </li>
   <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../eips/setVariables-eip.html">Set Variables</a>
+  </li>
+  <li class="nav-item" data-depth="2">
     <a class="nav-link" href="../eips/sort-eip.html">Sort</a>
   </li>
   <li class="nav-item" data-depth="2">
@@ -1768,7 +1844,7 @@
     <a class="nav-link" href="../eips/step-eip.html">Step</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="../eips/sticky-eip.html">Sticky</a>
+    <a class="nav-link" href="../eips/stickyLoadBalancer-eip.html">Sticky Load Balancer</a>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="../eips/stop-eip.html">Stop</a>
@@ -1789,7 +1865,7 @@
     <a class="nav-link" href="../eips/toD-eip.html">To D</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="../eips/topic-eip.html">Topic</a>
+    <a class="nav-link" href="../eips/topicLoadBalancer-eip.html">Topic Load Balancer</a>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="../eips/transactional-client.html">Transactional Client</a>
@@ -1798,13 +1874,13 @@
     <a class="nav-link" href="../eips/transform-eip.html">Transform</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="../eips/unmarshal-eip.html">Unmarshal EIP</a>
+    <a class="nav-link" href="../eips/unmarshal-eip.html">Unmarshal</a>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="../eips/validate-eip.html">Validate</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="../eips/weighted-eip.html">Weighted</a>
+    <a class="nav-link" href="../eips/weightedLoadBalancer-eip.html">Weighted Load Balancer</a>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="../eips/wireTap-eip.html">Wire Tap</a>
@@ -1819,22 +1895,40 @@
 <div class="nav-panel-explore" data-panel="explore">
   <div class="context">
     <span class="title">Camel Components</span>
-    <span class="version">Next (Pre-release)</span>
+    <span class="version">4.8.x</span>
   </div>
   <ul class="components">
     <li class="component is-current">
-      <a class="title" href="../index.html">Camel Components</a>
+      <div class="title"><a href="../../4.10.x/index.html">Camel Components</a></div>
       <ul class="versions">
-        <li class="version is-current is-latest">
-          <a href="../index.html">Next (Pre-release)</a>
+        <li class="version is-latest">
+          <a href="../../4.10.x/index.html">4.10.x (LTS)</a>
+        </li>
+        <li class="version is-current">
+          <a href="../index.html">4.8.x</a>
+        </li>
+        <li class="version">
+          <a href="../../4.4.x/index.html">4.4.x</a>
+        </li>
+        <li class="version">
+          <a href="../../4.0.x/index.html">4.0.x</a>
         </li>
       </ul>
     </li>
     <li class="component">
-      <a class="title" href="../../../manual/index.html">User manual</a>
+      <div class="title"><a href="../../../manual/4.10.x/index.html">User manual</a></div>
       <ul class="versions">
         <li class="version is-latest">
-          <a href="../../../manual/index.html">default</a>
+          <a href="../../../manual/4.10.x/index.html">4.10.x</a>
+        </li>
+        <li class="version">
+          <a href="../../../manual/4.8.x/index.html">4.8.x</a>
+        </li>
+        <li class="version">
+          <a href="../../../manual/4.4.x/index.html">4.4.x</a>
+        </li>
+        <li class="version">
+          <a href="../../../manual/4.0.x/index.html">4.0.x</a>
         </li>
       </ul>
     </li>
@@ -1846,7 +1940,7 @@
 <main class="article">
 <div class="toolbar" role="navigation">
 <button class="nav-toggle"></button>
-  <a href="../../../manual/index.html" class="home-link"></a>
+  <a href="../../../manual/4.10.x/index.html" class="home-link"></a>
 <nav class="breadcrumbs" aria-label="breadcrumbs">
   <ul>
     <li><a href="../index.html">Camel Components</a></li>
@@ -1854,6 +1948,16 @@
     <li><a href="jaxb-dataformat.html">JAXB</a></li>
   </ul>
 </nav>
+<div class="page-versions">
+  <button class="version-menu-toggle" title="Show other versions of page">4.8.x</button>
+  <div class="version-menu">
+    <a class="version" href="../../4.10.x/dataformats/jaxb-dataformat.html">4.10.x (LTS)</a>
+    <a class="version is-current" href="jaxb-dataformat.html">4.8.x</a>
+    <a class="version" href="../../4.4.x/dataformats/jaxb-dataformat.html">4.4.x</a>
+    <a class="version is-missing" href="../../4.0.x/index.html">4.0.x</a>
+  </div>
+</div>
+<div class="edit-this-page"><a href="https://github.com/rhaetor/rh-camel-jboss/edit/camel-4.8.0-branch/docs/components/modules/dataformats/pages/jaxb-dataformat.adoc">Edit this Page</a></div>
 </div>
   <div class="content">
 <aside class="toc sidebar" data-title="Contents" data-levels="2">
@@ -1896,7 +2000,7 @@ payload into Java objects or to marshal Java objects into an XML payload.</p>
 <tbody>
 <tr>
 <td class="tableblock halign-left valign-top"><div class="content"><div id="_dataformat_option_contextPath" class="paragraph">
-<p><a href="#_dataformat_option_contextPath" class="anchor"></a><strong>contextPath</strong></p>
+<p><a href="#_dataformat_option_contextPath" class="anchor"></a><strong>contextPath</strong> (common)</p>
 </div></div></td>
 <td class="tableblock halign-left valign-top"></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>String</code></p></td>
@@ -1906,7 +2010,7 @@ payload into Java objects or to marshal Java objects into an XML payload.</p>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><div class="content"><div id="_dataformat_option_contextPathIsClassName" class="paragraph">
-<p><a href="#_dataformat_option_contextPathIsClassName" class="anchor"></a><strong>contextPathIsClassName</strong></p>
+<p><a href="#_dataformat_option_contextPathIsClassName" class="anchor"></a><strong>contextPathIsClassName</strong> (common)</p>
 </div></div></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>false</code></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>Boolean</code></p></td>
@@ -1916,7 +2020,7 @@ payload into Java objects or to marshal Java objects into an XML payload.</p>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><div class="content"><div id="_dataformat_option_schema" class="paragraph">
-<p><a href="#_dataformat_option_schema" class="anchor"></a><strong>schema</strong></p>
+<p><a href="#_dataformat_option_schema" class="anchor"></a><strong>schema</strong> (common)</p>
 </div></div></td>
 <td class="tableblock halign-left valign-top"></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>String</code></p></td>
@@ -1926,7 +2030,7 @@ payload into Java objects or to marshal Java objects into an XML payload.</p>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><div class="content"><div id="_dataformat_option_schemaSeverityLevel" class="paragraph">
-<p><a href="#_dataformat_option_schemaSeverityLevel" class="anchor"></a><strong>schemaSeverityLevel</strong></p>
+<p><a href="#_dataformat_option_schemaSeverityLevel" class="anchor"></a><strong>schemaSeverityLevel</strong> (common)</p>
 </div></div></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>0</code></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>Enum</code></p></td>
@@ -1952,9 +2056,9 @@ payload into Java objects or to marshal Java objects into an XML payload.</p>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><div class="content"><div id="_dataformat_option_prettyPrint" class="paragraph">
-<p><a href="#_dataformat_option_prettyPrint" class="anchor"></a><strong>prettyPrint</strong></p>
+<p><a href="#_dataformat_option_prettyPrint" class="anchor"></a><strong>prettyPrint</strong> (common)</p>
 </div></div></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>false</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>true</code></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>Boolean</code></p></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p>To enable pretty printing output nicely formatted. Is by default false.</p>
@@ -1962,9 +2066,9 @@ payload into Java objects or to marshal Java objects into an XML payload.</p>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><div class="content"><div id="_dataformat_option_objectFactory" class="paragraph">
-<p><a href="#_dataformat_option_objectFactory" class="anchor"></a><strong>objectFactory</strong></p>
+<p><a href="#_dataformat_option_objectFactory" class="anchor"></a><strong>objectFactory</strong> (advanced)</p>
 </div></div></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>false</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>true</code></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>Boolean</code></p></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p>Whether to allow using ObjectFactory classes to create the POJO classes during marshalling. This only applies to POJO classes that has not been annotated with JAXB and providing jaxb.index descriptor files.</p>
@@ -1972,9 +2076,9 @@ payload into Java objects or to marshal Java objects into an XML payload.</p>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><div class="content"><div id="_dataformat_option_ignoreJAXBElement" class="paragraph">
-<p><a href="#_dataformat_option_ignoreJAXBElement" class="anchor"></a><strong>ignoreJAXBElement</strong></p>
+<p><a href="#_dataformat_option_ignoreJAXBElement" class="anchor"></a><strong>ignoreJAXBElement</strong> (advanced)</p>
 </div></div></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>false</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>true</code></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>Boolean</code></p></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p>Whether to ignore JAXBElement elements - only needed to be set to false in very special use-cases.</p>
@@ -1982,7 +2086,7 @@ payload into Java objects or to marshal Java objects into an XML payload.</p>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><div class="content"><div id="_dataformat_option_mustBeJAXBElement" class="paragraph">
-<p><a href="#_dataformat_option_mustBeJAXBElement" class="anchor"></a><strong>mustBeJAXBElement</strong></p>
+<p><a href="#_dataformat_option_mustBeJAXBElement" class="anchor"></a><strong>mustBeJAXBElement</strong> (advanced)</p>
 </div></div></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>false</code></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>Boolean</code></p></td>
@@ -1992,7 +2096,7 @@ payload into Java objects or to marshal Java objects into an XML payload.</p>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><div class="content"><div id="_dataformat_option_filterNonXmlChars" class="paragraph">
-<p><a href="#_dataformat_option_filterNonXmlChars" class="anchor"></a><strong>filterNonXmlChars</strong></p>
+<p><a href="#_dataformat_option_filterNonXmlChars" class="anchor"></a><strong>filterNonXmlChars</strong> (advanced)</p>
 </div></div></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>false</code></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>Boolean</code></p></td>
@@ -2002,7 +2106,7 @@ payload into Java objects or to marshal Java objects into an XML payload.</p>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><div class="content"><div id="_dataformat_option_encoding" class="paragraph">
-<p><a href="#_dataformat_option_encoding" class="anchor"></a><strong>encoding</strong></p>
+<p><a href="#_dataformat_option_encoding" class="anchor"></a><strong>encoding</strong> (common)</p>
 </div></div></td>
 <td class="tableblock halign-left valign-top"></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>String</code></p></td>
@@ -2012,7 +2116,7 @@ payload into Java objects or to marshal Java objects into an XML payload.</p>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><div class="content"><div id="_dataformat_option_fragment" class="paragraph">
-<p><a href="#_dataformat_option_fragment" class="anchor"></a><strong>fragment</strong></p>
+<p><a href="#_dataformat_option_fragment" class="anchor"></a><strong>fragment</strong> (advanced)</p>
 </div></div></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>false</code></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>Boolean</code></p></td>
@@ -2022,7 +2126,7 @@ payload into Java objects or to marshal Java objects into an XML payload.</p>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><div class="content"><div id="_dataformat_option_partClass" class="paragraph">
-<p><a href="#_dataformat_option_partClass" class="anchor"></a><strong>partClass</strong></p>
+<p><a href="#_dataformat_option_partClass" class="anchor"></a><strong>partClass</strong> (advanced)</p>
 </div></div></td>
 <td class="tableblock halign-left valign-top"></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>String</code></p></td>
@@ -2032,7 +2136,7 @@ payload into Java objects or to marshal Java objects into an XML payload.</p>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><div class="content"><div id="_dataformat_option_partNamespace" class="paragraph">
-<p><a href="#_dataformat_option_partNamespace" class="anchor"></a><strong>partNamespace</strong></p>
+<p><a href="#_dataformat_option_partNamespace" class="anchor"></a><strong>partNamespace</strong> (advanced)</p>
 </div></div></td>
 <td class="tableblock halign-left valign-top"></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>String</code></p></td>
@@ -2042,7 +2146,7 @@ payload into Java objects or to marshal Java objects into an XML payload.</p>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><div class="content"><div id="_dataformat_option_namespacePrefixRef" class="paragraph">
-<p><a href="#_dataformat_option_namespacePrefixRef" class="anchor"></a><strong>namespacePrefixRef</strong></p>
+<p><a href="#_dataformat_option_namespacePrefixRef" class="anchor"></a><strong>namespacePrefixRef</strong> (advanced)</p>
 </div></div></td>
 <td class="tableblock halign-left valign-top"></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>String</code></p></td>
@@ -2052,7 +2156,7 @@ payload into Java objects or to marshal Java objects into an XML payload.</p>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><div class="content"><div id="_dataformat_option_xmlStreamWriterWrapper" class="paragraph">
-<p><a href="#_dataformat_option_xmlStreamWriterWrapper" class="anchor"></a><strong>xmlStreamWriterWrapper</strong></p>
+<p><a href="#_dataformat_option_xmlStreamWriterWrapper" class="anchor"></a><strong>xmlStreamWriterWrapper</strong> (advanced)</p>
 </div></div></td>
 <td class="tableblock halign-left valign-top"></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>String</code></p></td>
@@ -2062,7 +2166,7 @@ payload into Java objects or to marshal Java objects into an XML payload.</p>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><div class="content"><div id="_dataformat_option_schemaLocation" class="paragraph">
-<p><a href="#_dataformat_option_schemaLocation" class="anchor"></a><strong>schemaLocation</strong></p>
+<p><a href="#_dataformat_option_schemaLocation" class="anchor"></a><strong>schemaLocation</strong> (common)</p>
 </div></div></td>
 <td class="tableblock halign-left valign-top"></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>String</code></p></td>
@@ -2072,7 +2176,7 @@ payload into Java objects or to marshal Java objects into an XML payload.</p>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><div class="content"><div id="_dataformat_option_noNamespaceSchemaLocation" class="paragraph">
-<p><a href="#_dataformat_option_noNamespaceSchemaLocation" class="anchor"></a><strong>noNamespaceSchemaLocation</strong></p>
+<p><a href="#_dataformat_option_noNamespaceSchemaLocation" class="anchor"></a><strong>noNamespaceSchemaLocation</strong> (advanced)</p>
 </div></div></td>
 <td class="tableblock halign-left valign-top"></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>String</code></p></td>
@@ -2082,7 +2186,7 @@ payload into Java objects or to marshal Java objects into an XML payload.</p>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><div class="content"><div id="_dataformat_option_jaxbProviderProperties" class="paragraph">
-<p><a href="#_dataformat_option_jaxbProviderProperties" class="anchor"></a><strong>jaxbProviderProperties</strong></p>
+<p><a href="#_dataformat_option_jaxbProviderProperties" class="anchor"></a><strong>jaxbProviderProperties</strong> (advanced)</p>
 </div></div></td>
 <td class="tableblock halign-left valign-top"></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>String</code></p></td>
@@ -2092,7 +2196,7 @@ payload into Java objects or to marshal Java objects into an XML payload.</p>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><div class="content"><div id="_dataformat_option_contentTypeHeader" class="paragraph">
-<p><a href="#_dataformat_option_contentTypeHeader" class="anchor"></a><strong>contentTypeHeader</strong></p>
+<p><a href="#_dataformat_option_contentTypeHeader" class="anchor"></a><strong>contentTypeHeader</strong> (common)</p>
 </div></div></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>true</code></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>Boolean</code></p></td>
@@ -2102,7 +2206,7 @@ payload into Java objects or to marshal Java objects into an XML payload.</p>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><div class="content"><div id="_dataformat_option_accessExternalSchemaProtocols" class="paragraph">
-<p><a href="#_dataformat_option_accessExternalSchemaProtocols" class="anchor"></a><strong>accessExternalSchemaProtocols</strong></p>
+<p><a href="#_dataformat_option_accessExternalSchemaProtocols" class="anchor"></a><strong>accessExternalSchemaProtocols</strong> (security)</p>
 </div></div></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>false</code></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>String</code></p></td>
@@ -2115,8 +2219,10 @@ payload into Java objects or to marshal Java objects into an XML payload.</p>
 </div>
 </div>
 <div class="sect1">
-<h2 id="_using_the_java_dsl"><a class="anchor" href="#_using_the_java_dsl"></a>Using the Java DSL</h2>
+<h2 id="_usage"><a class="anchor" href="#_usage"></a>Usage</h2>
 <div class="sectionbody">
+<div class="sect2">
+<h3 id="_using_the_java_dsl"><a class="anchor" href="#_using_the_java_dsl"></a>Using the Java DSL</h3>
 <div class="paragraph">
 <p>The following example uses a named DataFormat of <code>jaxb</code> which is
 configured with a Java package name to initialize the
@@ -2132,7 +2238,7 @@ from("activemq:My.Queue").
 </div>
 </div>
 <div class="paragraph">
-<p>You can if you prefer use a named reference to a data format which can
+<p>You can, if you prefer, use a named reference to a data format which can
 then be defined in your Registry such as via your
 Spring XML file. e.g.</p>
 </div>
@@ -2144,10 +2250,8 @@ Spring XML file. e.g.</p>
 </div>
 </div>
 </div>
-</div>
-<div class="sect1">
-<h2 id="_using_spring_xml"><a class="anchor" href="#_using_spring_xml"></a>Using Spring XML</h2>
-<div class="sectionbody">
+<div class="sect2">
+<h3 id="_using_spring_xml"><a class="anchor" href="#_using_spring_xml"></a>Using Spring XML</h3>
 <div class="paragraph">
 <p>The following example shows how to configure the <code>JaxbDataFormat</code> and use it in multiple routes.</p>
 </div>
@@ -2179,30 +2283,26 @@ Spring XML file. e.g.</p>
 </div>
 </div>
 </div>
-</div>
-<div class="sect1">
-<h2 id="_multiple_context_paths"><a class="anchor" href="#_multiple_context_paths"></a>Multiple context paths</h2>
-<div class="sectionbody">
+<div class="sect2">
+<h3 id="_multiple_context_paths"><a class="anchor" href="#_multiple_context_paths"></a>Multiple context paths</h3>
 <div class="paragraph">
 <p>It is possible to use this data format with more than one context path.
 You can specify multiple context paths using <code>:</code> as a separator, for example
 <code>com.mycompany:com.mycompany2</code>.</p>
 </div>
 </div>
-</div>
-<div class="sect1">
-<h2 id="_partial_marshalling_unmarshalling"><a class="anchor" href="#_partial_marshalling_unmarshalling"></a>Partial marshalling / unmarshalling</h2>
-<div class="sectionbody">
+<div class="sect2">
+<h3 id="_partial_marshalling_unmarshalling"><a class="anchor" href="#_partial_marshalling_unmarshalling"></a>Partial marshalling / unmarshalling</h3>
 <div class="paragraph">
 <p>JAXB 2 supports marshalling and unmarshalling XML tree fragments. By
-default JAXB looks for the <code>@XmlRootElement</code> annotation on a given class to
-operate on whole XML tree. This is useful, but not always. Sometimes the
-generated code does not have the <code>@XmlRootElement</code> annotation and sometimes you
+default, JAXB looks for the <code>@XmlRootElement</code> annotation on a given class to
+operate on the whole XML tree. This is useful, but not always. Sometimes the
+generated code does not have the <code>@XmlRootElement</code> annotation, and sometimes you
 need to unmarshall only part of the tree.</p>
 </div>
 <div class="paragraph">
-<p>In that case you can use partial unmarshalling. To enable this
-behaviour you need set property <code>partClass</code> on the <code>JaxbDataFormat</code>. Camel will pass this class
+<p>In that case, you can use partial unmarshalling. To enable this
+behavior, you need set property <code>partClass</code> on the <code>JaxbDataFormat</code>. Camel will pass this class
 to the JAXB unmarshaller. If <code>JaxbConstants.JAXB_PART_CLASS</code> is set as
 one of the exchange headers, its value is used to override the <code>partClass</code> property
 on the <code>JaxbDataFormat</code>.</p>
@@ -2226,24 +2326,20 @@ note that you need to specify its value in the format <code>{namespaceUri}localP
 </div>
 </div>
 </div>
-</div>
-<div class="sect1">
-<h2 id="_fragment"><a class="anchor" href="#_fragment"></a>Fragment</h2>
-<div class="sectionbody">
+<div class="sect2">
+<h3 id="_fragment"><a class="anchor" href="#_fragment"></a>Fragment</h3>
 <div class="paragraph">
 <p><code>JaxbDataFormat</code> has a property named <code>fragment</code> which can set the <code>Marshaller.JAXB_FRAGMENT</code>
 property on the JAXB Marshaller. If you don&#8217;t want the JAXB Marshaller to generate
 the XML declaration, you can set this option to be <code>true</code>. The default value of this property is <code>false</code>.</p>
 </div>
 </div>
-</div>
-<div class="sect1">
-<h2 id="_ignoring_non_xml_characters"><a class="anchor" href="#_ignoring_non_xml_characters"></a>Ignoring Non-XML Characters</h2>
-<div class="sectionbody">
+<div class="sect2">
+<h3 id="_ignoring_non_xml_characters"><a class="anchor" href="#_ignoring_non_xml_characters"></a>Ignoring Non-XML Characters</h3>
 <div class="paragraph">
 <p><code>JaxbDataFormat</code> supports ignoring
 <a href="https://www.w3.org/TR/xml/#NT-Char">Non-XML Characters</a>,
-you just need to set the <code>filterNonXmlChars</code> property to <code>true</code>.
+you need to set the <code>filterNonXmlChars</code> property to <code>true</code>.
 The <code>JaxbDataFormat</code> will replace any non-XML character with a space character (<code>" "</code>) during message
 marshalling or unmarshalling. You can also set the Exchange property <code>Exchange.FILTER_NON_XML_CHARS</code>.</p>
 </div>
@@ -2300,16 +2396,14 @@ Camel&#8217;s non-XML filtering:</p>
 </div>
 </div>
 </div>
-</div>
-<div class="sect1">
-<h2 id="_working_with_the_objectfactory"><a class="anchor" href="#_working_with_the_objectfactory"></a>Working with the <code>ObjectFactory</code></h2>
-<div class="sectionbody">
+<div class="sect2">
+<h3 id="_working_with_the_objectfactory"><a class="anchor" href="#_working_with_the_objectfactory"></a>Working with the <code>ObjectFactory</code></h3>
 <div class="paragraph">
 <p>If you use XJC to create the java class from the schema, you will get an
 <code>ObjectFactory</code> for your JAXB context. Since the <code>ObjectFactory</code> uses
 <a href="https://jakarta.ee/specifications/xml-binding/2.3/apidocs/javax/xml/bind/jaxbelement">JAXBElement</a>
 to hold the reference of the schema and element instance value,
-<code>JaxbDataformat</code> will ignore the <code>JAXBElement</code> by default and you will get
+<code>JaxbDataformat</code> will ignore the <code>JAXBElement</code> by default, and you will get
 the element instance value instead of the <code>JAXBElement</code> object from the
 unmarshaled message body.</p>
 </div>
@@ -2319,23 +2413,19 @@ body, you need to set the <code>JaxbDataFormat</code> <code>ignoreJAXBElement</c
 property to be <code>false</code>.</p>
 </div>
 </div>
-</div>
-<div class="sect1">
-<h2 id="_setting_the_encoding"><a class="anchor" href="#_setting_the_encoding"></a>Setting the encoding</h2>
-<div class="sectionbody">
+<div class="sect2">
+<h3 id="_setting_the_encoding"><a class="anchor" href="#_setting_the_encoding"></a>Setting the encoding</h3>
 <div class="paragraph">
 <p>You can set the <code>encoding</code> option on the <code>JaxbDataFormat</code> to configure the
 <code>Marshaller.JAXB_ENCODING</code> encoding property on the JAXB Marshaller.</p>
 </div>
 <div class="paragraph">
-<p>You can setup which encoding to use when you declare the <code>JaxbDataFormat</code>. You can also provide the encoding in the
+<p>You can set up which encoding to use when you declare the <code>JaxbDataFormat</code>. You can also provide the encoding in the
 Exchange property <code>Exchange.CHARSET_NAME</code>. This property will override the encoding set on the <code>JaxbDataFormat</code>.</p>
 </div>
 </div>
-</div>
-<div class="sect1">
-<h2 id="_controlling_namespace_prefix_mapping"><a class="anchor" href="#_controlling_namespace_prefix_mapping"></a>Controlling namespace prefix mapping</h2>
-<div class="sectionbody">
+<div class="sect2">
+<h3 id="_controlling_namespace_prefix_mapping"><a class="anchor" href="#_controlling_namespace_prefix_mapping"></a>Controlling namespace prefix mapping</h3>
 <div class="paragraph">
 <p>When marshalling using <a href="#">JAXB</a> or <a href="#">SOAP</a> then
 the JAXB implementation will automatically assign namespace prefixes, such
@@ -2344,7 +2434,7 @@ to a map which contains the desired mapping.</p>
 </div>
 <div class="paragraph">
 <p>For example, in Spring XML we can define a <code>Map</code> with the mapping. In the
-mapping file below, we map SOAP to use soap as as a prefix. While our custom
+mapping file below, we map SOAP to use soap as a prefix. While our custom
 namespace <code><a href="http://www.mycompany.com/foo/2" class="bare">http://www.mycompany.com/foo/2</a></code> is not using any prefix.</p>
 </div>
 <div class="listingblock">
@@ -2357,9 +2447,9 @@ namespace <code><a href="http://www.mycompany.com/foo/2" class="bare">http://www
 </div>
 </div>
 <div class="paragraph">
-<p>To use this in JAXB or SOAP data formats you refer to
+<p>To use this in JAXB or SOAP data formats, you refer to
 this map, using the <code>namespacePrefixRef</code> attribute as shown below. Then
-Camel will lookup in the Registry a <code>java.util.Map</code>
+Camel will look up in the Registry a <code>java.util.Map</code>
 with the id <code>myMap</code>, which was what we defined above.</p>
 </div>
 <div class="listingblock">
@@ -2370,10 +2460,8 @@ with the id <code>myMap</code>, which was what we defined above.</p>
 </div>
 </div>
 </div>
-</div>
-<div class="sect1">
-<h2 id="_schema_validation"><a class="anchor" href="#_schema_validation"></a>Schema validation</h2>
-<div class="sectionbody">
+<div class="sect2">
+<h3 id="_schema_validation"><a class="anchor" href="#_schema_validation"></a>Schema validation</h3>
 <div class="paragraph">
 <p>The <code>JaxbDataFormat</code> supports validation by
 marshalling and unmarshalling from / to XML. You can use the prefix
@@ -2416,10 +2504,8 @@ jaxbDataFormat.setAccessExternalSchemaProtocols("file");</code></pre>
 </div>
 </div>
 </div>
-</div>
-<div class="sect1">
-<h2 id="_schema_location"><a class="anchor" href="#_schema_location"></a>Schema Location</h2>
-<div class="sectionbody">
+<div class="sect2">
+<h3 id="_schema_location"><a class="anchor" href="#_schema_location"></a>Schema Location</h3>
 <div class="paragraph">
 <p>The <code>JaxbDataFormat</code> supports to specify the <code>SchemaLocation</code> when marshalling the XML.</p>
 </div>
@@ -2444,20 +2530,19 @@ jaxbDataFormat.setSchemaLocation("schema/person.xsd");</code></pre>
 </div>
 </div>
 </div>
-</div>
-<div class="sect1">
-<h2 id="_marshal_data_that_is_already_xml"><a class="anchor" href="#_marshal_data_that_is_already_xml"></a>Marshal data that is already XML</h2>
-<div class="sectionbody">
+<div class="sect2">
+<h3 id="_marshal_data_that_is_already_xml"><a class="anchor" href="#_marshal_data_that_is_already_xml"></a>Marshal data that is already XML</h3>
 <div class="paragraph">
 <p>The JAXB marshaller requires that the message body is JAXB compatible,
-e.g it is a <code>JAXBElement</code>, a java instance that has JAXB annotations, or
+e.g., it is a <code>JAXBElement</code>, a java instance that has JAXB annotations, or
 extends <code>JAXBElement</code>. There can be situations where the message body is
-already in XML, e.g from a <code>String</code> type.</p>
+already in XML, e.g., from a <code>String</code> type.</p>
 </div>
 <div class="paragraph">
 <p><code>JaxbDataFormat</code> has an option named <code>mustBeJAXBElement</code> which you can set to <code>false</code> to relax this check and
 have the JAXB marshaller only attempt marshalling on <code>JAXBElement</code> (<code>javax.xml.bind.JAXBIntrospector#isElement</code> returns <code>true</code>).
-In those situations the marshaller will fallback to marshal the message body as-is.</p>
+In those situations, the marshaller will fall back to marshal the message body as-is.</p>
+</div>
 </div>
 </div>
 </div>
@@ -2465,13 +2550,12 @@ In those situations the marshaller will fallback to marshal the message body as-
 <h2 id="_dependencies"><a class="anchor" href="#_dependencies"></a>Dependencies</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>To use JAXB in your camel routes you need to add dependency on
-<strong>camel-jaxb</strong> which implements this data format.</p>
+<p>To use JAXB in your Camel routes, you need to add a dependency on
+<strong>camel-jaxb</strong>, which implements this data format.</p>
 </div>
 <div class="paragraph">
-<p>If you use maven you could just add the following to your pom.xml,
-substituting the version number for the latest &amp; greatest release (see
-the download page for the latest versions).</p>
+<p>If you use Maven, you could add the following to your <code>pom.xml</code>,
+substituting the version number for the latest &amp; greatest release.</p>
 </div>
 <div class="listingblock">
 <div class="content">
@@ -2489,6 +2573,8 @@ the download page for the latest versions).</p>
 </main>
 </div>
 <footer class="footer">
+  <p>This page was built using the Antora default UI.</p>
+  <p>The source code for this UI is licensed under the terms of the MPL-2.0 license.</p>
 </footer>
 <script id="site-script" src="../../../_/js/site.js" data-ui-root-path="../../../_"></script>
 <script async src="../../../_/js/vendor/highlight.js"></script>

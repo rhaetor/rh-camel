@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>JSONPath :: Red Hat Camel Reference</title>
+    <title>JSONPath :: Red Hat build of Apache Camel</title>
     <meta name="description" content="Evaluates a JSONPath expression against a JSON message body.">
     <meta name="generator" content="Antora 3.1.4">
     <link rel="stylesheet" href="../../../_/css/site.css">
@@ -12,7 +12,7 @@
 <header class="header">
   <nav class="navbar">
     <div class="navbar-brand">
-      <a class="navbar-item" href="../../manual/index.html">Red Hat build of Apache Camel manual</a>
+      <a class="navbar-item" href="/">Red Hat build of Apache Camel</a>
       <button class="navbar-burger" data-target="topbar-nav">
         <span></span>
         <span></span>
@@ -22,11 +22,12 @@
   </nav>
 </header>
 <div class="body">
-<div class="nav-container" data-component="components" data-version="next">
+<div class="nav-container" data-component="components" data-version="4.4.x">
   <aside class="nav">
     <div class="panels">
 <div class="nav-panel-menu is-active" data-panel="menu">
   <nav class="nav-menu">
+    <button class="nav-menu-toggle" aria-label="Toggle expand/collapse all" style="display: none"></button>
     <h3 class="title"><a href="../index.html">Camel Components</a></h3>
 <ul class="nav-list">
   <li class="nav-item" data-depth="0">
@@ -1819,22 +1820,40 @@
 <div class="nav-panel-explore" data-panel="explore">
   <div class="context">
     <span class="title">Camel Components</span>
-    <span class="version">Next (Pre-release)</span>
+    <span class="version">4.4.x</span>
   </div>
   <ul class="components">
     <li class="component is-current">
-      <a class="title" href="../index.html">Camel Components</a>
+      <div class="title"><a href="../../4.10.x/index.html">Camel Components</a></div>
       <ul class="versions">
-        <li class="version is-current is-latest">
-          <a href="../index.html">Next (Pre-release)</a>
+        <li class="version is-latest">
+          <a href="../../4.10.x/index.html">4.10.x (LTS)</a>
+        </li>
+        <li class="version">
+          <a href="../../4.8.x/index.html">4.8.x</a>
+        </li>
+        <li class="version is-current">
+          <a href="../index.html">4.4.x</a>
+        </li>
+        <li class="version">
+          <a href="../../4.0.x/index.html">4.0.x</a>
         </li>
       </ul>
     </li>
     <li class="component">
-      <a class="title" href="../../../manual/index.html">User manual</a>
+      <div class="title"><a href="../../../manual/4.10.x/index.html">User manual</a></div>
       <ul class="versions">
         <li class="version is-latest">
-          <a href="../../../manual/index.html">default</a>
+          <a href="../../../manual/4.10.x/index.html">4.10.x</a>
+        </li>
+        <li class="version">
+          <a href="../../../manual/4.8.x/index.html">4.8.x</a>
+        </li>
+        <li class="version">
+          <a href="../../../manual/4.4.x/index.html">4.4.x</a>
+        </li>
+        <li class="version">
+          <a href="../../../manual/4.0.x/index.html">4.0.x</a>
         </li>
       </ul>
     </li>
@@ -1846,7 +1865,7 @@
 <main class="article">
 <div class="toolbar" role="navigation">
 <button class="nav-toggle"></button>
-  <a href="../../../manual/index.html" class="home-link"></a>
+  <a href="../../../manual/4.10.x/index.html" class="home-link"></a>
 <nav class="breadcrumbs" aria-label="breadcrumbs">
   <ul>
     <li><a href="../index.html">Camel Components</a></li>
@@ -1854,6 +1873,16 @@
     <li><a href="jsonpath-language.html">JSONPath</a></li>
   </ul>
 </nav>
+<div class="page-versions">
+  <button class="version-menu-toggle" title="Show other versions of page">4.4.x</button>
+  <div class="version-menu">
+    <a class="version" href="../../4.10.x/languages/jsonpath-language.html">4.10.x (LTS)</a>
+    <a class="version" href="../../4.8.x/languages/jsonpath-language.html">4.8.x</a>
+    <a class="version is-current" href="jsonpath-language.html">4.4.x</a>
+    <a class="version is-missing" href="../../4.0.x/index.html">4.0.x</a>
+  </div>
+</div>
+<div class="edit-this-page"><a href="https://github.com/rhaetor/rh-camel-jboss/edit/camel-4.4.0-branch/docs/components/modules/languages/pages/jsonpath-language.adoc">Edit this Page</a></div>
 </div>
   <div class="content">
 <aside class="toc sidebar" data-title="Contents" data-levels="2">
@@ -1868,7 +1897,7 @@
 </div>
 <div class="paragraph">
 <p>Camel supports <a href="https://github.com/json-path/JsonPath/">JSONPath</a> to allow
-using <a href="../../../manual/expression.html" class="xref page">Expression</a> or <a href="../../../manual/predicate.html" class="xref page">Predicate</a> on JSON messages.</p>
+using <a href="../../../manual/4.10.x/expression.html" class="xref page">Expression</a> or <a href="../../../manual/4.10.x/predicate.html" class="xref page">Predicate</a> on JSON messages.</p>
 </div>
 </div>
 </div>
@@ -2014,9 +2043,22 @@ using <a href="../../../manual/expression.html" class="xref page">Expression</a>
 <h2 id="_examples"><a class="anchor" href="#_examples"></a>Examples</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>For example, you can use JSONPath in a <a href="../../../manual/predicate.html" class="xref page">Predicate</a>
-with the <a href="../eips/choice-eip.html" class="xref page">Content Based Router</a> EIP.</p>
+<p>For example, you can use JSONPath in a <a href="../../../manual/4.10.x/predicate.html" class="xref page">Predicate</a>
+with the <a href="../eips/choice-eip.html" class="xref page">Content-Based Router</a> EIP.</p>
 </div>
+<div id="_tabs_1" class="openblock tabs is-sync is-loading">
+<div class="content">
+<div class="ulist tablist">
+<ul>
+<li id="_tabs_1_java" class="tab">
+<p>Java</p>
+</li>
+<li id="_tabs_1_xml_dsl" class="tab">
+<p>XML DSL</p>
+</li>
+</ul>
+</div>
+<div id="_tabs_1_java--panel" class="tabpanel" aria-labelledby="_tabs_1_java">
 <div class="listingblock">
 <div class="content">
 <pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">from("queue:books.new")
@@ -2029,9 +2071,8 @@ with the <a href="../eips/choice-eip.html" class="xref page">Content Based Route
       .to("jms:queue:book.expensive");</code></pre>
 </div>
 </div>
-<div class="paragraph">
-<p>And in XML DSL:</p>
 </div>
+<div id="_tabs_1_xml_dsl--panel" class="tabpanel" aria-labelledby="_tabs_1_xml_dsl">
 <div class="listingblock">
 <div class="content">
 <pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;route&gt;
@@ -2054,12 +2095,15 @@ with the <a href="../eips/choice-eip.html" class="xref page">Content Based Route
 </div>
 </div>
 </div>
+</div>
+</div>
+</div>
 <div class="sect1">
 <h2 id="_jsonpath_syntax"><a class="anchor" href="#_jsonpath_syntax"></a>JSONPath Syntax</h2>
 <div class="sectionbody">
 <div class="paragraph">
 <p>Using the JSONPath syntax takes some time to learn, even for basic predicates.
-So for example to find out all the cheap books you have to do:</p>
+So for example, to find out all the cheap books you have to do:</p>
 </div>
 <div class="listingblock">
 <div class="content">
@@ -2157,8 +2201,8 @@ using a basic style. That means the predicate must not start with the <code>$</c
 </tbody>
 </table>
 <div class="paragraph">
-<p>If a message body is of unsupported type then an exception is thrown by default, however you
-can configure JSONPath to suppress exceptions (see below)</p>
+<p>If a message body is of unsupported type, then an exception is thrown by default.
+However, you can configure JSONPath to suppress exceptions (see below)</p>
 </div>
 </div>
 </div>
@@ -2168,10 +2212,23 @@ can configure JSONPath to suppress exceptions (see below)</p>
 <div class="paragraph">
 <p>By default, jsonpath will throw an exception if the json payload does not
 have a valid path accordingly to the configured jsonpath expression. In
-some use-cases you may want to ignore this in case the json payload
+some use-cases, you may want to ignore this in case the json payload
 contains optional data. Therefore, you can set the option
 <code>suppressExceptions</code> to <code>true</code> to ignore this as shown:</p>
 </div>
+<div id="_tabs_2" class="openblock tabs is-sync is-loading">
+<div class="content">
+<div class="ulist tablist">
+<ul>
+<li id="_tabs_2_java" class="tab">
+<p>Java</p>
+</li>
+<li id="_tabs_2_xml_dsl" class="tab">
+<p>XML DSL</p>
+</li>
+</ul>
+</div>
+<div id="_tabs_2_java--panel" class="tabpanel" aria-labelledby="_tabs_2_java">
 <div class="listingblock">
 <div class="content">
 <pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">from("direct:start")
@@ -2183,9 +2240,8 @@ contains optional data. Therefore, you can set the option
             .to("mock:other");</code></pre>
 </div>
 </div>
-<div class="paragraph">
-<p>And in XML DSL:</p>
 </div>
+<div id="_tabs_2_xml_dsl--panel" class="tabpanel" aria-labelledby="_tabs_2_xml_dsl">
 <div class="listingblock">
 <div class="content">
 <pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;route&gt;
@@ -2200,6 +2256,9 @@ contains optional data. Therefore, you can set the option
     &lt;/otherwise&gt;
   &lt;/choice&gt;
 &lt;/route&gt;</code></pre>
+</div>
+</div>
+</div>
 </div>
 </div>
 <div class="paragraph">
@@ -2217,6 +2276,19 @@ in the JSONPath expression using the simple syntax <code>${xxx}</code>.</p>
 <div class="paragraph">
 <p>An example is shown below:</p>
 </div>
+<div id="_tabs_3" class="openblock tabs is-sync is-loading">
+<div class="content">
+<div class="ulist tablist">
+<ul>
+<li id="_tabs_3_java" class="tab">
+<p>Java</p>
+</li>
+<li id="_tabs_3_xml_dsl" class="tab">
+<p>XML DSL</p>
+</li>
+</ul>
+</div>
+<div id="_tabs_3_java--panel" class="tabpanel" aria-labelledby="_tabs_3_java">
 <div class="listingblock">
 <div class="content">
 <pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">from("direct:start")
@@ -2229,9 +2301,8 @@ in the JSONPath expression using the simple syntax <code>${xxx}</code>.</p>
       .to("mock:expensive");</code></pre>
 </div>
 </div>
-<div class="paragraph">
-<p>And in XML DSL:</p>
 </div>
+<div id="_tabs_3_xml_dsl--panel" class="tabpanel" aria-labelledby="_tabs_3_xml_dsl">
 <div class="listingblock">
 <div class="content">
 <pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;route&gt;
@@ -2252,20 +2323,38 @@ in the JSONPath expression using the simple syntax <code>${xxx}</code>.</p>
 &lt;/route&gt;</code></pre>
 </div>
 </div>
+</div>
+</div>
+</div>
 <div class="paragraph">
 <p>You can turn off support for inlined Simple expression by setting the option <code>allowSimple</code> to <code>false</code> as shown:</p>
 </div>
+<div id="_tabs_4" class="openblock tabs is-sync is-loading">
+<div class="content">
+<div class="ulist tablist">
+<ul>
+<li id="_tabs_4_java" class="tab">
+<p>Java</p>
+</li>
+<li id="_tabs_4_xml_dsl" class="tab">
+<p>XML DSL</p>
+</li>
+</ul>
+</div>
+<div id="_tabs_4_java--panel" class="tabpanel" aria-labelledby="_tabs_4_java">
 <div class="listingblock">
 <div class="content">
 <pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">.when().jsonpath("$.store.book[?(@.price &lt; 10)]", false, false)</code></pre>
 </div>
 </div>
-<div class="paragraph">
-<p>And in XML DSL:</p>
 </div>
+<div id="_tabs_4_xml_dsl--panel" class="tabpanel" aria-labelledby="_tabs_4_xml_dsl">
 <div class="listingblock">
 <div class="content">
 <pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;jsonpath allowSimple="false"&gt;$.store.book[?(@.price &amp;lt; 10)]&lt;/jsonpath&gt;</code></pre>
+</div>
+</div>
+</div>
 </div>
 </div>
 </div>
@@ -2274,7 +2363,7 @@ in the JSONPath expression using the simple syntax <code>${xxx}</code>.</p>
 <h2 id="_jsonpath_injection"><a class="anchor" href="#_jsonpath_injection"></a>JSONPath injection</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>You can use <a href="../../../manual/bean-integration.html" class="xref page">Bean Integration</a> to invoke a
+<p>You can use <a href="../../../manual/4.10.x/bean-integration.html" class="xref page">Bean Integration</a> to invoke a
 method on a bean and use various languages such as JSONPath (via the <code>@JsonPath</code> annotation)
 to extract a value from the message and bind it to a method parameter, as shown below:</p>
 </div>
@@ -2296,9 +2385,9 @@ to extract a value from the message and bind it to a method parameter, as shown 
 <div class="sectionbody">
 <div class="paragraph">
 <p>The encoding of the JSON document is
-detected automatically, if the document is encoded in unicode  (UTF-8,
-UTF-16LE, UTF-16BE, UTF-32LE, UTF-32BE ) as specified in  RFC-4627. If
-the encoding is a non-unicode encoding, you can either make sure that
+detected automatically, if the document is encoded in unicode (UTF-8,
+UTF-16LE, UTF-16BE, UTF-32LE, UTF-32BE) as specified in RFC-4627.
+If the encoding is a non-unicode encoding, you can either make sure that
 you enter the document in String format to JSONPath, or you
 can specify the encoding in the header <code>CamelJsonPathJsonEncoding</code> which
 is defined as a constant in: <code>JsonpathConstants.HEADER_JSON_ENCODING</code>.</p>
@@ -2314,9 +2403,26 @@ is defined as a constant in: <code>JsonpathConstants.HEADER_JSON_ENCODING</code>
 <div class="listingblock">
 <div class="content">
 <pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">from("direct:start")
-    .split().jsonpath("$.store.book[*]")
+    .split().jsonpath("$.store.book[*]", List.class)
     .to("log:book");</code></pre>
 </div>
+</div>
+<div class="admonitionblock important">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-important" title="Important"></i>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>Notice how we specify <code>List.class</code> as the result-type. This is because if there is only
+a single element (only 1 book), then jsonpath will return the single entity as a <code>Map</code> instead of <code>List&lt;Map&gt;</code>.
+Therefore, we tell Camel that the result should always be a <code>List</code>, and Camel will then automatic wrap the
+single element into a new <code>List</code> object.</p>
+</div>
+</td>
+</tr>
+</table>
 </div>
 <div class="paragraph">
 <p>Then each book is logged, however the message body is a <code>Map</code> instance. Sometimes
@@ -2326,7 +2432,7 @@ with the <code>writeAsString</code> option as shown:</p>
 <div class="listingblock">
 <div class="content">
 <pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">from("direct:start")
-    .split().jsonpathWriteAsString("$.store.book[*]")
+    .split().jsonpathWriteAsString("$.store.book[*]", List.class)
     .to("log:book");</code></pre>
 </div>
 </div>
@@ -2349,7 +2455,7 @@ with the <code>writeAsString</code> option as shown:</p>
 </div>
 </div>
 <div class="paragraph">
-<p>If book array contains only one book, it will be converted into a Book object.</p>
+<p>If a book array contains only one book, it will be converted into a Book object.</p>
 </div>
 </div>
 </div>
@@ -2361,7 +2467,7 @@ with the <code>writeAsString</code> option as shown:</p>
 by specifying the <code>headerName</code> option.</p>
 </div>
 <div class="paragraph">
-<p>For example to count the number of books from a JSON document that
+<p>For example, to count the number of books from a JSON document that
 was stored in a header named <code>books</code> you can do:</p>
 </div>
 <div class="listingblock">
@@ -2396,12 +2502,12 @@ and we also told that we wanted the result to be converted as an integer by <cod
 <h2 id="_transforming_a_json_message"><a class="anchor" href="#_transforming_a_json_message"></a>Transforming a JSon message</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>For basic JSon transformation where you have a fixed structure you can represent with a combination of using
+<p>For basic JSon transformation where you have a fixed structure, you can represent with a combination of using
 Camel simple and JSonPath language as:</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-none hljs">{
+<pre class="highlightjs highlight"><code class="language-json hljs" data-lang="json">{
   "company": "${jsonpath($.customer.name)}",
   "location": "${jsonpath($.customer.address.country)}",
   "gold": ${jsonpath($.customer.orders.length() &gt; 5)}
@@ -2424,6 +2530,9 @@ also make it XML or plain text based:</p>
 &lt;/customer&gt;</code></pre>
 </div>
 </div>
+<div class="paragraph">
+<p>Unresolved include directive in modules/languages/pages/jsonpath-language.adoc - include::spring-boot:partial$starter.adoc[]</p>
+</div>
 </div>
 </div>
 </article>
@@ -2431,6 +2540,8 @@ also make it XML or plain text based:</p>
 </main>
 </div>
 <footer class="footer">
+  <p>This page was built using the Antora default UI.</p>
+  <p>The source code for this UI is licensed under the terms of the MPL-2.0 license.</p>
 </footer>
 <script id="site-script" src="../../../_/js/site.js" data-ui-root-path="../../../_"></script>
 <script async src="../../../_/js/vendor/highlight.js"></script>

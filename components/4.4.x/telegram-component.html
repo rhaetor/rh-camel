@@ -3,8 +3,8 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>Telegram :: Red Hat Camel Reference</title>
-    <meta name="description" content="Send and receive messages acting as a Telegram Bot Telegram Bot API.">
+    <title>Telegram :: Red Hat build of Apache Camel</title>
+    <meta name="description" content="Send and receive messages using the Telegram Bot API.">
     <meta name="generator" content="Antora 3.1.4">
     <link rel="stylesheet" href="../../_/css/site.css">
   </head>
@@ -12,7 +12,7 @@
 <header class="header">
   <nav class="navbar">
     <div class="navbar-brand">
-      <a class="navbar-item" href="../../manual/index.html">Red Hat build of Apache Camel manual</a>
+      <a class="navbar-item" href="/">Red Hat build of Apache Camel</a>
       <button class="navbar-burger" data-target="topbar-nav">
         <span></span>
         <span></span>
@@ -22,11 +22,12 @@
   </nav>
 </header>
 <div class="body">
-<div class="nav-container" data-component="components" data-version="next">
+<div class="nav-container" data-component="components" data-version="4.4.x">
   <aside class="nav">
     <div class="panels">
 <div class="nav-panel-menu is-active" data-panel="menu">
   <nav class="nav-menu">
+    <button class="nav-menu-toggle" aria-label="Toggle expand/collapse all" style="display: none"></button>
     <h3 class="title"><a href="index.html">Camel Components</a></h3>
 <ul class="nav-list">
   <li class="nav-item" data-depth="0">
@@ -912,6 +913,33 @@
     <a class="nav-link" href="splunk-hec-component.html">Splunk HEC</a>
   </li>
   <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="spring-summary.html">Spring</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="spring-batch-component.html">Spring Batch</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="spring-event-component.html">Spring Event</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="spring-jdbc-component.html">Spring JDBC</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="spring-ldap-component.html">Spring LDAP</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="spring-rabbitmq-component.html">Spring RabbitMQ</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="spring-redis-component.html">Spring Redis</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="spring-ws-component.html">Spring WebService</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
     <a class="nav-link" href="sql-component.html">SQL</a>
   </li>
   <li class="nav-item" data-depth="2">
@@ -1792,22 +1820,40 @@
 <div class="nav-panel-explore" data-panel="explore">
   <div class="context">
     <span class="title">Camel Components</span>
-    <span class="version">Next (Pre-release)</span>
+    <span class="version">4.4.x</span>
   </div>
   <ul class="components">
     <li class="component is-current">
-      <a class="title" href="index.html">Camel Components</a>
+      <div class="title"><a href="../4.10.x/index.html">Camel Components</a></div>
       <ul class="versions">
-        <li class="version is-current is-latest">
-          <a href="index.html">Next (Pre-release)</a>
+        <li class="version is-latest">
+          <a href="../4.10.x/index.html">4.10.x (LTS)</a>
+        </li>
+        <li class="version">
+          <a href="../4.8.x/index.html">4.8.x</a>
+        </li>
+        <li class="version is-current">
+          <a href="index.html">4.4.x</a>
+        </li>
+        <li class="version">
+          <a href="../4.0.x/index.html">4.0.x</a>
         </li>
       </ul>
     </li>
     <li class="component">
-      <a class="title" href="../../manual/index.html">User manual</a>
+      <div class="title"><a href="../../manual/4.10.x/index.html">User manual</a></div>
       <ul class="versions">
         <li class="version is-latest">
-          <a href="../../manual/index.html">default</a>
+          <a href="../../manual/4.10.x/index.html">4.10.x</a>
+        </li>
+        <li class="version">
+          <a href="../../manual/4.8.x/index.html">4.8.x</a>
+        </li>
+        <li class="version">
+          <a href="../../manual/4.4.x/index.html">4.4.x</a>
+        </li>
+        <li class="version">
+          <a href="../../manual/4.0.x/index.html">4.0.x</a>
         </li>
       </ul>
     </li>
@@ -1819,7 +1865,7 @@
 <main class="article">
 <div class="toolbar" role="navigation">
 <button class="nav-toggle"></button>
-  <a href="../../manual/index.html" class="home-link"></a>
+  <a href="../../manual/4.10.x/index.html" class="home-link"></a>
 <nav class="breadcrumbs" aria-label="breadcrumbs">
   <ul>
     <li><a href="index.html">Camel Components</a></li>
@@ -1827,6 +1873,16 @@
     <li><a href="telegram-component.html">Telegram</a></li>
   </ul>
 </nav>
+<div class="page-versions">
+  <button class="version-menu-toggle" title="Show other versions of page">4.4.x</button>
+  <div class="version-menu">
+    <a class="version" href="../4.10.x/telegram-component.html">4.10.x (LTS)</a>
+    <a class="version" href="../4.8.x/telegram-component.html">4.8.x</a>
+    <a class="version is-current" href="telegram-component.html">4.4.x</a>
+    <a class="version is-missing" href="../4.0.x/index.html">4.0.x</a>
+  </div>
+</div>
+<div class="edit-this-page"><a href="https://github.com/rhaetor/rh-camel-jboss/edit/camel-4.4.0-branch/docs/components/modules/ROOT/pages/telegram-component.adoc">Edit this Page</a></div>
 </div>
   <div class="content">
 <aside class="toc sidebar" data-title="Contents" data-levels="2">
@@ -1862,7 +1918,7 @@ for the camel-telegram endpoint.</p>
 </td>
 <td class="content">
 <div class="paragraph">
-<p>In order to allow the Bot to receive all messages exchanged within a group or channel (not just
+<p>To allow the Bot to receive all messages exchanged within a group or channel (not just
 the ones starting with a '/' character), ask the BotFather to <strong>disable the privacy mode</strong>, using the
 <strong>/setprivacy</strong> command.</p>
 </div>
@@ -1916,14 +1972,14 @@ for this component:</p>
 <h3 id="_configuring_component_options"><a class="anchor" href="#_configuring_component_options"></a>Configuring Component Options</h3>
 <div class="paragraph">
 <p>The component level is the highest level which holds general and common configurations that are inherited by the endpoints.
-For example a component may have security settings, credentials for authentication, urls for network connection and so forth.</p>
+For example, a component may have security settings, credentials for authentication, urls for network connection and so forth.</p>
 </div>
 <div class="paragraph">
 <p>Some components only have a few options, and others may have many. Because components typically have pre configured defaults
 that are commonly used, then you may often only need to configure a few options on a component; or none at all.</p>
 </div>
 <div class="paragraph">
-<p>Configuring components can be done with the <a href="../../manual/component-dsl.html" class="xref page">Component DSL</a>,
+<p>Configuring components can be done with the <a href="../../manual/4.10.x/component-dsl.html" class="xref page">Component DSL</a>,
 in a configuration file (application.properties|yaml), or directly with Java code.</p>
 </div>
 </div>
@@ -1936,11 +1992,11 @@ or as a producer (to), or used for both.</p>
 </div>
 <div class="paragraph">
 <p>Configuring endpoints is most often done directly in the endpoint URI as path and query parameters. You can also use
-the <a href="../../manual/Endpoint-dsl.html" class="xref page">Endpoint DSL</a> and <a href="../../manual/dataformat-dsl.html" class="xref page">DataFormat DSL</a>
+the <a href="../../manual/4.10.x/Endpoint-dsl.html" class="xref page">Endpoint DSL</a> and <a href="../../manual/4.10.x/dataformat-dsl.html" class="xref page">DataFormat DSL</a>
 as a <em>type safe</em> way of configuring endpoints and data formats in Java.</p>
 </div>
 <div class="paragraph">
-<p>A good practice when configuring options is to use <a href="../../manual/using-propertyplaceholder.html" class="xref page">Property Placeholders</a>,
+<p>A good practice when configuring options is to use <a href="../../manual/4.10.x/using-propertyplaceholder.html" class="xref page">Property Placeholders</a>,
 which allows to not hardcode urls, port numbers, sensitive information, and other settings.
 In other words placeholders allows to externalize the configuration from your code, and gives more flexibility and reuse.</p>
 </div>
@@ -2003,7 +2059,7 @@ In other words placeholders allows to externalize the configuration from your co
 <td class="tableblock halign-left valign-top"><p class="tableblock"><a id="_component_option_baseUri"></a>
 <a href="#_component_option_baseUri" class="anchor"></a><strong>baseUri</strong> (advanced)</p></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>Can be used to set an alternative base URI, e.g. when you want to test the component against a mock Telegram API.</p>
+<p>Can be used to set an alternative base URI, for example, when you want to test the component against a mock Telegram API.</p>
 </div></div></td>
 <td class="tableblock halign-center valign-top"><p class="tableblock"><a href="https://api.telegram.org" class="bare">https://api.telegram.org</a></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">String</p></td>
@@ -2218,7 +2274,7 @@ In other words placeholders allows to externalize the configuration from your co
 <td class="tableblock halign-left valign-top"><p class="tableblock"><a id="_endpoint_query_option_baseUri"></a>
 <a href="#_endpoint_query_option_baseUri" class="anchor"></a><strong>baseUri</strong> (advanced)</p></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>Can be used to set an alternative base URI, e.g. when you want to test the component against a mock Telegram API.</p>
+<p>Can be used to set an alternative base URI, for example, when you want to test the component against a mock Telegram API.</p>
 </div></div></td>
 <td class="tableblock halign-center valign-top"></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">String</p></td>
@@ -2504,7 +2560,7 @@ In other words placeholders allows to externalize the configuration from your co
 <a href="#_endpoint_header_CamelTelegramChatId" class="anchor"></a><strong>CamelTelegramChatId</strong> (producer)</p>
 <p class="tableblock">Constant: <a href="https://javadoc.io/doc/org.apache.camel/camel-telegram/latest/org/apache/camel/component/telegram/TelegramConstants.html#TELEGRAM_CHAT_ID"><code>TELEGRAM_CHAT_ID</code></a></p></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>This header is used by the producer endpoint in order to resolve the chat id that will receive the message. The recipient chat id can be placed (in order of priority) in message body, in the CamelTelegramChatId header or in the endpoint configuration (chatId option). This header is also present in all incoming messages.</p>
+<p>This header is used by the producer endpoint to resolve the chat id that will receive the message. The recipient chat id can be placed (in order of priority) in message body, in the CamelTelegramChatId header or in the endpoint configuration (chatId option). This header is also present in all incoming messages.</p>
 </div></div></td>
 <td class="tableblock halign-center valign-top"></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Object</p></td>
@@ -2581,7 +2637,7 @@ In other words placeholders allows to externalize the configuration from your co
 <div class="sectionbody">
 <div class="paragraph">
 <p>The Telegram component supports both consumer and producer endpoints.
-It can also be used in <strong>reactive chat-bot mode</strong> (to consume, then produce messages).</p>
+It can also be used in <strong>reactive chatbot mode</strong> (to consume, then produce messages).</p>
 </div>
 </div>
 </div>
@@ -2672,7 +2728,7 @@ The following message bodies are allowed for a producer endpoint (messages of ty
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>EditMessageReplyMarkupMessage</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">To edit only the reply markup of message. (editMessageReplyMarkup)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">To edit only the reply markup of a message. (editMessageReplyMarkup)</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>EditMessageDelete</code></p></td>
@@ -2779,11 +2835,11 @@ In Java DSL</p>
 <h2 id="_reactive_chat_bot_example"><a class="anchor" href="#_reactive_chat_bot_example"></a>Reactive Chat-Bot Example</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>The reactive chat-bot mode is a simple way of using the Camel component to build a simple
-chat bot that replies directly to chat messages received from the Telegram users.</p>
+<p>The reactive chatbot mode is a simple way of using the Camel component to build a simple
+chatbot that replies directly to chat messages received from the Telegram users.</p>
 </div>
 <div class="paragraph">
-<p>The following is a basic configuration of the chat-bot in Java DSL</p>
+<p>The following is a basic configuration of the chatbot in Java DSL</p>
 </div>
 <div class="listingblock">
 <div class="content">
@@ -2852,7 +2908,7 @@ but you can obtain it using a simple route.</p>
 header).</p>
 </div>
 <div class="paragraph">
-<p>Once you get the chat ID, you can use the following sample route to push message to it.</p>
+<p>Once you get the chat ID, you can use the following sample route to push a message to it.</p>
 </div>
 <div class="listingblock">
 <div class="content">
@@ -2870,7 +2926,8 @@ to("telegram:bots?authorizationToken=123456789:insertYourAuthorizationTokenHere&
 <h2 id="_customizing_keyboard"><a class="anchor" href="#_customizing_keyboard"></a>Customizing keyboard</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>You can customize the user keyboard instead of asking him to write an option. <code>OutgoingTextMessage</code> has the property <code>ReplyMarkup</code> which can be used for such thing.</p>
+<p>You can customize the user keyboard instead of asking him to write an option.
+<code>OutgoingTextMessage</code> has the property <code>ReplyMarkup</code> which can be used for such a thing.</p>
 </div>
 <div class="listingblock">
 <div class="content">
@@ -2905,7 +2962,7 @@ to("telegram:bots?authorizationToken=123456789:insertYourAuthorizationTokenHere&
 </div>
 </div>
 <div class="paragraph">
-<p>If you want to disable it the next message must have the property <code>removeKeyboard</code> set on <code>ReplyKeyboardMarkup</code> object.</p>
+<p>If you want to disable it, the next message must have the property <code>removeKeyboard</code> set on <code>ReplyKeyboardMarkup</code> object.</p>
 </div>
 <div class="listingblock">
 <div class="content">
@@ -2935,7 +2992,7 @@ to("telegram:bots?authorizationToken=123456789:insertYourAuthorizationTokenHere&
 <p>The Telegram component supports usage in the <strong>webhook mode</strong> using the <strong>camel-webhook</strong> component.</p>
 </div>
 <div class="paragraph">
-<p>In order to enable webhook mode, users need first to add a REST implementation to their application.
+<p>To enable webhook mode, users need first to add a REST implementation to their application.
 Maven users, for example, can add <strong>netty-http</strong> to their <code>pom.xml</code> file:</p>
 </div>
 <div class="listingblock">
@@ -2967,6 +3024,9 @@ You need to ensure that your server is exposed to the internet and to pass the r
 <div class="paragraph">
 <p>Refer to the <strong>camel-webhook</strong> component documentation for instructions on how to set it.</p>
 </div>
+<div class="paragraph">
+<p>Unresolved include directive in modules/ROOT/pages/telegram-component.adoc - include::spring-boot:partial$starter.adoc[]</p>
+</div>
 </div>
 </div>
 </article>
@@ -2974,6 +3034,8 @@ You need to ensure that your server is exposed to the internet and to pass the r
 </main>
 </div>
 <footer class="footer">
+  <p>This page was built using the Antora default UI.</p>
+  <p>The source code for this UI is licensed under the terms of the MPL-2.0 license.</p>
 </footer>
 <script id="site-script" src="../../_/js/site.js" data-ui-root-path="../../_"></script>
 <script async src="../../_/js/vendor/highlight.js"></script>

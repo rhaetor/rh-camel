@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>File :: Red Hat Camel Reference</title>
+    <title>File :: Red Hat build of Apache Camel</title>
     <meta name="description" content="Read and write files.">
     <meta name="generator" content="Antora 3.1.4">
     <link rel="stylesheet" href="../../_/css/site.css">
@@ -12,7 +12,7 @@
 <header class="header">
   <nav class="navbar">
     <div class="navbar-brand">
-      <a class="navbar-item" href="../../manual/index.html">Red Hat build of Apache Camel manual</a>
+      <a class="navbar-item" href="/">Red Hat build of Apache Camel</a>
       <button class="navbar-burger" data-target="topbar-nav">
         <span></span>
         <span></span>
@@ -22,11 +22,12 @@
   </nav>
 </header>
 <div class="body">
-<div class="nav-container" data-component="components" data-version="next">
+<div class="nav-container" data-component="components" data-version="4.4.x">
   <aside class="nav">
     <div class="panels">
 <div class="nav-panel-menu is-active" data-panel="menu">
   <nav class="nav-menu">
+    <button class="nav-menu-toggle" aria-label="Toggle expand/collapse all" style="display: none"></button>
     <h3 class="title"><a href="index.html">Camel Components</a></h3>
 <ul class="nav-list">
   <li class="nav-item" data-depth="0">
@@ -912,6 +913,33 @@
     <a class="nav-link" href="splunk-hec-component.html">Splunk HEC</a>
   </li>
   <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="spring-summary.html">Spring</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="spring-batch-component.html">Spring Batch</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="spring-event-component.html">Spring Event</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="spring-jdbc-component.html">Spring JDBC</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="spring-ldap-component.html">Spring LDAP</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="spring-rabbitmq-component.html">Spring RabbitMQ</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="spring-redis-component.html">Spring Redis</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="spring-ws-component.html">Spring WebService</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
     <a class="nav-link" href="sql-component.html">SQL</a>
   </li>
   <li class="nav-item" data-depth="2">
@@ -1792,22 +1820,40 @@
 <div class="nav-panel-explore" data-panel="explore">
   <div class="context">
     <span class="title">Camel Components</span>
-    <span class="version">Next (Pre-release)</span>
+    <span class="version">4.4.x</span>
   </div>
   <ul class="components">
     <li class="component is-current">
-      <a class="title" href="index.html">Camel Components</a>
+      <div class="title"><a href="../4.10.x/index.html">Camel Components</a></div>
       <ul class="versions">
-        <li class="version is-current is-latest">
-          <a href="index.html">Next (Pre-release)</a>
+        <li class="version is-latest">
+          <a href="../4.10.x/index.html">4.10.x (LTS)</a>
+        </li>
+        <li class="version">
+          <a href="../4.8.x/index.html">4.8.x</a>
+        </li>
+        <li class="version is-current">
+          <a href="index.html">4.4.x</a>
+        </li>
+        <li class="version">
+          <a href="../4.0.x/index.html">4.0.x</a>
         </li>
       </ul>
     </li>
     <li class="component">
-      <a class="title" href="../../manual/index.html">User manual</a>
+      <div class="title"><a href="../../manual/4.10.x/index.html">User manual</a></div>
       <ul class="versions">
         <li class="version is-latest">
-          <a href="../../manual/index.html">default</a>
+          <a href="../../manual/4.10.x/index.html">4.10.x</a>
+        </li>
+        <li class="version">
+          <a href="../../manual/4.8.x/index.html">4.8.x</a>
+        </li>
+        <li class="version">
+          <a href="../../manual/4.4.x/index.html">4.4.x</a>
+        </li>
+        <li class="version">
+          <a href="../../manual/4.0.x/index.html">4.0.x</a>
         </li>
       </ul>
     </li>
@@ -1819,7 +1865,7 @@
 <main class="article">
 <div class="toolbar" role="navigation">
 <button class="nav-toggle"></button>
-  <a href="../../manual/index.html" class="home-link"></a>
+  <a href="../../manual/4.10.x/index.html" class="home-link"></a>
 <nav class="breadcrumbs" aria-label="breadcrumbs">
   <ul>
     <li><a href="index.html">Camel Components</a></li>
@@ -1827,6 +1873,16 @@
     <li><a href="file-component.html">File</a></li>
   </ul>
 </nav>
+<div class="page-versions">
+  <button class="version-menu-toggle" title="Show other versions of page">4.4.x</button>
+  <div class="version-menu">
+    <a class="version" href="../4.10.x/file-component.html">4.10.x (LTS)</a>
+    <a class="version" href="../4.8.x/file-component.html">4.8.x</a>
+    <a class="version is-current" href="file-component.html">4.4.x</a>
+    <a class="version is-missing" href="../4.0.x/index.html">4.0.x</a>
+  </div>
+</div>
+<div class="edit-this-page"><a href="https://github.com/rhaetor/rh-camel-jboss/edit/camel-4.4.0-branch/docs/components/modules/ROOT/pages/file-component.adoc">Edit this Page</a></div>
 </div>
   <div class="content">
 <aside class="toc sidebar" data-title="Contents" data-levels="2">
@@ -1858,16 +1914,16 @@ messages from other components to be saved to disk.</p>
 </div>
 </div>
 <div class="paragraph">
-<p>Where <strong>directoryName</strong> represents the underlying file directory.</p>
+<p>Where <code>directoryName</code> represents the underlying file directory.</p>
 </div>
 <div class="paragraph">
 <p><strong>Only directories</strong></p>
 </div>
 <div class="paragraph">
 <p>Camel supports only endpoints configured with a starting directory. So
-the <strong>directoryName</strong> must be a directory.
- If you want to consume a single file only, you can use the <strong>fileName</strong>
-option, e.g. by setting <code>fileName=thefilename</code>.
+the <code>directoryName</code> <strong>must be</strong> a directory.
+ If you want to consume a single file only, you can use the <code>fileName</code>
+option, for example, by setting <code>fileName=thefilename</code>.
  Also, the starting directory must not contain dynamic expressions with
 <code>${ }</code> placeholders. Again use the <code>fileName</code> option to specify the
 dynamic part of the filename.</p>
@@ -1885,11 +1941,11 @@ dynamic part of the filename.</p>
 <div class="paragraph">
 <p>Beware the JDK File IO API is a bit limited in detecting whether another
 application is currently writing/copying a file. And the implementation
-can be different depending on OS platform as well. This could lead to
+can be different depending on the OS platform as well. This could lead to
 that Camel thinks the file is not locked by another process and start
-consuming it. Therefore you have to do you own investigation what suites
+consuming it. Therefore, you have to do your own investigation what suites
 your environment. To help with this Camel provides different <code>readLock</code>
-options and <code>doneFileName</code> option that you can use. See also the section
+options and <code>doneFileName</code> option that you can use. See also
 <a href="#File2-Consumingfilesfromfolderswhereothersdropfilesdirectly">Consuming files from folders where others drop files directly</a>.</p>
 </div>
 </td>
@@ -1918,14 +1974,14 @@ options and <code>doneFileName</code> option that you can use. See also the sect
 <h3 id="_configuring_component_options"><a class="anchor" href="#_configuring_component_options"></a>Configuring Component Options</h3>
 <div class="paragraph">
 <p>The component level is the highest level which holds general and common configurations that are inherited by the endpoints.
-For example a component may have security settings, credentials for authentication, urls for network connection and so forth.</p>
+For example, a component may have security settings, credentials for authentication, urls for network connection and so forth.</p>
 </div>
 <div class="paragraph">
 <p>Some components only have a few options, and others may have many. Because components typically have pre configured defaults
 that are commonly used, then you may often only need to configure a few options on a component; or none at all.</p>
 </div>
 <div class="paragraph">
-<p>Configuring components can be done with the <a href="../../manual/component-dsl.html" class="xref page">Component DSL</a>,
+<p>Configuring components can be done with the <a href="../../manual/4.10.x/component-dsl.html" class="xref page">Component DSL</a>,
 in a configuration file (application.properties|yaml), or directly with Java code.</p>
 </div>
 </div>
@@ -1938,11 +1994,11 @@ or as a producer (to), or used for both.</p>
 </div>
 <div class="paragraph">
 <p>Configuring endpoints is most often done directly in the endpoint URI as path and query parameters. You can also use
-the <a href="../../manual/Endpoint-dsl.html" class="xref page">Endpoint DSL</a> and <a href="../../manual/dataformat-dsl.html" class="xref page">DataFormat DSL</a>
+the <a href="../../manual/4.10.x/Endpoint-dsl.html" class="xref page">Endpoint DSL</a> and <a href="../../manual/4.10.x/dataformat-dsl.html" class="xref page">DataFormat DSL</a>
 as a <em>type safe</em> way of configuring endpoints and data formats in Java.</p>
 </div>
 <div class="paragraph">
-<p>A good practice when configuring options is to use <a href="../../manual/using-propertyplaceholder.html" class="xref page">Property Placeholders</a>,
+<p>A good practice when configuring options is to use <a href="../../manual/4.10.x/using-propertyplaceholder.html" class="xref page">Property Placeholders</a>,
 which allows to not hardcode urls, port numbers, sensitive information, and other settings.
 In other words placeholders allows to externalize the configuration from your code, and gives more flexibility and reuse.</p>
 </div>
@@ -2143,7 +2199,7 @@ In other words placeholders allows to externalize the configuration from your co
 <td class="tableblock halign-left valign-top"><p class="tableblock"><a id="_endpoint_query_option_preMove"></a>
 <a href="#_endpoint_query_option_preMove" class="anchor"></a><strong>preMove</strong> (consumer)</p></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>Expression (such as File Language) used to dynamically set the filename when moving it before processing. For example to move in-progress files into the order directory set this value to order.</p>
+<p>Expression (such as File Language) used to dynamically set the filename when moving it before processing. For example, to move in-progress files into the order directory set this value to order.</p>
 </div></div></td>
 <td class="tableblock halign-center valign-top"></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">String</p></td>
@@ -2318,7 +2374,7 @@ In other words placeholders allows to externalize the configuration from your co
 <td class="tableblock halign-left valign-top"><p class="tableblock"><a id="_endpoint_query_option_startingDirectoryMustHaveAccess"></a>
 <a href="#_endpoint_query_option_startingDirectoryMustHaveAccess" class="anchor"></a><strong>startingDirectoryMustHaveAccess</strong> (consumer (advanced))</p></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>Whether the starting directory has access permissions. Mind that the startingDirectoryMustExist parameter must be set to true in order to verify that the directory exists. Will thrown an exception if the directory doesn&#8217;t have read and write permissions.</p>
+<p>Whether the starting directory has access permissions. Mind that the startingDirectoryMustExist parameter must be set to true to verify that the directory exists. Will thrown an exception if the directory doesn&#8217;t have read and write permissions.</p>
 </div></div></td>
 <td class="tableblock halign-center valign-top"><p class="tableblock">false</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">boolean</p></td>
@@ -2452,7 +2508,7 @@ In other words placeholders allows to externalize the configuration from your co
 <td class="tableblock halign-left valign-top"><p class="tableblock"><a id="_endpoint_query_option_tempFileName"></a>
 <a href="#_endpoint_query_option_tempFileName" class="anchor"></a><strong>tempFileName</strong> (producer)</p></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>The same as tempPrefix option but offering a more fine grained control on the naming of the temporary filename as it uses the File Language. The location for tempFilename is relative to the final file location in the option 'fileName', not the target directory in the base uri. For example if option fileName includes a directory prefix: dir/finalFilename then tempFileName is relative to that subdirectory dir.</p>
+<p>The same as tempPrefix option but offering a more fine grained control on the naming of the temporary filename as it uses the File Language. The location for tempFilename is relative to the final file location in the option 'fileName', not the target directory in the base uri. For example, if option fileName includes a directory prefix: dir/finalFilename then tempFileName is relative to that subdirectory dir.</p>
 </div></div></td>
 <td class="tableblock halign-center valign-top"></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">String</p></td>
@@ -2497,7 +2553,7 @@ In other words placeholders allows to externalize the configuration from your co
 <td class="tableblock halign-left valign-top"><p class="tableblock"><a id="_endpoint_query_option_eagerDeleteTargetFile"></a>
 <a href="#_endpoint_query_option_eagerDeleteTargetFile" class="anchor"></a><strong>eagerDeleteTargetFile</strong> (producer (advanced))</p></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>Whether or not to eagerly delete any existing target file. This option only applies when you use fileExists=Override and the tempFileName option as well. You can use this to disable (set it to false) deleting the target file before the temp file is written. For example you may write big files and want the target file to exists during the temp file is being written. This ensure the target file is only deleted until the very last moment, just before the temp file is being renamed to the target filename. This option is also used to control whether to delete any existing files when fileExist=Move is enabled, and an existing file exists. If this option copyAndDeleteOnRenameFails false, then an exception will be thrown if an existing file existed, if its true, then the existing file is deleted before the move operation.</p>
+<p>Whether or not to eagerly delete any existing target file. This option only applies when you use fileExists=Override and the tempFileName option as well. You can use this to disable (set it to false) deleting the target file before the temp file is written. For example, you may write big files and want the target file to exists during the temp file is being written. This ensure the target file is only deleted until the very last moment, just before the temp file is being renamed to the target filename. This option is also used to control whether to delete any existing files when fileExist=Move is enabled, and an existing file exists. If this option copyAndDeleteOnRenameFails false, then an exception will be thrown if an existing file existed, if its true, then the existing file is deleted before the move operation.</p>
 </div></div></td>
 <td class="tableblock halign-center valign-top"><p class="tableblock">true</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">boolean</p></td>
@@ -2569,7 +2625,7 @@ In other words placeholders allows to externalize the configuration from your co
 <td class="tableblock halign-left valign-top"><p class="tableblock"><a id="_endpoint_query_option_renameUsingCopy"></a>
 <a href="#_endpoint_query_option_renameUsingCopy" class="anchor"></a><strong>renameUsingCopy</strong> (advanced)</p></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>Perform rename operations using a copy and delete strategy. This is primarily used in environments where the regular rename operation is unreliable (e.g. across different file systems or networks). This option takes precedence over the copyAndDeleteOnRenameFail parameter that will automatically fall back to the copy and delete strategy, but only after additional delays.</p>
+<p>Perform rename operations using a copy and delete strategy. This is primarily used in environments where the regular rename operation is unreliable (for example, across different file systems or networks). This option takes precedence over the copyAndDeleteOnRenameFail parameter that will automatically fall back to the copy and delete strategy, but only after additional delays.</p>
 </div></div></td>
 <td class="tableblock halign-center valign-top"><p class="tableblock">false</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">boolean</p></td>
@@ -2632,7 +2688,7 @@ In other words placeholders allows to externalize the configuration from your co
 <td class="tableblock halign-left valign-top"><p class="tableblock"><a id="_endpoint_query_option_excludeExt"></a>
 <a href="#_endpoint_query_option_excludeExt" class="anchor"></a><strong>excludeExt</strong> (filter)</p></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>Is used to exclude files matching file extension name (case insensitive). For example to exclude bak files, then use excludeExt=bak. Multiple extensions can be separated by comma, for example to exclude bak and dat files, use excludeExt=bak,dat. Note that the file extension includes all parts, for example having a file named mydata.tar.gz will have extension as tar.gz. For more flexibility then use the include/exclude options.</p>
+<p>Is used to exclude files matching file extension name (case insensitive). For example, to exclude bak files, then use excludeExt=bak. Multiple extensions can be separated by comma, for example to exclude bak and dat files, use excludeExt=bak,dat. Note that the file extension includes all parts, for example having a file named mydata.tar.gz will have extension as tar.gz. For more flexibility then use the include/exclude options.</p>
 </div></div></td>
 <td class="tableblock halign-center valign-top"></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">String</p></td>
@@ -2650,7 +2706,7 @@ In other words placeholders allows to externalize the configuration from your co
 <td class="tableblock halign-left valign-top"><p class="tableblock"><a id="_endpoint_query_option_filterDirectory"></a>
 <a href="#_endpoint_query_option_filterDirectory" class="anchor"></a><strong>filterDirectory</strong> (filter)</p></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>Filters the directory based on Simple language. For example to filter on current date, you can use a simple date pattern such as $\{date:now:yyyMMdd}.</p>
+<p>Filters the directory based on Simple language. For example, to filter on current date, you can use a simple date pattern such as $\{date:now:yyyMMdd}.</p>
 </div></div></td>
 <td class="tableblock halign-center valign-top"></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">String</p></td>
@@ -2659,7 +2715,7 @@ In other words placeholders allows to externalize the configuration from your co
 <td class="tableblock halign-left valign-top"><p class="tableblock"><a id="_endpoint_query_option_filterFile"></a>
 <a href="#_endpoint_query_option_filterFile" class="anchor"></a><strong>filterFile</strong> (filter)</p></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>Filters the file based on Simple language. For example to filter on file size, you can use $\{file:size} 5000.</p>
+<p>Filters the file based on Simple language. For example, to filter on file size, you can use $\{file:size} 5000.</p>
 </div></div></td>
 <td class="tableblock halign-center valign-top"></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">String</p></td>
@@ -2704,7 +2760,7 @@ In other words placeholders allows to externalize the configuration from your co
 <td class="tableblock halign-left valign-top"><p class="tableblock"><a id="_endpoint_query_option_includeExt"></a>
 <a href="#_endpoint_query_option_includeExt" class="anchor"></a><strong>includeExt</strong> (filter)</p></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>Is used to include files matching file extension name (case insensitive). For example to include txt files, then use includeExt=txt. Multiple extensions can be separated by comma, for example to include txt and xml files, use includeExt=txt,xml. Note that the file extension includes all parts, for example having a file named mydata.tar.gz will have extension as tar.gz. For more flexibility then use the include/exclude options.</p>
+<p>Is used to include files matching file extension name (case insensitive). For example, to include txt files, then use includeExt=txt. Multiple extensions can be separated by comma, for example to include txt and xml files, use includeExt=txt,xml. Note that the file extension includes all parts, for example having a file named mydata.tar.gz will have extension as tar.gz. For more flexibility then use the include/exclude options.</p>
 </div></div></td>
 <td class="tableblock halign-center valign-top"></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">String</p></td>
@@ -2722,7 +2778,7 @@ In other words placeholders allows to externalize the configuration from your co
 <td class="tableblock halign-left valign-top"><p class="tableblock"><a id="_endpoint_query_option_maxMessagesPerPoll"></a>
 <a href="#_endpoint_query_option_maxMessagesPerPoll" class="anchor"></a><strong>maxMessagesPerPoll</strong> (filter)</p></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>To define a maximum messages to gather per poll. By default no maximum is set. Can be used to set a limit of e.g. 1000 to avoid when starting up the server that there are thousands of files. Set a value of 0 or negative to disabled it. Notice: If this option is in use then the File and FTP components will limit before any sorting. For example if you have 100000 files and use maxMessagesPerPoll=500, then only the first 500 files will be picked up, and then sorted. You can use the eagerMaxMessagesPerPoll option and set this to false to allow to scan all files first and then sort afterwards.</p>
+<p>To define a maximum messages to gather per poll. By default no maximum is set. Can be used to set a limit of for example, 1000 to avoid when starting up the server that there are thousands of files. Set a value of 0 or negative to disabled it. Notice: If this option is in use then the File and FTP components will limit before any sorting. For example, if you have 100000 files and use maxMessagesPerPoll=500, then only the first 500 files will be picked up, and then sorted. You can use the eagerMaxMessagesPerPoll option and set this to false to allow to scan all files first and then sort afterwards.</p>
 </div></div></td>
 <td class="tableblock halign-center valign-top"></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">int</p></td>
@@ -2758,7 +2814,7 @@ In other words placeholders allows to externalize the configuration from your co
 <td class="tableblock halign-left valign-top"><p class="tableblock"><a id="_endpoint_query_option_readLock"></a>
 <a href="#_endpoint_query_option_readLock" class="anchor"></a><strong>readLock</strong> (lock)</p></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>Used by consumer, to only poll the files if it has exclusive read-lock on the file (i.e. the file is not in-progress or being written). Camel will wait until the file lock is granted. This option provides the build in strategies: - none - No read lock is in use - markerFile - Camel creates a marker file (fileName.camelLock) and then holds a lock on it. This option is not available for the FTP component - changed - Changed is using file length/modification timestamp to detect whether the file is currently being copied or not. Will at least use 1 sec to determine this, so this option cannot consume files as fast as the others, but can be more reliable as the JDK IO API cannot always determine whether a file is currently being used by another process. The option readLockCheckInterval can be used to set the check frequency. - fileLock - is for using java.nio.channels.FileLock. This option is not avail for Windows OS and the FTP component. This approach should be avoided when accessing a remote file system via a mount/share unless that file system supports distributed file locks. - rename - rename is for using a try to rename the file as a test if we can get exclusive read-lock. - idempotent - (only for file component) idempotent is for using a idempotentRepository as the read-lock. This allows to use read locks that supports clustering if the idempotent repository implementation supports that. - idempotent-changed - (only for file component) idempotent-changed is for using a idempotentRepository and changed as the combined read-lock. This allows to use read locks that supports clustering if the idempotent repository implementation supports that. - idempotent-rename - (only for file component) idempotent-rename is for using a idempotentRepository and rename as the combined read-lock. This allows to use read locks that supports clustering if the idempotent repository implementation supports that.Notice: The various read locks is not all suited to work in clustered mode, where concurrent consumers on different nodes is competing for the same files on a shared file system. The markerFile using a close to atomic operation to create the empty marker file, but its not guaranteed to work in a cluster. The fileLock may work better but then the file system need to support distributed file locks, and so on. Using the idempotent read lock can support clustering if the idempotent repository supports clustering, such as Hazelcast Component or Infinispan.</p>
+<p>Used by consumer, to only poll the files if it has exclusive read-lock on the file (that is, the file is not in-progress or being written). Camel will wait until the file lock is granted. This option provides the build in strategies: - none - No read lock is in use - markerFile - Camel creates a marker file (fileName.camelLock) and then holds a lock on it. This option is not available for the FTP component - changed - Changed is using file length/modification timestamp to detect whether the file is currently being copied or not. Will at least use 1 sec to determine this, so this option cannot consume files as fast as the others, but can be more reliable as the JDK IO API cannot always determine whether a file is currently being used by another process. The option readLockCheckInterval can be used to set the check frequency. - fileLock - is for using java.nio.channels.FileLock. This option is not avail for Windows OS and the FTP component. This approach should be avoided when accessing a remote file system via a mount/share unless that file system supports distributed file locks. - rename - rename is for using a try to rename the file as a test if we can get exclusive read-lock. - idempotent - (only for file component) idempotent is for using a idempotentRepository as the read-lock. This allows to use read locks that supports clustering if the idempotent repository implementation supports that. - idempotent-changed - (only for file component) idempotent-changed is for using a idempotentRepository and changed as the combined read-lock. This allows to use read locks that supports clustering if the idempotent repository implementation supports that. - idempotent-rename - (only for file component) idempotent-rename is for using a idempotentRepository and rename as the combined read-lock. This allows to use read locks that supports clustering if the idempotent repository implementation supports that.Notice: The various read locks is not all suited to work in clustered mode, where concurrent consumers on different nodes is competing for the same files on a shared file system. The markerFile using a close to atomic operation to create the empty marker file, but its not guaranteed to work in a cluster. The fileLock may work better but then the file system need to support distributed file locks, and so on. Using the idempotent read lock can support clustering if the idempotent repository supports clustering, such as Hazelcast Component or Infinispan.</p>
 </div>
 <div class="paragraph">
 <p>Enum values:</p>
@@ -2798,7 +2854,7 @@ In other words placeholders allows to externalize the configuration from your co
 <td class="tableblock halign-left valign-top"><p class="tableblock"><a id="_endpoint_query_option_readLockCheckInterval"></a>
 <a href="#_endpoint_query_option_readLockCheckInterval" class="anchor"></a><strong>readLockCheckInterval</strong> (lock)</p></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>Interval in millis for the read-lock, if supported by the read lock. This interval is used for sleeping between attempts to acquire the read lock. For example when using the changed read lock, you can set a higher interval period to cater for slow writes. The default of 1 sec. may be too fast if the producer is very slow writing the file. Notice: For FTP the default readLockCheckInterval is 5000. The readLockTimeout value must be higher than readLockCheckInterval, but a rule of thumb is to have a timeout that is at least 2 or more times higher than the readLockCheckInterval. This is needed to ensure that ample time is allowed for the read lock process to try to grab the lock before the timeout was hit.</p>
+<p>Interval in millis for the read-lock, if supported by the read lock. This interval is used for sleeping between attempts to acquire the read lock. For example, when using the changed read lock, you can set a higher interval period to cater for slow writes. The default of 1 sec. may be too fast if the producer is very slow writing the file. Notice: For FTP the default readLockCheckInterval is 5000. The readLockTimeout value must be higher than readLockCheckInterval, but a rule of thumb is to have a timeout that is at least 2 or more times higher than the readLockCheckInterval. This is needed to ensure that ample time is allowed for the read lock process to try to grab the lock before the timeout was hit.</p>
 </div></div></td>
 <td class="tableblock halign-center valign-top"><p class="tableblock">1000</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">long</p></td>
@@ -2886,7 +2942,7 @@ In other words placeholders allows to externalize the configuration from your co
 <td class="tableblock halign-left valign-top"><p class="tableblock"><a id="_endpoint_query_option_readLockMarkerFile"></a>
 <a href="#_endpoint_query_option_readLockMarkerFile" class="anchor"></a><strong>readLockMarkerFile</strong> (lock)</p></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>Whether to use marker file with the changed, rename, or exclusive read lock types. By default a marker file is used as well to guard against other processes picking up the same files. This behavior can be turned off by setting this option to false. For example if you do not want to write marker files to the file systems by the Camel application.</p>
+<p>Whether to use marker file with the changed, rename, or exclusive read lock types. By default a marker file is used as well to guard against other processes picking up the same files. This behavior can be turned off by setting this option to false. For example, if you do not want to write marker files to the file systems by the Camel application.</p>
 </div></div></td>
 <td class="tableblock halign-center valign-top"><p class="tableblock">true</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">boolean</p></td>
@@ -2895,7 +2951,7 @@ In other words placeholders allows to externalize the configuration from your co
 <td class="tableblock halign-left valign-top"><p class="tableblock"><a id="_endpoint_query_option_readLockMinAge"></a>
 <a href="#_endpoint_query_option_readLockMinAge" class="anchor"></a><strong>readLockMinAge</strong> (lock)</p></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>This option is applied only for readLock=changed. It allows to specify a minimum age the file must be before attempting to acquire the read lock. For example use readLockMinAge=300s to require the file is at last 5 minutes old. This can speedup the changed read lock as it will only attempt to acquire files which are at least that given age.</p>
+<p>This option is applied only for readLock=changed. It allows to specify a minimum age the file must be before attempting to acquire the read lock. For example, use readLockMinAge=300s to require the file is at last 5 minutes old. This can speedup the changed read lock as it will only attempt to acquire files which are at least that given age.</p>
 </div></div></td>
 <td class="tableblock halign-center valign-top"><p class="tableblock">0</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">long</p></td>
@@ -3342,7 +3398,7 @@ In other words placeholders allows to externalize the configuration from your co
 <p><strong>Default behavior for file producer</strong></p>
 </div>
 <div class="paragraph">
-<p>By default it will override any existing file, if one exist with the same name.</p>
+<p>By default, it will override any existing file if one exists with the same name.</p>
 </div>
 </td>
 </tr>
@@ -3351,15 +3407,42 @@ In other words placeholders allows to externalize the configuration from your co
 </div>
 </div>
 <div class="sect1">
-<h2 id="_move_and_delete_operations"><a class="anchor" href="#_move_and_delete_operations"></a>Move and Delete operations</h2>
+<h2 id="_move_pre_move_and_delete_operations"><a class="anchor" href="#_move_pre_move_and_delete_operations"></a>Move, Pre Move and Delete operations</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>Any move or delete operations is executed after (post command) the
-routing has completed; so during processing of the <code>Exchange</code> the file
-is still located in the inbox folder.</p>
+<p>By default, Camel will move consumed files to the <code>.camel</code> subfolder
+relative to the directory where the file was consumed.</p>
 </div>
 <div class="paragraph">
-<p>Lets illustrate this with an example:</p>
+<p>If you want to delete the file after processing, the route should be:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">from("file://inbox?delete=true").to("bean:handleOrder");</code></pre>
+</div>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>There is a sample <a href="#File2-ReadingFromADirectoryAndTheDefaultMoveOperation">showing reading from a directory and the default move operation</a> below.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="sect2">
+<h3 id="_move_delete_and_the_routing_process"><a class="anchor" href="#_move_delete_and_the_routing_process"></a>Move, Delete and the Routing process</h3>
+<div class="paragraph">
+<p>Any move or delete operations are executed after the routing has completed.
+So, during processing of the <code>Exchange</code> the file is still located in the inbox folder.</p>
+</div>
+<div class="paragraph">
+<p>Let&#8217;s illustrate this with an example:</p>
 </div>
 <div class="listingblock">
 <div class="content">
@@ -3375,9 +3458,11 @@ bean completes, and thus the route is completed, the file consumer will
 perform the move operation and move the file to the <code>.done</code> sub-folder.</p>
 </div>
 <div class="paragraph">
-<p>The <strong>move</strong> and the <strong>preMove</strong> options are considered as a directory name
-(though if you use an expression such as <a href="languages/file-language.html" class="xref page">File Language</a>, or <a href="languages/simple-language.html" class="xref page">Simple</a> then the result of the expression
-evaluation is the file name to be used - eg if you set</p>
+<p>The <code>move</code> and the <code>preMove</code> options are considered as a directory name.
+Though, if you use an expression such as <a href="languages/file-language.html" class="xref page">File Language</a>,
+or <a href="languages/simple-language.html" class="xref page">Simple</a>, then the result of the expression
+evaluation is the file name to be used.
+E.g., if you set:</p>
 </div>
 <div class="listingblock">
 <div class="content">
@@ -3385,27 +3470,18 @@ evaluation is the file name to be used - eg if you set</p>
 </div>
 </div>
 <div class="paragraph">
-<p>then that&#8217;s using the <a href="languages/file-language.html" class="xref page">File Language</a> which we
-use return the file name to be used), which can be either relative or
-absolute. If relative, the directory is created as a sub-folder from
-within the folder where the file was consumed.</p>
+<p>Then that&#8217;s using the <a href="languages/file-language.html" class="xref page">File Language</a> which we
+ use to return the file name to be used.
+This can be either relative or absolute.
+If relative, the directory is created as a subfolder from within the folder where the file was consumed.</p>
 </div>
+</div>
+<div class="sect2">
+<h3 id="_move_and_pre_move_operations"><a class="anchor" href="#_move_and_pre_move_operations"></a>Move and Pre Move operations</h3>
 <div class="paragraph">
-<p>By default, Camel will move consumed files to the <code>.camel</code> sub-folder
-relative to the directory where the file was consumed.</p>
-</div>
-<div class="paragraph">
-<p>If you want to delete the file after processing, the route should be:</p>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">from("file://inbox?delete=true").to("bean:handleOrder");</code></pre>
-</div>
-</div>
-<div class="paragraph">
-<p>We have introduced a <strong>pre</strong> move operation to move files <strong>before</strong> they
+<p>We have introduced a <code>preMove</code> operation to move files <strong>before</strong> they
 are processed. This allows you to mark which files have been scanned as
-they are moved to this sub folder before being processed.</p>
+they are moved to this subfolder before being processed.</p>
 </div>
 <div class="listingblock">
 <div class="content">
@@ -3413,7 +3489,7 @@ they are moved to this sub folder before being processed.</p>
 </div>
 </div>
 <div class="paragraph">
-<p>You can combine the <strong>pre</strong> move and the regular move:</p>
+<p>You can combine the <code>preMove</code> and the regular <code>move</code>:</p>
 </div>
 <div class="listingblock">
 <div class="content">
@@ -3422,28 +3498,28 @@ they are moved to this sub folder before being processed.</p>
 </div>
 <div class="paragraph">
 <p>So in this situation, the file is in the <code>inprogress</code> folder when being
-processed and after it&#8217;s processed, it&#8217;s moved to the <code>.done</code> folder.</p>
+processed, and after it&#8217;s processed, it&#8217;s moved to the <code>.done</code> folder.</p>
 </div>
 </div>
-</div>
-<div class="sect1">
-<h2 id="_fine_grained_control_over_move_and_premove_option"><a class="anchor" href="#_fine_grained_control_over_move_and_premove_option"></a>Fine grained control over Move and PreMove option</h2>
-<div class="sectionbody">
+<div class="sect2">
+<h3 id="_fine_grained_control_over_move_and_premove_option"><a class="anchor" href="#_fine_grained_control_over_move_and_premove_option"></a>Fine-grained control over Move and PreMove option</h3>
 <div class="paragraph">
-<p>The <strong>move</strong> and <strong>preMove</strong> options
-are Expression-based, so we have the full power of
+<p>The <code>move</code> and <code>preMove</code> options are Expression-based, so we have the full power of
 the <a href="languages/file-language.html" class="xref page">File Language</a> to do advanced configuration
-of the directory and name pattern.<br>
- Camel will, in fact, internally convert the directory name you enter
-into a <a href="languages/file-language.html" class="xref page">File Language</a> expression. So when we
-enter <code>move=.done</code> Camel will convert this into:
-<code>${file:parent}/.done/${file:onlyname}</code>. This is only done if
-Camel detects that you have not provided a ${ } in the option value
-yourself. So when you enter a ${ } Camel will <strong>not</strong> convert it and thus
+of the directory and name pattern.
+Camel will, in fact, internally convert the directory name you enter
+into a <a href="languages/file-language.html" class="xref page">File Language</a> expression.
+So, when we use <code>move=.done</code> Camel will convert this into:
+<code>${file:parent}/.done/${file:onlyname}</code>.</p>
+</div>
+<div class="paragraph">
+<p>This is only done if Camel detects that you have not provided a <code>${ }</code> in the option value
+yourself.
+So when you enter a <code>${ }</code> Camel will <strong>not</strong> convert it, and thus
 you have the full power.</p>
 </div>
 <div class="paragraph">
-<p>So if we want to move the file into a backup folder with today&#8217;s date as
+<p>So if we want to move the file into a backup folder with today&#8217;s date, as
 the pattern, we can do:</p>
 </div>
 <div class="listingblock">
@@ -3452,27 +3528,29 @@ the pattern, we can do:</p>
 </div>
 </div>
 </div>
-</div>
-<div class="sect1">
-<h2 id="_about_movefailed"><a class="anchor" href="#_about_movefailed"></a>About moveFailed</h2>
-<div class="sectionbody">
+<div class="sect2">
+<h3 id="_about_movefailed"><a class="anchor" href="#_about_movefailed"></a>About moveFailed</h3>
 <div class="paragraph">
 <p>The <code>moveFailed</code> option allows you to move files that <strong>could not</strong> be
 processed successfully to another location such as an error folder of your
-choice. For example to move the files in an error folder with a
-timestamp you can use
+choice.
+For example, to move the files in an error folder with a timestamp you can use
 <code>moveFailed=/error/${<code>file:name.noext</code>}-${date:now:yyyyMMddHHmmssSSS}.${``file:ext</code>}.</p>
 </div>
+<div class="admonitionblock tip">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-tip" title="Tip"></i>
+</td>
+<td class="content">
 <div class="paragraph">
 <p>See more examples at <a href="languages/file-language.html" class="xref page">File Language</a></p>
 </div>
+</td>
+</tr>
+</table>
 </div>
-</div>
-<div class="sect1">
-<h2 id="_batch_consumer"><a class="anchor" href="#_batch_consumer"></a>Batch Consumer</h2>
-<div class="sectionbody">
-<div class="paragraph">
-<p>This component implements the Batch Consumer.</p>
 </div>
 </div>
 </div>
@@ -3481,10 +3559,8 @@ timestamp you can use
 <div class="sectionbody">
 <div class="paragraph">
 <p>As the file consumer implements the <code>BatchConsumer</code> it supports batching
-the files it polls. By batching we mean that Camel will add the
-following additional properties to the Exchange, so
-you know the number of files polled, the current index, and whether the
-batch is already completed.</p>
+the files it polls. By batching, we mean that Camel will add the
+following additional properties to the Exchange:</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
 <colgroup>
@@ -3514,8 +3590,8 @@ the batch. Is only <code>true</code> for the last entry.</p></td>
 </tbody>
 </table>
 <div class="paragraph">
-<p>This allows you for instance to know how many files exist in this batch
-and for instance let the Aggregator2 aggregate
+<p>This allows you, for instance, to know how many files exist in this batch
+and for instance, let the Aggregator2 aggregate
 this number of files.</p>
 </div>
 </div>
@@ -3524,9 +3600,9 @@ this number of files.</p>
 <h2 id="_using_charset"><a class="anchor" href="#_using_charset"></a>Using charset</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>The charset option allows for configuring an encoding of the files on
-both the consumer and producer endpoints. For example if you read utf-8
-files, and want to convert the files to iso-8859-1, you can do:</p>
+<p>The <code>charset</code> option allows configuring the encoding of the files on
+both the consumer and producer endpoints. For example, if you read utf-8
+files and want to convert the files to iso-8859-1, you can do:</p>
 </div>
 <div class="listingblock">
 <div class="content">
@@ -3535,7 +3611,7 @@ files, and want to convert the files to iso-8859-1, you can do:</p>
 </div>
 </div>
 <div class="paragraph">
-<p>You can also use the <code>convertBodyTo</code> in the route. In the example below
+<p>You can also use the <code>convertBodyTo</code> in the route. In the example below,
 we have still input files in utf-8 format, but we want to convert the
 file content to a byte array in iso-8859-1 format. And then let a bean
 process the data. Before writing the content to the outbox folder using
@@ -3551,15 +3627,15 @@ the current charset.</p>
 </div>
 <div class="paragraph">
 <p>If you omit the charset on the consumer endpoint, then Camel does not
-know the charset of the file, and would by default use "UTF-8". However
+know the charset of the file, and would by default use <code>UTF-8</code>. However,
 you can configure a JVM system property to override and use a different
 default encoding with the key <code>org.apache.camel.default.charset</code>.</p>
 </div>
 <div class="paragraph">
-<p>In the example below this could be a problem if the files is not in
+<p>In the example below, this could be a problem if the files are not in
 UTF-8 encoding, which would be the default encoding for read the
-files.<br>
- In this example when writing the files, the content has already been
+files.
+In this example when writing the files, the content has already been
 converted to a byte array, and thus would write the content directly as
 is (without any further encodings).</p>
 </div>
@@ -3574,7 +3650,7 @@ is (without any further encodings).</p>
 <div class="paragraph">
 <p>You can also override and control the encoding dynamic when writing
 files, by setting a property on the exchange with the key
-<code>Exchange.CHARSET_NAME</code>. For example in the route below we set the
+<code>Exchange.CHARSET_NAME</code>. For example, in the route below, we set the
 property with a value from a message header.</p>
 </div>
 <div class="listingblock">
@@ -3587,20 +3663,20 @@ property with a value from a message header.</p>
 </div>
 </div>
 <div class="paragraph">
-<p>We suggest to keep things simpler, so if you pickup files with the same
+<p>We suggest keeping things simpler, so if you pick up files with the same
 encoding, and want to write the files in a specific encoding, then favor
 to use the <code>charset</code> option on the endpoints.</p>
 </div>
 <div class="paragraph">
-<p>Notice that if you have explicit configured a <code>charset</code> option on the
+<p>Notice that if you have explicitly configured a <code>charset</code> option on the
 endpoint, then that configuration is used, regardless of the
 <code>Exchange.CHARSET_NAME</code> property.</p>
 </div>
 <div class="paragraph">
 <p>If you have some issues then you can enable DEBUG logging on
 <code>org.apache.camel.component.file</code>, and Camel logs when it reads/write a
-file using a specific charset.<br>
- For example the route below will log the following:</p>
+file using a specific charset.
+For example, the route below will log the following:</p>
 </div>
 <div class="listingblock">
 <div class="content">
@@ -3623,7 +3699,7 @@ DEBUG FileOperations                 - Using Reader to write file: target/charse
 <h2 id="_common_gotchas_with_folder_and_filenames"><a class="anchor" href="#_common_gotchas_with_folder_and_filenames"></a>Common gotchas with folder and filenames</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>When Camel is producing files (writing files) there are a few gotchas
+<p>When Camel is producing files (writing files), there are a few gotchas
 affecting how to set a filename of your choice. By default, Camel will
 use the message ID as the filename, and since the message ID is normally
 a unique generated ID, you will end up with filenames such as:
@@ -3662,7 +3738,7 @@ filename:</p>
 </div>
 <div class="paragraph">
 <p>And a syntax where we set the filename on the endpoint with the
-<strong>fileName</strong> URI option.</p>
+<code>fileName</code> URI option.</p>
 </div>
 <div class="listingblock">
 <div class="content">
@@ -3687,31 +3763,30 @@ for syntax and samples.</p>
 <div class="sectionbody">
 <div class="paragraph">
 <p>Beware if you consume files from a folder where other applications write
-files to directly. Take a look at the different readLock options to see
-what suits your use cases. The best approach is however to write to
-another folder and after the write move the file in the drop folder.
-However if you write files directly to the drop folder then the option
-changed could better detect whether a file is currently being
+files too. Take a look at the different <code>readLock</code> options to see
+what suits your use cases. The best approach is, however, to write to
+another folder and, after writing, move the file in the drop folder.
+However, if you write files directly to the drop folder, then the option
+<code>changed</code> could better detect whether a file is currently being
 written/copied as it uses a file changed algorithm to see whether the
 file size / modification changes over a period of time. The other
-readLock options rely on Java File API that sadly is not always very
-good at detecting this. You may also want to look at the doneFileName
-option, which uses a marker file (done file) to signal when a file is
+<code>readLock</code> options rely on Java File API that, sadly, is not always very
+good at detecting this. You may also want to look at the <code>doneFileName</code>
+option, which uses a marker file (<em>done file</em>) to signal when a file is
 done and ready to be consumed.</p>
 </div>
 </div>
 </div>
 <div class="sect1">
-<h2 id="_using_done_files"><a class="anchor" href="#_using_done_files"></a>Using done files</h2>
+<h2 id="_done_files"><a class="anchor" href="#_done_files"></a>Done files</h2>
 <div class="sectionbody">
+<div class="sect2">
+<h3 id="_using_done_files"><a class="anchor" href="#_using_done_files"></a>Using done files</h3>
 <div class="paragraph">
-<p><strong>Since Camel 2.6</strong></p>
+<p>See also section <a href="#File2-WritingDoneFiles"><em>writing done files</em></a> below.</p>
 </div>
 <div class="paragraph">
-<p>See also section <em>writing done files</em> below.</p>
-</div>
-<div class="paragraph">
-<p>If you want only to consume files when a done file exists, then you can
+<p>If you want only to consume files when a <em>done file</em> exists, then you can
 use the <code>doneFileName</code> option on the endpoint.</p>
 </div>
 <div class="listingblock">
@@ -3720,67 +3795,95 @@ use the <code>doneFileName</code> option on the endpoint.</p>
 </div>
 </div>
 <div class="paragraph">
-<p>Will only consume files from the bar folder, if a done <em>file</em> exists in
+<p>It will only consume files from the <em>bar</em> folder if a <em>done file</em> exists in
 the same directory as the target files. Camel will automatically delete
-the <em>done file</em> when it&#8217;s done consuming the files.
-Camel does not delete automatically the <em>done file</em> if
-<code>noop=true</code> is configured.</p>
+the <em>done file</em> when it&#8217;s done consuming the files.</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>Camel does not delete automatically the <em>done file</em> if <code>noop=true</code> is configured.</p>
+</div>
+</td>
+</tr>
+</table>
 </div>
 <div class="paragraph">
-<p>However it is more common to have one <em>done file</em> per target file. This
-means there is a 1:1 correlation. To do this you must use dynamic
-placeholders in the <code>doneFileName</code> option. Currently Camel supports the
+<p>However, it is more common to have one <em>done file</em> per target file. This
+means there is a 1:1 correlation. To do this, you must use dynamic
+placeholders in the <code>doneFileName</code> option. Currently, Camel supports the
 following two dynamic tokens: <code>file:name</code> and <code>file:name.noext</code> which
-must be enclosed in ${ }. The consumer only supports the static part of
+must be enclosed in <code>${ }</code>. The consumer only supports the static part of
 the <em>done file</em> name as either prefix or suffix (not both).</p>
 </div>
+<div id="_tabs_1" class="openblock tabs is-sync is-loading">
+<div class="content">
+<div class="ulist tablist">
+<ul>
+<li id="_tabs_1_suffix" class="tab">
+<p>Suffix</p>
+</li>
+<li id="_tabs_1_prefix" class="tab">
+<p>Prefix</p>
+</li>
+</ul>
+</div>
+<div id="_tabs_1_suffix--panel" class="tabpanel" aria-labelledby="_tabs_1_suffix">
 <div class="listingblock">
 <div class="content">
 <pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">from("file:bar?doneFileName=${file:name}.done");</code></pre>
 </div>
 </div>
 <div class="paragraph">
-<p>In this example only files will be polled if there exists a done file
-with the name <em>file name</em>.done. For example</p>
+<p>In this example, the files will only be polled if there exists a <em>done file</em>
+with the name <code><em>file name</em>.done</code>.
+For example:</p>
 </div>
 <div class="ulist">
 <ul>
 <li>
-<p><code>hello.txt</code> - is the file to be consumed</p>
+<p><code>hello.txt</code>: is the file to be consumed</p>
 </li>
 <li>
-<p><code>hello.txt.done</code> - is the associated done file</p>
+<p><code>hello.txt.done</code>: is the associated <code>done</code> file</p>
 </li>
 </ul>
 </div>
-<div class="paragraph">
-<p>You can also use a prefix for the done file, such as:</p>
 </div>
+<div id="_tabs_1_prefix--panel" class="tabpanel" aria-labelledby="_tabs_1_prefix">
 <div class="listingblock">
 <div class="content">
 <pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">from("file:bar?doneFileName=ready-${file:name}");</code></pre>
 </div>
 </div>
+<div class="paragraph">
+<p>You can also use a prefix for the <em>done file</em>, such as:</p>
+</div>
 <div class="ulist">
 <ul>
 <li>
-<p><code>hello.txt</code> - is the file to be consumed</p>
+<p><code>hello.txt</code>: is the file to be consumed</p>
 </li>
 <li>
-<p><code>ready-hello.txt</code> - is the associated done file</p>
+<p><code>ready-hello.txt</code>: is the associated <code>done</code> file</p>
 </li>
 </ul>
 </div>
 </div>
 </div>
-<div class="sect1">
-<h2 id="_writing_done_files"><a class="anchor" href="#_writing_done_files"></a>Writing done files</h2>
-<div class="sectionbody">
+</div>
+</div>
+<div class="sect2">
+<h3 id="File2-WritingDoneFiles"><a class="anchor" href="#File2-WritingDoneFiles"></a>Writing done files</h3>
 <div class="paragraph">
-<p>After you have written a file you may want to write an additional <em>done</em>
-<em>file</em> as a kind of marker, to indicate to others that the file is
-finished and has been written. To do that you can use the <code>doneFileName</code>
-option on the file producer endpoint.</p>
+<p>After you have written a file, you may want to write an additional <em>done file</em> as a kind of marker,
+to indicate to others that the file is finished and has been written.
+To do that, you can use the <code>doneFileName</code> option on the file producer endpoint.</p>
 </div>
 <div class="listingblock">
 <div class="content">
@@ -3788,42 +3891,66 @@ option on the file producer endpoint.</p>
 </div>
 </div>
 <div class="paragraph">
-<p>Will simply create a file named <code>done</code> in the same directory as the
+<p>This will create a file named <code>done</code> in the same directory as the
 target file.</p>
 </div>
 <div class="paragraph">
-<p>However it is more common to have one done file per target file. This
-means there is a 1:1 correlation. To do this you must use dynamic
-placeholders in the <code>doneFileName</code> option. Currently Camel supports the
-following two dynamic tokens: <code>file:name</code> and <code>file:name.noext</code> which
-must be enclosed in ${ }.</p>
+<p>However, it is more common to have one <em>done file</em> per target file. This
+means there is a 1:1 correlation. To do this, you must use dynamic
+placeholders in the <code>doneFileName</code> option. Currently, Camel supports the
+following two dynamic tokens: <code>file:name</code> and <code>file:name.noext</code>.
+They must be enclosed in <code>${ }</code>:</p>
 </div>
+<div id="_tabs_2" class="openblock tabs is-sync is-loading">
+<div class="content">
+<div class="ulist tablist">
+<ul>
+<li id="_tabs_2_prefix_and_file_name" class="tab">
+<p>Prefix and file name</p>
+</li>
+<li id="_tabs_2_suffix_and_file_name" class="tab">
+<p>Suffix and file name</p>
+</li>
+<li id="_tabs_2_file_name_without_the_extension" class="tab">
+<p>File name without the extension</p>
+</li>
+</ul>
+</div>
+<div id="_tabs_2_prefix_and_file_name--panel" class="tabpanel" aria-labelledby="_tabs_2_prefix_and_file_name">
 <div class="listingblock">
 <div class="content">
 <pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">.to("file:bar?doneFileName=done-${file:name}");</code></pre>
 </div>
 </div>
 <div class="paragraph">
-<p>Will for example create a file named <code>done-foo.txt</code> if the target file
+<p>This will, for example, create a file named <code>done-foo.txt</code> if the target file
 was <code>foo.txt</code> in the same directory as the target file.</p>
 </div>
+</div>
+<div id="_tabs_2_suffix_and_file_name--panel" class="tabpanel" aria-labelledby="_tabs_2_suffix_and_file_name">
 <div class="listingblock">
 <div class="content">
 <pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">.to("file:bar?doneFileName=${file:name}.done");</code></pre>
 </div>
 </div>
 <div class="paragraph">
-<p>Will for example create a file named <code>foo.txt.done</code> if the target file
+<p>This will, for example, create a file named <code>foo.txt.done</code> if the target file
 was <code>foo.txt</code> in the same directory as the target file.</p>
 </div>
+</div>
+<div id="_tabs_2_file_name_without_the_extension--panel" class="tabpanel" aria-labelledby="_tabs_2_file_name_without_the_extension">
 <div class="listingblock">
 <div class="content">
 <pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">.to("file:bar?doneFileName=${file:name.noext}.done");</code></pre>
 </div>
 </div>
 <div class="paragraph">
-<p>Will for example create a file named <code>foo.done</code> if the target file was
+<p>Will, for example, create a file named <code>foo.done</code> if the target file was
 <code>foo.txt</code> in the same directory as the target file.</p>
+</div>
+</div>
+</div>
+</div>
 </div>
 </div>
 </div>
@@ -3887,9 +4014,9 @@ outputdir/sub/bar.txt</pre>
 <h2 id="File2-Usingflatten"><a class="anchor" href="#File2-Usingflatten"></a>Using flatten</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>If you want to store the files in the outputdir directory in the same
-directory, disregarding the source directory layout (e.g. to flatten out
-the path), you just add the <code>flatten=true</code> option on the file producer
+<p>If you want to store the files in the <code>outputdir</code> directory in the same
+directory, disregarding the source directory layout (for example, to flatten out
+the path), you add the <code>flatten=true</code> option on the file producer
 side:</p>
 </div>
 <div class="listingblock">
@@ -3898,7 +4025,7 @@ side:</p>
 </div>
 </div>
 <div class="paragraph">
-<p>Will result in the following output layout:</p>
+<p>It will result in the following output layout:</p>
 </div>
 <div class="listingblock">
 <div class="content">
@@ -3909,65 +4036,11 @@ outputdir/bar.txt</pre>
 </div>
 </div>
 <div class="sect1">
-<h2 id="_reading_from_a_directory_and_the_default_move_operation"><a class="anchor" href="#_reading_from_a_directory_and_the_default_move_operation"></a>Reading from a directory and the default move operation</h2>
-<div class="sectionbody">
-<div class="paragraph">
-<p>Camel will by default move any processed file into a <code>.camel</code>
-subdirectory in the directory the file was consumed from.</p>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">from("file://inputdir/?recursive=true&amp;delete=true").to("file://outputdir")</code></pre>
-</div>
-</div>
-<div class="paragraph">
-<p>Affects the layout as follows:<br>
- <strong>before</strong></p>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre>inputdir/foo.txt
-inputdir/sub/bar.txt</pre>
-</div>
-</div>
-<div class="paragraph">
-<p><strong>after</strong></p>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre>inputdir/.camel/foo.txt
-inputdir/sub/.camel/bar.txt
-outputdir/foo.txt
-outputdir/sub/bar.txt</pre>
-</div>
-</div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="_read_from_a_directory_and_process_the_message_in_java"><a class="anchor" href="#_read_from_a_directory_and_process_the_message_in_java"></a>Read from a directory and process the message in java</h2>
-<div class="sectionbody">
-<div class="listingblock">
-<div class="content">
-<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">from("file://inputdir/").process(new Processor() {
-  public void process(Exchange exchange) throws Exception {
-    Object body = exchange.getIn().getBody();
-    // do some business logic with the input body
-  }
-});</code></pre>
-</div>
-</div>
-<div class="paragraph">
-<p>The body will be a <code>File</code> object that points to the file that was just
-dropped into the <code>inputdir</code> directory.</p>
-</div>
-</div>
-</div>
-<div class="sect1">
 <h2 id="_writing_to_files"><a class="anchor" href="#_writing_to_files"></a>Writing to files</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>Camel is of course also able to write files, i.e. produce files. In the
-sample below we receive some reports on the SEDA queue that we process
+<p>Camel is also able to write files, that is, produce files.
+In the sample below, we receive some reports on the SEDA queue that we process
 before they are being written to a directory.</p>
 </div>
 <div class="sect2">
@@ -4002,8 +4075,8 @@ destinations.</p>
 <div class="sect2">
 <h3 id="_writing_file_through_the_temporary_directory_relative_to_the_final_destination"><a class="anchor" href="#_writing_file_through_the_temporary_directory_relative_to_the_final_destination"></a>Writing file through the temporary directory relative to the final destination</h3>
 <div class="paragraph">
-<p>Sometime you need to temporarily write the files to some directory
-relative to the destination directory. Such situation usually happens
+<p>Sometimes you need to temporarily write the files to some directory
+relative to the destination directory. Such a situation usually happens
 when some external process with limited filtering capabilities is
 reading from the directory you are writing to. In the example below
 files will be written to the  <code>/var/myapp/filesInProgress</code> directory and
@@ -4020,28 +4093,11 @@ the` /var/myapp/finalDirectory `directory.</p>
 </div>
 </div>
 <div class="sect1">
-<h2 id="_using_expression_for_filenames"><a class="anchor" href="#_using_expression_for_filenames"></a>Using expression for filenames</h2>
-<div class="sectionbody">
-<div class="paragraph">
-<p>In this sample we want to move consumed files to a backup folder using
-today&#8217;s date as a sub-folder name:</p>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">from("file://inbox?move=backup/${date:now:yyyyMMdd}/${file:name}").to("...");</code></pre>
-</div>
-</div>
-<div class="paragraph">
-<p>See <a href="languages/file-language.html" class="xref page">File Language</a> for more samples.</p>
-</div>
-</div>
-</div>
-<div class="sect1">
 <h2 id="_avoiding_reading_the_same_file_more_than_once_idempotent_consumer"><a class="anchor" href="#_avoiding_reading_the_same_file_more_than_once_idempotent_consumer"></a>Avoiding reading the same file more than once (idempotent consumer)</h2>
 <div class="sectionbody">
 <div class="paragraph">
 <p>Camel supports Idempotent Consumer
-directly within the component so it will skip already processed files.
+directly within the component, so it will skip already processed files.
 This feature can be enabled by setting the <code>idempotent=true</code> option.</p>
 </div>
 <div class="listingblock">
@@ -4052,7 +4108,7 @@ This feature can be enabled by setting the <code>idempotent=true</code> option.<
 <div class="paragraph">
 <p>Camel uses the absolute file name as the idempotent key, to detect
 duplicate files. You can customize this key by
-using an expression in the idempotentKey option. For example to use both
+using an expression in the idempotentKey option. For example, to use both
 the name and the file size as the key</p>
 </div>
 <div class="listingblock">
@@ -4064,9 +4120,10 @@ the name and the file size as the key</p>
 </div>
 </div>
 <div class="paragraph">
-<p>By default Camel uses a in memory based store for keeping track of
-consumed files, it uses a least recently used cache holding up to 1000
-entries. You can plugin your own implementation of this store by using
+<p>By default, Camel uses an in-memory store for keeping track of
+consumed files.
+It uses the least recently used cache holding up to 1000
+entries. You can plug in your own implementation of this store by using
 the <code>idempotentRepository</code> option using the <code>#</code> sign in the value to
 indicate it&#8217;s a referring to a bean in the Registry
 with the specified <code>id</code>.</p>
@@ -4094,20 +4151,22 @@ consumed before:</p>
 </div>
 </div>
 <div class="sect1">
-<h2 id="_using_a_file_based_idempotent_repository"><a class="anchor" href="#_using_a_file_based_idempotent_repository"></a>Using a file based idempotent repository</h2>
+<h2 id="_idempotent_repository"><a class="anchor" href="#_idempotent_repository"></a>Idempotent Repository</h2>
 <div class="sectionbody">
+<div class="sect2">
+<h3 id="_using_a_file_based_idempotent_repository"><a class="anchor" href="#_using_a_file_based_idempotent_repository"></a>Using a file-based idempotent repository</h3>
 <div class="paragraph">
-<p>In this section we will use the file based idempotent repository
+<p>In this section we will use the file-based idempotent repository
 <code>org.apache.camel.processor.idempotent.FileIdempotentRepository</code> instead
-of the in-memory based that is used as default.<br>
- This repository uses a 1st level cache to avoid reading the file
+of the in-memory one that is used as default.
+This repository uses a first level cache to avoid reading the file
 repository. It will only use the file repository to store the content of
-the 1st level cache. Thereby the repository can survive server restarts.
-It will load the content of the file into the 1st level cache upon
-startup. The file structure is very simple as it stores the key in
+the first level cache. Thereby, the repository can survive server restarts.
+It will load the content of the file into the first level cache upon
+startup. The file structure is basic as it stores the key in
 separate lines in the file. By default, the file store has a size limit
-of 1mb. When the file grows larger Camel will truncate the file store,
-rebuilding the content by flushing the 1st level cache into a fresh
+of 1mb. When the file grows larger, Camel will truncate the file store,
+rebuilding the content by flushing the first level cache into a fresh
 empty file.</p>
 </div>
 <div class="paragraph">
@@ -4117,18 +4176,16 @@ with the <code>idempotentRepository</code> using <code>#</code> sign to indicate
 Registry lookup:</p>
 </div>
 </div>
-</div>
-<div class="sect1">
-<h2 id="_using_a_jpa_based_idempotent_repository"><a class="anchor" href="#_using_a_jpa_based_idempotent_repository"></a>Using a JPA based idempotent repository</h2>
-<div class="sectionbody">
+<div class="sect2">
+<h3 id="_using_a_jpa_based_idempotent_repository"><a class="anchor" href="#_using_a_jpa_based_idempotent_repository"></a>Using a JPA based idempotent repository</h3>
 <div class="paragraph">
-<p>In this section we will use the JPA based idempotent repository instead
+<p>In this section, we will use the JPA based idempotent repository instead
 of the in-memory based that is used as default.</p>
 </div>
 <div class="paragraph">
 <p>First we need a persistence-unit in <code>META-INF/persistence.xml</code> where we
 need to use the class
-<code>org.apache.camel.processor.idempotent.jpa.MessageProcessed</code> as model.</p>
+<code>org.apache.camel.processor.idempotent.jpa.MessageProcessed</code> as the model.</p>
 </div>
 <div class="listingblock">
 <div class="content">
@@ -4155,7 +4212,7 @@ XML file as well:</p>
 &lt;bean id="jpaStore" class="org.apache.camel.processor.idempotent.jpa.JpaMessageIdRepository"&gt;
     &lt;!-- Here we refer to the entityManagerFactory --&gt;
     &lt;constructor-arg index="0" ref="entityManagerFactory"/&gt;
-    &lt;!-- This 2nd parameter is the name  (= a category name).
+    &lt;!-- This 2nd parameter is the name (= a category name).
          You can have different repositories with different names --&gt;
     &lt;constructor-arg index="1" value="FileConsumer"/&gt;
 &lt;/bean&gt;</code></pre>
@@ -4176,19 +4233,52 @@ option:</p>
 </div>
 </div>
 </div>
+</div>
 <div class="sect1">
-<h2 id="_filter_using_org_apache_camel_component_file_genericfilefilter"><a class="anchor" href="#_filter_using_org_apache_camel_component_file_genericfilefilter"></a>Filter using org.apache.camel.component.file.GenericFileFilter</h2>
+<h2 id="_filtering_strategies"><a class="anchor" href="#_filtering_strategies"></a>Filtering Strategies</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>Camel supports pluggable filtering strategies. You can then configure
-the endpoint with such a filter to skip certain files being processed.</p>
+<p>Camel supports pluggable filtering strategies. They are described below.</p>
+</div>
+<div class="sect2">
+<h3 id="_filter_using_the_genericfilter"><a class="anchor" href="#_filter_using_the_genericfilter"></a>Filter using the <code>GenericFilter</code></h3>
+<div class="paragraph">
+<p>The <code>filter</code> option allows you to implement a custom filter in Java code
+by implementing the <code>org.apache.camel.component.file.GenericFileFilter</code>
+interface.</p>
+</div>
+<div class="sect3">
+<h4 id="_implementing_a_genericfilter"><a class="anchor" href="#_implementing_a_genericfilter"></a>Implementing a GenericFilter</h4>
+<div class="paragraph">
+<p>The interface has an <code>accept</code> method that returns a boolean.
+The meaning of the return values are:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>true</code> to include the file</p>
+</li>
+<li>
+<p><code>false</code> to skip the file.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>There is also a <code>isDirectory</code> method on <code>GenericFile</code> to inform whether the file is a directory.
+This allows you to filter unwanted directories, to avoid traversing down unwanted directories.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_using_the_genericfilter"><a class="anchor" href="#_using_the_genericfilter"></a>Using the <code>GenericFilter</code></h4>
+<div class="paragraph">
+<p>You can then configure the endpoint with such a filter to skip certain files being processed.</p>
 </div>
 <div class="paragraph">
 <p>In the sample we have built our own filter that skips files starting
 with <code>skip</code> in the filename:</p>
 </div>
 <div class="paragraph">
-<p>And then we can configure our route using the <strong>filter</strong> attribute to
+<p>And then we can configure our route using the <code>filter</code> attribute to
 reference our filter (using <code>#</code> notation) that we have defined in the
 spring XML file:</p>
 </div>
@@ -4205,15 +4295,14 @@ spring XML file:</p>
 </div>
 </div>
 </div>
-<div class="sect1">
-<h2 id="_filtering_using_ant_path_matcher"><a class="anchor" href="#_filtering_using_ant_path_matcher"></a>Filtering using ANT path matcher</h2>
-<div class="sectionbody">
+<div class="sect2">
+<h3 id="_filtering_using_ant_path_matcher"><a class="anchor" href="#_filtering_using_ant_path_matcher"></a>Filtering using ANT path matcher</h3>
 <div class="paragraph">
 <p>The ANT path matcher is based on
 <a href="http://static.springframework.org/spring/docs/2.5.x/api/org/springframework/util/AntPathMatcher.html">AntPathMatcher</a>.</p>
 </div>
 <div class="paragraph">
-<p>The file paths is matched with the following rules:</p>
+<p>The file paths are matched with the following rules:</p>
 </div>
 <div class="ulist">
 <ul>
@@ -4241,16 +4330,24 @@ See the URI options above for more information.</p>
 <pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">from("file://inbox?antInclude=**/*.txt").to("...");</code></pre>
 </div>
 </div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_sorting_strategies"><a class="anchor" href="#_sorting_strategies"></a>Sorting Strategies</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Camel supports pluggable sorting strategies. They are described below.</p>
+</div>
 <div class="sect2">
 <h3 id="_sorting_using_comparator"><a class="anchor" href="#_sorting_using_comparator"></a>Sorting using Comparator</h3>
 <div class="paragraph">
-<p>Camel supports pluggable sorting strategies. This strategy it to use the
-build in <code>java.util.Comparator</code> in Java. You can then configure the
+<p>This strategy it to use the build in <code>java.util.Comparator</code> in Java. You can then configure the
 endpoint with such a comparator and have Camel sort the files before
 being processed.</p>
 </div>
 <div class="paragraph">
-<p>In the sample we have built our own comparator that just sorts by file
+<p>In the sample, we have built our own comparator that just sorts by file
 name:</p>
 </div>
 <div class="paragraph">
@@ -4293,7 +4390,7 @@ Registry for a bean with the ID, <code>mySorter</code>.</p>
 <div class="sect2">
 <h3 id="_sorting_using_sortby"><a class="anchor" href="#_sorting_using_sortby"></a>Sorting using sortBy</h3>
 <div class="paragraph">
-<p>Camel supports pluggable sorting strategies. This strategy it to use the
+<p>Camel supports pluggable sorting strategies. This strategy uses the
 <a href="languages/file-language.html" class="xref page">File Language</a> to configure the sorting. The
 <code>sortBy</code> option is configured as follows:</p>
 </div>
@@ -4303,7 +4400,7 @@ Registry for a bean with the ID, <code>mySorter</code>.</p>
 </div>
 </div>
 <div class="paragraph">
-<p>Where each group is separated with semi colon. In the simple situations
+<p>Where each group is separated with semicolon. In the simple situations
 you just use one group, so a simple example could be:</p>
 </div>
 <div class="listingblock">
@@ -4313,7 +4410,7 @@ you just use one group, so a simple example could be:</p>
 </div>
 <div class="paragraph">
 <p>This will sort by file name, you can reverse the order by prefixing
-<code>reverse:</code> to the group, so the sorting is now Z..A:</p>
+<code>reverse:</code> to the group, so the sorting is now Z to A:</p>
 </div>
 <div class="listingblock">
 <div class="content">
@@ -4321,8 +4418,8 @@ you just use one group, so a simple example could be:</p>
 </div>
 </div>
 <div class="paragraph">
-<p>As we have the full power of <a href="languages/file-language.html" class="xref page">File Language</a> we
-can use some of the other parameters, so if we want to sort by file size
+<p>As we have the full power of <a href="languages/file-language.html" class="xref page">File Language</a>, we
+can use some of the other parameters, so if we want to sort by file size,
 we do:</p>
 </div>
 <div class="listingblock">
@@ -4333,7 +4430,7 @@ we do:</p>
 <div class="paragraph">
 <p>You can configure to ignore the case, using <code>ignoreCase:</code> for string
 comparison, so if you want to use file name sorting but to ignore the
-case then we do:</p>
+case, then we do:</p>
 </div>
 <div class="listingblock">
 <div class="content">
@@ -4341,7 +4438,7 @@ case then we do:</p>
 </div>
 </div>
 <div class="paragraph">
-<p>You can combine ignore case and reverse, however reverse must be
+<p>You can combine ignore case and reverse. However, <code>reverse</code> must be
 specified first:</p>
 </div>
 <div class="listingblock">
@@ -4350,7 +4447,7 @@ specified first:</p>
 </div>
 </div>
 <div class="paragraph">
-<p>In the sample below we want to sort by last modified file, so we do:</p>
+<p>In the sample below we want to sort by the last modified file, so we do:</p>
 </div>
 <div class="listingblock">
 <div class="content">
@@ -4358,8 +4455,8 @@ specified first:</p>
 </div>
 </div>
 <div class="paragraph">
-<p>And then we want to group by name as a 2nd option so files with same
-modifcation is sorted by name:</p>
+<p>And then we want to group by name as a second option, so files with the same
+modification time are sorted by name:</p>
 </div>
 <div class="listingblock">
 <div class="content">
@@ -4367,11 +4464,12 @@ modifcation is sorted by name:</p>
 </div>
 </div>
 <div class="paragraph">
-<p>Now there is an issue here, can you spot it? Well the modified timestamp
+<p>Now there is an issue here, can you spot it? Well, the modified timestamp
 of the file is too fine as it will be in milliseconds, but what if we
-want to sort by date only and then subgroup by name?<br>
- Well as we have the true power of <a href="languages/file-language.html" class="xref page">File Language</a> we can use its date command that supports patterns. So this
-can be solved as:</p>
+want to sort by date only and then subgroup by name?
+Well, as we have the true power of <a href="languages/file-language.html" class="xref page">File Language</a>,
+we can use its date command that supports patterns.
+So this can be solved as:</p>
 </div>
 <div class="listingblock">
 <div class="content">
@@ -4379,7 +4477,7 @@ can be solved as:</p>
 </div>
 </div>
 <div class="paragraph">
-<p>Yeah, that is pretty powerful, oh by the way you can also use reverse
+<p>Yeah, that is pretty powerful, oh by the way, you can also use reverse
 per group, so we could reverse the file names:</p>
 </div>
 <div class="listingblock">
@@ -4396,8 +4494,8 @@ per group, so we could reverse the file names:</p>
 <div class="paragraph">
 <p>The option <code>processStrategy</code> can be used to use a custom
 <code>GenericFileProcessStrategy</code> that allows you to implement your own
-<em>begin</em>, <em>commit</em> and <em>rollback</em> logic.<br>
- For instance lets assume a system writes a file in a folder you should
+<em>begin</em>, <em>commit</em> and <em>rollback</em> logic.
+For instance, let&#8217;s assume a system writes a file in a folder you should
 consume. But you should not start consuming the file before another
 <em>ready</em> file has been written as well.</p>
 </div>
@@ -4409,12 +4507,12 @@ this as:</p>
 <ul>
 <li>
 <p>In the <code>begin()</code> method we can test whether the special <em>ready</em> file
-exists. The begin method returns a <code>boolean</code> to indicate if we can
+exists. The <code>begin</code> method returns a <code>boolean</code> to indicate if we can
 consume the file or not.</p>
 </li>
 <li>
 <p>In the <code>abort()</code> method special logic can be executed in
-case the <code>begin</code> operation returned <code>false</code>, for example to cleanup
+case the <code>begin</code> operation returned <code>false</code>, for example, to clean up
 resources etc.</p>
 </li>
 <li>
@@ -4422,24 +4520,6 @@ resources etc.</p>
 the <em>ready</em> file.</p>
 </li>
 </ul>
-</div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="_using_filter"><a class="anchor" href="#_using_filter"></a>Using filter</h2>
-<div class="sectionbody">
-<div class="paragraph">
-<p>The <code>filter</code> option allows you to implement a custom filter in Java code
-by implementing the <code>org.apache.camel.component.file.GenericFileFilter</code>
-interface. This interface has an <code>accept</code> method that returns a boolean.
-Return <code>true</code> to include the file, and <code>false</code> to skip the file.
-There is a <code>isDirectory</code> method on <code>GenericFile</code>
-whether the file is a directory. This allows you to filter unwanted
-directories, to avoid traversing down unwanted directories.</p>
-</div>
-<div class="paragraph">
-<p>For example to skip any directories which starts with <code>"skip"</code> in the
-name, can be implemented as follows:</p>
 </div>
 </div>
 </div>
@@ -4460,8 +4540,8 @@ onException(IOException.class)
     .transform().simple("Error ${exception.message}")
     .to("mock:error");
 
-// this is the file route that pickup files, notice how we bridge the consumer to use the Camel routing error handler
-// the exclusiveReadLockStrategy is only configured because this is from an unit test, so we use that to simulate exceptions
+// this is the file route that pickup files. Notice how we bridge the consumer to use the Camel routing error handler
+// the exclusiveReadLockStrategy is only configured because this is from a unit test, so we use that to simulate exceptions
 from("file:target/nospace?bridgeErrorHandler=true")
     .convertBodyTo(String.class)
     .to("mock:result");</code></pre>
@@ -4478,12 +4558,12 @@ the route will take it from there.</p>
 <i class="fa icon-important" title="Important"></i>
 </td>
 <td class="content">
-<strong>Important when using bridgeErrorHandler</strong>
-When using bridgeErrorHandler, then
-interceptors, OnCompletions
-does <strong>not</strong> apply. The Exchange is processed directly
-by the Camel Error Handler, and does not allow
-prior actions such as interceptors, onCompletion to take action.
+<div class="paragraph">
+<p>When using bridgeErrorHandler, then <code>interceptors</code>, <code>OnCompletions</code>
+do <strong>not</strong> apply.
+The Exchange is processed directly by the Camel Error Handler, and does not allow
+prior actions such as interceptors, onCompletion to take action.</p>
+</div>
 </td>
 </tr>
 </table>
@@ -4499,11 +4579,137 @@ problems.</p>
 </div>
 </div>
 </div>
+<div class="sect1">
+<h2 id="_samples_2"><a class="anchor" href="#_samples_2"></a>Samples</h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="File2-ReadingFromADirectoryAndTheDefaultMoveOperation"><a class="anchor" href="#File2-ReadingFromADirectoryAndTheDefaultMoveOperation"></a>Reading from a directory and the default move operation</h3>
+<div class="paragraph">
+<p>By default, Camel will move any processed file into a <code>.camel</code>
+subdirectory in the directory the file was consumed from.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">from("file://inputdir/?recursive=true&amp;delete=true").to("file://outputdir")</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Affects the layout as follows:<br>
+<strong>before</strong></p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>inputdir/foo.txt
+inputdir/sub/bar.txt</pre>
+</div>
+</div>
+<div class="paragraph">
+<p><strong>after</strong></p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>inputdir/.camel/foo.txt
+inputdir/sub/.camel/bar.txt
+outputdir/foo.txt
+outputdir/sub/bar.txt</pre>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_read_from_a_directory_and_write_to_another_directory_2"><a class="anchor" href="#_read_from_a_directory_and_write_to_another_directory_2"></a>Read from a directory and write to another directory</h3>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">from("file://inputdir/?delete=true").to("file://outputdir")</code></pre>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_read_from_a_directory_and_write_to_another_directory_using_a_dynamic_name_2"><a class="anchor" href="#_read_from_a_directory_and_write_to_another_directory_using_a_dynamic_name_2"></a>Read from a directory and write to another directory using a dynamic name</h3>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">from("file://inputdir/?delete=true").to("file://outputdir?fileName=copy-of-${file:name}")</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Listen to a directory and create a message for each file dropped there.
+Copy the contents to the <code>outputdir</code> and delete the file in the
+<code>inputdir</code>.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_reading_recursively_from_a_directory_and_writing_to_another_2"><a class="anchor" href="#_reading_recursively_from_a_directory_and_writing_to_another_2"></a>Reading recursively from a directory and writing to another</h3>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">from("file://inputdir/?recursive=true&amp;delete=true").to("file://outputdir")</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Listen to a directory and create a message for each file dropped there.
+Copy the contents to the <code>outputdir</code> and delete the file in the
+<code>inputdir</code>. Will scan recursively into subdirectories. Will lay out the
+files in the same directory structure in the <code>outputdir</code> as the
+<code>inputdir</code>, including any subdirectories.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-none hljs">inputdir/foo.txt
+inputdir/sub/bar.txt</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>It will result in the following output layout:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>outputdir/foo.txt
+outputdir/sub/bar.txt</pre>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_read_from_a_directory_and_process_the_message_in_java"><a class="anchor" href="#_read_from_a_directory_and_process_the_message_in_java"></a>Read from a directory and process the message in java</h3>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">from("file://inputdir/").process(new Processor() {
+  public void process(Exchange exchange) throws Exception {
+    Object body = exchange.getIn().getBody();
+    // do some business logic with the input body
+  }
+});</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>The body will be a <code>File</code> object that points to the file that was just
+dropped into the <code>inputdir</code> directory.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_using_expression_for_filenames"><a class="anchor" href="#_using_expression_for_filenames"></a>Using expression for filenames</h3>
+<div class="paragraph">
+<p>In this sample, we want to move consumed files to a backup folder using
+today&#8217;s date as a subfolder name:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">from("file://inbox?move=backup/${date:now:yyyyMMdd}/${file:name}").to("...");</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>See <a href="languages/file-language.html" class="xref page">File Language</a> for more samples.</p>
+</div>
+<div class="paragraph">
+<p>Unresolved include directive in modules/ROOT/pages/file-component.adoc - include::spring-boot:partial$starter.adoc[]</p>
+</div>
+</div>
+</div>
+</div>
 </article>
   </div>
 </main>
 </div>
 <footer class="footer">
+  <p>This page was built using the Antora default UI.</p>
+  <p>The source code for this UI is licensed under the terms of the MPL-2.0 license.</p>
 </footer>
 <script id="site-script" src="../../_/js/site.js" data-ui-root-path="../../_"></script>
 <script async src="../../_/js/vendor/highlight.js"></script>

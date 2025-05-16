@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>Java :: Red Hat Camel Reference</title>
+    <title>Java :: Red Hat build of Apache Camel</title>
     <meta name="description" content="Evaluates a Java (Java compiled once at runtime) expression.">
     <meta name="generator" content="Antora 3.1.4">
     <link rel="stylesheet" href="../../../_/css/site.css">
@@ -12,7 +12,7 @@
 <header class="header">
   <nav class="navbar">
     <div class="navbar-brand">
-      <a class="navbar-item" href="../../manual/index.html">Red Hat build of Apache Camel manual</a>
+      <a class="navbar-item" href="/">Red Hat build of Apache Camel</a>
       <button class="navbar-burger" data-target="topbar-nav">
         <span></span>
         <span></span>
@@ -22,11 +22,12 @@
   </nav>
 </header>
 <div class="body">
-<div class="nav-container" data-component="components" data-version="next">
+<div class="nav-container" data-component="components" data-version="4.8.x">
   <aside class="nav">
     <div class="panels">
 <div class="nav-panel-menu is-active" data-panel="menu">
   <nav class="nav-menu">
+    <button class="nav-menu-toggle" aria-label="Toggle expand/collapse all" style="display: none"></button>
     <h3 class="title"><a href="../index.html">Camel Components</a></h3>
 <ul class="nav-list">
   <li class="nav-item" data-depth="0">
@@ -36,7 +37,46 @@
     <a class="nav-link" href="../index.html">Components</a>
 <ul class="nav-list">
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="../activemq-component.html">ActiveMQ</a>
+    <a class="nav-link" href="../activemq-component.html">ActiveMQ 5.x</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../activemq6-component.html">ActiveMQ 6.x</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../ai-summary.html">AI</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../chatscript-component.html">ChatScript</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../djl-component.html">Deep Java Library</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../langchain4j-chat-component.html">LangChain4j Chat</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../langchain4j-embeddings-component.html">LangChain4j Embeddings</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../langchain4j-tokenizer-component.html">LangChain4j Tokenizer</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../langchain4j-tools-component.html">LangChain4j Tools</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../langchain4j-web-search-component.html">LangChain4j Web Search</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../milvus-component.html">Milvus</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../pinecone-component.html">Pinecone</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../qdrant-component.html">Qdrant</a>
+  </li>
+</ul>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="../amqp-component.html">AMQP</a>
@@ -65,6 +105,15 @@
 <ul class="nav-list">
   <li class="nav-item" data-depth="3">
     <a class="nav-link" href="../aws2-athena-component.html">AWS Athena</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../aws-bedrock-component.html">AWS Bedrock</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../aws-bedrock-agent-component.html">AWS Bedrock Agent</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../aws-bedrock-agent-runtime-component.html">AWS Bedrock Agent Runtime</a>
   </li>
   <li class="nav-item" data-depth="3">
     <a class="nav-link" href="../aws-cloudtrail-component.html">AWS Cloudtrail</a>
@@ -169,7 +218,7 @@
     <a class="nav-link" href="../azure-storage-blob-component.html">Azure Storage Blob Service</a>
   </li>
   <li class="nav-item" data-depth="3">
-    <a class="nav-link" href="../azure-storage-datalake-component.html">Azure Storage Datalake Service</a>
+    <a class="nav-link" href="../azure-storage-datalake-component.html">Azure Storage Data Lake Service</a>
   </li>
   <li class="nav-item" data-depth="3">
     <a class="nav-link" href="../azure-storage-queue-component.html">Azure Storage Queue Service</a>
@@ -202,9 +251,6 @@
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="../cql-component.html">Cassandra CQL</a>
-  </li>
-  <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="../chatscript-component.html">ChatScript</a>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="../chunk-component.html">Chunk</a>
@@ -277,9 +323,6 @@
     <a class="nav-link" href="../debezium-sqlserver-component.html">Debezium SQL Server Connector</a>
   </li>
 </ul>
-  </li>
-  <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="../djl-component.html">Deep Java Library</a>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="../dhis2-component.html">DHIS2</a>
@@ -395,6 +438,9 @@
   </li>
   <li class="nav-item" data-depth="3">
     <a class="nav-link" href="../google-pubsub-component.html">Google Pubsub</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../google-pubsub-lite-component.html">Google PubSub Lite</a>
   </li>
   <li class="nav-item" data-depth="3">
     <a class="nav-link" href="../google-secret-manager-component.html">Google Secret Manager</a>
@@ -687,7 +733,7 @@
     <a class="nav-link" href="../ldif-component.html">LDIF</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="../log-component.html">Log</a>
+    <a class="nav-link" href="../log-component.html">Log Data</a>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="../lucene-component.html">Lucene</a>
@@ -900,10 +946,16 @@
     <a class="nav-link" href="../smb-component.html">SMB</a>
   </li>
   <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../smooks-component.html">Smooks</a>
+  </li>
+  <li class="nav-item" data-depth="2">
     <a class="nav-link" href="../smpp-component.html">SMPP</a>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="../snmp-component.html">SNMP</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../solr-component.html">Solr</a>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="../splunk-component.html">Splunk</a>
@@ -966,6 +1018,18 @@
     <a class="nav-link" href="../stub-component.html">Stub</a>
   </li>
   <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../tahu-summary.html">Tahu</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../tahu-edge-component.html">Tahu Edge Node / Device</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../tahu-host-component.html">Tahu Host Application</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
     <a class="nav-link" href="../telegram-component.html">Telegram</a>
   </li>
   <li class="nav-item" data-depth="2">
@@ -1026,7 +1090,7 @@
     <a class="nav-link" href="../whatsapp-component.html">WhatsApp</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="../wordpress-component.html">Wordpress</a>
+    <a class="nav-link" href="../wordpress-component.html">WordPress</a>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="../workday-component.html">Workday</a>
@@ -1419,7 +1483,13 @@
     <a class="nav-link" href="../others/openapi-java.html">Openapi Java</a>
   </li>
   <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../others/openapi-validator.html">Openapi Validator</a>
+  </li>
+  <li class="nav-item" data-depth="2">
     <a class="nav-link" href="../others/opentelemetry.html">OpenTelemetry</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../others/platform-http-jolokia.html">Platform HTTP Jolokia</a>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="../others/platform-http-main.html">Platform Http Main</a>
@@ -1567,7 +1637,7 @@
     <a class="nav-link" href="../eips/event-message.html">Event Message</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="../eips/failover-eip.html">Failover</a>
+    <a class="nav-link" href="../eips/failoverLoadBalancer-eip.html">Failover Load Balancer</a>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="../eips/faultToleranceConfiguration-eip.html">Fault Tolerance Configuration</a>
@@ -1597,13 +1667,13 @@
     <a class="nav-link" href="../eips/loadBalance-eip.html">Load Balance</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="../eips/log-eip.html">Log</a>
+    <a class="nav-link" href="../eips/log-eip.html">Logger</a>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="../eips/loop-eip.html">Loop</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="../eips/marshal-eip.html">Marshal EIP</a>
+    <a class="nav-link" href="../eips/marshal-eip.html">Marshal</a>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="../eips/message.html">Message</a>
@@ -1660,6 +1730,9 @@
     <a class="nav-link" href="../eips/point-to-point-channel.html">Point to Point Channel</a>
   </li>
   <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../eips/poll-eip.html">Poll</a>
+  </li>
+  <li class="nav-item" data-depth="2">
     <a class="nav-link" href="../eips/pollEnrich-eip.html">Poll Enrich</a>
   </li>
   <li class="nav-item" data-depth="2">
@@ -1675,7 +1748,7 @@
     <a class="nav-link" href="../eips/publish-subscribe-channel.html">Publish Subscribe Channel</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="../eips/random-eip.html">Random</a>
+    <a class="nav-link" href="../eips/randomLoadBalancer-eip.html">Random Load Balancer</a>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="../eips/recipientList-eip.html">Recipient List</a>
@@ -1717,7 +1790,7 @@
     <a class="nav-link" href="../eips/rollback-eip.html">Rollback</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="../eips/roundRobin-eip.html">Round Robin</a>
+    <a class="nav-link" href="../eips/roundRobinLoadBalancer-eip.html">Round Robin Load Balancer</a>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="../eips/routingSlip-eip.html">Routing Slip</a>
@@ -1729,7 +1802,7 @@
     <a class="nav-link" href="../eips/sample-eip.html">Sample</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="../eips/scatter-gather.html">Scatter Gather</a>
+    <a class="nav-link" href="../eips/scatter-gather.html">Scatter-Gather</a>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="../eips/script-eip.html">Script</a>
@@ -1759,6 +1832,9 @@
     <a class="nav-link" href="../eips/setVariable-eip.html">Set Variable</a>
   </li>
   <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../eips/setVariables-eip.html">Set Variables</a>
+  </li>
+  <li class="nav-item" data-depth="2">
     <a class="nav-link" href="../eips/sort-eip.html">Sort</a>
   </li>
   <li class="nav-item" data-depth="2">
@@ -1768,7 +1844,7 @@
     <a class="nav-link" href="../eips/step-eip.html">Step</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="../eips/sticky-eip.html">Sticky</a>
+    <a class="nav-link" href="../eips/stickyLoadBalancer-eip.html">Sticky Load Balancer</a>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="../eips/stop-eip.html">Stop</a>
@@ -1789,7 +1865,7 @@
     <a class="nav-link" href="../eips/toD-eip.html">To D</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="../eips/topic-eip.html">Topic</a>
+    <a class="nav-link" href="../eips/topicLoadBalancer-eip.html">Topic Load Balancer</a>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="../eips/transactional-client.html">Transactional Client</a>
@@ -1798,13 +1874,13 @@
     <a class="nav-link" href="../eips/transform-eip.html">Transform</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="../eips/unmarshal-eip.html">Unmarshal EIP</a>
+    <a class="nav-link" href="../eips/unmarshal-eip.html">Unmarshal</a>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="../eips/validate-eip.html">Validate</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="../eips/weighted-eip.html">Weighted</a>
+    <a class="nav-link" href="../eips/weightedLoadBalancer-eip.html">Weighted Load Balancer</a>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="../eips/wireTap-eip.html">Wire Tap</a>
@@ -1819,22 +1895,40 @@
 <div class="nav-panel-explore" data-panel="explore">
   <div class="context">
     <span class="title">Camel Components</span>
-    <span class="version">Next (Pre-release)</span>
+    <span class="version">4.8.x</span>
   </div>
   <ul class="components">
     <li class="component is-current">
-      <a class="title" href="../index.html">Camel Components</a>
+      <div class="title"><a href="../../4.10.x/index.html">Camel Components</a></div>
       <ul class="versions">
-        <li class="version is-current is-latest">
-          <a href="../index.html">Next (Pre-release)</a>
+        <li class="version is-latest">
+          <a href="../../4.10.x/index.html">4.10.x (LTS)</a>
+        </li>
+        <li class="version is-current">
+          <a href="../index.html">4.8.x</a>
+        </li>
+        <li class="version">
+          <a href="../../4.4.x/index.html">4.4.x</a>
+        </li>
+        <li class="version">
+          <a href="../../4.0.x/index.html">4.0.x</a>
         </li>
       </ul>
     </li>
     <li class="component">
-      <a class="title" href="../../../manual/index.html">User manual</a>
+      <div class="title"><a href="../../../manual/4.10.x/index.html">User manual</a></div>
       <ul class="versions">
         <li class="version is-latest">
-          <a href="../../../manual/index.html">default</a>
+          <a href="../../../manual/4.10.x/index.html">4.10.x</a>
+        </li>
+        <li class="version">
+          <a href="../../../manual/4.8.x/index.html">4.8.x</a>
+        </li>
+        <li class="version">
+          <a href="../../../manual/4.4.x/index.html">4.4.x</a>
+        </li>
+        <li class="version">
+          <a href="../../../manual/4.0.x/index.html">4.0.x</a>
         </li>
       </ul>
     </li>
@@ -1846,7 +1940,7 @@
 <main class="article">
 <div class="toolbar" role="navigation">
 <button class="nav-toggle"></button>
-  <a href="../../../manual/index.html" class="home-link"></a>
+  <a href="../../../manual/4.10.x/index.html" class="home-link"></a>
 <nav class="breadcrumbs" aria-label="breadcrumbs">
   <ul>
     <li><a href="../index.html">Camel Components</a></li>
@@ -1854,6 +1948,16 @@
     <li><a href="java-language.html">Java</a></li>
   </ul>
 </nav>
+<div class="page-versions">
+  <button class="version-menu-toggle" title="Show other versions of page">4.8.x</button>
+  <div class="version-menu">
+    <a class="version" href="../../4.10.x/languages/java-language.html">4.10.x (LTS)</a>
+    <a class="version is-current" href="java-language.html">4.8.x</a>
+    <a class="version" href="../../4.4.x/languages/java-language.html">4.4.x</a>
+    <a class="version is-missing" href="../../4.0.x/index.html">4.0.x</a>
+  </div>
+</div>
+<div class="edit-this-page"><a href="https://github.com/rhaetor/rh-camel-jboss/edit/camel-4.8.0-branch/docs/components/modules/languages/pages/java-language.adoc">Edit this Page</a></div>
 </div>
   <div class="content">
 <aside class="toc sidebar" data-title="Contents" data-levels="2">
@@ -1898,7 +2002,7 @@
 <tbody>
 <tr>
 <td class="tableblock halign-left valign-top"><div class="content"><div id="_language_option_preCompile" class="paragraph">
-<p><a href="#_language_option_preCompile" class="anchor"></a><strong>preCompile</strong></p>
+<p><a href="#_language_option_preCompile" class="anchor"></a><strong>preCompile</strong> (advanced)</p>
 </div></div></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>true</code></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>Boolean</code></p></td>
@@ -1908,7 +2012,7 @@
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><div class="content"><div id="_language_option_singleQuotes" class="paragraph">
-<p><a href="#_language_option_singleQuotes" class="anchor"></a><strong>singleQuotes</strong></p>
+<p><a href="#_language_option_singleQuotes" class="anchor"></a><strong>singleQuotes</strong> (advanced)</p>
 </div></div></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>true</code></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>Boolean</code></p></td>
@@ -1918,7 +2022,7 @@
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><div class="content"><div id="_language_option_resultType" class="paragraph">
-<p><a href="#_language_option_resultType" class="anchor"></a><strong>resultType</strong></p>
+<p><a href="#_language_option_resultType" class="anchor"></a><strong>resultType</strong> (common)</p>
 </div></div></td>
 <td class="tableblock halign-left valign-top"></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>String</code></p></td>
@@ -1928,7 +2032,7 @@
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><div class="content"><div id="_language_option_trim" class="paragraph">
-<p><a href="#_language_option_trim" class="anchor"></a><strong>trim</strong></p>
+<p><a href="#_language_option_trim" class="anchor"></a><strong>trim</strong> (advanced)</p>
 </div></div></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>true</code></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>Boolean</code></p></td>
@@ -1941,8 +2045,10 @@
 </div>
 </div>
 <div class="sect1">
-<h2 id="_variables"><a class="anchor" href="#_variables"></a>Variables</h2>
+<h2 id="_usage"><a class="anchor" href="#_usage"></a>Usage</h2>
 <div class="sectionbody">
+<div class="sect2">
+<h3 id="_variables"><a class="anchor" href="#_variables"></a>Variables</h3>
 <div class="paragraph">
 <p>The Java language allows the following variables to be used in the script:</p>
 </div>
@@ -1961,32 +2067,30 @@
 </thead>
 <tbody>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">context</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>context</code></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>Context</code></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">The CamelContext</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">exchange</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>exchange</code></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>Exchange</code></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">The Camel Exchange</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">message</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>message</code></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>Message</code></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">The Camel message</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">body</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>body</code></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>Object</code></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">The message body</p></td>
 </tr>
 </tbody>
 </table>
 </div>
-</div>
-<div class="sect1">
-<h2 id="_functions"><a class="anchor" href="#_functions"></a>Functions</h2>
-<div class="sectionbody">
+<div class="sect2">
+<h3 id="_functions"><a class="anchor" href="#_functions"></a>Functions</h3>
 <div class="paragraph">
 <p>The Java language allows the following functions to be used in the script:</p>
 </div>
@@ -2013,7 +2117,7 @@
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">headerAs(name, defaultValue, type)</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">To convert the header with the name to the given type.
-If no header exists then use the given default value.</p></td>
+If no header exists, then use the given default value.</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">exchangePropertyAs(name, type)</p></td>
@@ -2022,19 +2126,19 @@ If no header exists then use the given default value.</p></td>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">exchangePropertyAs(name, defaultValue, type)</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">To convert the exchange property with the name to the given type.
-If no exchange property exists then use the given default value.</p></td>
+If no exchange property exists, then use the given default value.</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">optionalBodyAs(type)</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">To convert the body to the given type returned wrapped in <code>java.util.Optional</code>.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">To convert the body to the given type, returned wrapped in <code>java.util.Optional</code>.</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">optionalHeaderAs(name, type)</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">To convert the header with the name to the given type returned wrapped in <code>java.util.Optional</code>.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">To convert the header with the name to the given type, returned wrapped in <code>java.util.Optional</code>.</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">optionalExchangePropertyAs(name, type)</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">To convert the exchange property with the name to the given type returned wrapped in <code>java.util.Optional</code>.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">To convert the exchange property with the name to the given type, returned wrapped in <code>java.util.Optional</code>.</p></td>
 </tr>
 </tbody>
 </table>
@@ -2075,20 +2179,18 @@ In such a situation, you can configure an import in the <code>camel-joor.propert
 </div>
 </div>
 </div>
-</div>
-<div class="sect1">
-<h2 id="_dependency_injection"><a class="anchor" href="#_dependency_injection"></a>Dependency Injection</h2>
-<div class="sectionbody">
+<div class="sect2">
+<h3 id="_dependency_injection"><a class="anchor" href="#_dependency_injection"></a>Dependency Injection</h3>
 <div class="paragraph">
 <p>The Camel Java language allows dependency injection by referring to beans by their id from the Camel registry.
-For optimization purposes then the beans are injected once in the constructor and the scopes are <em>singleton</em>.
+For optimization purposes, then the beans are injected once in the constructor and the scopes are <em>singleton</em>.
 This requires the injected beans to be <em>thread safe</em> as they will be reused for all processing.</p>
 </div>
 <div class="paragraph">
 <p>In the Java code you declare the injected beans using the syntax <code>#bean:beanId</code>.</p>
 </div>
 <div class="paragraph">
-<p>For example suppose we have the following bean</p>
+<p>For example, suppose we have the following bean</p>
 </div>
 <div class="listingblock">
 <div class="content">
@@ -2118,10 +2220,10 @@ This requires the injected beans to be <em>thread safe</em> as they will be reus
 </div>
 </div>
 <div class="paragraph">
-<p>Now this code may seem a bit magically, but what happens is that the <code>myEcho</code> bean is injected via a constructor, and then called directly in the script, so it is as fast as possible.</p>
+<p>Now this code may seem a bit magic, but what happens is that the <code>myEcho</code> bean is injected via a constructor, and then called directly in the script, so it is as fast as possible.</p>
 </div>
 <div class="paragraph">
-<p>Under the hood, Camel Java generates the following source code that is compiled once:</p>
+<p>Under the hood, Camel Java generates the following source code compiled once:</p>
 </div>
 <div class="listingblock">
 <div class="content">
@@ -2152,13 +2254,12 @@ This requires the injected beans to be <em>thread safe</em> as they will be reus
 </div>
 <div class="paragraph">
 <p>Notice how we declare the bean as if it is a local variable via <code>var bean = #bean:myEcho</code>.
-When doing this we must use a different name as <code>myEcho</code> is the variable used by the dependency injection and therefore we use <em>bean</em> as name in the script.</p>
+When doing this we must use a different name as <code>myEcho</code> is the variable used by the dependency injection.
+Therefore, we use <em>bean</em> as name in the script.</p>
 </div>
 </div>
-</div>
-<div class="sect1">
-<h2 id="_auto_imports"><a class="anchor" href="#_auto_imports"></a>Auto imports</h2>
-<div class="sectionbody">
+<div class="sect2">
+<h3 id="_auto_imports"><a class="anchor" href="#_auto_imports"></a>Auto imports</h3>
 <div class="paragraph">
 <p>The Java language will automatically import from:</p>
 </div>
@@ -2172,10 +2273,8 @@ import org.apache.camel.util.*;</span></code></pre>
 </div>
 </div>
 </div>
-</div>
-<div class="sect1">
-<h2 id="_configuration_file"><a class="anchor" href="#_configuration_file"></a>Configuration file</h2>
-<div class="sectionbody">
+<div class="sect2">
+<h3 id="_configuration_file"><a class="anchor" href="#_configuration_file"></a>Configuration file</h3>
 <div class="paragraph">
 <p>You can configure the jOOR language in the <code>camel-joor.properties</code> file which by default is loaded from the root classpath.
 You can specify a different location with the <code>configResource</code> option on the Java language.</p>
@@ -2185,13 +2284,13 @@ You can specify a different location with the <code>configResource</code> option
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-properties hljs" data-lang="properties">import com.foo.MyUser;
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java"><span class="fold-block is-hidden-folded">import com.foo.MyUser;
 import com.bar.*;
-import static com.foo.MyHelper.*;</code></pre>
+import static com.foo.MyHelper.*;</span></code></pre>
 </div>
 </div>
 <div class="paragraph">
-<p>You can also add aliases (key=value) where an alias will be used as a shorthand replacement in the code.</p>
+<p>You can also add aliases (<code>key=value</code>) where an alias will be used as a shorthand replacement in the code.</p>
 </div>
 <div class="listingblock">
 <div class="content">
@@ -2199,7 +2298,7 @@ import static com.foo.MyHelper.*;</code></pre>
 </div>
 </div>
 <div class="paragraph">
-<p>Which allows using <em>echo()</em> in the jOOR language script such as:</p>
+<p>Which allows using <code>echo()</code> in the jOOR language script such as:</p>
 </div>
 <div class="listingblock">
 <div class="content">
@@ -2209,7 +2308,7 @@ import static com.foo.MyHelper.*;</code></pre>
 </div>
 </div>
 <div class="paragraph">
-<p>The <em>echo()</em> alias will be replaced with its value resulting in a script as:</p>
+<p>The <code>echo()</code> alias will be replaced with its value resulting in a script as:</p>
 </div>
 <div class="listingblock">
 <div class="content">
@@ -2236,11 +2335,12 @@ camelContext.getRegistry().put("MyJoorConfig", config);</code></pre>
 </div>
 </div>
 </div>
+</div>
 <div class="sect1">
 <h2 id="_example"><a class="anchor" href="#_example"></a>Example</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>For example to transform the message using jOOR language to upper case</p>
+<p>For example, to transform the message using jOOR language to the upper case</p>
 </div>
 <div class="listingblock">
 <div class="content">
@@ -2263,11 +2363,8 @@ camelContext.getRegistry().put("MyJoorConfig", config);</code></pre>
 &lt;/route&gt;</code></pre>
 </div>
 </div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="_multi_statements"><a class="anchor" href="#_multi_statements"></a>Multi statements</h2>
-<div class="sectionbody">
+<div class="sect2">
+<h3 id="_multi_statements"><a class="anchor" href="#_multi_statements"></a>Multi statements</h3>
 <div class="paragraph">
 <p>It is possible to include multiple statements.
 The code below shows an example where the <code>user</code> header is retrieved in a first statement.
@@ -2291,12 +2388,10 @@ And then, in a second statement we return a value whether the user is <code>null
 </div>
 </div>
 </div>
-</div>
-<div class="sect1">
-<h2 id="_hot_re_load"><a class="anchor" href="#_hot_re_load"></a>Hot re-load</h2>
-<div class="sectionbody">
+<div class="sect2">
+<h3 id="_hot_re_load"><a class="anchor" href="#_hot_re_load"></a>Hot re-load</h3>
 <div class="paragraph">
-<p>You can turn off pre compilation for the Java language and then Camel will recompile the script for each message.
+<p>You can turn off pre-compilation for the Java language and then Camel will recompile the script for each message.
 You can externalize the code into a resource file, which will be reloaded on each message as shown:</p>
 </div>
 <div class="listingblock">
@@ -2327,16 +2422,14 @@ from("jms:incoming")
 </div>
 </div>
 </div>
-</div>
-<div class="sect1">
-<h2 id="_lambda_based_aggregationstrategy"><a class="anchor" href="#_lambda_based_aggregationstrategy"></a>Lambda based AggregationStrategy</h2>
-<div class="sectionbody">
+<div class="sect2">
+<h3 id="_lambda_based_aggregationstrategy"><a class="anchor" href="#_lambda_based_aggregationstrategy"></a>Lambda-based AggregationStrategy</h3>
 <div class="paragraph">
-<p>The Java language have special support for defining an <code>org.apache.camel.AggregationStrategy</code> as a lambda expression.
-This is useful when using EIP patterns that uses aggregation such as the Aggregator, Splitter, Recipient List, Enrich, and others.</p>
+<p>The Java language has special support for defining an <code>org.apache.camel.AggregationStrategy</code> as a lambda expression.
+This is useful when using EIP patterns that use aggregation such as the Aggregator, Splitter, Recipient List, Enrich, and others.</p>
 </div>
 <div class="paragraph">
-<p>To use this then the Java language script must be in the following syntax:</p>
+<p>To use this, then the Java language script must be in the following syntax:</p>
 </div>
 <div class="listingblock">
 <div class="content">
@@ -2351,7 +2444,7 @@ The returned value is used as the aggregated message body, or use <code>null</co
 <p>The lambda syntax is representing a Java util <code>BiFunction&lt;Exchange, Exchange, Object&gt;</code> type.</p>
 </div>
 <div class="paragraph">
-<p>For example to aggregate message bodies together we can do this as shown:</p>
+<p>For example, to aggregate message bodies together, we can do this as shown:</p>
 </div>
 <div class="listingblock">
 <div class="content">
@@ -2363,20 +2456,19 @@ The returned value is used as the aggregated message body, or use <code>null</co
 </div>
 </div>
 </div>
-</div>
-<div class="sect1">
-<h2 id="_limitations"><a class="anchor" href="#_limitations"></a>Limitations</h2>
-<div class="sectionbody">
+<div class="sect2">
+<h3 id="_limitations"><a class="anchor" href="#_limitations"></a>Limitations</h3>
 <div class="paragraph">
 <p>The Java Camel language is only supported as a block of Java code that gets compiled into a Java class with a single method.
 The code that you can write is therefore limited to a number of Java statements.</p>
 </div>
 <div class="paragraph">
 <p>The supported runtime is intended for Java standalone, Spring Boot, Camel Quarkus and other microservices runtimes.
-It is not supported in OSGi, Camel Karaf or any kind of Java Application Server runtime.</p>
+It is not supported on any kind of Java Application Server runtime.</p>
 </div>
 <div class="paragraph">
 <p>Java does not support runtime compilation with Spring Boot using <em>fat jar</em> packaging (<a href="https://github.com/jOOQ/jOOR/issues/69" class="bare">https://github.com/jOOQ/jOOR/issues/69</a>), it works with exploded classpath.</p>
+</div>
 </div>
 </div>
 </div>
@@ -2384,10 +2476,10 @@ It is not supported in OSGi, Camel Karaf or any kind of Java Application Server 
 <h2 id="_dependencies"><a class="anchor" href="#_dependencies"></a>Dependencies</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>To use scripting languages in your camel routes you need to add a dependency on <strong>camel-joor</strong>.</p>
+<p>To use scripting languages in your camel routes, you need to add a dependency on <strong>camel-joor</strong>.</p>
 </div>
 <div class="paragraph">
-<p>If you use Maven you could just add the following to your <code>pom.xml</code>, substituting the version number for the latest and greatest release (see the download page for the latest versions).</p>
+<p>If you use Maven you could add the following to your <code>pom.xml</code>, substituting the version number for the latest and greatest release.</p>
 </div>
 <div class="listingblock">
 <div class="content">
@@ -2405,6 +2497,8 @@ It is not supported in OSGi, Camel Karaf or any kind of Java Application Server 
 </main>
 </div>
 <footer class="footer">
+  <p>This page was built using the Antora default UI.</p>
+  <p>The source code for this UI is licensed under the terms of the MPL-2.0 license.</p>
 </footer>
 <script id="site-script" src="../../../_/js/site.js" data-ui-root-path="../../../_"></script>
 <script async src="../../../_/js/vendor/highlight.js"></script>

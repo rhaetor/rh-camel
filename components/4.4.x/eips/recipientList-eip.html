@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>Recipient List :: Red Hat Camel Reference</title>
+    <title>Recipient List :: Red Hat build of Apache Camel</title>
     <meta name="description" content="Route messages to a number of dynamically specified recipients">
     <meta name="generator" content="Antora 3.1.4">
     <link rel="stylesheet" href="../../../_/css/site.css">
@@ -12,7 +12,7 @@
 <header class="header">
   <nav class="navbar">
     <div class="navbar-brand">
-      <a class="navbar-item" href="../../manual/index.html">Red Hat build of Apache Camel manual</a>
+      <a class="navbar-item" href="/">Red Hat build of Apache Camel</a>
       <button class="navbar-burger" data-target="topbar-nav">
         <span></span>
         <span></span>
@@ -22,11 +22,12 @@
   </nav>
 </header>
 <div class="body">
-<div class="nav-container" data-component="components" data-version="next">
+<div class="nav-container" data-component="components" data-version="4.4.x">
   <aside class="nav">
     <div class="panels">
 <div class="nav-panel-menu is-active" data-panel="menu">
   <nav class="nav-menu">
+    <button class="nav-menu-toggle" aria-label="Toggle expand/collapse all" style="display: none"></button>
     <h3 class="title"><a href="../index.html">Camel Components</a></h3>
 <ul class="nav-list">
   <li class="nav-item" data-depth="0">
@@ -1819,22 +1820,40 @@
 <div class="nav-panel-explore" data-panel="explore">
   <div class="context">
     <span class="title">Camel Components</span>
-    <span class="version">Next (Pre-release)</span>
+    <span class="version">4.4.x</span>
   </div>
   <ul class="components">
     <li class="component is-current">
-      <a class="title" href="../index.html">Camel Components</a>
+      <div class="title"><a href="../../4.10.x/index.html">Camel Components</a></div>
       <ul class="versions">
-        <li class="version is-current is-latest">
-          <a href="../index.html">Next (Pre-release)</a>
+        <li class="version is-latest">
+          <a href="../../4.10.x/index.html">4.10.x (LTS)</a>
+        </li>
+        <li class="version">
+          <a href="../../4.8.x/index.html">4.8.x</a>
+        </li>
+        <li class="version is-current">
+          <a href="../index.html">4.4.x</a>
+        </li>
+        <li class="version">
+          <a href="../../4.0.x/index.html">4.0.x</a>
         </li>
       </ul>
     </li>
     <li class="component">
-      <a class="title" href="../../../manual/index.html">User manual</a>
+      <div class="title"><a href="../../../manual/4.10.x/index.html">User manual</a></div>
       <ul class="versions">
         <li class="version is-latest">
-          <a href="../../../manual/index.html">default</a>
+          <a href="../../../manual/4.10.x/index.html">4.10.x</a>
+        </li>
+        <li class="version">
+          <a href="../../../manual/4.8.x/index.html">4.8.x</a>
+        </li>
+        <li class="version">
+          <a href="../../../manual/4.4.x/index.html">4.4.x</a>
+        </li>
+        <li class="version">
+          <a href="../../../manual/4.0.x/index.html">4.0.x</a>
         </li>
       </ul>
     </li>
@@ -1846,7 +1865,7 @@
 <main class="article">
 <div class="toolbar" role="navigation">
 <button class="nav-toggle"></button>
-  <a href="../../../manual/index.html" class="home-link"></a>
+  <a href="../../../manual/4.10.x/index.html" class="home-link"></a>
 <nav class="breadcrumbs" aria-label="breadcrumbs">
   <ul>
     <li><a href="../index.html">Camel Components</a></li>
@@ -1854,6 +1873,16 @@
     <li><a href="recipientList-eip.html">Recipient List</a></li>
   </ul>
 </nav>
+<div class="page-versions">
+  <button class="version-menu-toggle" title="Show other versions of page">4.4.x</button>
+  <div class="version-menu">
+    <a class="version" href="../../4.10.x/eips/recipientList-eip.html">4.10.x (LTS)</a>
+    <a class="version" href="../../4.8.x/eips/recipientList-eip.html">4.8.x</a>
+    <a class="version is-current" href="recipientList-eip.html">4.4.x</a>
+    <a class="version" href="../../4.0.x/eips/recipientList-eip.html">4.0.x</a>
+  </div>
+</div>
+<div class="edit-this-page"><a href="https://github.com/rhaetor/rh-camel-jboss/edit/camel-4.4.0-branch/core/camel-core-engine/src/main/docs/modules/eips/pages/recipientList-eip.adoc">Edit this Page</a></div>
 </div>
   <div class="content">
 <aside class="toc sidebar" data-title="Contents" data-levels="2">
@@ -2096,22 +2125,22 @@ See the <code>cacheSize</code> option for more details on <em>how much cache</em
 <h2 id="_using_recipient_list"><a class="anchor" href="#_using_recipient_list"></a>Using Recipient List</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>The Recipient List EIP allows to route <strong>the same</strong> message to a number of <a href="../../../manual/endpoint.html" class="xref page">endpoints</a>
+<p>The Recipient List EIP allows routing <strong>the same</strong> message to a number of <a href="../../../manual/4.10.x/endpoint.html" class="xref page">endpoints</a>
 and process them in a different way.</p>
 </div>
 <div class="paragraph">
-<p>There can be 1 or more destinations, and Camel will execute them sequentially (by default).
+<p>There can be one or more destinations, and Camel will execute them sequentially (by default).
 However, a parallel mode exists which allows processing messages concurrently.</p>
 </div>
 <div class="paragraph">
 <p>The Recipient List EIP has many features and is based on the <a href="multicast-eip.html" class="xref page">Multicast</a> EIP.
-For example the Recipient List EIP is capable of aggregating each message into a single
+For example, the Recipient List EIP is capable of aggregating each message into a single
 <em>response</em> message as the result after the Recipient List EIP.</p>
 </div>
 <div class="sect2">
 <h3 id="_using_static_recipient_list"><a class="anchor" href="#_using_static_recipient_list"></a>Using Static Recipient List</h3>
 <div class="paragraph">
-<p>The following example shows how to route a request from an input queue:a endpoint
+<p>The following example shows how to route a request from an input <code>queue:a</code> endpoint
 to a static list of destinations, using <code>constant</code>:</p>
 </div>
 <div id="_tabs_1" class="openblock tabs is-sync is-loading">
@@ -2156,7 +2185,7 @@ to a static list of destinations, using <code>constant</code>:</p>
 calculated at runtime.</p>
 </div>
 <div class="paragraph">
-<p>The following example demonstrates how to create a dynamic recipient list using an <a href="../../../manual/expression.html" class="xref page">Expression</a>
+<p>The following example demonstrates how to create a dynamic recipient list using an <a href="../../../manual/4.10.x/expression.html" class="xref page">Expression</a>
 (which in this case extracts a named header value dynamically) to calculate the list of endpoints; which are either
 of type <code>Endpoint</code> or are converted to a <code>String</code> and then resolved using the endpoint URIs (separated by comma).</p>
 </div>
@@ -2233,7 +2262,7 @@ By default, Camel uses comma as delimiter, but this option lets you specify a cu
 <div class="content">
 <pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;route&gt;
   &lt;from uri="direct:a"/&gt;
-  &lt;!-- use semi-colon as a delimiter for String based values --&gt;
+  &lt;!-- use semicolon as a delimiter for String-based values --&gt;
   &lt;recipientList delimiter=";"&gt;
     &lt;header&gt;myHeader&lt;/header&gt;
   &lt;/recipientList&gt;
@@ -2242,11 +2271,12 @@ By default, Camel uses comma as delimiter, but this option lets you specify a cu
 </div>
 <div class="paragraph">
 <p>So if <strong>myHeader</strong> contains a <code>String</code> with the value <code>"activemq:queue:foo;activemq:topic:hello ; log:bar"</code>
-then Camel will split the <code>String</code> using the delimiter given in the XML that was comma, resulting into 3 endpoints to send to.
-You can use spaces between the endpoints as Camel will trim the value when it look up the endpoint to send to.</p>
+then Camel will split the <code>String</code> using the delimiter given in the XML that was comma,
+resulting into three endpoints to send to.
+You can use spaces between the endpoints as Camel will trim the value when it looks up the endpoint to send to.</p>
 </div>
 <div class="paragraph">
-<p>And in Java DSL, you specify the delimiter as 2nd parameter as shown below:</p>
+<p>And in Java DSL, you specify the delimiter as second parameter as shown below:</p>
 </div>
 <div class="listingblock">
 <div class="content">
@@ -2259,7 +2289,7 @@ You can use spaces between the endpoints as Camel will trim the value when it lo
 <h3 id="_using_parallel_processing"><a class="anchor" href="#_using_parallel_processing"></a>Using parallel processing</h3>
 <div class="paragraph">
 <p>The Recipient List supports <code>parallelProcessing</code> similar to what <a href="multicast-eip.html" class="xref page">Multicast</a> and <a href="split-eip.html" class="xref page">Split</a> EIPs have as well.
-When using parallel processing then a thread pool is used to have concurrent tasks sending the <code>Exchange</code>
+When using parallel processing, then a thread pool is used to have concurrent tasks sending the <code>Exchange</code>
 to multiple recipients concurrently.</p>
 </div>
 <div class="paragraph">
@@ -2326,14 +2356,14 @@ the same way you would do it for the <code>aggregationStrategy</code>. By defaul
 sub messages will throw an exception during routing.</p>
 </div>
 <div class="paragraph">
-<p>For example if you want to route to 3 destinations and the 2nd
+<p>For example, if you want to route to three destinations and the second
 destination fails by an exception. What Camel does by default is to
 process the remainder destinations. You have the chance to deal with the exception
 when aggregating using an <code>AggregationStrategy</code>.</p>
 </div>
 <div class="paragraph">
-<p>But sometimes you just want Camel to stop and let the exception be
-propagated back, and let the Camel <a href="../../../manual/error-handler.html" class="xref page">Error Handler</a>
+<p>But sometimes you want the Camel to stop and let the exception be
+propagated back, and let the Camel <a href="../../../manual/4.10.x/error-handler.html" class="xref page">Error Handler</a>
 handle it. You can do this by specifying that it should stop in case of an
 exception occurred. This is done by the <code>stopOnException</code> option as
 shown below:</p>
@@ -2400,11 +2430,11 @@ shown below:</p>
 </div>
 <div class="paragraph">
 <p>In this example suppose a message is sent with the header <code>whereTo=direct:foo,direct:bar,direct:baz</code>
-that means the recipient list sends messages to those 3 endpoints.</p>
+that means the recipient list sends messages to those three endpoints.</p>
 </div>
 <div class="paragraph">
 <p>Now suppose that the <code>MyProcessor</code> is causing a failure and throws an exception.
-This means the Recipient List EIP will stop after this, and not the last route (direct:baz).</p>
+This means the Recipient List EIP will stop after this, and not the last route (<code>direct:baz</code>).</p>
 </div>
 </div>
 </div>
@@ -2472,13 +2502,15 @@ For example, you can set a timeout value of 20 sec.</p>
 </td>
 <td class="content">
 <div class="title">Tasks may keep running</div>
-If the timeout is reached with running tasks still remaining, certain tasks for which it is difficult for Camel to shut down in a graceful manner may continue to run. So use this option with a bit of care.
+If the timeout is reached with running tasks still remaining,
+certain tasks for which it is challenging for Camel to shut down in a graceful manner may continue to run.
+So use this option with a bit of care.
 </td>
 </tr>
 </table>
 </div>
 <div class="paragraph">
-<p>For example in the unit test below you can see that we multicast the message to 3 destinations.
+<p>For example, in the unit test below, you can see that we multicast the message to three destinations.
 We have a timeout of 2 seconds, which means only the last two messages can be completed within the timeframe.
 This means we will only aggregate the last two which yields a result aggregation which outputs "BC".</p>
 </div>
@@ -2522,7 +2554,7 @@ This allows you to deal with the timeout in the <code>AggregationStrategy</code>
 <div class="title">Timeout is total</div>
 <div class="paragraph">
 <p>The timeout is total, which means that after X time, Camel will aggregate the messages which have completed within the timeframe.
-The remainders will be cancelled. Camel will also only invoke the <code>timeout</code> method in the <code>TimeoutAwareAggregationStrategy</code> once, for the first index which caused the timeout.</p>
+The remainder will be canceled. Camel will also only invoke the <code>timeout</code> method in the <code>TimeoutAwareAggregationStrategy</code> once, for the first index which caused the timeout.</p>
 </div>
 </td>
 </tr>
@@ -2538,7 +2570,7 @@ but want to use <code>InOut</code> exchange pattern with a recipient list. You c
 recipient endpoints.</p>
 </div>
 <div class="paragraph">
-<p>For example in the route below we pick up new files (which will be started as <code>InOnly</code>) and then route to a recipient list.
+<p>For example, in the route below we pick up new files (which will be started as <code>InOnly</code>) and then route to a recipient list.
 As we want to use <code>InOut</code> with the ActiveMQ (JMS) endpoint we can now specify this using the <code>exchangePattern=InOut</code> option.
 Then the response from the JMS request/reply will then be continued routed, and thus the response is what will be stored
 in as a file in the outbox directory.</p>
@@ -2577,9 +2609,9 @@ If you want to alter the exchange pattern permanently then use <code>.setExchang
 <h2 id="_see_also"><a class="anchor" href="#_see_also"></a>See Also</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>Because Recipient List EIP is based from the <a href="multicast-eip.html" class="xref page">Multicast</a>,
+<p>Because Recipient List EIP is based on the <a href="multicast-eip.html" class="xref page">Multicast</a>,
 then you can find more information in <a href="multicast-eip.html" class="xref page">Multicast</a> EIP
-about features that is also available with Recipient List EIP.</p>
+about features that are also available with Recipient List EIP.</p>
 </div>
 </div>
 </div>
@@ -2588,6 +2620,8 @@ about features that is also available with Recipient List EIP.</p>
 </main>
 </div>
 <footer class="footer">
+  <p>This page was built using the Antora default UI.</p>
+  <p>The source code for this UI is licensed under the terms of the MPL-2.0 license.</p>
 </footer>
 <script id="site-script" src="../../../_/js/site.js" data-ui-root-path="../../../_"></script>
 <script async src="../../../_/js/vendor/highlight.js"></script>

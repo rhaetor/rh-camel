@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>Bindy :: Red Hat Camel Reference</title>
+    <title>Bindy :: Red Hat build of Apache Camel</title>
     <meta name="description" content="Marshal and unmarshal between POJOs and key-value pair (KVP) format using Camel Bindy">
     <meta name="generator" content="Antora 3.1.4">
     <link rel="stylesheet" href="../../../_/css/site.css">
@@ -12,7 +12,7 @@
 <header class="header">
   <nav class="navbar">
     <div class="navbar-brand">
-      <a class="navbar-item" href="../../manual/index.html">Red Hat build of Apache Camel manual</a>
+      <a class="navbar-item" href="/">Red Hat build of Apache Camel</a>
       <button class="navbar-burger" data-target="topbar-nav">
         <span></span>
         <span></span>
@@ -22,11 +22,12 @@
   </nav>
 </header>
 <div class="body">
-<div class="nav-container" data-component="components" data-version="next">
+<div class="nav-container" data-component="components" data-version="4.4.x">
   <aside class="nav">
     <div class="panels">
 <div class="nav-panel-menu is-active" data-panel="menu">
   <nav class="nav-menu">
+    <button class="nav-menu-toggle" aria-label="Toggle expand/collapse all" style="display: none"></button>
     <h3 class="title"><a href="../index.html">Camel Components</a></h3>
 <ul class="nav-list">
   <li class="nav-item" data-depth="0">
@@ -1819,22 +1820,40 @@
 <div class="nav-panel-explore" data-panel="explore">
   <div class="context">
     <span class="title">Camel Components</span>
-    <span class="version">Next (Pre-release)</span>
+    <span class="version">4.4.x</span>
   </div>
   <ul class="components">
     <li class="component is-current">
-      <a class="title" href="../index.html">Camel Components</a>
+      <div class="title"><a href="../../4.10.x/index.html">Camel Components</a></div>
       <ul class="versions">
-        <li class="version is-current is-latest">
-          <a href="../index.html">Next (Pre-release)</a>
+        <li class="version is-latest">
+          <a href="../../4.10.x/index.html">4.10.x (LTS)</a>
+        </li>
+        <li class="version">
+          <a href="../../4.8.x/index.html">4.8.x</a>
+        </li>
+        <li class="version is-current">
+          <a href="../index.html">4.4.x</a>
+        </li>
+        <li class="version">
+          <a href="../../4.0.x/index.html">4.0.x</a>
         </li>
       </ul>
     </li>
     <li class="component">
-      <a class="title" href="../../../manual/index.html">User manual</a>
+      <div class="title"><a href="../../../manual/4.10.x/index.html">User manual</a></div>
       <ul class="versions">
         <li class="version is-latest">
-          <a href="../../../manual/index.html">default</a>
+          <a href="../../../manual/4.10.x/index.html">4.10.x</a>
+        </li>
+        <li class="version">
+          <a href="../../../manual/4.8.x/index.html">4.8.x</a>
+        </li>
+        <li class="version">
+          <a href="../../../manual/4.4.x/index.html">4.4.x</a>
+        </li>
+        <li class="version">
+          <a href="../../../manual/4.0.x/index.html">4.0.x</a>
         </li>
       </ul>
     </li>
@@ -1846,7 +1865,7 @@
 <main class="article">
 <div class="toolbar" role="navigation">
 <button class="nav-toggle"></button>
-  <a href="../../../manual/index.html" class="home-link"></a>
+  <a href="../../../manual/4.10.x/index.html" class="home-link"></a>
 <nav class="breadcrumbs" aria-label="breadcrumbs">
   <ul>
     <li><a href="../index.html">Camel Components</a></li>
@@ -1854,6 +1873,16 @@
     <li><a href="bindy-dataformat.html">Bindy</a></li>
   </ul>
 </nav>
+<div class="page-versions">
+  <button class="version-menu-toggle" title="Show other versions of page">4.4.x</button>
+  <div class="version-menu">
+    <a class="version" href="../../4.10.x/dataformats/bindy-dataformat.html">4.10.x (LTS)</a>
+    <a class="version" href="../../4.8.x/dataformats/bindy-dataformat.html">4.8.x</a>
+    <a class="version is-current" href="bindy-dataformat.html">4.4.x</a>
+    <a class="version is-missing" href="../../4.0.x/index.html">4.0.x</a>
+  </div>
+</div>
+<div class="edit-this-page"><a href="https://github.com/rhaetor/rh-camel-jboss/edit/camel-4.4.0-branch/docs/components/modules/dataformats/pages/bindy-dataformat.adoc">Edit this Page</a></div>
 </div>
   <div class="content">
 <aside class="toc sidebar" data-title="Contents" data-levels="2">
@@ -1870,7 +1899,7 @@
 <p>The goal of this component is to allow the parsing/binding of
 non-structured data (or to be more precise non-XML data)<br>
  to/from Java Beans that have binding mappings defined with annotations.
-Using Bindy, you can bind data from sources such as :</p>
+Using Bindy, you can bind data from sources such as:</p>
 </div>
 <div class="ulist">
 <ul>
@@ -1881,7 +1910,7 @@ Using Bindy, you can bind data from sources such as :</p>
 <p>Fixed-length records,</p>
 </li>
 <li>
-<p>FIX messages,</p>
+<p><em>FIX messages</em>,</p>
 </li>
 <li>
 <p>or almost any other non-structured data</p>
@@ -1938,20 +1967,20 @@ decimal or grouping separators.</p>
 <p><strong>Format supported</strong></p>
 </div>
 <div class="paragraph">
-<p>This first release only support comma separated values fields and key
-value pair fields (e.g. : FIX messages).</p>
+<p>This first release only supports comma separated values fields and key
+value pair fields (for example, <em>FIX messages</em>).</p>
 </div>
 <div class="paragraph">
 <p>To work with camel-bindy, you must first define your model in a package
-(e.g. com.acme.model) and for each model class (e.g. Order, Client,
-Instrument, &#8230;&#8203;) add the required annotations (described hereafter) to
+(for example, <code>com.acme.model</code>) and for each model class (for example, <code>Order</code>, <code>Client</code>,
+<code>Instrument</code>, &#8230;&#8203;) add the required annotations (described hereafter) to
 the Class or field.</p>
 </div>
 <div class="paragraph">
 <p><strong>Multiple models</strong></p>
 </div>
 <div class="paragraph">
-<p>As you configure bindy using class names instead of package names
+<p>As you configure bindy using class names, instead of package names,
 you can put multiple models in the same package.</p>
 </div>
 </div>
@@ -2031,7 +2060,7 @@ you can put multiple models in the same package.</p>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>true</code></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>Boolean</code></p></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>When unmarshalling should a single instance be unwrapped and returned instead of wrapped in a java.util.List.</p>
+<p>When unmarshaling should a single instance be unwrapped and returned instead of wrapped in a java.util.List.</p>
 </div></div></td>
 </tr>
 <tr>
@@ -2052,17 +2081,17 @@ you can put multiple models in the same package.</p>
 <h2 id="_annotations"><a class="anchor" href="#_annotations"></a>Annotations</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>The annotations created allow to map different concept of your model to
+<p>The annotations created allow mapping different concept of your model to
 the POJO like:</p>
 </div>
 <div class="ulist">
 <ul>
 <li>
-<p>Type of record (CSV, key value pair (e.g. FIX message), fixed length
+<p>Type of record (CSV, key value pair (for example, <em>FIX message</em>), fixed length
 &#8230;&#8203;),</p>
 </li>
 <li>
-<p>Link (to link object in another object),</p>
+<p>Link (to link an object in another object),</p>
 </li>
 <li>
 <p>DataField and their properties (int, type, &#8230;&#8203;),</p>
@@ -2072,7 +2101,7 @@ the POJO like:</p>
 financial messages),</p>
 </li>
 <li>
-<p>Section (to identify header, body and footer section),</p>
+<p>Section (to identify a header, body and footer section),</p>
 </li>
 <li>
 <p>OneToMany,</p>
@@ -2091,9 +2120,9 @@ financial messages),</p>
 <div class="sect2">
 <h3 id="_1_csvrecord"><a class="anchor" href="#_1_csvrecord"></a>1. CsvRecord</h3>
 <div class="paragraph">
-<p>The CsvRecord annotation is used to identified the root class of the
+<p>The CsvRecord annotation is used to identify the root class of the
 model. It represents a record = "a line of a CSV file" and can be linked
-to several children model classes.</p>
+to several children&#8217;s model classes.</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
 <colgroup>
@@ -2143,7 +2172,7 @@ to several children model classes.</p>
 <p>Separator used to split a record in tokens (mandatory) - can be ',' or ';' or 'anything'. The only whitespace
 character supported is tab (\t). No other whitespace characters (spaces) are not supported. This value is
 interpreted as a regular expression. If you want to use a sign which has a special meaning in regular
-expressions, e.g. the '|' sign, then you have to mask it, like '|'</p>
+expressions, for example, the '|' sign, then you have to mask it, like '|'</p>
 </div></div></td>
 </tr>
 <tr>
@@ -2242,7 +2271,7 @@ when it contains the configured separator, quote, or crlf characters. The quotin
 <td class="tableblock halign-left valign-top"><p class="tableblock">boolean</p></td>
 <td class="tableblock halign-left valign-top"></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">true</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">The remove quotes parameter flags if unmarshalling should try to remove quotes for each field</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The remove quotes parameter flags if unmarshaling should try to remove quotes for each field</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">skipField</p></td>
@@ -2274,7 +2303,7 @@ columns definition</p>
 </tbody>
 </table>
 <div class="paragraph">
-<p><strong>case 1 : separator = ','</strong></p>
+<p><strong>case 1: separator = ','</strong></p>
 </div>
 <div class="paragraph">
 <p>The separator used to segregate the fields in the CSV record is <code>,</code> :</p>
@@ -2293,7 +2322,7 @@ public Class Order {
 </div>
 </div>
 <div class="paragraph">
-<p><strong>case 2 : separator = ';'</strong></p>
+<p><strong>case 2: separator = ';'</strong></p>
 </div>
 <div class="paragraph">
 <p>Compare to the previous case, the separator here is <code>;</code> instead of <code>,</code> :</p>
@@ -2312,7 +2341,7 @@ public Class Order {
 </div>
 </div>
 <div class="paragraph">
-<p><strong>case 3 : separator = '|'</strong></p>
+<p><strong>case 3: separator = '|'</strong></p>
 </div>
 <div class="paragraph">
 <p>Compare to the previous case, the separator here is <code>|</code> instead of <code>;</code> :</p>
@@ -2331,7 +2360,7 @@ public Class Order {
 </div>
 </div>
 <div class="paragraph">
-<p><strong>case 4 : separator = '\",\"'</strong></p>
+<p><strong>case 4: separator = '\",\"'</strong></p>
 </div>
 <div class="paragraph">
 <p><strong>Applies for Camel 2.8.2 or older</strong></p>
@@ -2341,7 +2370,7 @@ public Class Order {
 is also used as separator, we should find another strategy
 to tell camel bindy how to handle this case. To define the field
 containing the data with a comma, you will use single or double quotes
-as delimiter (e.g : '10', 'Street 10, NY', 'USA' or "10", "Street 10,
+as delimiter (for example, '10', 'Street 10, NY', 'USA' or "10", "Street 10,
 NY", "USA").</p>
 </div>
 <div class="admonitionblock note">
@@ -2351,8 +2380,9 @@ NY", "USA").</p>
 <i class="fa icon-note" title="Note"></i>
 </td>
 <td class="content">
-In this case, the first and last character of the line which
-are a single or double quotes will be removed by bindy.
+<div class="paragraph">
+<p>In this case, bindy will remove the first and last character of the line which is a single or double quotes.</p>
+</div>
 </td>
 </tr>
 </table>
@@ -2372,9 +2402,8 @@ public Class Order {
 </div>
 <div class="paragraph">
 <p>Bindy automatically detects if the
-record is enclosed with either single or double quotes and automatic
-remove those quotes when unmarshalling from CSV to Object. Therefore do
-<strong>not</strong> include the quotes in the separator, but simply do as below:</p>
+record is enclosed with either single or double quotes and automatically removes those quotes when unmarshaling from CSV to Object. Therefore, do
+<strong>not</strong> include the quotes in the separator, but do as below:</p>
 </div>
 <div class="listingblock">
 <div class="content">
@@ -2403,7 +2432,7 @@ public Class Order {
 </div>
 </div>
 <div class="paragraph">
-<p><strong>case 5 : separator &amp; skipFirstLine</strong></p>
+<p><strong>case 5: separator &amp; skipFirstLine</strong></p>
 </div>
 <div class="paragraph">
 <p>The feature is interesting when the client wants to have in the first
@@ -2427,11 +2456,11 @@ public Class Order {
 </div>
 </div>
 <div class="paragraph">
-<p><strong>case 6 : generateHeaderColumns</strong></p>
+<p><strong>case 6: generateHeaderColumns</strong></p>
 </div>
 <div class="paragraph">
-<p>To add at the first line of the CSV generated, the attribute
-generateHeaderColumns must be set to true in the annotation like this :</p>
+<p>To include at the first line of the CSV generated, the attribute
+<code>generateHeaderColumns</code> must be set to true in the annotation like this :</p>
 </div>
 <div class="listingblock">
 <div class="content">
@@ -2443,7 +2472,7 @@ public Class Order {
 </div>
 <div class="paragraph">
 <p>As a result, Bindy during the unmarshaling process will generate CSV
-like this :</p>
+like this:</p>
 </div>
 <div class="listingblock">
 <div class="content">
@@ -2452,12 +2481,12 @@ like this :</p>
 </div>
 </div>
 <div class="paragraph">
-<p><strong>case 7 : carriage return</strong></p>
+<p><strong>case 7: carriage return</strong></p>
 </div>
 <div class="paragraph">
 <p>If the platform where camel-bindy will run is not Windows but Macintosh
 or Unix, then you can change the crlf property like this. Three values
-are available : WINDOWS, UNIX or MAC</p>
+are available: <code>WINDOWS</code>, <code>UNIX</code> or <code>MAC</code>.</p>
 </div>
 <div class="listingblock">
 <div class="content">
@@ -2482,7 +2511,7 @@ public Class Order {
 </div>
 </div>
 <div class="paragraph">
-<p><strong>case 8 : isOrdered</strong></p>
+<p><strong>case 8: isOrdered</strong></p>
 </div>
 <div class="paragraph">
 <p>Sometimes, the order to follow during the creation of the CSV record
@@ -2512,8 +2541,10 @@ public Class Order {
 <i class="fa icon-note" title="Note"></i>
 </td>
 <td class="content">
-<code>pos</code> is used to parse the file stream, while <code>position</code> is used
-to generate the CSV.
+<div class="paragraph">
+<p><code>pos</code> is used to parse the file stream, while <code>position</code> is used
+to generate the CSV.</p>
+</div>
 </td>
 </tr>
 </table>
@@ -2522,7 +2553,7 @@ to generate the CSV.
 <div class="sect2">
 <h3 id="_2_link"><a class="anchor" href="#_2_link"></a>2. Link</h3>
 <div class="paragraph">
-<p>The link annotation will allow to link objects together.</p>
+<p>The link annotation will allow linking objects together.</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
 <colgroup>
@@ -2576,7 +2607,7 @@ to generate the CSV.
 <p>Only one-to-one relation is allowed as of the current version.</p>
 </div>
 <div class="paragraph">
-<p>E.g : If the model class Client is linked to the Order class, then use
+<p>For example: If the model class Client is linked to the Order class, then use
 annotation Link in the Order class like this :</p>
 </div>
 <div class="paragraph">
@@ -2715,7 +2746,7 @@ has <code>generateHeaderColumns = true</code></p>
 <td class="tableblock halign-left valign-top"></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p>Grouping Separator to be used with BigDecimal number when we would like to format/parse to number with grouping
-e.g. 123,456.789</p>
+for example, 123,456.789</p>
 </div></div></td>
 </tr>
 <tr>
@@ -2746,7 +2777,7 @@ e.g. 123,456.789</p>
 <td class="tableblock halign-left valign-top"></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p>Method name to call to apply such customization on DataField. This must be the method on the datafield itself or
-you must provide static fully qualified name of the class&#8217;s method e.g: see unit test
+you must provide static fully qualified name of the class&#8217;s method for example, see unit test
 org.apache.camel.dataformat.bindy.csv.BindySimpleCsvFunctionWithExternalMethodTest.replaceToBar</p>
 </div></div></td>
 </tr>
@@ -2827,7 +2858,7 @@ HALF_DOWN,HALF_EVEN, UNNECESSARY e.g : Number = 123456.789, Precision = 2, Round
 </tbody>
 </table>
 <div class="paragraph">
-<p><strong>case 1 : pos</strong></p>
+<p><strong>case 1: pos</strong></p>
 </div>
 <div class="paragraph">
 <p>This parameter/attribute represents the position of the field in the CSV
@@ -2851,7 +2882,7 @@ public class Order {
 </div>
 </div>
 <div class="paragraph">
-<p>As you can see in this example the position starts at <code>1</code> but continues
+<p>As you can see in this example, the position starts at <code>1</code> but continues
 at <code>5</code> in the class Order. The numbers from <code>2</code> to <code>4</code> are defined in
 the class Client (see here after).</p>
 </div>
@@ -2874,10 +2905,10 @@ the class Client (see here after).</p>
 </div>
 </div>
 <div class="paragraph">
-<p><strong>case 2 : pattern</strong></p>
+<p><strong>case 2: pattern</strong></p>
 </div>
 <div class="paragraph">
-<p>The pattern allows to enrich or validates the format of your data</p>
+<p>The pattern allows enriching or validates the format of your data</p>
 </div>
 <div class="paragraph">
 <p><strong>Pattern</strong></p>
@@ -2909,7 +2940,7 @@ public class Order {
 </div>
 </div>
 <div class="paragraph">
-<p><strong>case 3 : precision</strong></p>
+<p><strong>case 3: precision</strong></p>
 </div>
 <div class="paragraph">
 <p>The precision is helpful when you want to define the decimal part of
@@ -2947,13 +2978,13 @@ public class Order {
 </div>
 </div>
 <div class="paragraph">
-<p><strong>case 4 : Position is different in output</strong></p>
+<p><strong>case 4: Position is different in output</strong></p>
 </div>
 <div class="paragraph">
 <p>The position attribute will inform bindy how to place the field in the
 CSV record generated. By default, the position used corresponds to the
 position defined with the attribute <code>pos</code>. If the position is different
-(that means that we have an asymetric processus comparing marshaling
+(that means that we have an asymmetric process comparing marshaling
 from unmarshaling) then we can use <code>position</code> to indicate this.</p>
 </div>
 <div class="paragraph">
@@ -2994,10 +3025,10 @@ public class Order {
 with attribute <code>isOrdered = true</code> of the annotation <code>@CsvRecord</code>.</p>
 </div>
 <div class="paragraph">
-<p><strong>case 5 : required</strong></p>
+<p><strong>case 5: required</strong></p>
 </div>
 <div class="paragraph">
-<p>If a field is mandatory, simply use the attribute <code>required</code> set to
+<p>If a field is mandatory, use the attribute <code>required</code> set to
 true.</p>
 </div>
 <div class="paragraph">
@@ -3032,11 +3063,11 @@ by the parser with the following information :</p>
 </div>
 </div>
 <div class="paragraph">
-<p><strong>case 6 : trim</strong></p>
+<p><strong>case 6: trim</strong></p>
 </div>
 <div class="paragraph">
 <p>If a field has leading and/or trailing spaces which should be removed
-before they are processed, simply use the attribute <code>trim</code> set to
+before they are processed, use the attribute <code>trim</code> set to
 true.</p>
 </div>
 <div class="paragraph">
@@ -3062,7 +3093,7 @@ public class Order {
 </div>
 </div>
 <div class="paragraph">
-<p><strong>case 7 : defaultValue</strong></p>
+<p><strong>case 7: defaultValue</strong></p>
 </div>
 <div class="paragraph">
 <p>If a field is not defined then uses the value indicated by the
@@ -3091,7 +3122,7 @@ public class Order {
 </div>
 </div>
 <div class="paragraph">
-<p><strong>case 8 : columnName</strong></p>
+<p><strong>case 8: columnName</strong></p>
 </div>
 <div class="paragraph">
 <p>Specifies the column name for the property only if <code>@CsvRecord</code> has annotation <code>generateHeaderColumns = true</code>.</p>
@@ -3122,14 +3153,14 @@ public class Order {
 <div class="sect2">
 <h3 id="_4_fixedlengthrecord"><a class="anchor" href="#_4_fixedlengthrecord"></a>4. FixedLengthRecord</h3>
 <div class="paragraph">
-<p>The FixedLengthRecord annotation is used to identified the root class of
+<p>The FixedLengthRecord annotation is used to identify the root class of
 the model. It represents a record = "a line of a file/message containing
 data fixed length (number of characters) formatted" and can be linked to several children model
 classes. This format is a bit particular because data of a field can be
 aligned to the right or to the left.</p>
 </div>
 <div class="paragraph">
-<p>When the size of the data does not fill completely the length of the
+<p>When the size of the data does not completely fill the length of the
 field, we can then add 'pad' characters.</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
@@ -3185,7 +3216,7 @@ field, we can then add 'pad' characters.</p>
 <td class="tableblock halign-left valign-top"><p class="tableblock">WINDOWS</p></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p>Character to be used to add a carriage return after each record (optional). Possible values: WINDOWS, UNIX, MAC,
-or custom. This option is used only during marshalling, whereas unmarshalling uses system default JDK provided
+or custom. This option is used only during marshaling, whereas unmarshaling uses system default JDK provided
 line delimiter unless eol is customized.</p>
 </div></div></td>
 </tr>
@@ -3195,9 +3226,9 @@ line delimiter unless eol is customized.</p>
 <td class="tableblock halign-left valign-top"></td>
 <td class="tableblock halign-left valign-top"></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>Character to be used to process considering end of line after each record while unmarshalling (optional -
+<p>Character to be used to process considering end of line after each record while unmarshaling (optional -
 default: "", which help default JDK provided line delimiter to be used unless any other line delimiter provided)
-This option is used only during unmarshalling, where marshalling uses system default provided line delimiter as
+This option is used only during unmarshaling, where marshaling uses system default provided line delimiter as
 "WINDOWS" unless any other value is provided.</p>
 </div></div></td>
 </tr>
@@ -3231,7 +3262,7 @@ file</p>
 <td class="tableblock halign-left valign-top"></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">false</p></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>Indicates that characters beyond the last mapped filed can be ignored when unmarshalling / parsing. This
+<p>Indicates that characters beyond the last mapped filed can be ignored when unmarshaling / parsing. This
 annotation is associated to the root class of the model and must be declared one time.</p>
 </div></div></td>
 </tr>
@@ -3265,8 +3296,8 @@ with {#paddingChar()}'s</p>
 <td class="tableblock halign-left valign-top"></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">false</p></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>Configures the data format to skip marshalling / unmarshalling of the footer record. Configure this parameter on
-the primary record (e.g., not the header or footer).</p>
+<p>Configures the data format to skip marshaling / unmarshaling of the footer record. Configure this parameter on
+the primary record (for example, not the header or footer).</p>
 </div></div></td>
 </tr>
 <tr>
@@ -3275,8 +3306,8 @@ the primary record (e.g., not the header or footer).</p>
 <td class="tableblock halign-left valign-top"></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">false</p></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>Configures the data format to skip marshalling / unmarshalling of the header record. Configure this parameter on
-the primary record (e.g., not the header or footer).</p>
+<p>Configures the data format to skip marshaling / unmarshaling of the header record. Configure this parameter on
+the primary record (for example, not the header or footer).</p>
 </div></div></td>
 </tr>
 </tbody>
@@ -3285,11 +3316,10 @@ the primary record (e.g., not the header or footer).</p>
 <p>A record may not be both a header/footer and a primary fixed-length record.</p>
 </div>
 <div class="paragraph">
-<p><strong>case 1 : Simple fixed length record</strong></p>
+<p><strong>case 1: Simple fixed length record</strong></p>
 </div>
 <div class="paragraph">
-<p>This simple example shows how to design the model to parse/format a
-fixed message</p>
+<p>This example shows how to design the model to parse/format a fixed message:</p>
 </div>
 <div class="listingblock">
 <div class="content">
@@ -3340,7 +3370,7 @@ public static class Order {
 </div>
 </div>
 <div class="paragraph">
-<p><strong>case 2 : Fixed length record with alignment and padding</strong></p>
+<p><strong>case 2: Fixed length record with alignment and padding</strong></p>
 </div>
 <div class="paragraph">
 <p>This more elaborated example show how to define the alignment for a
@@ -3395,7 +3425,7 @@ public static class Order {
 </div>
 </div>
 <div class="paragraph">
-<p><strong>case 3 : Field padding</strong></p>
+<p><strong>case 3: Field padding</strong></p>
 </div>
 <div class="paragraph">
 <p>Sometimes, the default padding defined for record cannot be applied to
@@ -3513,10 +3543,10 @@ optionally be defined using ordinal, sequential values instead of
 precise column numbers.</p>
 </div>
 <div class="paragraph">
-<p><strong>case 5 : Fixed length record with record-defined field length</strong></p>
+<p><strong>case 5: Fixed length record with record-defined field length</strong></p>
 </div>
 <div class="paragraph">
-<p>Occasionally a fixed-length record may contain a field that define the
+<p>Occasionally, a fixed-length record may contain a field that defines the
 expected length of another field within the same record. In the
 following example the length of the <code>instrumentNumber</code> field value is
 defined by the value of <code>instrumentNumberLen</code> field in the record.</p>
@@ -3573,7 +3603,7 @@ public static class Order {
 </div>
 </div>
 <div class="paragraph">
-<p><strong>case 6 : Fixed length record with header and footer</strong></p>
+<p><strong>case 6: Fixed length record with header and footer</strong></p>
 </div>
 <div class="paragraph">
 <p>Bindy will discover fixed-length header and footer records that are
@@ -3654,7 +3684,7 @@ public class OrderFooter {
 </div>
 </div>
 <div class="paragraph">
-<p><strong>case 7 : Skipping content when parsing a fixed length record</strong></p>
+<p><strong>case 7: Skipping content when parsing a fixed length record</strong></p>
 </div>
 <div class="paragraph">
 <p>It is common to integrate with systems that provide fixed-length records
@@ -3692,13 +3722,13 @@ public static class Order {
 <div class="sect2">
 <h3 id="_5_message"><a class="anchor" href="#_5_message"></a>5. Message</h3>
 <div class="paragraph">
-<p>The Message annotation is used to identified the class of your model who
+<p>The Message annotation is used to identify the class of your model who
 will contain key value pairs fields. This kind of format is used mainly
 in Financial Exchange Protocol Messages (FIX). Nevertheless, this
 annotation can be used for any other format where data are identified by
 keys. The key pair values are separated each other by a separator which
-can be a special character like a tab delimitor (unicode representation
-: <code>\u0009</code>) or a start of heading (unicode representation : <code>\u0001</code>)</p>
+can be a special character like a tab delimiter (unicode representation
+: <code>\u0009</code>) or a start of heading (unicode representation: <code>\u0001</code>)</p>
 </div>
 <div class="admonitionblock note">
 <table>
@@ -3711,11 +3741,11 @@ can be a special character like a tab delimitor (unicode representation
 <p><strong>FIX information</strong></p>
 </div>
 <div class="paragraph">
-<p>More information about FIX can be found on this web site :
+<p>More information about FIX can be found on this website:
 <a href="http://www.fixprotocol.org/">http://www.fixprotocol.org/</a>. To work with
-FIX messages, the model must contain a Header and Trailer classes linked
-to the root message class which could be a Order class. This is not
-mandatory but will be very helpful when you will use camel-bindy in
+<em>FIX messages</em>, the model must contain a Header and Trailer classes linked
+to the root message class which could be an <code>Order</code> class. This is not
+mandatory but will be very helpful when you use camel-bindy in
 combination with camel-fix which is a Fix gateway based on quickFix
 project <a href="http://www.quickfixj.org/">http://www.quickfixj.org/</a>.</p>
 </div>
@@ -3812,19 +3842,19 @@ model and must be declared one time.</p>
 <td class="tableblock halign-left valign-top"><p class="tableblock">String</p></td>
 <td class="tableblock halign-left valign-top"></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">FIX</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">type is used to define the type of the message (e.g. FIX, EMX, &#8230;&#8203;) (optional)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">type is used to define the type of the message (for example, FIX, EMX, &#8230;&#8203;) (optional)</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">version</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">String</p></td>
 <td class="tableblock halign-left valign-top"></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">4.1</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">version defines the version of the message (e.g. 4.1, &#8230;&#8203;) (optional)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">version defines the version of the message (for example, 4.1, &#8230;&#8203;) (optional)</p></td>
 </tr>
 </tbody>
 </table>
 <div class="paragraph">
-<p><strong>case 1 : separator = 'u0001'</strong></p>
+<p><strong>case 1: separator = 'u0001'</strong></p>
 </div>
 <div class="paragraph">
 <p>The separator used to segregate the key value pair fields in a FIX
@@ -3856,7 +3886,7 @@ public class Order {
 </div>
 <div class="paragraph">
 <p>The ASCII character like tab, &#8230;&#8203; cannot be displayed in WIKI page. So,
-have a look to the test case of camel-bindy to see exactly how the FIX
+have a look at the test case of camel-bindy to see exactly how the FIX
 message looks like (<a href="https://github.com/apache/camel/blob/main/components/camel-bindy/src/test/data/fix/fix.txt">src/test/data/fix/fix.txt</a>) and the Order, Trailer,
 Header classes
 (<a href="https://github.com/apache/camel/blob/main/components/camel-bindy/src/test/java/org/apache/camel/dataformat/bindy/model/fix/simple/Order.java">src/test/java/org/apache/camel/dataformat/bindy/model/fix/simple/Order.java</a>).</p>
@@ -3971,7 +4001,7 @@ must be different</p>
 </tbody>
 </table>
 <div class="paragraph">
-<p><strong>case 1 : tag</strong></p>
+<p><strong>case 1: tag</strong></p>
 </div>
 <div class="paragraph">
 <p>This parameter represents the key of the field in the message:</p>
@@ -4009,11 +4039,11 @@ public class Order {
 </div>
 </div>
 <div class="paragraph">
-<p><strong>case 2 : Different position in output</strong></p>
+<p><strong>case 2: Different position in output</strong></p>
 </div>
 <div class="paragraph">
-<p>If the tags/keys that we will put in the FIX message must be sorted
-according to a predefine order, then use the attribute <code>position</code> of the
+<p>If the tags/keys that we will put in the <em>FIX message</em> must be sorted
+according to a predefined order, then use the attribute <code>position</code> of the
 annotation <code>@KeyValuePairField</code>.</p>
 </div>
 <div class="paragraph">
@@ -4040,8 +4070,8 @@ public class Order {
 <div class="sect2">
 <h3 id="_7_section"><a class="anchor" href="#_7_section"></a>7. Section</h3>
 <div class="paragraph">
-<p>In FIX message of fixed length records, it is common to have different
-sections in the representation of the information : header, body and
+<p>In <em>FIX message</em> of fixed length records, it is common to have different
+sections in the representation of the information:header, body and
 section. The purpose of the annotation <code>@Section</code> is to inform bindy about
 which class of the model represents the header (= section 1), body (=
 section 2) and footer (= section 3)</p>
@@ -4098,7 +4128,7 @@ section 2) and footer (= section 3)</p>
 </tbody>
 </table>
 <div class="paragraph">
-<p><strong>case 1 : Section</strong></p>
+<p><strong>case 1: Section</strong></p>
 </div>
 <div class="paragraph">
 <p>Definition of the header section:</p>
@@ -4166,7 +4196,7 @@ public class Trailer {
 <div class="sect2">
 <h3 id="_8_onetomany"><a class="anchor" href="#_8_onetomany"></a>8. OneToMany</h3>
 <div class="paragraph">
-<p>The purpose of the annotation <code>@OneToMany</code> is to allow to work with a
+<p>The purpose of the annotation <code>@OneToMany</code> is to allow working with a
 <code>List&lt;?&gt;</code> field defined a POJO class or from a record containing
 repetitive groups.</p>
 </div>
@@ -4181,7 +4211,7 @@ repetitive groups.</p>
 <p><strong>Restrictions OneToMany</strong></p>
 </div>
 <div class="paragraph">
-<p>Be careful, the one to many of bindy does not allow to handle
+<p>Be careful, the one to many of bindy does not allow handling
 repetitions defined on several levels of the hierarchy</p>
 </div>
 <div class="paragraph">
@@ -4190,7 +4220,7 @@ repetitions defined on several levels of the hierarchy</p>
 <div class="ulist">
 <ul>
 <li>
-<p>Reading a FIX message containing repetitive groups (= group of
+<p>Reading a <em>FIX message</em> containing repetitive groups (= group of
 tags/keys)</p>
 </li>
 <li>
@@ -4251,7 +4281,7 @@ tags/keys)</p>
 </tbody>
 </table>
 <div class="paragraph">
-<p><strong>case 1 : Generating CSV with repetitive data</strong></p>
+<p><strong>case 1: Generating CSV with repetitive data</strong></p>
 </div>
 <div class="paragraph">
 <p>Here is the CSV output that we want :</p>
@@ -4271,14 +4301,16 @@ Claus,Ibsen,Camel in Action 4,2014,35</pre>
 <i class="fa icon-note" title="Note"></i>
 </td>
 <td class="content">
-The repetitive data concern the title of the book and its
-publication date while first, last name and age are common.
+<div class="paragraph">
+<p>The repetitive data concern the title of the book and its
+publication date while first, last name and age are common.</p>
+</div>
 </td>
 </tr>
 </table>
 </div>
 <div class="paragraph">
-<p>and the classes used to modeling this. The Author class contains a List
+<p>And the classes used to modeling this. The Author class contains a List
 of Book.</p>
 </div>
 <div class="paragraph">
@@ -4316,7 +4348,7 @@ public class Book {
 <p>Very simple isn&#8217;t it !!!</p>
 </div>
 <div class="paragraph">
-<p><strong>case 2 : Reading FIX message containing group of tags/keys</strong></p>
+<p><strong>case 2: Reading FIX message containing group of tags/keys</strong></p>
 </div>
 <div class="paragraph">
 <p>Here is the message that we would like to process in our model :</p>
@@ -4369,7 +4401,7 @@ public class Security {
     @KeyValuePairField(tag = 48) // Fund code
     private String securityCode;
 
-    @KeyValuePairField(tag = 54) // Movement type ( 1 = Buy, 2 = sell)
+    @KeyValuePairField(tag = 54) // Movement type (1 = Buy, 2 = sell)
     private String side;
 }</code></pre>
 </div>
@@ -4378,7 +4410,7 @@ public class Security {
 <div class="sect2">
 <h3 id="_9_bindyconverter"><a class="anchor" href="#_9_bindyconverter"></a>9. BindyConverter</h3>
 <div class="paragraph">
-<p>The purpose of the annotation <code>@BindyConverter</code> is define a converter
+<p>The purpose of the annotation <code>@BindyConverter</code> is to define a converter
 to be used on field level. The provided class must implement the
 Format interface.</p>
 </div>
@@ -4525,7 +4557,7 @@ FormattingOptions:</p>
 </div>
 <div class="paragraph">
 <p>The DefaultFormatFactory can be overridden by providing an instance of
-FactoryRegistry in the registry in use (e.g. Spring or JNDI).</p>
+FactoryRegistry in the registry in use (for example, Spring or JNDI).</p>
 </div>
 </div>
 </div>
@@ -4537,7 +4569,7 @@ FactoryRegistry in the registry in use (e.g. Spring or JNDI).</p>
 associated with this record type and providing a class as a parameter.</p>
 </div>
 <div class="paragraph">
-<p>For example the following uses the class <code>BindyCsvDataFormat</code> (which
+<p>For example, the following uses the class <code>BindyCsvDataFormat</code> (which
 corresponds to the class associated with the CSV record type) which is
 configured with <em>com.acme.model.MyModel.class</em> to initialize the model objects
 configured in this package.</p>
@@ -4560,7 +4592,7 @@ bindy.setLocale("us");</code></pre>
 </div>
 </div>
 <div class="paragraph">
-<p>Or to use the platform default locale then use "default" as the locale
+<p>Or to use the platform default locale, then use "default" as the locale
 name.</p>
 </div>
 <div class="listingblock">
@@ -4582,7 +4614,7 @@ bindy.setLocale("default");</code></pre>
 </div>
 <div class="paragraph">
 <p>Alternatively, you can use a named reference to a data format which can
-then be defined in your Registry e.g. your
+then be defined in your registry, for example, your
 Spring XML file:</p>
 </div>
 <div class="listingblock">
@@ -4593,19 +4625,19 @@ Spring XML file:</p>
 </div>
 </div>
 <div class="paragraph">
-<p>The Camel route will pick-up files in the inbox directory, unmarshall
+<p>The Camel route will pick up files in the inbox directory, unmarshal
 CSV records into a collection of model objects and send the collection<br>
  to the route referenced by <code>handleOrders</code>.</p>
 </div>
 <div class="paragraph">
 <p>The collection returned is a <strong>List of Map</strong> objects. Each Map within the
-list contains the model objects that were marshalled out of each line of
+list contains the model objects marshaled out of each line of
 the CSV. The reason behind this is that <em>each line can correspond to
-more than one object</em>. This can be confusing when you simply expect one
+more than one object</em>. This can be confusing when you expect one
 object to be returned per line.</p>
 </div>
 <div class="paragraph">
-<p>Each object can be retrieve using its class name.</p>
+<p>Each object can be retrieved using its class name.</p>
 </div>
 <div class="listingblock">
 <div class="content">
@@ -4615,12 +4647,12 @@ int modelCount = 0;
 for (Map&lt;String, Object&gt; model : unmarshaledModels) {
   for (String className : model.keySet()) {
      Object obj = model.get(className);
-     LOG.info("Count : {}, {}", modelCount, obj.toString());
+     LOG.info("Count: {}, {}", modelCount, obj.toString());
   }
  modelCount++;
 }
 
-LOG.info("Total CSV records received by the csv bean : {}", modelCount);</code></pre>
+LOG.info("Total CSV records received by the csv bean: {}", modelCount);</code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -4647,10 +4679,10 @@ the following:</p>
 </div>
 <div class="paragraph">
 <p>Take care of the fact that Bindy uses CHARSET_NAME property or the CHARSET_NAME header as define in the
-Exchange interface to do a characterset conversion of the inputstream received for unmarshalling.
-In some producers (e.g. file-endpoint) you can define a characterset. The characterset conversion
-can already been done by this producer. Sometimes you need to remove this property or header from the
-exchange before sending it to the unmarshal. If you don&#8217;t remove it the conversion might be done twice
+Exchange interface to do a characterset conversion of the inputstream received for unmarshaling.
+In some producers, (for example, file-endpoint) you can define a characterset. This producer
+can already do the character set conversion. Sometimes you need to remove this property or header from the
+exchange before sending it to the unmarshal. If you don&#8217;t remove it, the conversion might be done twice,
 which might lead to unwanted results.</p>
 </div>
 <div class="listingblock">
@@ -4684,12 +4716,12 @@ the following route :</p>
 <div class="paragraph">
 <p>This is really easy to use Spring as your favorite DSL language to
 declare the routes to be used for camel-bindy. The following example
-shows two routes where the first will pick-up records from files,
+shows two routes where the first will pick up records from files,
 unmarshal the content and bind it to their model. The result is then
 send to a pojo (doing nothing special) and place them into a queue.</p>
 </div>
 <div class="paragraph">
-<p>The second route will extract the pojos from the queue and marshal the
+<p>The second route will extract the pojos from the queue and marshalthe
 content to generate a file containing the CSV record.</p>
 </div>
 <div class="paragraph">
@@ -4707,7 +4739,7 @@ content to generate a file containing the CSV record.</p>
        http://camel.apache.org/schema/spring
        http://camel.apache.org/schema/spring/camel-spring.xsd"&gt;
 
-    &lt;!-- Queuing engine - ActiveMq - work locally in mode virtual memory --&gt;
+    &lt;!-- Queuing engine - ActiveMq - works locally in mode virtual memory --&gt;
     &lt;bean id="activemq" class="org.apache.activemq.camel.component.ActiveMQComponent"&gt;
         &lt;property name="brokerURL" value="vm://localhost:61616"/&gt;
     &lt;/bean&gt;
@@ -4741,7 +4773,7 @@ content to generate a file containing the CSV record.</p>
 </td>
 <td class="content">
 <div class="paragraph">
-<p>Please verify that your model classes implements serializable otherwise
+<p>Please verify that your model classes implement serializable otherwise
 the queue manager will raise an error.</p>
 </div>
 </td>
@@ -4754,11 +4786,11 @@ the queue manager will raise an error.</p>
 <h2 id="_dependencies"><a class="anchor" href="#_dependencies"></a>Dependencies</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>To use Bindy in your camel routes you need to add the a dependency on
+<p>To use Bindy in your camel routes, you need to add a dependency on
 <strong>camel-bindy</strong> which implements this data format.</p>
 </div>
 <div class="paragraph">
-<p>If you use maven you could just add the following to your pom.xml,
+<p>If you use maven, you could add the following to your pom.xml,
 substituting the version number for the latest &amp; greatest release (see
 the download page for the latest versions).</p>
 </div>
@@ -4771,6 +4803,9 @@ the download page for the latest versions).</p>
 &lt;/dependency&gt;</code></pre>
 </div>
 </div>
+<div class="paragraph">
+<p>Unresolved include directive in modules/dataformats/pages/bindy-dataformat.adoc - include::spring-boot:partial$starter.adoc[]</p>
+</div>
 </div>
 </div>
 </article>
@@ -4778,6 +4813,8 @@ the download page for the latest versions).</p>
 </main>
 </div>
 <footer class="footer">
+  <p>This page was built using the Antora default UI.</p>
+  <p>The source code for this UI is licensed under the terms of the MPL-2.0 license.</p>
 </footer>
 <script id="site-script" src="../../../_/js/site.js" data-ui-root-path="../../../_"></script>
 <script async src="../../../_/js/vendor/highlight.js"></script>

@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>Bean :: Red Hat Camel Reference</title>
+    <title>Bean :: Red Hat build of Apache Camel</title>
     <meta name="description" content="Calls a Java bean">
     <meta name="generator" content="Antora 3.1.4">
     <link rel="stylesheet" href="../../../_/css/site.css">
@@ -12,7 +12,7 @@
 <header class="header">
   <nav class="navbar">
     <div class="navbar-brand">
-      <a class="navbar-item" href="../../manual/index.html">Red Hat build of Apache Camel manual</a>
+      <a class="navbar-item" href="/">Red Hat build of Apache Camel</a>
       <button class="navbar-burger" data-target="topbar-nav">
         <span></span>
         <span></span>
@@ -22,11 +22,12 @@
   </nav>
 </header>
 <div class="body">
-<div class="nav-container" data-component="components" data-version="next">
+<div class="nav-container" data-component="components" data-version="4.4.x">
   <aside class="nav">
     <div class="panels">
 <div class="nav-panel-menu is-active" data-panel="menu">
   <nav class="nav-menu">
+    <button class="nav-menu-toggle" aria-label="Toggle expand/collapse all" style="display: none"></button>
     <h3 class="title"><a href="../index.html">Camel Components</a></h3>
 <ul class="nav-list">
   <li class="nav-item" data-depth="0">
@@ -1819,22 +1820,40 @@
 <div class="nav-panel-explore" data-panel="explore">
   <div class="context">
     <span class="title">Camel Components</span>
-    <span class="version">Next (Pre-release)</span>
+    <span class="version">4.4.x</span>
   </div>
   <ul class="components">
     <li class="component is-current">
-      <a class="title" href="../index.html">Camel Components</a>
+      <div class="title"><a href="../../4.10.x/index.html">Camel Components</a></div>
       <ul class="versions">
-        <li class="version is-current is-latest">
-          <a href="../index.html">Next (Pre-release)</a>
+        <li class="version is-latest">
+          <a href="../../4.10.x/index.html">4.10.x (LTS)</a>
+        </li>
+        <li class="version">
+          <a href="../../4.8.x/index.html">4.8.x</a>
+        </li>
+        <li class="version is-current">
+          <a href="../index.html">4.4.x</a>
+        </li>
+        <li class="version">
+          <a href="../../4.0.x/index.html">4.0.x</a>
         </li>
       </ul>
     </li>
     <li class="component">
-      <a class="title" href="../../../manual/index.html">User manual</a>
+      <div class="title"><a href="../../../manual/4.10.x/index.html">User manual</a></div>
       <ul class="versions">
         <li class="version is-latest">
-          <a href="../../../manual/index.html">default</a>
+          <a href="../../../manual/4.10.x/index.html">4.10.x</a>
+        </li>
+        <li class="version">
+          <a href="../../../manual/4.8.x/index.html">4.8.x</a>
+        </li>
+        <li class="version">
+          <a href="../../../manual/4.4.x/index.html">4.4.x</a>
+        </li>
+        <li class="version">
+          <a href="../../../manual/4.0.x/index.html">4.0.x</a>
         </li>
       </ul>
     </li>
@@ -1846,7 +1865,7 @@
 <main class="article">
 <div class="toolbar" role="navigation">
 <button class="nav-toggle"></button>
-  <a href="../../../manual/index.html" class="home-link"></a>
+  <a href="../../../manual/4.10.x/index.html" class="home-link"></a>
 <nav class="breadcrumbs" aria-label="breadcrumbs">
   <ul>
     <li><a href="../index.html">Camel Components</a></li>
@@ -1854,6 +1873,16 @@
     <li><a href="bean-eip.html">Bean</a></li>
   </ul>
 </nav>
+<div class="page-versions">
+  <button class="version-menu-toggle" title="Show other versions of page">4.4.x</button>
+  <div class="version-menu">
+    <a class="version" href="../../4.10.x/eips/bean-eip.html">4.10.x (LTS)</a>
+    <a class="version" href="../../4.8.x/eips/bean-eip.html">4.8.x</a>
+    <a class="version is-current" href="bean-eip.html">4.4.x</a>
+    <a class="version" href="../../4.0.x/eips/bean-eip.html">4.0.x</a>
+  </div>
+</div>
+<div class="edit-this-page"><a href="https://github.com/rhaetor/rh-camel-jboss/edit/camel-4.4.0-branch/core/camel-core-engine/src/main/docs/modules/eips/pages/bean-eip.adoc">Edit this Page</a></div>
 </div>
   <div class="content">
 <aside class="toc sidebar" data-title="Contents" data-levels="2">
@@ -1882,8 +1911,8 @@ which also is used for invoking beans, but in the form as a Camel component.</p>
 </div>
 </div>
 <div class="paragraph">
-<p>Where <strong>beanID</strong> can be any string which is used to look up the bean in
-the <a href="../../../manual/registry.html" class="xref page">Registry</a>.</p>
+<p>Where <strong>beanID</strong> can be any string used to look up the bean in
+the <a href="../../../manual/4.10.x/registry.html" class="xref page">Registry</a>.</p>
 </div>
 </div>
 </div>
@@ -1928,7 +1957,7 @@ the <a href="../../../manual/registry.html" class="xref page">Registry</a>.</p>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong id="_option_ref">ref</strong></p></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>Sets a reference to an exiting bean to use, which is looked up from the registry.</p>
+<p>Sets a reference to an existing bean to use, which is looked up from the registry.</p>
 </div></div></td>
 <td class="tableblock halign-center valign-top"></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">String</p></td>
@@ -1979,7 +2008,7 @@ the <a href="../../../manual/registry.html" class="xref page">Registry</a>.</p>
 <h3 id="_bean_scope"><a class="anchor" href="#_bean_scope"></a>Bean scope</h3>
 <div class="paragraph">
 <p>When using <code>singleton</code> scope (default) the bean is created or looked up only once and reused for the lifetime of the endpoint.
-The bean should be thread-safe in case concurrent threads is calling the bean at the same time.</p>
+The bean should be thread-safe in case concurrent threads are calling the bean at the same time.</p>
 </div>
 <div class="paragraph">
 <p>When using <code>request</code> scope the bean is created or looked up once per request (exchange). This can be used if you want to store state on a bean
@@ -2076,8 +2105,8 @@ from("direct:bar").bean("myBean");</code></pre>
 </div>
 </div>
 <div class="paragraph">
-<p>Instead of passing name of the reference to the bean (so that Camel will
-lookup for it in the registry), you can provide the bean:</p>
+<p>Instead of passing the name of the reference to the bean (so that Camel will
+look for it in the registry), you can provide the bean:</p>
 </div>
 <div id="_tabs_2" class="openblock tabs is-sync is-loading">
 <div class="content">
@@ -2097,13 +2126,13 @@ lookup for it in the registry), you can provide the bean:</p>
 <div id="_tabs_2_java--panel" class="tabpanel" aria-labelledby="_tabs_2_java">
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">// Send message to the given bean instance.
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">// Send a message to the given bean instance.
 from("direct:foo").bean(new ExampleBean());
 
 // Explicit selection of bean method to be invoked.
 from("direct:bar").bean(new ExampleBean(), "myMethod");
 
-// Camel will create a singleton instance of the bean, and reuse the instance for following calls (see scope)
+// Camel will create a singleton instance of the bean, and reuse the instance for the following calls (see scope)
 from("direct:cheese").bean(ExampleBean.class);</code></pre>
 </div>
 </div>
@@ -2161,9 +2190,8 @@ from("direct:cheese").bean(ExampleBean.class);</code></pre>
 <p>How bean methods to be invoked are chosen (if they are not specified
 explicitly through the <strong>method</strong> parameter) and how parameter values are
 constructed from the <a href="message.html" class="xref page">Message</a> are all defined by the
-<a href="../../../manual/bean-binding.html" class="xref page">Bean Binding</a> mechanism which is used throughout
-all the various <a href="../../../manual/bean-integration.html" class="xref page">Bean Integration</a>
-mechanisms in Camel.</p>
+<a href="../../../manual/4.10.x/bean-binding.html" class="xref page">Bean Binding</a> mechanism.
+This is used throughout all the various <a href="../../../manual/4.10.x/bean-integration.html" class="xref page">Bean Integration</a> mechanisms in Camel.</p>
 </div>
 </div>
 </div>
@@ -2172,6 +2200,8 @@ mechanisms in Camel.</p>
 </main>
 </div>
 <footer class="footer">
+  <p>This page was built using the Antora default UI.</p>
+  <p>The source code for this UI is licensed under the terms of the MPL-2.0 license.</p>
 </footer>
 <script id="site-script" src="../../../_/js/site.js" data-ui-root-path="../../../_"></script>
 <script async src="../../../_/js/vendor/highlight.js"></script>

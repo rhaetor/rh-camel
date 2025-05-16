@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>Minio :: Red Hat Camel Reference</title>
+    <title>Minio :: Red Hat build of Apache Camel</title>
     <meta name="description" content="Store and retrieve objects from Minio Storage Service using Minio SDK.">
     <meta name="generator" content="Antora 3.1.4">
     <link rel="stylesheet" href="../../_/css/site.css">
@@ -12,7 +12,7 @@
 <header class="header">
   <nav class="navbar">
     <div class="navbar-brand">
-      <a class="navbar-item" href="../../manual/index.html">Red Hat build of Apache Camel manual</a>
+      <a class="navbar-item" href="/">Red Hat build of Apache Camel</a>
       <button class="navbar-burger" data-target="topbar-nav">
         <span></span>
         <span></span>
@@ -22,11 +22,12 @@
   </nav>
 </header>
 <div class="body">
-<div class="nav-container" data-component="components" data-version="next">
+<div class="nav-container" data-component="components" data-version="4.8.x">
   <aside class="nav">
     <div class="panels">
 <div class="nav-panel-menu is-active" data-panel="menu">
   <nav class="nav-menu">
+    <button class="nav-menu-toggle" aria-label="Toggle expand/collapse all" style="display: none"></button>
     <h3 class="title"><a href="index.html">Camel Components</a></h3>
 <ul class="nav-list">
   <li class="nav-item" data-depth="0">
@@ -36,7 +37,46 @@
     <a class="nav-link" href="index.html">Components</a>
 <ul class="nav-list">
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="activemq-component.html">ActiveMQ</a>
+    <a class="nav-link" href="activemq-component.html">ActiveMQ 5.x</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="activemq6-component.html">ActiveMQ 6.x</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="ai-summary.html">AI</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="chatscript-component.html">ChatScript</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="djl-component.html">Deep Java Library</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="langchain4j-chat-component.html">LangChain4j Chat</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="langchain4j-embeddings-component.html">LangChain4j Embeddings</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="langchain4j-tokenizer-component.html">LangChain4j Tokenizer</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="langchain4j-tools-component.html">LangChain4j Tools</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="langchain4j-web-search-component.html">LangChain4j Web Search</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="milvus-component.html">Milvus</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="pinecone-component.html">Pinecone</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="qdrant-component.html">Qdrant</a>
+  </li>
+</ul>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="amqp-component.html">AMQP</a>
@@ -65,6 +105,15 @@
 <ul class="nav-list">
   <li class="nav-item" data-depth="3">
     <a class="nav-link" href="aws2-athena-component.html">AWS Athena</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="aws-bedrock-component.html">AWS Bedrock</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="aws-bedrock-agent-component.html">AWS Bedrock Agent</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="aws-bedrock-agent-runtime-component.html">AWS Bedrock Agent Runtime</a>
   </li>
   <li class="nav-item" data-depth="3">
     <a class="nav-link" href="aws-cloudtrail-component.html">AWS Cloudtrail</a>
@@ -169,7 +218,7 @@
     <a class="nav-link" href="azure-storage-blob-component.html">Azure Storage Blob Service</a>
   </li>
   <li class="nav-item" data-depth="3">
-    <a class="nav-link" href="azure-storage-datalake-component.html">Azure Storage Datalake Service</a>
+    <a class="nav-link" href="azure-storage-datalake-component.html">Azure Storage Data Lake Service</a>
   </li>
   <li class="nav-item" data-depth="3">
     <a class="nav-link" href="azure-storage-queue-component.html">Azure Storage Queue Service</a>
@@ -202,9 +251,6 @@
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="cql-component.html">Cassandra CQL</a>
-  </li>
-  <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="chatscript-component.html">ChatScript</a>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="chunk-component.html">Chunk</a>
@@ -277,9 +323,6 @@
     <a class="nav-link" href="debezium-sqlserver-component.html">Debezium SQL Server Connector</a>
   </li>
 </ul>
-  </li>
-  <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="djl-component.html">Deep Java Library</a>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="dhis2-component.html">DHIS2</a>
@@ -395,6 +438,9 @@
   </li>
   <li class="nav-item" data-depth="3">
     <a class="nav-link" href="google-pubsub-component.html">Google Pubsub</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="google-pubsub-lite-component.html">Google PubSub Lite</a>
   </li>
   <li class="nav-item" data-depth="3">
     <a class="nav-link" href="google-secret-manager-component.html">Google Secret Manager</a>
@@ -687,7 +733,7 @@
     <a class="nav-link" href="ldif-component.html">LDIF</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="log-component.html">Log</a>
+    <a class="nav-link" href="log-component.html">Log Data</a>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="lucene-component.html">Lucene</a>
@@ -900,16 +946,49 @@
     <a class="nav-link" href="smb-component.html">SMB</a>
   </li>
   <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="smooks-component.html">Smooks</a>
+  </li>
+  <li class="nav-item" data-depth="2">
     <a class="nav-link" href="smpp-component.html">SMPP</a>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="snmp-component.html">SNMP</a>
   </li>
   <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="solr-component.html">Solr</a>
+  </li>
+  <li class="nav-item" data-depth="2">
     <a class="nav-link" href="splunk-component.html">Splunk</a>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="splunk-hec-component.html">Splunk HEC</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="spring-summary.html">Spring</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="spring-batch-component.html">Spring Batch</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="spring-event-component.html">Spring Event</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="spring-jdbc-component.html">Spring JDBC</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="spring-ldap-component.html">Spring LDAP</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="spring-rabbitmq-component.html">Spring RabbitMQ</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="spring-redis-component.html">Spring Redis</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="spring-ws-component.html">Spring WebService</a>
+  </li>
+</ul>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="sql-component.html">SQL</a>
@@ -937,6 +1016,18 @@
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="stub-component.html">Stub</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="tahu-summary.html">Tahu</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="tahu-edge-component.html">Tahu Edge Node / Device</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="tahu-host-component.html">Tahu Host Application</a>
+  </li>
+</ul>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="telegram-component.html">Telegram</a>
@@ -999,7 +1090,7 @@
     <a class="nav-link" href="whatsapp-component.html">WhatsApp</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="wordpress-component.html">Wordpress</a>
+    <a class="nav-link" href="wordpress-component.html">WordPress</a>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="workday-component.html">Workday</a>
@@ -1392,7 +1483,13 @@
     <a class="nav-link" href="others/openapi-java.html">Openapi Java</a>
   </li>
   <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="others/openapi-validator.html">Openapi Validator</a>
+  </li>
+  <li class="nav-item" data-depth="2">
     <a class="nav-link" href="others/opentelemetry.html">OpenTelemetry</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="others/platform-http-jolokia.html">Platform HTTP Jolokia</a>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="others/platform-http-main.html">Platform Http Main</a>
@@ -1540,7 +1637,7 @@
     <a class="nav-link" href="eips/event-message.html">Event Message</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="eips/failover-eip.html">Failover</a>
+    <a class="nav-link" href="eips/failoverLoadBalancer-eip.html">Failover Load Balancer</a>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="eips/faultToleranceConfiguration-eip.html">Fault Tolerance Configuration</a>
@@ -1570,13 +1667,13 @@
     <a class="nav-link" href="eips/loadBalance-eip.html">Load Balance</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="eips/log-eip.html">Log</a>
+    <a class="nav-link" href="eips/log-eip.html">Logger</a>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="eips/loop-eip.html">Loop</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="eips/marshal-eip.html">Marshal EIP</a>
+    <a class="nav-link" href="eips/marshal-eip.html">Marshal</a>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="eips/message.html">Message</a>
@@ -1633,6 +1730,9 @@
     <a class="nav-link" href="eips/point-to-point-channel.html">Point to Point Channel</a>
   </li>
   <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="eips/poll-eip.html">Poll</a>
+  </li>
+  <li class="nav-item" data-depth="2">
     <a class="nav-link" href="eips/pollEnrich-eip.html">Poll Enrich</a>
   </li>
   <li class="nav-item" data-depth="2">
@@ -1648,7 +1748,7 @@
     <a class="nav-link" href="eips/publish-subscribe-channel.html">Publish Subscribe Channel</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="eips/random-eip.html">Random</a>
+    <a class="nav-link" href="eips/randomLoadBalancer-eip.html">Random Load Balancer</a>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="eips/recipientList-eip.html">Recipient List</a>
@@ -1690,7 +1790,7 @@
     <a class="nav-link" href="eips/rollback-eip.html">Rollback</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="eips/roundRobin-eip.html">Round Robin</a>
+    <a class="nav-link" href="eips/roundRobinLoadBalancer-eip.html">Round Robin Load Balancer</a>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="eips/routingSlip-eip.html">Routing Slip</a>
@@ -1702,7 +1802,7 @@
     <a class="nav-link" href="eips/sample-eip.html">Sample</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="eips/scatter-gather.html">Scatter Gather</a>
+    <a class="nav-link" href="eips/scatter-gather.html">Scatter-Gather</a>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="eips/script-eip.html">Script</a>
@@ -1732,6 +1832,9 @@
     <a class="nav-link" href="eips/setVariable-eip.html">Set Variable</a>
   </li>
   <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="eips/setVariables-eip.html">Set Variables</a>
+  </li>
+  <li class="nav-item" data-depth="2">
     <a class="nav-link" href="eips/sort-eip.html">Sort</a>
   </li>
   <li class="nav-item" data-depth="2">
@@ -1741,7 +1844,7 @@
     <a class="nav-link" href="eips/step-eip.html">Step</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="eips/sticky-eip.html">Sticky</a>
+    <a class="nav-link" href="eips/stickyLoadBalancer-eip.html">Sticky Load Balancer</a>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="eips/stop-eip.html">Stop</a>
@@ -1762,7 +1865,7 @@
     <a class="nav-link" href="eips/toD-eip.html">To D</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="eips/topic-eip.html">Topic</a>
+    <a class="nav-link" href="eips/topicLoadBalancer-eip.html">Topic Load Balancer</a>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="eips/transactional-client.html">Transactional Client</a>
@@ -1771,13 +1874,13 @@
     <a class="nav-link" href="eips/transform-eip.html">Transform</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="eips/unmarshal-eip.html">Unmarshal EIP</a>
+    <a class="nav-link" href="eips/unmarshal-eip.html">Unmarshal</a>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="eips/validate-eip.html">Validate</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="eips/weighted-eip.html">Weighted</a>
+    <a class="nav-link" href="eips/weightedLoadBalancer-eip.html">Weighted Load Balancer</a>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="eips/wireTap-eip.html">Wire Tap</a>
@@ -1792,22 +1895,40 @@
 <div class="nav-panel-explore" data-panel="explore">
   <div class="context">
     <span class="title">Camel Components</span>
-    <span class="version">Next (Pre-release)</span>
+    <span class="version">4.8.x</span>
   </div>
   <ul class="components">
     <li class="component is-current">
-      <a class="title" href="index.html">Camel Components</a>
+      <div class="title"><a href="../4.10.x/index.html">Camel Components</a></div>
       <ul class="versions">
-        <li class="version is-current is-latest">
-          <a href="index.html">Next (Pre-release)</a>
+        <li class="version is-latest">
+          <a href="../4.10.x/index.html">4.10.x (LTS)</a>
+        </li>
+        <li class="version is-current">
+          <a href="index.html">4.8.x</a>
+        </li>
+        <li class="version">
+          <a href="../4.4.x/index.html">4.4.x</a>
+        </li>
+        <li class="version">
+          <a href="../4.0.x/index.html">4.0.x</a>
         </li>
       </ul>
     </li>
     <li class="component">
-      <a class="title" href="../../manual/index.html">User manual</a>
+      <div class="title"><a href="../../manual/4.10.x/index.html">User manual</a></div>
       <ul class="versions">
         <li class="version is-latest">
-          <a href="../../manual/index.html">default</a>
+          <a href="../../manual/4.10.x/index.html">4.10.x</a>
+        </li>
+        <li class="version">
+          <a href="../../manual/4.8.x/index.html">4.8.x</a>
+        </li>
+        <li class="version">
+          <a href="../../manual/4.4.x/index.html">4.4.x</a>
+        </li>
+        <li class="version">
+          <a href="../../manual/4.0.x/index.html">4.0.x</a>
         </li>
       </ul>
     </li>
@@ -1819,7 +1940,7 @@
 <main class="article">
 <div class="toolbar" role="navigation">
 <button class="nav-toggle"></button>
-  <a href="../../manual/index.html" class="home-link"></a>
+  <a href="../../manual/4.10.x/index.html" class="home-link"></a>
 <nav class="breadcrumbs" aria-label="breadcrumbs">
   <ul>
     <li><a href="index.html">Camel Components</a></li>
@@ -1827,6 +1948,16 @@
     <li><a href="minio-component.html">Minio</a></li>
   </ul>
 </nav>
+<div class="page-versions">
+  <button class="version-menu-toggle" title="Show other versions of page">4.8.x</button>
+  <div class="version-menu">
+    <a class="version" href="../4.10.x/minio-component.html">4.10.x (LTS)</a>
+    <a class="version is-current" href="minio-component.html">4.8.x</a>
+    <a class="version" href="../4.4.x/minio-component.html">4.4.x</a>
+    <a class="version is-missing" href="../4.0.x/index.html">4.0.x</a>
+  </div>
+</div>
+<div class="edit-this-page"><a href="https://github.com/rhaetor/rh-camel-jboss/edit/camel-4.8.0-branch/docs/components/modules/ROOT/pages/minio-component.adoc">Edit this Page</a></div>
 </div>
   <div class="content">
 <aside class="toc sidebar" data-title="Contents" data-levels="2">
@@ -1867,11 +1998,10 @@
 </div>
 <div class="paragraph">
 <p>The bucket will be created if it doesn&#8217;t already exist.<br>
-You can append query options to the URI in the following format,
-?options=value&amp;option2=value&amp;&#8230;&#8203;</p>
+You can append query options to the URI in the following format: <code>?options=value&amp;option2=value&amp;&#8230;&#8203;</code></p>
 </div>
 <div class="paragraph">
-<p>For example in order to read file <code>hello.txt</code> from the bucket <code>helloBucket</code>, use the following snippet:</p>
+<p>For example, to read file <code>hello.txt</code> from the bucket <code>helloBucket</code>, use the following snippet:</p>
 </div>
 <div class="listingblock">
 <div class="content">
@@ -1900,37 +2030,65 @@ You can append query options to the URI in the following format,
 <div class="sect2">
 <h3 id="_configuring_component_options"><a class="anchor" href="#_configuring_component_options"></a>Configuring Component Options</h3>
 <div class="paragraph">
-<p>The component level is the highest level which holds general and common configurations that are inherited by the endpoints.
-For example a component may have security settings, credentials for authentication, urls for network connection and so forth.</p>
+<p>At the component level, you set general and shared configurations that are, then, inherited by the endpoints. It is the highest configuration level.</p>
 </div>
 <div class="paragraph">
-<p>Some components only have a few options, and others may have many. Because components typically have pre configured defaults
-that are commonly used, then you may often only need to configure a few options on a component; or none at all.</p>
+<p>For example, a component may have security settings, credentials for authentication, urls for network connection and so forth.</p>
 </div>
 <div class="paragraph">
-<p>Configuring components can be done with the <a href="../../manual/component-dsl.html" class="xref page">Component DSL</a>,
-in a configuration file (application.properties|yaml), or directly with Java code.</p>
+<p>Some components only have a few options, and others may have many.
+Because components typically have pre-configured defaults that are commonly used, then you may often only need to configure a few options on a component; or none at all.</p>
+</div>
+<div class="paragraph">
+<p>You can configure components using:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>the <a href="../../manual/4.10.x/component-dsl.html" class="xref page">Component DSL</a>.</p>
+</li>
+<li>
+<p>in a configuration file (<code>application.properties</code>, <code>*.yaml</code> files, etc).</p>
+</li>
+<li>
+<p>directly in the Java code.</p>
+</li>
+</ul>
 </div>
 </div>
 <div class="sect2">
 <h3 id="_configuring_endpoint_options"><a class="anchor" href="#_configuring_endpoint_options"></a>Configuring Endpoint Options</h3>
 <div class="paragraph">
-<p>Where you find yourself configuring the most is on endpoints, as endpoints often have many options, which allows you to
-configure what you need the endpoint to do. The options are also categorized into whether the endpoint is used as consumer (from)
-or as a producer (to), or used for both.</p>
+<p>You usually spend more time setting up endpoints because they have many options.
+These options help you customize what you want the endpoint to do.
+The options are also categorized into whether the endpoint is used as a consumer (<em>from</em>), as a producer (<em>to</em>), or  both.</p>
 </div>
 <div class="paragraph">
-<p>Configuring endpoints is most often done directly in the endpoint URI as path and query parameters. You can also use
-the <a href="../../manual/Endpoint-dsl.html" class="xref page">Endpoint DSL</a> and <a href="../../manual/dataformat-dsl.html" class="xref page">DataFormat DSL</a>
+<p>Configuring endpoints is most often done directly in the endpoint URI as <em>path</em> and <em>query</em> parameters.
+You can also use the <a href="../../manual/4.10.x/Endpoint-dsl.html" class="xref page">Endpoint DSL</a> and <a href="../../manual/4.10.x/dataformat-dsl.html" class="xref page">DataFormat DSL</a>
 as a <em>type safe</em> way of configuring endpoints and data formats in Java.</p>
 </div>
 <div class="paragraph">
-<p>A good practice when configuring options is to use <a href="../../manual/using-propertyplaceholder.html" class="xref page">Property Placeholders</a>,
-which allows to not hardcode urls, port numbers, sensitive information, and other settings.
-In other words placeholders allows to externalize the configuration from your code, and gives more flexibility and reuse.</p>
+<p>A good practice when configuring options is to use <a href="../../manual/4.10.x/using-propertyplaceholder.html" class="xref page">Property Placeholders</a>.</p>
 </div>
 <div class="paragraph">
-<p>The following two sections lists all the options, firstly for the component followed by the endpoint.</p>
+<p>Property placeholders provide a few benefits:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>They help prevent using hardcoded urls, port numbers, sensitive information, and other settings.</p>
+</li>
+<li>
+<p>They allow externalizing the configuration from the code.</p>
+</li>
+<li>
+<p>They help the code to become more flexible and reusable.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>The following two sections list all the options, firstly for the component followed by the endpoint.</p>
 </div>
 </div>
 </div>
@@ -1974,15 +2132,6 @@ In other words placeholders allows to externalize the configuration from your co
 </div></div></td>
 <td class="tableblock halign-center valign-top"></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">MinioConfiguration</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><a id="_component_option_customHttpClient"></a>
-<a href="#_component_option_customHttpClient" class="anchor"></a><strong>customHttpClient</strong> (common)</p></td>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>Set custom HTTP client for authenticated access.</p>
-</div></div></td>
-<td class="tableblock halign-center valign-top"></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">OkHttpClient</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><a id="_component_option_endpoint"></a>
@@ -2046,24 +2195,6 @@ In other words placeholders allows to externalize the configuration from your co
 </div></div></td>
 <td class="tableblock halign-center valign-top"><p class="tableblock">false</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">boolean</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><a id="_component_option_serverSideEncryption"></a>
-<a href="#_component_option_serverSideEncryption" class="anchor"></a><strong>serverSideEncryption</strong> (common)</p></td>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>Server-side encryption.</p>
-</div></div></td>
-<td class="tableblock halign-center valign-top"></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">ServerSideEncryption</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><a id="_component_option_serverSideEncryptionCustomerKey"></a>
-<a href="#_component_option_serverSideEncryptionCustomerKey" class="anchor"></a><strong>serverSideEncryptionCustomerKey</strong> (common)</p></td>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>Server-side encryption for source object while copy/move objects.</p>
-</div></div></td>
-<td class="tableblock halign-center valign-top"></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">ServerSideEncryptionCustomerKey</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><a id="_component_option_autoCloseBody"></a>
@@ -2400,6 +2531,15 @@ In other words placeholders allows to externalize the configuration from your co
 <td class="tableblock halign-left valign-top"><p class="tableblock">boolean</p></td>
 </tr>
 <tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a id="_component_option_customHttpClient"></a>
+<a href="#_component_option_customHttpClient" class="anchor"></a><strong>customHttpClient</strong> (advanced)</p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>Set custom HTTP client for authenticated access.</p>
+</div></div></td>
+<td class="tableblock halign-center valign-top"></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">OkHttpClient</p></td>
+</tr>
+<tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><a id="_component_option_healthCheckConsumerEnabled"></a>
 <a href="#_component_option_healthCheckConsumerEnabled" class="anchor"></a><strong>healthCheckConsumerEnabled</strong> (health)</p></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
@@ -2435,6 +2575,24 @@ In other words placeholders allows to externalize the configuration from your co
 <td class="tableblock halign-center valign-top"></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">String</p></td>
 </tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a id="_component_option_serverSideEncryption"></a>
+<a href="#_component_option_serverSideEncryption" class="anchor"></a><strong>serverSideEncryption</strong> (security)</p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>Server-side encryption.</p>
+</div></div></td>
+<td class="tableblock halign-center valign-top"></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">ServerSideEncryption</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a id="_component_option_serverSideEncryptionCustomerKey"></a>
+<a href="#_component_option_serverSideEncryptionCustomerKey" class="anchor"></a><strong>serverSideEncryptionCustomerKey</strong> (security)</p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>Server-side encryption for source object while copy/move objects.</p>
+</div></div></td>
+<td class="tableblock halign-center valign-top"></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">ServerSideEncryptionCustomerKey</p></td>
+</tr>
 </tbody>
 </table>
 </div>
@@ -2451,7 +2609,7 @@ In other words placeholders allows to externalize the configuration from your co
 </div>
 </div>
 <div class="paragraph">
-<p>with the following path and query parameters:</p>
+<p>With the following <em>path</em> and <em>query</em> parameters:</p>
 </div>
 <div class="sect2">
 <h3 id="_path_parameters_1_parameters"><a class="anchor" href="#_path_parameters_1_parameters"></a>Path Parameters (1 parameters)</h3>
@@ -2509,15 +2667,6 @@ In other words placeholders allows to externalize the configuration from your co
 </div></div></td>
 <td class="tableblock halign-center valign-top"><p class="tableblock">true</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">boolean</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><a id="_endpoint_query_option_customHttpClient"></a>
-<a href="#_endpoint_query_option_customHttpClient" class="anchor"></a><strong>customHttpClient</strong> (common)</p></td>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>Set custom HTTP client for authenticated access.</p>
-</div></div></td>
-<td class="tableblock halign-center valign-top"></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">OkHttpClient</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><a id="_endpoint_query_option_endpoint"></a>
@@ -2581,24 +2730,6 @@ In other words placeholders allows to externalize the configuration from your co
 </div></div></td>
 <td class="tableblock halign-center valign-top"><p class="tableblock">false</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">boolean</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><a id="_endpoint_query_option_serverSideEncryption"></a>
-<a href="#_endpoint_query_option_serverSideEncryption" class="anchor"></a><strong>serverSideEncryption</strong> (common)</p></td>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>Server-side encryption.</p>
-</div></div></td>
-<td class="tableblock halign-center valign-top"></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">ServerSideEncryption</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><a id="_endpoint_query_option_serverSideEncryptionCustomerKey"></a>
-<a href="#_endpoint_query_option_serverSideEncryptionCustomerKey" class="anchor"></a><strong>serverSideEncryptionCustomerKey</strong> (common)</p></td>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>Server-side encryption for source object while copy/move objects.</p>
-</div></div></td>
-<td class="tableblock halign-center valign-top"></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">ServerSideEncryptionCustomerKey</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><a id="_endpoint_query_option_autoCloseBody"></a>
@@ -2975,6 +3106,15 @@ In other words placeholders allows to externalize the configuration from your co
 <td class="tableblock halign-left valign-top"><p class="tableblock">boolean</p></td>
 </tr>
 <tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a id="_endpoint_query_option_customHttpClient"></a>
+<a href="#_endpoint_query_option_customHttpClient" class="anchor"></a><strong>customHttpClient</strong> (advanced)</p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>Set custom HTTP client for authenticated access.</p>
+</div></div></td>
+<td class="tableblock halign-center valign-top"></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">OkHttpClient</p></td>
+</tr>
+<tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><a id="_endpoint_query_option_backoffErrorThreshold"></a>
 <a href="#_endpoint_query_option_backoffErrorThreshold" class="anchor"></a><strong>backoffErrorThreshold</strong> (scheduler)</p></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
@@ -3171,26 +3311,39 @@ In other words placeholders allows to externalize the configuration from your co
 <td class="tableblock halign-center valign-top"></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">String</p></td>
 </tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a id="_endpoint_query_option_serverSideEncryption"></a>
+<a href="#_endpoint_query_option_serverSideEncryption" class="anchor"></a><strong>serverSideEncryption</strong> (security)</p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>Server-side encryption.</p>
+</div></div></td>
+<td class="tableblock halign-center valign-top"></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">ServerSideEncryption</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a id="_endpoint_query_option_serverSideEncryptionCustomerKey"></a>
+<a href="#_endpoint_query_option_serverSideEncryptionCustomerKey" class="anchor"></a><strong>serverSideEncryptionCustomerKey</strong> (security)</p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>Server-side encryption for source object while copy/move objects.</p>
+</div></div></td>
+<td class="tableblock halign-center valign-top"></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">ServerSideEncryptionCustomerKey</p></td>
+</tr>
 </tbody>
 </table>
-<div class="paragraph">
-<p>You have to provide the minioClient in the
-Registry or your accessKey and secretKey to access
-the <a href="https://min.io/">Minio</a>.</p>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+You have to provide the minioClient in the Registry or your <code>accessKey</code> and <code>secretKey</code> to access
+the <a href="https://min.io/">Minio</a>.
+</td>
+</tr>
+</table>
 </div>
-</div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="_batch_consumer"><a class="anchor" href="#_batch_consumer"></a>Batch Consumer</h2>
-<div class="sectionbody">
-<div class="paragraph">
-<p>This component implements the Batch Consumer.</p>
-</div>
-<div class="paragraph">
-<p>This allows you for instance to know how many messages exists in this
-batch and for instance let the Aggregator
-aggregate this number of messages.</p>
 </div>
 </div>
 </div>
@@ -3475,6 +3628,22 @@ aggregate this number of messages.</p>
 </tr>
 </tbody>
 </table>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_usage"><a class="anchor" href="#_usage"></a>Usage</h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="_batch_consumer"><a class="anchor" href="#_batch_consumer"></a>Batch Consumer</h3>
+<div class="paragraph">
+<p>This component implements the Batch Consumer.</p>
+</div>
+<div class="paragraph">
+<p>This allows you, for instance, to know how many messages exist in this
+batch and for instance, let the Aggregator
+aggregate this number of messages.</p>
+</div>
+</div>
 <div class="sect2">
 <h3 id="_minio_producer_operations"><a class="anchor" href="#_minio_producer_operations"></a>Minio Producer operations</h3>
 <div class="paragraph">
@@ -3483,34 +3652,34 @@ aggregate this number of messages.</p>
 <div class="ulist">
 <ul>
 <li>
-<p>copyObject</p>
+<p><code>copyObject</code></p>
 </li>
 <li>
-<p>deleteObject</p>
+<p><code>deleteObject</code></p>
 </li>
 <li>
-<p>deleteObjects</p>
+<p><code>deleteObjects</code></p>
 </li>
 <li>
-<p>listBuckets</p>
+<p><code>listBuckets</code></p>
 </li>
 <li>
-<p>deleteBucket</p>
+<p><code>deleteBucket</code></p>
 </li>
 <li>
-<p>listObjects</p>
+<p><code>listObjects</code></p>
 </li>
 <li>
-<p>getObject (this will return a MinioObject instance)</p>
+<p><code>getObject</code> (this will return a `MinioObject instance)</p>
 </li>
 <li>
-<p>getObjectRange (this will return a MinioObject instance)</p>
+<p><code>getObjectRange</code> (this will return a `MinioObject instance)</p>
 </li>
 <li>
-<p>createDownloadLink (this will return a Presigned download Url)</p>
+<p><code>createDownloadLink</code> (this will return a Presigned download Url)</p>
 </li>
 <li>
-<p>createUploadLink (this will return a Presigned upload url)</p>
+<p><code>createUploadLink</code> (this will return a Presigned upload url)</p>
 </li>
 </ul>
 </div>
@@ -3534,7 +3703,7 @@ create your own instance and refer to it in your Camel minio component configura
 <div class="ulist">
 <ul>
 <li>
-<p>CopyObject: this operation copy an object from one bucket to a different one</p>
+<p><code>CopyObject</code>: this operation copies an object from one bucket to a different one</p>
 </li>
 </ul>
 </div>
@@ -3559,7 +3728,7 @@ create your own instance and refer to it in your Camel minio component configura
 <div class="ulist">
 <ul>
 <li>
-<p>DeleteObject: this operation deletes an object from a bucket</p>
+<p><code>DeleteObject</code>: this operation deletes an object from a bucket</p>
 </li>
 </ul>
 </div>
@@ -3582,7 +3751,7 @@ create your own instance and refer to it in your Camel minio component configura
 <div class="ulist">
 <ul>
 <li>
-<p>ListBuckets: this operation list the buckets for this account in this region</p>
+<p><code>ListBuckets</code>: this operation lists the buckets for this account in this region</p>
 </li>
 </ul>
 </div>
@@ -3599,7 +3768,7 @@ create your own instance and refer to it in your Camel minio component configura
 <div class="ulist">
 <ul>
 <li>
-<p>DeleteBucket: this operation delete the bucket specified as URI parameter or header</p>
+<p><code>DeleteBucket</code>: this operation deletes the bucket specified as URI parameter or header</p>
 </li>
 </ul>
 </div>
@@ -3616,7 +3785,7 @@ create your own instance and refer to it in your Camel minio component configura
 <div class="ulist">
 <ul>
 <li>
-<p>ListObjects: this operation list object in a specific bucket</p>
+<p><code>ListObjects</code>: this operation list object in a specific bucket</p>
 </li>
 </ul>
 </div>
@@ -3633,7 +3802,7 @@ create your own instance and refer to it in your Camel minio component configura
 <div class="ulist">
 <ul>
 <li>
-<p>GetObject: this operation get a single object in a specific bucket</p>
+<p><code>GetObject</code>: this operation gets a single object in a specific bucket</p>
 </li>
 </ul>
 </div>
@@ -3651,12 +3820,12 @@ create your own instance and refer to it in your Camel minio component configura
 </div>
 </div>
 <div class="paragraph">
-<p>This operation will return an MinioObject instance related to the camelKey object in mycamelbucket bucket.</p>
+<p>This operation will return a MinioObject instance related to the camelKey object in <code>mycamelbucket</code> bucket.</p>
 </div>
 <div class="ulist">
 <ul>
 <li>
-<p>GetObjectRange: this operation get a single object range in a specific bucket</p>
+<p><code>GetObjectRange</code>: this operation gets a single object range in a specific bucket</p>
 </li>
 </ul>
 </div>
@@ -3676,12 +3845,12 @@ create your own instance and refer to it in your Camel minio component configura
 </div>
 </div>
 <div class="paragraph">
-<p>This operation will return an MinioObject instance related to the camelKey object in mycamelbucket bucket, containing bytes from 0 to 9.</p>
+<p>This operation will return a MinioObject instance related to the camelKey object in <code>mycamelbucket</code> bucket, containing bytes from 0 to 9.</p>
 </div>
 <div class="ulist">
 <ul>
 <li>
-<p>createDownloadLink: this operation will return a presigned url through which a file can be downloaded using GET method</p>
+<p><code>createDownloadLink</code>: this operation will return a presigned url through which a file can be downloaded using GET method</p>
 </li>
 </ul>
 </div>
@@ -3702,7 +3871,7 @@ create your own instance and refer to it in your Camel minio component configura
 <div class="ulist">
 <ul>
 <li>
-<p>createUploadLink: this operation will return a presigned url through which a file can be uploaded using PUT method</p>
+<p><code>createUploadLink</code>: this operation will return a presigned url through which a file can be uploaded using PUT method</p>
 </li>
 </ul>
 </div>
@@ -3721,45 +3890,37 @@ create your own instance and refer to it in your Camel minio component configura
 </div>
 </div>
 <div class="paragraph">
-<p>createDownLink and createUploadLink have a default expiry of 3600s which can be overridden by setting the header MinioConstants.PRESIGNED_URL_EXPIRATION_TIME (value in seconds)</p>
+<p><code>createDownLink</code> and <code>createUploadLink</code> have a default expiry of 3600s which can be overridden by setting the header <code>MinioConstants.PRESIGNED_URL_EXPIRATION_TIME</code> (value in seconds)</p>
 </div>
 </div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="_bucket_autocreation"><a class="anchor" href="#_bucket_autocreation"></a>Bucket Autocreation</h2>
-<div class="sectionbody">
+<div class="sect2">
+<h3 id="_bucket_auto_creation"><a class="anchor" href="#_bucket_auto_creation"></a>Bucket Auto-creation</h3>
 <div class="paragraph">
-<p>With the option <code>autoCreateBucket</code> users are able to avoid the autocreation of a Minio Bucket in case it doesn&#8217;t exist. The default for this option is <code>true</code>.
-If set to false any operation on a not-existent bucket in Minio won&#8217;t be successful, and an error will be returned.</p>
+<p>With the option <code>autoCreateBucket</code> users are able to avoid the auto-creation of a Minio Bucket in case it doesn&#8217;t exist. The default for this option is <code>true</code>.
+If set to false, any operation on a not-existent bucket in Minio won&#8217;t be successful, and an error will be returned.</p>
 </div>
 </div>
-</div>
-<div class="sect1">
-<h2 id="_automatic_detection_of_minio_client_in_registry"><a class="anchor" href="#_automatic_detection_of_minio_client_in_registry"></a>Automatic detection of Minio client in registry</h2>
-<div class="sectionbody">
+<div class="sect2">
+<h3 id="_automatic_detection_of_a_minio_client_in_registry"><a class="anchor" href="#_automatic_detection_of_a_minio_client_in_registry"></a>Automatic detection of a Minio client in registry</h3>
 <div class="paragraph">
 <p>The component is capable of detecting the presence of a Minio bean into the registry.
-If it&#8217;s the only instance of that type it will be used as client, and you won&#8217;t have to define it as uri parameter, like the example above.
+If it&#8217;s the only instance of that type, it will be used as the client, and you won&#8217;t have to define it as uri parameter, like the example above.
 This may be really useful for smarter configuration of the endpoint.</p>
 </div>
 </div>
-</div>
-<div class="sect1">
-<h2 id="_moving_stuff_between_a_bucket_and_another_bucket"><a class="anchor" href="#_moving_stuff_between_a_bucket_and_another_bucket"></a>Moving stuff between a bucket and another bucket</h2>
-<div class="sectionbody">
+<div class="sect2">
+<h3 id="_moving_stuff_between_a_bucket_and_another_bucket"><a class="anchor" href="#_moving_stuff_between_a_bucket_and_another_bucket"></a>Moving stuff between a bucket and another bucket</h3>
 <div class="paragraph">
-<p>Some users like to consume stuff from a bucket and move the content in a different one without using the copyObject feature of this component.
-If this is case for you, don&#8217;t forget to remove the bucketName header from the incoming exchange of the consumer, otherwise the file will always be overwritten on the same
-original bucket.</p>
+<p>Some users like to consume stuff from a bucket and move the content in a different one without using the <code>copyObject</code> feature of this component.
+If this is the case for you, remember to remove the <code>bucketName</code> header from the incoming exchange of the consumer.
+Otherwise, the file will always be overwritten on the same original bucket.</p>
 </div>
 </div>
-</div>
-<div class="sect1">
-<h2 id="_moveafterread_consumer_option"><a class="anchor" href="#_moveafterread_consumer_option"></a>MoveAfterRead consumer option</h2>
-<div class="sectionbody">
+<div class="sect2">
+<h3 id="_moveafterread_consumer_option"><a class="anchor" href="#_moveafterread_consumer_option"></a>MoveAfterRead consumer option</h3>
 <div class="paragraph">
-<p>In addition to deleteAfterRead it has been added another option, moveAfterRead. With this option enabled the consumed object will be moved to a target destinationBucket instead of being only deleted.
+<p>In addition to <code>deleteAfterRead</code>, it has been added another option, <code>moveAfterRead</code>.
+With this option enabled, the consumed object will be moved to a target <code>destinationBucket</code> instead of being only deleted.
 This will require specifying the destinationBucket option. As example:</p>
 </div>
 <div class="listingblock">
@@ -3769,28 +3930,28 @@ This will require specifying the destinationBucket option. As example:</p>
 </div>
 </div>
 <div class="paragraph">
-<p>In this case the objects consumed will be moved to myothercamelbucket bucket and deleted from the original one (because of deleteAfterRead set to true as default).</p>
+<p>In this case, the objects consumed will be moved to <code>myothercamelbucket</code> bucket and deleted from the original one (because of <code>deleteAfterRead</code> set to true as default).</p>
 </div>
 </div>
-</div>
-<div class="sect1">
-<h2 id="_using_a_pojo_as_body"><a class="anchor" href="#_using_a_pojo_as_body"></a>Using a POJO as body</h2>
-<div class="sectionbody">
+<div class="sect2">
+<h3 id="_using_a_pojo_as_body"><a class="anchor" href="#_using_a_pojo_as_body"></a>Using a POJO as body</h3>
 <div class="paragraph">
-<p>Sometimes build a Minio Request can be complex, because of multiple options. We introduce the possibility to use a POJO as body.
-In Minio there are multiple operations you can submit, as an example for List brokers request, you can do something like:</p>
+<p>Sometimes build a Minio Request can be complex because of multiple options.
+We introduce the possibility to use a POJO as the body.
+In Minio, there are multiple operations you can submit, as an example for List brokers request, you can do something like:</p>
 </div>
 <div class="listingblock">
 <div class="content">
 <pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">from("direct:minio")
      .setBody(ListObjectsArgs.builder()
                     .bucket(bucketName)
-                    .recursive(getConfiguration().isRecursive())))
-     .to("minio://test?minioClient=#minioClient&amp;operation=listObjects&amp;pojoRequest=true")</code></pre>
+                    .recursive(getConfiguration().isRecursive()))
+     .to("minio://test?minioClient=#minioClient&amp;operation=listObjects&amp;pojoRequest=true");</code></pre>
 </div>
 </div>
 <div class="paragraph">
-<p>In this way you&#8217;ll pass the request directly without the need of passing headers and options specifically related to this operation.</p>
+<p>In this way, you&#8217;ll pass the request directly without the need of passing headers and options specifically related to this operation.</p>
+</div>
 </div>
 </div>
 </div>
@@ -3798,7 +3959,7 @@ In Minio there are multiple operations you can submit, as an example for List br
 <h2 id="_dependencies"><a class="anchor" href="#_dependencies"></a>Dependencies</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>Maven users will need to add the following dependency to their pom.xml.</p>
+<p>Maven users will need to add the following dependency to their <code>pom.xml</code>.</p>
 </div>
 <div class="paragraph">
 <p><strong>pom.xml</strong></p>
@@ -3822,6 +3983,8 @@ In Minio there are multiple operations you can submit, as an example for List br
 </main>
 </div>
 <footer class="footer">
+  <p>This page was built using the Antora default UI.</p>
+  <p>The source code for this UI is licensed under the terms of the MPL-2.0 license.</p>
 </footer>
 <script id="site-script" src="../../_/js/site.js" data-ui-root-path="../../_"></script>
 <script async src="../../_/js/vendor/highlight.js"></script>

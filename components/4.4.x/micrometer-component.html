@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>Micrometer :: Red Hat Camel Reference</title>
+    <title>Micrometer :: Red Hat build of Apache Camel</title>
     <meta name="description" content="Collect various metrics directly from Camel routes using the Micrometer library.">
     <meta name="generator" content="Antora 3.1.4">
     <link rel="stylesheet" href="../../_/css/site.css">
@@ -12,7 +12,7 @@
 <header class="header">
   <nav class="navbar">
     <div class="navbar-brand">
-      <a class="navbar-item" href="../../manual/index.html">Red Hat build of Apache Camel manual</a>
+      <a class="navbar-item" href="/">Red Hat build of Apache Camel</a>
       <button class="navbar-burger" data-target="topbar-nav">
         <span></span>
         <span></span>
@@ -22,11 +22,12 @@
   </nav>
 </header>
 <div class="body">
-<div class="nav-container" data-component="components" data-version="next">
+<div class="nav-container" data-component="components" data-version="4.4.x">
   <aside class="nav">
     <div class="panels">
 <div class="nav-panel-menu is-active" data-panel="menu">
   <nav class="nav-menu">
+    <button class="nav-menu-toggle" aria-label="Toggle expand/collapse all" style="display: none"></button>
     <h3 class="title"><a href="index.html">Camel Components</a></h3>
 <ul class="nav-list">
   <li class="nav-item" data-depth="0">
@@ -912,6 +913,33 @@
     <a class="nav-link" href="splunk-hec-component.html">Splunk HEC</a>
   </li>
   <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="spring-summary.html">Spring</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="spring-batch-component.html">Spring Batch</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="spring-event-component.html">Spring Event</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="spring-jdbc-component.html">Spring JDBC</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="spring-ldap-component.html">Spring LDAP</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="spring-rabbitmq-component.html">Spring RabbitMQ</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="spring-redis-component.html">Spring Redis</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="spring-ws-component.html">Spring WebService</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
     <a class="nav-link" href="sql-component.html">SQL</a>
   </li>
   <li class="nav-item" data-depth="2">
@@ -1792,22 +1820,40 @@
 <div class="nav-panel-explore" data-panel="explore">
   <div class="context">
     <span class="title">Camel Components</span>
-    <span class="version">Next (Pre-release)</span>
+    <span class="version">4.4.x</span>
   </div>
   <ul class="components">
     <li class="component is-current">
-      <a class="title" href="index.html">Camel Components</a>
+      <div class="title"><a href="../4.10.x/index.html">Camel Components</a></div>
       <ul class="versions">
-        <li class="version is-current is-latest">
-          <a href="index.html">Next (Pre-release)</a>
+        <li class="version is-latest">
+          <a href="../4.10.x/index.html">4.10.x (LTS)</a>
+        </li>
+        <li class="version">
+          <a href="../4.8.x/index.html">4.8.x</a>
+        </li>
+        <li class="version is-current">
+          <a href="index.html">4.4.x</a>
+        </li>
+        <li class="version">
+          <a href="../4.0.x/index.html">4.0.x</a>
         </li>
       </ul>
     </li>
     <li class="component">
-      <a class="title" href="../../manual/index.html">User manual</a>
+      <div class="title"><a href="../../manual/4.10.x/index.html">User manual</a></div>
       <ul class="versions">
         <li class="version is-latest">
-          <a href="../../manual/index.html">default</a>
+          <a href="../../manual/4.10.x/index.html">4.10.x</a>
+        </li>
+        <li class="version">
+          <a href="../../manual/4.8.x/index.html">4.8.x</a>
+        </li>
+        <li class="version">
+          <a href="../../manual/4.4.x/index.html">4.4.x</a>
+        </li>
+        <li class="version">
+          <a href="../../manual/4.0.x/index.html">4.0.x</a>
         </li>
       </ul>
     </li>
@@ -1819,7 +1865,7 @@
 <main class="article">
 <div class="toolbar" role="navigation">
 <button class="nav-toggle"></button>
-  <a href="../../manual/index.html" class="home-link"></a>
+  <a href="../../manual/4.10.x/index.html" class="home-link"></a>
 <nav class="breadcrumbs" aria-label="breadcrumbs">
   <ul>
     <li><a href="index.html">Camel Components</a></li>
@@ -1827,6 +1873,16 @@
     <li><a href="micrometer-component.html">Micrometer</a></li>
   </ul>
 </nav>
+<div class="page-versions">
+  <button class="version-menu-toggle" title="Show other versions of page">4.4.x</button>
+  <div class="version-menu">
+    <a class="version" href="../4.10.x/micrometer-component.html">4.10.x (LTS)</a>
+    <a class="version" href="../4.8.x/micrometer-component.html">4.8.x</a>
+    <a class="version is-current" href="micrometer-component.html">4.4.x</a>
+    <a class="version is-missing" href="../4.0.x/index.html">4.0.x</a>
+  </div>
+</div>
+<div class="edit-this-page"><a href="https://github.com/rhaetor/rh-camel-jboss/edit/camel-4.4.0-branch/docs/components/modules/ROOT/pages/micrometer-component.adoc">Edit this Page</a></div>
 </div>
   <div class="content">
 <aside class="toc sidebar" data-title="Contents" data-levels="2">
@@ -1843,12 +1899,12 @@
 <p><strong>Only producer is supported</strong></p>
 </div>
 <div class="paragraph">
-<p>The Micrometer component allows to collect various metrics directly
+<p>The Micrometer component allows collecting various metrics directly
 from Camel routes. Supported metric types
 are <a href="#MicrometerComponent-counter">counter</a>, <a href="#MicrometerComponent-summary">summary</a>,
-and <a href="#MicrometerComponent-timer">timer</a>. <a href="http://micrometer.io/">Micrometer</a> provides
-simple way to measure the behaviour of an application. Configurable
-reporting backends (via Micrometer registries) enable different integration options for
+and <a href="#MicrometerComponent-timer">timer</a>.
+<a href="http://micrometer.io/">Micrometer</a> provides a simple way to measure the behaviour of an application.
+The configurable reporting backend (via Micrometer registries) enables different integration options for
 collecting and visualizing statistics.</p>
 </div>
 <div class="paragraph">
@@ -1909,14 +1965,14 @@ for this component:</p>
 <h3 id="_configuring_component_options"><a class="anchor" href="#_configuring_component_options"></a>Configuring Component Options</h3>
 <div class="paragraph">
 <p>The component level is the highest level which holds general and common configurations that are inherited by the endpoints.
-For example a component may have security settings, credentials for authentication, urls for network connection and so forth.</p>
+For example, a component may have security settings, credentials for authentication, urls for network connection and so forth.</p>
 </div>
 <div class="paragraph">
 <p>Some components only have a few options, and others may have many. Because components typically have pre configured defaults
 that are commonly used, then you may often only need to configure a few options on a component; or none at all.</p>
 </div>
 <div class="paragraph">
-<p>Configuring components can be done with the <a href="../../manual/component-dsl.html" class="xref page">Component DSL</a>,
+<p>Configuring components can be done with the <a href="../../manual/4.10.x/component-dsl.html" class="xref page">Component DSL</a>,
 in a configuration file (application.properties|yaml), or directly with Java code.</p>
 </div>
 </div>
@@ -1929,11 +1985,11 @@ or as a producer (to), or used for both.</p>
 </div>
 <div class="paragraph">
 <p>Configuring endpoints is most often done directly in the endpoint URI as path and query parameters. You can also use
-the <a href="../../manual/Endpoint-dsl.html" class="xref page">Endpoint DSL</a> and <a href="../../manual/dataformat-dsl.html" class="xref page">DataFormat DSL</a>
+the <a href="../../manual/4.10.x/Endpoint-dsl.html" class="xref page">Endpoint DSL</a> and <a href="../../manual/4.10.x/dataformat-dsl.html" class="xref page">DataFormat DSL</a>
 as a <em>type safe</em> way of configuring endpoints and data formats in Java.</p>
 </div>
 <div class="paragraph">
-<p>A good practice when configuring options is to use <a href="../../manual/using-propertyplaceholder.html" class="xref page">Property Placeholders</a>,
+<p>A good practice when configuring options is to use <a href="../../manual/4.10.x/using-propertyplaceholder.html" class="xref page">Property Placeholders</a>,
 which allows to not hardcode urls, port numbers, sensitive information, and other settings.
 In other words placeholders allows to externalize the configuration from your code, and gives more flexibility and reuse.</p>
 </div>
@@ -2338,7 +2394,7 @@ to be used. A <code>CompositeMeterRegistry</code> can be used to address more th
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">camel.exchanges.succeeded</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">counter</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Number of successfully completed exchange</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Number of successfully completed exchanges</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">camel.exchanges.failed</p></td>
@@ -2358,7 +2414,7 @@ to be used. A <code>CompositeMeterRegistry</code> can be used to address more th
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">camel.exchange.event.notifier</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">gauge + summary</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Metrics for message created, sent, completed, and failed events</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Metrics for messages created, sent, completed, and failed events</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">camel.route.policy</p></td>
@@ -2375,8 +2431,8 @@ to be used. A <code>CompositeMeterRegistry</code> can be used to address more th
 <div class="sect2">
 <h3 id="_using_legacy_metrics_naming"><a class="anchor" href="#_using_legacy_metrics_naming"></a>Using legacy metrics naming</h3>
 <div class="paragraph">
-<p>In Camel 3.20 or older, then the naming of metrics are using <em>camelCase</em> style.
-However, since Camel 3.21 onwards, the naming is using micrometer convention style (see table above).</p>
+<p>In Camel 3.20 or older, then the naming of metrics is using <em>camelCase</em> style.
+However, since Camel 3.21 onwards, the naming is using the Micrometer convention style (see table above).</p>
 </div>
 <div class="paragraph">
 <p>To use the legacy naming, then you can use the <code>LEGACY</code> naming from the <code>xxxNamingStrategy</code> interfaces.</p>
@@ -2418,17 +2474,17 @@ factory.setNamingStrategy(MicrometerRoutePolicyNamingStrategy.LEGACY);</code></p
 <div class="paragraph">
 <p>Each meter has type and name. Supported types are
 <a href="#MicrometerComponent-counter">counter</a>,
-<a href="#MicrometerComponent-summary">distribution summary</a> and
-timer. If no type is provided then a counter is used by default.</p>
+<a href="#MicrometerComponent-summary">distribution summary</a>, and
+timer. If no type is provided, then a counter is used by default.</p>
 </div>
 <div class="paragraph">
 <p>The meter name is a string that is evaluated as <code>Simple</code> expression. In addition to using the <code>CamelMetricsName</code>
-header (see below), this allows to select the meter depending on exchange data.</p>
+header (see below), this allows selecting the meter depending on exchange data.</p>
 </div>
 <div class="paragraph">
 <p>The optional <code>tags</code> URI parameter is a comma-separated string, consisting of <code>key=value</code> expressions. Both
 <code>key</code> and <code>value</code> are strings that are also evaluated as <code>Simple</code> expression.
-E.g. the URI parameter <code>tags=X=${header.Y}</code> would assign the current value of header <code>Y</code> to the key <code>X</code>.</p>
+That is, the URI parameter <code>tags=X=${header.Y}</code> would assign the current value of header <code>Y</code> to the key <code>X</code>.</p>
 </div>
 <div class="sect2">
 <h3 id="_headers"><a class="anchor" href="#_headers"></a>Headers</h3>
@@ -2496,7 +2552,7 @@ Micrometer endpoint will catch all exceptions and write log entry using level <c
 </tbody>
 </table>
 <div class="paragraph">
-<p>If neither <code>increment</code> or <code>decrement</code> is defined then counter value will
+<p>If neither <code>increment</code> or <code>decrement</code> is defined, the value of the counter will
 be incremented by one. If <code>increment</code> and <code>decrement</code> are both defined
 only increment operation is called.</p>
 </div>
@@ -2517,7 +2573,7 @@ from("direct:in")
 </div>
 </div>
 <div class="paragraph">
-<p>Both <code>increment</code> and <code>decrement</code> values are evaluated as <code>Simple</code> expressions with a Double result, e.g.
+<p>Both <code>increment</code> and <code>decrement</code> values are evaluated as <code>Simple</code> expressions with a Double result, e.g.,
 if header <code>X</code> contains a value that evaluates to 3.0, the <code>simple.counter</code> counter is decremented by 3.0:</p>
 </div>
 <div class="listingblock">
@@ -2634,7 +2690,7 @@ from("direct:in")
 </div>
 </div>
 <div class="paragraph">
-<p><code>value</code> is evaluated as <code>Simple</code> expressions with a Double result, e.g.
+<p><code>value</code> is evaluated as <code>Simple</code> expressions with a Double result, e.g.,
 if header <code>X</code> contains a value that evaluates to 3.0, this value is registered with the <code>simple.histogram</code>:</p>
 </div>
 <div class="listingblock">
@@ -2782,7 +2838,7 @@ from("direct:in")
 <div class="sectionbody">
 <div class="paragraph">
 <p><code>MicrometerRoutePolicyFactory</code> allows to add a RoutePolicy for each
-route in order to exposes route utilization statistics using Micrometer.
+route to expose route utilization statistics using Micrometer.
 This factory can be used in Java and XML as the examples below
 demonstrates.</p>
 </div>
@@ -2803,7 +2859,7 @@ want to instrument a few selected routes.</p>
 </table>
 </div>
 <div class="paragraph">
-<p>From Java you just add the factory to the <code>CamelContext</code> as shown below:</p>
+<p>From Java, you add the factory to the <code>CamelContext</code> as shown below:</p>
 </div>
 <div class="listingblock">
 <div class="content">
@@ -2845,7 +2901,7 @@ following options:</p>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">meterRegistry</p></td>
 <td class="tableblock halign-left valign-top"></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Allow to use a shared <code>MeterRegistry</code>. If none is provided then Camel will create a shared instance used by the this CamelContext.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Allow using a shared <code>MeterRegistry</code>. If none is provided, then Camel will create a shared instance used by the CamelContext.</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">durationUnit</p></td>
@@ -2940,7 +2996,7 @@ each node in all the routes. This factory can be used in Java and XML as
 the examples below demonstrates.</p>
 </div>
 <div class="paragraph">
-<p>From Java you just set the factory to the <code>CamelContext</code> as shown below:</p>
+<p>From Java, you set the factory to the <code>CamelContext</code> as shown below:</p>
 </div>
 <div class="listingblock">
 <div class="content">
@@ -2957,7 +3013,7 @@ the examples below demonstrates.</p>
 </div>
 </div>
 <div class="paragraph">
-<p>The following options is supported on the factory:</p>
+<p>The following options are supported on the factory:</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
 <colgroup>
@@ -2981,7 +3037,7 @@ the examples below demonstrates.</p>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">meterRegistry</p></td>
 <td class="tableblock halign-left valign-top"></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Allow to use a shared <code>MeterRegistry</code>. If none is provided then Camel will create a shared instance used by the this CamelContext.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Allow using a shared <code>MeterRegistry</code>. If none is provided, then Camel will create a shared instance used by the CamelContext.</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">durationUnit</p></td>
@@ -2991,11 +3047,11 @@ the examples below demonstrates.</p>
 </tbody>
 </table>
 <div class="paragraph">
-<p>At runtime the metrics can be accessed from Java API or JMX which allows
+<p>At runtime the metrics can be accessed from Java API or JMX, which allows
 to gather the data as json output.</p>
 </div>
 <div class="paragraph">
-<p>From Java code you can get the service from the CamelContext as
+<p>From Java code, you can get the service from the CamelContext as
 shown:</p>
 </div>
 <div class="listingblock">
@@ -3025,11 +3081,11 @@ String json = service.dumpStatisticsAsJson();</code></pre>
 </div>
 </div>
 <div class="paragraph">
-<p>At runtime the metrics can be accessed from Java API or JMX which allows
+<p>At runtime the metrics can be accessed from Java API or JMX, which allows
 to gather the data as json output.</p>
 </div>
 <div class="paragraph">
-<p>From Java code you can do get the service from the CamelContext as
+<p>From Java code, you can get the service from the CamelContext as
 shown:</p>
 </div>
 <div class="listingblock">
@@ -3049,8 +3105,8 @@ with <code>name=MicrometerEventNotifier</code>.</p>
 <div class="sectionbody">
 <div class="paragraph">
 <p><code>InstrumentedThreadPoolFactory</code> allows you to gather performance information about Camel Thread Pools by injecting a <code>InstrumentedThreadPoolFactory</code>
-which collects information from inside of Camel.
-See more details at <a href="../../manual/threading-model.html" class="xref page">Threading Model</a>.</p>
+which collects information from the inside of Camel.
+See more details at <a href="../../manual/4.10.x/threading-model.html" class="xref page">Threading Model</a>.</p>
 </div>
 </div>
 </div>
@@ -3058,10 +3114,10 @@ See more details at <a href="../../manual/threading-model.html" class="xref page
 <h2 id="_exposing_micrometer_statistics_in_jmx"><a class="anchor" href="#_exposing_micrometer_statistics_in_jmx"></a>Exposing Micrometer statistics in JMX</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>Micrometer uses <code>MeterRegistry</code> implementations in order to publish statistics. While in production scenarios it is advisable to select a dedicated backend like Prometheus or Graphite, it may be sufficient for test or local deployments to publish statistics to JMX.</p>
+<p>Micrometer uses <code>MeterRegistry</code> implementations to publish statistics. While in production scenarios it is advisable to select a dedicated backend like Prometheus or Graphite, it may be sufficient for test or local deployments to publish statistics to JMX.</p>
 </div>
 <div class="paragraph">
-<p>In order to achieve this, add the following dependency:</p>
+<p>To achieve this, add the following dependency:</p>
 </div>
 <div class="listingblock">
 <div class="content">
@@ -3154,10 +3210,10 @@ camel.metrics.binders=processor,jvm-info,file-descriptor</code></pre>
 <h2 id="_using_camel_micrometer_with_spring_boot"><a class="anchor" href="#_using_camel_micrometer_with_spring_boot"></a>Using Camel Micrometer with Spring Boot</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>When you use <code>camel-micrometer-starter</code> with Spring Boot, then Spring Boot auto configuration will automatically enable metrics capture if a <code>io.micrometer.core.instrument.MeterRegistry</code> is available.</p>
+<p>When you use <code>camel-micrometer-starter</code> with Spring Boot, then Spring Boot autoconfiguration will automatically enable metrics capture if a <code>io.micrometer.core.instrument.MeterRegistry</code> is available.</p>
 </div>
 <div class="paragraph">
-<p>For example to capture data with Prometheus, you can add the following dependency:</p>
+<p>For example, to capture data with Prometheus, you can add the following dependency:</p>
 </div>
 <div class="listingblock">
 <div class="content">
@@ -3170,6 +3226,9 @@ camel.metrics.binders=processor,jvm-info,file-descriptor</code></pre>
 <div class="paragraph">
 <p>See the following table for options to specify what metrics to capture, or to turn it off.</p>
 </div>
+<div class="paragraph">
+<p>Unresolved include directive in modules/ROOT/pages/micrometer-component.adoc - include::spring-boot:partial$starter.adoc[]</p>
+</div>
 </div>
 </div>
 </article>
@@ -3177,6 +3236,8 @@ camel.metrics.binders=processor,jvm-info,file-descriptor</code></pre>
 </main>
 </div>
 <footer class="footer">
+  <p>This page was built using the Antora default UI.</p>
+  <p>The source code for this UI is licensed under the terms of the MPL-2.0 license.</p>
 </footer>
 <script id="site-script" src="../../_/js/site.js" data-ui-root-path="../../_"></script>
 <script async src="../../_/js/vendor/highlight.js"></script>

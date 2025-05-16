@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>Spring :: Red Hat Camel Reference</title>
+    <title>Spring :: Red Hat build of Apache Camel</title>
     <meta name="generator" content="Antora 3.1.4">
     <link rel="stylesheet" href="../../_/css/site.css">
   </head>
@@ -11,7 +11,7 @@
 <header class="header">
   <nav class="navbar">
     <div class="navbar-brand">
-      <a class="navbar-item" href="../../manual/index.html">Red Hat build of Apache Camel manual</a>
+      <a class="navbar-item" href="/">Red Hat build of Apache Camel</a>
       <button class="navbar-burger" data-target="topbar-nav">
         <span></span>
         <span></span>
@@ -21,11 +21,12 @@
   </nav>
 </header>
 <div class="body">
-<div class="nav-container" data-component="components" data-version="next">
+<div class="nav-container" data-component="components" data-version="4.4.x">
   <aside class="nav">
     <div class="panels">
 <div class="nav-panel-menu is-active" data-panel="menu">
   <nav class="nav-menu">
+    <button class="nav-menu-toggle" aria-label="Toggle expand/collapse all" style="display: none"></button>
     <h3 class="title"><a href="index.html">Camel Components</a></h3>
 <ul class="nav-list">
   <li class="nav-item" data-depth="0">
@@ -1818,22 +1819,40 @@
 <div class="nav-panel-explore" data-panel="explore">
   <div class="context">
     <span class="title">Camel Components</span>
-    <span class="version">Next (Pre-release)</span>
+    <span class="version">4.4.x</span>
   </div>
   <ul class="components">
     <li class="component is-current">
-      <a class="title" href="index.html">Camel Components</a>
+      <div class="title"><a href="../4.10.x/index.html">Camel Components</a></div>
       <ul class="versions">
-        <li class="version is-current is-latest">
-          <a href="index.html">Next (Pre-release)</a>
+        <li class="version is-latest">
+          <a href="../4.10.x/index.html">4.10.x (LTS)</a>
+        </li>
+        <li class="version">
+          <a href="../4.8.x/index.html">4.8.x</a>
+        </li>
+        <li class="version is-current">
+          <a href="index.html">4.4.x</a>
+        </li>
+        <li class="version">
+          <a href="../4.0.x/index.html">4.0.x</a>
         </li>
       </ul>
     </li>
     <li class="component">
-      <a class="title" href="../../manual/index.html">User manual</a>
+      <div class="title"><a href="../../manual/4.10.x/index.html">User manual</a></div>
       <ul class="versions">
         <li class="version is-latest">
-          <a href="../../manual/index.html">default</a>
+          <a href="../../manual/4.10.x/index.html">4.10.x</a>
+        </li>
+        <li class="version">
+          <a href="../../manual/4.8.x/index.html">4.8.x</a>
+        </li>
+        <li class="version">
+          <a href="../../manual/4.4.x/index.html">4.4.x</a>
+        </li>
+        <li class="version">
+          <a href="../../manual/4.0.x/index.html">4.0.x</a>
         </li>
       </ul>
     </li>
@@ -1845,7 +1864,7 @@
 <main class="article">
 <div class="toolbar" role="navigation">
 <button class="nav-toggle"></button>
-  <a href="../../manual/index.html" class="home-link"></a>
+  <a href="../../manual/4.10.x/index.html" class="home-link"></a>
 <nav class="breadcrumbs" aria-label="breadcrumbs">
   <ul>
     <li><a href="index.html">Camel Components</a></li>
@@ -1853,6 +1872,16 @@
     <li><a href="spring-summary.html">Spring</a></li>
   </ul>
 </nav>
+<div class="page-versions">
+  <button class="version-menu-toggle" title="Show other versions of page">4.4.x</button>
+  <div class="version-menu">
+    <a class="version" href="../4.10.x/spring-summary.html">4.10.x (LTS)</a>
+    <a class="version" href="../4.8.x/spring-summary.html">4.8.x</a>
+    <a class="version is-current" href="spring-summary.html">4.4.x</a>
+    <a class="version is-missing" href="../4.0.x/index.html">4.0.x</a>
+  </div>
+</div>
+<div class="edit-this-page"><a href="https://github.com/rhaetor/rh-camel-jboss/edit/camel-4.4.0-branch/docs/components/modules/ROOT/pages/spring-summary.adoc">Edit this Page</a></div>
 </div>
   <div class="content">
 <aside class="toc sidebar" data-title="Contents" data-levels="2">
@@ -1886,7 +1915,7 @@
 </dd>
 <dt class="hdlist1"><a href="spring-rabbitmq-component.html" class="xref page">Spring RabbitMQ</a></dt>
 <dd>
-<p>Send and receive messages from RabbitMQ using Spring RabbitMQ client.</p>
+<p>Send and receive messages from RabbitMQ using the Spring RabbitMQ client.</p>
 </dd>
 <dt class="hdlist1"><a href="spring-redis-component.html" class="xref page">Spring Redis</a></dt>
 <dd>
@@ -1925,7 +1954,7 @@ components like <a href="jms-component.html" class="xref page">JMS</a> and <a hr
 </li>
 <li>
 <p>Camel integrates with various Spring helper classes; such as providing
-Type Converter support for Spring Resources etc</p>
+Type Converter support for Spring Resources, and so on.</p>
 </li>
 <li>
 <p>Allows you to reuse the Spring Testing
@@ -2040,7 +2069,7 @@ inline namespace declaration:</p>
 <h2 id="_additional_configuration_of_spring_xml"><a class="anchor" href="#_additional_configuration_of_spring_xml"></a>Additional configuration of Spring XML</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>See more details at <a href="../../manual/advanced-configuration-of-camelcontext-using-spring.html" class="xref page">Camel Spring XML Auto Configuration</a>.</p>
+<p>See more details at <a href="../../manual/4.10.x/advanced-configuration-of-camelcontext-using-spring.html" class="xref page">Camel Spring XML Auto Configuration</a>.</p>
 </div>
 <div class="sect2">
 <h3 id="_using_java_code"><a class="anchor" href="#_using_java_code"></a>Using Java Code</h3>
@@ -2057,8 +2086,8 @@ discovery and initialization of routes in given packages. This is
 configured by adding tags to the camel context in your spring context
 definition, specifying the packages to be recursively searched for
 <code>RouteBuilder</code> implementations. To use this feature, requires a
-<code>&lt;package&gt;&lt;/package&gt;</code> tag specifying a comma
-separated list of packages that should be searched e.g.</p>
+<code>&lt;package&gt;&lt;/package&gt;</code> tag specifying a comma-separated list of
+packages that should be searched e.g.</p>
 </div>
 <div class="listingblock">
 <div class="content">
@@ -2074,9 +2103,12 @@ separated list of packages that should be searched e.g.</p>
 <i class="fa icon-warning" title="Warning"></i>
 </td>
 <td class="content">
-Use caution when specifying the package name as <code>org.apache.camel</code> or a
-sub package of this. This causes Camel to search in its own packages for
-your routes which could cause problems.
+<div class="paragraph">
+<p>Use caution when specifying the package name as <code>org.apache.camel</code> or a
+subpackage of this.
+This causes Camel to search in its own packages for
+your routes, which could cause problems.</p>
+</div>
 </td>
 </tr>
 </table>
@@ -2092,9 +2124,9 @@ your routes which could cause problems.
 <p><strong>Will ignore already instantiated classes</strong></p>
 </div>
 <div class="paragraph">
-<p>The <code>&lt;package&gt;</code> and <code>&lt;packageScan&gt;</code> will skip all classes which have already
-been created by Spring etc. So if you define a route builder as a spring
-bean tag then that class will be skipped. You can include those beans
+<p>The <code>&lt;package&gt;</code> and <code>&lt;packageScan&gt;</code> will skip all classes that Spring has already
+created etc. So if you define a route builder as a spring
+bean tag, then that class will be skipped. You can include those beans
 using <code>&lt;routeBuilder ref="theBeanId"/&gt;</code> or the <code>&lt;contextScan&gt;</code> feature.</p>
 </div>
 </td>
@@ -2125,7 +2157,7 @@ applied to the fully qualified names of the discovered classes. e.g.</p>
 </div>
 <div class="paragraph">
 <p>Exclude patterns are applied before the include patterns. If no include
-or exclude patterns are defined then all the Route classes discovered in
+or exclude patterns are defined, then all the Route classes discovered in
 the packages will be returned.</p>
 </div>
 <div class="paragraph">
@@ -2167,7 +2199,7 @@ but not match org.simple.PrecludedRoute</p>
 <div class="sect2">
 <h3 id="_using_contextscan"><a class="anchor" href="#_using_contextscan"></a>Using contextScan</h3>
 <div class="paragraph">
-<p>You can allow Camel to scan the container context, e.g. the Spring
+<p>You can allow Camel to scan the container context, for example, the Spring
 <code>ApplicationContext</code> for route builder instances. This allows you to use
 the Spring <code>&lt;component-scan&gt;</code> feature and have Camel pickup any
 <code>RouteBuilder</code> instances which were created by Spring in its scan process.</p>
@@ -2196,10 +2228,10 @@ above in the <code>&lt;packageScan&gt;</code> documentation.</p>
 </div>
 </div>
 <div class="sect1">
-<h2 id="_how_do_i_import_routes_from_other_xml_files"><a class="anchor" href="#_how_do_i_import_routes_from_other_xml_files"></a>How do I import routes from other XML files</h2>
+<h2 id="_how_do_i_import_routes_from_other_xml_files"><a class="anchor" href="#_how_do_i_import_routes_from_other_xml_files"></a>How do I import routes from other XML files?</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>When defining routes in Camel using Spring XML you may want to define some routes in other XML files.
+<p>When defining routes in Camel using Spring XML, you may want to define some routes in other XML files.
 For example, you may have many routes, and it may help to maintain the
 application if some routes are in separate XML files. You may
 also want to store common and reusable routes in other XML files, which
@@ -2245,7 +2277,7 @@ a couple of routes as shown:</p>
             &lt;from uri="direct:start"/&gt;
             &lt;to uri="mock:result"/&gt;
         &lt;/route&gt;
-        &lt;!-- and another route, you can have as many your like --&gt;
+        &lt;!-- and another route, you can have as many you like --&gt;
         &lt;route id="bar"&gt;
             &lt;from uri="direct:bar"/&gt;
             &lt;to uri="mock:bar"/&gt;
@@ -2270,7 +2302,7 @@ to import the <code>myCoolRoute.xml</code> file.<br>
      &lt;!-- refer to a given route to be used --&gt;
      &lt;routeContextRef ref="myCoolRoutes"/&gt;
 
-     &lt;!-- we can of course still use routes inside camelContext --&gt;
+     &lt;!-- we can still use routes inside camelContext --&gt;
      &lt;route id="inside"&gt;
          &lt;from uri="direct:inside"/&gt;
          &lt;to uri="mock:inside"/&gt;
@@ -2290,14 +2322,15 @@ CamelContext and also externalized in RouteContext.</p>
 </div>
 <div class="paragraph">
 <p>The routes defined in <code>&lt;routeContext/&gt;</code> can be reused by multiple
-<code>&lt;camelContext/&gt;</code>. However, it is only the definition which is reused. At
-runtime each CamelContext will create its own instance of the route
+<code>&lt;camelContext/&gt;</code>.
+However, it is only the definition that is reused.
+At runtime, each CamelContext will create its own instance of the route
 based on the definition.</p>
 </div>
 <div class="sect2">
 <h3 id="_test_time_exclusion"><a class="anchor" href="#_test_time_exclusion"></a>Test time exclusion.</h3>
 <div class="paragraph">
-<p>At test time it is often desirable to be able to selectively exclude
+<p>At test time, it is often desirable to be able to selectively exclude
 matching routes from being initialized that are not applicable or useful
 to the test scenario. For instance, you might have a spring context file
 <code>routes-context.xml</code> and three Route builders <code>RouteA</code>, <code>RouteB</code> and <code>RouteC</code> in
@@ -2323,7 +2356,7 @@ array of classes.</p>
 </div>
 </div>
 <div class="paragraph">
-<p>In order to hook into the camelContext initialization by spring to
+<p>To hook into the camelContext initialization by spring to
 exclude the class <code>MyExcludedRouteBuilder</code>, we need to intercept the spring
 context creation. When overriding createApplicationContext to create the
 spring context, we call the <code>getRouteExcludingApplicationContext()</code> method
@@ -2412,7 +2445,7 @@ SpringCamelContext lazily fetching components from the spring context
 for the scheme name you use for Endpoint URIs.</p>
 </div>
 <div class="paragraph">
-<p>For more detail see <a href="../../manual/faq/how-do-i-configure-endpoints.html" class="xref page">Configuring
+<p>For more detail see <a href="../../manual/4.10.x/faq/how-do-i-configure-endpoints.html" class="xref page">Configuring
 Endpoints and Components</a>.</p>
 </div>
 </div>
@@ -2423,7 +2456,7 @@ Endpoints and Components</a>.</p>
 <div class="paragraph">
 <p>If you want the <code>CamelContext</code> to be injected
 in your POJO just implement the <code>CamelContextAware</code> interface; then when Spring creates your POJO, the <code>CamelContext</code> will be
-injected into your POJO. Also see the <a href="../../manual/bean-integration.html" class="xref page">Bean
+injected into your POJO. Also see the <a href="../../manual/4.10.x/bean-integration.html" class="xref page">Bean
 Integration</a> for further injections.</p>
 </div>
 </div>
@@ -2432,7 +2465,7 @@ Integration</a> for further injections.</p>
 <h2 id="_integration_testing"><a class="anchor" href="#_integration_testing"></a>Integration Testing</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>To avoid a hung route when testing using Spring Transactions see the
+<p>To avoid a hung route when testing using Spring Transactions, see the
 note about Spring Integration Testing under Transactional Client.</p>
 </div>
 </div>
@@ -2467,6 +2500,9 @@ note about Spring Integration Testing under Transactional Client.</p>
 &lt;/route&gt;</code></pre>
 </div>
 </div>
+<div class="paragraph">
+<p>Unresolved include directive in modules/ROOT/pages/spring-summary.adoc - include::spring-boot:partial$starter.adoc[]</p>
+</div>
 </div>
 </div>
 </article>
@@ -2474,6 +2510,8 @@ note about Spring Integration Testing under Transactional Client.</p>
 </main>
 </div>
 <footer class="footer">
+  <p>This page was built using the Antora default UI.</p>
+  <p>The source code for this UI is licensed under the terms of the MPL-2.0 license.</p>
 </footer>
 <script id="site-script" src="../../_/js/site.js" data-ui-root-path="../../_"></script>
 <script async src="../../_/js/vendor/highlight.js"></script>

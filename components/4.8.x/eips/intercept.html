@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>Intercept :: Red Hat Camel Reference</title>
+    <title>Intercept :: Red Hat build of Apache Camel</title>
     <meta name="generator" content="Antora 3.1.4">
     <link rel="stylesheet" href="../../../_/css/site.css">
   </head>
@@ -11,7 +11,7 @@
 <header class="header">
   <nav class="navbar">
     <div class="navbar-brand">
-      <a class="navbar-item" href="../../manual/index.html">Red Hat build of Apache Camel manual</a>
+      <a class="navbar-item" href="/">Red Hat build of Apache Camel</a>
       <button class="navbar-burger" data-target="topbar-nav">
         <span></span>
         <span></span>
@@ -21,11 +21,12 @@
   </nav>
 </header>
 <div class="body">
-<div class="nav-container" data-component="components" data-version="next">
+<div class="nav-container" data-component="components" data-version="4.8.x">
   <aside class="nav">
     <div class="panels">
 <div class="nav-panel-menu is-active" data-panel="menu">
   <nav class="nav-menu">
+    <button class="nav-menu-toggle" aria-label="Toggle expand/collapse all" style="display: none"></button>
     <h3 class="title"><a href="../index.html">Camel Components</a></h3>
 <ul class="nav-list">
   <li class="nav-item" data-depth="0">
@@ -35,7 +36,46 @@
     <a class="nav-link" href="../index.html">Components</a>
 <ul class="nav-list">
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="../activemq-component.html">ActiveMQ</a>
+    <a class="nav-link" href="../activemq-component.html">ActiveMQ 5.x</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../activemq6-component.html">ActiveMQ 6.x</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../ai-summary.html">AI</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../chatscript-component.html">ChatScript</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../djl-component.html">Deep Java Library</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../langchain4j-chat-component.html">LangChain4j Chat</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../langchain4j-embeddings-component.html">LangChain4j Embeddings</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../langchain4j-tokenizer-component.html">LangChain4j Tokenizer</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../langchain4j-tools-component.html">LangChain4j Tools</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../langchain4j-web-search-component.html">LangChain4j Web Search</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../milvus-component.html">Milvus</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../pinecone-component.html">Pinecone</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../qdrant-component.html">Qdrant</a>
+  </li>
+</ul>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="../amqp-component.html">AMQP</a>
@@ -64,6 +104,15 @@
 <ul class="nav-list">
   <li class="nav-item" data-depth="3">
     <a class="nav-link" href="../aws2-athena-component.html">AWS Athena</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../aws-bedrock-component.html">AWS Bedrock</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../aws-bedrock-agent-component.html">AWS Bedrock Agent</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../aws-bedrock-agent-runtime-component.html">AWS Bedrock Agent Runtime</a>
   </li>
   <li class="nav-item" data-depth="3">
     <a class="nav-link" href="../aws-cloudtrail-component.html">AWS Cloudtrail</a>
@@ -168,7 +217,7 @@
     <a class="nav-link" href="../azure-storage-blob-component.html">Azure Storage Blob Service</a>
   </li>
   <li class="nav-item" data-depth="3">
-    <a class="nav-link" href="../azure-storage-datalake-component.html">Azure Storage Datalake Service</a>
+    <a class="nav-link" href="../azure-storage-datalake-component.html">Azure Storage Data Lake Service</a>
   </li>
   <li class="nav-item" data-depth="3">
     <a class="nav-link" href="../azure-storage-queue-component.html">Azure Storage Queue Service</a>
@@ -201,9 +250,6 @@
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="../cql-component.html">Cassandra CQL</a>
-  </li>
-  <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="../chatscript-component.html">ChatScript</a>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="../chunk-component.html">Chunk</a>
@@ -276,9 +322,6 @@
     <a class="nav-link" href="../debezium-sqlserver-component.html">Debezium SQL Server Connector</a>
   </li>
 </ul>
-  </li>
-  <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="../djl-component.html">Deep Java Library</a>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="../dhis2-component.html">DHIS2</a>
@@ -394,6 +437,9 @@
   </li>
   <li class="nav-item" data-depth="3">
     <a class="nav-link" href="../google-pubsub-component.html">Google Pubsub</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../google-pubsub-lite-component.html">Google PubSub Lite</a>
   </li>
   <li class="nav-item" data-depth="3">
     <a class="nav-link" href="../google-secret-manager-component.html">Google Secret Manager</a>
@@ -686,7 +732,7 @@
     <a class="nav-link" href="../ldif-component.html">LDIF</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="../log-component.html">Log</a>
+    <a class="nav-link" href="../log-component.html">Log Data</a>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="../lucene-component.html">Lucene</a>
@@ -899,10 +945,16 @@
     <a class="nav-link" href="../smb-component.html">SMB</a>
   </li>
   <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../smooks-component.html">Smooks</a>
+  </li>
+  <li class="nav-item" data-depth="2">
     <a class="nav-link" href="../smpp-component.html">SMPP</a>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="../snmp-component.html">SNMP</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../solr-component.html">Solr</a>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="../splunk-component.html">Splunk</a>
@@ -965,6 +1017,18 @@
     <a class="nav-link" href="../stub-component.html">Stub</a>
   </li>
   <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../tahu-summary.html">Tahu</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../tahu-edge-component.html">Tahu Edge Node / Device</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../tahu-host-component.html">Tahu Host Application</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
     <a class="nav-link" href="../telegram-component.html">Telegram</a>
   </li>
   <li class="nav-item" data-depth="2">
@@ -1025,7 +1089,7 @@
     <a class="nav-link" href="../whatsapp-component.html">WhatsApp</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="../wordpress-component.html">Wordpress</a>
+    <a class="nav-link" href="../wordpress-component.html">WordPress</a>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="../workday-component.html">Workday</a>
@@ -1418,7 +1482,13 @@
     <a class="nav-link" href="../others/openapi-java.html">Openapi Java</a>
   </li>
   <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../others/openapi-validator.html">Openapi Validator</a>
+  </li>
+  <li class="nav-item" data-depth="2">
     <a class="nav-link" href="../others/opentelemetry.html">OpenTelemetry</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../others/platform-http-jolokia.html">Platform HTTP Jolokia</a>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="../others/platform-http-main.html">Platform Http Main</a>
@@ -1566,7 +1636,7 @@
     <a class="nav-link" href="event-message.html">Event Message</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="failover-eip.html">Failover</a>
+    <a class="nav-link" href="failoverLoadBalancer-eip.html">Failover Load Balancer</a>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="faultToleranceConfiguration-eip.html">Fault Tolerance Configuration</a>
@@ -1596,13 +1666,13 @@
     <a class="nav-link" href="loadBalance-eip.html">Load Balance</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="log-eip.html">Log</a>
+    <a class="nav-link" href="log-eip.html">Logger</a>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="loop-eip.html">Loop</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="marshal-eip.html">Marshal EIP</a>
+    <a class="nav-link" href="marshal-eip.html">Marshal</a>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="message.html">Message</a>
@@ -1659,6 +1729,9 @@
     <a class="nav-link" href="point-to-point-channel.html">Point to Point Channel</a>
   </li>
   <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="poll-eip.html">Poll</a>
+  </li>
+  <li class="nav-item" data-depth="2">
     <a class="nav-link" href="pollEnrich-eip.html">Poll Enrich</a>
   </li>
   <li class="nav-item" data-depth="2">
@@ -1674,7 +1747,7 @@
     <a class="nav-link" href="publish-subscribe-channel.html">Publish Subscribe Channel</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="random-eip.html">Random</a>
+    <a class="nav-link" href="randomLoadBalancer-eip.html">Random Load Balancer</a>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="recipientList-eip.html">Recipient List</a>
@@ -1716,7 +1789,7 @@
     <a class="nav-link" href="rollback-eip.html">Rollback</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="roundRobin-eip.html">Round Robin</a>
+    <a class="nav-link" href="roundRobinLoadBalancer-eip.html">Round Robin Load Balancer</a>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="routingSlip-eip.html">Routing Slip</a>
@@ -1728,7 +1801,7 @@
     <a class="nav-link" href="sample-eip.html">Sample</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="scatter-gather.html">Scatter Gather</a>
+    <a class="nav-link" href="scatter-gather.html">Scatter-Gather</a>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="script-eip.html">Script</a>
@@ -1758,6 +1831,9 @@
     <a class="nav-link" href="setVariable-eip.html">Set Variable</a>
   </li>
   <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="setVariables-eip.html">Set Variables</a>
+  </li>
+  <li class="nav-item" data-depth="2">
     <a class="nav-link" href="sort-eip.html">Sort</a>
   </li>
   <li class="nav-item" data-depth="2">
@@ -1767,7 +1843,7 @@
     <a class="nav-link" href="step-eip.html">Step</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="sticky-eip.html">Sticky</a>
+    <a class="nav-link" href="stickyLoadBalancer-eip.html">Sticky Load Balancer</a>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="stop-eip.html">Stop</a>
@@ -1788,7 +1864,7 @@
     <a class="nav-link" href="toD-eip.html">To D</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="topic-eip.html">Topic</a>
+    <a class="nav-link" href="topicLoadBalancer-eip.html">Topic Load Balancer</a>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="transactional-client.html">Transactional Client</a>
@@ -1797,13 +1873,13 @@
     <a class="nav-link" href="transform-eip.html">Transform</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="unmarshal-eip.html">Unmarshal EIP</a>
+    <a class="nav-link" href="unmarshal-eip.html">Unmarshal</a>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="validate-eip.html">Validate</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="weighted-eip.html">Weighted</a>
+    <a class="nav-link" href="weightedLoadBalancer-eip.html">Weighted Load Balancer</a>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="wireTap-eip.html">Wire Tap</a>
@@ -1818,22 +1894,40 @@
 <div class="nav-panel-explore" data-panel="explore">
   <div class="context">
     <span class="title">Camel Components</span>
-    <span class="version">Next (Pre-release)</span>
+    <span class="version">4.8.x</span>
   </div>
   <ul class="components">
     <li class="component is-current">
-      <a class="title" href="../index.html">Camel Components</a>
+      <div class="title"><a href="../../4.10.x/index.html">Camel Components</a></div>
       <ul class="versions">
-        <li class="version is-current is-latest">
-          <a href="../index.html">Next (Pre-release)</a>
+        <li class="version is-latest">
+          <a href="../../4.10.x/index.html">4.10.x (LTS)</a>
+        </li>
+        <li class="version is-current">
+          <a href="../index.html">4.8.x</a>
+        </li>
+        <li class="version">
+          <a href="../../4.4.x/index.html">4.4.x</a>
+        </li>
+        <li class="version">
+          <a href="../../4.0.x/index.html">4.0.x</a>
         </li>
       </ul>
     </li>
     <li class="component">
-      <a class="title" href="../../../manual/index.html">User manual</a>
+      <div class="title"><a href="../../../manual/4.10.x/index.html">User manual</a></div>
       <ul class="versions">
         <li class="version is-latest">
-          <a href="../../../manual/index.html">default</a>
+          <a href="../../../manual/4.10.x/index.html">4.10.x</a>
+        </li>
+        <li class="version">
+          <a href="../../../manual/4.8.x/index.html">4.8.x</a>
+        </li>
+        <li class="version">
+          <a href="../../../manual/4.4.x/index.html">4.4.x</a>
+        </li>
+        <li class="version">
+          <a href="../../../manual/4.0.x/index.html">4.0.x</a>
         </li>
       </ul>
     </li>
@@ -1845,7 +1939,7 @@
 <main class="article">
 <div class="toolbar" role="navigation">
 <button class="nav-toggle"></button>
-  <a href="../../../manual/index.html" class="home-link"></a>
+  <a href="../../../manual/4.10.x/index.html" class="home-link"></a>
 <nav class="breadcrumbs" aria-label="breadcrumbs">
   <ul>
     <li><a href="../index.html">Camel Components</a></li>
@@ -1853,6 +1947,16 @@
     <li><a href="intercept.html">Intercept</a></li>
   </ul>
 </nav>
+<div class="page-versions">
+  <button class="version-menu-toggle" title="Show other versions of page">4.8.x</button>
+  <div class="version-menu">
+    <a class="version" href="../../4.10.x/eips/intercept.html">4.10.x (LTS)</a>
+    <a class="version is-current" href="intercept.html">4.8.x</a>
+    <a class="version" href="../../4.4.x/eips/intercept.html">4.4.x</a>
+    <a class="version" href="../../4.0.x/eips/intercept.html">4.0.x</a>
+  </div>
+</div>
+<div class="edit-this-page"><a href="https://github.com/rhaetor/rh-camel-jboss/edit/camel-4.8.0-branch/core/camel-core-engine/src/main/docs/modules/eips/pages/intercept.adoc">Edit this Page</a></div>
 </div>
   <div class="content">
 <aside class="toc sidebar" data-title="Contents" data-levels="2">
@@ -1864,7 +1968,7 @@
 <div class="sectionbody">
 <div class="paragraph">
 <p>The intercept feature in Camel supports intercepting
-<a href="../../../manual/exchange.html" class="xref page">Exchange</a>'s' while they are being routed.</p>
+<a href="../../../manual/4.10.x/exchange.html" class="xref page">Exchange</a>'s' while they are being routed.</p>
 </div>
 </div>
 </div>
@@ -1877,14 +1981,14 @@
 <div class="ulist">
 <ul>
 <li>
-<p><code>intercept</code> that intercepts every processing step as they happen during routing</p>
+<p><a href="#Intercept-Intercept"><code>intercept</code></a> that intercepts every processing step as they happen during routing</p>
 </li>
 <li>
-<p><code>interceptFrom</code> that intercepts only the incoming step (i.e. <a href="from-eip.html" class="xref page">from</a>)</p>
+<p><a href="#Intercept-InterceptFrom"><code>interceptFrom</code></a> that intercepts only the incoming step (i.e., <a href="from-eip.html" class="xref page">from</a>)</p>
 </li>
 <li>
-<p><code>interceptSendToEndpoint</code> that intercepts only when an
-<a href="../../../manual/exchange.html" class="xref page">Exchange</a> is about to be sent to the given <a href="message-endpoint.html" class="xref page">endpoint</a>.</p>
+<p><a href="#Intercept-InterceptSendToEndpoint"><code>interceptSendToEndpoint</code></a> that intercepts only when an
+<a href="../../../manual/4.10.x/exchange.html" class="xref page">Exchange</a> is about to be sent to the given <a href="message-endpoint.html" class="xref page">endpoint</a>.</p>
 </li>
 </ul>
 </div>
@@ -1902,38 +2006,8 @@ messages from this endpoint, then the <code>interceptFrom</code> is not triggere
 <div class="sect2">
 <h3 id="_interceptor_scopes"><a class="anchor" href="#_interceptor_scopes"></a>Interceptor scopes</h3>
 <div class="paragraph">
-<p>All the interceptors can be configured on global, route scope, or with
-<a href="../../../manual/route-configuration.html" class="xref page">Route Configuration</a>.</p>
-</div>
-<div class="paragraph">
-<p>This means multiple interceptors can be <em>triggered</em>.</p>
-</div>
-<div class="paragraph">
-<p>Most of the examples in this page are on global scope.
-To use route scope, then it is similar, but it is done on the route as shown in the following example.</p>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">from("jms:queue:order")
-   .intercept().to("log:hello").end() // intercepts only in this route
-  .to("bean:validateOrder")
-  .to("bean:processOrder");</code></pre>
-</div>
-</div>
-<div class="paragraph">
-<p>And in XML:</p>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">  &lt;route&gt;
-    &lt;from uri="jms:queue:order"/&gt;
-    &lt;intercept&gt;
-      &lt;to uri="log:hello"/&gt;
-    &lt;/intercept&gt;
-    &lt;to uri="bean:validateOrder"/&gt;
-    &lt;to uri="bean:processOrder"/&gt;
-  &lt;/route&gt;</code></pre>
-</div>
+<p>All the interceptors can be configured on global, or with
+<a href="../../../manual/4.10.x/route-configuration.html" class="xref page">Route Configuration</a>.</p>
 </div>
 </div>
 <div class="sect2">
@@ -1944,7 +2018,7 @@ To use route scope, then it is similar, but it is done on the route as shown in 
 <div class="ulist">
 <ul>
 <li>
-<p><a href="../../../manual/predicate.html" class="xref page">Predicate</a> using <code>when</code> to only trigger the interceptor in certain conditions</p>
+<p><a href="../../../manual/4.10.x/predicate.html" class="xref page">Predicate</a> using <code>when</code> to only trigger the interceptor in certain conditions</p>
 </li>
 <li>
 <p><code>stop</code> forces stopping continue routing the Exchange and mark it as completed successful (it&#8217;s actually the <a href="stop-eip.html" class="xref page">Stop</a> EIP).</p>
@@ -1954,28 +2028,44 @@ To use route scope, then it is similar, but it is done on the route as shown in 
 </li>
 <li>
 <p><code>afterUri</code> when used with <code>interceptSendToEndpoint</code> allows to send
-the message to an <a href="message-endpoint.html" class="xref page">endpoint</a> afterwards.</p>
+the message to an <a href="message-endpoint.html" class="xref page">endpoint</a> afterward.</p>
 </li>
 <li>
 <p><code>interceptFrom</code> and <code>interceptSendToEndpoint</code> support endpoint
 URI pattern matching by exact uri, wildcard and regular expression. See further below for more details.</p>
 </li>
 <li>
-<p>The intercepted endpoint uri is stored as message header with the key
+<p>The intercepted endpoint uri is stored as exchange property with the key
 <code>Exchange.INTERCEPTED_ENDPOINT</code>.</p>
 </li>
 </ul>
 </div>
 </div>
-<div class="sect2">
-<h3 id="_using_intercept"><a class="anchor" href="#_using_intercept"></a>Using intercept</h3>
+</div>
+</div>
+<div class="sect1">
+<h2 id="Intercept-Intercept"><a class="anchor" href="#Intercept-Intercept"></a>Using <code>intercept</code></h2>
+<div class="sectionbody">
 <div class="paragraph">
-<p>The <code>Intercept</code> is intercepting the <a href="../../../manual/exchange.html" class="xref page">Exchange</a>
-on every processing steps during routing.</p>
+<p>The <code>Intercept</code> is intercepting the <a href="../../../manual/4.10.x/exchange.html" class="xref page">Exchange</a>
+on every processing step during routing.</p>
 </div>
 <div class="paragraph">
 <p>Given the following example:</p>
 </div>
+<div id="_tabs_1" class="openblock tabs is-loading">
+<div class="content">
+<div class="ulist tablist">
+<ul>
+<li id="_tabs_1_java" class="tab">
+<p>Java</p>
+</li>
+<li id="_tabs_1_xml" class="tab">
+<p>XML</p>
+</li>
+</ul>
+</div>
+<div id="_tabs_1_java--panel" class="tabpanel" aria-labelledby="_tabs_1_java">
 <div class="listingblock">
 <div class="content">
 <pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">// global interceptor for all routes
@@ -1984,6 +2074,29 @@ intercept().to("log:hello");
 from("jms:queue:order")
   .to("bean:validateOrder")
   .to("bean:processOrder");</code></pre>
+</div>
+</div>
+</div>
+<div id="_tabs_1_xml--panel" class="tabpanel" aria-labelledby="_tabs_1_xml">
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;camelContext&gt;
+
+  &lt;!-- global interceptor for all routes --&gt;
+  &lt;intercept&gt;
+    &lt;to uri="log:hello"/&gt;
+  &lt;/intercept&gt;
+
+  &lt;route&gt;
+    &lt;from uri="jms:queue:order"/&gt;
+    &lt;to uri="bean:validateOrder"/&gt;
+    &lt;to uri="bean:processOrder"/&gt;
+  &lt;/route&gt;
+
+&lt;/camelContext&gt;</code></pre>
+</div>
+</div>
+</div>
 </div>
 </div>
 <div class="paragraph">
@@ -2004,37 +2117,28 @@ before</p>
 <div class="paragraph">
 <p>So in this example we intercept the <code>Exchange</code> twice.</p>
 </div>
-<div class="paragraph">
-<p>The example is as follows in XML:</p>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;camelContext&gt;
-
-  &lt;!-- global interceptor for all routes --&gt;
-  &lt;intercept&gt;
-    &lt;to uri="log:hello"/&gt;
-  &lt;/intercept&gt;
-
-  &lt;route&gt;
-    &lt;from uri="jms:queue:order"/&gt;
-    &lt;to uri="bean:validateOrder"/&gt;
-    &lt;to uri="bean:processOrder"/&gt;
-  &lt;/route&gt;
-
-&lt;/camelContext&gt;</code></pre>
-</div>
-</div>
-</div>
 <div class="sect2">
 <h3 id="_controlling_when_to_intercept_using_a_predicate"><a class="anchor" href="#_controlling_when_to_intercept_using_a_predicate"></a>Controlling when to intercept using a predicate</h3>
 <div class="paragraph">
-<p>If you only want to intercept "sometimes", then you can use a <a href="../../../manual/predicate.html" class="xref page">predicate</a>.</p>
+<p>If you only want to intercept "sometimes", then you can use a <a href="../../../manual/4.10.x/predicate.html" class="xref page">predicate</a>.</p>
 </div>
 <div class="paragraph">
-<p>For instance in the sample below we only intercept if the message body
+<p>For instance, in the sample below, we only intercept if the message body
 contains the string word Hello:</p>
 </div>
+<div id="_tabs_2" class="openblock tabs is-loading">
+<div class="content">
+<div class="ulist tablist">
+<ul>
+<li id="_tabs_2_java" class="tab">
+<p>Java</p>
+</li>
+<li id="_tabs_2_xml" class="tab">
+<p>XML</p>
+</li>
+</ul>
+</div>
+<div id="_tabs_2_java--panel" class="tabpanel" aria-labelledby="_tabs_2_java">
 <div class="listingblock">
 <div class="content">
 <pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">intercept().when(body().contains("Hello")).to("mock:intercepted");
@@ -2044,9 +2148,8 @@ from("jms:queue:order")
   .to("bean:processOrder");</code></pre>
 </div>
 </div>
-<div class="paragraph">
-<p>And in XML:</p>
 </div>
+<div id="_tabs_2_xml--panel" class="tabpanel" aria-labelledby="_tabs_2_xml">
 <div class="listingblock">
 <div class="content">
 <pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;camelContext&gt;
@@ -2068,12 +2171,28 @@ from("jms:queue:order")
 </div>
 </div>
 </div>
+</div>
+</div>
+</div>
 <div class="sect2">
 <h3 id="_stop_routing_after_being_intercepted"><a class="anchor" href="#_stop_routing_after_being_intercepted"></a>Stop routing after being intercepted</h3>
 <div class="paragraph">
-<p>It is also possible to stop continue routing after being intercepted.
+<p>It is also possible to stop routing after being intercepted.
 Now suppose that if the message body contains the word Hello we want to log and stop, then we can do:</p>
 </div>
+<div id="_tabs_3" class="openblock tabs is-loading">
+<div class="content">
+<div class="ulist tablist">
+<ul>
+<li id="_tabs_3_java" class="tab">
+<p>Java</p>
+</li>
+<li id="_tabs_3_xml" class="tab">
+<p>XML</p>
+</li>
+</ul>
+</div>
+<div id="_tabs_3_java--panel" class="tabpanel" aria-labelledby="_tabs_3_java">
 <div class="listingblock">
 <div class="content">
 <pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">intercept().when(body().contains("Hello"))
@@ -2085,9 +2204,8 @@ from("jms:queue:order")
   .to("bean:processOrder");</code></pre>
 </div>
 </div>
-<div class="paragraph">
-<p>And in XML:</p>
 </div>
+<div id="_tabs_3_xml--panel" class="tabpanel" aria-labelledby="_tabs_3_xml">
 <div class="listingblock">
 <div class="content">
 <pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;camelContext&gt;
@@ -2112,12 +2230,15 @@ from("jms:queue:order")
 </div>
 </div>
 </div>
+</div>
+</div>
+</div>
 <div class="sect1">
-<h2 id="_using_intercept_from"><a class="anchor" href="#_using_intercept_from"></a>Using intercept from</h2>
+<h2 id="Intercept-InterceptFrom"><a class="anchor" href="#Intercept-InterceptFrom"></a>Using <code>interceptFrom</code></h2>
 <div class="sectionbody">
 <div class="paragraph">
 <p>The <code>interceptFrom</code> is for intercepting any incoming
-Exchange, in any route (it intercepts all the <a href="from-eip.html" class="xref page">from</a> EIPs)</p>
+Exchange, in any route (it intercepts all the <a href="from-eip.html" class="xref page"><code>from</code></a> EIPs)</p>
 </div>
 <div class="paragraph">
 <p>This allows you to do some custom behavior for received Exchanges.
@@ -2125,10 +2246,23 @@ You can provide a specific uri for a given Endpoint then it only
 applies for that particular route.</p>
 </div>
 <div class="paragraph">
-<p>So lets start with the logging example. We want to log all the
-incoming messages, so we use <code>interceptFrom</code> to route to the
+<p>So let&#8217;s start with the logging example.
+We want to log all the incoming messages, so we use <code>interceptFrom</code> to route to the
 <a href="../log-component.html" class="xref page">Log</a> component.</p>
 </div>
+<div id="_tabs_4" class="openblock tabs is-loading">
+<div class="content">
+<div class="ulist tablist">
+<ul>
+<li id="_tabs_4_java" class="tab">
+<p>Java</p>
+</li>
+<li id="_tabs_4_xml" class="tab">
+<p>XML</p>
+</li>
+</ul>
+</div>
+<div id="_tabs_4_java--panel" class="tabpanel" aria-labelledby="_tabs_4_java">
 <div class="listingblock">
 <div class="content">
 <pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">interceptFrom()
@@ -2139,9 +2273,8 @@ from("jms:queue:order")
   .to("bean:processOrder");</code></pre>
 </div>
 </div>
-<div class="paragraph">
-<p>And in XML:</p>
 </div>
+<div id="_tabs_4_xml--panel" class="tabpanel" aria-labelledby="_tabs_4_xml">
 <div class="listingblock">
 <div class="content">
 <pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;camelContext&gt;
@@ -2159,10 +2292,26 @@ from("jms:queue:order")
 &lt;/camelContext&gt;</code></pre>
 </div>
 </div>
+</div>
+</div>
+</div>
 <div class="paragraph">
 <p>If you want to only apply a specific endpoint, such as all jms endpoints,
 you can do:</p>
 </div>
+<div id="_tabs_5" class="openblock tabs is-loading">
+<div class="content">
+<div class="ulist tablist">
+<ul>
+<li id="_tabs_5_java" class="tab">
+<p>Java</p>
+</li>
+<li id="_tabs_5_xml" class="tab">
+<p>XML</p>
+</li>
+</ul>
+</div>
+<div id="_tabs_5_java--panel" class="tabpanel" aria-labelledby="_tabs_5_java">
 <div class="listingblock">
 <div class="content">
 <pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">interceptFrom("jms*")
@@ -2176,16 +2325,8 @@ from("file:inbox")
   .to("ftp:someserver/backup")</code></pre>
 </div>
 </div>
-<div class="paragraph">
-<p>In this example then only messages from the JMS route are intercepted, because
-we specified a pattern in the <code>interceptFrom</code> as <code>jms*</code> (uses a wildcard).</p>
 </div>
-<div class="paragraph">
-<p>The pattern syntax is documented in more details later.</p>
-</div>
-<div class="paragraph">
-<p>And in XML:</p>
-</div>
+<div id="_tabs_5_xml--panel" class="tabpanel" aria-labelledby="_tabs_5_xml">
 <div class="listingblock">
 <div class="content">
 <pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;camelContext&gt;
@@ -2209,33 +2350,56 @@ we specified a pattern in the <code>interceptFrom</code> as <code>jms*</code> (u
 </div>
 </div>
 </div>
+</div>
+<div class="paragraph">
+<p>In this example then only messages from the JMS route are intercepted, because
+we specified a pattern in the <code>interceptFrom</code> as <code>jms*</code> (uses a wildcard).</p>
+</div>
+<div class="paragraph">
+<p>The pattern syntax is documented in more details later.</p>
+</div>
+</div>
+</div>
 <div class="sect1">
-<h2 id="_using_intercept_when_sending_to_an_endpoint"><a class="anchor" href="#_using_intercept_when_sending_to_an_endpoint"></a>Using intercept when sending to an endpoint</h2>
+<h2 id="Intercept-InterceptSendToEndpoint"><a class="anchor" href="#Intercept-InterceptSendToEndpoint"></a>Using <code>interceptSendToEndpoint</code></h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>You can also intercept when Camel is sending a message to an <a href="message-endpoint.html" class="xref page">endpoint</a>.</p>
+<p>You can also intercept when Apache Camel is sending a message to an <a href="message-endpoint.html" class="xref page">endpoint</a>.</p>
 </div>
 <div class="paragraph">
 <p>This can be used to do some custom processing before the
 message is sent to the intended destination.</p>
 </div>
 <div class="paragraph">
-<p>The interceptor can also be configured to not send to the destination (skip)
+<p>The interceptor can also be configured to not send to the destination (<code>skip</code>)
 which means the message is detoured instead.</p>
 </div>
 <div class="paragraph">
-<p>A <a href="../../../manual/predicate.html" class="xref page">Predicate</a> can also be used
+<p>A <a href="../../../manual/4.10.x/predicate.html" class="xref page">Predicate</a> can also be used
 to control when to intercept, which has been previously covered.</p>
 </div>
 <div class="paragraph">
 <p>The <code>afterUri</code> option, is used when you need to process
 the response message from the intended destination. This functionality
-was added later to the interceptor, in a form of sending to yet another <a href="message-endpoint.html" class="xref page">endpoint</a>.</p>
+was added later to the interceptor, in a way of sending to yet another <a href="message-endpoint.html" class="xref page">endpoint</a>.</p>
 </div>
 <div class="paragraph">
 <p>Let&#8217;s start with a basic example, where we want to intercept when a
 message is being sent to <a href="../kafka-component.html" class="xref page">kafka</a>:</p>
 </div>
+<div id="_tabs_6" class="openblock tabs is-loading">
+<div class="content">
+<div class="ulist tablist">
+<ul>
+<li id="_tabs_6_java" class="tab">
+<p>Java</p>
+</li>
+<li id="_tabs_6_xml" class="tab">
+<p>XML</p>
+</li>
+</ul>
+</div>
+<div id="_tabs_6_java--panel" class="tabpanel" aria-labelledby="_tabs_6_java">
 <div class="listingblock">
 <div class="content">
 <pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">interceptSendToEndpoint("kafka*")
@@ -2247,9 +2411,8 @@ from("jms:queue:order")
   .to("kafka:order");</code></pre>
 </div>
 </div>
-<div class="paragraph">
-<p>And in XML:</p>
 </div>
+<div id="_tabs_6_xml--panel" class="tabpanel" aria-labelledby="_tabs_6_xml">
 <div class="listingblock">
 <div class="content">
 <pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;camelContext&gt;
@@ -2268,10 +2431,26 @@ from("jms:queue:order")
 &lt;/camelContext&gt;</code></pre>
 </div>
 </div>
+</div>
+</div>
+</div>
 <div class="paragraph">
 <p>When you also want to process the message after it has been sent to the intended destination,
 then the example is slightly <em>odd</em> because you have to use the <code>afterUri</code> as shown:</p>
 </div>
+<div id="_tabs_7" class="openblock tabs is-loading">
+<div class="content">
+<div class="ulist tablist">
+<ul>
+<li id="_tabs_7_java" class="tab">
+<p>Java</p>
+</li>
+<li id="_tabs_7_xml" class="tab">
+<p>XML</p>
+</li>
+</ul>
+</div>
+<div id="_tabs_7_java--panel" class="tabpanel" aria-labelledby="_tabs_7_java">
 <div class="listingblock">
 <div class="content">
 <pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">interceptSendToEndpoint("kafka*")
@@ -2284,9 +2463,8 @@ from("jms:queue:order")
   .to("kafka:order");</code></pre>
 </div>
 </div>
-<div class="paragraph">
-<p>And in XML:</p>
 </div>
+<div id="_tabs_7_xml--panel" class="tabpanel" aria-labelledby="_tabs_7_xml">
 <div class="listingblock">
 <div class="content">
 <pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;camelContext&gt;
@@ -2305,15 +2483,31 @@ from("jms:queue:order")
 &lt;/camelContext&gt;</code></pre>
 </div>
 </div>
+</div>
+</div>
+</div>
 <div class="sect2">
 <h3 id="_skip_sending_to_original_endpoint"><a class="anchor" href="#_skip_sending_to_original_endpoint"></a>Skip sending to original endpoint</h3>
 <div class="paragraph">
 <p>Sometimes you want to <strong>intercept and skip</strong> sending messages to a specific endpoint.</p>
 </div>
 <div class="paragraph">
-<p>For example to avoid sending any message to kafka, but detour them to a
+<p>For example, to avoid sending any message to kafka, but detour them to a
 <a href="../mock-component.html" class="xref page">mock</a> endpoint, it can be done as follows:</p>
 </div>
+<div id="_tabs_8" class="openblock tabs is-loading">
+<div class="content">
+<div class="ulist tablist">
+<ul>
+<li id="_tabs_8_java" class="tab">
+<p>Java</p>
+</li>
+<li id="_tabs_8_xml" class="tab">
+<p>XML</p>
+</li>
+</ul>
+</div>
+<div id="_tabs_8_java--panel" class="tabpanel" aria-labelledby="_tabs_8_java">
 <div class="listingblock">
 <div class="content">
 <pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">interceptSendToEndpoint("kafka*").skipSendToOriginalEndpoint()
@@ -2325,9 +2519,8 @@ from("jms:queue:order")
   .to("kafka:order");</code></pre>
 </div>
 </div>
-<div class="paragraph">
-<p>And in XML:</p>
 </div>
+<div id="_tabs_8_xml--panel" class="tabpanel" aria-labelledby="_tabs_8_xml">
 <div class="listingblock">
 <div class="content">
 <pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;camelContext&gt;
@@ -2347,13 +2540,29 @@ from("jms:queue:order")
 </div>
 </div>
 </div>
+</div>
+</div>
+</div>
 <div class="sect2">
 <h3 id="_conditional_skipping_sending_to_endpoint"><a class="anchor" href="#_conditional_skipping_sending_to_endpoint"></a>Conditional skipping sending to endpoint</h3>
 <div class="paragraph">
-<p>You can combine both a <a href="../../../manual/predicate.html" class="xref page">predicate</a> and skip sending to the original endpoint.
-For example suppose you have some "test" messages that sometimes occur, and that you
+<p>You can combine both a <a href="../../../manual/4.10.x/predicate.html" class="xref page">predicate</a> and skip sending to the original endpoint.
+For example, suppose you have some "test" messages that sometimes occur, and that you
 want to avoid sending these messages to a downstream kafka system, then this can be done as shown:</p>
 </div>
+<div id="_tabs_9" class="openblock tabs is-loading">
+<div class="content">
+<div class="ulist tablist">
+<ul>
+<li id="_tabs_9_java" class="tab">
+<p>Java</p>
+</li>
+<li id="_tabs_9_xml" class="tab">
+<p>XML</p>
+</li>
+</ul>
+</div>
+<div id="_tabs_9_java--panel" class="tabpanel" aria-labelledby="_tabs_9_java">
 <div class="listingblock">
 <div class="content">
 <pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">interceptSendToEndpoint("kafka*").skipSendToOriginalEndpoint()
@@ -2366,9 +2575,8 @@ from("jms:queue:order")
   .to("kafka:order");</code></pre>
 </div>
 </div>
-<div class="paragraph">
-<p>And in XML:</p>
 </div>
+<div id="_tabs_9_xml--panel" class="tabpanel" aria-labelledby="_tabs_9_xml">
 <div class="listingblock">
 <div class="content">
 <pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;camelContext&gt;
@@ -2386,6 +2594,9 @@ from("jms:queue:order")
   &lt;/route&gt;
 
 &lt;/camelContext&gt;</code></pre>
+</div>
+</div>
+</div>
 </div>
 </div>
 </div>
@@ -2417,7 +2628,7 @@ matching by the following rules in the given order:</p>
 <p>This matches only a specific endpoint with exactly the same URI.</p>
 </div>
 <div class="paragraph">
-<p>For example to intercept messages being sent to a specific JMS queue you can do:</p>
+<p>For example, to intercept messages being sent to a specific JMS queue, you can do:</p>
 </div>
 <div class="listingblock">
 <div class="content">
@@ -2429,7 +2640,8 @@ matching by the following rules in the given order:</p>
 <h3 id="_intercepting_when_matching_endpoints_by_wildcard"><a class="anchor" href="#_intercepting_when_matching_endpoints_by_wildcard"></a>Intercepting when matching endpoints by wildcard</h3>
 <div class="paragraph">
 <p>Match by wildcard allows you to match a range of endpoints or all of a
-given type. For instance use <code>file:*</code> will match all <a href="../file-component.html" class="xref page">file</a> based endpoints.</p>
+given type.
+For instance use <code>file:*</code> will match all <a href="../file-component.html" class="xref page">file-based</a> endpoints.</p>
 </div>
 <div class="listingblock">
 <div class="content">
@@ -2455,7 +2667,7 @@ from specific folders like:</p>
 <div class="paragraph">
 <p>Match by regular expression is just like match by wildcard but using
 regex instead. So if we want to intercept incoming messages from gold
-and silver JMS queues we can do:</p>
+and silver JMS queues, we can do:</p>
 </div>
 <div class="listingblock">
 <div class="content">
@@ -2470,6 +2682,8 @@ and silver JMS queues we can do:</p>
 </main>
 </div>
 <footer class="footer">
+  <p>This page was built using the Antora default UI.</p>
+  <p>The source code for this UI is licensed under the terms of the MPL-2.0 license.</p>
 </footer>
 <script id="site-script" src="../../../_/js/site.js" data-ui-root-path="../../../_"></script>
 <script async src="../../../_/js/vendor/highlight.js"></script>

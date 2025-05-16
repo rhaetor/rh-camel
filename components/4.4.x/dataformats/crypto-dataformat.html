@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>Crypto (Java Cryptographic Extension) :: Red Hat Camel Reference</title>
+    <title>Crypto (Java Cryptographic Extension) :: Red Hat build of Apache Camel</title>
     <meta name="description" content="Encrypt and decrypt messages using Java Cryptography Extension (JCE).">
     <meta name="generator" content="Antora 3.1.4">
     <link rel="stylesheet" href="../../../_/css/site.css">
@@ -12,7 +12,7 @@
 <header class="header">
   <nav class="navbar">
     <div class="navbar-brand">
-      <a class="navbar-item" href="../../manual/index.html">Red Hat build of Apache Camel manual</a>
+      <a class="navbar-item" href="/">Red Hat build of Apache Camel</a>
       <button class="navbar-burger" data-target="topbar-nav">
         <span></span>
         <span></span>
@@ -22,11 +22,12 @@
   </nav>
 </header>
 <div class="body">
-<div class="nav-container" data-component="components" data-version="next">
+<div class="nav-container" data-component="components" data-version="4.4.x">
   <aside class="nav">
     <div class="panels">
 <div class="nav-panel-menu is-active" data-panel="menu">
   <nav class="nav-menu">
+    <button class="nav-menu-toggle" aria-label="Toggle expand/collapse all" style="display: none"></button>
     <h3 class="title"><a href="../index.html">Camel Components</a></h3>
 <ul class="nav-list">
   <li class="nav-item" data-depth="0">
@@ -1819,22 +1820,40 @@
 <div class="nav-panel-explore" data-panel="explore">
   <div class="context">
     <span class="title">Camel Components</span>
-    <span class="version">Next (Pre-release)</span>
+    <span class="version">4.4.x</span>
   </div>
   <ul class="components">
     <li class="component is-current">
-      <a class="title" href="../index.html">Camel Components</a>
+      <div class="title"><a href="../../4.10.x/index.html">Camel Components</a></div>
       <ul class="versions">
-        <li class="version is-current is-latest">
-          <a href="../index.html">Next (Pre-release)</a>
+        <li class="version is-latest">
+          <a href="../../4.10.x/index.html">4.10.x (LTS)</a>
+        </li>
+        <li class="version">
+          <a href="../../4.8.x/index.html">4.8.x</a>
+        </li>
+        <li class="version is-current">
+          <a href="../index.html">4.4.x</a>
+        </li>
+        <li class="version">
+          <a href="../../4.0.x/index.html">4.0.x</a>
         </li>
       </ul>
     </li>
     <li class="component">
-      <a class="title" href="../../../manual/index.html">User manual</a>
+      <div class="title"><a href="../../../manual/4.10.x/index.html">User manual</a></div>
       <ul class="versions">
         <li class="version is-latest">
-          <a href="../../../manual/index.html">default</a>
+          <a href="../../../manual/4.10.x/index.html">4.10.x</a>
+        </li>
+        <li class="version">
+          <a href="../../../manual/4.8.x/index.html">4.8.x</a>
+        </li>
+        <li class="version">
+          <a href="../../../manual/4.4.x/index.html">4.4.x</a>
+        </li>
+        <li class="version">
+          <a href="../../../manual/4.0.x/index.html">4.0.x</a>
         </li>
       </ul>
     </li>
@@ -1846,7 +1865,7 @@
 <main class="article">
 <div class="toolbar" role="navigation">
 <button class="nav-toggle"></button>
-  <a href="../../../manual/index.html" class="home-link"></a>
+  <a href="../../../manual/4.10.x/index.html" class="home-link"></a>
 <nav class="breadcrumbs" aria-label="breadcrumbs">
   <ul>
     <li><a href="../index.html">Camel Components</a></li>
@@ -1854,6 +1873,16 @@
     <li><a href="crypto-dataformat.html">Crypto (Java Cryptographic Extension)</a></li>
   </ul>
 </nav>
+<div class="page-versions">
+  <button class="version-menu-toggle" title="Show other versions of page">4.4.x</button>
+  <div class="version-menu">
+    <a class="version" href="../../4.10.x/dataformats/crypto-dataformat.html">4.10.x (LTS)</a>
+    <a class="version" href="../../4.8.x/dataformats/crypto-dataformat.html">4.8.x</a>
+    <a class="version is-current" href="crypto-dataformat.html">4.4.x</a>
+    <a class="version is-missing" href="../../4.0.x/index.html">4.0.x</a>
+  </div>
+</div>
+<div class="edit-this-page"><a href="https://github.com/rhaetor/rh-camel-jboss/edit/camel-4.4.0-branch/docs/components/modules/dataformats/pages/crypto-dataformat.adoc">Edit this Page</a></div>
 </div>
   <div class="content">
 <aside class="toc sidebar" data-title="Contents" data-levels="2">
@@ -1869,9 +1898,9 @@
 <div class="paragraph">
 <p>The Crypto Data Format integrates the Java
 Cryptographic Extension into Camel, allowing simple and flexible
-encryption and decryption of messages using Camel&#8217;s familiar marshall
-and unmarshal formatting mechanism. It assumes marshalling to mean
-encryption to cyphertext and unmarshalling to mean decryption back to
+encryption and&lt; decryption of messages using Camel&#8217;s familiar marshal
+and unmarshal formatting mechanism. It assumes marshaling to mean
+encryption to cyphertext and unmarshaling to mean decryption back to
 the original plaintext. This data format implements only symmetric
 (shared-key) encryption and decyption.</p>
 </div>
@@ -1997,8 +2026,8 @@ the original plaintext. This data format implements only symmetric
 <h2 id="_basic_usage"><a class="anchor" href="#_basic_usage"></a>Basic Usage</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>At its most basic all that is required to encrypt/decrypt an exchange is a shared secret key.
-If one or more instances of the Crypto data format are configured with this key the format can
+<p>At its most basic, all that is required to encrypt/decrypt an exchange is a shared secret key.
+If one or more instances of the Crypto data format are configured with this key, the format can
 be used to encrypt the payload in one route (or part of one) and decrypted in another.
 For example, using the Java DSL as follows:</p>
 </div>
@@ -2041,7 +2070,7 @@ from("direct:basic-encryption")
 <h2 id="_specifying_the_encryption_algorithm"><a class="anchor" href="#_specifying_the_encryption_algorithm"></a>Specifying the Encryption Algorithm</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>Changing the algorithm is a matter of supplying the JCE algorithm name. If you change the algorithm you will need to use a compatible key.</p>
+<p>Changing the algorithm is a matter of supplying the JCE algorithm name. If you change the algorithm, you will need to use a compatible key.</p>
 </div>
 <div class="listingblock">
 <div class="content">
@@ -2069,7 +2098,7 @@ from("direct:hmac-algorithm")
 <div class="paragraph">
 <p>Some crypto algorithms, particularly block algorithms, require configuration with an initial block of data known as an Initialization Vector.
 In the JCE this is passed as an AlgorithmParameterSpec when the Cipher is initialized.
-To use such a vector with the CryptoDataFormat you can configure it with a byte[] containing the required data e.g.</p>
+To use such a vector with the CryptoDataFormat, you can configure it with a byte[] containing the required data, e.g.</p>
 </div>
 <div class="listingblock">
 <div class="content">
@@ -2097,6 +2126,19 @@ from("direct:init-vector")
 <div class="paragraph">
 <p>The same vector is required in both the encryption and decryption phases. As it is not necessary to keep the IV a secret, the DataFormat allows for it to be inlined into the encrypted data and subsequently read out in the decryption phase to initialize the Cipher. To inline the IV set the <code>Inline</code> flag.</p>
 </div>
+<div id="_tabs_1" class="openblock tabs is-sync is-loading">
+<div class="content">
+<div class="ulist tablist">
+<ul>
+<li id="_tabs_1_java" class="tab">
+<p>Java</p>
+</li>
+<li id="_tabs_1_spring_xml" class="tab">
+<p>Spring XML</p>
+</li>
+</ul>
+</div>
+<div id="_tabs_1_java--panel" class="tabpanel" aria-labelledby="_tabs_1_java">
 <div class="listingblock">
 <div class="content">
 <pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">KeyGenerator generator = KeyGenerator.getInstance("DES");
@@ -2116,9 +2158,8 @@ from("direct:inline")
     .to("mock:unencrypted");</code></pre>
 </div>
 </div>
-<div class="paragraph">
-<p>or with spring.</p>
 </div>
+<div id="_tabs_1_spring_xml--panel" class="tabpanel" aria-labelledby="_tabs_1_spring_xml">
 <div class="listingblock">
 <div class="content">
 <pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;crypto id="inline" algorithm="DES/CBC/PKCS5Padding" keyRef="desKey" initVectorRef="initializationVector"
@@ -2126,8 +2167,11 @@ from("direct:inline")
 &lt;crypto id="inline-decrypt" algorithm="DES/CBC/PKCS5Padding" keyRef="desKey" inline="true" /&gt;</code></pre>
 </div>
 </div>
+</div>
+</div>
+</div>
 <div class="paragraph">
-<p>For more information of the use of Initialization Vectors, consult</p>
+<p>For more information about the use of Initialization Vectors, consult</p>
 </div>
 <div class="ulist">
 <ul>
@@ -2148,8 +2192,21 @@ from("direct:inline")
 <h2 id="_hashed_message_authentication_codes_hmac"><a class="anchor" href="#_hashed_message_authentication_codes_hmac"></a>Hashed Message Authentication Codes (HMAC)</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>To avoid attacks against the encrypted data while it is in transit the CryptoDataFormat can also calculate a Message Authentication Code for the encrypted exchange contents based on a configurable MAC algorithm. The calculated HMAC is appended to the stream after encryption. It is separated from the stream in the decryption phase. The MAC is recalculated and verified against the transmitted version to ensure nothing was tampered with in transit. For more information on Message Authentication Codes see <a href="http://en.wikipedia.org/wiki/HMAC" class="bare">http://en.wikipedia.org/wiki/HMAC</a></p>
+<p>To avoid attacks against the encrypted data while it is in transit, the CryptoDataFormat can also calculate a Message Authentication Code for the encrypted exchange contents based on a configurable MAC algorithm. The calculated HMAC is appended to the stream after encryption. It is separated from the stream in the decryption phase. The MAC is recalculated and verified against the transmitted version to ensure nothing was tampered with in transit. For more information on Message Authentication Codes see <a href="http://en.wikipedia.org/wiki/HMAC" class="bare">http://en.wikipedia.org/wiki/HMAC</a></p>
 </div>
+<div id="_tabs_2" class="openblock tabs is-sync is-loading">
+<div class="content">
+<div class="ulist tablist">
+<ul>
+<li id="_tabs_2_java" class="tab">
+<p>Java</p>
+</li>
+<li id="_tabs_2_spring_xml" class="tab">
+<p>Spring XML</p>
+</li>
+</ul>
+</div>
+<div id="_tabs_2_java--panel" class="tabpanel" aria-labelledby="_tabs_2_java">
 <div class="listingblock">
 <div class="content">
 <pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">KeyGenerator generator = KeyGenerator.getInstance("DES");
@@ -2164,17 +2221,32 @@ from("direct:hmac")
     .to("mock:unencrypted");</code></pre>
 </div>
 </div>
-<div class="paragraph">
-<p>or with spring.</p>
 </div>
+<div id="_tabs_2_spring_xml--panel" class="tabpanel" aria-labelledby="_tabs_2_spring_xml">
 <div class="listingblock">
 <div class="content">
 <pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;crypto id="hmac" algorithm="DES" keyRef="desKey" shouldAppendHMAC="true" /&gt;</code></pre>
 </div>
 </div>
-<div class="paragraph">
-<p>By default the HMAC is calculated using the HmacSHA1 mac algorithm though this can be easily changed by supplying a different algorithm name. See here for how to check what algorithms are available through the configured security providers</p>
 </div>
+</div>
+</div>
+<div class="paragraph">
+<p>By default, the HMAC is calculated using the HmacSHA1 mac algorithm, though this can be easily changed by supplying a different algorithm name. See here for how to check what algorithms are available through the configured security providers</p>
+</div>
+<div id="_tabs_3" class="openblock tabs is-sync is-loading">
+<div class="content">
+<div class="ulist tablist">
+<ul>
+<li id="_tabs_3_java" class="tab">
+<p>Java</p>
+</li>
+<li id="_tabs_3_spring_xml" class="tab">
+<p>Spring XML</p>
+</li>
+</ul>
+</div>
+<div id="_tabs_3_java--panel" class="tabpanel" aria-labelledby="_tabs_3_java">
 <div class="listingblock">
 <div class="content">
 <pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">KeyGenerator generator = KeyGenerator.getInstance("DES");
@@ -2190,12 +2262,14 @@ from("direct:hmac-algorithm")
     .to("mock:unencrypted");</code></pre>
 </div>
 </div>
-<div class="paragraph">
-<p>or with spring.</p>
 </div>
+<div id="_tabs_3_spring_xml--panel" class="tabpanel" aria-labelledby="_tabs_3_spring_xml">
 <div class="listingblock">
 <div class="content">
 <pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;crypto id="hmac-algorithm" algorithm="DES" keyRef="desKey" macAlgorithm="HmacMD5" shouldAppendHMAC="true" /&gt;</code></pre>
+</div>
+</div>
+</div>
 </div>
 </div>
 </div>
@@ -2204,10 +2278,10 @@ from("direct:hmac-algorithm")
 <h2 id="_supplying_keys_dynamically"><a class="anchor" href="#_supplying_keys_dynamically"></a>Supplying Keys Dynamically</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>When using a Recipient list or similar EIP the recipient of an exchange can vary dynamically.
-Using the same key across all recipients may neither be feasible or desirable. It would be useful to be able to specify
-keys dynamically on a per exchange basis. The exchange could then be dynamically enriched with the key of its target
-recipient before being processed by the data format. To facilitate this the DataFormat allows for keys to be supplied
+<p>When using a Recipient list or similar EIP, the recipient of an exchange can vary dynamically.
+Using the same key across all recipients may neither be feasible nor desirable. It would be useful to be able to specify
+keys dynamically on a per-exchange basis. The exchange could then be dynamically enriched with the key of its target
+recipient before being processed by the data format. To facilitate this, the DataFormat allows for keys to be supplied
 dynamically via the message headers below</p>
 </div>
 <div class="ulist">
@@ -2217,12 +2291,25 @@ dynamically via the message headers below</p>
 </li>
 </ul>
 </div>
+<div id="_tabs_4" class="openblock tabs is-sync is-loading">
+<div class="content">
+<div class="ulist tablist">
+<ul>
+<li id="_tabs_4_java" class="tab">
+<p>Java</p>
+</li>
+<li id="_tabs_4_spring_xml" class="tab">
+<p>Spring XML</p>
+</li>
+</ul>
+</div>
+<div id="_tabs_4_java--panel" class="tabpanel" aria-labelledby="_tabs_4_java">
 <div class="listingblock">
 <div class="content">
 <pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">CryptoDataFormat cryptoFormat = new CryptoDataFormat("DES", null);
 /**
  * Note: the header containing the key should be cleared after
- * marshalling to stop it from leaking by accident and
+ * marshaling to stop it from leaking by accident and
  * potentially being compromised. The processor version below is
  * arguably better as the key is left in the header when you use
  * the DSL leaks the fact that camel encryption was used.
@@ -2240,12 +2327,14 @@ from("direct:key-in-header-decrypt").unmarshal(cryptoFormat).process(new Process
 }).to("mock:unencrypted");</code></pre>
 </div>
 </div>
-<div class="paragraph">
-<p>or with spring:</p>
 </div>
+<div id="_tabs_4_spring_xml--panel" class="tabpanel" aria-labelledby="_tabs_4_spring_xml">
 <div class="listingblock">
 <div class="content">
 <pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;crypto id="nokey" algorithm="DES" /&gt;</code></pre>
+</div>
+</div>
+</div>
 </div>
 </div>
 </div>
@@ -2254,7 +2343,7 @@ from("direct:key-in-header-decrypt").unmarshal(cryptoFormat).process(new Process
 <h2 id="_dependencies"><a class="anchor" href="#_dependencies"></a>Dependencies</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>To use the <a href="../crypto-component.html" class="xref page">Crypto</a> dataformat in your camel routes you
+<p>To use the <a href="../crypto-component.html" class="xref page">Crypto</a> dataformat in your camel routes, you
 need to add the following dependency to your pom.</p>
 </div>
 <div class="listingblock">
@@ -2267,6 +2356,9 @@ need to add the following dependency to your pom.</p>
 &lt;/dependency&gt;</code></pre>
 </div>
 </div>
+<div class="paragraph">
+<p>Unresolved include directive in modules/dataformats/pages/crypto-dataformat.adoc - include::spring-boot:partial$starter.adoc[]</p>
+</div>
 </div>
 </div>
 </article>
@@ -2274,6 +2366,8 @@ need to add the following dependency to your pom.</p>
 </main>
 </div>
 <footer class="footer">
+  <p>This page was built using the Antora default UI.</p>
+  <p>The source code for this UI is licensed under the terms of the MPL-2.0 license.</p>
 </footer>
 <script id="site-script" src="../../../_/js/site.js" data-ui-root-path="../../../_"></script>
 <script async src="../../../_/js/vendor/highlight.js"></script>

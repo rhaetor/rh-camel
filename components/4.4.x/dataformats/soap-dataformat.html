@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>SOAP :: Red Hat Camel Reference</title>
+    <title>SOAP :: Red Hat build of Apache Camel</title>
     <meta name="description" content="Marshal Java objects to SOAP messages and back.">
     <meta name="generator" content="Antora 3.1.4">
     <link rel="stylesheet" href="../../../_/css/site.css">
@@ -12,7 +12,7 @@
 <header class="header">
   <nav class="navbar">
     <div class="navbar-brand">
-      <a class="navbar-item" href="../../manual/index.html">Red Hat build of Apache Camel manual</a>
+      <a class="navbar-item" href="/">Red Hat build of Apache Camel</a>
       <button class="navbar-burger" data-target="topbar-nav">
         <span></span>
         <span></span>
@@ -22,11 +22,12 @@
   </nav>
 </header>
 <div class="body">
-<div class="nav-container" data-component="components" data-version="next">
+<div class="nav-container" data-component="components" data-version="4.4.x">
   <aside class="nav">
     <div class="panels">
 <div class="nav-panel-menu is-active" data-panel="menu">
   <nav class="nav-menu">
+    <button class="nav-menu-toggle" aria-label="Toggle expand/collapse all" style="display: none"></button>
     <h3 class="title"><a href="../index.html">Camel Components</a></h3>
 <ul class="nav-list">
   <li class="nav-item" data-depth="0">
@@ -1819,22 +1820,40 @@
 <div class="nav-panel-explore" data-panel="explore">
   <div class="context">
     <span class="title">Camel Components</span>
-    <span class="version">Next (Pre-release)</span>
+    <span class="version">4.4.x</span>
   </div>
   <ul class="components">
     <li class="component is-current">
-      <a class="title" href="../index.html">Camel Components</a>
+      <div class="title"><a href="../../4.10.x/index.html">Camel Components</a></div>
       <ul class="versions">
-        <li class="version is-current is-latest">
-          <a href="../index.html">Next (Pre-release)</a>
+        <li class="version is-latest">
+          <a href="../../4.10.x/index.html">4.10.x (LTS)</a>
+        </li>
+        <li class="version">
+          <a href="../../4.8.x/index.html">4.8.x</a>
+        </li>
+        <li class="version is-current">
+          <a href="../index.html">4.4.x</a>
+        </li>
+        <li class="version">
+          <a href="../../4.0.x/index.html">4.0.x</a>
         </li>
       </ul>
     </li>
     <li class="component">
-      <a class="title" href="../../../manual/index.html">User manual</a>
+      <div class="title"><a href="../../../manual/4.10.x/index.html">User manual</a></div>
       <ul class="versions">
         <li class="version is-latest">
-          <a href="../../../manual/index.html">default</a>
+          <a href="../../../manual/4.10.x/index.html">4.10.x</a>
+        </li>
+        <li class="version">
+          <a href="../../../manual/4.8.x/index.html">4.8.x</a>
+        </li>
+        <li class="version">
+          <a href="../../../manual/4.4.x/index.html">4.4.x</a>
+        </li>
+        <li class="version">
+          <a href="../../../manual/4.0.x/index.html">4.0.x</a>
         </li>
       </ul>
     </li>
@@ -1846,7 +1865,7 @@
 <main class="article">
 <div class="toolbar" role="navigation">
 <button class="nav-toggle"></button>
-  <a href="../../../manual/index.html" class="home-link"></a>
+  <a href="../../../manual/4.10.x/index.html" class="home-link"></a>
 <nav class="breadcrumbs" aria-label="breadcrumbs">
   <ul>
     <li><a href="../index.html">Camel Components</a></li>
@@ -1854,6 +1873,16 @@
     <li><a href="soap-dataformat.html">SOAP</a></li>
   </ul>
 </nav>
+<div class="page-versions">
+  <button class="version-menu-toggle" title="Show other versions of page">4.4.x</button>
+  <div class="version-menu">
+    <a class="version" href="../../4.10.x/dataformats/soap-dataformat.html">4.10.x (LTS)</a>
+    <a class="version" href="../../4.8.x/dataformats/soap-dataformat.html">4.8.x</a>
+    <a class="version is-current" href="soap-dataformat.html">4.4.x</a>
+    <a class="version is-missing" href="../../4.0.x/index.html">4.0.x</a>
+  </div>
+</div>
+<div class="edit-this-page"><a href="https://github.com/rhaetor/rh-camel-jboss/edit/camel-4.4.0-branch/docs/components/modules/dataformats/pages/soap-dataformat.adoc">Edit this Page</a></div>
 </div>
   <div class="content">
 <aside class="toc sidebar" data-title="Contents" data-levels="2">
@@ -1869,14 +1898,14 @@
 <div class="paragraph">
 <p>SOAP is a Data Format which uses JAXB2 and JAX-WS
 annotations to marshal and unmarshal SOAP payloads. It provides the
-basic features of Apache CXF without need for the CXF Stack.</p>
+basic features of Apache CXF without the need for the CXF Stack.</p>
 </div>
 <div class="paragraph">
 <p><strong>Namespace prefix mapping</strong></p>
 </div>
 <div class="paragraph">
 <p>See <a href="jaxb-dataformat.html" class="xref page">JAXB</a> for details how you can control namespace
-prefix mappings when marshalling using SOAP data format.</p>
+prefix mappings when marshaling using SOAP data format.</p>
 </div>
 </div>
 </div>
@@ -1962,7 +1991,7 @@ prefix mappings when marshalling using SOAP data format.</p>
 <td class="tableblock halign-left valign-top"></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>String</code></p></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>When marshalling using JAXB or SOAP then the JAXB implementation will automatic assign namespace prefixes, such as ns2, ns3, ns4 etc. To control this mapping, Camel allows you to refer to a map which contains the desired mapping.</p>
+<p>When marshaling using JAXB or SOAP then the JAXB implementation will automatic assign namespace prefixes, such as ns2, ns3, ns4 etc. To control this mapping, Camel allows you to refer to a map which contains the desired mapping.</p>
 </div></div></td>
 </tr>
 <tr>
@@ -1984,7 +2013,7 @@ prefix mappings when marshalling using SOAP data format.</p>
 <div class="sectionbody">
 <div class="paragraph">
 <p>An element name strategy is used for two purposes. The first is to find
-a xml element name for a given object and soap action when marshaling
+an XML element name for a given object and soap action when marshaling
 the object into a SOAP message. The second is to find an Exception class
 for a given soap fault name.</p>
 </div>
@@ -2007,8 +2036,8 @@ is not supported</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">TypeNameStrategy</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Uses the name and namespace from the @XMLType annotation of the given
-type. If no namespace is set then package-info is used. Exception lookup
+<td class="tableblock halign-left valign-top"><p class="tableblock">Uses the name and namespace from the <code>@XMLType</code> annotation of the given
+type. If no namespace is set, then package-info is used. Exception lookup
 is not supported</p></td>
 </tr>
 <tr>
@@ -2020,9 +2049,9 @@ and to find the exception class for a SOAP fault</p></td>
 </table>
 <div class="paragraph">
 <p>If you have generated the web service stub code with cxf-codegen or a
-similar tool then you probably will want to use the
-ServiceInterfaceStrategy. In the case you have no annotated service
-interface you should use QNameStrategy or TypeNameStrategy.</p>
+similar tool, then you probably will want to use the
+<code>ServiceInterfaceStrategy</code>. In the case you have no annotated service
+interface you should use <code>QNameStrategy</code> or <code>TypeNameStrategy</code>.</p>
 </div>
 </div>
 </div>
@@ -2030,16 +2059,29 @@ interface you should use QNameStrategy or TypeNameStrategy.</p>
 <h2 id="_using_the_java_dsl"><a class="anchor" href="#_using_the_java_dsl"></a>Using the Java DSL</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>The following example uses a named DataFormat of <em>soap</em> which is
-configured with the package com.example.customerservice to initialize
+<p>The following example uses a named <code>DataFormat</code> of <em>soap</em> which is
+configured with the package <code>com.example.customerservice</code> to initialize
 the
 <a href="http://java.sun.com/javase/6/docs/api/javax/xml/bind/JAXBContext.html">JAXBContext</a>.
-The second parameter is the ElementNameStrategy. The route is able to
-marshal normal objects as well as exceptions. (Note the below just sends
-a SOAP Envelope to a queue. A web service provider would actually need
-to be listening to the queue for a SOAP call to actually occur, in which
-case it would be a one way SOAP request. If you need request reply then
-you should look at the next example.)</p>
+The second parameter is the <code>ElementNameStrategy</code>. The route is able to
+marshalnormal objects as well as exceptions.</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>The below just sends a SOAP Envelope to a queue.
+A web service provider would actually need to be listening to the queue for a SOAP call to actually occur, in which
+case it would be a one way SOAP request.
+If you need to request a reply, then you should look at the next example.</p>
+</div>
+</td>
+</tr>
+</table>
 </div>
 <div class="listingblock">
 <div class="content">
@@ -2060,7 +2102,7 @@ from("direct:start")
 <p><strong>See also</strong></p>
 </div>
 <div class="paragraph">
-<p>As the SOAP dataformat inherits from the <a href="jaxb-dataformat.html" class="xref page">JAXB</a> dataformat
+<p>As the SOAP dataformat inherits from the <a href="jaxb-dataformat.html" class="xref page">JAXB</a> dataformat,
 most settings apply here as well</p>
 </div>
 </td>
@@ -2082,12 +2124,12 @@ from("direct:start")
 </div>
 </div>
 <div class="paragraph">
-<p>When using XML DSL there is a version attribute you can set on the
+<p>When using XML DSL, there is a version attribute you can set on the
 &lt;soap&gt; element.</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">    &lt;!-- Defining a ServiceInterfaceStrategy for retrieving the element name when marshalling --&gt;
+<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">    &lt;!-- Defining a ServiceInterfaceStrategy for retrieving the element name when marshaling --&gt;
     &lt;bean id="myNameStrategy" class="org.apache.camel.dataformat.soap.name.ServiceInterfaceStrategy"&gt;
         &lt;constructor-arg value="com.example.customerservice.CustomerService"/&gt;
     &lt;constructor-arg value="true"/&gt;
@@ -2118,18 +2160,18 @@ from("direct:start")
 <p><strong>Since Camel 2.8.1</strong></p>
 </div>
 <div class="paragraph">
-<p>Multi-part SOAP messages are supported by the ServiceInterfaceStrategy.
-The ServiceInterfaceStrategy must be initialized with a service
+<p>Multipart SOAP messages are supported by the <code>ServiceInterfaceStrategy</code>.
+The <code>ServiceInterfaceStrategy</code> must be initialized with a service
 interface definition that is annotated in accordance with JAX-WS 2.2 and
 meets the requirements of the Document Bare style. The target method
 must meet the following criteria, as per the JAX-WS specification:
 1. it must have at most one <code>in</code> or <code>in/out</code> non-header parameter,
 2. if it has a return type other than <code>void</code> it must have no <code>in/out</code> or <code>out</code>
 non-header parameters,
-3. if it it has a return type of <code>void</code> it must have at most one <code>in/out</code> or <code>out</code> non-header parameter.</p>
+3. if it has a return type of <code>void</code> it must have at most one <code>in/out</code> or <code>out</code> non-header parameter.</p>
 </div>
 <div class="paragraph">
-<p>The ServiceInterfaceStrategy should be initialized with a boolean
+<p>The <code>ServiceInterfaceStrategy</code> should be initialized with a boolean
 parameter that indicates whether the mapping strategy applies to the
 request parameters or response parameters.</p>
 </div>
@@ -2147,7 +2189,7 @@ object for <code>In/Out</code> and <code>Out</code> parameters. You may use an i
 parameterized-type directly. The camel-soap DataFormat marshals Holder
 values in accordance with the JAXB mapping for the class of the
 <code>Holder</code>'s value. No mapping is provided for <code>Holder</code> objects in an
-unmarshalled response.</p>
+unmarshaled response.</p>
 </div>
 </div>
 </div>
@@ -2158,7 +2200,7 @@ unmarshalled response.</p>
 <div class="sect2">
 <h3 id="_webservice_client"><a class="anchor" href="#_webservice_client"></a>Webservice client</h3>
 <div class="paragraph">
-<p>The following route supports marshalling the request and unmarshalling a
+<p>The following route supports marshaling the request and unmarshaling a
 response or fault.</p>
 </div>
 <div class="listingblock">
@@ -2196,10 +2238,10 @@ GetCustomersByNameResponse response = proxy.getCustomersByName(new GetCustomersB
 <div class="sect2">
 <h3 id="_webservice_server"><a class="anchor" href="#_webservice_server"></a>Webservice Server</h3>
 <div class="paragraph">
-<p>Using the following route sets up a webservice server that listens on
-jms queue customerServiceQueue and processes requests using the class
-CustomerServiceImpl. The customerServiceImpl of course should implement
-the interface CustomerService. Instead of directly instantiating the
+<p>Using the following route sets up a webservice server that consumes from the
+jms queue <code>customerServiceQueue</code> and processes requests using the class
+<code>CustomerServiceImpl</code>. The <code>customerServiceImpl</code> should implement
+the interface <code>CustomerService</code>. Instead of directly instantiating the
 server class it could be defined in a spring context as a regular bean.</p>
 </div>
 <div class="listingblock">
@@ -2223,8 +2265,8 @@ from("jms://queue:customerServiceQueue")
 <h2 id="_dependencies"><a class="anchor" href="#_dependencies"></a>Dependencies</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>To use the SOAP dataformat in your camel routes you need to add the
-following dependency to your pom.</p>
+<p>To use the SOAP dataformat in your Camel routes, you need to add the
+following dependency to your <code>pom.xml</code>.</p>
 </div>
 <div class="listingblock">
 <div class="content">
@@ -2235,6 +2277,9 @@ following dependency to your pom.</p>
 &lt;/dependency&gt;</code></pre>
 </div>
 </div>
+<div class="paragraph">
+<p>Unresolved include directive in modules/dataformats/pages/soap-dataformat.adoc - include::spring-boot:partial$starter.adoc[]</p>
+</div>
 </div>
 </div>
 </article>
@@ -2242,6 +2287,8 @@ following dependency to your pom.</p>
 </main>
 </div>
 <footer class="footer">
+  <p>This page was built using the Antora default UI.</p>
+  <p>The source code for this UI is licensed under the terms of the MPL-2.0 license.</p>
 </footer>
 <script id="site-script" src="../../../_/js/site.js" data-ui-root-path="../../../_"></script>
 <script async src="../../../_/js/vendor/highlight.js"></script>

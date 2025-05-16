@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>XPath :: Red Hat Camel Reference</title>
+    <title>XPath :: Red Hat build of Apache Camel</title>
     <meta name="description" content="Evaluates an XPath expression against an XML payload.">
     <meta name="generator" content="Antora 3.1.4">
     <link rel="stylesheet" href="../../../_/css/site.css">
@@ -12,7 +12,7 @@
 <header class="header">
   <nav class="navbar">
     <div class="navbar-brand">
-      <a class="navbar-item" href="../../manual/index.html">Red Hat build of Apache Camel manual</a>
+      <a class="navbar-item" href="/">Red Hat build of Apache Camel</a>
       <button class="navbar-burger" data-target="topbar-nav">
         <span></span>
         <span></span>
@@ -22,11 +22,12 @@
   </nav>
 </header>
 <div class="body">
-<div class="nav-container" data-component="components" data-version="next">
+<div class="nav-container" data-component="components" data-version="4.4.x">
   <aside class="nav">
     <div class="panels">
 <div class="nav-panel-menu is-active" data-panel="menu">
   <nav class="nav-menu">
+    <button class="nav-menu-toggle" aria-label="Toggle expand/collapse all" style="display: none"></button>
     <h3 class="title"><a href="../index.html">Camel Components</a></h3>
 <ul class="nav-list">
   <li class="nav-item" data-depth="0">
@@ -1819,22 +1820,40 @@
 <div class="nav-panel-explore" data-panel="explore">
   <div class="context">
     <span class="title">Camel Components</span>
-    <span class="version">Next (Pre-release)</span>
+    <span class="version">4.4.x</span>
   </div>
   <ul class="components">
     <li class="component is-current">
-      <a class="title" href="../index.html">Camel Components</a>
+      <div class="title"><a href="../../4.10.x/index.html">Camel Components</a></div>
       <ul class="versions">
-        <li class="version is-current is-latest">
-          <a href="../index.html">Next (Pre-release)</a>
+        <li class="version is-latest">
+          <a href="../../4.10.x/index.html">4.10.x (LTS)</a>
+        </li>
+        <li class="version">
+          <a href="../../4.8.x/index.html">4.8.x</a>
+        </li>
+        <li class="version is-current">
+          <a href="../index.html">4.4.x</a>
+        </li>
+        <li class="version">
+          <a href="../../4.0.x/index.html">4.0.x</a>
         </li>
       </ul>
     </li>
     <li class="component">
-      <a class="title" href="../../../manual/index.html">User manual</a>
+      <div class="title"><a href="../../../manual/4.10.x/index.html">User manual</a></div>
       <ul class="versions">
         <li class="version is-latest">
-          <a href="../../../manual/index.html">default</a>
+          <a href="../../../manual/4.10.x/index.html">4.10.x</a>
+        </li>
+        <li class="version">
+          <a href="../../../manual/4.8.x/index.html">4.8.x</a>
+        </li>
+        <li class="version">
+          <a href="../../../manual/4.4.x/index.html">4.4.x</a>
+        </li>
+        <li class="version">
+          <a href="../../../manual/4.0.x/index.html">4.0.x</a>
         </li>
       </ul>
     </li>
@@ -1846,7 +1865,7 @@
 <main class="article">
 <div class="toolbar" role="navigation">
 <button class="nav-toggle"></button>
-  <a href="../../../manual/index.html" class="home-link"></a>
+  <a href="../../../manual/4.10.x/index.html" class="home-link"></a>
 <nav class="breadcrumbs" aria-label="breadcrumbs">
   <ul>
     <li><a href="../index.html">Camel Components</a></li>
@@ -1854,6 +1873,16 @@
     <li><a href="xpath-language.html">XPath</a></li>
   </ul>
 </nav>
+<div class="page-versions">
+  <button class="version-menu-toggle" title="Show other versions of page">4.4.x</button>
+  <div class="version-menu">
+    <a class="version" href="../../4.10.x/languages/xpath-language.html">4.10.x (LTS)</a>
+    <a class="version" href="../../4.8.x/languages/xpath-language.html">4.8.x</a>
+    <a class="version is-current" href="xpath-language.html">4.4.x</a>
+    <a class="version is-missing" href="../../4.0.x/index.html">4.0.x</a>
+  </div>
+</div>
+<div class="edit-this-page"><a href="https://github.com/rhaetor/rh-camel-jboss/edit/camel-4.4.0-branch/docs/components/modules/languages/pages/xpath-language.adoc">Edit this Page</a></div>
 </div>
   <div class="content">
 <aside class="toc sidebar" data-title="Contents" data-levels="2">
@@ -1868,8 +1897,8 @@
 </div>
 <div class="paragraph">
 <p>Camel supports <a href="http://www.w3.org/TR/xpath">XPath</a> to allow an
-<a href="../../../manual/expression.html" class="xref page">Expression</a> or <a href="../../../manual/predicate.html" class="xref page">Predicate</a> to be
-used in the <a href="../../../manual/dsl.html" class="xref page">DSL</a>.</p>
+<a href="../../../manual/4.10.x/expression.html" class="xref page">Expression</a> or <a href="../../../manual/4.10.x/predicate.html" class="xref page">Predicate</a> to be
+used in the <a href="../../../manual/4.10.x/dsl.html" class="xref page">DSL</a>.</p>
 </div>
 <div class="paragraph">
 <p>For example, you could use XPath to create a
@@ -2040,8 +2069,7 @@ or as an expression for a <a href="../eips/recipientList-eip.html" class="xref p
 <h2 id="_namespaces"><a class="anchor" href="#_namespaces"></a>Namespaces</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>You can easily use namespaces with XPath expressions using the
-<code>Namespaces</code> helper class.</p>
+<p>You can use namespaces with XPath expressions using the <code>Namespaces</code> helper class.</p>
 </div>
 </div>
 </div>
@@ -2049,7 +2077,8 @@ or as an expression for a <a href="../eips/recipientList-eip.html" class="xref p
 <h2 id="_variables"><a class="anchor" href="#_variables"></a>Variables</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>Variables in XPath is defined in different namespaces. The default
+<p>Variables in XPath are defined in different namespaces.
+The default
 namespace is <code>http://camel.apache.org/schema/spring</code>.</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
@@ -2122,16 +2151,16 @@ namespace is <code>http://camel.apache.org/schema/spring</code>.</p>
 <div class="sect2">
 <h3 id="_namespace_given"><a class="anchor" href="#_namespace_given"></a>Namespace given</h3>
 <div class="paragraph">
-<p>If the namespace is given then Camel is instructed exactly what to
+<p>If the namespace is given, then Camel is instructed exactly what to
 return. However, when resolving Camel will try to
 resolve a header with the given local part first, and return it. If the
-local part has the value <strong>body</strong> then the body is returned instead.</p>
+local part has the value <strong>body,</strong> then the body is returned instead.</p>
 </div>
 </div>
 <div class="sect2">
 <h3 id="_no_namespace_given"><a class="anchor" href="#_no_namespace_given"></a>No namespace given</h3>
 <div class="paragraph">
-<p>If there is no namespace given then Camel resolves only based on the
+<p>If there is no namespace given, then Camel resolves only based on the
 local part. Camel will try to resolve a variable in the following steps:</p>
 </div>
 <div class="ulist">
@@ -2201,7 +2230,7 @@ exchange:</p>
 <td class="tableblock halign-left valign-top"><p class="tableblock">function:properties</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">key for property</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">String</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">To use a <a href="../../../manual/using-propertyplaceholder.html" class="xref page">Property Placeholder</a>.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">To use a <a href="../../../manual/4.10.x/using-propertyplaceholder.html" class="xref page">Property Placeholder</a>.</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">function:simple</p></td>
@@ -2231,7 +2260,7 @@ when the return type is a <code>NodeSet</code>, such as when using with a <a hre
 <h3 id="_functions_example"><a class="anchor" href="#_functions_example"></a>Functions example</h3>
 <div class="paragraph">
 <p>If you prefer to configure your routes in your Spring
-XML file then you can use XPath expressions as follows</p>
+XML file, then you can use XPath expressions as follows</p>
 </div>
 <div class="listingblock">
 <div class="content">
@@ -2256,23 +2285,25 @@ XML file then you can use XPath expressions as follows</p>
 </div>
 <div class="paragraph">
 <p>Notice how we can reuse the namespace prefixes, <strong>foo</strong> in this case, in
-the XPath expression for easier namespace based XPath expressions.</p>
+the XPath expression for easier namespace-based XPath expressions.</p>
 </div>
 </div>
 </div>
 </div>
 <div class="sect1">
-<h2 id="_stream_based_message_bodies"><a class="anchor" href="#_stream_based_message_bodies"></a>Stream based message bodies</h2>
+<h2 id="_stream_based_message_bodies"><a class="anchor" href="#_stream_based_message_bodies"></a>Stream-based message bodies</h2>
 <div class="sectionbody">
 <div class="paragraph">
 <p>If the message body is stream based, which means the input it receives
 is submitted to Camel as a stream. That means you will only be able to
-read the content of the stream <strong>once</strong>. So often when you use
-<a href="#">XPath</a> as <a href="#">Message Filter</a> or
-Content Based Router then you need to
-access the data multiple times, and you should use
-Stream Caching or convert the message body to
-a <code>String</code> prior which is safe to be re-read multiple times.</p>
+read the content of the stream <strong>once</strong>.</p>
+</div>
+<div class="paragraph">
+<p>You often need to access the data multiple times when you use
+<a href="#">XPath</a> as a <a href="#">Message Filter</a> or
+Content-Based Router.
+Then, you should use Stream Caching or convert the message body to
+a <code>String</code> prior, which is safe to be re-read multiple times.</p>
 </div>
 <div class="listingblock">
 <div class="content">
@@ -2291,12 +2322,12 @@ a <code>String</code> prior which is safe to be re-read multiple times.</p>
 </div>
 </div>
 <div class="sect1">
-<h2 id="_setting_result_type"><a class="anchor" href="#_setting_result_type"></a>Setting result type</h2>
+<h2 id="_setting_a_result_type"><a class="anchor" href="#_setting_a_result_type"></a>Setting a result type</h2>
 <div class="sectionbody">
 <div class="paragraph">
 <p>The XPath expression will return a result type using
 native XML objects such as <code>org.w3c.dom.NodeList</code>. However, many times you
-want a result type to be a <code>String</code>. To do this you have to instruct the
+want a result type to be a <code>String</code>. To do this, you have to instruct the
 XPath which result type to use.</p>
 </div>
 <div class="paragraph">
@@ -2347,7 +2378,7 @@ type, so the concat function works.</p>
 <div class="sectionbody">
 <div class="paragraph">
 <p>Some users may have XML stored in a header. To apply an XPath to a
-header&#8217;s value you can do this by defining the 'headerName' attribute.</p>
+header&#8217;s value, you can do this by defining the 'headerName' attribute.</p>
 </div>
 <div class="listingblock">
 <div class="content">
@@ -2355,7 +2386,7 @@ header&#8217;s value you can do this by defining the 'headerName' attribute.</p>
 </div>
 </div>
 <div class="paragraph">
-<p>And in Java DSL you specify the headerName as the 2nd parameter as shown:</p>
+<p>And in Java DSL you specify the headerName as the second parameter as shown:</p>
 </div>
 <div class="listingblock">
 <div class="content">
@@ -2399,7 +2430,7 @@ header&#8217;s value you can do this by defining the 'headerName' attribute.</p>
 <div class="sectionbody">
 <div class="paragraph">
 <p>If you have a standard set of namespaces you wish to work with and wish
-to share them across many XPath expressions you can use the
+to share them across many XPath expressions, you can use the
 <code>org.apache.camel.support.builder.Namespaces</code> when using Java DSL as shown:</p>
 </div>
 <div class="listingblock">
@@ -2413,11 +2444,11 @@ from("direct:start")
 </div>
 <div class="paragraph">
 <p>Notice how the namespaces are provided to <code>xpath</code> with the <code>ns</code> variable
-that are passed in as the 2nd parameter.</p>
+that are passed in as the second parameter.</p>
 </div>
 <div class="paragraph">
 <p>Each namespace is a key=value pair, where the prefix is the key.
-In the XPath expression then the namespace is used by its prefix, eg:</p>
+In the XPath expression then the namespace is used by its prefix, e.g.:</p>
 </div>
 <div class="listingblock">
 <div class="content">
@@ -2435,7 +2466,7 @@ In the XPath expression then the namespace is used by its prefix, eg:</p>
 </div>
 </div>
 <div class="paragraph">
-<p>When using namespaces in XML DSL then its different, as you setup the namespaces
+<p>When using namespaces in XML DSL then its different, as you set up the namespaces
 in the XML root tag (or one of the <code>camelContext</code>, <code>routes</code>, <code>route</code> tags).</p>
 </div>
 <div class="paragraph">
@@ -2474,7 +2505,7 @@ in the line with <code>xmlns:foo="http://example.com/person"</code>:</p>
 <h2 id="_using_xpath_annotation_for_bean_integration"><a class="anchor" href="#_using_xpath_annotation_for_bean_integration"></a>Using @XPath Annotation for Bean Integration</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>You can use <a href="../../../manual/bean-integration.html" class="xref page">Bean Integration</a> to invoke a
+<p>You can use <a href="../../../manual/4.10.x/bean-integration.html" class="xref page">Bean Integration</a> to invoke a
 method on a bean and use various languages such as <code>@XPath</code> to extract a
 value from the message and bind it to a method parameter.</p>
 </div>
@@ -2514,7 +2545,7 @@ to use it as a helper to do custom XPath evaluations.</p>
 <div class="paragraph">
 <p>It requires that you pass in a <code>CamelContext</code>
 since a lot of the moving parts inside the <code>XPathBuilder</code> requires access
-to the Camel <a href="../../../manual/type-converter.html" class="xref page">Type Converter</a>
+to the Camel <a href="../../../manual/4.10.x/type-converter.html" class="xref page">Type Converter</a>
 and hence why <code>CamelContext</code> is needed.</p>
 </div>
 <div class="paragraph">
@@ -2583,8 +2614,7 @@ a custom XPathFactory to use.</p>
 <p>This unit test shows how this can be done to use Saxon instead:</p>
 </div>
 <div class="paragraph">
-<p>Camel will log at <code>INFO</code> level if it uses a non default XPathFactory
-such as:</p>
+<p>Camel will log at <code>INFO</code> level if it uses a non-default <code>XPathFactory</code> such as:</p>
 </div>
 <div class="listingblock">
 <div class="content">
@@ -2593,7 +2623,7 @@ such as:</p>
 </div>
 </div>
 <div class="paragraph">
-<p>To use Apache Xerces you can configure the system property</p>
+<p>To use Apache Xerces, you can configure the system property</p>
 </div>
 <div class="listingblock">
 <div class="content">
@@ -2604,8 +2634,7 @@ such as:</p>
 <div class="sect2">
 <h3 id="_enabling_saxon_from_xml_dsl"><a class="anchor" href="#_enabling_saxon_from_xml_dsl"></a>Enabling Saxon from XML DSL</h3>
 <div class="paragraph">
-<p>Similarly to Java DSL, to enable Saxon from XML DSL you have three
-options:</p>
+<p>Similarly to Java DSL, to enable Saxon from XML DSL, you have three options:</p>
 </div>
 <div class="paragraph">
 <p>Referring to a custom factory:</p>
@@ -2648,16 +2677,16 @@ options:</p>
 <div class="paragraph">
 <p>Many XPath-related issues that users frequently face are
 linked to the usage of namespaces. You may have some misalignment
-between the namespaces present in your message, and those that your XPath
+between the namespaces present in your message and those that your XPath
 expression is aware of or referencing. XPath predicates or expressions
 that are unable to locate the XML elements and attributes due to
-namespaces issues may simply look like <em>they are not working</em>, when in
+namespaces issues may look like <em>they are not working</em>, when in
 reality all there is to it is a lack of namespace definition.</p>
 </div>
 <div class="paragraph">
 <p>Namespaces in XML are completely necessary, and while we would love to
 simplify their usage by implementing some magic or voodoo to wire
-namespaces automatically, truth is that any action down this path would
+namespaces automatically, the truth is that any action down this path would
 disagree with the standards and would greatly hinder interoperability.</p>
 </div>
 <div class="paragraph">
@@ -2702,14 +2731,14 @@ in which case the logging will occur on the INFO level</p>
 <div class="paragraph">
 <p>Camel is able to discover and dump all namespaces present on every
 incoming message before evaluating an XPath expression, providing all
-the richness of information you need to help you analyse and pinpoint
+the richness of information you need to help you analyze and pinpoint
 possible namespace issues.</p>
 </div>
 <div class="paragraph">
 <p>To achieve this, it in turn internally uses another specially tailored
 XPath expression to extract all namespace mappings that appear in the
 message, displaying the prefix and the full namespace URI(s) for each
-individual mapping.</p>
+mapping.</p>
 </div>
 <div class="paragraph">
 <p>Some points to take into account:</p>
@@ -2770,10 +2799,10 @@ xmlns:b=[http://apache.org/camelA, http://apache.org/camelB]}</code></pre>
 <h2 id="_loading_script_from_external_resource"><a class="anchor" href="#_loading_script_from_external_resource"></a>Loading script from external resource</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>You can externalize the script and have Camel load it from a resource
+<p>You can externalize the script and have Apache Camel load it from a resource
 such as <code>"classpath:"</code>, <code>"file:"</code>, or <code>"http:"</code>.
 This is done using the following syntax: <code>"resource:scheme:location"</code>,
-eg to refer to a file on the classpath you can do:</p>
+for example, to refer to a file on the classpath you can do:</p>
 </div>
 <div class="listingblock">
 <div class="content">
@@ -2786,7 +2815,7 @@ eg to refer to a file on the classpath you can do:</p>
 <h2 id="_transforming_a_xml_message"><a class="anchor" href="#_transforming_a_xml_message"></a>Transforming a XML message</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>For basic XML transformation where you have a fixed structure you can represent with a combination of using
+<p>For basic XML transformation where you have a fixed structure, you can represent with a combination of using
 Camel simple and XPath language as:</p>
 </div>
 <div class="paragraph">
@@ -2837,7 +2866,7 @@ Camel simple and XPath language as:</p>
 to extract the content to be used in the output (see previous for output).</p>
 </div>
 <div class="paragraph">
-<p>Since the simple language can output anything you can also use this to output in plain text or JSon etc.</p>
+<p>Since the simple language can output anything, you can also use this to output in plain text or JSon, etc.</p>
 </div>
 <div class="listingblock">
 <div class="content">
@@ -2852,13 +2881,12 @@ to extract the content to be used in the output (see previous for output).</p>
 <h2 id="_dependencies"><a class="anchor" href="#_dependencies"></a>Dependencies</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>To use XPath in your camel routes you need to add the dependency on
-<strong>camel-xpath</strong> which implements the XPath language.</p>
+<p>To use XPath in your camel routes, you need to add the dependency on
+<strong>camel-xpath</strong>, which implements the XPath language.</p>
 </div>
 <div class="paragraph">
-<p>If you use maven you could just add the following to your pom.xml,
-substituting the version number for the latest &amp; greatest release (see
-the download page for the latest versions).</p>
+<p>If you use Maven, you could add the following to your <code>pom.xml</code>,
+substituting the version number for the latest &amp; greatest release.</p>
 </div>
 <div class="listingblock">
 <div class="content">
@@ -2869,6 +2897,9 @@ the download page for the latest versions).</p>
 &lt;/dependency&gt;</code></pre>
 </div>
 </div>
+<div class="paragraph">
+<p>Unresolved include directive in modules/languages/pages/xpath-language.adoc - include::spring-boot:partial$starter.adoc[]</p>
+</div>
 </div>
 </div>
 </article>
@@ -2876,6 +2907,8 @@ the download page for the latest versions).</p>
 </main>
 </div>
 <footer class="footer">
+  <p>This page was built using the Antora default UI.</p>
+  <p>The source code for this UI is licensed under the terms of the MPL-2.0 license.</p>
 </footer>
 <script id="site-script" src="../../../_/js/site.js" data-ui-root-path="../../../_"></script>
 <script async src="../../../_/js/vendor/highlight.js"></script>

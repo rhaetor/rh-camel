@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>REST OpenApi :: Red Hat Camel Reference</title>
+    <title>REST OpenApi :: Red Hat build of Apache Camel</title>
     <meta name="description" content="Configure REST producers based on an OpenAPI specification document delegating to a component implementing the RestProducerFactory interface.">
     <meta name="generator" content="Antora 3.1.4">
     <link rel="stylesheet" href="../../_/css/site.css">
@@ -12,7 +12,7 @@
 <header class="header">
   <nav class="navbar">
     <div class="navbar-brand">
-      <a class="navbar-item" href="../../manual/index.html">Red Hat build of Apache Camel manual</a>
+      <a class="navbar-item" href="/">Red Hat build of Apache Camel</a>
       <button class="navbar-burger" data-target="topbar-nav">
         <span></span>
         <span></span>
@@ -22,11 +22,12 @@
   </nav>
 </header>
 <div class="body">
-<div class="nav-container" data-component="components" data-version="next">
+<div class="nav-container" data-component="components" data-version="4.4.x">
   <aside class="nav">
     <div class="panels">
 <div class="nav-panel-menu is-active" data-panel="menu">
   <nav class="nav-menu">
+    <button class="nav-menu-toggle" aria-label="Toggle expand/collapse all" style="display: none"></button>
     <h3 class="title"><a href="index.html">Camel Components</a></h3>
 <ul class="nav-list">
   <li class="nav-item" data-depth="0">
@@ -912,6 +913,33 @@
     <a class="nav-link" href="splunk-hec-component.html">Splunk HEC</a>
   </li>
   <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="spring-summary.html">Spring</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="spring-batch-component.html">Spring Batch</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="spring-event-component.html">Spring Event</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="spring-jdbc-component.html">Spring JDBC</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="spring-ldap-component.html">Spring LDAP</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="spring-rabbitmq-component.html">Spring RabbitMQ</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="spring-redis-component.html">Spring Redis</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="spring-ws-component.html">Spring WebService</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
     <a class="nav-link" href="sql-component.html">SQL</a>
   </li>
   <li class="nav-item" data-depth="2">
@@ -1792,22 +1820,40 @@
 <div class="nav-panel-explore" data-panel="explore">
   <div class="context">
     <span class="title">Camel Components</span>
-    <span class="version">Next (Pre-release)</span>
+    <span class="version">4.4.x</span>
   </div>
   <ul class="components">
     <li class="component is-current">
-      <a class="title" href="index.html">Camel Components</a>
+      <div class="title"><a href="../4.10.x/index.html">Camel Components</a></div>
       <ul class="versions">
-        <li class="version is-current is-latest">
-          <a href="index.html">Next (Pre-release)</a>
+        <li class="version is-latest">
+          <a href="../4.10.x/index.html">4.10.x (LTS)</a>
+        </li>
+        <li class="version">
+          <a href="../4.8.x/index.html">4.8.x</a>
+        </li>
+        <li class="version is-current">
+          <a href="index.html">4.4.x</a>
+        </li>
+        <li class="version">
+          <a href="../4.0.x/index.html">4.0.x</a>
         </li>
       </ul>
     </li>
     <li class="component">
-      <a class="title" href="../../manual/index.html">User manual</a>
+      <div class="title"><a href="../../manual/4.10.x/index.html">User manual</a></div>
       <ul class="versions">
         <li class="version is-latest">
-          <a href="../../manual/index.html">default</a>
+          <a href="../../manual/4.10.x/index.html">4.10.x</a>
+        </li>
+        <li class="version">
+          <a href="../../manual/4.8.x/index.html">4.8.x</a>
+        </li>
+        <li class="version">
+          <a href="../../manual/4.4.x/index.html">4.4.x</a>
+        </li>
+        <li class="version">
+          <a href="../../manual/4.0.x/index.html">4.0.x</a>
         </li>
       </ul>
     </li>
@@ -1819,7 +1865,7 @@
 <main class="article">
 <div class="toolbar" role="navigation">
 <button class="nav-toggle"></button>
-  <a href="../../manual/index.html" class="home-link"></a>
+  <a href="../../manual/4.10.x/index.html" class="home-link"></a>
 <nav class="breadcrumbs" aria-label="breadcrumbs">
   <ul>
     <li><a href="index.html">Camel Components</a></li>
@@ -1827,6 +1873,16 @@
     <li><a href="rest-openapi-component.html">REST OpenApi</a></li>
   </ul>
 </nav>
+<div class="page-versions">
+  <button class="version-menu-toggle" title="Show other versions of page">4.4.x</button>
+  <div class="version-menu">
+    <a class="version" href="../4.10.x/rest-openapi-component.html">4.10.x (LTS)</a>
+    <a class="version" href="../4.8.x/rest-openapi-component.html">4.8.x</a>
+    <a class="version is-current" href="rest-openapi-component.html">4.4.x</a>
+    <a class="version is-missing" href="../4.0.x/index.html">4.0.x</a>
+  </div>
+</div>
+<div class="edit-this-page"><a href="https://github.com/rhaetor/rh-camel-jboss/edit/camel-4.4.0-branch/docs/components/modules/ROOT/pages/rest-openapi-component.adoc">Edit this Page</a></div>
 </div>
   <div class="content">
 <aside class="toc sidebar" data-title="Contents" data-levels="2">
@@ -1843,10 +1899,10 @@
 <p><strong>Only producer is supported</strong></p>
 </div>
 <div class="paragraph">
-<p>The REST OpenApi* configures rest producers from
+<p>The REST OpenApi configures rest producers from
 <a href="https://www.openapis.org/">OpenApi</a> (Open API) specification document and
 delegates to a component implementing the <em>RestProducerFactory</em>
-interface. Currently known working components are:</p>
+interface. Currently, known working components are:</p>
 </div>
 <div class="ulist">
 <ul>
@@ -1903,17 +1959,19 @@ load the resource, which means that you can use CLASSPATH resources
 failing that OpenApi&#8217;s own resource loading support.</p>
 </div>
 <div class="paragraph">
-<p>This component does not act as a HTTP client, it delegates that to
-another component mentioned above. The lookup mechanism searches for a
-single component that implements the <em>RestProducerFactory</em> interface and
-uses that. If the CLASSPATH contains more than one, then the property
+<p>This component does not act as an HTTP client.
+It delegates that to another component mentioned above.
+The lookup mechanism searches for a single component that
+implements the <em>RestProducerFactory</em> interface and
+uses that.
+If the CLASSPATH contains more than one, then the property
 <code>componentName</code> should be set to indicate which component to delegate
 to.</p>
 </div>
 <div class="paragraph">
-<p>Most of the configuration is taken from the OpenApi specification but
+<p>Most of the configuration is taken from the OpenApi specification, but
 the option exists to override those by specifying them on the component
-or on the endpoint. Typically you would just need to override the
+or on the endpoint. Typically, you would need to override the
 <code>host</code> or <code>basePath</code> if those differ from the specification.</p>
 </div>
 <div class="admonitionblock note">
@@ -1948,7 +2006,7 @@ the <em>RestProducerFactory</em> interface for this to work.</p>
 <p>This component&#8217;s endpoint URI is lenient which means that in addition
 to message headers you can specify REST operation&#8217;s parameters as
 endpoint parameters, these will be constant for all subsequent
-invocations so it makes sense to use this feature only for parameters
+invocations, so it makes sense to use this feature only for parameters
 that are indeed constant for all invocations&#8201;&#8212;&#8201;for example API version
 in path such as <code>/api/{version}/users/{id}</code>.</p>
 </div>
@@ -1974,14 +2032,14 @@ in path such as <code>/api/{version}/users/{id}</code>.</p>
 <h3 id="_configuring_component_options"><a class="anchor" href="#_configuring_component_options"></a>Configuring Component Options</h3>
 <div class="paragraph">
 <p>The component level is the highest level which holds general and common configurations that are inherited by the endpoints.
-For example a component may have security settings, credentials for authentication, urls for network connection and so forth.</p>
+For example, a component may have security settings, credentials for authentication, urls for network connection and so forth.</p>
 </div>
 <div class="paragraph">
 <p>Some components only have a few options, and others may have many. Because components typically have pre configured defaults
 that are commonly used, then you may often only need to configure a few options on a component; or none at all.</p>
 </div>
 <div class="paragraph">
-<p>Configuring components can be done with the <a href="../../manual/component-dsl.html" class="xref page">Component DSL</a>,
+<p>Configuring components can be done with the <a href="../../manual/4.10.x/component-dsl.html" class="xref page">Component DSL</a>,
 in a configuration file (application.properties|yaml), or directly with Java code.</p>
 </div>
 </div>
@@ -1994,11 +2052,11 @@ or as a producer (to), or used for both.</p>
 </div>
 <div class="paragraph">
 <p>Configuring endpoints is most often done directly in the endpoint URI as path and query parameters. You can also use
-the <a href="../../manual/Endpoint-dsl.html" class="xref page">Endpoint DSL</a> and <a href="../../manual/dataformat-dsl.html" class="xref page">DataFormat DSL</a>
+the <a href="../../manual/4.10.x/Endpoint-dsl.html" class="xref page">Endpoint DSL</a> and <a href="../../manual/4.10.x/dataformat-dsl.html" class="xref page">DataFormat DSL</a>
 as a <em>type safe</em> way of configuring endpoints and data formats in Java.</p>
 </div>
 <div class="paragraph">
-<p>A good practice when configuring options is to use <a href="../../manual/using-propertyplaceholder.html" class="xref page">Property Placeholders</a>,
+<p>A good practice when configuring options is to use <a href="../../manual/4.10.x/using-propertyplaceholder.html" class="xref page">Property Placeholders</a>,
 which allows to not hardcode urls, port numbers, sensitive information, and other settings.
 In other words placeholders allows to externalize the configuration from your code, and gives more flexibility and reuse.</p>
 </div>
@@ -2061,7 +2119,7 @@ In other words placeholders allows to externalize the configuration from your co
 <td class="tableblock halign-left valign-top"><p class="tableblock"><a id="_component_option_host"></a>
 <a href="#_component_option_host" class="anchor"></a><strong>host</strong> (producer)</p></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>Scheme hostname and port to direct the HTTP requests to in the form of <a href="https://hostname:port" class="bare">https://hostname:port</a>. Can be configured at the endpoint, component or in the corresponding REST configuration in the Camel Context. If you give this component a name (e.g. petstore) that REST configuration is consulted first, rest-openapi next, and global configuration last. If set overrides any value found in the OpenApi specification, RestConfiguration. Can be overridden in endpoint configuration.</p>
+<p>Scheme hostname and port to direct the HTTP requests to in the form of <a href="https://hostname:port" class="bare">https://hostname:port</a>. Can be configured at the endpoint, component or in the corresponding REST configuration in the Camel Context. If you give this component a name (for example, petstore) that REST configuration is consulted first, rest-openapi next, and global configuration last. If set overrides any value found in the OpenApi specification, RestConfiguration. Can be overridden in endpoint configuration.</p>
 </div></div></td>
 <td class="tableblock halign-center valign-top"></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">String</p></td>
@@ -2079,7 +2137,7 @@ In other words placeholders allows to externalize the configuration from your co
 <td class="tableblock halign-left valign-top"><p class="tableblock"><a id="_component_option_produces"></a>
 <a href="#_component_option_produces" class="anchor"></a><strong>produces</strong> (producer)</p></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>What payload type this component is producing. For example application/json according to the RFC7231. This equates to the value of Content-Type HTTP header. If set overrides any value present in the OpenApi specification. Can be overridden in endpoint configuration.</p>
+<p>What payload type this component is producing. For example, application/json according to the RFC7231. This equates to the value of Content-Type HTTP header. If set overrides any value present in the OpenApi specification. Can be overridden in endpoint configuration.</p>
 </div></div></td>
 <td class="tableblock halign-center valign-top"></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">String</p></td>
@@ -2106,7 +2164,7 @@ In other words placeholders allows to externalize the configuration from your co
 <td class="tableblock halign-left valign-top"><p class="tableblock"><a id="_component_option_specificationUri"></a>
 <a href="#_component_option_specificationUri" class="anchor"></a><strong>specificationUri</strong> (producer)</p></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>Path to the OpenApi specification file. The scheme, host base path are taken from this specification, but these can be overridden with properties on the component or endpoint level. If not given the component tries to load openapi.json resource. Note that the host defined on the component and endpoint of this Component should contain the scheme, hostname and optionally the port in the URI syntax (i.e. <a href="https://api.example.com:8080" class="bare">https://api.example.com:8080</a>). Can be overridden in endpoint configuration.</p>
+<p>Path to the OpenApi specification file. The scheme, host base path are taken from this specification, but these can be overridden with properties on the component or endpoint level. If not given the component tries to load openapi.json resource. Note that the host defined on the component and endpoint of this Component should contain the scheme, hostname and optionally the port in the URI syntax (that is, <a href="https://api.example.com:8080" class="bare">https://api.example.com:8080</a>). Can be overridden in endpoint configuration.</p>
 </div></div></td>
 <td class="tableblock halign-center valign-top"><p class="tableblock">openapi.json</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">URI</p></td>
@@ -2178,7 +2236,7 @@ In other words placeholders allows to externalize the configuration from your co
 <td class="tableblock halign-left valign-top"><p class="tableblock"><a id="_endpoint_path_option_specificationUri"></a>
 <a href="#_endpoint_path_option_specificationUri" class="anchor"></a><strong>specificationUri</strong> (producer)</p></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>Path to the OpenApi specification file. The scheme, host base path are taken from this specification, but these can be overridden with properties on the component or endpoint level. If not given the component tries to load openapi.json resource from the classpath. Note that the host defined on the component and endpoint of this Component should contain the scheme, hostname and optionally the port in the URI syntax (i.e. <a href="http://api.example.com:8080" class="bare">http://api.example.com:8080</a>). Overrides component configuration. The OpenApi specification can be loaded from different sources by prefixing with file: classpath: http: https:. Support for https is limited to using the JDK installed UrlHandler, and as such it can be cumbersome to setup TLS/SSL certificates for https (such as setting a number of javax.net.ssl JVM system properties). How to do that consult the JDK documentation for UrlHandler. Default value notice: By default loads openapi.json file.</p>
+<p>Path to the OpenApi specification file. The scheme, host base path are taken from this specification, but these can be overridden with properties on the component or endpoint level. If not given the component tries to load openapi.json resource from the classpath. Note that the host defined on the component and endpoint of this Component should contain the scheme, hostname and optionally the port in the URI syntax (that is, <a href="http://api.example.com:8080" class="bare">http://api.example.com:8080</a>). Overrides component configuration. The OpenApi specification can be loaded from different sources by prefixing with file: classpath: http: https:. Support for https is limited to using the JDK installed UrlHandler, and as such it can be cumbersome to setup TLS/SSL certificates for https (such as setting a number of javax.net.ssl JVM system properties). How to do that consult the JDK documentation for UrlHandler. Default value notice: By default loads openapi.json file.</p>
 </div></div></td>
 <td class="tableblock halign-center valign-top"><p class="tableblock">openapi.json</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">URI</p></td>
@@ -2244,7 +2302,7 @@ In other words placeholders allows to externalize the configuration from your co
 <td class="tableblock halign-left valign-top"><p class="tableblock"><a id="_endpoint_query_option_host"></a>
 <a href="#_endpoint_query_option_host" class="anchor"></a><strong>host</strong> (producer)</p></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>Scheme hostname and port to direct the HTTP requests to in the form of <a href="https://hostname:port" class="bare">https://hostname:port</a>. Can be configured at the endpoint, component or in the corresponding REST configuration in the Camel Context. If you give this component a name (e.g. petstore) that REST configuration is consulted first, rest-openapi next, and global configuration last. If set overrides any value found in the OpenApi specification, RestConfiguration. Overrides all other configuration.</p>
+<p>Scheme hostname and port to direct the HTTP requests to in the form of <a href="https://hostname:port" class="bare">https://hostname:port</a>. Can be configured at the endpoint, component or in the corresponding REST configuration in the Camel Context. If you give this component a name (for example, petstore) that REST configuration is consulted first, rest-openapi next, and global configuration last. If set overrides any value found in the OpenApi specification, RestConfiguration. Overrides all other configuration.</p>
 </div></div></td>
 <td class="tableblock halign-center valign-top"></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">String</p></td>
@@ -2253,7 +2311,7 @@ In other words placeholders allows to externalize the configuration from your co
 <td class="tableblock halign-left valign-top"><p class="tableblock"><a id="_endpoint_query_option_produces"></a>
 <a href="#_endpoint_query_option_produces" class="anchor"></a><strong>produces</strong> (producer)</p></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>What payload type this component is producing. For example application/json according to the RFC7231. This equates to the value of Content-Type HTTP header. If set overrides any value present in the OpenApi specification. Overrides all other configuration.</p>
+<p>What payload type this component is producing. For example, application/json according to the RFC7231. This equates to the value of Content-Type HTTP header. If set overrides any value present in the OpenApi specification. Overrides all other configuration.</p>
 </div></div></td>
 <td class="tableblock halign-center valign-top"></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">String</p></td>
@@ -2307,7 +2365,7 @@ In other words placeholders allows to externalize the configuration from your co
 the <a href="https://github.com/apache/camel-spring-boot-examples" class="bare">https://github.com/apache/camel-spring-boot-examples</a> repository.</p>
 </div>
 <div class="paragraph">
-<p>For example if you wanted to use the
+<p>For example, if you wanted to use the
 <a href="https://petstore3.swagger.io/api/v3/"><em>PetStore</em></a> provided REST API simply
 reference the specification URI and desired operation id from the
 OpenApi specification or download the specification and store it as
@@ -2358,7 +2416,7 @@ public Component petstore(CamelContext camelContext) {
 <code>HttpComponent</code> Spring bean, and you can configure it using
 <code>application.properties</code> (or <code>application.yml</code>) using prefix
 <code>camel.component.http.</code>. We are defining the <code>petstore</code>
-component here in order to have a named component in the Camel context
+component here to have a named component in the Camel context
 that we can use to interact with the PetStore REST API, if this is the
 only <code>rest-openapi</code> component used we might configure it in the same
 manner (using <code>application.properties</code>).</p>
@@ -2394,9 +2452,6 @@ String getPetJsonById(int petId) {
 <h2 id="_request_validation"><a class="anchor" href="#_request_validation"></a>Request validation</h2>
 <div class="sectionbody">
 <div class="paragraph">
- <strong>Note:</strong> This functionality is currently in <strong>Technology Preview</strong>.
-</div>
-<div class="paragraph">
 <p>API requests can be validated against the configured OpenAPI specification before they are sent by setting the <code>requestValidationEnabled</code> option to <code>true</code>.
 Validation is provided by the <a href="https://bitbucket.org/atlassian/swagger-request-validator/src/master/">swagger-request-validator</a>.</p>
 </div>
@@ -2431,12 +2486,12 @@ The value is taken from the <code>Content-Type</code> Camel message exchange hea
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">validation.request.parameter.header.missing</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Validates whether a HTTP header required by the API operation is present. The header is
+<td class="tableblock halign-left valign-top"><p class="tableblock">Validates whether an HTTP header required by the API operation is present. The header is
 expected to be present among the Camel message exchange headers.</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">validation.request.parameter.query.missing</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Validates whether a HTTP query parameter required by the API operation is present. The query parameter is
+<td class="tableblock halign-left valign-top"><p class="tableblock">Validates whether an HTTP query parameter required by the API operation is present. The query parameter is
 expected to be present among the Camel message exchange headers.</p></td>
 </tr>
 </tbody>
@@ -2494,6 +2549,9 @@ You can configure additional options on the <code>rest-openapi</code> endpoint U
 <pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">.to("rest-openapi#myOperation?requestValidationEnabled=true&amp;requestValidationCustomizer=#customRequestValidationCustomizer")</code></pre>
 </div>
 </div>
+<div class="paragraph">
+<p>Unresolved include directive in modules/ROOT/pages/rest-openapi-component.adoc - include::spring-boot:partial$starter.adoc[]</p>
+</div>
 </div>
 </div>
 </div>
@@ -2503,6 +2561,8 @@ You can configure additional options on the <code>rest-openapi</code> endpoint U
 </main>
 </div>
 <footer class="footer">
+  <p>This page was built using the Antora default UI.</p>
+  <p>The source code for this UI is licensed under the terms of the MPL-2.0 license.</p>
 </footer>
 <script id="site-script" src="../../_/js/site.js" data-ui-root-path="../../_"></script>
 <script async src="../../_/js/vendor/highlight.js"></script>

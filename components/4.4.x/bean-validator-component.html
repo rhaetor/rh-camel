@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>Bean Validator :: Red Hat Camel Reference</title>
+    <title>Bean Validator :: Red Hat build of Apache Camel</title>
     <meta name="description" content="Validate the message body using the Java Bean Validation API.">
     <meta name="generator" content="Antora 3.1.4">
     <link rel="stylesheet" href="../../_/css/site.css">
@@ -12,7 +12,7 @@
 <header class="header">
   <nav class="navbar">
     <div class="navbar-brand">
-      <a class="navbar-item" href="../../manual/index.html">Red Hat build of Apache Camel manual</a>
+      <a class="navbar-item" href="/">Red Hat build of Apache Camel</a>
       <button class="navbar-burger" data-target="topbar-nav">
         <span></span>
         <span></span>
@@ -22,11 +22,12 @@
   </nav>
 </header>
 <div class="body">
-<div class="nav-container" data-component="components" data-version="next">
+<div class="nav-container" data-component="components" data-version="4.4.x">
   <aside class="nav">
     <div class="panels">
 <div class="nav-panel-menu is-active" data-panel="menu">
   <nav class="nav-menu">
+    <button class="nav-menu-toggle" aria-label="Toggle expand/collapse all" style="display: none"></button>
     <h3 class="title"><a href="index.html">Camel Components</a></h3>
 <ul class="nav-list">
   <li class="nav-item" data-depth="0">
@@ -912,6 +913,33 @@
     <a class="nav-link" href="splunk-hec-component.html">Splunk HEC</a>
   </li>
   <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="spring-summary.html">Spring</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="spring-batch-component.html">Spring Batch</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="spring-event-component.html">Spring Event</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="spring-jdbc-component.html">Spring JDBC</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="spring-ldap-component.html">Spring LDAP</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="spring-rabbitmq-component.html">Spring RabbitMQ</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="spring-redis-component.html">Spring Redis</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="spring-ws-component.html">Spring WebService</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
     <a class="nav-link" href="sql-component.html">SQL</a>
   </li>
   <li class="nav-item" data-depth="2">
@@ -1792,22 +1820,40 @@
 <div class="nav-panel-explore" data-panel="explore">
   <div class="context">
     <span class="title">Camel Components</span>
-    <span class="version">Next (Pre-release)</span>
+    <span class="version">4.4.x</span>
   </div>
   <ul class="components">
     <li class="component is-current">
-      <a class="title" href="index.html">Camel Components</a>
+      <div class="title"><a href="../4.10.x/index.html">Camel Components</a></div>
       <ul class="versions">
-        <li class="version is-current is-latest">
-          <a href="index.html">Next (Pre-release)</a>
+        <li class="version is-latest">
+          <a href="../4.10.x/index.html">4.10.x (LTS)</a>
+        </li>
+        <li class="version">
+          <a href="../4.8.x/index.html">4.8.x</a>
+        </li>
+        <li class="version is-current">
+          <a href="index.html">4.4.x</a>
+        </li>
+        <li class="version">
+          <a href="../4.0.x/index.html">4.0.x</a>
         </li>
       </ul>
     </li>
     <li class="component">
-      <a class="title" href="../../manual/index.html">User manual</a>
+      <div class="title"><a href="../../manual/4.10.x/index.html">User manual</a></div>
       <ul class="versions">
         <li class="version is-latest">
-          <a href="../../manual/index.html">default</a>
+          <a href="../../manual/4.10.x/index.html">4.10.x</a>
+        </li>
+        <li class="version">
+          <a href="../../manual/4.8.x/index.html">4.8.x</a>
+        </li>
+        <li class="version">
+          <a href="../../manual/4.4.x/index.html">4.4.x</a>
+        </li>
+        <li class="version">
+          <a href="../../manual/4.0.x/index.html">4.0.x</a>
         </li>
       </ul>
     </li>
@@ -1819,7 +1865,7 @@
 <main class="article">
 <div class="toolbar" role="navigation">
 <button class="nav-toggle"></button>
-  <a href="../../manual/index.html" class="home-link"></a>
+  <a href="../../manual/4.10.x/index.html" class="home-link"></a>
 <nav class="breadcrumbs" aria-label="breadcrumbs">
   <ul>
     <li><a href="index.html">Camel Components</a></li>
@@ -1827,6 +1873,16 @@
     <li><a href="bean-validator-component.html">Bean Validator</a></li>
   </ul>
 </nav>
+<div class="page-versions">
+  <button class="version-menu-toggle" title="Show other versions of page">4.4.x</button>
+  <div class="version-menu">
+    <a class="version" href="../4.10.x/bean-validator-component.html">4.10.x (LTS)</a>
+    <a class="version" href="../4.8.x/bean-validator-component.html">4.8.x</a>
+    <a class="version is-current" href="bean-validator-component.html">4.4.x</a>
+    <a class="version is-missing" href="../4.0.x/index.html">4.0.x</a>
+  </div>
+</div>
+<div class="edit-this-page"><a href="https://github.com/rhaetor/rh-camel-jboss/edit/camel-4.4.0-branch/docs/components/modules/ROOT/pages/bean-validator-component.adoc">Edit this Page</a></div>
 </div>
   <div class="content">
 <aside class="toc sidebar" data-title="Contents" data-levels="2">
@@ -1875,9 +1931,8 @@ for this component:</p>
 </div>
 </div>
 <div class="paragraph">
-<p>Where <strong>label</strong> is an arbitrary text value describing the endpoint.<br>
- You can append query options to the URI in the following format,
-?option=value&amp;option=value&amp;&#8230;&#8203;</p>
+<p>Where <strong>label</strong> is an arbitrary text value describing the endpoint.
+You can append query options to the URI in the following format: <code>?option=value&amp;option=value&amp;&#8230;&#8203;</code></p>
 </div>
 </div>
 </div>
@@ -1901,14 +1956,14 @@ for this component:</p>
 <h3 id="_configuring_component_options"><a class="anchor" href="#_configuring_component_options"></a>Configuring Component Options</h3>
 <div class="paragraph">
 <p>The component level is the highest level which holds general and common configurations that are inherited by the endpoints.
-For example a component may have security settings, credentials for authentication, urls for network connection and so forth.</p>
+For example, a component may have security settings, credentials for authentication, urls for network connection and so forth.</p>
 </div>
 <div class="paragraph">
 <p>Some components only have a few options, and others may have many. Because components typically have pre configured defaults
 that are commonly used, then you may often only need to configure a few options on a component; or none at all.</p>
 </div>
 <div class="paragraph">
-<p>Configuring components can be done with the <a href="../../manual/component-dsl.html" class="xref page">Component DSL</a>,
+<p>Configuring components can be done with the <a href="../../manual/4.10.x/component-dsl.html" class="xref page">Component DSL</a>,
 in a configuration file (application.properties|yaml), or directly with Java code.</p>
 </div>
 </div>
@@ -1921,11 +1976,11 @@ or as a producer (to), or used for both.</p>
 </div>
 <div class="paragraph">
 <p>Configuring endpoints is most often done directly in the endpoint URI as path and query parameters. You can also use
-the <a href="../../manual/Endpoint-dsl.html" class="xref page">Endpoint DSL</a> and <a href="../../manual/dataformat-dsl.html" class="xref page">DataFormat DSL</a>
+the <a href="../../manual/4.10.x/Endpoint-dsl.html" class="xref page">Endpoint DSL</a> and <a href="../../manual/4.10.x/dataformat-dsl.html" class="xref page">DataFormat DSL</a>
 as a <em>type safe</em> way of configuring endpoints and data formats in Java.</p>
 </div>
 <div class="paragraph">
-<p>A good practice when configuring options is to use <a href="../../manual/using-propertyplaceholder.html" class="xref page">Property Placeholders</a>,
+<p>A good practice when configuring options is to use <a href="../../manual/4.10.x/using-propertyplaceholder.html" class="xref page">Property Placeholders</a>,
 which allows to not hardcode urls, port numbers, sensitive information, and other settings.
 In other words placeholders allows to externalize the configuration from your code, and gives more flexibility and reuse.</p>
 </div>
@@ -2182,24 +2237,42 @@ In other words placeholders allows to externalize the configuration from your co
 The snippet below demonstrates this approach. You can also
 use <code>HibernateValidationProviderResolver</code>.</p>
 </div>
-<div class="paragraph">
-<p><strong>Using HibernateValidationProviderResolver</strong></p>
+<div class="sect2">
+<h3 id="_using_hibernatevalidationproviderresolver"><a class="anchor" href="#_using_hibernatevalidationproviderresolver"></a>Using HibernateValidationProviderResolver</h3>
+<div id="_tabs_1" class="openblock tabs is-sync is-loading">
+<div class="content">
+<div class="ulist tablist">
+<ul>
+<li id="_tabs_1_java" class="tab">
+<p>Java</p>
+</li>
+<li id="_tabs_1_xml" class="tab">
+<p>XML</p>
+</li>
+</ul>
 </div>
+<div id="_tabs_1_java--panel" class="tabpanel" aria-labelledby="_tabs_1_java">
 <div class="listingblock">
 <div class="content">
 <pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">from("direct:test").
   to("bean-validator://ValidationProviderResolverTest?validationProviderResolver=#myValidationProviderResolver");</code></pre>
 </div>
 </div>
+</div>
+<div id="_tabs_1_xml--panel" class="tabpanel" aria-labelledby="_tabs_1_xml">
 <div class="listingblock">
 <div class="content">
 <pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;bean id="myValidationProviderResolver" class="org.apache.camel.component.bean.validator.HibernateValidationProviderResolver"/&gt;</code></pre>
+</div>
+</div>
+</div>
 </div>
 </div>
 <div class="paragraph">
 <p>If no custom <code>ValidationProviderResolver</code> is defined and the validator
 component has been deployed into the OSGi environment,
 the <code>HibernateValidationProviderResolver</code> will be automatically used.</p>
+</div>
 </div>
 </div>
 </div>
@@ -2241,7 +2314,7 @@ the <code>HibernateValidationProviderResolver</code> will be automatically used.
 </div>
 <div class="paragraph">
 <p>with the following Camel route, only the <strong>@NotNull</strong> constraints on the
-attributes manufacturer and licensePlate will be validated (Camel uses
+attributes <code>manufacturer</code> and <code>licensePlate</code> will be validated (Camel uses
 the default group <code>jakarta.validation.groups.Default</code>).</p>
 </div>
 <div class="listingblock">
@@ -2264,7 +2337,7 @@ you have to define the route like this</p>
 </div>
 <div class="paragraph">
 <p>If you want to check the constraints from both groups, you have to
-define a new interface first</p>
+define a new interface first:</p>
 </div>
 <div class="paragraph">
 <p><strong>AllChecks.java</strong></p>
@@ -2277,7 +2350,7 @@ public interface AllChecks {
 </div>
 </div>
 <div class="paragraph">
-<p>and then your route definition should looks like this</p>
+<p>And then your route definition should look like this:</p>
 </div>
 <div class="listingblock">
 <div class="content">
@@ -2289,8 +2362,21 @@ public interface AllChecks {
 <div class="paragraph">
 <p>And if you have to provide your own message interpolator, traversable
 resolver and constraint validator factory, you have to write a route
-like this</p>
+like this:</p>
 </div>
+<div id="_tabs_2" class="openblock tabs is-sync is-loading">
+<div class="content">
+<div class="ulist tablist">
+<ul>
+<li id="_tabs_2_java" class="tab">
+<p>Java</p>
+</li>
+<li id="_tabs_2_xml" class="tab">
+<p>XML</p>
+</li>
+</ul>
+</div>
+<div id="_tabs_2_java--panel" class="tabpanel" aria-labelledby="_tabs_2_java">
 <div class="listingblock">
 <div class="content">
 <pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;bean id="myMessageInterpolator" class="my.ConstraintValidatorFactory" /&gt;
@@ -2298,6 +2384,8 @@ like this</p>
 &lt;bean id="myConstraintValidatorFactory" class="my.ConstraintValidatorFactory" /&gt;</code></pre>
 </div>
 </div>
+</div>
+<div id="_tabs_2_xml--panel" class="tabpanel" aria-labelledby="_tabs_2_xml">
 <div class="listingblock">
 <div class="content">
 <pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">from("direct:start")
@@ -2306,14 +2394,27 @@ like this</p>
 .to("mock:end")</code></pre>
 </div>
 </div>
+</div>
+</div>
+</div>
 <div class="paragraph">
 <p>It&#8217;s also possible to describe your constraints as XML and not as Java
-annotations. In this case, you have to provide the file
-<code>META-INF/validation.xml</code> which could looks like this</p>
+annotations.
+In this case, you have to provide the files <code>META-INF/validation.xml</code> and <code>constraints-car.xml</code> which could look like this:</p>
 </div>
-<div class="paragraph">
-<p><strong>validation.xml</strong></p>
+<div id="_tabs_3" class="openblock tabs is-sync is-loading">
+<div class="content">
+<div class="ulist tablist">
+<ul>
+<li id="_tabs_3_validation_xml" class="tab">
+<p>validation.xml</p>
+</li>
+<li id="_tabs_3_constraints_car_xml" class="tab">
+<p>constraints-car.xml</p>
+</li>
+</ul>
 </div>
+<div id="_tabs_3_validation_xml--panel" class="tabpanel" aria-labelledby="_tabs_3_validation_xml">
 <div class="listingblock">
 <div class="content">
 <pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;validation-config
@@ -2331,12 +2432,8 @@ annotations. In this case, you have to provide the file
 &lt;/validation-config&gt;</code></pre>
 </div>
 </div>
-<div class="paragraph">
-<p>and the <code>constraints-car.xml</code> file</p>
 </div>
-<div class="paragraph">
-<p><strong>constraints-car.xml</strong></p>
-</div>
+<div id="_tabs_3_constraints_car_xml--panel" class="tabpanel" aria-labelledby="_tabs_3_constraints_car_xml">
 <div class="listingblock">
 <div class="content">
 <pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;constraint-mappings
@@ -2368,6 +2465,9 @@ annotations. In this case, you have to provide the file
 &lt;/constraint-mappings&gt;</code></pre>
 </div>
 </div>
+</div>
+</div>
+</div>
 <div class="paragraph">
 <p>Here is the XML syntax for the example route definition where <strong>OrderedChecks</strong> can be <a href="https://github.com/apache/camel/blob/main/components/camel-bean-validator/src/test/java/org/apache/camel/component/bean/validator/OrderedChecks.java" class="bare">https://github.com/apache/camel/blob/main/components/camel-bean-validator/src/test/java/org/apache/camel/component/bean/validator/OrderedChecks.java</a></p>
 </div>
@@ -2391,6 +2491,9 @@ annotations. In this case, you have to provide the file
 &lt;/beans&gt;</code></pre>
 </div>
 </div>
+<div class="paragraph">
+<p>Unresolved include directive in modules/ROOT/pages/bean-validator-component.adoc - include::spring-boot:partial$starter.adoc[]</p>
+</div>
 </div>
 </div>
 </article>
@@ -2398,6 +2501,8 @@ annotations. In this case, you have to provide the file
 </main>
 </div>
 <footer class="footer">
+  <p>This page was built using the Antora default UI.</p>
+  <p>The source code for this UI is licensed under the terms of the MPL-2.0 license.</p>
 </footer>
 <script id="site-script" src="../../_/js/site.js" data-ui-root-path="../../_"></script>
 <script async src="../../_/js/vendor/highlight.js"></script>

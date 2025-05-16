@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>Routing Slip :: Red Hat Camel Reference</title>
+    <title>Routing Slip :: Red Hat build of Apache Camel</title>
     <meta name="description" content="Routes a message through a series of steps that are pre-determined (the slip)">
     <meta name="generator" content="Antora 3.1.4">
     <link rel="stylesheet" href="../../../_/css/site.css">
@@ -12,7 +12,7 @@
 <header class="header">
   <nav class="navbar">
     <div class="navbar-brand">
-      <a class="navbar-item" href="../../manual/index.html">Red Hat build of Apache Camel manual</a>
+      <a class="navbar-item" href="/">Red Hat build of Apache Camel</a>
       <button class="navbar-burger" data-target="topbar-nav">
         <span></span>
         <span></span>
@@ -22,11 +22,12 @@
   </nav>
 </header>
 <div class="body">
-<div class="nav-container" data-component="components" data-version="next">
+<div class="nav-container" data-component="components" data-version="4.4.x">
   <aside class="nav">
     <div class="panels">
 <div class="nav-panel-menu is-active" data-panel="menu">
   <nav class="nav-menu">
+    <button class="nav-menu-toggle" aria-label="Toggle expand/collapse all" style="display: none"></button>
     <h3 class="title"><a href="../index.html">Camel Components</a></h3>
 <ul class="nav-list">
   <li class="nav-item" data-depth="0">
@@ -1819,22 +1820,40 @@
 <div class="nav-panel-explore" data-panel="explore">
   <div class="context">
     <span class="title">Camel Components</span>
-    <span class="version">Next (Pre-release)</span>
+    <span class="version">4.4.x</span>
   </div>
   <ul class="components">
     <li class="component is-current">
-      <a class="title" href="../index.html">Camel Components</a>
+      <div class="title"><a href="../../4.10.x/index.html">Camel Components</a></div>
       <ul class="versions">
-        <li class="version is-current is-latest">
-          <a href="../index.html">Next (Pre-release)</a>
+        <li class="version is-latest">
+          <a href="../../4.10.x/index.html">4.10.x (LTS)</a>
+        </li>
+        <li class="version">
+          <a href="../../4.8.x/index.html">4.8.x</a>
+        </li>
+        <li class="version is-current">
+          <a href="../index.html">4.4.x</a>
+        </li>
+        <li class="version">
+          <a href="../../4.0.x/index.html">4.0.x</a>
         </li>
       </ul>
     </li>
     <li class="component">
-      <a class="title" href="../../../manual/index.html">User manual</a>
+      <div class="title"><a href="../../../manual/4.10.x/index.html">User manual</a></div>
       <ul class="versions">
         <li class="version is-latest">
-          <a href="../../../manual/index.html">default</a>
+          <a href="../../../manual/4.10.x/index.html">4.10.x</a>
+        </li>
+        <li class="version">
+          <a href="../../../manual/4.8.x/index.html">4.8.x</a>
+        </li>
+        <li class="version">
+          <a href="../../../manual/4.4.x/index.html">4.4.x</a>
+        </li>
+        <li class="version">
+          <a href="../../../manual/4.0.x/index.html">4.0.x</a>
         </li>
       </ul>
     </li>
@@ -1846,7 +1865,7 @@
 <main class="article">
 <div class="toolbar" role="navigation">
 <button class="nav-toggle"></button>
-  <a href="../../../manual/index.html" class="home-link"></a>
+  <a href="../../../manual/4.10.x/index.html" class="home-link"></a>
 <nav class="breadcrumbs" aria-label="breadcrumbs">
   <ul>
     <li><a href="../index.html">Camel Components</a></li>
@@ -1854,6 +1873,16 @@
     <li><a href="routingSlip-eip.html">Routing Slip</a></li>
   </ul>
 </nav>
+<div class="page-versions">
+  <button class="version-menu-toggle" title="Show other versions of page">4.4.x</button>
+  <div class="version-menu">
+    <a class="version" href="../../4.10.x/eips/routingSlip-eip.html">4.10.x (LTS)</a>
+    <a class="version" href="../../4.8.x/eips/routingSlip-eip.html">4.8.x</a>
+    <a class="version is-current" href="routingSlip-eip.html">4.4.x</a>
+    <a class="version" href="../../4.0.x/eips/routingSlip-eip.html">4.0.x</a>
+  </div>
+</div>
+<div class="edit-this-page"><a href="https://github.com/rhaetor/rh-camel-jboss/edit/camel-4.4.0-branch/core/camel-core-engine/src/main/docs/modules/eips/pages/routingSlip-eip.adoc">Edit this Page</a></div>
 </div>
   <div class="content">
 <aside class="toc sidebar" data-title="Contents" data-levels="2">
@@ -2005,10 +2034,10 @@ See the <code>cacheSize</code> option for more details on <em>how much cache</em
 <h2 id="_using_routing_slip"><a class="anchor" href="#_using_routing_slip"></a>Using Routing Slip</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>The Routing Slip EIP allows to route a message through a series of <a href="../../../manual/endpoint.html" class="xref page">endpoints</a> (the slip).</p>
+<p>The Routing Slip EIP allows to route a message through a series of <a href="../../../manual/4.10.x/endpoint.html" class="xref page">endpoints</a> (the slip).</p>
 </div>
 <div class="paragraph">
-<p>There can be 1 or more endpoint <a href="../../../manual/uris.html" class="xref page">uris</a> in the slip.</p>
+<p>There can be 1 or more endpoint <a href="../../../manual/4.10.x/uris.html" class="xref page">uris</a> in the slip.</p>
 </div>
 <div class="admonitionblock tip">
 <table>
@@ -2024,7 +2053,7 @@ A slip can be empty, meaning that the message will not be routed anywhere.
 </div>
 <div class="paragraph">
 <p>The following route will take any messages sent to the Apache ActiveMQ queue cheese
-and use the header with key "whereTo" that is used to compute the slip (endpoint <a href="../../../manual/uris.html" class="xref page">uris</a>).</p>
+and use the header with key "whereTo" that is used to compute the slip (endpoint <a href="../../../manual/4.10.x/uris.html" class="xref page">uris</a>).</p>
 </div>
 <div id="_tabs_1" class="openblock tabs is-sync is-loading">
 <div class="content">
@@ -2062,20 +2091,20 @@ and use the header with key "whereTo" that is used to compute the slip (endpoint
 </div>
 <div class="paragraph">
 <p>The value of the header ("whereTo") should be a comma-delimited string of endpoint URIs you wish the message to be routed to.
-The message will be routed in a <a href="pipeline-eip.html" class="xref page">pipeline</a> fashion, i.e., one after the other.</p>
+The message will be routed in a <a href="pipeline-eip.html" class="xref page">pipeline</a> fashion, that is, one after the other.</p>
 </div>
 <div class="paragraph">
 <p>The Routing Slip sets a property, <code>Exchange.SLIP_ENDPOINT</code>, on the <code>Exchange</code> which contains the
 current endpoint as it advanced though the slip. This allows you to <em>know</em> how far we have processed in the slip.</p>
 </div>
 <div class="paragraph">
-<p>The Routing Slip will compute the slip <strong>beforehand</strong> which means,
-the slip is only computed once. If you need to compute the slip <em>on-the-fly</em> then use the <a href="dynamicRouter-eip.html" class="xref page">Dynamic Router</a> EIP instead.</p>
+<p>The Routing Slip will compute the slip <strong>beforehand</strong>, which means the slip is only computed once.
+If you need to compute the slip <em>on-the-fly</em>, then use the <a href="dynamicRouter-eip.html" class="xref page">Dynamic Router</a> EIP instead.</p>
 </div>
 <div class="sect2">
 <h3 id="_how_is_the_slip_computed"><a class="anchor" href="#_how_is_the_slip_computed"></a>How is the slip computed</h3>
 <div class="paragraph">
-<p>The Routing Slip uses an <a href="../../../manual/expression.html" class="xref page">Expression</a> to compute the value for the slip.
+<p>The Routing Slip uses an <a href="../../../manual/4.10.x/expression.html" class="xref page">Expression</a> to compute the value for the slip.
 The result of the expression can be one of:</p>
 </div>
 <div class="ulist">
@@ -2152,6 +2181,8 @@ Camel logs at DEBUG level about it, so you can see why the endpoint was invalid.
 </main>
 </div>
 <footer class="footer">
+  <p>This page was built using the Antora default UI.</p>
+  <p>The source code for this UI is licensed under the terms of the MPL-2.0 license.</p>
 </footer>
 <script id="site-script" src="../../../_/js/site.js" data-ui-root-path="../../../_"></script>
 <script async src="../../../_/js/vendor/highlight.js"></script>

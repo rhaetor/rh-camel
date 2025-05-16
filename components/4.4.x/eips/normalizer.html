@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>Normalizer :: Red Hat Camel Reference</title>
+    <title>Normalizer :: Red Hat build of Apache Camel</title>
     <meta name="generator" content="Antora 3.1.4">
     <link rel="stylesheet" href="../../../_/css/site.css">
   </head>
@@ -11,7 +11,7 @@
 <header class="header">
   <nav class="navbar">
     <div class="navbar-brand">
-      <a class="navbar-item" href="../../manual/index.html">Red Hat build of Apache Camel manual</a>
+      <a class="navbar-item" href="/">Red Hat build of Apache Camel</a>
       <button class="navbar-burger" data-target="topbar-nav">
         <span></span>
         <span></span>
@@ -21,11 +21,12 @@
   </nav>
 </header>
 <div class="body">
-<div class="nav-container" data-component="components" data-version="next">
+<div class="nav-container" data-component="components" data-version="4.4.x">
   <aside class="nav">
     <div class="panels">
 <div class="nav-panel-menu is-active" data-panel="menu">
   <nav class="nav-menu">
+    <button class="nav-menu-toggle" aria-label="Toggle expand/collapse all" style="display: none"></button>
     <h3 class="title"><a href="../index.html">Camel Components</a></h3>
 <ul class="nav-list">
   <li class="nav-item" data-depth="0">
@@ -1818,22 +1819,40 @@
 <div class="nav-panel-explore" data-panel="explore">
   <div class="context">
     <span class="title">Camel Components</span>
-    <span class="version">Next (Pre-release)</span>
+    <span class="version">4.4.x</span>
   </div>
   <ul class="components">
     <li class="component is-current">
-      <a class="title" href="../index.html">Camel Components</a>
+      <div class="title"><a href="../../4.10.x/index.html">Camel Components</a></div>
       <ul class="versions">
-        <li class="version is-current is-latest">
-          <a href="../index.html">Next (Pre-release)</a>
+        <li class="version is-latest">
+          <a href="../../4.10.x/index.html">4.10.x (LTS)</a>
+        </li>
+        <li class="version">
+          <a href="../../4.8.x/index.html">4.8.x</a>
+        </li>
+        <li class="version is-current">
+          <a href="../index.html">4.4.x</a>
+        </li>
+        <li class="version">
+          <a href="../../4.0.x/index.html">4.0.x</a>
         </li>
       </ul>
     </li>
     <li class="component">
-      <a class="title" href="../../../manual/index.html">User manual</a>
+      <div class="title"><a href="../../../manual/4.10.x/index.html">User manual</a></div>
       <ul class="versions">
         <li class="version is-latest">
-          <a href="../../../manual/index.html">default</a>
+          <a href="../../../manual/4.10.x/index.html">4.10.x</a>
+        </li>
+        <li class="version">
+          <a href="../../../manual/4.8.x/index.html">4.8.x</a>
+        </li>
+        <li class="version">
+          <a href="../../../manual/4.4.x/index.html">4.4.x</a>
+        </li>
+        <li class="version">
+          <a href="../../../manual/4.0.x/index.html">4.0.x</a>
         </li>
       </ul>
     </li>
@@ -1845,7 +1864,7 @@
 <main class="article">
 <div class="toolbar" role="navigation">
 <button class="nav-toggle"></button>
-  <a href="../../../manual/index.html" class="home-link"></a>
+  <a href="../../../manual/4.10.x/index.html" class="home-link"></a>
 <nav class="breadcrumbs" aria-label="breadcrumbs">
   <ul>
     <li><a href="../index.html">Camel Components</a></li>
@@ -1853,6 +1872,16 @@
     <li><a href="normalizer.html">Normalizer</a></li>
   </ul>
 </nav>
+<div class="page-versions">
+  <button class="version-menu-toggle" title="Show other versions of page">4.4.x</button>
+  <div class="version-menu">
+    <a class="version" href="../../4.10.x/eips/normalizer.html">4.10.x (LTS)</a>
+    <a class="version" href="../../4.8.x/eips/normalizer.html">4.8.x</a>
+    <a class="version is-current" href="normalizer.html">4.4.x</a>
+    <a class="version" href="../../4.0.x/eips/normalizer.html">4.0.x</a>
+  </div>
+</div>
+<div class="edit-this-page"><a href="https://github.com/rhaetor/rh-camel-jboss/edit/camel-4.4.0-branch/core/camel-core-engine/src/main/docs/modules/eips/pages/normalizer.adoc">Edit this Page</a></div>
 </div>
   <div class="content">
 <aside class="toc sidebar" data-title="Contents" data-levels="2">
@@ -1877,8 +1906,8 @@ but arrive in different formats. The normalizer transforms the incoming messages
 </div>
 </div>
 <div class="paragraph">
-<p>In Apache Camel, you can implement the normalizer pattern by combining a <a href="choice-eip.html" class="xref page">Content Based Router</a>,
-which detects the incoming message&#8217;s format, with a collection of different <a href="message-translator.html" class="xref page">Message Translator</a>'s,
+<p>In Apache Camel, you can implement the normalizer pattern by combining a <a href="choice-eip.html" class="xref page">Content-Based Router</a>,
+which detects the incoming message&#8217;s format, with a collection of different <a href="message-translator.html" class="xref page">Message Translators</a>,
 which transform the different incoming formats into a common format.</p>
 </div>
 </div>
@@ -1890,6 +1919,19 @@ which transform the different incoming formats into a common format.</p>
 <p>This example shows a Message Normalizer that converts two types of XML messages into a common format.
 Messages in this common format are then routed.</p>
 </div>
+<div id="_tabs_1" class="openblock tabs is-loading">
+<div class="content">
+<div class="ulist tablist">
+<ul>
+<li id="_tabs_1_java" class="tab">
+<p>Java</p>
+</li>
+<li id="_tabs_1_xml" class="tab">
+<p>XML</p>
+</li>
+</ul>
+</div>
+<div id="_tabs_1_java--panel" class="tabpanel" aria-labelledby="_tabs_1_java">
 <div class="listingblock">
 <div class="content">
 <pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">// we need to normalize two types of incoming messages
@@ -1901,8 +1943,35 @@ from("direct:start")
     .to("mock:result");</code></pre>
 </div>
 </div>
+</div>
+<div id="_tabs_1_xml--panel" class="tabpanel" aria-labelledby="_tabs_1_xml">
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;camelContext xmlns="http://camel.apache.org/schema/spring"&gt;
+  &lt;route&gt;
+    &lt;from uri="direct:start"/&gt;
+    &lt;choice&gt;
+      &lt;when&gt;
+        &lt;xpath&gt;/employee&lt;/xpath&gt;
+        &lt;to uri="bean:normalizer?method=employeeToPerson"/&gt;
+      &lt;/when&gt;
+      &lt;when&gt;
+        &lt;xpath&gt;/customer&lt;/xpath&gt;
+        &lt;to uri="bean:normalizer?method=customerToPerson"/&gt;
+      &lt;/when&gt;
+    &lt;/choice&gt;
+    &lt;to uri="mock:result"/&gt;
+  &lt;/route&gt;
+&lt;/camelContext&gt;
+
+&lt;bean id="normalizer" class="org.apache.camel.processor.MyNormalizer"/&gt;</code></pre>
+</div>
+</div>
+</div>
+</div>
+</div>
 <div class="paragraph">
-<p>In this case we&#8217;re using a Java <a href="../bean-component.html" class="xref page">Bean</a> as the normalizer.</p>
+<p>In this case, we&#8217;re using a Java <a href="../bean-component.html" class="xref page">Bean</a> as the normalizer.</p>
 </div>
 <div class="paragraph">
 <p>The class looks like this:</p>
@@ -1927,33 +1996,8 @@ public class MyNormalizer {
 </div>
 </div>
 <div class="paragraph">
-<p>The same example in XML:</p>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;camelContext xmlns="http://camel.apache.org/schema/spring"&gt;
-  &lt;route&gt;
-    &lt;from uri="direct:start"/&gt;
-    &lt;choice&gt;
-      &lt;when&gt;
-        &lt;xpath&gt;/employee&lt;/xpath&gt;
-        &lt;to uri="bean:normalizer?method=employeeToPerson"/&gt;
-      &lt;/when&gt;
-      &lt;when&gt;
-        &lt;xpath&gt;/customer&lt;/xpath&gt;
-        &lt;to uri="bean:normalizer?method=customerToPerson"/&gt;
-      &lt;/when&gt;
-    &lt;/choice&gt;
-    &lt;to uri="mock:result"/&gt;
-  &lt;/route&gt;
-&lt;/camelContext&gt;
-
-&lt;bean id="normalizer" class="org.apache.camel.processor.MyNormalizer"/&gt;</code></pre>
-</div>
-</div>
-<div class="paragraph">
 <p>In case there are many incoming formats, then the <a href="choice-eip.html" class="xref page">Content Based Router</a>
-may end up with too many choices. In this situation then an alternative is to use <a href="toD-eip.html" class="xref page">Dynamic to</a>
+may end up with too many choices. In this situation, then an alternative is to use <a href="toD-eip.html" class="xref page">Dynamic to</a>
 that computes a <a href="../bean-component.html" class="xref page">Bean</a> endpoint, to be called that acts as
 <a href="message-translator.html" class="xref page">Message Translator</a>.</p>
 </div>
@@ -1964,6 +2008,8 @@ that computes a <a href="../bean-component.html" class="xref page">Bean</a> endp
 </main>
 </div>
 <footer class="footer">
+  <p>This page was built using the Antora default UI.</p>
+  <p>The source code for this UI is licensed under the terms of the MPL-2.0 license.</p>
 </footer>
 <script id="site-script" src="../../../_/js/site.js" data-ui-root-path="../../../_"></script>
 <script async src="../../../_/js/vendor/highlight.js"></script>
