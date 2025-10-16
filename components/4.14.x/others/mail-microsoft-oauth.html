@@ -3209,7 +3209,7 @@
                                     href="../../4.14.x/mail-component.html"
                                     class="xref page">Mail</a> component.
                             Importing <code>camel-mail-microsoft-oauth</code> it
-                            automatically imports the
+                            will automatically import the
                             <code>camel-mail</code> component.</p></div>
                         <div class="paragraph"><p>Parameters
                             <code>authenticator</code> and <code>mail.imaps.auth.mechanisms</code>
@@ -3269,6 +3269,7 @@
                                         class="copy-toast">Copied!</span></button></div></pre>
                                 </div>
                             </div>
+
                             <div class="paragraph"><p>and then reference it in
                                 the Camel endpoint:</p></div>
                             <div class="listingblock">
@@ -3293,6 +3294,107 @@
                     </div>
                 </div>
             </article>
+            <article class="doc">
+                <h1 class="page">Mail Microsoft Oauth</h1>
+                <div id="preamble">
+                    <div class="sectionbody">
+                        <div class="paragraph">
+                            <p><strong>Since Camel 3.18.4</strong></p>
+                        </div>
+                        <div class="paragraph">
+                            <p>The Mail Microsoft OAuth2 provides an
+                                implementation of <code>org.apache.camel.component.mail.MailAuthenticator</code>
+                                to authenticate IMAP/POP/SMTP connections and
+                                access to Email via Spring&#8217;s Mail support
+                                and the underlying JavaMail system.</p>
+                        </div>
+                        <div class="paragraph">
+                            <p>Maven users will need to add the following
+                                dependency to their <code>pom.xml</code>
+                                for this component:</p>
+                        </div>
+                        <div class="listingblock">
+                            <div class="content">
+<pre class="highlightjs highlight"><code class="language-xml hljs"
+                                         data-lang="xml">&lt;dependency&gt;
+    &lt;groupId&gt;org.apache.camel&lt;/groupId&gt;
+    &lt;artifactId&gt;camel-mail-microsoft-oauth&lt;/artifactId&gt;
+    &lt;version&gt;x.x.x&lt;/version&gt;
+    &lt;!-- use the same version as your Camel core version --&gt;
+&lt;/dependency&gt;</code></pre>
+                            </div>
+                        </div>
+                        <div class="paragraph">
+                            <p>Importing <code>camel-mail-microsoft-oauth</code>
+                                it will automatically import the camel-mail
+                                component.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="sect1">
+                    <h2 id="_usage"><a class="anchor" href="#_usage"></a>Usage
+                    </h2>
+                    <div class="sectionbody">
+                        <div class="sect2">
+                            <h3 id="_microsoft_exchange_online_oauth2_mail_authenticator_imap_example">
+                                <a class="anchor"
+                                   href="#_microsoft_exchange_online_oauth2_mail_authenticator_imap_example"></a>Microsoft
+                                Exchange Online OAuth2 Mail Authenticator IMAP
+                                example</h3>
+                            <div class="paragraph">
+                                <p>To use OAuth, an application must be
+                                    registered with Azure Active Directory.</p>
+                            </div>
+                            <div class="paragraph">
+                                <p>Follow the instructions listed in <a
+                                        href="https://learn.microsoft.com/en-us/azure/active-directory/develop/quickstart-register-app">Register
+                                    an application with the Microsoft identity
+                                    platform</a> guide to register a new
+                                    application.<br>
+                                    Enable application to access Exchange
+                                    mailboxes via client credentials flow.
+                                    Instructions <a
+                                            href="https://learn.microsoft.com/en-us/exchange/client-developer/legacy-protocols/how-to-authenticate-an-imap-pop-smtp-application-by-using-oauth">here</a><br>
+                                    Once everything is set up, declare and
+                                    register in the registry, an instance of
+                                    <code>org.apache.camel.component.mail.microsoft.authenticator.MicrosoftExchangeOnlineOAuth2MailAuthenticator</code>.
+                                </p>
+                            </div>
+                            <div class="paragraph">
+                                <p>In a Quarkus application:</p>
+                            </div>
+                            <div class="listingblock">
+                                <div class="content">
+<pre class="CodeRay highlight"><code data-lang="java"><span style="color:#007">@jakarta</span>.enterprise.inject.Produces
+<span style="color:#007">@Named</span>(<span
+            style="background-color:hsla(0,100%,50%,0.05)"><span
+            style="color:#710">&quot;</span><span style="color:#D20">auth</span><span
+            style="color:#710">&quot;</span></span>)
+<span style="color:#088;font-weight:bold">public</span> MicrosoftExchangeOnlineOAuth2MailAuthenticator exchangeAuthenticator() {
+    <span style="color:#080;font-weight:bold">return</span> <span
+            style="color:#080;font-weight:bold">new</span> MicrosoftExchangeOnlineOAuth2MailAuthenticator(tenantId.get(), clientId.get(), clientSecret.get(),
+            username.get());
+}</code></pre>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="paragraph">
+                            <p>and then reference it in the Camel endpoint:</p>
+                        </div>
+                        <div class="listingblock">
+                            <div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs"
+                                         data-lang="java"> from("imaps://outlook.office365.com:993"
+                    +  "?authenticator=#auth"
+                    +  "&amp;mail.imaps.auth.mechanisms=XOAUTH2"
+                    +  "&amp;debugMode=true"
+                    +  "&amp;delete=false")</code></pre>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+        </div>
         </article>
 </div>
 </main>
