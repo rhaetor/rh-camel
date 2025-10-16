@@ -3269,32 +3269,6 @@
                                         class="copy-toast">Copied!</span></button></div></pre>
                                 </div>
                             </div>
-                            <div class="ulist">
-                                <ul>
-                                    <li><p>in a Spring Boot application:</p>
-                                    </li>
-                                </ul>
-                            </div>
-                            <div class="listingblock">
-                                <div class="content"> <pre
-                                        class="highlightjs highlight"><code
-                                        class="language-java hljs"
-                                        data-lang="java"><span
-                                        class="hljs-meta">@BindToRegistry("auth")</span>
-<span class="hljs-keyword">public</span> MicrosoftExchangeOnlineOAuth2MailAuthenticator <span
-                                            class="hljs-title function_">exchangeAuthenticator</span><span
-                                            class="hljs-params">()</span>{
-    <span class="hljs-keyword">return</span> <span
-                                            class="hljs-keyword">new</span> <span
-                                            class="hljs-title class_">MicrosoftExchangeOnlineOAuth2MailAuthenticator</span>(tenantId, clientId, clientSecret, <span
-                                            class="hljs-string">"jon@doe.com"</span>);
-}</code><div class="source-toolbox"><span class="source-lang">java</span><button
-                                        class="copy-button"
-                                        title="Copy to clipboard"
-                                        aria-label="Copy to clipboard"><span
-                                        class="copy-toast">Copied!</span></button></div></pre>
-                                </div>
-                            </div>
                             <div class="paragraph"><p>and then reference it in
                                 the Camel endpoint:</p></div>
                             <div class="listingblock">
