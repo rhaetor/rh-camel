@@ -1,0 +1,1236 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Camel MCP Server :: Red Hat build of Apache Camel</title>
+    <meta name="generator" content="Antora 3.1.14">
+    <link rel="stylesheet" href="../../_/css/site.css">
+  </head>
+  <body class="article">
+<header class="header">
+  <nav class="navbar">
+    <div class="navbar-brand">
+      <a class="navbar-item" href="/">Red Hat build of Apache Camel</a>
+      <button class="navbar-burger" data-target="topbar-nav">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </nav>
+</header>
+<div class="body">
+<div class="nav-container" data-component="manual" data-version="4.18.x">
+  <aside class="nav">
+    <div class="panels">
+<div class="nav-panel-menu is-active" data-panel="menu">
+  <nav class="nav-menu">
+    <button class="nav-menu-toggle" aria-label="Toggle expand/collapse all" style="display: none"></button>
+    <h3 class="title"><a href="index.html">User manual</a></h3>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="getting-started.html">Getting started</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="book-getting-started.html">Getting Started with Apache Camel</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="what-are-the-dependencies.html">What are the dependencies?</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Resources &amp; Guides</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="/community/books/">Books</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="building.html">Building</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="camel-console.html">Camel Developer Console</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="camel-jbang.html">Camel JBang</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="jbang-commands/camel-jbang-commands.html">Camel JBang Command Reference</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="camel-jbang-launcher.html">Camel JBang Launcher</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="camel-jbang-kubernetes.html">Camel JBang Kubernetes Plugin</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="camel-jbang-test.html">Camel JBang Testing Plugin</a>
+  </li>
+  <li class="nav-item is-current-page" data-depth="3">
+    <a class="nav-link" href="camel-jbang-mcp.html">Camel MCP Server</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="camel-maven-plugin.html">Camel Maven Plugin</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="camel-component-maven-plugin.html">Camel Component Maven Plugin</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="camel-report-maven-plugin.html">Camel Maven Report Plugin</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="camel-yaml-dsl-validator-maven-plugin.html">Camel Maven YAML DSL Validator Plugin</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="camel-maven-archetypes.html">Camel Maven Archetypes</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="configuring-route-startup-ordering-and-autostartup.html">Configuring route startup ordering and autostartup</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="component-dsl.html">Component DSL</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="Endpoint-dsl.html">Endpoint DSL</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="dataformat-dsl.html">DataFormat DSL</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="examples.html">Examples</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="graceful-shutdown.html">Graceful Shutdown</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="error-handler.html">Error handler</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="using-propertyplaceholder.html">How to use Camel property placeholders</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="variables.html">How to use Variables</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="testing.html">Testing</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="test-infra.html">Test Infra</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="notify-builder.html">NotifyBuilder</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="advice-with.html">AdviceWith</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="integration-test.html">Integration Test</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="rest-dsl.html">Working with REST and Rest DSL</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="rest-dsl-openapi.html">Rest DSL contract first</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="writing-components.html">Writing Components</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="release-guide.html">Release guide</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="release-guide-website.html">Adding doc versions to the website</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="improving-the-documentation.html">Improving the Documentation</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="migration-and-upgrade.html">Migration and Upgrade</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="camel-3-migration-guide.html">Camel 2.x to 3.0 Migration Guide</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="camel-3x-upgrade-guide.html">Camel 3.x Upgrade Guide</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="camel-4-migration-guide.html">Camel 3.x to 4.0 Migration Guide</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="camel-4x-upgrade-guide.html">Camel 4.x Upgrade Guide</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="architecture.html">Architecture</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="backlog-debugger.html">Backlog debugger</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="backlog-tracer.html">Backlog Tracer</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="batch-consumer.html">Batch Consumer</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="bean-binding.html">Bean Binding</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="bean-integration.html">Bean Integration</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="browsable-endpoint.html">BrowsableEndpoint</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="camelcontext.html">CamelContext</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="camelcontext-autoconfigure.html">CamelContext Auto Configuration</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="clustering.html">Clustering and Load Balancing</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="component.html">Component</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="data-format.html">Data Format</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="debugger.html">Debugger</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="delay-interceptor.html">Delayer</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="endpoint.html">Endpoints</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="endpoint-annotations.html">Endpoint Annotations</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="exception-clause.html">Exception Clause</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="exchange-pooling.html">Exchange Pooling</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="http-session-handling.html">HTTP-Session Handling</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="parameter-binding-annotations.html">Parameter Binding Annotations</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="pojo-producing.html">POJO Producing</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="pojo-consuming.html">POJO Consuming</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="producertemplate.html">ProducerTemplate</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="consumertemplate.html">ConsumerTemplate</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="error-handler.html">Error Handler</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="exchange.html">Message Exchange</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="exchange-pattern.html">Exchange Pattern</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="using-exchange-pattern-annotations.html">Using Exchange pattern annotations</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="expression.html">Expressions</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../components/next/eips/content-enricher.html">Content Enrichment</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="injector.html">Injector</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../components/next/eips/intercept.html">Intercept</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="jmx.html">JMX</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="lifecycle.html">Camel Lifecycle</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="oncompletion.html">OnCompletion</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="pluggable-class-resolvers.html">Pluggable Class Resolvers</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="predicate.html">Predicates</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="processor.html">Processor</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="registry.html">Registry</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="route-builder.html">RouteBuilder</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="lambda-route-builder.html">LambdaRouteBuilder</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="route-controller.html">RouteController</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="route-policy.html">RoutePolicy</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="route-configuration.html">RouteConfiguration</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="route-group.html">RouteGroup</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="context-reload.html">ContextReload</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="route-reload.html">RouteReload</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="route-template.html">RouteTemplate</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="routes.html">Routes</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="startup-condition.html">Startup Condition</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="stream-caching.html">Stream caching</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="template-engines.html">Template Engines</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="transformer.html">Transformer</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="threading-model.html">Threading Model</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="tracer.html">Tracer</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="type-converter.html">Type Converter</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="uris.html">URIs</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="uuidgenerator.html">UuidGenerator</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="validator.html">Validator</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="health-check.html">Health Checks</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Domain Specific Languages</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="dsl.html">Camel Domain Specific Language</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="languages.html">Languages</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="java-dsl.html">Java DSL</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="spring.html">Spring support</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Reference</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="#components::index.adoc">Components</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="#components:dataformats:index.adoc">Data Formats</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="#components:languages:index.adoc">Languages</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../components/next/eips/enterprise-integration-patterns.html">EIPs</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="faq/index.html">FAQ</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="faq/can-i-get-commercial-support.html">Can I get commercial support?</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="/community/support/">How can I get help?</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="faq/how-can-i-get-the-source-code.html">How can I get the source code?</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="faq/how-does-camel-work.html">How does Camel work?</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="faq/how-does-the-website-work.html">How does the website work?</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="faq/how-do-i-become-a-committer.html">How do I become a committer?</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="faq/how-do-i-compile-the-code.html">How do I compile the code?</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="faq/how-do-i-edit-the-website.html">How do I edit the website?</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="faq/running-camel-standalone.html">Running Camel standalone</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="faq/what-is-a-router.html">What is a router?</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="faq/what-is-camel.html">What is Camel?</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="faq/what-is-the-license.html">What is the license?</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="languages.html">What languages are supported?</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="faq/what-platforms-are-supported.html">What platforms are supported?</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="faq/why-the-name-camel.html">Why the name Camel?</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="faq/how-do-i-specify-which-method-to-use-when-using-beans-in-routes.html">How do I specify which method to use when using beans in routes?</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="faq/how-can-i-create-a-custom-component-or-endpoint.html">How can I create a custom component or endpoint?</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="faq/how-can-i-get-the-remote-connection-ip-address-from-the-camel-cxf-consumer-.html">How can I get the remote connection IP address from the camel-cxf consumer ?</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="faq/how-can-i-stop-a-route-from-a-route.html">How can I stop a route from a route?</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="faq/how-can-webservice-clients-see-remote-faults-with-stacktraces-when-using-camel-cxf.html">How can webservice clients see remote faults with stacktraces when using camel-cxf?</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="faq/how-does-camel-look-up-beans-and-endpoints.html">How does Camel look up beans and endpoints?</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="faq/how-do-i-change-the-logging.html">How do I change the logging?</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="faq/how-do-i-configure-endpoints.html">How do I configure endpoints?</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="faq/how-do-i-configure-password-options-on-camel-endpoints-without-the-value-being-encoded.html">How do I configure password options on Camel endpoints without the value being encoded?</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="faq/how-do-i-configure-the-default-maximum-cache-size-for-producercache-or-producertemplate.html">How do I configure the default maximum cache size for ProducerCache or ProducerTemplate?</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="faq/how-do-i-configure-the-maximum-endpoint-cache-size-for-camelcontext.html">How do I configure the maximum endpoint cache size for CamelContext?</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="faq/how-do-i-debug-my-route.html">How do I debug my route?</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="faq/how-do-i-disable-jmx.html">How do I disable JMX?</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="faq/how-do-i-enable-streams-when-debug-logging-messages-in-camel.html">How do I enable streams when debug logging messages in Camel?</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="faq/how-do-i-handle-failures-when-consuming-for-example-from-a-ftp-server.html">How do I handle failures when consuming for example from a FTP server?</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="faq/how-do-i-import-rests-from-other-xml-files.html">How do I import rests from other XML files?</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="faq/how-do-i-import-routes-from-other-xml-files.html">How do I import routes from other XML files?</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="faq/how-do-i-let-jetty-match-wildcards.html">How do I let Jetty match wildcards?</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="faq/how-do-i-name-my-routes.html">How do I name my routes?</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="faq/how-do-i-restart-camelcontext.html">How do I restart CamelContext?</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="faq/how-do-i-retrieve-the-thrown-exception-during-processing-an-exchange.html">How do I retrieve the thrown Exception during processing an Exchange?</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="faq/how-do-i-retry-failed-messages-forever.html">How do I retry failed messages forever?</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="faq/how-do-i-retry-processing-a-message-from-a-certain-point-back-or-an-entire-route.html">How do I retry processing a message from a certain point back or an entire route?</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="faq/how-do-i-reuse-the-contexttestsupport-class-in-my-unit-tests.html">How do I reuse the ContextTestSupport class in my unit tests?</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="faq/how-do-i-set-the-max-chars-when-debug-logging-messages-in-camel.html">How do I set the max chars when debug logging messages in Camel?</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="faq/how-do-i-use-uris-with-parameters-in-xml.html">How do I use URIs with parameters in XML?</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="faq/how-do-i-write-a-custom-processor-which-sends-multiple-messages.html">How do I write a custom Processor which sends multiple messages?</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="faq/how-should-i-invoke-my-pojos-or-spring-services.html">How should I invoke my POJOs or Spring Services?</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="faq/how-to-avoid-sending-some-or-all-message-headers.html">How to avoid sending some or all message headers?</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="faq/how-to-remove-the-http-protocol-headers-in-the-camel-message.html">How to remove the http protocol headers in the camel message?</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="faq/how-to-send-the-same-message-to-multiple-endpoints.html">How to send the same message to multiple endpoints?</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="faq/how-to-switch-the-cxf-consumer-between-http-and-https-without-touching-the-spring-configuration.html">How to switch the CXF consumer between HTTP and HTTPS without touching the Spring configuration?</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="faq/how-to-use-a-dynamic-uri-in-to.html">How to use a dynamic URI in to()?</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="faq/is-there-an-ide.html">Is there an IDE?</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="faq/using-getin-or-getout-methods-on-exchange.html">Using getIn or getOut methods on Exchange</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="faq/why-cant-i-use-sign-in-my-password.html">Why can&#8217;t I use + sign in my password?</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="faq/why-can-i-not-use-when-or-otherwise-in-a-java-camel-route.html">Why can I not use when or otherwise in a Java Camel route?</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="faq/why-does-ftp-component-not-download-any-files.html">Why does FTP component not download any files?</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="faq/why-does-my-file-consumer-not-pick-up-the-file-and-how-do-i-let-the-file-consumer-use-the-camel-error-handler.html">Why does my file consumer not pick up the file, and how do I let the file consumer use the Camel error handler?</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="faq/why-does-useoriginalmessage-with-error-handler-not-work-as-expected.html">Why does useOriginalMessage with error handler not work as expected?</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="faq/why-do-my-message-lose-its-headers-during-routing.html">Why do my message lose its headers during routing?</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="faq/why-is-my-message-body-empty.html">Why is my message body empty?</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="faq/why-is-my-processor-not-showing-up-in-jconsole.html">Why is my processor not showing up in JConsole?</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="faq/why-is-the-exception-null-when-i-use-onexception.html">Why is the exception null when I use onException?</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="faq/why-use-multiple-camelcontext.html">Why use multiple CamelContext?</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="faq/how-do-i-enable-debug-logging.html">How do I enable debug logging?</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="faq/how-do-i-use-log4j.html">How do I use log4j?</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="faq/how-do-i-make-my-jms-endpoint-transactional.html">How Do I Make My JMS Endpoint Transactional?</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="faq/how-do-i-set-the-mep-when-interacting-with-jbi.html">How do I set the MEP when interacting with JBI?</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="faq/how-do-the-direct-event-seda-and-vm-endpoints-compare.html">How do the direct, event, seda and vm endpoints compare?</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="faq/how-do-the-timer-and-quartz-endpoints-compare.html">How do the Timer and Quartz endpoints compare?</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="faq/why-does-my-jms-route-only-consume-one-message-at-once.html">Why does my JMS route only consume one message at once?</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="faq/exception-beandefinitionstoreexception.html">Exception - BeanDefinitionStoreException</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="faq/exception-orgapachecamelnosuchendpointexception.html">Exception - org.apache.camel.NoSuchEndpointException</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="faq/exception-orgxmlsaxsaxparseexception.html">Exception - org.xml.sax.SAXParseException</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="faq/memory-leak-when-adding-and-removing-routes-at-runtime.html">Memory leak when adding and removing routes at runtime</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="faq/why-does-camel-use-too-many-threads-with-producertemplate.html">Why does Camel use too many threads with ProducerTemplate?</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="faq/why-does-maven-not-download-dependencies.html">Why does maven not download dependencies?</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+</ul>
+  </nav>
+</div>
+<div class="nav-panel-explore" data-panel="explore">
+  <div class="context">
+    <span class="title">User manual</span>
+    <span class="version">4.18.x</span>
+  </div>
+  <ul class="components">
+    <li class="component">
+      <div class="title"><a href="../../components/next/index.html">components</a></div>
+      <ul class="versions">
+        <li class="version">
+          <a href="../../components/index.html">Next (Pre-release)</a>
+        </li>
+        <li class="version is-latest">
+          <a href="../../components/next/index.html">next</a>
+        </li>
+        <li class="version">
+          <a href="../../components/4.18.x/index.html">4.18.x (LTS)</a>
+        </li>
+        <li class="version">
+          <a href="../../components/4.14.x/index.html">4.14.x (LTS)</a>
+        </li>
+        <li class="version">
+          <a href="../../components/4.10.x/index.html">4.10.x (LTS)</a>
+        </li>
+        <li class="version">
+          <a href="../../components/4.8.x/index.html">4.8.x</a>
+        </li>
+        <li class="version">
+          <a href="../../components/4.4.x/index.html">4.4.x</a>
+        </li>
+        <li class="version">
+          <a href="../../components/4.0.x/index.html">4.0.x</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component is-current">
+      <div class="title"><a href="../index.html">User manual</a></div>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../index.html">default</a>
+        </li>
+        <li class="version is-current">
+          <a href="index.html">4.18.x</a>
+        </li>
+        <li class="version">
+          <a href="../4.14.x/index.html">4.14.x</a>
+        </li>
+        <li class="version">
+          <a href="../4.10.x/index.html">4.10.x</a>
+        </li>
+        <li class="version">
+          <a href="../4.8.x/index.html">4.8.x</a>
+        </li>
+        <li class="version">
+          <a href="../4.4.x/index.html">4.4.x</a>
+        </li>
+        <li class="version">
+          <a href="../4.0.x/index.html">4.0.x</a>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</div>
+    </div>
+  </aside>
+</div>
+<main class="article">
+<div class="toolbar" role="navigation">
+<button class="nav-toggle"></button>
+  <a href="../index.html" class="home-link"></a>
+<nav class="breadcrumbs" aria-label="breadcrumbs">
+  <ul>
+    <li><a href="index.html">User manual</a></li>
+    <li>Resources &amp; Guides</li>
+    <li><a href="camel-jbang.html">Camel JBang</a></li>
+    <li><a href="camel-jbang-mcp.html">Camel MCP Server</a></li>
+  </ul>
+</nav>
+<div class="page-versions">
+  <button class="version-menu-toggle" title="Show other versions of page">4.18.x</button>
+  <div class="version-menu">
+    <a class="version is-missing" href="../index.html">default</a>
+    <a class="version is-current" href="camel-jbang-mcp.html">4.18.x</a>
+    <a class="version is-missing" href="../4.14.x/index.html">4.14.x</a>
+    <a class="version is-missing" href="../4.10.x/index.html">4.10.x</a>
+    <a class="version is-missing" href="../4.8.x/index.html">4.8.x</a>
+    <a class="version is-missing" href="../4.4.x/index.html">4.4.x</a>
+    <a class="version is-missing" href="../4.0.x/index.html">4.0.x</a>
+  </div>
+</div>
+<div class="edit-this-page"><a href="https://github.com/rhaetor/rh-jboss-camel/edit/camel-4.18.0-branch/docs/user-manual/modules/ROOT/pages/camel-jbang-mcp.adoc">Edit this Page</a></div>
+</div>
+  <div class="content">
+<aside class="toc sidebar" data-title="Contents" data-levels="2">
+  <div class="toc-menu"></div>
+</aside>
+<article class="doc">
+<h1 class="page">Camel MCP Server</h1>
+<div id="preamble">
+<div class="sectionbody">
+<div class="paragraph">
+<p>The Camel MCP Server exposes the Apache Camel Catalog and a set of specialized tools through the
+<a href="https://modelcontextprotocol.io/">Model Context Protocol (MCP)</a>, the open standard that allows AI coding assistants
+to call external tools. This enables AI tools such as Claude Code, OpenAI Codex, GitHub Copilot, and JetBrains AI
+to query live Camel catalog data, validate endpoint URIs, analyze routes for security concerns, browse Kamelets, and more.</p>
+</div>
+<div class="paragraph">
+<p>The server is built on <a href="https://quarkus.io/">Quarkus</a> using the
+<a href="https://docs.quarkiverse.io/quarkus-mcp-server/dev/index.html">quarkus-mcp-server</a> extension and ships as a single
+uber-JAR that can be launched via <a href="https://www.jbang.dev/">JBang</a>.</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+This module is in <strong>Preview</strong> status as of Camel 4.18.
+</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_transport"><a class="anchor" href="#_transport"></a>Transport</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>The server supports two transports:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>STDIO</strong>&#8201;&#8212;&#8201;The default transport for CLI-based AI tools. The server communicates over stdin/stdout using the MCP
+protocol. All logging goes to stderr to keep stdout clean for protocol messages.</p>
+</li>
+<li>
+<p><strong>HTTP/SSE</strong>&#8201;&#8212;&#8201;An optional transport for web-based clients and remote access scenarios. Useful when running the
+MCP server as a shared service for a team or in a container.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>By default, the HTTP server is disabled. To enable it, set <code>quarkus.http.host-enabled=true</code>.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_available_tools"><a class="anchor" href="#_available_tools"></a>Available Tools</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>The server exposes 16 tools organized into six functional areas.</p>
+</div>
+<div class="sect2">
+<h3 id="_catalog_exploration"><a class="anchor" href="#_catalog_exploration"></a>Catalog Exploration</h3>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 25%;">
+<col style="width: 75%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Tool</th>
+<th class="tableblock halign-left valign-top">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>camel_catalog_components</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">List available Camel components with filtering by name, label (e.g., <code>messaging</code>, <code>cloud</code>, <code>database</code>), and
+  runtime type (<code>main</code>, <code>spring-boot</code>, <code>quarkus</code>). Supports querying specific Camel versions.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>camel_catalog_component_doc</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Get detailed documentation for a specific component including all endpoint options, component-level options,
+  Maven coordinates, and URI syntax.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>camel_catalog_dataformats</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">List available data formats (JSON, XML, CSV, Avro, Protobuf, and others).</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>camel_catalog_dataformat_doc</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Get detailed documentation for a specific data format including all configuration options, Maven coordinates,
+  and model information.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>camel_catalog_languages</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">List expression languages (Simple, JsonPath, XPath, JQ, Groovy, and others).</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>camel_catalog_language_doc</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Get detailed documentation for a specific expression language including all configuration options and
+  Maven coordinates.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>camel_catalog_eips</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">List Enterprise Integration Patterns with filtering by category.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>camel_catalog_eip_doc</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Get detailed documentation for a specific EIP including all its options.</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="sect2">
+<h3 id="_kamelet_catalog"><a class="anchor" href="#_kamelet_catalog"></a>Kamelet Catalog</h3>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 25%;">
+<col style="width: 75%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Tool</th>
+<th class="tableblock halign-left valign-top">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>camel_catalog_kamelets</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">List available Kamelets from the Kamelet Catalog with filtering by name, description, and type (<code>source</code>, <code>sink</code>,
+  <code>action</code>). Supports querying specific Kamelets catalog versions.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>camel_catalog_kamelet_doc</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Get detailed documentation for a specific Kamelet including all properties/options, their types, defaults,
+  examples, and the Kamelet&#8217;s Maven dependencies.</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="sect2">
+<h3 id="_route_understanding"><a class="anchor" href="#_route_understanding"></a>Route Understanding</h3>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 25%;">
+<col style="width: 75%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Tool</th>
+<th class="tableblock halign-left valign-top">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>camel_route_context</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Given a Camel route (YAML, XML, or Java DSL), extracts all components and EIPs used, looks up their documentation
+  from the catalog, and returns structured context.</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="sect2">
+<h3 id="_security_analysis"><a class="anchor" href="#_security_analysis"></a>Security Analysis</h3>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 25%;">
+<col style="width: 75%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Tool</th>
+<th class="tableblock halign-left valign-top">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>camel_route_harden_context</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Analyzes a route for security concerns. Identifies security-sensitive components, assigns risk levels, detects
+  issues like hardcoded credentials or plain-text protocols, and returns structured security findings alongside
+  best practices.</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="sect2">
+<h3 id="_validation_and_transformation"><a class="anchor" href="#_validation_and_transformation"></a>Validation and Transformation</h3>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 25%;">
+<col style="width: 75%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Tool</th>
+<th class="tableblock halign-left valign-top">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>camel_validate_route</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Validates Camel endpoint URIs against the catalog schema. Catches unknown options, missing required parameters,
+  invalid enum values, and type mismatches. Also provides suggestions for misspelled option names.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>camel_validate_yaml_dsl</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Validates a YAML DSL route definition against the Camel YAML DSL JSON schema. Checks for valid DSL elements,
+  correct route structure, and returns detailed schema validation errors including instance path, error type,
+  and schema path.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>camel_transform_route</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Assists with route DSL format transformation between YAML and XML.</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="sect2">
+<h3 id="_version_management"><a class="anchor" href="#_version_management"></a>Version Management</h3>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 25%;">
+<col style="width: 75%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Tool</th>
+<th class="tableblock halign-left valign-top">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>camel_version_list</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Lists available Camel versions for a given runtime, including release dates, JDK requirements, and LTS status.</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_setup"><a class="anchor" href="#_setup"></a>Setup</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>The MCP server requires <a href="https://www.jbang.dev/">JBang</a> to be installed and available on your PATH.</p>
+</div>
+<div class="sect2">
+<h3 id="_claude_code"><a class="anchor" href="#_claude_code"></a>Claude Code</h3>
+<div class="paragraph">
+<p>Add the following to your project&#8217;s <code>.mcp.json</code> (or <code>~/.claude/mcp.json</code> for global configuration):</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-json hljs" data-lang="json">{
+  "mcpServers": {
+    "camel": {
+      "command": "jbang",
+      "args": [
+        "-Dquarkus.log.level=WARN",
+        "org.apache.camel:camel-jbang-mcp:4.18.0:runner"
+      ]
+    }
+  }
+}</code></pre>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_openai_codex"><a class="anchor" href="#_openai_codex"></a>OpenAI Codex</h3>
+<div class="paragraph">
+<p>Add the server to your MCP configuration:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-json hljs" data-lang="json">{
+  "mcpServers": {
+    "camel": {
+      "command": "jbang",
+      "args": [
+        "-Dquarkus.log.level=WARN",
+        "org.apache.camel:camel-jbang-mcp:4.18.0:runner"
+      ]
+    }
+  }
+}</code></pre>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_vs_code_with_copilot"><a class="anchor" href="#_vs_code_with_copilot"></a>VS Code with Copilot</h3>
+<div class="paragraph">
+<p>Configure MCP servers in your <code>.vscode/mcp.json</code> or in the user settings:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-json hljs" data-lang="json">{
+  "servers": {
+    "camel": {
+      "command": "jbang",
+      "args": [
+        "-Dquarkus.log.level=WARN",
+        "org.apache.camel:camel-jbang-mcp:4.18.0:runner"
+      ]
+    }
+  }
+}</code></pre>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_jetbrains_ides"><a class="anchor" href="#_jetbrains_ides"></a>JetBrains IDEs</h3>
+<div class="paragraph">
+<p>JetBrains IDEs support MCP servers starting from 2025.1. Configure them in
+Settings &gt; Tools &gt; AI Assistant &gt; MCP Servers, or create an <code>.junie/mcp.json</code> file in your project root:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-json hljs" data-lang="json">{
+  "mcpServers": {
+    "camel": {
+      "command": "jbang",
+      "args": [
+        "-Dquarkus.log.level=WARN",
+        "org.apache.camel:camel-jbang-mcp:4.18.0:runner"
+      ]
+    }
+  }
+}</code></pre>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_generic_stdio_client"><a class="anchor" href="#_generic_stdio_client"></a>Generic STDIO Client</h3>
+<div class="paragraph">
+<p>Any MCP client that supports the STDIO transport can launch the server directly:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-bash hljs" data-lang="bash">jbang org.apache.camel:camel-jbang-mcp:4.18.0:runner</code></pre>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_httpsse_transport"><a class="anchor" href="#_httpsse_transport"></a>HTTP/SSE Transport</h3>
+<div class="paragraph">
+<p>To start the server with the HTTP/SSE transport enabled:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-bash hljs" data-lang="bash">jbang -Dquarkus.http.host-enabled=true -Dquarkus.http.port=8080 org.apache.camel:camel-jbang-mcp:4.18.0:runner</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>MCP clients that support HTTP/SSE can then connect to the server at <code><a href="http://localhost:8080/mcp/sse" class="bare">http://localhost:8080/mcp/sse</a></code>.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_examples"><a class="anchor" href="#_examples"></a>Examples</h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="_listing_components"><a class="anchor" href="#_listing_components"></a>Listing Components</h3>
+<div class="paragraph">
+<p>Prompt your AI assistant with:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>List all Camel components in the messaging category</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>The assistant calls <code>camel_catalog_components</code> with <code>label=messaging</code> and receives structured results with name,
+title, description, label, deprecation status, and support level for each matching component.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_getting_component_documentation"><a class="anchor" href="#_getting_component_documentation"></a>Getting Component Documentation</h3>
+<div class="listingblock">
+<div class="content">
+<pre>Show me the documentation for the Kafka component, including all endpoint options</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>The assistant calls <code>camel_catalog_component_doc</code> with <code>component=kafka</code> and receives the full component model
+including the URI syntax, Maven coordinates, and every endpoint option with types, defaults, and descriptions.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_browsing_kamelets"><a class="anchor" href="#_browsing_kamelets"></a>Browsing Kamelets</h3>
+<div class="listingblock">
+<div class="content">
+<pre>Show me all available source kamelets related to AWS</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>The assistant calls <code>camel_catalog_kamelets</code> with <code>type=source</code> and <code>filter=aws</code> and returns matching Kamelets
+with their name, type, support level, and description.</p>
+</div>
+<div class="paragraph">
+<p>To drill into a specific Kamelet:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>What options does the aws-s3-source kamelet accept?</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>The assistant calls <code>camel_catalog_kamelet_doc</code> with <code>kamelet=aws-s3-source</code> and returns the complete property
+list including required fields, types, defaults, and Maven dependencies.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_validating_an_endpoint_uri"><a class="anchor" href="#_validating_an_endpoint_uri"></a>Validating an Endpoint URI</h3>
+<div class="listingblock">
+<div class="content">
+<pre>Validate this Kafka endpoint: kafka:myTopic?brkers=localhost:9092&amp;groupId=myGroup</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>The assistant calls <code>camel_validate_route</code> and detects the typo (<code>brkers</code>), reports the URI as invalid, and
+suggests the correct option name (<code>brokers</code>).</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_validating_yaml_dsl_structure"><a class="anchor" href="#_validating_yaml_dsl_structure"></a>Validating YAML DSL Structure</h3>
+<div class="listingblock">
+<div class="content">
+<pre>Validate this YAML route definition for me:
+
+- route:
+    from:
+      uri: timer:yaml
+      steps:
+        - setCheese:
+            simple: Hello Camel
+        - log: ${body}</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>The assistant calls <code>camel_validate_yaml_dsl</code> which validates the route against the Camel YAML DSL JSON schema
+and reports that <code>setCheese</code> is not a valid DSL element, returning the instance path and error type so the AI
+can suggest the correct processor name (e.g., <code>setBody</code>).</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_understanding_a_route"><a class="anchor" href="#_understanding_a_route"></a>Understanding a Route</h3>
+<div class="paragraph">
+<p>Paste a route and ask:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>Explain what this route does</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>The assistant calls <code>camel_route_context</code> which extracts all components and EIPs used in the route, looks up
+their documentation from the catalog, and returns enriched context so the AI can provide an accurate explanation.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_security_hardening"><a class="anchor" href="#_security_hardening"></a>Security Hardening</h3>
+<div class="listingblock">
+<div class="content">
+<pre>Analyze this route for security concerns and suggest hardening measures</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>The assistant calls <code>camel_route_harden_context</code> which analyzes the route for security-sensitive components,
+detects issues (hardcoded credentials, HTTP instead of HTTPS, plain FTP, etc.), assigns risk levels, and
+returns structured findings with remediation recommendations.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_checking_camel_versions"><a class="anchor" href="#_checking_camel_versions"></a>Checking Camel Versions</h3>
+<div class="listingblock">
+<div class="content">
+<pre>What are the latest LTS versions of Camel for Spring Boot?</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>The assistant calls <code>camel_version_list</code> with <code>runtime=spring-boot</code> and <code>lts=true</code> and returns version
+information including release dates, end-of-life dates, and JDK requirements.</p>
+</div>
+</div>
+</div>
+</div>
+</article>
+  </div>
+</main>
+</div>
+<footer class="footer">
+  <p>This page was built using the Antora default UI.</p>
+  <p>The source code for this UI is licensed under the terms of the MPL-2.0 license.</p>
+</footer>
+<script id="site-script" src="../../_/js/site.js" data-ui-root-path="../../_"></script>
+<script async src="../../_/js/vendor/highlight.js"></script>
+  </body>
+</html>

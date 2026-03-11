@@ -1,0 +1,1437 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>LangChain4j Spring Boot Integration :: Red Hat build of Apache Camel</title>
+    <meta name="description" content="Integrating LangChain4j Spring Boot Starters with Apache Camel">
+    <meta name="generator" content="Antora 3.1.14">
+    <link rel="stylesheet" href="../../_/css/site.css">
+  </head>
+  <body class="article">
+<header class="header">
+  <nav class="navbar">
+    <div class="navbar-brand">
+      <a class="navbar-item" href="/">Red Hat build of Apache Camel</a>
+      <button class="navbar-burger" data-target="topbar-nav">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </nav>
+</header>
+<div class="body">
+<div class="nav-container" data-component="manual" data-version="4.18.x">
+  <aside class="nav">
+    <div class="panels">
+<div class="nav-panel-menu is-active" data-panel="menu">
+  <nav class="nav-menu">
+    <button class="nav-menu-toggle" aria-label="Toggle expand/collapse all" style="display: none"></button>
+    <h3 class="title"><a href="index.html">User manual</a></h3>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="getting-started.html">Getting started</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="book-getting-started.html">Getting Started with Apache Camel</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="what-are-the-dependencies.html">What are the dependencies?</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Resources &amp; Guides</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="/community/books/">Books</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="building.html">Building</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="camel-console.html">Camel Developer Console</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="camel-jbang.html">Camel JBang</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="jbang-commands/camel-jbang-commands.html">Camel JBang Command Reference</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="camel-jbang-launcher.html">Camel JBang Launcher</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="camel-jbang-kubernetes.html">Camel JBang Kubernetes Plugin</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="camel-jbang-test.html">Camel JBang Testing Plugin</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="camel-jbang-mcp.html">Camel MCP Server</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="camel-maven-plugin.html">Camel Maven Plugin</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="camel-component-maven-plugin.html">Camel Component Maven Plugin</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="camel-report-maven-plugin.html">Camel Maven Report Plugin</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="camel-yaml-dsl-validator-maven-plugin.html">Camel Maven YAML DSL Validator Plugin</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="camel-maven-archetypes.html">Camel Maven Archetypes</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="configuring-route-startup-ordering-and-autostartup.html">Configuring route startup ordering and autostartup</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="component-dsl.html">Component DSL</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="Endpoint-dsl.html">Endpoint DSL</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="dataformat-dsl.html">DataFormat DSL</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="examples.html">Examples</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="graceful-shutdown.html">Graceful Shutdown</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="error-handler.html">Error handler</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="using-propertyplaceholder.html">How to use Camel property placeholders</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="variables.html">How to use Variables</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="testing.html">Testing</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="test-infra.html">Test Infra</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="notify-builder.html">NotifyBuilder</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="advice-with.html">AdviceWith</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="integration-test.html">Integration Test</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="rest-dsl.html">Working with REST and Rest DSL</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="rest-dsl-openapi.html">Rest DSL contract first</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="writing-components.html">Writing Components</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="release-guide.html">Release guide</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="release-guide-website.html">Adding doc versions to the website</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="improving-the-documentation.html">Improving the Documentation</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="migration-and-upgrade.html">Migration and Upgrade</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="camel-3-migration-guide.html">Camel 2.x to 3.0 Migration Guide</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="camel-3x-upgrade-guide.html">Camel 3.x Upgrade Guide</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="camel-4-migration-guide.html">Camel 3.x to 4.0 Migration Guide</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="camel-4x-upgrade-guide.html">Camel 4.x Upgrade Guide</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="architecture.html">Architecture</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="backlog-debugger.html">Backlog debugger</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="backlog-tracer.html">Backlog Tracer</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="batch-consumer.html">Batch Consumer</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="bean-binding.html">Bean Binding</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="bean-integration.html">Bean Integration</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="browsable-endpoint.html">BrowsableEndpoint</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="camelcontext.html">CamelContext</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="camelcontext-autoconfigure.html">CamelContext Auto Configuration</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="clustering.html">Clustering and Load Balancing</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="component.html">Component</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="data-format.html">Data Format</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="debugger.html">Debugger</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="delay-interceptor.html">Delayer</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="endpoint.html">Endpoints</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="endpoint-annotations.html">Endpoint Annotations</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="exception-clause.html">Exception Clause</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="exchange-pooling.html">Exchange Pooling</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="http-session-handling.html">HTTP-Session Handling</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="parameter-binding-annotations.html">Parameter Binding Annotations</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="pojo-producing.html">POJO Producing</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="pojo-consuming.html">POJO Consuming</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="producertemplate.html">ProducerTemplate</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="consumertemplate.html">ConsumerTemplate</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="error-handler.html">Error Handler</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="exchange.html">Message Exchange</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="exchange-pattern.html">Exchange Pattern</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="using-exchange-pattern-annotations.html">Using Exchange pattern annotations</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="expression.html">Expressions</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../components/next/eips/content-enricher.html">Content Enrichment</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="injector.html">Injector</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../components/next/eips/intercept.html">Intercept</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="jmx.html">JMX</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="lifecycle.html">Camel Lifecycle</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="oncompletion.html">OnCompletion</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="pluggable-class-resolvers.html">Pluggable Class Resolvers</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="predicate.html">Predicates</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="processor.html">Processor</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="registry.html">Registry</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="route-builder.html">RouteBuilder</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="lambda-route-builder.html">LambdaRouteBuilder</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="route-controller.html">RouteController</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="route-policy.html">RoutePolicy</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="route-configuration.html">RouteConfiguration</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="route-group.html">RouteGroup</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="context-reload.html">ContextReload</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="route-reload.html">RouteReload</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="route-template.html">RouteTemplate</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="routes.html">Routes</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="startup-condition.html">Startup Condition</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="stream-caching.html">Stream caching</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="template-engines.html">Template Engines</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="transformer.html">Transformer</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="threading-model.html">Threading Model</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="tracer.html">Tracer</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="type-converter.html">Type Converter</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="uris.html">URIs</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="uuidgenerator.html">UuidGenerator</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="validator.html">Validator</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="health-check.html">Health Checks</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Domain Specific Languages</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="dsl.html">Camel Domain Specific Language</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="languages.html">Languages</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="java-dsl.html">Java DSL</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="spring.html">Spring support</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Reference</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="#components::index.adoc">Components</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="#components:dataformats:index.adoc">Data Formats</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="#components:languages:index.adoc">Languages</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../components/next/eips/enterprise-integration-patterns.html">EIPs</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="faq/index.html">FAQ</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="faq/can-i-get-commercial-support.html">Can I get commercial support?</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="/community/support/">How can I get help?</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="faq/how-can-i-get-the-source-code.html">How can I get the source code?</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="faq/how-does-camel-work.html">How does Camel work?</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="faq/how-does-the-website-work.html">How does the website work?</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="faq/how-do-i-become-a-committer.html">How do I become a committer?</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="faq/how-do-i-compile-the-code.html">How do I compile the code?</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="faq/how-do-i-edit-the-website.html">How do I edit the website?</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="faq/running-camel-standalone.html">Running Camel standalone</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="faq/what-is-a-router.html">What is a router?</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="faq/what-is-camel.html">What is Camel?</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="faq/what-is-the-license.html">What is the license?</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="languages.html">What languages are supported?</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="faq/what-platforms-are-supported.html">What platforms are supported?</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="faq/why-the-name-camel.html">Why the name Camel?</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="faq/how-do-i-specify-which-method-to-use-when-using-beans-in-routes.html">How do I specify which method to use when using beans in routes?</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="faq/how-can-i-create-a-custom-component-or-endpoint.html">How can I create a custom component or endpoint?</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="faq/how-can-i-get-the-remote-connection-ip-address-from-the-camel-cxf-consumer-.html">How can I get the remote connection IP address from the camel-cxf consumer ?</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="faq/how-can-i-stop-a-route-from-a-route.html">How can I stop a route from a route?</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="faq/how-can-webservice-clients-see-remote-faults-with-stacktraces-when-using-camel-cxf.html">How can webservice clients see remote faults with stacktraces when using camel-cxf?</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="faq/how-does-camel-look-up-beans-and-endpoints.html">How does Camel look up beans and endpoints?</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="faq/how-do-i-change-the-logging.html">How do I change the logging?</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="faq/how-do-i-configure-endpoints.html">How do I configure endpoints?</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="faq/how-do-i-configure-password-options-on-camel-endpoints-without-the-value-being-encoded.html">How do I configure password options on Camel endpoints without the value being encoded?</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="faq/how-do-i-configure-the-default-maximum-cache-size-for-producercache-or-producertemplate.html">How do I configure the default maximum cache size for ProducerCache or ProducerTemplate?</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="faq/how-do-i-configure-the-maximum-endpoint-cache-size-for-camelcontext.html">How do I configure the maximum endpoint cache size for CamelContext?</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="faq/how-do-i-debug-my-route.html">How do I debug my route?</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="faq/how-do-i-disable-jmx.html">How do I disable JMX?</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="faq/how-do-i-enable-streams-when-debug-logging-messages-in-camel.html">How do I enable streams when debug logging messages in Camel?</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="faq/how-do-i-handle-failures-when-consuming-for-example-from-a-ftp-server.html">How do I handle failures when consuming for example from a FTP server?</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="faq/how-do-i-import-rests-from-other-xml-files.html">How do I import rests from other XML files?</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="faq/how-do-i-import-routes-from-other-xml-files.html">How do I import routes from other XML files?</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="faq/how-do-i-let-jetty-match-wildcards.html">How do I let Jetty match wildcards?</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="faq/how-do-i-name-my-routes.html">How do I name my routes?</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="faq/how-do-i-restart-camelcontext.html">How do I restart CamelContext?</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="faq/how-do-i-retrieve-the-thrown-exception-during-processing-an-exchange.html">How do I retrieve the thrown Exception during processing an Exchange?</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="faq/how-do-i-retry-failed-messages-forever.html">How do I retry failed messages forever?</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="faq/how-do-i-retry-processing-a-message-from-a-certain-point-back-or-an-entire-route.html">How do I retry processing a message from a certain point back or an entire route?</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="faq/how-do-i-reuse-the-contexttestsupport-class-in-my-unit-tests.html">How do I reuse the ContextTestSupport class in my unit tests?</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="faq/how-do-i-set-the-max-chars-when-debug-logging-messages-in-camel.html">How do I set the max chars when debug logging messages in Camel?</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="faq/how-do-i-use-uris-with-parameters-in-xml.html">How do I use URIs with parameters in XML?</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="faq/how-do-i-write-a-custom-processor-which-sends-multiple-messages.html">How do I write a custom Processor which sends multiple messages?</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="faq/how-should-i-invoke-my-pojos-or-spring-services.html">How should I invoke my POJOs or Spring Services?</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="faq/how-to-avoid-sending-some-or-all-message-headers.html">How to avoid sending some or all message headers?</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="faq/how-to-remove-the-http-protocol-headers-in-the-camel-message.html">How to remove the http protocol headers in the camel message?</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="faq/how-to-send-the-same-message-to-multiple-endpoints.html">How to send the same message to multiple endpoints?</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="faq/how-to-switch-the-cxf-consumer-between-http-and-https-without-touching-the-spring-configuration.html">How to switch the CXF consumer between HTTP and HTTPS without touching the Spring configuration?</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="faq/how-to-use-a-dynamic-uri-in-to.html">How to use a dynamic URI in to()?</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="faq/is-there-an-ide.html">Is there an IDE?</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="faq/using-getin-or-getout-methods-on-exchange.html">Using getIn or getOut methods on Exchange</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="faq/why-cant-i-use-sign-in-my-password.html">Why can&#8217;t I use + sign in my password?</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="faq/why-can-i-not-use-when-or-otherwise-in-a-java-camel-route.html">Why can I not use when or otherwise in a Java Camel route?</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="faq/why-does-ftp-component-not-download-any-files.html">Why does FTP component not download any files?</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="faq/why-does-my-file-consumer-not-pick-up-the-file-and-how-do-i-let-the-file-consumer-use-the-camel-error-handler.html">Why does my file consumer not pick up the file, and how do I let the file consumer use the Camel error handler?</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="faq/why-does-useoriginalmessage-with-error-handler-not-work-as-expected.html">Why does useOriginalMessage with error handler not work as expected?</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="faq/why-do-my-message-lose-its-headers-during-routing.html">Why do my message lose its headers during routing?</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="faq/why-is-my-message-body-empty.html">Why is my message body empty?</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="faq/why-is-my-processor-not-showing-up-in-jconsole.html">Why is my processor not showing up in JConsole?</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="faq/why-is-the-exception-null-when-i-use-onexception.html">Why is the exception null when I use onException?</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="faq/why-use-multiple-camelcontext.html">Why use multiple CamelContext?</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="faq/how-do-i-enable-debug-logging.html">How do I enable debug logging?</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="faq/how-do-i-use-log4j.html">How do I use log4j?</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="faq/how-do-i-make-my-jms-endpoint-transactional.html">How Do I Make My JMS Endpoint Transactional?</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="faq/how-do-i-set-the-mep-when-interacting-with-jbi.html">How do I set the MEP when interacting with JBI?</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="faq/how-do-the-direct-event-seda-and-vm-endpoints-compare.html">How do the direct, event, seda and vm endpoints compare?</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="faq/how-do-the-timer-and-quartz-endpoints-compare.html">How do the Timer and Quartz endpoints compare?</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="faq/why-does-my-jms-route-only-consume-one-message-at-once.html">Why does my JMS route only consume one message at once?</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="faq/exception-beandefinitionstoreexception.html">Exception - BeanDefinitionStoreException</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="faq/exception-orgapachecamelnosuchendpointexception.html">Exception - org.apache.camel.NoSuchEndpointException</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="faq/exception-orgxmlsaxsaxparseexception.html">Exception - org.xml.sax.SAXParseException</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="faq/memory-leak-when-adding-and-removing-routes-at-runtime.html">Memory leak when adding and removing routes at runtime</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="faq/why-does-camel-use-too-many-threads-with-producertemplate.html">Why does Camel use too many threads with ProducerTemplate?</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="faq/why-does-maven-not-download-dependencies.html">Why does maven not download dependencies?</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+</ul>
+  </nav>
+</div>
+<div class="nav-panel-explore" data-panel="explore">
+  <div class="context">
+    <span class="title">User manual</span>
+    <span class="version">4.18.x</span>
+  </div>
+  <ul class="components">
+    <li class="component">
+      <div class="title"><a href="../../components/next/index.html">components</a></div>
+      <ul class="versions">
+        <li class="version">
+          <a href="../../components/index.html">Next (Pre-release)</a>
+        </li>
+        <li class="version is-latest">
+          <a href="../../components/next/index.html">next</a>
+        </li>
+        <li class="version">
+          <a href="../../components/4.18.x/index.html">4.18.x (LTS)</a>
+        </li>
+        <li class="version">
+          <a href="../../components/4.14.x/index.html">4.14.x (LTS)</a>
+        </li>
+        <li class="version">
+          <a href="../../components/4.10.x/index.html">4.10.x (LTS)</a>
+        </li>
+        <li class="version">
+          <a href="../../components/4.8.x/index.html">4.8.x</a>
+        </li>
+        <li class="version">
+          <a href="../../components/4.4.x/index.html">4.4.x</a>
+        </li>
+        <li class="version">
+          <a href="../../components/4.0.x/index.html">4.0.x</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component is-current">
+      <div class="title"><a href="../index.html">User manual</a></div>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../index.html">default</a>
+        </li>
+        <li class="version is-current">
+          <a href="index.html">4.18.x</a>
+        </li>
+        <li class="version">
+          <a href="../4.14.x/index.html">4.14.x</a>
+        </li>
+        <li class="version">
+          <a href="../4.10.x/index.html">4.10.x</a>
+        </li>
+        <li class="version">
+          <a href="../4.8.x/index.html">4.8.x</a>
+        </li>
+        <li class="version">
+          <a href="../4.4.x/index.html">4.4.x</a>
+        </li>
+        <li class="version">
+          <a href="../4.0.x/index.html">4.0.x</a>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</div>
+    </div>
+  </aside>
+</div>
+<main class="article">
+<div class="toolbar" role="navigation">
+<button class="nav-toggle"></button>
+  <a href="../index.html" class="home-link"></a>
+<nav class="breadcrumbs" aria-label="breadcrumbs">
+  <ul>
+    <li><a href="index.html">User manual</a></li>
+    <li><a href="langchain4j-spring-boot-integration.html">LangChain4j Spring Boot Integration</a></li>
+  </ul>
+</nav>
+<div class="page-versions">
+  <button class="version-menu-toggle" title="Show other versions of page">4.18.x</button>
+  <div class="version-menu">
+    <a class="version is-missing" href="../index.html">default</a>
+    <a class="version is-current" href="langchain4j-spring-boot-integration.html">4.18.x</a>
+    <a class="version is-missing" href="../4.14.x/index.html">4.14.x</a>
+    <a class="version is-missing" href="../4.10.x/index.html">4.10.x</a>
+    <a class="version is-missing" href="../4.8.x/index.html">4.8.x</a>
+    <a class="version is-missing" href="../4.4.x/index.html">4.4.x</a>
+    <a class="version is-missing" href="../4.0.x/index.html">4.0.x</a>
+  </div>
+</div>
+<div class="edit-this-page"><a href="https://github.com/rhaetor/rh-jboss-camel/edit/camel-4.18.0-branch/docs/user-manual/modules/ROOT/pages/langchain4j-spring-boot-integration.adoc">Edit this Page</a></div>
+</div>
+  <div class="content">
+<aside class="toc sidebar" data-title="Contents" data-levels="2">
+  <div class="toc-menu"></div>
+</aside>
+<article class="doc">
+<h1 class="page">LangChain4j Spring Boot Integration</h1>
+<div id="preamble">
+<div class="sectionbody">
+<div class="paragraph">
+<p><strong>Since Camel 4.18</strong></p>
+</div>
+<div class="paragraph">
+<p>This guide explains how to integrate LangChain4j Spring Boot starters with Apache Camel Spring Boot applications.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_overview"><a class="anchor" href="#_overview"></a>Overview</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>LangChain4j provides Spring Boot starters that offer auto-configuration for various AI/LLM providers. When using Camel&#8217;s langchain4j components in a Spring Boot application, you can leverage these starters to simplify configuration and reduce boilerplate code.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_benefits"><a class="anchor" href="#_benefits"></a>Benefits</h2>
+<div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p><strong>Auto-configuration</strong>: Automatic bean creation and configuration based on properties</p>
+</li>
+<li>
+<p><strong>Type-safe configuration</strong>: Configuration properties with IDE auto-completion support</p>
+</li>
+<li>
+<p><strong>Simplified dependency management</strong>: Single starter dependency per provider</p>
+</li>
+<li>
+<p><strong>Production-ready</strong>: Built-in health checks and metrics (when using Spring Boot Actuator)</p>
+</li>
+<li>
+<p><strong>Consistent configuration</strong>: Unified configuration approach across different LLM providers</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_available_langchain4j_spring_boot_starters"><a class="anchor" href="#_available_langchain4j_spring_boot_starters"></a>Available LangChain4j Spring Boot Starters</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>LangChain4j provides Spring Boot starters for various AI/LLM providers:</p>
+</div>
+<div class="sect2">
+<h3 id="_chat_models"><a class="anchor" href="#_chat_models"></a>Chat Models</h3>
+<div class="ulist">
+<ul>
+<li>
+<p><code>langchain4j-open-ai-spring-boot-starter</code> - OpenAI (GPT-3.5, GPT-4, etc.)</p>
+</li>
+<li>
+<p><code>langchain4j-azure-open-ai-spring-boot-starter</code> - Azure OpenAI</p>
+</li>
+<li>
+<p><code>langchain4j-google-ai-gemini-spring-boot-starter</code> - Google Gemini</p>
+</li>
+<li>
+<p><code>langchain4j-ollama-spring-boot-starter</code> - Ollama (local models)</p>
+</li>
+<li>
+<p><code>langchain4j-anthropic-spring-boot-starter</code> - Anthropic Claude</p>
+</li>
+<li>
+<p><code>langchain4j-mistral-ai-spring-boot-starter</code> - Mistral AI</p>
+</li>
+<li>
+<p><code>langchain4j-hugging-face-spring-boot-starter</code> - Hugging Face</p>
+</li>
+<li>
+<p><code>langchain4j-vertex-ai-spring-boot-starter</code> - Google Vertex AI</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_embedding_models"><a class="anchor" href="#_embedding_models"></a>Embedding Models</h3>
+<div class="paragraph">
+<p>Most chat model starters also include embedding model auto-configuration.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_other_components"><a class="anchor" href="#_other_components"></a>Other Components</h3>
+<div class="ulist">
+<ul>
+<li>
+<p><code>langchain4j-spring-boot-starter</code> - Core LangChain4j functionality</p>
+</li>
+<li>
+<p>Various embedding store starters (Chroma, Pinecone, Qdrant, etc.)</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_getting_started"><a class="anchor" href="#_getting_started"></a>Getting Started</h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="_step_1_add_dependencies"><a class="anchor" href="#_step_1_add_dependencies"></a>Step 1: Add Dependencies</h3>
+<div class="paragraph">
+<p>Add the Camel Spring Boot starter and the LangChain4j component you need:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;dependencies&gt;
+    &lt;!-- Camel Spring Boot --&gt;
+    &lt;dependency&gt;
+        &lt;groupId&gt;org.apache.camel.springboot&lt;/groupId&gt;
+        &lt;artifactId&gt;camel-spring-boot-starter&lt;/artifactId&gt;
+    &lt;/dependency&gt;
+
+    &lt;!-- Camel LangChain4j Component --&gt;
+    &lt;dependency&gt;
+        &lt;groupId&gt;org.apache.camel.springboot&lt;/groupId&gt;
+        &lt;artifactId&gt;camel-langchain4j-chat-starter&lt;/artifactId&gt;
+    &lt;/dependency&gt;
+
+    &lt;!-- LangChain4j Spring Boot Starter for OpenAI --&gt;
+    &lt;dependency&gt;
+        &lt;groupId&gt;dev.langchain4j&lt;/groupId&gt;
+        &lt;artifactId&gt;langchain4j-open-ai-spring-boot-starter&lt;/artifactId&gt;
+        &lt;version&gt;1.10.0&lt;/version&gt;
+    &lt;/dependency&gt;
+&lt;/dependencies&gt;</code></pre>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_step_2_configure_properties"><a class="anchor" href="#_step_2_configure_properties"></a>Step 2: Configure Properties</h3>
+<div class="paragraph">
+<p>Configure the LangChain4j provider in <code>application.properties</code> or <code>application.yml</code>:</p>
+</div>
+<div class="listingblock">
+<div class="title">application.properties</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-properties hljs" data-lang="properties"># OpenAI Chat Model Configuration
+langchain4j.open-ai.chat-model.api-key=${OPENAI_API_KEY}
+langchain4j.open-ai.chat-model.model-name=gpt-4o
+langchain4j.open-ai.chat-model.temperature=0.7
+langchain4j.open-ai.chat-model.max-tokens=1000
+
+# OpenAI Embedding Model Configuration
+langchain4j.open-ai.embedding-model.api-key=${OPENAI_API_KEY}
+langchain4j.open-ai.embedding-model.model-name=text-embedding-ada-002</code></pre>
+</div>
+</div>
+<div class="listingblock">
+<div class="title">application.yml</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-yaml hljs" data-lang="yaml">langchain4j:
+  open-ai:
+    chat-model:
+      api-key: ${OPENAI_API_KEY}
+      model-name: gpt-4o
+      temperature: 0.7
+      max-tokens: 1000
+    embedding-model:
+      api-key: ${OPENAI_API_KEY}
+      model-name: text-embedding-ada-002</code></pre>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_step_3_use_in_camel_routes"><a class="anchor" href="#_step_3_use_in_camel_routes"></a>Step 3: Use in Camel Routes</h3>
+<div class="paragraph">
+<p>The auto-configured beans are automatically available in your Camel routes:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">@Component
+public class MyRoutes extends RouteBuilder {
+
+    @Override
+    public void configure() {
+        // Chat endpoint using auto-configured ChatLanguageModel
+        from("direct:chat")
+            .to("langchain4j-chat:openai?chatModel=#chatLanguageModel");
+
+        // Embeddings endpoint using auto-configured EmbeddingModel
+        from("direct:embeddings")
+            .to("langchain4j-embeddings:openai?embeddingModel=#embeddingModel");
+    }
+}</code></pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_complete_examples"><a class="anchor" href="#_complete_examples"></a>Complete Examples</h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="_example_1_openai_chat_integration"><a class="anchor" href="#_example_1_openai_chat_integration"></a>Example 1: OpenAI Chat Integration</h3>
+<div class="listingblock">
+<div class="title">pom.xml</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;dependencies&gt;
+    &lt;dependency&gt;
+        &lt;groupId&gt;org.apache.camel.springboot&lt;/groupId&gt;
+        &lt;artifactId&gt;camel-spring-boot-starter&lt;/artifactId&gt;
+    &lt;/dependency&gt;
+    &lt;dependency&gt;
+        &lt;groupId&gt;org.apache.camel.springboot&lt;/groupId&gt;
+        &lt;artifactId&gt;camel-langchain4j-chat-starter&lt;/artifactId&gt;
+    &lt;/dependency&gt;
+    &lt;dependency&gt;
+        &lt;groupId&gt;dev.langchain4j&lt;/groupId&gt;
+        &lt;artifactId&gt;langchain4j-open-ai-spring-boot-starter&lt;/artifactId&gt;
+        &lt;version&gt;1.10.0&lt;/version&gt;
+    &lt;/dependency&gt;
+&lt;/dependencies&gt;</code></pre>
+</div>
+</div>
+<div class="listingblock">
+<div class="title">application.properties</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-properties hljs" data-lang="properties">langchain4j.open-ai.chat-model.api-key=${OPENAI_API_KEY}
+langchain4j.open-ai.chat-model.model-name=gpt-4o
+langchain4j.open-ai.chat-model.temperature=0.7</code></pre>
+</div>
+</div>
+<div class="listingblock">
+<div class="title">ChatRoute.java</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java"><span class="fold-block is-hidden-folded">import org.apache.camel.builder.RouteBuilder;
+import org.springframework.stereotype.Component;
+
+</span><span class="fold-block">@Component
+public class ChatRoute extends RouteBuilder {
+
+    @Override
+    public void configure() {
+        from("direct:chat")
+            .log("Sending message to OpenAI: ${body}")
+            .to("langchain4j-chat:openai?chatModel=#chatLanguageModel")
+            .log("Received response: ${body}");
+    }
+}</span></code></pre>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_example_2_azure_openai_with_rag"><a class="anchor" href="#_example_2_azure_openai_with_rag"></a>Example 2: Azure OpenAI with RAG</h3>
+<div class="listingblock">
+<div class="title">pom.xml</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;dependencies&gt;
+    &lt;dependency&gt;
+        &lt;groupId&gt;org.apache.camel.springboot&lt;/groupId&gt;
+        &lt;artifactId&gt;camel-spring-boot-starter&lt;/artifactId&gt;
+    &lt;/dependency&gt;
+    &lt;dependency&gt;
+        &lt;groupId&gt;org.apache.camel.springboot&lt;/groupId&gt;
+        &lt;artifactId&gt;camel-langchain4j-chat-starter&lt;/artifactId&gt;
+    &lt;/dependency&gt;
+    &lt;dependency&gt;
+        &lt;groupId&gt;org.apache.camel.springboot&lt;/groupId&gt;
+        &lt;artifactId&gt;camel-langchain4j-embeddings-starter&lt;/artifactId&gt;
+    &lt;/dependency&gt;
+    &lt;dependency&gt;
+        &lt;groupId&gt;dev.langchain4j&lt;/groupId&gt;
+        &lt;artifactId&gt;langchain4j-azure-open-ai-spring-boot-starter&lt;/artifactId&gt;
+        &lt;version&gt;1.10.0&lt;/version&gt;
+    &lt;/dependency&gt;
+&lt;/dependencies&gt;</code></pre>
+</div>
+</div>
+<div class="listingblock">
+<div class="title">application.yml</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-yaml hljs" data-lang="yaml">langchain4j:
+  azure-open-ai:
+    chat-model:
+      endpoint: ${AZURE_OPENAI_ENDPOINT}
+      api-key: ${AZURE_OPENAI_API_KEY}
+      deployment-name: gpt-4
+    embedding-model:
+      endpoint: ${AZURE_OPENAI_ENDPOINT}
+      api-key: ${AZURE_OPENAI_API_KEY}
+      deployment-name: text-embedding-ada-002</code></pre>
+</div>
+</div>
+<div class="listingblock">
+<div class="title">RagRoute.java</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java"><span class="fold-block is-hidden-folded">import org.apache.camel.builder.RouteBuilder;
+import org.apache.camel.component.langchain4j.chat.LangChain4jRagAggregatorStrategy;
+import org.springframework.stereotype.Component;
+
+</span><span class="fold-block">@Component
+public class RagRoute extends RouteBuilder {
+
+    @Override
+    public void configure() {
+        LangChain4jRagAggregatorStrategy ragStrategy = new LangChain4jRagAggregatorStrategy();
+
+        from("direct:rag-chat")
+            .log("Processing RAG query: ${body}")
+            .enrich("direct:retrieve-context", ragStrategy)
+            .to("langchain4j-chat:azure?chatModel=#chatLanguageModel")
+            .log("RAG response: ${body}");
+
+        from("direct:retrieve-context")
+            .to("langchain4j-embeddings:azure?embeddingModel=#embeddingModel")
+            .to("langchain4j-embeddingstore:search?embeddingStore=#embeddingStore")
+            .log("Retrieved context: ${body}");
+    }
+}</span></code></pre>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_example_3_ollama_local_llm"><a class="anchor" href="#_example_3_ollama_local_llm"></a>Example 3: Ollama (Local LLM)</h3>
+<div class="listingblock">
+<div class="title">pom.xml</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;dependencies&gt;
+    &lt;dependency&gt;
+        &lt;groupId&gt;org.apache.camel.springboot&lt;/groupId&gt;
+        &lt;artifactId&gt;camel-spring-boot-starter&lt;/artifactId&gt;
+    &lt;/dependency&gt;
+    &lt;dependency&gt;
+        &lt;groupId&gt;org.apache.camel.springboot&lt;/groupId&gt;
+        &lt;artifactId&gt;camel-langchain4j-chat-starter&lt;/artifactId&gt;
+    &lt;/dependency&gt;
+    &lt;dependency&gt;
+        &lt;groupId&gt;dev.langchain4j&lt;/groupId&gt;
+        &lt;artifactId&gt;langchain4j-ollama-spring-boot-starter&lt;/artifactId&gt;
+        &lt;version&gt;1.10.0&lt;/version&gt;
+    &lt;/dependency&gt;
+&lt;/dependencies&gt;</code></pre>
+</div>
+</div>
+<div class="listingblock">
+<div class="title">application.properties</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-properties hljs" data-lang="properties">langchain4j.ollama.chat-model.base-url=http://localhost:11434
+langchain4j.ollama.chat-model.model-name=llama2
+langchain4j.ollama.chat-model.temperature=0.8</code></pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_configuration_properties_reference"><a class="anchor" href="#_configuration_properties_reference"></a>Configuration Properties Reference</h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="_openai_configuration"><a class="anchor" href="#_openai_configuration"></a>OpenAI Configuration</h3>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-properties hljs" data-lang="properties"># Chat Model
+langchain4j.open-ai.chat-model.api-key=
+langchain4j.open-ai.chat-model.model-name=gpt-4o
+langchain4j.open-ai.chat-model.temperature=0.7
+langchain4j.open-ai.chat-model.max-tokens=
+langchain4j.open-ai.chat-model.timeout=60s
+langchain4j.open-ai.chat-model.max-retries=3
+
+# Embedding Model
+langchain4j.open-ai.embedding-model.api-key=
+langchain4j.open-ai.embedding-model.model-name=text-embedding-ada-002</code></pre>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_azure_openai_configuration"><a class="anchor" href="#_azure_openai_configuration"></a>Azure OpenAI Configuration</h3>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-properties hljs" data-lang="properties"># Chat Model
+langchain4j.azure-open-ai.chat-model.endpoint=
+langchain4j.azure-open-ai.chat-model.api-key=
+langchain4j.azure-open-ai.chat-model.deployment-name=
+langchain4j.azure-open-ai.chat-model.temperature=0.7
+
+# Embedding Model
+langchain4j.azure-open-ai.embedding-model.endpoint=
+langchain4j.azure-open-ai.embedding-model.api-key=
+langchain4j.azure-open-ai.embedding-model.deployment-name=</code></pre>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_ollama_configuration"><a class="anchor" href="#_ollama_configuration"></a>Ollama Configuration</h3>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-properties hljs" data-lang="properties"># Chat Model
+langchain4j.ollama.chat-model.base-url=http://localhost:11434
+langchain4j.ollama.chat-model.model-name=llama2
+langchain4j.ollama.chat-model.temperature=0.8
+langchain4j.ollama.chat-model.timeout=60s
+
+# Embedding Model
+langchain4j.ollama.embedding-model.base-url=http://localhost:11434
+langchain4j.ollama.embedding-model.model-name=nomic-embed-text</code></pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_advanced_configuration"><a class="anchor" href="#_advanced_configuration"></a>Advanced Configuration</h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="_using_multiple_llm_providers"><a class="anchor" href="#_using_multiple_llm_providers"></a>Using Multiple LLM Providers</h3>
+<div class="paragraph">
+<p>You can configure multiple LLM providers in the same application by using different bean names:</p>
+</div>
+<div class="listingblock">
+<div class="title">application.yml</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-yaml hljs" data-lang="yaml">langchain4j:
+  open-ai:
+    chat-model:
+      api-key: ${OPENAI_API_KEY}
+      model-name: gpt-4o
+  ollama:
+    chat-model:
+      base-url: http://localhost:11434
+      model-name: llama2</code></pre>
+</div>
+</div>
+<div class="listingblock">
+<div class="title">MultiProviderRoute.java</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">@Component
+public class MultiProviderRoute extends RouteBuilder {
+
+    @Override
+    public void configure() {
+        // Use OpenAI for production
+        from("direct:production-chat")
+            .to("langchain4j-chat:openai?chatModel=#chatLanguageModel");
+
+        // Use Ollama for development/testing
+        from("direct:dev-chat")
+            .to("langchain4j-chat:ollama?chatModel=#ollamaChatModel");
+    }
+}</code></pre>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_custom_bean_configuration"><a class="anchor" href="#_custom_bean_configuration"></a>Custom Bean Configuration</h3>
+<div class="paragraph">
+<p>You can customize the auto-configured beans or create additional beans:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java"><span class="fold-block is-hidden-folded">import org.springframework.boot.autoconfigure.condition.ConditionalOnProperty;
+import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Configuration;
+import dev.langchain4j.model.chat.ChatLanguageModel;
+import dev.langchain4j.model.openai.OpenAiChatModel;
+
+</span><span class="fold-block">@Configuration
+public class CustomLangChain4jConfig {
+
+    @Bean
+    @ConditionalOnProperty(name = "custom.llm.enabled", havingValue = "true")
+    public ChatLanguageModel customChatModel() {
+        return OpenAiChatModel.builder()
+            .apiKey(System.getenv("CUSTOM_API_KEY"))
+            .modelName("gpt-4o-mini")
+            .temperature(0.5)
+            .logRequests(true)
+            .logResponses(true)
+            .build();
+    }
+}</span></code></pre>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_environment_specific_configuration"><a class="anchor" href="#_environment_specific_configuration"></a>Environment-Specific Configuration</h3>
+<div class="paragraph">
+<p>Use Spring profiles for environment-specific configuration:</p>
+</div>
+<div class="listingblock">
+<div class="title">application-dev.yml</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-yaml hljs" data-lang="yaml">langchain4j:
+  ollama:
+    chat-model:
+      base-url: http://localhost:11434
+      model-name: llama2</code></pre>
+</div>
+</div>
+<div class="listingblock">
+<div class="title">application-prod.yml</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-yaml hljs" data-lang="yaml">langchain4j:
+  open-ai:
+    chat-model:
+      api-key: ${OPENAI_API_KEY}
+      model-name: gpt-4o
+      max-retries: 5
+      timeout: 120s</code></pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_best_practices"><a class="anchor" href="#_best_practices"></a>Best Practices</h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="_1_secure_api_keys"><a class="anchor" href="#_1_secure_api_keys"></a>1. Secure API Keys</h3>
+<div class="paragraph">
+<p>Never hardcode API keys in your code or configuration files. Use environment variables or external configuration:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-properties hljs" data-lang="properties">langchain4j.open-ai.chat-model.api-key=${OPENAI_API_KEY}</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Or use Spring Cloud Config, Vault, or other secret management solutions.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_2_configure_timeouts_and_retries"><a class="anchor" href="#_2_configure_timeouts_and_retries"></a>2. Configure Timeouts and Retries</h3>
+<div class="paragraph">
+<p>Set appropriate timeouts and retry policies for production:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-properties hljs" data-lang="properties">langchain4j.open-ai.chat-model.timeout=60s
+langchain4j.open-ai.chat-model.max-retries=3
+langchain4j.open-ai.chat-model.log-requests=false
+langchain4j.open-ai.chat-model.log-responses=false</code></pre>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_3_use_streaming_for_long_responses"><a class="anchor" href="#_3_use_streaming_for_long_responses"></a>3. Use Streaming for Long Responses</h3>
+<div class="paragraph">
+<p>For long-running conversations, consider using streaming chat models:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">@Component
+public class StreamingChatRoute extends RouteBuilder {
+
+    @Autowired
+    private StreamingChatLanguageModel streamingChatModel;
+
+    @Override
+    public void configure() {
+        from("direct:streaming-chat")
+            .process(exchange -&gt; {
+                String prompt = exchange.getIn().getBody(String.class);
+                streamingChatModel.generate(prompt, new StreamingResponseHandler&lt;AiMessage&gt;() {
+                    @Override
+                    public void onNext(String token) {
+                        // Handle streaming tokens
+                    }
+
+                    @Override
+                    public void onComplete(Response&lt;AiMessage&gt; response) {
+                        exchange.getIn().setBody(response.content().text());
+                    }
+
+                    @Override
+                    public void onError(Throwable error) {
+                        // Handle errors
+                    }
+                });
+            });
+    }
+}</code></pre>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_4_monitor_and_log"><a class="anchor" href="#_4_monitor_and_log"></a>4. Monitor and Log</h3>
+<div class="paragraph">
+<p>Enable logging for debugging during development:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-properties hljs" data-lang="properties"># Development
+langchain4j.open-ai.chat-model.log-requests=true
+langchain4j.open-ai.chat-model.log-responses=true
+
+# Production (disable for security and performance)
+langchain4j.open-ai.chat-model.log-requests=false
+langchain4j.open-ai.chat-model.log-responses=false</code></pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_troubleshooting"><a class="anchor" href="#_troubleshooting"></a>Troubleshooting</h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="_common_issues"><a class="anchor" href="#_common_issues"></a>Common Issues</h3>
+<div class="sect3">
+<h4 id="_bean_not_found"><a class="anchor" href="#_bean_not_found"></a>Bean Not Found</h4>
+<div class="paragraph">
+<p>If you encounter "No qualifying bean" errors, ensure:</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>The LangChain4j Spring Boot starter is in your dependencies</p>
+</li>
+<li>
+<p>The configuration properties are correctly set</p>
+</li>
+<li>
+<p>The bean name matches what you&#8217;re referencing in your routes</p>
+</li>
+</ol>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_api_key_issues"><a class="anchor" href="#_api_key_issues"></a>API Key Issues</h4>
+<div class="paragraph">
+<p>If you get authentication errors:</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Verify the API key is correctly set in environment variables</p>
+</li>
+<li>
+<p>Check that the property name matches the provider (e.g., <code>langchain4j.open-ai.chat-model.api-key</code>)</p>
+</li>
+<li>
+<p>Ensure the API key has the necessary permissions</p>
+</li>
+</ol>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_timeout_errors"><a class="anchor" href="#_timeout_errors"></a>Timeout Errors</h4>
+<div class="paragraph">
+<p>If you experience timeout errors:</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Increase the timeout value: <code>langchain4j.open-ai.chat-model.timeout=120s</code></p>
+</li>
+<li>
+<p>Check your network connectivity</p>
+</li>
+<li>
+<p>Verify the LLM service is available</p>
+</li>
+</ol>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_additional_resources"><a class="anchor" href="#_additional_resources"></a>Additional Resources</h2>
+<div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p><a href="https://docs.langchain4j.dev/tutorials/spring-boot-integration">LangChain4j Spring Boot Integration Documentation</a></p>
+</li>
+<li>
+<p><a href="#components::langchain4j-chat-component.adoc" class="xref unresolved">Camel LangChain4j Chat Component</a></p>
+</li>
+<li>
+<p><a href="#components::langchain4j-embeddings-component.adoc" class="xref unresolved">Camel LangChain4j Embeddings Component</a></p>
+</li>
+<li>
+<p><a href="#components::langchain4j-agent-component.adoc" class="xref unresolved">Camel LangChain4j Agent Component</a></p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</article>
+  </div>
+</main>
+</div>
+<footer class="footer">
+  <p>This page was built using the Antora default UI.</p>
+  <p>The source code for this UI is licensed under the terms of the MPL-2.0 license.</p>
+</footer>
+<script id="site-script" src="../../_/js/site.js" data-ui-root-path="../../_"></script>
+<script async src="../../_/js/vendor/highlight.js"></script>
+  </body>
+</html>
