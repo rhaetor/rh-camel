@@ -2122,10 +2122,10 @@
       </ul>
     </li>
     <li class="component">
-      <div class="title"><a href="../../../manual/4.18.x/ndex.html">User manual</a></div>
+      <div class="title"><a href="../../../manual/4.18.x/index.html">User manual</a></div>
       <ul class="versions">
         <li class="version is-latest">
-          <a href="../../../manual/4.18.x/ndex.html">default</a>
+          <a href="../../../manual/4.18.x/index.html">default</a>
         </li>
         <li class="version">
           <a href="../../../manual/4.18.x/index.html">4.18.x</a>
@@ -2155,7 +2155,7 @@
 <main class="article">
 <div class="toolbar" role="navigation">
 <button class="nav-toggle"></button>
-  <a href="../../../manual/4.18.x/ndex.html" class="home-link"></a>
+  <a href="../../../manual/4.18.x/index.html" class="home-link"></a>
 <nav class="breadcrumbs" aria-label="breadcrumbs">
   <ul>
     <li><a href="../index.html">Camel Components</a></li>
@@ -2203,7 +2203,7 @@ from the <a href="enterprise-integration-patterns.html" class="xref page">EIP pa
 <p>Use an Event Message for reliable, asynchronous event notification between applications.</p>
 </div>
 <div class="paragraph">
-<p>Camel supports Event Message by the <a href="../../../manual/4.18.x/xchange-pattern.html" class="xref page">Exchange Pattern</a>
+<p>Camel supports Event Message by the <a href="../../../manual/4.18.x/exchange-pattern.html" class="xref page">Exchange Pattern</a>
 on a <a href="message.html" class="xref page">Message</a> which can be set to <code>InOnly</code> to indicate
 a oneway event message. Camel <a href="../index.html" class="xref page">Components</a> then
 implement this pattern using the underlying transport or protocols.</p>
@@ -2237,7 +2237,7 @@ See the related <a href="requestReply-eip.html" class="xref page">Request Reply<
 <div class="sectionbody">
 <div class="paragraph">
 <p>If you are using a component which defaults to <code>InOut</code> you can override
-the <a href="../../../manual/4.18.x/xchange-pattern.html" class="xref page">Exchange Pattern</a> for a <strong>consumer</strong> endpoint using
+the <a href="../../../manual/4.18.x/exchange-pattern.html" class="xref page">Exchange Pattern</a> for a <strong>consumer</strong> endpoint using
 the pattern property.</p>
 </div>
 <div class="listingblock">
@@ -2300,7 +2300,7 @@ is in <code>InOnly</code> mode.</p>
 <div class="sectionbody">
 <div class="paragraph">
 <p>You can specify the
-<a href="../../../manual/4.18.x/xchange-pattern.html" class="xref page">Exchange Pattern</a> using <code>setExchangePattern</code> in the DSL.</p>
+<a href="../../../manual/4.18.x/exchange-pattern.html" class="xref page">Exchange Pattern</a> using <code>setExchangePattern</code> in the DSL.</p>
 </div>
 <div id="_tabs_2" class="openblock tabs is-sync is-loading">
 <div class="content">
@@ -2337,8 +2337,8 @@ is in <code>InOnly</code> mode.</p>
 </div>
 </div>
 <div class="paragraph">
-<p>When using <code>setExchangePattern</code> then the <a href="../../../manual/4.18.x/xchange-pattern.html" class="xref page">Exchange Pattern</a>
-on the <a href="../../../manual/4.18.x/xchange.html" class="xref page">Exchange</a> is changed from this point onwards in the route.</p>
+<p>When using <code>setExchangePattern</code> then the <a href="../../../manual/4.18.x/exchange-pattern.html" class="xref page">Exchange Pattern</a>
+on the <a href="../../../manual/4.18.x/exchange.html" class="xref page">Exchange</a> is changed from this point onwards in the route.</p>
 </div>
 <div class="paragraph">
 <p>This means you can change the pattern back again at a later point:</p>
@@ -2360,7 +2360,7 @@ on the <a href="../../../manual/4.18.x/xchange.html" class="xref page">Exchange<
 <i class="fa icon-note" title="Note"></i>
 </td>
 <td class="content">
-Using <code>setExchangePattern</code> to change the <a href="../../../manual/4.18.x/xchange-pattern.html" class="xref page">Exchange Pattern</a>
+Using <code>setExchangePattern</code> to change the <a href="../../../manual/4.18.x/exchange-pattern.html" class="xref page">Exchange Pattern</a>
 is often only used in special use-cases where you must
 force to be using either <code>InOnly</code> or <code>InOut</code> mode when using components that support both modes (such as messaging components like ActiveMQ, JMS, RabbitMQ etc.)
 </td>
@@ -2378,8 +2378,8 @@ indicated by the presence of the <code>JMSReplyTo</code> header. This means the 
 detects whether to use <code>InOnly</code> or <code>InOut</code> in the consumer.</p>
 </div>
 <div class="paragraph">
-<p>Likewise, the JMS producer will check the current <a href="../../../manual/4.18.x/xchange-pattern.html" class="xref page">Exchange Pattern</a>
-on the <a href="../../../manual/4.18.x/xchange.html" class="xref page">Exchange</a> to know whether to use <code>InOnly</code> or <code>InOut</code> mode (i.e., one-way vs. request/reply messaging)</p>
+<p>Likewise, the JMS producer will check the current <a href="../../../manual/4.18.x/exchange-pattern.html" class="xref page">Exchange Pattern</a>
+on the <a href="../../../manual/4.18.x/exchange.html" class="xref page">Exchange</a> to know whether to use <code>InOnly</code> or <code>InOut</code> mode (i.e., one-way vs. request/reply messaging)</p>
 </div>
 </div>
 </div>

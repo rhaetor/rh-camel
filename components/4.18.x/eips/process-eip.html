@@ -2123,10 +2123,10 @@
       </ul>
     </li>
     <li class="component">
-      <div class="title"><a href="../../../manual/4.18.x/ndex.html">User manual</a></div>
+      <div class="title"><a href="../../../manual/4.18.x/index.html">User manual</a></div>
       <ul class="versions">
         <li class="version is-latest">
-          <a href="../../../manual/4.18.x/ndex.html">default</a>
+          <a href="../../../manual/4.18.x/index.html">default</a>
         </li>
         <li class="version">
           <a href="../../../manual/4.18.x/index.html">4.18.x</a>
@@ -2156,7 +2156,7 @@
 <main class="article">
 <div class="toolbar" role="navigation">
 <button class="nav-toggle"></button>
-  <a href="../../../manual/4.18.x/ndex.html" class="home-link"></a>
+  <a href="../../../manual/4.18.x/index.html" class="home-link"></a>
 <nav class="breadcrumbs" aria-label="breadcrumbs">
   <ul>
     <li><a href="../index.html">Camel Components</a></li>
@@ -2189,7 +2189,7 @@
 <div class="sectionbody">
 <div class="paragraph">
 <p>The <a href="http://javadoc.io/doc/org.apache.camel/camel-api/latest/org/apache/camel/Processor.html">Processor</a>
-is used for processing message <a href="../../../manual/4.18.x/xchange.html" class="xref page">Exchanges</a>.</p>
+is used for processing message <a href="../../../manual/4.18.x/exchange.html" class="xref page">Exchanges</a>.</p>
 </div>
 <div class="paragraph">
 <p>The processor is a core Camel concept that represents a node capable of using, creating,
@@ -2208,7 +2208,7 @@ your own custom creation. The figure below shows the flow between processors.</p
 <p>A route first starts with a consumer (think <code>from</code> in the DSL) that populates the initial
 exchange. At each processor step, the out message from the previous step is the in
 message of the next. In many cases, processors don’t set an out message, so in this case
-the in message is reused. At the end of a route, the <a href="../../../manual/4.18.x/xchange-pattern.html" class="xref page">Message Exchange Pattern</a> (MEP)
+the in message is reused. At the end of a route, the <a href="../../../manual/4.18.x/exchange-pattern.html" class="xref page">Message Exchange Pattern</a> (MEP)
 of the exchange determines whether a reply needs to be sent back to the caller of the route. If the MEP is <code>InOnly</code>,
 no reply will be sent back. If it’s <code>InOut</code>, Camel will take the out message from the last
 step and return it.</p>
@@ -2266,7 +2266,7 @@ the <a href="enterprise-integration-patterns.html" class="xref page">EIP pattern
 </div>
 <div class="paragraph">
 <p>You can also call a processor by its bean id, if the processor
-has been enlisted in the <a href="../../../manual/4.18.x/egistry.html" class="xref page">Registry</a>, such as with the id <code>myProcessor</code>:</p>
+has been enlisted in the <a href="../../../manual/4.18.x/registry.html" class="xref page">Registry</a>, such as with the id <code>myProcessor</code>:</p>
 </div>
 <div id="_tabs_1" class="openblock tabs is-sync is-loading">
 <div class="content">

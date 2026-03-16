@@ -1840,10 +1840,10 @@
       </ul>
     </li>
     <li class="component">
-      <div class="title"><a href="../../../manual/4.10.x/index.html">User manual</a></div>
+      <div class="title"><a href="../../../manual/4.4.x/index.html">User manual</a></div>
       <ul class="versions">
         <li class="version is-latest">
-          <a href="../../../manual/4.10.x/index.html">4.10.x</a>
+          <a href="../../../manual/4.4.x/index.html">4.10.x</a>
         </li>
         <li class="version">
           <a href="../../../manual/4.8.x/index.html">4.8.x</a>
@@ -1864,7 +1864,7 @@
 <main class="article">
 <div class="toolbar" role="navigation">
 <button class="nav-toggle"></button>
-  <a href="../../../manual/4.10.x/index.html" class="home-link"></a>
+  <a href="../../../manual/4.4.x/index.html" class="home-link"></a>
 <nav class="breadcrumbs" aria-label="breadcrumbs">
   <ul>
     <li><a href="../index.html">Camel Components</a></li>
@@ -1893,7 +1893,7 @@
 <div class="sectionbody">
 <div class="paragraph">
 <p>The intercept feature in Camel supports intercepting
-<a href="../../../manual/4.10.x/exchange.html" class="xref page">Exchange</a>'s' while they are being routed.</p>
+<a href="../../../manual/4.4.x/exchange.html" class="xref page">Exchange</a>'s' while they are being routed.</p>
 </div>
 </div>
 </div>
@@ -1913,7 +1913,7 @@
 </li>
 <li>
 <p><a href="#Intercept-InterceptSendToEndpoint"><code>interceptSendToEndpoint</code></a> that intercepts only when an
-<a href="../../../manual/4.10.x/exchange.html" class="xref page">Exchange</a> is about to be sent to the given <a href="message-endpoint.html" class="xref page">endpoint</a>.</p>
+<a href="../../../manual/4.4.x/exchange.html" class="xref page">Exchange</a> is about to be sent to the given <a href="message-endpoint.html" class="xref page">endpoint</a>.</p>
 </li>
 </ul>
 </div>
@@ -1932,7 +1932,7 @@ messages from this endpoint, then the <code>interceptFrom</code> is not triggere
 <h3 id="_interceptor_scopes"><a class="anchor" href="#_interceptor_scopes"></a>Interceptor scopes</h3>
 <div class="paragraph">
 <p>All the interceptors can be configured on global, route scope, or with
-<a href="../../../manual/4.10.x/route-configuration.html" class="xref page">Route Configuration</a>.</p>
+<a href="../../../manual/4.4.x/route-configuration.html" class="xref page">Route Configuration</a>.</p>
 </div>
 <div class="paragraph">
 <p>This means multiple interceptors can be <em>triggered</em>.</p>
@@ -1988,7 +1988,7 @@ To use route scope, then it is similar, but it is done on the route as shown in 
 <div class="ulist">
 <ul>
 <li>
-<p><a href="../../../manual/4.10.x/predicate.html" class="xref page">Predicate</a> using <code>when</code> to only trigger the interceptor in certain conditions</p>
+<p><a href="../../../manual/4.4.x/predicate.html" class="xref page">Predicate</a> using <code>when</code> to only trigger the interceptor in certain conditions</p>
 </li>
 <li>
 <p><code>stop</code> forces stopping continue routing the Exchange and mark it as completed successful (it&#8217;s actually the <a href="stop-eip.html" class="xref page">Stop</a> EIP).</p>
@@ -2017,7 +2017,7 @@ URI pattern matching by exact uri, wildcard and regular expression. See further 
 <h2 id="Intercept-Intercept"><a class="anchor" href="#Intercept-Intercept"></a>Using <code>intercept</code></h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>The <code>Intercept</code> is intercepting the <a href="../../../manual/4.10.x/exchange.html" class="xref page">Exchange</a>
+<p>The <code>Intercept</code> is intercepting the <a href="../../../manual/4.4.x/exchange.html" class="xref page">Exchange</a>
 on every processing step during routing.</p>
 </div>
 <div class="paragraph">
@@ -2090,7 +2090,7 @@ before</p>
 <div class="sect2">
 <h3 id="_controlling_when_to_intercept_using_a_predicate"><a class="anchor" href="#_controlling_when_to_intercept_using_a_predicate"></a>Controlling when to intercept using a predicate</h3>
 <div class="paragraph">
-<p>If you only want to intercept "sometimes", then you can use a <a href="../../../manual/4.10.x/predicate.html" class="xref page">predicate</a>.</p>
+<p>If you only want to intercept "sometimes", then you can use a <a href="../../../manual/4.4.x/predicate.html" class="xref page">predicate</a>.</p>
 </div>
 <div class="paragraph">
 <p>For instance, in the sample below, we only intercept if the message body
@@ -2345,7 +2345,7 @@ message is sent to the intended destination.</p>
 which means the message is detoured instead.</p>
 </div>
 <div class="paragraph">
-<p>A <a href="../../../manual/4.10.x/predicate.html" class="xref page">Predicate</a> can also be used
+<p>A <a href="../../../manual/4.4.x/predicate.html" class="xref page">Predicate</a> can also be used
 to control when to intercept, which has been previously covered.</p>
 </div>
 <div class="paragraph">
@@ -2516,7 +2516,7 @@ from("jms:queue:order")
 <div class="sect2">
 <h3 id="_conditional_skipping_sending_to_endpoint"><a class="anchor" href="#_conditional_skipping_sending_to_endpoint"></a>Conditional skipping sending to endpoint</h3>
 <div class="paragraph">
-<p>You can combine both a <a href="../../../manual/4.10.x/predicate.html" class="xref page">predicate</a> and skip sending to the original endpoint.
+<p>You can combine both a <a href="../../../manual/4.4.x/predicate.html" class="xref page">predicate</a> and skip sending to the original endpoint.
 For example, suppose you have some "test" messages that sometimes occur, and that you
 want to avoid sending these messages to a downstream kafka system, then this can be done as shown:</p>
 </div>

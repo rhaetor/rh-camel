@@ -12,7 +12,7 @@
 <header class="header">
   <nav class="navbar">
     <div class="navbar-brand">
-      <a class="navbar-item" href="../../manual/index.html">Red Hat build of Apache Camel manual</a>
+      <a class="navbar-item" href="../../manual/4.0.x/index.html">Red Hat build of Apache Camel manual</a>
       <button class="navbar-burger" data-target="topbar-nav">
         <span></span>
         <span></span>
@@ -1702,10 +1702,10 @@
       </ul>
     </li>
     <li class="component">
-      <a class="title" href="../../manual/index.html">User manual</a>
+      <a class="title" href="../../manual/4.0.x/index.html">User manual</a>
       <ul class="versions">
         <li class="version is-latest">
-          <a href="../../manual/index.html">default</a>
+          <a href="../../manual/4.0.x/index.html">default</a>
         </li>
       </ul>
     </li>
@@ -1717,7 +1717,7 @@
 <main class="article">
 <div class="toolbar" role="navigation">
 <button class="nav-toggle"></button>
-  <a href="../../manual/index.html" class="home-link"></a>
+  <a href="../../manual/4.0.x/index.html" class="home-link"></a>
 <nav class="breadcrumbs" aria-label="breadcrumbs">
   <ul>
     <li><a href="index.html">Camel Components</a></li>
@@ -1814,7 +1814,7 @@ For example a component may have security settings, credentials for authenticati
 that are commonly used, then you may often only need to configure a few options on a component; or none at all.</p>
 </div>
 <div class="paragraph">
-<p>Configuring components can be done with the <a href="../../manual/component-dsl.html" class="xref page">Component DSL</a>,
+<p>Configuring components can be done with the <a href="../../manual/4.0.x/component-dsl.html" class="xref page">Component DSL</a>,
 in a configuration file (application.properties|yaml), or directly with Java code.</p>
 </div>
 </div>
@@ -1827,11 +1827,11 @@ or as a producer (to), or used for both.</p>
 </div>
 <div class="paragraph">
 <p>Configuring endpoints is most often done directly in the endpoint URI as path and query parameters. You can also use
-the <a href="../../manual/Endpoint-dsl.html" class="xref page">Endpoint DSL</a> and <a href="../../manual/dataformat-dsl.html" class="xref page">DataFormat DSL</a>
+the <a href="../../manual/4.0.x/Endpoint-dsl.html" class="xref page">Endpoint DSL</a> and <a href="../../manual/4.0.x/dataformat-dsl.html" class="xref page">DataFormat DSL</a>
 as a <em>type safe</em> way of configuring endpoints and data formats in Java.</p>
 </div>
 <div class="paragraph">
-<p>A good practice when configuring options is to use <a href="../../manual/using-propertyplaceholder.html" class="xref page">Property Placeholders</a>,
+<p>A good practice when configuring options is to use <a href="../../manual/4.0.x/using-propertyplaceholder.html" class="xref page">Property Placeholders</a>,
 which allows to not hardcode urls, port numbers, sensitive information, and other settings.
 In other words placeholders allows to externalize the configuration from your code, and gives more flexibility and reuse.</p>
 </div>
@@ -3807,8 +3807,8 @@ In other words placeholders allows to externalize the configuration from your co
 </div>
 <div class="paragraph">
 <p>By default, the component will emit the events in the body and <code>CamelDebeziumBefore</code> header as <a href="https://kafka.apache.org/22/javadoc/org/apache/kafka/connect/data/Struct.html"><code>Struct</code></a> data type, the reasoning behind this, is to perceive the schema information in case is needed.
-However, the component as well contains a <a href="../../manual/type-converter.html" class="xref page">Type Converter</a> that converts
-from default output type of <a href="https://kafka.apache.org/22/javadoc/org/apache/kafka/connect/data/Struct.html"><code>Struct</code></a> to <code>Map</code> in order to leverage Camel&#8217;s rich <a href="../../manual/data-format.html" class="xref page">Data Format</a> types which many of them work out of box with <code>Map</code> data type.
+However, the component as well contains a <a href="../../manual/4.0.x/type-converter.html" class="xref page">Type Converter</a> that converts
+from default output type of <a href="https://kafka.apache.org/22/javadoc/org/apache/kafka/connect/data/Struct.html"><code>Struct</code></a> to <code>Map</code> in order to leverage Camel&#8217;s rich <a href="../../manual/4.0.x/data-format.html" class="xref page">Data Format</a> types which many of them work out of box with <code>Map</code> data type.
 To use it, you can either add <code>Map.class</code> type when you access the message e.g: <code>exchange.getIn().getBody(Map.class)</code>, or you can convert the body always to <code>Map</code> from the route builder by adding <code>.convertBodyTo(Map.class)</code> to your Camel Route DSL after <code>from</code> statement.</p>
 </div>
 <div class="paragraph">

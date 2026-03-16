@@ -3089,7 +3089,7 @@
                         </li>
                         <li class="component">
                             <div class="title"><a
-                                    href="../../../manual/index.html">User
+                                    href="../../../manual/4.10.x/index.html">User
                                 manual</a></div>
                         </li>
                     </ul>
@@ -3100,7 +3100,7 @@
     <main class="article">
         <div class="toolbar" role="navigation">
             <button class="nav-toggle"></button>
-            <a href="../../../manual/index.html" class="home-link"></a>
+            <a href="../../../manual/4.10.x/index.html" class="home-link"></a>
             <nav class="breadcrumbs" aria-label="breadcrumbs">
                 <ul>
                     <li><a href="../index.html">Camel Components</a></li>
@@ -3131,7 +3131,7 @@
                                     patterns</a> using the
                                 <a href="https://www.javadoc.io/doc/org.apache.camel/camel-core-processor/current/org/apache/camel/processor/errorhandler/DeadLetterChannel.html">DeadLetterChannel</a>
                                 processor, which is an <a
-                                        href="../../../manual/error-handler.html"
+                                        href="../../../manual/4.10.x/error-handler.html"
                                         class="xref page">Error Handler</a>.</p>
                         </div>
                         <div class="imageblock">
@@ -3142,7 +3142,7 @@
                         </div>
                         <div class="paragraph">
                             <p>The Dead Letter Channel is an <a
-                                    href="../../../manual/error-handler.html"
+                                    href="../../../manual/4.10.x/error-handler.html"
                                     class="xref page">Error Handler</a>
                                 that implements the principles from the Dead
                                 Letter Channel EIP.
@@ -3284,7 +3284,7 @@
                                         the near future to have a unified
                                         way of configuring error handling across
                                         all DSLs with <a
-                                            href="../../../manual/route-configuration.html"
+                                            href="../../../manual/4.10.x/route-configuration.html"
                                             class="xref page">Route
                                         Configuration</a>.
                                         When fully implemented, then configuring
@@ -3502,7 +3502,7 @@
                             <div class="paragraph">
                                 <p>When all attempts of redelivery have failed,
                                     the
-                                    <a href="../../../manual/exchange.html"
+                                    <a href="../../../manual/4.10.x/exchange.html"
                                        class="xref page">Exchange</a> is moved
                                     to the dead letter queue.
                                     The exchange is then complete, and from the
@@ -3548,12 +3548,12 @@
                                     caused exception
                                     (<code>setException(null)</code>), by moving
                                     the caused exception to a property on the <a
-                                            href="../../../manual/exchange.html"
+                                            href="../../../manual/4.10.x/exchange.html"
                                             class="xref page">Exchange</a>, with
                                     the key
                                     <code>Exchange.EXCEPTION_CAUGHT</code>.
                                     Then the <a
-                                            href="../../../manual/exchange.html"
+                                            href="../../../manual/4.10.x/exchange.html"
                                             class="xref page">Exchange</a>
                                     is moved to the <code>jms:queue:dead</code>
                                     destination, and the client will not notice
@@ -3588,7 +3588,7 @@
                                 <p>The route listens for JMS messages and
                                     validates, transforms and handles it.
                                     During this the <a
-                                            href="../../../manual/exchange.html"
+                                            href="../../../manual/4.10.x/exchange.html"
                                             class="xref page">Exchange</a>
                                     payload is transformed/modified in the
                                     various bean stages.</p>
@@ -3719,7 +3719,7 @@ errorHandler(deadLetterChannel("jms:queue:dead")
                             <div class="paragraph">
                                 <p>When the Dead Letter Channel is doing
                                     redelivery, it&#8217;s possible to configure
-                                    a <a href="../../../manual/processor.html"
+                                    a <a href="../../../manual/4.10.x/processor.html"
                                          class="xref page">Processor</a>
                                     executed just <em>before</em> every
                                     redelivery attempt.
@@ -3779,7 +3779,7 @@ errorHandler(deadLetterChannel("jms:queue:dead")
                                         </td>
                                         <td class="content">
                                             Camel also supports <a
-                                                href="../../../manual/exception-clause.html"
+                                                href="../../../manual/4.10.x/exception-clause.html"
                                                 class="xref page">onException</a>
                                             to use <code>onRedeliver</code>.
                                             This means you can do special on
@@ -3787,7 +3787,7 @@ errorHandler(deadLetterChannel("jms:queue:dead")
                                             as opposed to
                                             <code>onRedelivery</code> set on
                                             Dead Letter Channel (or <a
-                                                href="../../../manual/defaulterrorhandler.html"
+                                                href="../../../manual/4.10.x/defaulterrorhandler.html"
                                                 class="xref page">Default Error
                                             Handler</a>) can be viewed as global
                                             scoped.
@@ -4199,10 +4199,10 @@ errorHandler(deadLetterChannel("jms:queue:dead")
                             </div>
                             <div class="paragraph">
                                 <p>When, for example, processing the <a
-                                        href="../../../manual/exchange.html"
+                                        href="../../../manual/4.10.x/exchange.html"
                                         class="xref page">Exchange</a> at a
                                     given
-                                    <a href="../../../manual/endpoint.html"
+                                    <a href="../../../manual/4.10.x/endpoint.html"
                                        class="xref page">Endpoint</a> and the
                                     message is to be moved into the dead letter
                                     queue, then Camel also decorates the
@@ -4244,7 +4244,7 @@ errorHandler(deadLetterChannel("jms:queue:dead")
                                     EIP processing instead.
                                     So beware that this is a hint that helps
                                     pinpoint errors to <a
-                                            href="../../../manual/endpoint.html"
+                                            href="../../../manual/4.10.x/endpoint.html"
                                             class="xref page">Endpoints</a>, and
                                     not EIPs.</p>
                             </div>

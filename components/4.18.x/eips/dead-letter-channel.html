@@ -2122,10 +2122,10 @@
       </ul>
     </li>
     <li class="component">
-      <div class="title"><a href="../../../manual/4.18.x/ndex.html">User manual</a></div>
+      <div class="title"><a href="../../../manual/4.18.x/index.html">User manual</a></div>
       <ul class="versions">
         <li class="version is-latest">
-          <a href="../../../manual/4.18.x/ndex.html">default</a>
+          <a href="../../../manual/4.18.x/index.html">default</a>
         </li>
         <li class="version">
           <a href="../../../manual/4.18.x/index.html">4.18.x</a>
@@ -2155,7 +2155,7 @@
 <main class="article">
 <div class="toolbar" role="navigation">
 <button class="nav-toggle"></button>
-  <a href="../../../manual/4.18.x/ndex.html" class="home-link"></a>
+  <a href="../../../manual/4.18.x/index.html" class="home-link"></a>
 <nav class="breadcrumbs" aria-label="breadcrumbs">
   <ul>
     <li><a href="../index.html">Camel Components</a></li>
@@ -2192,7 +2192,7 @@
 Letter Channel</a> from the <a href="enterprise-integration-patterns.html" class="xref page">EIP
 patterns</a> using the
 <a href="https://www.javadoc.io/doc/org.apache.camel/camel-core-processor/current/org/apache/camel/processor/errorhandler/DeadLetterChannel.html">DeadLetterChannel</a>
- processor, which is an <a href="../../../manual/4.18.x/rror-handler.html" class="xref page">Error Handler</a>.</p>
+ processor, which is an <a href="../../../manual/4.18.x/error-handler.html" class="xref page">Error Handler</a>.</p>
 </div>
 <div class="imageblock">
 <div class="content">
@@ -2200,7 +2200,7 @@ patterns</a> using the
 </div>
 </div>
 <div class="paragraph">
-<p>The Dead Letter Channel is an <a href="../../../manual/4.18.x/rror-handler.html" class="xref page">Error Handler</a>
+<p>The Dead Letter Channel is an <a href="../../../manual/4.18.x/error-handler.html" class="xref page">Error Handler</a>
 that implements the principles from the Dead Letter Channel EIP.
 From the illustration above, we can see the pattern is that if a message cannot be processed or fails during sending, it should be moved to a dead letter queue.
 The dead letter queue is based on a Camel
@@ -2300,7 +2300,7 @@ individual routes used another error handler.</p>
 </td>
 <td class="content">
 The DSLs is planned to be improved in the near future to have a unified
-way of configuring error handling across all DSLs with <a href="../../../manual/4.18.x/oute-configuration.html" class="xref page">Route Configuration</a>.
+way of configuring error handling across all DSLs with <a href="../../../manual/4.18.x/route-configuration.html" class="xref page">Route Configuration</a>.
 When fully implemented, then configuring error handler in Java and XML DSL would be much more similar than currently.
 </td>
 </tr>
@@ -2425,7 +2425,7 @@ This ensures that the Dead LetterChannel will always succeed.</p>
 <h3 id="_what_happens_when_an_exchange_is_moved_to_the_dead_letter_queue"><a class="anchor" href="#_what_happens_when_an_exchange_is_moved_to_the_dead_letter_queue"></a>What happens when an Exchange is moved to the dead letter queue?</h3>
 <div class="paragraph">
 <p>When all attempts of redelivery have failed, the
-<a href="../../../manual/4.18.x/xchange.html" class="xref page">Exchange</a> is moved to the dead letter queue.
+<a href="../../../manual/4.18.x/exchange.html" class="xref page">Exchange</a> is moved to the dead letter queue.
 The exchange is then complete, and from the client point of view, the message is done being processed.</p>
 </div>
 <div class="paragraph">
@@ -2464,8 +2464,8 @@ The exchange is then complete, and from the client point of view, the message is
 </div>
 </div>
 <div class="paragraph">
-<p>The Dead Letter error handler will clear the caused exception (<code>setException(null)</code>), by moving the caused exception to a property on the <a href="../../../manual/4.18.x/xchange.html" class="xref page">Exchange</a>, with the key <code>Exchange.EXCEPTION_CAUGHT</code>.
-Then the <a href="../../../manual/4.18.x/xchange.html" class="xref page">Exchange</a>
+<p>The Dead Letter error handler will clear the caused exception (<code>setException(null)</code>), by moving the caused exception to a property on the <a href="../../../manual/4.18.x/exchange.html" class="xref page">Exchange</a>, with the key <code>Exchange.EXCEPTION_CAUGHT</code>.
+Then the <a href="../../../manual/4.18.x/exchange.html" class="xref page">Exchange</a>
 is moved to the <code>jms:queue:dead</code> destination, and the client will not notice the failure.</p>
 </div>
 </div>
@@ -2487,7 +2487,7 @@ is moved to the <code>jms:queue:dead</code> destination, and the client will not
 </div>
 <div class="paragraph">
 <p>The route listens for JMS messages and validates, transforms and handles it.
-During this the <a href="../../../manual/4.18.x/xchange.html" class="xref page">Exchange</a> payload is transformed/modified in the various bean stages.</p>
+During this the <a href="../../../manual/4.18.x/exchange.html" class="xref page">Exchange</a> payload is transformed/modified in the various bean stages.</p>
 </div>
 <div class="paragraph">
 <p>Now suppose that if an exception is thrown, we want to move the message to the dead letter queue.
@@ -2568,7 +2568,7 @@ combining with the parent unit of work and ends up using the parent original mes
 <div class="sect2">
 <h3 id="_calling_a_processor_before_redelivery_using_onredelivery"><a class="anchor" href="#_calling_a_processor_before_redelivery_using_onredelivery"></a>Calling a processor before redelivery using OnRedelivery</h3>
 <div class="paragraph">
-<p>When the Dead Letter Channel is doing redelivery, it&#8217;s possible to configure a <a href="../../../manual/4.18.x/rocessor.html" class="xref page">Processor</a>
+<p>When the Dead Letter Channel is doing redelivery, it&#8217;s possible to configure a <a href="../../../manual/4.18.x/processor.html" class="xref page">Processor</a>
  executed just <em>before</em> every redelivery attempt.
 This can be used for situations where you need to alter the message before it&#8217;s redelivered.</p>
 </div>
@@ -2620,9 +2620,9 @@ This can be used for situations where you need to alter the message before it&#8
 <i class="fa icon-tip" title="Tip"></i>
 </td>
 <td class="content">
-Camel also supports <a href="../../../manual/4.18.x/xception-clause.html" class="xref page">onException</a> to use <code>onRedeliver</code>.
+Camel also supports <a href="../../../manual/4.18.x/exception-clause.html" class="xref page">onException</a> to use <code>onRedeliver</code>.
 This means you can do special on redelivery for different exceptions, as opposed to <code>onRedelivery</code> set on
-Dead Letter Channel (or <a href="../../../manual/4.18.x/efaulterrorhandler.html" class="xref page">Default Error Handler</a>) can be viewed as global scoped.
+Dead Letter Channel (or <a href="../../../manual/4.18.x/defaulterrorhandler.html" class="xref page">Default Error Handler</a>) can be viewed as global scoped.
 </td>
 </tr>
 </table>
@@ -2913,8 +2913,8 @@ with the most recent endpoint in use (send to):</p>
 <p>This information is updated when Apache Camel sends a message to any endpoint.</p>
 </div>
 <div class="paragraph">
-<p>When, for example, processing the <a href="../../../manual/4.18.x/xchange.html" class="xref page">Exchange</a> at a given
-<a href="../../../manual/4.18.x/ndpoint.html" class="xref page">Endpoint</a> and the message is to be moved into the dead letter queue, then Camel also decorates the Exchange with another property that contains that <strong>last</strong> endpoint:</p>
+<p>When, for example, processing the <a href="../../../manual/4.18.x/exchange.html" class="xref page">Exchange</a> at a given
+<a href="../../../manual/4.18.x/endpoint.html" class="xref page">Endpoint</a> and the message is to be moved into the dead letter queue, then Camel also decorates the Exchange with another property that contains that <strong>last</strong> endpoint:</p>
 </div>
 <div class="listingblock">
 <div class="content">
@@ -2933,7 +2933,7 @@ endpoint uri would be stored as information.</p>
 <div class="paragraph">
 <p>This information is kept on the Exchange even if the message was successfully processed by a given endpoint,
 and then later fails, for example, in local <a href="bean-eip.html" class="xref page">Bean</a> EIP processing instead.
-So beware that this is a hint that helps pinpoint errors to <a href="../../../manual/4.18.x/ndpoint.html" class="xref page">Endpoints</a>, and not EIPs.</p>
+So beware that this is a hint that helps pinpoint errors to <a href="../../../manual/4.18.x/endpoint.html" class="xref page">Endpoints</a>, and not EIPs.</p>
 </div>
 <div class="listingblock">
 <div class="content">

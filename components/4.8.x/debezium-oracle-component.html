@@ -1916,10 +1916,10 @@
       </ul>
     </li>
     <li class="component">
-      <div class="title"><a href="../../manual/4.10.x/index.html">User manual</a></div>
+      <div class="title"><a href="../../manual/4.8.x/index.html">User manual</a></div>
       <ul class="versions">
         <li class="version is-latest">
-          <a href="../../manual/4.10.x/index.html">4.10.x</a>
+          <a href="../../manual/4.8.x/index.html">4.10.x</a>
         </li>
         <li class="version">
           <a href="../../manual/4.8.x/index.html">4.8.x</a>
@@ -1940,7 +1940,7 @@
 <main class="article">
 <div class="toolbar" role="navigation">
 <button class="nav-toggle"></button>
-  <a href="../../manual/4.10.x/index.html" class="home-link"></a>
+  <a href="../../manual/4.8.x/index.html" class="home-link"></a>
 <nav class="breadcrumbs" aria-label="breadcrumbs">
   <ul>
     <li><a href="index.html">Camel Components</a></li>
@@ -2058,7 +2058,7 @@ Because components typically have pre-configured defaults that are commonly used
 <div class="ulist">
 <ul>
 <li>
-<p>the <a href="../../manual/4.10.x/component-dsl.html" class="xref page">Component DSL</a>.</p>
+<p>the <a href="../../manual/4.8.x/component-dsl.html" class="xref page">Component DSL</a>.</p>
 </li>
 <li>
 <p>in a configuration file (<code>application.properties</code>, <code>*.yaml</code> files, etc).</p>
@@ -2078,11 +2078,11 @@ The options are also categorized into whether the endpoint is used as a consumer
 </div>
 <div class="paragraph">
 <p>Configuring endpoints is most often done directly in the endpoint URI as <em>path</em> and <em>query</em> parameters.
-You can also use the <a href="../../manual/4.10.x/Endpoint-dsl.html" class="xref page">Endpoint DSL</a> and <a href="../../manual/4.10.x/dataformat-dsl.html" class="xref page">DataFormat DSL</a>
+You can also use the <a href="../../manual/4.8.x/Endpoint-dsl.html" class="xref page">Endpoint DSL</a> and <a href="../../manual/4.8.x/dataformat-dsl.html" class="xref page">DataFormat DSL</a>
 as a <em>type safe</em> way of configuring endpoints and data formats in Java.</p>
 </div>
 <div class="paragraph">
-<p>A good practice when configuring options is to use <a href="../../manual/4.10.x/using-propertyplaceholder.html" class="xref page">Property Placeholders</a>.</p>
+<p>A good practice when configuring options is to use <a href="../../manual/4.8.x/using-propertyplaceholder.html" class="xref page">Property Placeholders</a>.</p>
 </div>
 <div class="paragraph">
 <p>Property placeholders provide a few benefits:</p>
@@ -4571,8 +4571,8 @@ as a <em>type safe</em> way of configuring endpoints and data formats in Java.</
 </div>
 <div class="paragraph">
 <p>By default, the component will emit the events in the body and <code>CamelDebeziumBefore</code> header as <a href="https://kafka.apache.org/22/javadoc/org/apache/kafka/connect/data/Struct.html"><code>Struct</code></a> data type, the reasoning behind this, is to perceive the schema information in case is needed.
-However, the component as well contains a <a href="../../manual/4.10.x/type-converter.html" class="xref page">Type Converter</a> that converts
-from default output type of <a href="https://kafka.apache.org/22/javadoc/org/apache/kafka/connect/data/Struct.html"><code>Struct</code></a> to <code>Map</code> in order to leverage Camel&#8217;s rich <a href="../../manual/4.10.x/data-format.html" class="xref page">Data Format</a> types which many of them work out of box with <code>Map</code> data type.
+However, the component as well contains a <a href="../../manual/4.8.x/type-converter.html" class="xref page">Type Converter</a> that converts
+from default output type of <a href="https://kafka.apache.org/22/javadoc/org/apache/kafka/connect/data/Struct.html"><code>Struct</code></a> to <code>Map</code> in order to leverage Camel&#8217;s rich <a href="../../manual/4.8.x/data-format.html" class="xref page">Data Format</a> types which many of them work out of box with <code>Map</code> data type.
 To use it, you can either add <code>Map.class</code> type when you access the message (e.g., <code>exchange.getIn().getBody(Map.class)</code>), or you can convert the body always to <code>Map</code> from the route builder by adding <code>.convertBodyTo(Map.class)</code> to your Camel Route DSL after <code>from</code> statement.</p>
 </div>
 <div class="paragraph">

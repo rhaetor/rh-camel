@@ -2123,10 +2123,10 @@
       </ul>
     </li>
     <li class="component">
-      <div class="title"><a href="../../../manual/4.18.x/ndex.html">User manual</a></div>
+      <div class="title"><a href="../../../manual/4.18.x/index.html">User manual</a></div>
       <ul class="versions">
         <li class="version is-latest">
-          <a href="../../../manual/4.18.x/ndex.html">default</a>
+          <a href="../../../manual/4.18.x/index.html">default</a>
         </li>
         <li class="version">
           <a href="../../../manual/4.18.x/index.html">4.18.x</a>
@@ -2156,7 +2156,7 @@
 <main class="article">
 <div class="toolbar" role="navigation">
 <button class="nav-toggle"></button>
-  <a href="../../../manual/4.18.x/ndex.html" class="home-link"></a>
+  <a href="../../../manual/4.18.x/index.html" class="home-link"></a>
 <nav class="breadcrumbs" aria-label="breadcrumbs">
   <ul>
     <li><a href="../index.html">Camel Components</a></li>
@@ -2195,7 +2195,7 @@
 created, but has since grown more powerful. It is primarily intended for
 being a very small and Camel specific scripting language used anywhere in Camel
 such as with <a href="../../next/eips/enterprise-integration-patterns.html" class="xref page">EIPs</a> and
-<a href="../../../manual/4.18.x/outes.html" class="xref page">Route</a>.</p>
+<a href="../../../manual/4.18.x/routes.html" class="xref page">Route</a>.</p>
 </div>
 <div class="paragraph">
 <p>The simple language is designed with intent to cover almost all the common use cases
@@ -2689,7 +2689,7 @@ to access Camel functionality and content of the message being routed.</p>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>ref:key</code></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>Object</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">To look up a bean from the Camel <a href="../../../manual/4.18.x/egistry.html" class="xref page">Registry</a> with the given key.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">To look up a bean from the Camel <a href="../../../manual/4.18.x/registry.html" class="xref page">Registry</a> with the given key.</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>routeGroup</code></p></td>
@@ -2826,7 +2826,7 @@ The Camel functions are often also used for basic data mapping to easily get the
 <div class="paragraph">
 <p>The <code>length</code> function calculates the payload size in bytes (if possible). This is calculated by
 (if necessary) converting the payload into String to use for determine the byte length.
-For example <code>${length('Hello World')}</code> returns <code>11</code>. For larger payloads, then when using <a href="../../../manual/4.18.x/tream-caching.html" class="xref page">stream caching</a>
+For example <code>${length('Hello World')}</code> returns <code>11</code>. For larger payloads, then when using <a href="../../../manual/4.18.x/stream-caching.html" class="xref page">stream caching</a>
 the length is pre-computed and usually does not require to load the content into memory.</p>
 </div>
 <div class="paragraph">
@@ -3362,7 +3362,7 @@ You can also use the <code>sum</code> function to add or subtract numbers. For e
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>uuid(kind)</code></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>String</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Returns a UUID using the Camel <code>UuidGenerator</code>. You can choose kind between <code>default</code>, <code>classic</code>, <code>short</code>, <code>simple</code> and <code>random</code> as the kind. If no kind is given, then <code>default</code> is used. It is also possible to use a custom <code>UuidGenerator</code> and bind the bean to the <a href="../../../manual/4.18.x/egistry.html" class="xref page">Registry</a> with an id. For example <code>${uuid(myGenerator)}</code> where the id is <code>myGenerator</code>.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Returns a UUID using the Camel <code>UuidGenerator</code>. You can choose kind between <code>default</code>, <code>classic</code>, <code>short</code>, <code>simple</code> and <code>random</code> as the kind. If no kind is given, then <code>default</code> is used. It is also possible to use a custom <code>UuidGenerator</code> and bind the bean to the <a href="../../../manual/4.18.x/registry.html" class="xref page">Registry</a> with an id. For example <code>${uuid(myGenerator)}</code> where the id is <code>myGenerator</code>.</p></td>
 </tr>
 </tbody>
 </table>
@@ -3387,7 +3387,7 @@ return a hash value as String hex-decimal.</p>
 <p>You can get the current thread id by the <code>${threadId}</code> function, and the name via <code>${threadName}</code>.</p>
 </div>
 <div class="paragraph">
-<p>And you can generate unique IDs with the <a href="../../../manual/4.18.x/uidgenerator.html" class="xref page">Camel UUID Generator</a> by the <code>uuid</code> function.
+<p>And you can generate unique IDs with the <a href="../../../manual/4.18.x/uuidgenerator.html" class="xref page">Camel UUID Generator</a> by the <code>uuid</code> function.
 The generator supports different kinds <code>default</code>, <code>classic</code>, <code>short</code>, <code>simple</code> and <code>random</code>, such as <code>${uuid(random)}</code>.</p>
 </div>
 <div class="paragraph">
@@ -3955,7 +3955,7 @@ which returns the payload as a <code>String</code> value.</p>
 <code>${attachment[0].content}</code> returns the XML payload.</p>
 </div>
 <div class="paragraph">
-<p>If the content is binary or other formats, you can use Camels <a href="../../../manual/4.18.x/ype-converter.html" class="xref page">Type Converter</a> to
+<p>If the content is binary or other formats, you can use Camels <a href="../../../manual/4.18.x/type-converter.html" class="xref page">Type Converter</a> to
 convert the payload into the given Object of choice, for example as a byte array: <code>${attachmentContentAs(mydata.xml,byte[])}</code></p>
 </div>
 <div class="paragraph">

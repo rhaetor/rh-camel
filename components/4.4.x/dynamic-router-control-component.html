@@ -1841,10 +1841,10 @@
       </ul>
     </li>
     <li class="component">
-      <div class="title"><a href="../../manual/4.10.x/index.html">User manual</a></div>
+      <div class="title"><a href="../../manual/4.4.x/index.html">User manual</a></div>
       <ul class="versions">
         <li class="version is-latest">
-          <a href="../../manual/4.10.x/index.html">4.10.x</a>
+          <a href="../../manual/4.4.x/index.html">4.10.x</a>
         </li>
         <li class="version">
           <a href="../../manual/4.8.x/index.html">4.8.x</a>
@@ -1865,7 +1865,7 @@
 <main class="article">
 <div class="toolbar" role="navigation">
 <button class="nav-toggle"></button>
-  <a href="../../manual/4.10.x/index.html" class="home-link"></a>
+  <a href="../../manual/4.4.x/index.html" class="home-link"></a>
 <nav class="breadcrumbs" aria-label="breadcrumbs">
   <ul>
     <li><a href="index.html">Camel Components</a></li>
@@ -1944,7 +1944,7 @@ For example, a component may have security settings, credentials for authenticat
 that are commonly used, then you may often only need to configure a few options on a component; or none at all.</p>
 </div>
 <div class="paragraph">
-<p>Configuring components can be done with the <a href="../../manual/4.10.x/component-dsl.html" class="xref page">Component DSL</a>,
+<p>Configuring components can be done with the <a href="../../manual/4.4.x/component-dsl.html" class="xref page">Component DSL</a>,
 in a configuration file (application.properties|yaml), or directly with Java code.</p>
 </div>
 </div>
@@ -1957,11 +1957,11 @@ or as a producer (to), or used for both.</p>
 </div>
 <div class="paragraph">
 <p>Configuring endpoints is most often done directly in the endpoint URI as path and query parameters. You can also use
-the <a href="../../manual/4.10.x/Endpoint-dsl.html" class="xref page">Endpoint DSL</a> and <a href="../../manual/4.10.x/dataformat-dsl.html" class="xref page">DataFormat DSL</a>
+the <a href="../../manual/4.4.x/Endpoint-dsl.html" class="xref page">Endpoint DSL</a> and <a href="../../manual/4.4.x/dataformat-dsl.html" class="xref page">DataFormat DSL</a>
 as a <em>type safe</em> way of configuring endpoints and data formats in Java.</p>
 </div>
 <div class="paragraph">
-<p>A good practice when configuring options is to use <a href="../../manual/4.10.x/using-propertyplaceholder.html" class="xref page">Property Placeholders</a>,
+<p>A good practice when configuring options is to use <a href="../../manual/4.4.x/using-propertyplaceholder.html" class="xref page">Property Placeholders</a>,
 which allows to not hardcode urls, port numbers, sensitive information, and other settings.
 In other words placeholders allows to externalize the configuration from your code, and gives more flexibility and reuse.</p>
 </div>
@@ -2320,7 +2320,7 @@ must be unique within a channel, although multiple subscriptions of the same nam
 instance if they are in separate channels.</p>
 </div>
 <div class="paragraph">
-<p>The Dynamic Router employs the use of <a href="../../manual/4.10.x/predicate.html" class="xref page">Predicate</a> as rules.  Any valid predicate may be
+<p>The Dynamic Router employs the use of <a href="../../manual/4.4.x/predicate.html" class="xref page">Predicate</a> as rules.  Any valid predicate may be
 used to determine the suitability of exchanges for a participating recipient, whether they are simple or compound
 predicates.  Although it is advised to view the complete documentation, an example simple predicate might look like the
 following:</p>
@@ -2340,7 +2340,7 @@ Predicate msgType = header("messageType").isEqualTo("payment");</code></pre>
 <div class="paragraph">
 <p>The Dynamic Router Control component supports some JMX operations that allow you to control and monitor the component.
 It is beyond the scope of this document to go into detail about JMX, so this is a list of the operations that are
-supported.  For more information about JMX, see the <a href="../../manual/4.10.x/jmx.html" class="xref page">JMX</a> documentation.</p>
+supported.  For more information about JMX, see the <a href="../../manual/4.4.x/jmx.html" class="xref page">JMX</a> documentation.</p>
 </div>
 <div class="listingblock">
 <div class="title">Subscribing with a predicate expression</div>

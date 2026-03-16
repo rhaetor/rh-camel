@@ -12,7 +12,7 @@
 <header class="header">
   <nav class="navbar">
     <div class="navbar-brand">
-      <a class="navbar-item" href="../../manual/index.html">Red Hat build of Apache Camel manual</a>
+      <a class="navbar-item" href="../../manual/4.0.x/index.html">Red Hat build of Apache Camel manual</a>
       <button class="navbar-burger" data-target="topbar-nav">
         <span></span>
         <span></span>
@@ -1729,10 +1729,10 @@
       </ul>
     </li>
     <li class="component">
-      <a class="title" href="../../../manual/index.html">User manual</a>
+      <a class="title" href="../../../manual/4.0.x/index.html">User manual</a>
       <ul class="versions">
         <li class="version is-latest">
-          <a href="../../../manual/index.html">default</a>
+          <a href="../../../manual/4.0.x/index.html">default</a>
         </li>
       </ul>
     </li>
@@ -1744,7 +1744,7 @@
 <main class="article">
 <div class="toolbar" role="navigation">
 <button class="nav-toggle"></button>
-  <a href="../../../manual/index.html" class="home-link"></a>
+  <a href="../../../manual/4.0.x/index.html" class="home-link"></a>
 <nav class="breadcrumbs" aria-label="breadcrumbs">
   <ul>
     <li><a href="../index.html">Camel Components</a></li>
@@ -1831,7 +1831,7 @@ You can omit the <code>xmlns</code> namespace. And if there is only a single rou
 <p><strong>Since Camel 4.0.0</strong></p>
 </div>
 <div class="paragraph">
-<p>It is now possible with <code>xml-io-dsl</code> to declare some beans to be bound to <a href="../../../manual/registry.html" class="xref page">Camel Registry</a> in similar way as with <a href="yaml-dsl.html" class="xref page">YAML DSL</a>. Beans may be declared in XML and have their properties (also nested) defined. For example:</p>
+<p>It is now possible with <code>xml-io-dsl</code> to declare some beans to be bound to <a href="../../../manual/4.0.x/registry.html" class="xref page">Camel Registry</a> in similar way as with <a href="yaml-dsl.html" class="xref page">YAML DSL</a>. Beans may be declared in XML and have their properties (also nested) defined. For example:</p>
 </div>
 <div class="listingblock">
 <div class="content">
@@ -1853,7 +1853,7 @@ You can omit the <code>xmlns</code> namespace. And if there is only a single rou
 <p>While keeping all the benefits of fast XML parser used by <code>xml-io-dsl</code>, Camel can also process XML elements declared in other XML namespaces and process them separately. With this mechanism it is possible to include XML elements using Spring&#8217;s <code><a href="http://www.springframework.org/schema/beans" class="bare">http://www.springframework.org/schema/beans</a></code> namespace.</p>
 </div>
 <div class="paragraph">
-<p>This brings the flexibility of Spring Beans into <a href="main.html" class="xref page">Camel Main</a> without actually running any Spring Application Context (or Spring Boot). When elements from Spring namespace are found, they are used to populate and configure an instance of <code>org.springframework.beans.factory.support.DefaultListableBeanFactory</code> and leverage Spring dependency injection to wire the beans together. These beans are then exposed through normal <a href="../../../manual/registry.html" class="xref page">Camel Registry</a> and may be used by Camel routes.</p>
+<p>This brings the flexibility of Spring Beans into <a href="main.html" class="xref page">Camel Main</a> without actually running any Spring Application Context (or Spring Boot). When elements from Spring namespace are found, they are used to populate and configure an instance of <code>org.springframework.beans.factory.support.DefaultListableBeanFactory</code> and leverage Spring dependency injection to wire the beans together. These beans are then exposed through normal <a href="../../../manual/4.0.x/registry.html" class="xref page">Camel Registry</a> and may be used by Camel routes.</p>
 </div>
 <div class="paragraph">
 <p>Here&#8217;s an example <code>camel.xml</code> file, which defines both the routes and beans used (referred to) by the route definition:</p>
@@ -1891,7 +1891,7 @@ You can omit the <code>xmlns</code> namespace. And if there is only a single rou
 <p>A <code>my-route</code> route is referring to <code>greeter</code> bean which is defined using Spring <code>&lt;bean&gt;</code> element.</p>
 </div>
 <div class="paragraph">
-<p>More examples can be found in <a href="../../../manual/camel-jbang.html#_using_spring_beans_in_camel_xml_dsl" class="xref page">Camel JBang</a> page.</p>
+<p>More examples can be found in <a href="../../../manual/4.0.x/camel-jbang.html#_using_spring_beans_in_camel_xml_dsl" class="xref page">Camel JBang</a> page.</p>
 </div>
 </div>
 </div>
@@ -1899,7 +1899,7 @@ You can omit the <code>xmlns</code> namespace. And if there is only a single rou
 <h2 id="_see_also"><a class="anchor" href="#_see_also"></a>See Also</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>See <a href="../../../manual/dsl.html" class="xref page">DSL</a></p>
+<p>See <a href="../../../manual/4.0.x/dsl.html" class="xref page">DSL</a></p>
 </div>
 </div>
 </div>
