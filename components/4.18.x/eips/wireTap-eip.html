@@ -2123,10 +2123,10 @@
       </ul>
     </li>
     <li class="component">
-      <div class="title"><a href="../../../manual/index.html">User manual</a></div>
+      <div class="title"><a href="../../../manual/4.18.x/ndex.html">User manual</a></div>
       <ul class="versions">
         <li class="version is-latest">
-          <a href="../../../manual/index.html">default</a>
+          <a href="../../../manual/4.18.x/ndex.html">default</a>
         </li>
         <li class="version">
           <a href="../../../manual/4.18.x/index.html">4.18.x</a>
@@ -2156,7 +2156,7 @@
 <main class="article">
 <div class="toolbar" role="navigation">
 <button class="nav-toggle"></button>
-  <a href="../../../manual/index.html" class="home-link"></a>
+  <a href="../../../manual/4.18.x/ndex.html" class="home-link"></a>
 <nav class="breadcrumbs" aria-label="breadcrumbs">
   <ul>
     <li><a href="../index.html">Camel Components</a></li>
@@ -2402,10 +2402,10 @@ This means those properties are available after this EIP has completed processin
 <div class="sectionbody">
 <div class="paragraph">
 <p>Camel&#8217;s Wire Tap will copy the original
-<a href="../../../manual/exchange.html" class="xref page">Exchange</a> and set its
-<a href="../../../manual/exchange-pattern.html" class="xref page">Exchange Pattern</a> to <strong><code>InOnly</code></strong>, as we want
-the tapped <a href="../../../manual/exchange.html" class="xref page">Exchange</a> to be sent in a fire and forget
-style. The tapped <a href="../../../manual/exchange.html" class="xref page">Exchange</a> is then sent in a
+<a href="../../../manual/4.18.x/xchange.html" class="xref page">Exchange</a> and set its
+<a href="../../../manual/4.18.x/xchange-pattern.html" class="xref page">Exchange Pattern</a> to <strong><code>InOnly</code></strong>, as we want
+the tapped <a href="../../../manual/4.18.x/xchange.html" class="xref page">Exchange</a> to be sent in a fire and forget
+style. The tapped <a href="../../../manual/4.18.x/xchange.html" class="xref page">Exchange</a> is then sent in a
 separate thread, so it can run in parallel with the original. Beware that
 only the <code>Exchange</code> is copied - Wire Tap won&#8217;t do a deep clone (unless you
 specify a custom processor via <strong><code>onPrepare</code></strong> which does that). So all
@@ -2559,7 +2559,7 @@ allows to construct dynamic URIs.</p>
 <div class="paragraph">
 <p>The WireTap uses a thread pool to process the
 tapped messages. This thread pool will by default use the settings
-detailed in the <a href="../../../manual/threading-model.html" class="xref page">Threading Model</a>.</p>
+detailed in the <a href="../../../manual/4.18.x/hreading-model.html" class="xref page">Threading Model</a>.</p>
 </div>
 <div class="paragraph">
 <p>In particular, when the pool is exhausted (with all threads used), further wiretaps
@@ -2574,11 +2574,11 @@ a different rejection policy, a larger worker queue, or more worker threads.</p>
 <div class="sectionbody">
 <div class="paragraph">
 <p>If you Wire Tap a stream message body, then you
-should consider enabling <a href="../../../manual/stream-caching.html" class="xref page">Stream caching</a> to
+should consider enabling <a href="../../../manual/4.18.x/tream-caching.html" class="xref page">Stream caching</a> to
 ensure the message body can be read at each endpoint.</p>
 </div>
 <div class="paragraph">
-<p>See more details at <a href="../../../manual/stream-caching.html" class="xref page">Stream caching</a>.</p>
+<p>See more details at <a href="../../../manual/4.18.x/tream-caching.html" class="xref page">Stream caching</a>.</p>
 </div>
 </div>
 </div>
