@@ -1,456 +1,662 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+<head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <title>Dead Letter Channel :: Red Hat build of Apache Camel</title>
     <meta name="generator" content="Antora 3.1.4">
     <link rel="stylesheet" href="../../../_/css/site.css">
-  </head>
-  <body class="article">
+</head>
+<body class="article">
 <header class="header">
-  <nav class="navbar">
-    <div class="navbar-brand">
-      <a class="navbar-item" href="/">Red Hat build of Apache Camel</a>
-      <button class="navbar-burger" data-target="topbar-nav">
-        <span></span>
-        <span></span>
-        <span></span>
-      </button>
-    </div>
-  </nav>
+    <nav class="navbar">
+        <div class="navbar-brand">
+            <a class="navbar-item" href="/">Red Hat build of Apache Camel</a>
+            <button class="navbar-burger" data-target="topbar-nav">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
 </header>
 <div class="body">
-<div class="nav-container" data-component="components" data-version="4.0.x">
-  <aside class="nav">
-    <div class="panels">
-<div class="nav-panel-menu is-active" data-panel="menu">
-  <nav class="nav-menu">
-    <button class="nav-menu-toggle" aria-label="Toggle expand/collapse all" style="display: none"></button>
-    <h3 class="title"><a href="../index.html">Camel Components</a></h3>
-<ul class="nav-list">
-  <li class="nav-item" data-depth="0">
-<ul class="nav-list">
-  <li class="nav-item" data-depth="1">
-    <button class="nav-item-toggle"></button>
-    <a class="nav-link" href="enterprise-integration-patterns.html">Enterprise Integration Patterns</a>
-<ul class="nav-list">
-  <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="aggregate-eip.html">Aggregate</a>
-  </li>
-  <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="bean-eip.html">Bean</a>
-  </li>
-  <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="change-data-capture.html">Change Data Capture</a>
-  </li>
-  <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="channel-adapter.html">Channel Adapter</a>
-  </li>
-  <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="choice-eip.html">Content Based Router</a>
-  </li>
-  <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="circuitBreaker-eip.html">Circuit Breaker</a>
-  </li>
-  <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="claimCheck-eip.html">Claim Check</a>
-  </li>
-  <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="competing-consumers.html">Competing Consumers</a>
-  </li>
-  <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="composed-message-processor.html">Composed Message Processor</a>
-  </li>
-  <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="content-enricher.html">Content Enricher</a>
-  </li>
-  <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="content-filter-eip.html">Content Filter</a>
-  </li>
-  <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="convertBodyTo-eip.html">Convert Body To</a>
-  </li>
-  <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="correlation-identifier.html">Correlation Identifier</a>
-  </li>
-  <li class="nav-item is-current-page" data-depth="2">
-    <a class="nav-link" href="dead-letter-channel.html">Dead Letter Channel</a>
-  </li>
-  <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="delay-eip.html">Delay</a>
-  </li>
-  <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="durable-subscriber.html">Durable Subscriber</a>
-  </li>
-  <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="dynamicRouter-eip.html">Dynamic Router</a>
-  </li>
-  <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="enrich-eip.html">Enrich</a>
-  </li>
-  <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="eventDrivenConsumer-eip.html">Event Driven Consumer</a>
-  </li>
-  <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="event-message.html">Event Message</a>
-  </li>
-  <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="filter-eip.html">Filter</a>
-  </li>
-  <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="from-eip.html">From</a>
-  </li>
-  <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="guaranteed-delivery.html">Guaranteed Delivery</a>
-  </li>
-  <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="idempotentConsumer-eip.html">Idempotent Consumer</a>
-  </li>
-  <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="intercept.html">Intercept</a>
-  </li>
-  <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="kamelet-eip.html">Kamelet</a>
-  </li>
-  <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="loadBalance-eip.html">Load Balance</a>
-  </li>
-  <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="log-eip.html">Log</a>
-  </li>
-  <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="loop-eip.html">Loop</a>
-  </li>
-  <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="marshal-eip.html">Marshal</a>
-  </li>
-  <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="message.html">Message</a>
-  </li>
-  <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="message-broker.html">Message Broker</a>
-  </li>
-  <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="message-bus.html">Message Bus</a>
-  </li>
-  <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="message-channel.html">Message Channel</a>
-  </li>
-  <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="message-dispatcher.html">Message Dispatcher</a>
-  </li>
-  <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="message-endpoint.html">Message Endpoint</a>
-  </li>
-  <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="message-expiration.html">Message Expiration</a>
-  </li>
-  <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="message-history.html">Message History</a>
-  </li>
-  <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="message-router.html">Message Router</a>
-  </li>
-  <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="message-translator.html">Message Translator</a>
-  </li>
-  <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="messaging-bridge.html">Messaging Bridge</a>
-  </li>
-  <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="messaging-gateway.html">Messaging Gateway</a>
-  </li>
-  <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="messaging-mapper.html">Messaging Mapper</a>
-  </li>
-  <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="multicast-eip.html">Multicast</a>
-  </li>
-  <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="normalizer.html">Normalizer</a>
-  </li>
-  <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="pipeline-eip.html">Pipeline</a>
-  </li>
-  <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="point-to-point-channel.html">Point to Point Channel</a>
-  </li>
-  <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="pollEnrich-eip.html">Poll Enrich</a>
-  </li>
-  <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="polling-consumer.html">Polling Consumer</a>
-  </li>
-  <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="process-eip.html">Process</a>
-  </li>
-  <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="process-manager.html">Process Manager</a>
-  </li>
-  <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="publish-subscribe-channel.html">Publish Subscribe Channel</a>
-  </li>
-  <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="recipientList-eip.html">Recipient List</a>
-  </li>
-  <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="removeHeader-eip.html">Remove Header</a>
-  </li>
-  <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="removeHeaders-eip.html">Remove Headers</a>
-  </li>
-  <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="removeProperties-eip.html">Remove Properties</a>
-  </li>
-  <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="removeProperty-eip.html">Remove Property</a>
-  </li>
-  <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="requestReply-eip.html">Request Reply</a>
-  </li>
-  <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="resequence-eip.html">Resequence</a>
-  </li>
-  <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="resilience4j-eip.html">Resilience4j Circuit Breaker</a>
-  </li>
-  <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="return-address.html">Return Address</a>
-  </li>
-  <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="rollback-eip.html">Rollback</a>
-  </li>
-  <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="routingSlip-eip.html">Routing Slip</a>
-  </li>
-  <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="saga-eip.html">Saga</a>
-  </li>
-  <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="sample-eip.html">Sample</a>
-  </li>
-  <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="scatter-gather.html">Scatter Gather</a>
-  </li>
-  <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="script-eip.html">Script</a>
-  </li>
-  <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="selective-consumer.html">Selective Consumer</a>
-  </li>
-  <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="service-activator.html">Service Activator</a>
-  </li>
-  <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="serviceCall-eip.html">Service Call</a>
-  </li>
-  <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="setBody-eip.html">Set Body</a>
-  </li>
-  <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="setHeader-eip.html">Set Header</a>
-  </li>
-  <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="setProperty-eip.html">Set Property</a>
-  </li>
-  <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="sort-eip.html">Sort</a>
-  </li>
-  <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="split-eip.html">Split</a>
-  </li>
-  <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="step-eip.html">Step</a>
-  </li>
-  <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="stop-eip.html">Stop</a>
-  </li>
-  <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="threads-eip.html">Threads</a>
-  </li>
-  <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="throttle-eip.html">Throttle</a>
-  </li>
-  <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="to-eip.html">To</a>
-  </li>
-  <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="toD-eip.html">To Dynamic</a>
-  </li>
-  <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="transactional-client.html">Transactional Client</a>
-  </li>
-  <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="transform-eip.html">Transform</a>
-  </li>
-  <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="unmarshal-eip.html">Unmarshal</a>
-  </li>
-  <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="validate-eip.html">Validate</a>
-  </li>
-  <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="wireTap-eip.html">Wire Tap</a>
-  </li>
-</ul>
-  </li>
-</ul>
-  </li>
-</ul>
-  </nav>
-</div>
-<div class="nav-panel-explore" data-panel="explore">
-  <div class="context">
-    <span class="title">Camel Components</span>
-    <span class="version">4.0.x</span>
-  </div>
-  <ul class="components">
-    <li class="component is-current">
-      <div class="title"><a href="../../4.10.x/index.html">Camel Components</a></div>
-      <ul class="versions">
-        <li class="version is-latest">
-          <a href="../../4.10.x/index.html">4.10.x (LTS)</a>
-        </li>
-        <li class="version">
-          <a href="../../4.8.x/index.html">4.8.x</a>
-        </li>
-        <li class="version">
-          <a href="../../4.4.x/index.html">4.4.x</a>
-        </li>
-        <li class="version is-current">
-          <a href="../index.html">4.0.x</a>
-        </li>
-      </ul>
-    </li>
-    <li class="component">
-      <div class="title"><a href="../../../manual/4.10.x/index.html">User manual</a></div>
-      <ul class="versions">
-        <li class="version is-latest">
-          <a href="../../../manual/4.10.x/index.html">4.10.x</a>
-        </li>
-        <li class="version">
-          <a href="../../../manual/4.8.x/index.html">4.8.x</a>
-        </li>
-        <li class="version">
-          <a href="../../../manual/4.4.x/index.html">4.4.x</a>
-        </li>
-        <li class="version">
-          <a href="../../../manual/4.0.x/index.html">4.0.x</a>
-        </li>
-      </ul>
-    </li>
-  </ul>
-</div>
+    <div class="nav-container" data-component="components" data-version="4.0.x">
+        <aside class="nav">
+            <div class="panels">
+                <div class="nav-panel-menu is-active" data-panel="menu">
+                    <nav class="nav-menu">
+                        <button class="nav-menu-toggle"
+                                aria-label="Toggle expand/collapse all"
+                                style="display: none"></button>
+                        <h3 class="title"><a href="../index.html">Camel
+                            Components</a></h3>
+                        <ul class="nav-list">
+                            <li class="nav-item" data-depth="0">
+                                <ul class="nav-list">
+                                    <li class="nav-item" data-depth="1">
+                                        <button class="nav-item-toggle"></button>
+                                        <a class="nav-link"
+                                           href="enterprise-integration-patterns.html">Enterprise
+                                            Integration Patterns</a>
+                                        <ul class="nav-list">
+                                            <li class="nav-item" data-depth="2">
+                                                <a class="nav-link"
+                                                   href="aggregate-eip.html">Aggregate</a>
+                                            </li>
+                                            <li class="nav-item" data-depth="2">
+                                                <a class="nav-link"
+                                                   href="bean-eip.html">Bean</a>
+                                            </li>
+                                            <li class="nav-item" data-depth="2">
+                                                <a class="nav-link"
+                                                   href="change-data-capture.html">Change
+                                                    Data Capture</a>
+                                            </li>
+                                            <li class="nav-item" data-depth="2">
+                                                <a class="nav-link"
+                                                   href="channel-adapter.html">Channel
+                                                    Adapter</a>
+                                            </li>
+                                            <li class="nav-item" data-depth="2">
+                                                <a class="nav-link"
+                                                   href="choice-eip.html">Content
+                                                    Based Router</a>
+                                            </li>
+                                            <li class="nav-item" data-depth="2">
+                                                <a class="nav-link"
+                                                   href="circuitBreaker-eip.html">Circuit
+                                                    Breaker</a>
+                                            </li>
+                                            <li class="nav-item" data-depth="2">
+                                                <a class="nav-link"
+                                                   href="claimCheck-eip.html">Claim
+                                                    Check</a>
+                                            </li>
+                                            <li class="nav-item" data-depth="2">
+                                                <a class="nav-link"
+                                                   href="competing-consumers.html">Competing
+                                                    Consumers</a>
+                                            </li>
+                                            <li class="nav-item" data-depth="2">
+                                                <a class="nav-link"
+                                                   href="composed-message-processor.html">Composed
+                                                    Message Processor</a>
+                                            </li>
+                                            <li class="nav-item" data-depth="2">
+                                                <a class="nav-link"
+                                                   href="content-enricher.html">Content
+                                                    Enricher</a>
+                                            </li>
+                                            <li class="nav-item" data-depth="2">
+                                                <a class="nav-link"
+                                                   href="content-filter-eip.html">Content
+                                                    Filter</a>
+                                            </li>
+                                            <li class="nav-item" data-depth="2">
+                                                <a class="nav-link"
+                                                   href="convertBodyTo-eip.html">Convert
+                                                    Body To</a>
+                                            </li>
+                                            <li class="nav-item" data-depth="2">
+                                                <a class="nav-link"
+                                                   href="correlation-identifier.html">Correlation
+                                                    Identifier</a>
+                                            </li>
+                                            <li class="nav-item is-current-page"
+                                                data-depth="2">
+                                                <a class="nav-link"
+                                                   href="dead-letter-channel.html">Dead
+                                                    Letter Channel</a>
+                                            </li>
+                                            <li class="nav-item" data-depth="2">
+                                                <a class="nav-link"
+                                                   href="delay-eip.html">Delay</a>
+                                            </li>
+                                            <li class="nav-item" data-depth="2">
+                                                <a class="nav-link"
+                                                   href="durable-subscriber.html">Durable
+                                                    Subscriber</a>
+                                            </li>
+                                            <li class="nav-item" data-depth="2">
+                                                <a class="nav-link"
+                                                   href="dynamicRouter-eip.html">Dynamic
+                                                    Router</a>
+                                            </li>
+                                            <li class="nav-item" data-depth="2">
+                                                <a class="nav-link"
+                                                   href="enrich-eip.html">Enrich</a>
+                                            </li>
+                                            <li class="nav-item" data-depth="2">
+                                                <a class="nav-link"
+                                                   href="eventDrivenConsumer-eip.html">Event
+                                                    Driven Consumer</a>
+                                            </li>
+                                            <li class="nav-item" data-depth="2">
+                                                <a class="nav-link"
+                                                   href="event-message.html">Event
+                                                    Message</a>
+                                            </li>
+                                            <li class="nav-item" data-depth="2">
+                                                <a class="nav-link"
+                                                   href="filter-eip.html">Filter</a>
+                                            </li>
+                                            <li class="nav-item" data-depth="2">
+                                                <a class="nav-link"
+                                                   href="from-eip.html">From</a>
+                                            </li>
+                                            <li class="nav-item" data-depth="2">
+                                                <a class="nav-link"
+                                                   href="guaranteed-delivery.html">Guaranteed
+                                                    Delivery</a>
+                                            </li>
+                                            <li class="nav-item" data-depth="2">
+                                                <a class="nav-link"
+                                                   href="idempotentConsumer-eip.html">Idempotent
+                                                    Consumer</a>
+                                            </li>
+                                            <li class="nav-item" data-depth="2">
+                                                <a class="nav-link"
+                                                   href="intercept.html">Intercept</a>
+                                            </li>
+                                            <li class="nav-item" data-depth="2">
+                                                <a class="nav-link"
+                                                   href="kamelet-eip.html">Kamelet</a>
+                                            </li>
+                                            <li class="nav-item" data-depth="2">
+                                                <a class="nav-link"
+                                                   href="loadBalance-eip.html">Load
+                                                    Balance</a>
+                                            </li>
+                                            <li class="nav-item" data-depth="2">
+                                                <a class="nav-link"
+                                                   href="log-eip.html">Log</a>
+                                            </li>
+                                            <li class="nav-item" data-depth="2">
+                                                <a class="nav-link"
+                                                   href="loop-eip.html">Loop</a>
+                                            </li>
+                                            <li class="nav-item" data-depth="2">
+                                                <a class="nav-link"
+                                                   href="marshal-eip.html">Marshal</a>
+                                            </li>
+                                            <li class="nav-item" data-depth="2">
+                                                <a class="nav-link"
+                                                   href="message.html">Message</a>
+                                            </li>
+                                            <li class="nav-item" data-depth="2">
+                                                <a class="nav-link"
+                                                   href="message-broker.html">Message
+                                                    Broker</a>
+                                            </li>
+                                            <li class="nav-item" data-depth="2">
+                                                <a class="nav-link"
+                                                   href="message-bus.html">Message
+                                                    Bus</a>
+                                            </li>
+                                            <li class="nav-item" data-depth="2">
+                                                <a class="nav-link"
+                                                   href="message-channel.html">Message
+                                                    Channel</a>
+                                            </li>
+                                            <li class="nav-item" data-depth="2">
+                                                <a class="nav-link"
+                                                   href="message-dispatcher.html">Message
+                                                    Dispatcher</a>
+                                            </li>
+                                            <li class="nav-item" data-depth="2">
+                                                <a class="nav-link"
+                                                   href="message-endpoint.html">Message
+                                                    Endpoint</a>
+                                            </li>
+                                            <li class="nav-item" data-depth="2">
+                                                <a class="nav-link"
+                                                   href="message-expiration.html">Message
+                                                    Expiration</a>
+                                            </li>
+                                            <li class="nav-item" data-depth="2">
+                                                <a class="nav-link"
+                                                   href="message-history.html">Message
+                                                    History</a>
+                                            </li>
+                                            <li class="nav-item" data-depth="2">
+                                                <a class="nav-link"
+                                                   href="message-router.html">Message
+                                                    Router</a>
+                                            </li>
+                                            <li class="nav-item" data-depth="2">
+                                                <a class="nav-link"
+                                                   href="message-translator.html">Message
+                                                    Translator</a>
+                                            </li>
+                                            <li class="nav-item" data-depth="2">
+                                                <a class="nav-link"
+                                                   href="messaging-bridge.html">Messaging
+                                                    Bridge</a>
+                                            </li>
+                                            <li class="nav-item" data-depth="2">
+                                                <a class="nav-link"
+                                                   href="messaging-gateway.html">Messaging
+                                                    Gateway</a>
+                                            </li>
+                                            <li class="nav-item" data-depth="2">
+                                                <a class="nav-link"
+                                                   href="messaging-mapper.html">Messaging
+                                                    Mapper</a>
+                                            </li>
+                                            <li class="nav-item" data-depth="2">
+                                                <a class="nav-link"
+                                                   href="multicast-eip.html">Multicast</a>
+                                            </li>
+                                            <li class="nav-item" data-depth="2">
+                                                <a class="nav-link"
+                                                   href="normalizer.html">Normalizer</a>
+                                            </li>
+                                            <li class="nav-item" data-depth="2">
+                                                <a class="nav-link"
+                                                   href="pipeline-eip.html">Pipeline</a>
+                                            </li>
+                                            <li class="nav-item" data-depth="2">
+                                                <a class="nav-link"
+                                                   href="point-to-point-channel.html">Point
+                                                    to Point Channel</a>
+                                            </li>
+                                            <li class="nav-item" data-depth="2">
+                                                <a class="nav-link"
+                                                   href="pollEnrich-eip.html">Poll
+                                                    Enrich</a>
+                                            </li>
+                                            <li class="nav-item" data-depth="2">
+                                                <a class="nav-link"
+                                                   href="polling-consumer.html">Polling
+                                                    Consumer</a>
+                                            </li>
+                                            <li class="nav-item" data-depth="2">
+                                                <a class="nav-link"
+                                                   href="process-eip.html">Process</a>
+                                            </li>
+                                            <li class="nav-item" data-depth="2">
+                                                <a class="nav-link"
+                                                   href="process-manager.html">Process
+                                                    Manager</a>
+                                            </li>
+                                            <li class="nav-item" data-depth="2">
+                                                <a class="nav-link"
+                                                   href="publish-subscribe-channel.html">Publish
+                                                    Subscribe Channel</a>
+                                            </li>
+                                            <li class="nav-item" data-depth="2">
+                                                <a class="nav-link"
+                                                   href="recipientList-eip.html">Recipient
+                                                    List</a>
+                                            </li>
+                                            <li class="nav-item" data-depth="2">
+                                                <a class="nav-link"
+                                                   href="removeHeader-eip.html">Remove
+                                                    Header</a>
+                                            </li>
+                                            <li class="nav-item" data-depth="2">
+                                                <a class="nav-link"
+                                                   href="removeHeaders-eip.html">Remove
+                                                    Headers</a>
+                                            </li>
+                                            <li class="nav-item" data-depth="2">
+                                                <a class="nav-link"
+                                                   href="removeProperties-eip.html">Remove
+                                                    Properties</a>
+                                            </li>
+                                            <li class="nav-item" data-depth="2">
+                                                <a class="nav-link"
+                                                   href="removeProperty-eip.html">Remove
+                                                    Property</a>
+                                            </li>
+                                            <li class="nav-item" data-depth="2">
+                                                <a class="nav-link"
+                                                   href="requestReply-eip.html">Request
+                                                    Reply</a>
+                                            </li>
+                                            <li class="nav-item" data-depth="2">
+                                                <a class="nav-link"
+                                                   href="resequence-eip.html">Resequence</a>
+                                            </li>
+                                            <li class="nav-item" data-depth="2">
+                                                <a class="nav-link"
+                                                   href="resilience4j-eip.html">Resilience4j
+                                                    Circuit Breaker</a>
+                                            </li>
+                                            <li class="nav-item" data-depth="2">
+                                                <a class="nav-link"
+                                                   href="return-address.html">Return
+                                                    Address</a>
+                                            </li>
+                                            <li class="nav-item" data-depth="2">
+                                                <a class="nav-link"
+                                                   href="rollback-eip.html">Rollback</a>
+                                            </li>
+                                            <li class="nav-item" data-depth="2">
+                                                <a class="nav-link"
+                                                   href="routingSlip-eip.html">Routing
+                                                    Slip</a>
+                                            </li>
+                                            <li class="nav-item" data-depth="2">
+                                                <a class="nav-link"
+                                                   href="saga-eip.html">Saga</a>
+                                            </li>
+                                            <li class="nav-item" data-depth="2">
+                                                <a class="nav-link"
+                                                   href="sample-eip.html">Sample</a>
+                                            </li>
+                                            <li class="nav-item" data-depth="2">
+                                                <a class="nav-link"
+                                                   href="scatter-gather.html">Scatter
+                                                    Gather</a>
+                                            </li>
+                                            <li class="nav-item" data-depth="2">
+                                                <a class="nav-link"
+                                                   href="script-eip.html">Script</a>
+                                            </li>
+                                            <li class="nav-item" data-depth="2">
+                                                <a class="nav-link"
+                                                   href="selective-consumer.html">Selective
+                                                    Consumer</a>
+                                            </li>
+                                            <li class="nav-item" data-depth="2">
+                                                <a class="nav-link"
+                                                   href="service-activator.html">Service
+                                                    Activator</a>
+                                            </li>
+                                            <li class="nav-item" data-depth="2">
+                                                <a class="nav-link"
+                                                   href="serviceCall-eip.html">Service
+                                                    Call</a>
+                                            </li>
+                                            <li class="nav-item" data-depth="2">
+                                                <a class="nav-link"
+                                                   href="setBody-eip.html">Set
+                                                    Body</a>
+                                            </li>
+                                            <li class="nav-item" data-depth="2">
+                                                <a class="nav-link"
+                                                   href="setHeader-eip.html">Set
+                                                    Header</a>
+                                            </li>
+                                            <li class="nav-item" data-depth="2">
+                                                <a class="nav-link"
+                                                   href="setProperty-eip.html">Set
+                                                    Property</a>
+                                            </li>
+                                            <li class="nav-item" data-depth="2">
+                                                <a class="nav-link"
+                                                   href="sort-eip.html">Sort</a>
+                                            </li>
+                                            <li class="nav-item" data-depth="2">
+                                                <a class="nav-link"
+                                                   href="split-eip.html">Split</a>
+                                            </li>
+                                            <li class="nav-item" data-depth="2">
+                                                <a class="nav-link"
+                                                   href="step-eip.html">Step</a>
+                                            </li>
+                                            <li class="nav-item" data-depth="2">
+                                                <a class="nav-link"
+                                                   href="stop-eip.html">Stop</a>
+                                            </li>
+                                            <li class="nav-item" data-depth="2">
+                                                <a class="nav-link"
+                                                   href="threads-eip.html">Threads</a>
+                                            </li>
+                                            <li class="nav-item" data-depth="2">
+                                                <a class="nav-link"
+                                                   href="throttle-eip.html">Throttle</a>
+                                            </li>
+                                            <li class="nav-item" data-depth="2">
+                                                <a class="nav-link"
+                                                   href="to-eip.html">To</a>
+                                            </li>
+                                            <li class="nav-item" data-depth="2">
+                                                <a class="nav-link"
+                                                   href="toD-eip.html">To
+                                                    Dynamic</a>
+                                            </li>
+                                            <li class="nav-item" data-depth="2">
+                                                <a class="nav-link"
+                                                   href="transactional-client.html">Transactional
+                                                    Client</a>
+                                            </li>
+                                            <li class="nav-item" data-depth="2">
+                                                <a class="nav-link"
+                                                   href="transform-eip.html">Transform</a>
+                                            </li>
+                                            <li class="nav-item" data-depth="2">
+                                                <a class="nav-link"
+                                                   href="unmarshal-eip.html">Unmarshal</a>
+                                            </li>
+                                            <li class="nav-item" data-depth="2">
+                                                <a class="nav-link"
+                                                   href="validate-eip.html">Validate</a>
+                                            </li>
+                                            <li class="nav-item" data-depth="2">
+                                                <a class="nav-link"
+                                                   href="wireTap-eip.html">Wire
+                                                    Tap</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+                <div class="nav-panel-explore" data-panel="explore">
+                    <div class="context">
+                        <span class="title">Camel Components</span>
+                        <span class="version">4.0.x</span>
+                    </div>
+                    <ul class="components">
+                        <li class="component is-current">
+                            <div class="title"><a
+                                    href="../../4.10.x/index.html">Camel
+                                Components</a></div>
+                            <ul class="versions">
+                                <li class="version is-latest">
+                                    <a href="../../4.10.x/index.html">4.10.x
+                                        (LTS)</a>
+                                </li>
+                                <li class="version">
+                                    <a href="../../4.8.x/index.html">4.8.x</a>
+                                </li>
+                                <li class="version">
+                                    <a href="../../4.4.x/index.html">4.4.x</a>
+                                </li>
+                                <li class="version is-current">
+                                    <a href="../index.html">4.0.x</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="component">
+                            <div class="title"><a
+                                    href="../../../manual/4.10.x/index.html">User
+                                manual</a></div>
+                            <ul class="versions">
+                                <li class="version is-latest">
+                                    <a href="../../../manual/4.10.x/index.html">4.10.x</a>
+                                </li>
+                                <li class="version">
+                                    <a href="../../../manual/4.8.x/index.html">4.8.x</a>
+                                </li>
+                                <li class="version">
+                                    <a href="../../../manual/4.4.x/index.html">4.4.x</a>
+                                </li>
+                                <li class="version">
+                                    <a href="../../../manual/4.0.x/index.html">4.0.x</a>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </aside>
     </div>
-  </aside>
-</div>
-<main class="article">
-<div class="toolbar" role="navigation">
-<button class="nav-toggle"></button>
-  <a href="../../../manual/4.10.x/index.html" class="home-link"></a>
-<nav class="breadcrumbs" aria-label="breadcrumbs">
-  <ul>
-    <li><a href="../index.html">Camel Components</a></li>
-    <li><a href="enterprise-integration-patterns.html">Enterprise Integration Patterns</a></li>
-    <li><a href="dead-letter-channel.html">Dead Letter Channel</a></li>
-  </ul>
-</nav>
-<div class="page-versions">
-  <button class="version-menu-toggle" title="Show other versions of page">4.0.x</button>
-  <div class="version-menu">
-    <a class="version" href="../../4.10.x/eips/dead-letter-channel.html">4.10.x (LTS)</a>
-    <a class="version" href="../../4.8.x/eips/dead-letter-channel.html">4.8.x</a>
-    <a class="version" href="../../4.4.x/eips/dead-letter-channel.html">4.4.x</a>
-    <a class="version is-current" href="dead-letter-channel.html">4.0.x</a>
-  </div>
-</div>
+    <main class="article">
+        <div class="toolbar" role="navigation">
+            <button class="nav-toggle"></button>
+            <a href="../../../manual/4.10.x/index.html" class="home-link"></a>
+            <nav class="breadcrumbs" aria-label="breadcrumbs">
+                <ul>
+                    <li><a href="../index.html">Camel Components</a></li>
+                    <li><a href="enterprise-integration-patterns.html">Enterprise
+                        Integration Patterns</a></li>
+                    <li><a href="dead-letter-channel.html">Dead Letter
+                        Channel</a></li>
+                </ul>
+            </nav>
+            <div class="page-versions">
+                <button class="version-menu-toggle"
+                        title="Show other versions of page">4.0.x
+                </button>
+                <div class="version-menu">
+                    <a class="version"
+                       href="../../4.10.x/eips/dead-letter-channel.html">4.10.x
+                        (LTS)</a>
+                    <a class="version"
+                       href="../../4.8.x/eips/dead-letter-channel.html">4.8.x</a>
+                    <a class="version"
+                       href="../../4.4.x/eips/dead-letter-channel.html">4.4.x</a>
+                    <a class="version is-current"
+                       href="dead-letter-channel.html">4.0.x</a>
+                </div>
+            </div>
 
-</div>
-  <div class="content">
-<aside class="toc sidebar" data-title="Contents" data-levels="2">
-  <div class="toc-menu"></div>
-</aside>
-<article class="doc">
-<h1 class="page">Dead Letter Channel</h1>
-<div id="preamble">
-<div class="sectionbody">
-<div class="paragraph">
-<p>Camel supports the
-<a href="http://www.enterpriseintegrationpatterns.com/DeadLetterChannel.html">Dead
-Letter Channel</a> from the <a href="enterprise-integration-patterns.html" class="xref page">EIP
-patterns</a> using the
-<a href="https://www.javadoc.io/doc/org.apache.camel/camel-core-processor/current/org/apache/camel/processor/errorhandler/DeadLetterChannel.html">DeadLetterChannel</a>
-processor which is an <a href="../../../manual/4.10.x/error-handler.html" class="xref page">Error Handler</a>.</p>
-</div>
-<div class="imageblock">
-<div class="content">
-<img src="_images/eip/DeadLetterChannelSolution.gif" alt="image">
-</div>
-</div>
-<div class="paragraph">
-<p>The Dead Letter Channel is an <a href="../../../manual/4.10.x/error-handler.html" class="xref page">Error Handler</a>
-that implements the principles from the Dead Letter Channel EIP.
-From the illustration above we can see the pattern is that if a message cannot be processed or fails during sending, it should be moved to a dead letter queue.
-The dead letter queue, is based on a Camel
-<a href="message-endpoint.html" class="xref page">Endpoint</a>, allowing you to use any of the many Camel components, such as a file system, database, or a log.</p>
-</div>
-<div class="paragraph">
-<p>The Dead Letter Channel is similar to the default error handler, but with the following differences:</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>The dead letter channel is the only error handler that supports moving failed messages to a dedicated error queue, known as the dead letter queue (is a Camel endpoint).</p>
-</li>
-<li>
-<p>Unlike the default error handler, the dead letter channel will, by default, handle exceptions and move the failed messages to the dead letter queue.</p>
-</li>
-<li>
-<p>The dead letter channel is by default configured to not log any activity when it handles exceptions.</p>
-</li>
-<li>
-<p>The dead letter channel supports using the original input message when a message is moved to the dead letter queue.</p>
-</li>
-</ul>
-</div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="_using_dead_letter_error_handler"><a class="anchor" href="#_using_dead_letter_error_handler"></a>Using Dead Letter Error Handler</h2>
-<div class="sectionbody">
-<div class="paragraph">
-<p>When using the dead letter channel error handler, you must configure the dead letter queue as an endpoint, so the handler knows where to move the failed messages.
-This is done a bit differently in the Java DSL and XML DSL.</p>
-</div>
-<div class="paragraph">
-<p>For example, here’s how to log the message at <code>ERROR</code> level in Java DSL:</p>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">errorHandler(deadLetterChannel("log:dead?level=ERROR"));</code></pre>
-</div>
-</div>
-<div class="paragraph">
-<p>And in Spring XML</p>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;errorHandler id="myErrorHandler" type="DeadLetterChannel"
+        </div>
+        <div class="content">
+            <aside class="toc sidebar" data-title="Contents" data-levels="2">
+                <div class="toc-menu"></div>
+            </aside>
+            <article class="doc">
+                <h1 class="page">Dead Letter Channel</h1>
+                <div id="preamble">
+                    <div class="sectionbody">
+                        <div class="paragraph">
+                            <p>Camel supports the
+                                <a href="http://www.enterpriseintegrationpatterns.com/DeadLetterChannel.html">Dead
+                                    Letter Channel</a> from the <a
+                                        href="enterprise-integration-patterns.html"
+                                        class="xref page">EIP
+                                    patterns</a> using the
+                                <a href="https://www.javadoc.io/doc/org.apache.camel/camel-core-processor/current/org/apache/camel/processor/errorhandler/DeadLetterChannel.html">DeadLetterChannel</a>
+                                processor which is an <a
+                                        href="../../../manual/4.10.x/error-handler.html"
+                                        class="xref page">Error Handler</a>.</p>
+                        </div>
+                        <div class="imageblock">
+                            <div class="content">
+                                <img src="_images/eip/DeadLetterChannelSolution.gif"
+                                     alt="image">
+                            </div>
+                        </div>
+                        <div class="paragraph">
+                            <p>The Dead Letter Channel is an <a
+                                    href="../../../manual/4.10.x/error-handler.html"
+                                    class="xref page">Error Handler</a>
+                                that implements the principles from the Dead
+                                Letter Channel EIP.
+                                From the illustration above we can see the
+                                pattern is that if a message cannot be processed
+                                or fails during sending, it should be moved to a
+                                dead letter queue.
+                                The dead letter queue, is based on a Camel
+                                <a href="message-endpoint.html"
+                                   class="xref page">Endpoint</a>, allowing you
+                                to use any of the many Camel components, such as
+                                a file system, database, or a log.</p>
+                        </div>
+                        <div class="paragraph">
+                            <p>The Dead Letter Channel is similar to the default
+                                error handler, but with the following
+                                differences:</p>
+                        </div>
+                        <div class="ulist">
+                            <ul>
+                                <li>
+                                    <p>The dead letter channel is the only error
+                                        handler that supports moving failed
+                                        messages to a dedicated error queue,
+                                        known as the dead letter queue (is a
+                                        Camel endpoint).</p>
+                                </li>
+                                <li>
+                                    <p>Unlike the default error handler, the
+                                        dead letter channel will, by default,
+                                        handle exceptions and move the failed
+                                        messages to the dead letter queue.</p>
+                                </li>
+                                <li>
+                                    <p>The dead letter channel is by default
+                                        configured to not log any activity when
+                                        it handles exceptions.</p>
+                                </li>
+                                <li>
+                                    <p>The dead letter channel supports using
+                                        the original input message when a
+                                        message is moved to the dead letter
+                                        queue.</p>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="sect1">
+                    <h2 id="_using_dead_letter_error_handler"><a class="anchor"
+                                                                 href="#_using_dead_letter_error_handler"></a>Using
+                        Dead Letter Error Handler</h2>
+                    <div class="sectionbody">
+                        <div class="paragraph">
+                            <p>When using the dead letter channel error handler,
+                                you must configure the dead letter queue as an
+                                endpoint, so the handler knows where to move the
+                                failed messages.
+                                This is done a bit differently in the Java DSL
+                                and XML DSL.</p>
+                        </div>
+                        <div class="paragraph">
+                            <p>For example, here’s how to log the message at
+                                <code>ERROR</code> level in Java DSL:</p>
+                        </div>
+                        <div class="listingblock">
+                            <div class="content">
+                                <pre class="highlightjs highlight"><code
+                                        class="language-java hljs"
+                                        data-lang="java">errorHandler(deadLetterChannel("log:dead?level=ERROR"));</code></pre>
+                            </div>
+                        </div>
+                        <div class="paragraph">
+                            <p>And in Spring XML</p>
+                        </div>
+                        <div class="listingblock">
+                            <div class="content">
+<pre class="highlightjs highlight"><code class="language-xml hljs"
+                                         data-lang="xml">&lt;errorHandler id="myErrorHandler" type="DeadLetterChannel"
               deadLetterUri="log:dead?level=ERROR"/&gt;</code></pre>
-</div>
-</div>
-<div class="paragraph">
-<p>Pay attention to Spring XML DSL, the type attribute is used to declare which error handler to use, here its <code>DeadLetterChannel</code>.
-And in XML the <code>&lt;errorHandler&gt;</code> must be configured with an id.
-The id must then be enabled on either the <code>&lt;camelContext&gt;</code> (global scope), or per route that should use this error handler.</p>
-</div>
-<div class="paragraph">
-<p>The following listing is an equivalent of the prior Java DSL listing:</p>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;camelContext errorHandlerRef="myErrorHandler"&gt;
+                            </div>
+                        </div>
+                        <div class="paragraph">
+                            <p>Pay attention to Spring XML DSL, the type
+                                attribute is used to declare which error handler
+                                to use, here its <code>DeadLetterChannel</code>.
+                                And in XML the <code>&lt;errorHandler&gt;</code>
+                                must be configured with an id.
+                                The id must then be enabled on either the <code>&lt;camelContext&gt;</code>
+                                (global scope), or per route that should use
+                                this error handler.</p>
+                        </div>
+                        <div class="paragraph">
+                            <p>The following listing is an equivalent of the
+                                prior Java DSL listing:</p>
+                        </div>
+                        <div class="listingblock">
+                            <div class="content">
+<pre class="highlightjs highlight"><code class="language-xml hljs"
+                                         data-lang="xml">&lt;camelContext errorHandlerRef="myErrorHandler"&gt;
   &lt;errorHandler id="myErrorHandler" type="DeadLetterChannel"
                 deadLetterUri="log:dead?level=ERROR"/&gt;
   &lt;route&gt;
@@ -459,353 +665,571 @@ The id must then be enabled on either the <code>&lt;camelContext&gt;</code> (glo
     &lt;bean ref="orderService" method="store"/&gt;
   &lt;/route&gt;
 &lt;/camelContext&gt;</code></pre>
-</div>
-</div>
-<div class="paragraph">
-<p>Notice how we have enabled the error handler on the <code>&lt;camelContext&gt;</code> via <code>errorHandlerRef</code>
-which means this error handler is used globally. You can override this per route, and have
-individual routes used another error handler.</p>
-</div>
-<div class="admonitionblock note">
-<table>
-<tr>
-<td class="icon">
-<i class="fa icon-note" title="Note"></i>
-</td>
-<td class="content">
-The DSLs is planned to be improved in the near future to have a unified
-way of configuring error handling across all DSLs, with <a href="../../../manual/4.10.x/route-configuration.html" class="xref page">Route Configuration</a>.
-When fully implemented then configuring error handler in Java and XML DSL would be much more similar than currently.
-</td>
-</tr>
-</table>
-</div>
-<div class="sect2">
-<h3 id="_redelivery"><a class="anchor" href="#_redelivery"></a>Redelivery</h3>
-<div class="paragraph">
-<p>It is common for a temporary outage or database deadlock to cause a message to fail to process; but the chances are if its tried a few more times with some time delay then it will complete fine.
-So we typically wish to use some kind of redelivery policy to decide how many times to try to redeliver a message and how long to wait before redelivery attempts.</p>
-</div>
-<div class="paragraph">
-<p>The
-<a href="https://www.javadoc.io/doc/org.apache.camel/camel-base/current/org/apache/camel/processor/errorhandler/RedeliveryPolicy.html">RedeliveryPolicy</a>
-defines how the message is to be redelivered.
-You can customize things like:</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>how many times a message is attempted to be redelivered before it is considered a failure and sent to the dead letter channel</p>
-</li>
-<li>
-<p>the initial redelivery timeout</p>
-</li>
-<li>
-<p>using exponential backoff (i.e. the time between retries increases using a backoff multiplier)</p>
-</li>
-<li>
-<p>whether to use collision avoidance to add some randomness to the timings</p>
-</li>
-<li>
-<p>delay pattern</p>
-</li>
-<li>
-<p>whether to allow redelivery during stopping/shutdown</p>
-</li>
-</ul>
-</div>
-<div class="paragraph">
-<p>Only when all redelivery attempts have failed then the message is moved to the dead letter queue.</p>
-</div>
-</div>
-<div class="sect2">
-<h3 id="_redelivery_default_values"><a class="anchor" href="#_redelivery_default_values"></a>Redelivery default values</h3>
-<div class="paragraph">
-<p>Redelivery is disabled by default.</p>
-</div>
-<div class="paragraph">
-<p>The default redeliver policy will use the following values:</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>maximumRedeliveries = 0</p>
-</li>
-<li>
-<p>redeliveryDelay = 1000L (1 second)</p>
-</li>
-<li>
-<p>maximumRedeliveryDelay = 60 * 1000L (60 seconds)</p>
-</li>
-<li>
-<p>And the exponential backoff and collision avoidance is turned off.</p>
-</li>
-<li>
-<p>The retriesExhaustedLogLevel are set to LoggingLevel.ERROR</p>
-</li>
-<li>
-<p>The retryAttemptedLogLevel are set to LoggingLevel.DEBUG</p>
-</li>
-<li>
-<p>Stack traces is logged for exhausted messages</p>
-</li>
-<li>
-<p>Handled exceptions is not logged</p>
-</li>
-<li>
-<p>allowRedeliveryWhileStopping is true</p>
-</li>
-<li>
-<p>logExhaustedMessageHistory is false</p>
-</li>
-<li>
-<p>logExhaustedMessageBody is disabled by default to avoid logging sensitive message body/header details.
-If this option is true, then logExhaustedMessageHistory must also be true.</p>
-</li>
-</ul>
-</div>
-<div class="paragraph">
-<p>The maximum redeliver delay ensures that a delay is never longer than the value, default 1 minute.
-This can happen if you turn on the exponential backoff.</p>
-</div>
-<div class="paragraph">
-<p>The maximum redeliveries are the number of redelivery attempts.
-Setting the maximumRedeliveries to a negative value such as -1 will then always redelivery (unlimited).
-Setting the maximumRedeliveries to 0 will disable any redelivery attempt.</p>
-</div>
-<div class="paragraph">
-<p>Camel will log delivery failures at the DEBUG logging level by default.
-You can change this by specifying retriesExhaustedLogLevel and/or retryAttemptedLogLevel.</p>
-</div>
-<div class="paragraph">
-<p>You can turn logging of stack traces on/off.
-If turned off Camel will still log the redelivery attempt, it&#8217;s just much less verbose.</p>
-</div>
-<div class="paragraph">
-<p>There are more options for fine-tuned logging configurations which you can find at <a href="https://www.javadoc.io/doc/org.apache.camel/camel-core-processor/current/org/apache/camel/processor/errorhandler/RedeliveryPolicy.html">RedeliveryPolicy</a>.</p>
-</div>
-</div>
-<div class="sect2">
-<h3 id="_what_happens_when_an_exception_is_thrown_during_sending_to_the_dead_letter_queue"><a class="anchor" href="#_what_happens_when_an_exception_is_thrown_during_sending_to_the_dead_letter_queue"></a>What happens when an exception is thrown during sending to the dead letter queue</h3>
-<div class="paragraph">
-<p>When the Dead Letter Channel moves a message to the dead letter endpoint, and a new Exception is thrown, then the new caused exception is logged at WARN level (can be turned off by setting <code>logNewException</code> to false) and Camel stops processing the message.
-This ensures that the Dead LetterChannel will always succeed.</p>
-</div>
-<div class="paragraph">
-<p>If you do not want this behaviour you can configure <code>deadLetterHandleNewException</code> to false, which then causes the dead letter channel to fail and propagate back the new Exception, which causes Camel to fail processing the message.</p>
-</div>
-</div>
-<div class="sect2">
-<h3 id="_what_happens_when_an_exchange_is_moved_to_the_dead_letter_queue"><a class="anchor" href="#_what_happens_when_an_exchange_is_moved_to_the_dead_letter_queue"></a>What happens when an Exchange is moved to the dead letter queue</h3>
-<div class="paragraph">
-<p>When all attempts of redelivery have failed the
-<a href="../../../manual/4.10.x/exchange.html" class="xref page">Exchange</a> is moved to the dead letter queue.
-The exchange is then complete, and from the client point of view, the message is done being processed.</p>
-</div>
-<div class="paragraph">
-<p>For instance configuring the dead letter channel as:</p>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">errorHandler(deadLetterChannel("jms:queue:dead")
+                            </div>
+                        </div>
+                        <div class="paragraph">
+                            <p>Notice how we have enabled the error handler on
+                                the <code>&lt;camelContext&gt;</code> via <code>errorHandlerRef</code>
+                                which means this error handler is used globally.
+                                You can override this per route, and have
+                                individual routes used another error handler.
+                            </p>
+                        </div>
+                        <div class="admonitionblock note">
+                            <table>
+                                <tr>
+                                    <td class="icon">
+                                        <i class="fa icon-note"
+                                           title="Note"></i>
+                                    </td>
+                                    <td class="content">
+                                        The DSLs is planned to be improved in
+                                        the near future to have a unified
+                                        way of configuring error handling across
+                                        all DSLs, with <a
+                                            href="../../../manual/4.10.x/route-configuration.html"
+                                            class="xref page">Route
+                                        Configuration</a>.
+                                        When fully implemented then configuring
+                                        error handler in Java and XML DSL would
+                                        be much more similar than currently.
+                                    </td>
+                                </tr>
+                            </table>
+                        </div>
+                        <div class="sect2">
+                            <h3 id="_redelivery"><a class="anchor"
+                                                    href="#_redelivery"></a>Redelivery
+                            </h3>
+                            <div class="paragraph">
+                                <p>It is common for a temporary outage or
+                                    database deadlock to cause a message to fail
+                                    to process; but the chances are if its tried
+                                    a few more times with some time delay then
+                                    it will complete fine.
+                                    So we typically wish to use some kind of
+                                    redelivery policy to decide how many times
+                                    to try to redeliver a message and how long
+                                    to wait before redelivery attempts.</p>
+                            </div>
+                            <div class="paragraph">
+                                <p>The
+                                    <a href="https://www.javadoc.io/doc/org.apache.camel/camel-base/current/org/apache/camel/processor/errorhandler/RedeliveryPolicy.html">RedeliveryPolicy</a>
+                                    defines how the message is to be
+                                    redelivered.
+                                    You can customize things like:</p>
+                            </div>
+                            <div class="ulist">
+                                <ul>
+                                    <li>
+                                        <p>how many times a message is attempted
+                                            to be redelivered before it is
+                                            considered a failure and sent to the
+                                            dead letter channel</p>
+                                    </li>
+                                    <li>
+                                        <p>the initial redelivery timeout</p>
+                                    </li>
+                                    <li>
+                                        <p>using exponential backoff (i.e. the
+                                            time between retries increases using
+                                            a backoff multiplier)</p>
+                                    </li>
+                                    <li>
+                                        <p>whether to use collision avoidance to
+                                            add some randomness to the
+                                            timings</p>
+                                    </li>
+                                    <li>
+                                        <p>delay pattern</p>
+                                    </li>
+                                    <li>
+                                        <p>whether to allow redelivery during
+                                            stopping/shutdown</p>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="paragraph">
+                                <p>Only when all redelivery attempts have failed
+                                    then the message is moved to the dead letter
+                                    queue.</p>
+                            </div>
+                        </div>
+                        <div class="sect2">
+                            <h3 id="_redelivery_default_values"><a
+                                    class="anchor"
+                                    href="#_redelivery_default_values"></a>Redelivery
+                                default values</h3>
+                            <div class="paragraph">
+                                <p>Redelivery is disabled by default.</p>
+                            </div>
+                            <div class="paragraph">
+                                <p>The default redeliver policy will use the
+                                    following values:</p>
+                            </div>
+                            <div class="ulist">
+                                <ul>
+                                    <li>
+                                        <p>maximumRedeliveries = 0</p>
+                                    </li>
+                                    <li>
+                                        <p>redeliveryDelay = 1000L (1
+                                            second)</p>
+                                    </li>
+                                    <li>
+                                        <p>maximumRedeliveryDelay = 60 * 1000L
+                                            (60 seconds)</p>
+                                    </li>
+                                    <li>
+                                        <p>And the exponential backoff and
+                                            collision avoidance is turned
+                                            off.</p>
+                                    </li>
+                                    <li>
+                                        <p>The retriesExhaustedLogLevel are set
+                                            to LoggingLevel.ERROR</p>
+                                    </li>
+                                    <li>
+                                        <p>The retryAttemptedLogLevel are set to
+                                            LoggingLevel.DEBUG</p>
+                                    </li>
+                                    <li>
+                                        <p>Stack traces is logged for exhausted
+                                            messages</p>
+                                    </li>
+                                    <li>
+                                        <p>Handled exceptions is not logged</p>
+                                    </li>
+                                    <li>
+                                        <p>allowRedeliveryWhileStopping is
+                                            true</p>
+                                    </li>
+                                    <li>
+                                        <p>logExhaustedMessageHistory is
+                                            false</p>
+                                    </li>
+                                    <li>
+                                        <p>logExhaustedMessageBody is disabled
+                                            by default to avoid logging
+                                            sensitive message body/header
+                                            details.
+                                            If this option is true, then
+                                            logExhaustedMessageHistory must also
+                                            be true.</p>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="paragraph">
+                                <p>The maximum redeliver delay ensures that a
+                                    delay is never longer than the value,
+                                    default 1 minute.
+                                    This can happen if you turn on the
+                                    exponential backoff.</p>
+                            </div>
+                            <div class="paragraph">
+                                <p>The maximum redeliveries are the number of
+                                    redelivery attempts.
+                                    Setting the maximumRedeliveries to a
+                                    negative value such as -1 will then always
+                                    redelivery (unlimited).
+                                    Setting the maximumRedeliveries to 0 will
+                                    disable any redelivery attempt.</p>
+                            </div>
+                            <div class="paragraph">
+                                <p>Camel will log delivery failures at the DEBUG
+                                    logging level by default.
+                                    You can change this by specifying
+                                    retriesExhaustedLogLevel and/or
+                                    retryAttemptedLogLevel.</p>
+                            </div>
+                            <div class="paragraph">
+                                <p>You can turn logging of stack traces on/off.
+                                    If turned off Camel will still log the
+                                    redelivery attempt, it&#8217;s just much
+                                    less verbose.</p>
+                            </div>
+                            <div class="paragraph">
+                                <p>There are more options for fine-tuned logging
+                                    configurations which you can find at <a
+                                            href="https://www.javadoc.io/doc/org.apache.camel/camel-core-processor/current/org/apache/camel/processor/errorhandler/RedeliveryPolicy.html">RedeliveryPolicy</a>.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="sect2">
+                            <h3 id="_what_happens_when_an_exception_is_thrown_during_sending_to_the_dead_letter_queue">
+                                <a class="anchor"
+                                   href="#_what_happens_when_an_exception_is_thrown_during_sending_to_the_dead_letter_queue"></a>What
+                                happens when an exception is thrown during
+                                sending to the dead letter queue</h3>
+                            <div class="paragraph">
+                                <p>When the Dead Letter Channel moves a message
+                                    to the dead letter endpoint, and a new
+                                    Exception is thrown, then the new caused
+                                    exception is logged at WARN level (can be
+                                    turned off by setting
+                                    <code>logNewException</code> to false) and
+                                    Camel stops processing the message.
+                                    This ensures that the Dead LetterChannel
+                                    will always succeed.</p>
+                            </div>
+                            <div class="paragraph">
+                                <p>If you do not want this behaviour you can
+                                    configure
+                                    <code>deadLetterHandleNewException</code> to
+                                    false, which then causes the dead letter
+                                    channel to fail and propagate back the new
+                                    Exception, which causes Camel to fail
+                                    processing the message.</p>
+                            </div>
+                        </div>
+                        <div class="sect2">
+                            <h3 id="_what_happens_when_an_exchange_is_moved_to_the_dead_letter_queue">
+                                <a class="anchor"
+                                   href="#_what_happens_when_an_exchange_is_moved_to_the_dead_letter_queue"></a>What
+                                happens when an Exchange is moved to the dead
+                                letter queue</h3>
+                            <div class="paragraph">
+                                <p>When all attempts of redelivery have failed
+                                    the
+                                    <a href="../../../manual/4.10.x/exchange.html"
+                                       class="xref page">Exchange</a> is moved
+                                    to the dead letter queue.
+                                    The exchange is then complete, and from the
+                                    client point of view, the message is done
+                                    being processed.</p>
+                            </div>
+                            <div class="paragraph">
+                                <p>For instance configuring the dead letter
+                                    channel as:</p>
+                            </div>
+                            <div class="listingblock">
+                                <div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs"
+                                         data-lang="java">errorHandler(deadLetterChannel("jms:queue:dead")
     .maximumRedeliveries(3).redeliveryDelay(5000));</code></pre>
-</div>
-</div>
-<div class="paragraph">
-<p>And in XML:</p>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;errorHandler id="myErrorHandler" type="DeadLetterChannel"
+                                </div>
+                            </div>
+                            <div class="paragraph">
+                                <p>And in XML:</p>
+                            </div>
+                            <div class="listingblock">
+                                <div class="content">
+<pre class="highlightjs highlight"><code class="language-xml hljs"
+                                         data-lang="xml">&lt;errorHandler id="myErrorHandler" type="DeadLetterChannel"
               deadLetterUri="jms:queue:dead"&gt;
   &lt;redeliveryPolicy maximumRedeliveries="3" redeliveryDelay="5000"/&gt;
 &lt;/errorHandler&gt;</code></pre>
-</div>
-</div>
-<div class="paragraph">
-<p>The Dead Letter error handler will clear the caused exception (<code>setException(null)</code>), by moving the caused exception to a property on the <a href="../../../manual/4.10.x/exchange.html" class="xref page">Exchange</a>, with the key <code>Exchange.EXCEPTION_CAUGHT</code>.
-Then the <a href="../../../manual/4.10.x/exchange.html" class="xref page">Exchange</a>
-is moved to the <code>jms:queue:dead</code> destination, and the client will not notice the failure.</p>
-</div>
-</div>
-<div class="sect2">
-<h3 id="_moving_the_original_message_to_the_dead_letter_queue"><a class="anchor" href="#_moving_the_original_message_to_the_dead_letter_queue"></a>Moving the original message to the dead letter queue</h3>
-<div class="paragraph">
-<p>The option <code>useOriginalMessage</code> is used for routing the original input message instead of the current message that potentially is modified during routing.</p>
-</div>
-<div class="paragraph">
-<p>For instance if you have this route:</p>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">from("jms:queue:order:input")
+                                </div>
+                            </div>
+                            <div class="paragraph">
+                                <p>The Dead Letter error handler will clear the
+                                    caused exception
+                                    (<code>setException(null)</code>), by moving
+                                    the caused exception to a property on the <a
+                                            href="../../../manual/4.10.x/exchange.html"
+                                            class="xref page">Exchange</a>, with
+                                    the key
+                                    <code>Exchange.EXCEPTION_CAUGHT</code>.
+                                    Then the <a
+                                            href="../../../manual/4.10.x/exchange.html"
+                                            class="xref page">Exchange</a>
+                                    is moved to the <code>jms:queue:dead</code>
+                                    destination, and the client will not notice
+                                    the failure.</p>
+                            </div>
+                        </div>
+                        <div class="sect2">
+                            <h3 id="_moving_the_original_message_to_the_dead_letter_queue">
+                                <a class="anchor"
+                                   href="#_moving_the_original_message_to_the_dead_letter_queue"></a>Moving
+                                the original message to the dead letter queue
+                            </h3>
+                            <div class="paragraph">
+                                <p>The option <code>useOriginalMessage</code> is
+                                    used for routing the original input message
+                                    instead of the current message that
+                                    potentially is modified during routing.</p>
+                            </div>
+                            <div class="paragraph">
+                                <p>For instance if you have this route:</p>
+                            </div>
+                            <div class="listingblock">
+                                <div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs"
+                                         data-lang="java">from("jms:queue:order:input")
    .to("bean:validateOrder")
    .to("bean:transformOrder")
    .to("bean:handleOrder");</code></pre>
-</div>
-</div>
-<div class="paragraph">
-<p>The route listen for JMS messages and validates, transforms and handle it.
-During this the <a href="../../../manual/4.10.x/exchange.html" class="xref page">Exchange</a> payload is transformed/modified in the various bean stages.</p>
-</div>
-<div class="paragraph">
-<p>Now suppose that if an exception is thrown we want to move the message to the dead letter queue.
-However the message that is moved to the dead letter queue (by default) is the current message.
-Suppose at one time there is an exception in the validateOrder, and another time an exception thrown
-by transformOrder, and yet also in handleOrder. In all these different situations the message may be changed.</p>
-</div>
-<div class="paragraph">
-<p>By enabling <code>useOriginalMessage</code> on the dead letter channel, then the message that is moved to the dead letter queue,
-would be the original incoming message.</p>
-</div>
-<div class="admonitionblock note">
-<table>
-<tr>
-<td class="icon">
-<i class="fa icon-note" title="Note"></i>
-</td>
-<td class="content">
-<div class="paragraph">
-<p>There is also a <strong>useOriginalBody</strong> option, which only keeps the original message body, and does
-not change the message headers.</p>
-</div>
-</td>
-</tr>
-</table>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">// will use original message (body and headers)
+                                </div>
+                            </div>
+                            <div class="paragraph">
+                                <p>The route listen for JMS messages and
+                                    validates, transforms and handle it.
+                                    During this the <a
+                                            href="../../../manual/4.10.x/exchange.html"
+                                            class="xref page">Exchange</a>
+                                    payload is transformed/modified in the
+                                    various bean stages.</p>
+                            </div>
+                            <div class="paragraph">
+                                <p>Now suppose that if an exception is thrown we
+                                    want to move the message to the dead letter
+                                    queue.
+                                    However the message that is moved to the
+                                    dead letter queue (by default) is the
+                                    current message.
+                                    Suppose at one time there is an exception in
+                                    the validateOrder, and another time an
+                                    exception thrown
+                                    by transformOrder, and yet also in
+                                    handleOrder. In all these different
+                                    situations the message may be changed.</p>
+                            </div>
+                            <div class="paragraph">
+                                <p>By enabling <code>useOriginalMessage</code>
+                                    on the dead letter channel, then the message
+                                    that is moved to the dead letter queue,
+                                    would be the original incoming message.</p>
+                            </div>
+                            <div class="admonitionblock note">
+                                <table>
+                                    <tr>
+                                        <td class="icon">
+                                            <i class="fa icon-note"
+                                               title="Note"></i>
+                                        </td>
+                                        <td class="content">
+                                            <div class="paragraph">
+                                                <p>There is also a <strong>useOriginalBody</strong>
+                                                    option, which only keeps the
+                                                    original message body, and
+                                                    does
+                                                    not change the message
+                                                    headers.</p>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </div>
+                            <div class="listingblock">
+                                <div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs"
+                                         data-lang="java">// will use original message (body and headers)
 errorHandler(deadLetterChannel("jms:queue:dead")
    .useOriginalMessage().maximumRedeliveries(5).redeliveryDelay(5000);</code></pre>
-</div>
-</div>
-<div class="paragraph">
-<p>And in XML, you set <code>useOriginalMessage=true</code> on the <code>&lt;errorHandler&gt;</code> as shown:</p>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;errorHandler id="myErrorHandler" type="DeadLetterChannel" useOriginalMessage="true"
+                                </div>
+                            </div>
+                            <div class="paragraph">
+                                <p>And in XML, you set <code>useOriginalMessage=true</code>
+                                    on the <code>&lt;errorHandler&gt;</code> as
+                                    shown:</p>
+                            </div>
+                            <div class="listingblock">
+                                <div class="content">
+<pre class="highlightjs highlight"><code class="language-xml hljs"
+                                         data-lang="xml">&lt;errorHandler id="myErrorHandler" type="DeadLetterChannel" useOriginalMessage="true"
               deadLetterUri="jms:queue:dead"&gt;
   &lt;redeliveryPolicy maximumRedeliveries="5" redeliveryDelay="5000"/&gt;
 &lt;/errorHandler&gt;</code></pre>
-</div>
-</div>
-<div class="paragraph">
-<p>Then the messages routed to the <code>jms:queue:dead</code> is the original input.
-If we want to manually retry we can move the JMS message from the failed to the input queue, with no problem as the message is the same as the original we received.</p>
-</div>
-<div class="sect3">
-<h4 id="_boundary_of_original_message"><a class="anchor" href="#_boundary_of_original_message"></a>Boundary of original message</h4>
-<div class="paragraph">
-<p>The original input means the input message that are bounded by the current unit of work.
-A unit of work typically spans one route, or multiple routes if they are connected using internal endpoints such as direct or seda.
-When messages are passed via external endpoints such as JMS or HTT then the consumer will create a new unit of work, with the message it received as input as the original input.
-Also, some EIP patterns such as splitter, multicast, will create a new unit of work boundary for the messages in
-their sub-route (i.e. the <em>split</em> message); however these EIPs have an option named <code>shareUnitOfWork</code> which allows
-combining with the parent unit of work and ends up usinguse the parent original message.</p>
-</div>
-</div>
-</div>
-<div class="sect2">
-<h3 id="_calling_a_processor_before_redelivery_using_onredelivery"><a class="anchor" href="#_calling_a_processor_before_redelivery_using_onredelivery"></a>Calling a processor before redelivery using OnRedelivery</h3>
-<div class="paragraph">
-<p>When the Dead Letter Channel is doing redeliver its possible to configure a <a href="../../../manual/4.10.x/processor.html" class="xref page">Processor</a>
-that is executed just <em>before</em> every redelivery attempt.
-This can be used for the situations where you need to alter the message before its redelivered.</p>
-</div>
-<div class="paragraph">
-<p>For example in Java DSL you can do:</p>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">errorHandler(deadLetterChannel("jms:queue:dead")
+                                </div>
+                            </div>
+                            <div class="paragraph">
+                                <p>Then the messages routed to the <code>jms:queue:dead</code>
+                                    is the original input.
+                                    If we want to manually retry we can move the
+                                    JMS message from the failed to the input
+                                    queue, with no problem as the message is the
+                                    same as the original we received.</p>
+                            </div>
+                            <div class="sect3">
+                                <h4 id="_boundary_of_original_message"><a
+                                        class="anchor"
+                                        href="#_boundary_of_original_message"></a>Boundary
+                                    of original message</h4>
+                                <div class="paragraph">
+                                    <p>The original input means the input
+                                        message that are bounded by the current
+                                        unit of work.
+                                        A unit of work typically spans one
+                                        route, or multiple routes if they are
+                                        connected using internal endpoints such
+                                        as direct or seda.
+                                        When messages are passed via external
+                                        endpoints such as JMS or HTT then the
+                                        consumer will create a new unit of work,
+                                        with the message it received as input as
+                                        the original input.
+                                        Also, some EIP patterns such as
+                                        splitter, multicast, will create a new
+                                        unit of work boundary for the messages
+                                        in
+                                        their sub-route (i.e. the <em>split</em>
+                                        message); however these EIPs have an
+                                        option named
+                                        <code>shareUnitOfWork</code> which
+                                        allows
+                                        combining with the parent unit of work
+                                        and ends up usinguse the parent original
+                                        message.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="sect2">
+                            <h3 id="_calling_a_processor_before_redelivery_using_onredelivery">
+                                <a class="anchor"
+                                   href="#_calling_a_processor_before_redelivery_using_onredelivery"></a>Calling
+                                a processor before redelivery using OnRedelivery
+                            </h3>
+                            <div class="paragraph">
+                                <p>When the Dead Letter Channel is doing
+                                    redeliver its possible to configure a <a
+                                            href="../../../manual/4.10.x/processor.html"
+                                            class="xref page">Processor</a>
+                                    that is executed just <em>before</em> every
+                                    redelivery attempt.
+                                    This can be used for the situations where
+                                    you need to alter the message before its
+                                    redelivered.</p>
+                            </div>
+                            <div class="paragraph">
+                                <p>For example in Java DSL you can do:</p>
+                            </div>
+                            <div class="listingblock">
+                                <div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs"
+                                         data-lang="java">errorHandler(deadLetterChannel("jms:queue:dead")
   .maximumRedeliveries(3)
   .onRedeliver(new MyOnRedeliveryProcessor());</code></pre>
-</div>
-</div>
-<div class="paragraph">
-<p>And in XML DSL, you specify a bean id via <code>onRedeliveryRef</code> on the <code>&lt;errorHandler&gt;</code> as shown:</p>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;bean id="myRedeliveryProcessor" class="com.foo.MyRedeliveryProcessor"/&gt;
+                                </div>
+                            </div>
+                            <div class="paragraph">
+                                <p>And in XML DSL, you specify a bean id via
+                                    <code>onRedeliveryRef</code> on the <code>&lt;errorHandler&gt;</code>
+                                    as shown:</p>
+                            </div>
+                            <div class="listingblock">
+                                <div class="content">
+<pre class="highlightjs highlight"><code class="language-xml hljs"
+                                         data-lang="xml">&lt;bean id="myRedeliveryProcessor" class="com.foo.MyRedeliveryProcessor"/&gt;
 
 &lt;errorHandler id="myErrorHandler" type="DeadLetterChannel" onRedeliveryRef="myRedeliveryProcessor"
               deadLetterUri="jms:queue:dead"&gt;
   &lt;redeliveryPolicy maximumRedeliveries="3"/&gt;
 &lt;/errorHandler&gt;</code></pre>
-</div>
-</div>
-<div class="admonitionblock tip">
-<table>
-<tr>
-<td class="icon">
-<i class="fa icon-tip" title="Tip"></i>
-</td>
-<td class="content">
-Camel also supports <a href="../../../manual/4.10.x/exception-clause.html" class="xref page">onException</a> to use <code>onRedeliver</code>.
-This means you can do special on redelivery for different exceptions, as opposed to <code>onRedelivery</code> set on
-Dead Letter Channel (or <a href="../../../manual/4.10.x/defaulterrorhandler.html" class="xref page">Default Error Handler</a>) can be viewed as global scoped.
-</td>
-</tr>
-</table>
-</div>
-</div>
-<div class="sect2">
-<h3 id="_calling_a_processor_before_sending_message_to_the_dead_letter_queue_using_onpreparefailure"><a class="anchor" href="#_calling_a_processor_before_sending_message_to_the_dead_letter_queue_using_onpreparefailure"></a>Calling a processor before sending message to the dead letter queue using OnPrepareFailure</h3>
-<div class="paragraph">
-<p>Before the exchange is sent to the dead letter queue, you can use <code>onPrepare</code> to allow a custom <code>Processor</code> to prepare the exchange, such as adding information why the Exchange failed.</p>
-</div>
-<div class="paragraph">
-<p>For example the following processor adds a header with the exception message:</p>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">public static class MyPrepareProcessor implements Processor {
+                                </div>
+                            </div>
+                            <div class="admonitionblock tip">
+                                <table>
+                                    <tr>
+                                        <td class="icon">
+                                            <i class="fa icon-tip"
+                                               title="Tip"></i>
+                                        </td>
+                                        <td class="content">
+                                            Camel also supports <a
+                                                href="../../../manual/4.10.x/exception-clause.html"
+                                                class="xref page">onException</a>
+                                            to use <code>onRedeliver</code>.
+                                            This means you can do special on
+                                            redelivery for different exceptions,
+                                            as opposed to
+                                            <code>onRedelivery</code> set on
+                                            Dead Letter Channel (or <a
+                                                href="../../../manual/4.10.x/defaulterrorhandler.html"
+                                                class="xref page">Default Error
+                                            Handler</a>) can be viewed as global
+                                            scoped.
+                                        </td>
+                                    </tr>
+                                </table>
+                            </div>
+                        </div>
+                        <div class="sect2">
+                            <h3 id="_calling_a_processor_before_sending_message_to_the_dead_letter_queue_using_onpreparefailure">
+                                <a class="anchor"
+                                   href="#_calling_a_processor_before_sending_message_to_the_dead_letter_queue_using_onpreparefailure"></a>Calling
+                                a processor before sending message to the dead
+                                letter queue using OnPrepareFailure</h3>
+                            <div class="paragraph">
+                                <p>Before the exchange is sent to the dead
+                                    letter queue, you can use
+                                    <code>onPrepare</code> to allow a custom
+                                    <code>Processor</code> to prepare the
+                                    exchange, such as adding information why the
+                                    Exchange failed.</p>
+                            </div>
+                            <div class="paragraph">
+                                <p>For example the following processor adds a
+                                    header with the exception message:</p>
+                            </div>
+                            <div class="listingblock">
+                                <div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs"
+                                         data-lang="java">public static class MyPrepareProcessor implements Processor {
     @Override
     public void process(Exchange exchange) throws Exception {
         Exception cause = exchange.getProperty(Exchange.EXCEPTION_CAUGHT, Exception.class);
         exchange.getIn().setHeader("FailedBecause", cause.getMessage());
     }
 }</code></pre>
-</div>
-</div>
-<div class="paragraph">
-<p>Then configure the error handler to use the processor as follows:</p>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">errorHandler(deadLetterChannel("jms:dead").onPrepareFailure(new MyPrepareProcessor()));</code></pre>
-</div>
-</div>
-<div class="paragraph">
-<p>Configuring this from Spring XML is done with the <code>onPrepareFailureRef</code> to refer to the processor as a <code>&lt;bean&gt;</code> as shown:</p>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;bean id="myPrepare"
+                                </div>
+                            </div>
+                            <div class="paragraph">
+                                <p>Then configure the error handler to use the
+                                    processor as follows:</p>
+                            </div>
+                            <div class="listingblock">
+                                <div class="content">
+                                    <pre class="highlightjs highlight"><code
+                                            class="language-java hljs"
+                                            data-lang="java">errorHandler(deadLetterChannel("jms:dead").onPrepareFailure(new MyPrepareProcessor()));</code></pre>
+                                </div>
+                            </div>
+                            <div class="paragraph">
+                                <p>Configuring this from Spring XML is done with
+                                    the <code>onPrepareFailureRef</code> to
+                                    refer to the processor as a <code>&lt;bean&gt;</code>
+                                    as shown:</p>
+                            </div>
+                            <div class="listingblock">
+                                <div class="content">
+<pre class="highlightjs highlight"><code class="language-xml hljs"
+                                         data-lang="xml">&lt;bean id="myPrepare"
       class="org.apache.camel.processor.DeadLetterChannelOnPrepareTest.MyPrepareProcessor"/&gt;
 
 &lt;errorHandler id="dlc" type="DeadLetterChannel" deadLetterUri="jms:dead" onPrepareFailureRef="myPrepare"/&gt;</code></pre>
-</div>
-</div>
-</div>
-<div class="sect2">
-<h3 id="_calling_a_processor_when_an_exception_occurred"><a class="anchor" href="#_calling_a_processor_when_an_exception_occurred"></a>Calling a processor when an exception occurred</h3>
-<div class="paragraph">
-<p>With the <code>onExceptionOccurred</code> you can call a custom processor right after an exception was thrown,
-and the Dead Letter Channel is about to decide what to do (either to schedule a redelivery, or move the message into the dead letter queue).</p>
-</div>
-<div class="paragraph">
-<p>In other words this happens right after the exception was thrown, where you may want to do some custom logging, or something else.</p>
-</div>
-<div class="paragraph">
-<p>For example, you may have a <code>Processor</code> that does some special logging:</p>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">public static class OnErrorLogger implements Processor {
+                                </div>
+                            </div>
+                        </div>
+                        <div class="sect2">
+                            <h3 id="_calling_a_processor_when_an_exception_occurred">
+                                <a class="anchor"
+                                   href="#_calling_a_processor_when_an_exception_occurred"></a>Calling
+                                a processor when an exception occurred</h3>
+                            <div class="paragraph">
+                                <p>With the <code>onExceptionOccurred</code> you
+                                    can call a custom processor right after an
+                                    exception was thrown,
+                                    and the Dead Letter Channel is about to
+                                    decide what to do (either to schedule a
+                                    redelivery, or move the message into the
+                                    dead letter queue).</p>
+                            </div>
+                            <div class="paragraph">
+                                <p>In other words this happens right after the
+                                    exception was thrown, where you may want to
+                                    do some custom logging, or something
+                                    else.</p>
+                            </div>
+                            <div class="paragraph">
+                                <p>For example, you may have a
+                                    <code>Processor</code> that does some
+                                    special logging:</p>
+                            </div>
+                            <div class="listingblock">
+                                <div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs"
+                                         data-lang="java">public static class OnErrorLogger implements Processor {
     @Override
     public void process(Exchange exchange) throws Exception {
         Exception cause = exchange.getProperty(Exchange.EXCEPTION_CAUGHT, Exception.class);
@@ -813,271 +1237,417 @@ and the Dead Letter Channel is about to decide what to do (either to schedule a 
         // do some custom logging here
     }
 }</code></pre>
-</div>
-</div>
-<div class="paragraph">
-<p>You can then configure the Dead Letter Channel to use this as shown:</p>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">errorHandler(deadLetterChannel("jms:dead").onExceptionOccurred(new OnErrorLogger()));</code></pre>
-</div>
-</div>
-<div class="paragraph">
-<p>Configuring this from Spring XML is done with the <code>onExceptionOccurredRef</code> to refer to the processor as a <code>&lt;bean&gt;</code> as shown:</p>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;bean id="myErrorLogger" class="com.foo.OnErrorLogger"/&gt;
+                                </div>
+                            </div>
+                            <div class="paragraph">
+                                <p>You can then configure the Dead Letter
+                                    Channel to use this as shown:</p>
+                            </div>
+                            <div class="listingblock">
+                                <div class="content">
+                                    <pre class="highlightjs highlight"><code
+                                            class="language-java hljs"
+                                            data-lang="java">errorHandler(deadLetterChannel("jms:dead").onExceptionOccurred(new OnErrorLogger()));</code></pre>
+                                </div>
+                            </div>
+                            <div class="paragraph">
+                                <p>Configuring this from Spring XML is done with
+                                    the <code>onExceptionOccurredRef</code> to
+                                    refer to the processor as a <code>&lt;bean&gt;</code>
+                                    as shown:</p>
+                            </div>
+                            <div class="listingblock">
+                                <div class="content">
+<pre class="highlightjs highlight"><code class="language-xml hljs"
+                                         data-lang="xml">&lt;bean id="myErrorLogger" class="com.foo.OnErrorLogger"/&gt;
 
 &lt;errorHandler id="dlc" type="DeadLetterChannel" deadLetterUri="jms:dead" onExceptionOccurredRef="myErrorLogger"/&gt;</code></pre>
-</div>
-</div>
-</div>
-<div class="sect2">
-<h3 id="_redeliver_delay_pattern"><a class="anchor" href="#_redeliver_delay_pattern"></a>Redeliver Delay Pattern</h3>
-<div class="paragraph">
-<p>Delay pattern is used as a single option to set a range pattern for delays.
-If used then the following options does not apply: (delay, backOffMultiplier, useExponentialBackOff, useCollisionAvoidance, maximumRedeliveryDelay).</p>
-</div>
-<div class="paragraph">
-<p>The idea is to set groups of ranges using the following syntax:
-<code>limit:delay;limit 2:delay 2;limit 3:delay 3;&#8230;&#8203;;limit N:delay N</code></p>
-</div>
-<div class="paragraph">
-<p>Each group has two values separated with colon</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>limit = upper limit</p>
-</li>
-<li>
-<p>delay = delay in milliseconds. The groups are separated with semicolon.
-The rule of thumb is that the next groups should have a higher limit than the previous group.</p>
-</li>
-</ul>
-</div>
-<div class="paragraph">
-<p>Let&#8217;s clarify this with an example:</p>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre class="highlightjs highlight"><code class="language-properties hljs" data-lang="properties">delayPattern=5:1000;10:5000;20:20000</code></pre>
-</div>
-</div>
-<div class="paragraph">
-<p>That gives us 3 groups:</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>5:1000</p>
-</li>
-<li>
-<p>10:5000</p>
-</li>
-<li>
-<p>20:20000</p>
-</li>
-</ul>
-</div>
-<div class="paragraph">
-<p>Resulting in these delays for redelivery attempt:</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>Redelivery attempt number 1..4 = 0 millis (as the first group start with 5)</p>
-</li>
-<li>
-<p>Redelivery attempt number 5..9 = 1000 millis (the first group)</p>
-</li>
-<li>
-<p>Redelivery attempt number 10..19 = 5000 millis (the second group)</p>
-</li>
-<li>
-<p>Redelivery attempt number 20.. = 20000 millis (the last group)</p>
-</li>
-</ul>
-</div>
-<div class="admonitionblock note">
-<table>
-<tr>
-<td class="icon">
-<i class="fa icon-note" title="Note"></i>
-</td>
-<td class="content">
-The first redelivery attempt is 1, so the first group should start with 1 or higher.
-</td>
-</tr>
-</table>
-</div>
-<div class="paragraph">
-<p>You can start a group with limit 1 to have a starting delay:</p>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre class="highlightjs highlight"><code class="language-properties hljs" data-lang="properties">delayPattern=1:1000;5:5000</code></pre>
-</div>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>Redelivery attempt number 1..4 = 1000 millis (the first group)</p>
-</li>
-<li>
-<p>Redelivery attempt number 5.. = 5000 millis (the last group)</p>
-</li>
-</ul>
-</div>
-<div class="paragraph">
-<p>There is no requirement that the next delay should be higher than the previous.
-You can use any delay value you like. For example with:</p>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre class="highlightjs highlight"><code class="language-properties hljs" data-lang="properties">delayPattern=1:5000;3:1000</code></pre>
-</div>
-</div>
-<div class="paragraph">
-<p>We start with 5 sec delay and then later reduce that to 1 second.</p>
-</div>
-</div>
-<div class="sect2">
-<h3 id="_state_of_redelivery_as_message_headers"><a class="anchor" href="#_state_of_redelivery_as_message_headers"></a>State of redelivery as message headers</h3>
-<div class="paragraph">
-<p>When a message is redelivered the Dead Letter Channel
-will append the following headers to the message with the state of the redelivery:</p>
-</div>
-<table class="tableblock frame-all grid-all stretch">
-<colgroup>
-<col style="width: 33.3333%;">
-<col style="width: 33.3333%;">
-<col style="width: 33.3334%;">
-</colgroup>
-<thead>
-<tr>
-<th class="tableblock halign-left valign-top">Header</th>
-<th class="tableblock halign-left valign-top">Type</th>
-<th class="tableblock halign-left valign-top">Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>Exchange.REDELIVERED</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>Boolean</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Whether the message is redelivered</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>Exchange.REDELIVERY_COUNTER</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>Integer</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">The current redelivery attempt</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>Exchange.REDELIVERY_MAX_COUNTER</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>Integer</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">The maximum number of redeliveries configured (if any). This header is absent if you use
-<code>retryWhile</code> or have unlimited maximum redelivery configured.</p></td>
-</tr>
-</tbody>
-</table>
-</div>
-<div class="sect2">
-<h3 id="_which_endpoint_failed"><a class="anchor" href="#_which_endpoint_failed"></a>Which endpoint failed</h3>
-<div class="paragraph">
-<p>During routing messages Camel will store an exchange property
-with the most recent endpoint in use (send to):</p>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">String lastEndpointUri = exchange.getProperty(Exchange.TO_ENDPOINT, String.class);</code></pre>
-</div>
-</div>
-<div class="paragraph">
-<p>The <code>Exchange.TO_ENDPOINT</code> have the constant value <code>CamelToEndpoint</code>.</p>
-</div>
-<div class="paragraph">
-<p>This information is updated when Camel sends a message to any endpoint.</p>
-</div>
-<div class="paragraph">
-<p>When for example processing the <a href="../../../manual/4.10.x/exchange.html" class="xref page">Exchange</a> at a given
-<a href="../../../manual/4.10.x/endpoint.html" class="xref page">Endpoint</a> and the message is to be moved into the dead letter queue, then Camel also decorates the Exchange with another property that contains that <strong>last</strong> endpoint:</p>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">String failedEndpointUri = exchange.getProperty(Exchange.FAILURE_ENDPOINT, String.class);</code></pre>
-</div>
-</div>
-<div class="paragraph">
-<p>The <code>Exchange.FAILURE_ENDPOINT</code> have the constant value <code>CamelFailureEndpoint</code>.</p>
-</div>
-<div class="paragraph">
-<p>This allows for example you to fetch this information in your dead letter queue and use that for error reporting.
-This is particular usable if the Camel route uses dynamic EIPs such as
-<a href="recipientList-eip.html" class="xref page">Recipient List</a> or <a href="toD-eip.html" class="xref page">ToD</a>, where the target
-endpoint uri would be stored as information.</p>
-</div>
-<div class="paragraph">
-<p>This information is kept on the Exchange even if the message was successfully processed by a given endpoint,
-and then later fails for example in a local <a href="bean-eip.html" class="xref page">Bean</a> EIP processing instead.
-So beware that this is a hint that helps pinpoint errors to <a href="../../../manual/4.10.x/endpoint.html" class="xref page">Endpoints</a>, and not EIPs.</p>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">from("activemq:queue:foo")
+                                </div>
+                            </div>
+                        </div>
+                        <div class="sect2">
+                            <h3 id="_redeliver_delay_pattern"><a class="anchor"
+                                                                 href="#_redeliver_delay_pattern"></a>Redeliver
+                                Delay Pattern</h3>
+                            <div class="paragraph">
+                                <p>Delay pattern is used as a single option to
+                                    set a range pattern for delays.
+                                    If used then the following options does not
+                                    apply: (delay, backOffMultiplier,
+                                    useExponentialBackOff,
+                                    useCollisionAvoidance,
+                                    maximumRedeliveryDelay).</p>
+                            </div>
+                            <div class="paragraph">
+                                <p>The idea is to set groups of ranges using the
+                                    following syntax:
+                                    <code>limit:delay;limit 2:delay 2;limit
+                                        3:delay 3;&#8230;&#8203;;limit N:delay
+                                        N</code></p>
+                            </div>
+                            <div class="paragraph">
+                                <p>Each group has two values separated with
+                                    colon</p>
+                            </div>
+                            <div class="ulist">
+                                <ul>
+                                    <li>
+                                        <p>limit = upper limit</p>
+                                    </li>
+                                    <li>
+                                        <p>delay = delay in milliseconds. The
+                                            groups are separated with semicolon.
+                                            The rule of thumb is that the next
+                                            groups should have a higher limit
+                                            than the previous group.</p>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="paragraph">
+                                <p>Let&#8217;s clarify this with an example:</p>
+                            </div>
+                            <div class="listingblock">
+                                <div class="content">
+                                    <pre class="highlightjs highlight"><code
+                                            class="language-properties hljs"
+                                            data-lang="properties">delayPattern=5:1000;10:5000;20:20000</code></pre>
+                                </div>
+                            </div>
+                            <div class="paragraph">
+                                <p>That gives us 3 groups:</p>
+                            </div>
+                            <div class="ulist">
+                                <ul>
+                                    <li>
+                                        <p>5:1000</p>
+                                    </li>
+                                    <li>
+                                        <p>10:5000</p>
+                                    </li>
+                                    <li>
+                                        <p>20:20000</p>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="paragraph">
+                                <p>Resulting in these delays for redelivery
+                                    attempt:</p>
+                            </div>
+                            <div class="ulist">
+                                <ul>
+                                    <li>
+                                        <p>Redelivery attempt number 1..4 = 0
+                                            millis (as the first group start
+                                            with 5)</p>
+                                    </li>
+                                    <li>
+                                        <p>Redelivery attempt number 5..9 = 1000
+                                            millis (the first group)</p>
+                                    </li>
+                                    <li>
+                                        <p>Redelivery attempt number 10..19 =
+                                            5000 millis (the second group)</p>
+                                    </li>
+                                    <li>
+                                        <p>Redelivery attempt number 20.. =
+                                            20000 millis (the last group)</p>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="admonitionblock note">
+                                <table>
+                                    <tr>
+                                        <td class="icon">
+                                            <i class="fa icon-note"
+                                               title="Note"></i>
+                                        </td>
+                                        <td class="content">
+                                            The first redelivery attempt is 1,
+                                            so the first group should start with
+                                            1 or higher.
+                                        </td>
+                                    </tr>
+                                </table>
+                            </div>
+                            <div class="paragraph">
+                                <p>You can start a group with limit 1 to have a
+                                    starting delay:</p>
+                            </div>
+                            <div class="listingblock">
+                                <div class="content">
+                                    <pre class="highlightjs highlight"><code
+                                            class="language-properties hljs"
+                                            data-lang="properties">delayPattern=1:1000;5:5000</code></pre>
+                                </div>
+                            </div>
+                            <div class="ulist">
+                                <ul>
+                                    <li>
+                                        <p>Redelivery attempt number 1..4 = 1000
+                                            millis (the first group)</p>
+                                    </li>
+                                    <li>
+                                        <p>Redelivery attempt number 5.. = 5000
+                                            millis (the last group)</p>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="paragraph">
+                                <p>There is no requirement that the next delay
+                                    should be higher than the previous.
+                                    You can use any delay value you like. For
+                                    example with:</p>
+                            </div>
+                            <div class="listingblock">
+                                <div class="content">
+                                    <pre class="highlightjs highlight"><code
+                                            class="language-properties hljs"
+                                            data-lang="properties">delayPattern=1:5000;3:1000</code></pre>
+                                </div>
+                            </div>
+                            <div class="paragraph">
+                                <p>We start with 5 sec delay and then later
+                                    reduce that to 1 second.</p>
+                            </div>
+                        </div>
+                        <div class="sect2">
+                            <h3 id="_state_of_redelivery_as_message_headers"><a
+                                    class="anchor"
+                                    href="#_state_of_redelivery_as_message_headers"></a>State
+                                of redelivery as message headers</h3>
+                            <div class="paragraph">
+                                <p>When a message is redelivered the Dead Letter
+                                    Channel
+                                    will append the following headers to the
+                                    message with the state of the
+                                    redelivery:</p>
+                            </div>
+                            <table class="tableblock frame-all grid-all stretch">
+                                <colgroup>
+                                    <col style="width: 33.3333%;">
+                                    <col style="width: 33.3333%;">
+                                    <col style="width: 33.3334%;">
+                                </colgroup>
+                                <thead>
+                                <tr>
+                                    <th class="tableblock halign-left valign-top">
+                                        Header
+                                    </th>
+                                    <th class="tableblock halign-left valign-top">
+                                        Type
+                                    </th>
+                                    <th class="tableblock halign-left valign-top">
+                                        Description
+                                    </th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                <tr>
+                                    <td class="tableblock halign-left valign-top">
+                                        <p class="tableblock"><code>Exchange.REDELIVERED</code>
+                                        </p></td>
+                                    <td class="tableblock halign-left valign-top">
+                                        <p class="tableblock">
+                                            <code>Boolean</code></p></td>
+                                    <td class="tableblock halign-left valign-top">
+                                        <p class="tableblock">Whether the
+                                            message is redelivered</p></td>
+                                </tr>
+                                <tr>
+                                    <td class="tableblock halign-left valign-top">
+                                        <p class="tableblock"><code>Exchange.REDELIVERY_COUNTER</code>
+                                        </p></td>
+                                    <td class="tableblock halign-left valign-top">
+                                        <p class="tableblock">
+                                            <code>Integer</code></p></td>
+                                    <td class="tableblock halign-left valign-top">
+                                        <p class="tableblock">The current
+                                            redelivery attempt</p></td>
+                                </tr>
+                                <tr>
+                                    <td class="tableblock halign-left valign-top">
+                                        <p class="tableblock"><code>Exchange.REDELIVERY_MAX_COUNTER</code>
+                                        </p></td>
+                                    <td class="tableblock halign-left valign-top">
+                                        <p class="tableblock">
+                                            <code>Integer</code></p></td>
+                                    <td class="tableblock halign-left valign-top">
+                                        <p class="tableblock">The maximum number
+                                            of redeliveries configured (if any).
+                                            This header is absent if you use
+                                            <code>retryWhile</code> or have
+                                            unlimited maximum redelivery
+                                            configured.</p></td>
+                                </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <div class="sect2">
+                            <h3 id="_which_endpoint_failed"><a class="anchor"
+                                                               href="#_which_endpoint_failed"></a>Which
+                                endpoint failed</h3>
+                            <div class="paragraph">
+                                <p>During routing messages Camel will store an
+                                    exchange property
+                                    with the most recent endpoint in use (send
+                                    to):</p>
+                            </div>
+                            <div class="listingblock">
+                                <div class="content">
+                                    <pre class="highlightjs highlight"><code
+                                            class="language-java hljs"
+                                            data-lang="java">String lastEndpointUri = exchange.getProperty(Exchange.TO_ENDPOINT, String.class);</code></pre>
+                                </div>
+                            </div>
+                            <div class="paragraph">
+                                <p>The <code>Exchange.TO_ENDPOINT</code> have
+                                    the constant value
+                                    <code>CamelToEndpoint</code>.</p>
+                            </div>
+                            <div class="paragraph">
+                                <p>This information is updated when Camel sends
+                                    a message to any endpoint.</p>
+                            </div>
+                            <div class="paragraph">
+                                <p>When for example processing the <a
+                                        href="../../../manual/4.10.x/exchange.html"
+                                        class="xref page">Exchange</a> at a
+                                    given
+                                    <a href="../../../manual/4.10.x/endpoint.html"
+                                       class="xref page">Endpoint</a> and the
+                                    message is to be moved into the dead letter
+                                    queue, then Camel also decorates the
+                                    Exchange with another property that contains
+                                    that <strong>last</strong> endpoint:</p>
+                            </div>
+                            <div class="listingblock">
+                                <div class="content">
+                                    <pre class="highlightjs highlight"><code
+                                            class="language-java hljs"
+                                            data-lang="java">String failedEndpointUri = exchange.getProperty(Exchange.FAILURE_ENDPOINT, String.class);</code></pre>
+                                </div>
+                            </div>
+                            <div class="paragraph">
+                                <p>The <code>Exchange.FAILURE_ENDPOINT</code>
+                                    have the constant value <code>CamelFailureEndpoint</code>.
+                                </p>
+                            </div>
+                            <div class="paragraph">
+                                <p>This allows for example you to fetch this
+                                    information in your dead letter queue and
+                                    use that for error reporting.
+                                    This is particular usable if the Camel route
+                                    uses dynamic EIPs such as
+                                    <a href="recipientList-eip.html"
+                                       class="xref page">Recipient List</a> or
+                                    <a href="toD-eip.html"
+                                       class="xref page">ToD</a>, where the
+                                    target
+                                    endpoint uri would be stored as information.
+                                </p>
+                            </div>
+                            <div class="paragraph">
+                                <p>This information is kept on the Exchange even
+                                    if the message was successfully processed by
+                                    a given endpoint,
+                                    and then later fails for example in a local
+                                    <a href="bean-eip.html" class="xref page">Bean</a>
+                                    EIP processing instead.
+                                    So beware that this is a hint that helps
+                                    pinpoint errors to <a
+                                            href="../../../manual/4.10.x/endpoint.html"
+                                            class="xref page">Endpoints</a>, and
+                                    not EIPs.</p>
+                            </div>
+                            <div class="listingblock">
+                                <div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs"
+                                         data-lang="java">from("activemq:queue:foo")
     .to("http://someserver/somepath")
     .bean("foo");</code></pre>
-</div>
-</div>
-<div class="paragraph">
-<p>Now suppose the route above, and a failure happens in the <code>foo</code> bean.
-Then the <code>Exchange.TO_ENDPOINT</code> and <code>Exchange.FAILURE_ENDPOINT</code> will still contain the value of <code>http://someserver/somepath</code>.</p>
-</div>
-</div>
-<div class="sect2">
-<h3 id="_which_route_failed"><a class="anchor" href="#_which_route_failed"></a>Which route failed</h3>
-<div class="paragraph">
-<p>When a message is moved into the dead letter queue, then Camel will store the id of the route,
-where the message failed. This information can be obtained in Java via:</p>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">String failedRouteId = exchange.getProperty(Exchange.FAILURE_ROUTE_ID, String.class);</code></pre>
-</div>
-</div>
-<div class="paragraph">
-<p>The <code>Exchange.FAILURE_ROUTE_ID</code> have the constant value <code>CamelFailureRouteId</code>.</p>
-</div>
-<div class="paragraph">
-<p>This allows for example you to fetch this information in your dead letter queue and use that for error reporting.</p>
-</div>
-</div>
-<div class="sect2">
-<h3 id="_control_if_redelivery_is_allowed_during_stoppingshutdown"><a class="anchor" href="#_control_if_redelivery_is_allowed_during_stoppingshutdown"></a>Control if redelivery is allowed during stopping/shutdown</h3>
-<div class="paragraph">
-<p>The option <code>allowRedeliveryWhileStopping</code> (default is <code>true</code>) controls whether redelivery is allowed or not,
-during stopping Camel or the route. This only applies for any potential new redelivery attempts;
-any currently ongoing redeliveries is still being executed.</p>
-</div>
-<div class="paragraph">
-<p>This option can only disallow any redelivery to be executed <strong>after</strong> the stopping of a route/shutdown of Camel has been triggered.</p>
-</div>
-<div class="paragraph">
-<p>If a redelivery is disallowed then a
-<code>RejectedExecutionException</code> exception is set on the Exchange, and it stops being routed.
-The outcome of the Exchange is then a failure due the <code>RejectedExecutionException</code>.</p>
-</div>
-</div>
-</div>
-</div>
-</article>
-  </div>
-</main>
+                                </div>
+                            </div>
+                            <div class="paragraph">
+                                <p>Now suppose the route above, and a failure
+                                    happens in the <code>foo</code> bean.
+                                    Then the <code>Exchange.TO_ENDPOINT</code>
+                                    and <code>Exchange.FAILURE_ENDPOINT</code>
+                                    will still contain the value of <code>http://someserver/somepath</code>.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="sect2">
+                            <h3 id="_which_route_failed"><a class="anchor"
+                                                            href="#_which_route_failed"></a>Which
+                                route failed</h3>
+                            <div class="paragraph">
+                                <p>When a message is moved into the dead letter
+                                    queue, then Camel will store the id of the
+                                    route,
+                                    where the message failed. This information
+                                    can be obtained in Java via:</p>
+                            </div>
+                            <div class="listingblock">
+                                <div class="content">
+                                    <pre class="highlightjs highlight"><code
+                                            class="language-java hljs"
+                                            data-lang="java">String failedRouteId = exchange.getProperty(Exchange.FAILURE_ROUTE_ID, String.class);</code></pre>
+                                </div>
+                            </div>
+                            <div class="paragraph">
+                                <p>The <code>Exchange.FAILURE_ROUTE_ID</code>
+                                    have the constant value <code>CamelFailureRouteId</code>.
+                                </p>
+                            </div>
+                            <div class="paragraph">
+                                <p>This allows for example you to fetch this
+                                    information in your dead letter queue and
+                                    use that for error reporting.</p>
+                            </div>
+                        </div>
+                        <div class="sect2">
+                            <h3 id="_control_if_redelivery_is_allowed_during_stoppingshutdown">
+                                <a class="anchor"
+                                   href="#_control_if_redelivery_is_allowed_during_stoppingshutdown"></a>Control
+                                if redelivery is allowed during
+                                stopping/shutdown</h3>
+                            <div class="paragraph">
+                                <p>The option
+                                    <code>allowRedeliveryWhileStopping</code>
+                                    (default is <code>true</code>) controls
+                                    whether redelivery is allowed or not,
+                                    during stopping Camel or the route. This
+                                    only applies for any potential new
+                                    redelivery attempts;
+                                    any currently ongoing redeliveries is still
+                                    being executed.</p>
+                            </div>
+                            <div class="paragraph">
+                                <p>This option can only disallow any redelivery
+                                    to be executed <strong>after</strong> the
+                                    stopping of a route/shutdown of Camel has
+                                    been triggered.</p>
+                            </div>
+                            <div class="paragraph">
+                                <p>If a redelivery is disallowed then a
+                                    <code>RejectedExecutionException</code>
+                                    exception is set on the Exchange, and it
+                                    stops being routed.
+                                    The outcome of the Exchange is then a
+                                    failure due the <code>RejectedExecutionException</code>.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </article>
+        </div>
+    </main>
 </div>
 <footer class="footer">
 </footer>
-<script id="site-script" src="../../../_/js/site.js" data-ui-root-path="../../../_"></script>
+<script id="site-script" src="../../../_/js/site.js"
+        data-ui-root-path="../../../_"></script>
 <script async src="../../../_/js/vendor/highlight.js"></script>
-  </body>
+</body>
 </html>

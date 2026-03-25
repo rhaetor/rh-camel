@@ -1,570 +1,939 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+<head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <title>Wire Tap :: Red Hat build of Apache Camel</title>
-    <meta name="description" content="Routes a copy of a message (or creates a new message) to a secondary destination while continue routing the original message.">
+    <meta name="description"
+          content="Routes a copy of a message (or creates a new message) to a secondary destination while continue routing the original message.">
     <meta name="generator" content="Antora 3.1.4">
     <link rel="stylesheet" href="../../../_/css/site.css">
-  </head>
-  <body class="article">
+</head>
+<body class="article">
 <header class="header">
-  <nav class="navbar">
-    <div class="navbar-brand">
-      <a class="navbar-item" href="/">Red Hat build of Apache Camel</a>
-      <button class="navbar-burger" data-target="topbar-nav">
-        <span></span>
-        <span></span>
-        <span></span>
-      </button>
-    </div>
-  </nav>
+    <nav class="navbar">
+        <div class="navbar-brand">
+            <a class="navbar-item" href="/">Red Hat build of Apache Camel</a>
+            <button class="navbar-burger" data-target="topbar-nav">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
 </header>
 <div class="body">
-<div class="nav-container" data-component="components" data-version="4.0.x">
-  <aside class="nav">
-    <div class="panels">
-<div class="nav-panel-menu is-active" data-panel="menu">
-  <nav class="nav-menu">
-    <button class="nav-menu-toggle" aria-label="Toggle expand/collapse all" style="display: none"></button>
-    <h3 class="title"><a href="../index.html">Camel Components</a></h3>
-<ul class="nav-list">
-  <li class="nav-item" data-depth="0">
-<ul class="nav-list">
-  <li class="nav-item" data-depth="1">
-    <button class="nav-item-toggle"></button>
-    <a class="nav-link" href="enterprise-integration-patterns.html">Enterprise Integration Patterns</a>
-<ul class="nav-list">
-  <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="aggregate-eip.html">Aggregate</a>
-  </li>
-  <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="bean-eip.html">Bean</a>
-  </li>
-  <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="change-data-capture.html">Change Data Capture</a>
-  </li>
-  <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="channel-adapter.html">Channel Adapter</a>
-  </li>
-  <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="choice-eip.html">Content Based Router</a>
-  </li>
-  <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="circuitBreaker-eip.html">Circuit Breaker</a>
-  </li>
-  <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="claimCheck-eip.html">Claim Check</a>
-  </li>
-  <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="competing-consumers.html">Competing Consumers</a>
-  </li>
-  <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="composed-message-processor.html">Composed Message Processor</a>
-  </li>
-  <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="content-enricher.html">Content Enricher</a>
-  </li>
-  <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="content-filter-eip.html">Content Filter</a>
-  </li>
-  <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="convertBodyTo-eip.html">Convert Body To</a>
-  </li>
-  <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="correlation-identifier.html">Correlation Identifier</a>
-  </li>
-  <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="dead-letter-channel.html">Dead Letter Channel</a>
-  </li>
-  <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="delay-eip.html">Delay</a>
-  </li>
-  <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="durable-subscriber.html">Durable Subscriber</a>
-  </li>
-  <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="dynamicRouter-eip.html">Dynamic Router</a>
-  </li>
-  <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="enrich-eip.html">Enrich</a>
-  </li>
-  <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="eventDrivenConsumer-eip.html">Event Driven Consumer</a>
-  </li>
-  <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="event-message.html">Event Message</a>
-  </li>
-  <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="filter-eip.html">Filter</a>
-  </li>
-  <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="from-eip.html">From</a>
-  </li>
-  <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="guaranteed-delivery.html">Guaranteed Delivery</a>
-  </li>
-  <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="idempotentConsumer-eip.html">Idempotent Consumer</a>
-  </li>
-  <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="intercept.html">Intercept</a>
-  </li>
-  <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="kamelet-eip.html">Kamelet</a>
-  </li>
-  <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="loadBalance-eip.html">Load Balance</a>
-  </li>
-  <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="log-eip.html">Log</a>
-  </li>
-  <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="loop-eip.html">Loop</a>
-  </li>
-  <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="marshal-eip.html">Marshal</a>
-  </li>
-  <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="message.html">Message</a>
-  </li>
-  <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="message-broker.html">Message Broker</a>
-  </li>
-  <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="message-bus.html">Message Bus</a>
-  </li>
-  <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="message-channel.html">Message Channel</a>
-  </li>
-  <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="message-dispatcher.html">Message Dispatcher</a>
-  </li>
-  <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="message-endpoint.html">Message Endpoint</a>
-  </li>
-  <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="message-expiration.html">Message Expiration</a>
-  </li>
-  <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="message-history.html">Message History</a>
-  </li>
-  <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="message-router.html">Message Router</a>
-  </li>
-  <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="message-translator.html">Message Translator</a>
-  </li>
-  <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="messaging-bridge.html">Messaging Bridge</a>
-  </li>
-  <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="messaging-gateway.html">Messaging Gateway</a>
-  </li>
-  <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="messaging-mapper.html">Messaging Mapper</a>
-  </li>
-  <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="multicast-eip.html">Multicast</a>
-  </li>
-  <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="normalizer.html">Normalizer</a>
-  </li>
-  <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="pipeline-eip.html">Pipeline</a>
-  </li>
-  <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="point-to-point-channel.html">Point to Point Channel</a>
-  </li>
-  <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="pollEnrich-eip.html">Poll Enrich</a>
-  </li>
-  <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="polling-consumer.html">Polling Consumer</a>
-  </li>
-  <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="process-eip.html">Process</a>
-  </li>
-  <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="process-manager.html">Process Manager</a>
-  </li>
-  <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="publish-subscribe-channel.html">Publish Subscribe Channel</a>
-  </li>
-  <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="recipientList-eip.html">Recipient List</a>
-  </li>
-  <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="removeHeader-eip.html">Remove Header</a>
-  </li>
-  <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="removeHeaders-eip.html">Remove Headers</a>
-  </li>
-  <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="removeProperties-eip.html">Remove Properties</a>
-  </li>
-  <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="removeProperty-eip.html">Remove Property</a>
-  </li>
-  <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="requestReply-eip.html">Request Reply</a>
-  </li>
-  <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="resequence-eip.html">Resequence</a>
-  </li>
-  <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="resilience4j-eip.html">Resilience4j Circuit Breaker</a>
-  </li>
-  <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="return-address.html">Return Address</a>
-  </li>
-  <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="rollback-eip.html">Rollback</a>
-  </li>
-  <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="routingSlip-eip.html">Routing Slip</a>
-  </li>
-  <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="saga-eip.html">Saga</a>
-  </li>
-  <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="sample-eip.html">Sample</a>
-  </li>
-  <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="scatter-gather.html">Scatter Gather</a>
-  </li>
-  <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="script-eip.html">Script</a>
-  </li>
-  <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="selective-consumer.html">Selective Consumer</a>
-  </li>
-  <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="service-activator.html">Service Activator</a>
-  </li>
-  <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="serviceCall-eip.html">Service Call</a>
-  </li>
-  <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="setBody-eip.html">Set Body</a>
-  </li>
-  <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="setHeader-eip.html">Set Header</a>
-  </li>
-  <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="setProperty-eip.html">Set Property</a>
-  </li>
-  <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="sort-eip.html">Sort</a>
-  </li>
-  <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="split-eip.html">Split</a>
-  </li>
-  <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="step-eip.html">Step</a>
-  </li>
-  <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="stop-eip.html">Stop</a>
-  </li>
-  <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="threads-eip.html">Threads</a>
-  </li>
-  <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="throttle-eip.html">Throttle</a>
-  </li>
-  <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="to-eip.html">To</a>
-  </li>
-  <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="toD-eip.html">To Dynamic</a>
-  </li>
-  <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="transactional-client.html">Transactional Client</a>
-  </li>
-  <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="transform-eip.html">Transform</a>
-  </li>
-  <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="unmarshal-eip.html">Unmarshal</a>
-  </li>
-  <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="validate-eip.html">Validate</a>
-  </li>
-  <li class="nav-item is-current-page" data-depth="2">
-    <a class="nav-link" href="wireTap-eip.html">Wire Tap</a>
-  </li>
-</ul>
-  </li>
-</ul>
-  </li>
-</ul>
-  </nav>
-</div>
-<div class="nav-panel-explore" data-panel="explore">
-  <div class="context">
-    <span class="title">Camel Components</span>
-    <span class="version">4.0.x</span>
-  </div>
-  <ul class="components">
-    <li class="component is-current">
-      <div class="title"><a href="../../4.10.x/index.html">Camel Components</a></div>
-      <ul class="versions">
-        <li class="version is-latest">
-          <a href="../../4.10.x/index.html">4.10.x (LTS)</a>
-        </li>
-        <li class="version">
-          <a href="../../4.8.x/index.html">4.8.x</a>
-        </li>
-        <li class="version">
-          <a href="../../4.4.x/index.html">4.4.x</a>
-        </li>
-        <li class="version is-current">
-          <a href="../index.html">4.0.x</a>
-        </li>
-      </ul>
-    </li>
-    <li class="component">
-      <div class="title"><a href="../../../manual/4.10.x/index.html">User manual</a></div>
-      <ul class="versions">
-        <li class="version is-latest">
-          <a href="../../../manual/4.10.x/index.html">4.10.x</a>
-        </li>
-        <li class="version">
-          <a href="../../../manual/4.8.x/index.html">4.8.x</a>
-        </li>
-        <li class="version">
-          <a href="../../../manual/4.4.x/index.html">4.4.x</a>
-        </li>
-        <li class="version">
-          <a href="../../../manual/4.0.x/index.html">4.0.x</a>
-        </li>
-      </ul>
-    </li>
-  </ul>
-</div>
+    <div class="nav-container" data-component="components" data-version="4.0.x">
+        <aside class="nav">
+            <div class="panels">
+                <div class="nav-panel-menu is-active" data-panel="menu">
+                    <nav class="nav-menu">
+                        <button class="nav-menu-toggle"
+                                aria-label="Toggle expand/collapse all"
+                                style="display: none"></button>
+                        <h3 class="title"><a href="../index.html">Camel
+                            Components</a></h3>
+                        <ul class="nav-list">
+                            <li class="nav-item" data-depth="0">
+                                <ul class="nav-list">
+                                    <li class="nav-item" data-depth="1">
+                                        <button class="nav-item-toggle"></button>
+                                        <a class="nav-link"
+                                           href="enterprise-integration-patterns.html">Enterprise
+                                            Integration Patterns</a>
+                                        <ul class="nav-list">
+                                            <li class="nav-item" data-depth="2">
+                                                <a class="nav-link"
+                                                   href="aggregate-eip.html">Aggregate</a>
+                                            </li>
+                                            <li class="nav-item" data-depth="2">
+                                                <a class="nav-link"
+                                                   href="bean-eip.html">Bean</a>
+                                            </li>
+                                            <li class="nav-item" data-depth="2">
+                                                <a class="nav-link"
+                                                   href="change-data-capture.html">Change
+                                                    Data Capture</a>
+                                            </li>
+                                            <li class="nav-item" data-depth="2">
+                                                <a class="nav-link"
+                                                   href="channel-adapter.html">Channel
+                                                    Adapter</a>
+                                            </li>
+                                            <li class="nav-item" data-depth="2">
+                                                <a class="nav-link"
+                                                   href="choice-eip.html">Content
+                                                    Based Router</a>
+                                            </li>
+                                            <li class="nav-item" data-depth="2">
+                                                <a class="nav-link"
+                                                   href="circuitBreaker-eip.html">Circuit
+                                                    Breaker</a>
+                                            </li>
+                                            <li class="nav-item" data-depth="2">
+                                                <a class="nav-link"
+                                                   href="claimCheck-eip.html">Claim
+                                                    Check</a>
+                                            </li>
+                                            <li class="nav-item" data-depth="2">
+                                                <a class="nav-link"
+                                                   href="competing-consumers.html">Competing
+                                                    Consumers</a>
+                                            </li>
+                                            <li class="nav-item" data-depth="2">
+                                                <a class="nav-link"
+                                                   href="composed-message-processor.html">Composed
+                                                    Message Processor</a>
+                                            </li>
+                                            <li class="nav-item" data-depth="2">
+                                                <a class="nav-link"
+                                                   href="content-enricher.html">Content
+                                                    Enricher</a>
+                                            </li>
+                                            <li class="nav-item" data-depth="2">
+                                                <a class="nav-link"
+                                                   href="content-filter-eip.html">Content
+                                                    Filter</a>
+                                            </li>
+                                            <li class="nav-item" data-depth="2">
+                                                <a class="nav-link"
+                                                   href="convertBodyTo-eip.html">Convert
+                                                    Body To</a>
+                                            </li>
+                                            <li class="nav-item" data-depth="2">
+                                                <a class="nav-link"
+                                                   href="correlation-identifier.html">Correlation
+                                                    Identifier</a>
+                                            </li>
+                                            <li class="nav-item" data-depth="2">
+                                                <a class="nav-link"
+                                                   href="dead-letter-channel.html">Dead
+                                                    Letter Channel</a>
+                                            </li>
+                                            <li class="nav-item" data-depth="2">
+                                                <a class="nav-link"
+                                                   href="delay-eip.html">Delay</a>
+                                            </li>
+                                            <li class="nav-item" data-depth="2">
+                                                <a class="nav-link"
+                                                   href="durable-subscriber.html">Durable
+                                                    Subscriber</a>
+                                            </li>
+                                            <li class="nav-item" data-depth="2">
+                                                <a class="nav-link"
+                                                   href="dynamicRouter-eip.html">Dynamic
+                                                    Router</a>
+                                            </li>
+                                            <li class="nav-item" data-depth="2">
+                                                <a class="nav-link"
+                                                   href="enrich-eip.html">Enrich</a>
+                                            </li>
+                                            <li class="nav-item" data-depth="2">
+                                                <a class="nav-link"
+                                                   href="eventDrivenConsumer-eip.html">Event
+                                                    Driven Consumer</a>
+                                            </li>
+                                            <li class="nav-item" data-depth="2">
+                                                <a class="nav-link"
+                                                   href="event-message.html">Event
+                                                    Message</a>
+                                            </li>
+                                            <li class="nav-item" data-depth="2">
+                                                <a class="nav-link"
+                                                   href="filter-eip.html">Filter</a>
+                                            </li>
+                                            <li class="nav-item" data-depth="2">
+                                                <a class="nav-link"
+                                                   href="from-eip.html">From</a>
+                                            </li>
+                                            <li class="nav-item" data-depth="2">
+                                                <a class="nav-link"
+                                                   href="guaranteed-delivery.html">Guaranteed
+                                                    Delivery</a>
+                                            </li>
+                                            <li class="nav-item" data-depth="2">
+                                                <a class="nav-link"
+                                                   href="idempotentConsumer-eip.html">Idempotent
+                                                    Consumer</a>
+                                            </li>
+                                            <li class="nav-item" data-depth="2">
+                                                <a class="nav-link"
+                                                   href="intercept.html">Intercept</a>
+                                            </li>
+                                            <li class="nav-item" data-depth="2">
+                                                <a class="nav-link"
+                                                   href="kamelet-eip.html">Kamelet</a>
+                                            </li>
+                                            <li class="nav-item" data-depth="2">
+                                                <a class="nav-link"
+                                                   href="loadBalance-eip.html">Load
+                                                    Balance</a>
+                                            </li>
+                                            <li class="nav-item" data-depth="2">
+                                                <a class="nav-link"
+                                                   href="log-eip.html">Log</a>
+                                            </li>
+                                            <li class="nav-item" data-depth="2">
+                                                <a class="nav-link"
+                                                   href="loop-eip.html">Loop</a>
+                                            </li>
+                                            <li class="nav-item" data-depth="2">
+                                                <a class="nav-link"
+                                                   href="marshal-eip.html">Marshal</a>
+                                            </li>
+                                            <li class="nav-item" data-depth="2">
+                                                <a class="nav-link"
+                                                   href="message.html">Message</a>
+                                            </li>
+                                            <li class="nav-item" data-depth="2">
+                                                <a class="nav-link"
+                                                   href="message-broker.html">Message
+                                                    Broker</a>
+                                            </li>
+                                            <li class="nav-item" data-depth="2">
+                                                <a class="nav-link"
+                                                   href="message-bus.html">Message
+                                                    Bus</a>
+                                            </li>
+                                            <li class="nav-item" data-depth="2">
+                                                <a class="nav-link"
+                                                   href="message-channel.html">Message
+                                                    Channel</a>
+                                            </li>
+                                            <li class="nav-item" data-depth="2">
+                                                <a class="nav-link"
+                                                   href="message-dispatcher.html">Message
+                                                    Dispatcher</a>
+                                            </li>
+                                            <li class="nav-item" data-depth="2">
+                                                <a class="nav-link"
+                                                   href="message-endpoint.html">Message
+                                                    Endpoint</a>
+                                            </li>
+                                            <li class="nav-item" data-depth="2">
+                                                <a class="nav-link"
+                                                   href="message-expiration.html">Message
+                                                    Expiration</a>
+                                            </li>
+                                            <li class="nav-item" data-depth="2">
+                                                <a class="nav-link"
+                                                   href="message-history.html">Message
+                                                    History</a>
+                                            </li>
+                                            <li class="nav-item" data-depth="2">
+                                                <a class="nav-link"
+                                                   href="message-router.html">Message
+                                                    Router</a>
+                                            </li>
+                                            <li class="nav-item" data-depth="2">
+                                                <a class="nav-link"
+                                                   href="message-translator.html">Message
+                                                    Translator</a>
+                                            </li>
+                                            <li class="nav-item" data-depth="2">
+                                                <a class="nav-link"
+                                                   href="messaging-bridge.html">Messaging
+                                                    Bridge</a>
+                                            </li>
+                                            <li class="nav-item" data-depth="2">
+                                                <a class="nav-link"
+                                                   href="messaging-gateway.html">Messaging
+                                                    Gateway</a>
+                                            </li>
+                                            <li class="nav-item" data-depth="2">
+                                                <a class="nav-link"
+                                                   href="messaging-mapper.html">Messaging
+                                                    Mapper</a>
+                                            </li>
+                                            <li class="nav-item" data-depth="2">
+                                                <a class="nav-link"
+                                                   href="multicast-eip.html">Multicast</a>
+                                            </li>
+                                            <li class="nav-item" data-depth="2">
+                                                <a class="nav-link"
+                                                   href="normalizer.html">Normalizer</a>
+                                            </li>
+                                            <li class="nav-item" data-depth="2">
+                                                <a class="nav-link"
+                                                   href="pipeline-eip.html">Pipeline</a>
+                                            </li>
+                                            <li class="nav-item" data-depth="2">
+                                                <a class="nav-link"
+                                                   href="point-to-point-channel.html">Point
+                                                    to Point Channel</a>
+                                            </li>
+                                            <li class="nav-item" data-depth="2">
+                                                <a class="nav-link"
+                                                   href="pollEnrich-eip.html">Poll
+                                                    Enrich</a>
+                                            </li>
+                                            <li class="nav-item" data-depth="2">
+                                                <a class="nav-link"
+                                                   href="polling-consumer.html">Polling
+                                                    Consumer</a>
+                                            </li>
+                                            <li class="nav-item" data-depth="2">
+                                                <a class="nav-link"
+                                                   href="process-eip.html">Process</a>
+                                            </li>
+                                            <li class="nav-item" data-depth="2">
+                                                <a class="nav-link"
+                                                   href="process-manager.html">Process
+                                                    Manager</a>
+                                            </li>
+                                            <li class="nav-item" data-depth="2">
+                                                <a class="nav-link"
+                                                   href="publish-subscribe-channel.html">Publish
+                                                    Subscribe Channel</a>
+                                            </li>
+                                            <li class="nav-item" data-depth="2">
+                                                <a class="nav-link"
+                                                   href="recipientList-eip.html">Recipient
+                                                    List</a>
+                                            </li>
+                                            <li class="nav-item" data-depth="2">
+                                                <a class="nav-link"
+                                                   href="removeHeader-eip.html">Remove
+                                                    Header</a>
+                                            </li>
+                                            <li class="nav-item" data-depth="2">
+                                                <a class="nav-link"
+                                                   href="removeHeaders-eip.html">Remove
+                                                    Headers</a>
+                                            </li>
+                                            <li class="nav-item" data-depth="2">
+                                                <a class="nav-link"
+                                                   href="removeProperties-eip.html">Remove
+                                                    Properties</a>
+                                            </li>
+                                            <li class="nav-item" data-depth="2">
+                                                <a class="nav-link"
+                                                   href="removeProperty-eip.html">Remove
+                                                    Property</a>
+                                            </li>
+                                            <li class="nav-item" data-depth="2">
+                                                <a class="nav-link"
+                                                   href="requestReply-eip.html">Request
+                                                    Reply</a>
+                                            </li>
+                                            <li class="nav-item" data-depth="2">
+                                                <a class="nav-link"
+                                                   href="resequence-eip.html">Resequence</a>
+                                            </li>
+                                            <li class="nav-item" data-depth="2">
+                                                <a class="nav-link"
+                                                   href="resilience4j-eip.html">Resilience4j
+                                                    Circuit Breaker</a>
+                                            </li>
+                                            <li class="nav-item" data-depth="2">
+                                                <a class="nav-link"
+                                                   href="return-address.html">Return
+                                                    Address</a>
+                                            </li>
+                                            <li class="nav-item" data-depth="2">
+                                                <a class="nav-link"
+                                                   href="rollback-eip.html">Rollback</a>
+                                            </li>
+                                            <li class="nav-item" data-depth="2">
+                                                <a class="nav-link"
+                                                   href="routingSlip-eip.html">Routing
+                                                    Slip</a>
+                                            </li>
+                                            <li class="nav-item" data-depth="2">
+                                                <a class="nav-link"
+                                                   href="saga-eip.html">Saga</a>
+                                            </li>
+                                            <li class="nav-item" data-depth="2">
+                                                <a class="nav-link"
+                                                   href="sample-eip.html">Sample</a>
+                                            </li>
+                                            <li class="nav-item" data-depth="2">
+                                                <a class="nav-link"
+                                                   href="scatter-gather.html">Scatter
+                                                    Gather</a>
+                                            </li>
+                                            <li class="nav-item" data-depth="2">
+                                                <a class="nav-link"
+                                                   href="script-eip.html">Script</a>
+                                            </li>
+                                            <li class="nav-item" data-depth="2">
+                                                <a class="nav-link"
+                                                   href="selective-consumer.html">Selective
+                                                    Consumer</a>
+                                            </li>
+                                            <li class="nav-item" data-depth="2">
+                                                <a class="nav-link"
+                                                   href="service-activator.html">Service
+                                                    Activator</a>
+                                            </li>
+                                            <li class="nav-item" data-depth="2">
+                                                <a class="nav-link"
+                                                   href="serviceCall-eip.html">Service
+                                                    Call</a>
+                                            </li>
+                                            <li class="nav-item" data-depth="2">
+                                                <a class="nav-link"
+                                                   href="setBody-eip.html">Set
+                                                    Body</a>
+                                            </li>
+                                            <li class="nav-item" data-depth="2">
+                                                <a class="nav-link"
+                                                   href="setHeader-eip.html">Set
+                                                    Header</a>
+                                            </li>
+                                            <li class="nav-item" data-depth="2">
+                                                <a class="nav-link"
+                                                   href="setProperty-eip.html">Set
+                                                    Property</a>
+                                            </li>
+                                            <li class="nav-item" data-depth="2">
+                                                <a class="nav-link"
+                                                   href="sort-eip.html">Sort</a>
+                                            </li>
+                                            <li class="nav-item" data-depth="2">
+                                                <a class="nav-link"
+                                                   href="split-eip.html">Split</a>
+                                            </li>
+                                            <li class="nav-item" data-depth="2">
+                                                <a class="nav-link"
+                                                   href="step-eip.html">Step</a>
+                                            </li>
+                                            <li class="nav-item" data-depth="2">
+                                                <a class="nav-link"
+                                                   href="stop-eip.html">Stop</a>
+                                            </li>
+                                            <li class="nav-item" data-depth="2">
+                                                <a class="nav-link"
+                                                   href="threads-eip.html">Threads</a>
+                                            </li>
+                                            <li class="nav-item" data-depth="2">
+                                                <a class="nav-link"
+                                                   href="throttle-eip.html">Throttle</a>
+                                            </li>
+                                            <li class="nav-item" data-depth="2">
+                                                <a class="nav-link"
+                                                   href="to-eip.html">To</a>
+                                            </li>
+                                            <li class="nav-item" data-depth="2">
+                                                <a class="nav-link"
+                                                   href="toD-eip.html">To
+                                                    Dynamic</a>
+                                            </li>
+                                            <li class="nav-item" data-depth="2">
+                                                <a class="nav-link"
+                                                   href="transactional-client.html">Transactional
+                                                    Client</a>
+                                            </li>
+                                            <li class="nav-item" data-depth="2">
+                                                <a class="nav-link"
+                                                   href="transform-eip.html">Transform</a>
+                                            </li>
+                                            <li class="nav-item" data-depth="2">
+                                                <a class="nav-link"
+                                                   href="unmarshal-eip.html">Unmarshal</a>
+                                            </li>
+                                            <li class="nav-item" data-depth="2">
+                                                <a class="nav-link"
+                                                   href="validate-eip.html">Validate</a>
+                                            </li>
+                                            <li class="nav-item is-current-page"
+                                                data-depth="2">
+                                                <a class="nav-link"
+                                                   href="wireTap-eip.html">Wire
+                                                    Tap</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+                <div class="nav-panel-explore" data-panel="explore">
+                    <div class="context">
+                        <span class="title">Camel Components</span>
+                        <span class="version">4.0.x</span>
+                    </div>
+                    <ul class="components">
+                        <li class="component is-current">
+                            <div class="title"><a
+                                    href="../../4.10.x/index.html">Camel
+                                Components</a></div>
+                            <ul class="versions">
+                                <li class="version is-latest">
+                                    <a href="../../4.10.x/index.html">4.10.x
+                                        (LTS)</a>
+                                </li>
+                                <li class="version">
+                                    <a href="../../4.8.x/index.html">4.8.x</a>
+                                </li>
+                                <li class="version">
+                                    <a href="../../4.4.x/index.html">4.4.x</a>
+                                </li>
+                                <li class="version is-current">
+                                    <a href="../index.html">4.0.x</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="component">
+                            <div class="title"><a
+                                    href="../../../manual/4.10.x/index.html">User
+                                manual</a></div>
+                            <ul class="versions">
+                                <li class="version is-latest">
+                                    <a href="../../../manual/4.10.x/index.html">4.10.x</a>
+                                </li>
+                                <li class="version">
+                                    <a href="../../../manual/4.8.x/index.html">4.8.x</a>
+                                </li>
+                                <li class="version">
+                                    <a href="../../../manual/4.4.x/index.html">4.4.x</a>
+                                </li>
+                                <li class="version">
+                                    <a href="../../../manual/4.0.x/index.html">4.0.x</a>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </aside>
     </div>
-  </aside>
-</div>
-<main class="article">
-<div class="toolbar" role="navigation">
-<button class="nav-toggle"></button>
-  <a href="../../../manual/4.10.x/index.html" class="home-link"></a>
-<nav class="breadcrumbs" aria-label="breadcrumbs">
-  <ul>
-    <li><a href="../index.html">Camel Components</a></li>
-    <li><a href="enterprise-integration-patterns.html">Enterprise Integration Patterns</a></li>
-    <li><a href="wireTap-eip.html">Wire Tap</a></li>
-  </ul>
-</nav>
-<div class="page-versions">
-  <button class="version-menu-toggle" title="Show other versions of page">4.0.x</button>
-  <div class="version-menu">
-    <a class="version" href="../../4.10.x/eips/wireTap-eip.html">4.10.x (LTS)</a>
-    <a class="version" href="../../4.8.x/eips/wireTap-eip.html">4.8.x</a>
-    <a class="version" href="../../4.4.x/eips/wireTap-eip.html">4.4.x</a>
-    <a class="version is-current" href="wireTap-eip.html">4.0.x</a>
-  </div>
-</div>
+    <main class="article">
+        <div class="toolbar" role="navigation">
+            <button class="nav-toggle"></button>
+            <a href="../../../manual/4.10.x/index.html" class="home-link"></a>
+            <nav class="breadcrumbs" aria-label="breadcrumbs">
+                <ul>
+                    <li><a href="../index.html">Camel Components</a></li>
+                    <li><a href="enterprise-integration-patterns.html">Enterprise
+                        Integration Patterns</a></li>
+                    <li><a href="wireTap-eip.html">Wire Tap</a></li>
+                </ul>
+            </nav>
+            <div class="page-versions">
+                <button class="version-menu-toggle"
+                        title="Show other versions of page">4.0.x
+                </button>
+                <div class="version-menu">
+                    <a class="version"
+                       href="../../4.10.x/eips/wireTap-eip.html">4.10.x
+                        (LTS)</a>
+                    <a class="version" href="../../4.8.x/eips/wireTap-eip.html">4.8.x</a>
+                    <a class="version" href="../../4.4.x/eips/wireTap-eip.html">4.4.x</a>
+                    <a class="version is-current"
+                       href="wireTap-eip.html">4.0.x</a>
+                </div>
+            </div>
 
-</div>
-  <div class="content">
-<aside class="toc sidebar" data-title="Contents" data-levels="2">
-  <div class="toc-menu"></div>
-</aside>
-<article class="doc">
-<h1 class="page">Wire Tap</h1>
-<div id="preamble">
-<div class="sectionbody">
-<div class="paragraph">
-<p><a href="http://www.enterpriseintegrationpatterns.com/WireTap.html">Wire Tap</a>
-from the <a href="enterprise-integration-patterns.html" class="xref page">EIP patterns</a>
-allows you to route messages to a separate location while they are being
-forwarded to the ultimate destination.</p>
-</div>
-<div class="imageblock">
-<div class="content">
-<img src="_images/eip/WireTap.gif" alt="image">
-</div>
-</div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="_options"><a class="anchor" href="#_options"></a>Options</h2>
-<div class="sectionbody">
-<div class="paragraph">
-<p>The Wire Tap eip supports 11 options, which are listed below.</p>
-</div>
-<table class="tableblock frame-all grid-all stretch">
-<colgroup>
-<col style="width: 20%;">
-<col style="width: 50%;">
-<col style="width: 10%;">
-<col style="width: 20%;">
-</colgroup>
-<thead>
-<tr>
-<th class="tableblock halign-left valign-top">Name</th>
-<th class="tableblock halign-left valign-top">Description</th>
-<th class="tableblock halign-center valign-top">Default</th>
-<th class="tableblock halign-left valign-top">Type</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong id="_option_copy">copy</strong></p></td>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>Uses a copy of the original exchange.</p>
-</div></div></td>
-<td class="tableblock halign-center valign-top"><p class="tableblock">true</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Boolean</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong id="_option_dynamicUri">dynamicUri</strong></p></td>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>Whether the uri is dynamic or static. If the uri is dynamic then the simple language is used to evaluate a dynamic uri to use as the wire-tap destination, for each incoming message. This works similar to how the toD EIP pattern works. If static then the uri is used as-is as the wire-tap destination.</p>
-</div></div></td>
-<td class="tableblock halign-center valign-top"><p class="tableblock">true</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Boolean</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong id="_option_onPrepare">onPrepare</strong></p></td>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>Uses the Processor when preparing the org.apache.camel.Exchange to be sent. This can be used to deep-clone messages that should be sent, or any custom logic needed before the exchange is sent.</p>
-</div></div></td>
-<td class="tableblock halign-center valign-top"></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Processor</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong id="_option_executorService">executorService</strong></p></td>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>Uses a custom thread pool.</p>
-</div></div></td>
-<td class="tableblock halign-center valign-top"></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">ExecutorService</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong id="_option_uri">uri</strong></p></td>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p><strong>Required</strong> The uri of the endpoint to send to. The uri can be dynamic computed using the org.apache.camel.language.simple.SimpleLanguage expression.</p>
-</div></div></td>
-<td class="tableblock halign-center valign-top"></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">String</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong id="_option_pattern">pattern</strong></p></td>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>Sets the optional ExchangePattern used to invoke this endpoint.</p>
-</div>
-<div class="paragraph">
-<p>Enum values:</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>InOnly</p>
-</li>
-<li>
-<p>InOut</p>
-</li>
-</ul>
-</div></div></td>
-<td class="tableblock halign-center valign-top"></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">ExchangePattern</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong id="_option_cacheSize">cacheSize</strong></p></td>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>Sets the maximum size used by the org.apache.camel.spi.ProducerCache which is used to cache and reuse producers when using this recipient list, when uris are reused. Beware that when using dynamic endpoints then it affects how well the cache can be utilized. If each dynamic endpoint is unique then its best to turn off caching by setting this to -1, which allows Camel to not cache both the producers and endpoints; they are regarded as prototype scoped and will be stopped and discarded after use. This reduces memory usage as otherwise producers/endpoints are stored in memory in the caches. However if there are a high degree of dynamic endpoints that have been used before, then it can benefit to use the cache to reuse both producers and endpoints and therefore the cache size can be set accordingly or rely on the default size (1000). If there is a mix of unique and used before dynamic endpoints, then setting a reasonable cache size can help reduce memory usage to avoid storing too many non frequent used producers.</p>
-</div></div></td>
-<td class="tableblock halign-center valign-top"></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Integer</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong id="_option_ignoreInvalidEndpoint">ignoreInvalidEndpoint</strong></p></td>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>Whether to ignore invalid endpoint URIs and skip sending the message.</p>
-</div></div></td>
-<td class="tableblock halign-center valign-top"><p class="tableblock">false</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Boolean</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong id="_option_allowOptimisedComponents">allowOptimisedComponents</strong></p></td>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>Whether to allow components to optimise toD if they are org.apache.camel.spi.SendDynamicAware .</p>
-</div></div></td>
-<td class="tableblock halign-center valign-top"><p class="tableblock">true</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Boolean</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong id="_option_autoStartComponents">autoStartComponents</strong></p></td>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>Whether to auto startup components when toD is starting up.</p>
-</div></div></td>
-<td class="tableblock halign-center valign-top"><p class="tableblock">true</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Boolean</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong id="_option_disabled">disabled</strong></p></td>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>Whether to disable this EIP from the route during build time. Once an EIP has been disabled then it cannot be enabled later at runtime.</p>
-</div></div></td>
-<td class="tableblock halign-center valign-top"><p class="tableblock">false</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Boolean</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong id="_option_description">description</strong></p></td>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>Sets the description of this node.</p>
-</div></div></td>
-<td class="tableblock halign-center valign-top"></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">DescriptionDefinition</p></td>
-</tr>
-</tbody>
-</table>
-</div>
-</div>
-<div class="sect1">
-<h2 id="_wire_tap"><a class="anchor" href="#_wire_tap"></a>Wire Tap</h2>
-<div class="sectionbody">
-<div class="paragraph">
-<p>Camel&#8217;s Wire Tap will copy the original
-<a href="../../../manual/4.10.x/exchange.html" class="xref page">Exchange</a> and set its
-<a href="../../../manual/4.10.x/exchange-pattern.html" class="xref page">Exchange Pattern</a> to <strong><code>InOnly</code></strong>, as we want
-the tapped <a href="../../../manual/4.10.x/exchange.html" class="xref page">Exchange</a> to be sent in a fire and forget
-style. The tapped <a href="../../../manual/4.10.x/exchange.html" class="xref page">Exchange</a> is then sent in a
-separate thread, so it can run in parallel with the original. Beware that
-only the <code>Exchange</code> is copied - Wire Tap won&#8217;t do a deep clone (unless you
-specify a custom processor via <strong><code>onPrepare</code></strong> which does that). So all
-copies could share objects from the original <code>Exchange</code>.</p>
-</div>
-<div class="sect2">
-<h3 id="_using_wire_tap"><a class="anchor" href="#_using_wire_tap"></a>Using Wire Tap</h3>
-<div class="paragraph">
-<p>In the example below the exchange is wire tapped to the direct:tap route.
-This route delays the message 1 second before continuing. This is because
-it allows you to see that the tapped message is routed independently of the original
-route, so that you would see log:result happens before log:tap</p>
-</div>
-<div id="_tabs_1" class="openblock tabs is-sync is-loading">
-<div class="content">
-<div class="ulist tablist">
-<ul>
-<li id="_tabs_1_java" class="tab">
-<p>Java</p>
-</li>
-<li id="_tabs_1_xml" class="tab">
-<p>XML</p>
-</li>
-<li id="_tabs_1_yaml" class="tab">
-<p>YAML</p>
-</li>
-</ul>
-</div>
-<div id="_tabs_1_java--panel" class="tabpanel" aria-labelledby="_tabs_1_java">
-<div class="listingblock">
-<div class="content">
-<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">from("direct:start")
+        </div>
+        <div class="content">
+            <aside class="toc sidebar" data-title="Contents" data-levels="2">
+                <div class="toc-menu"></div>
+            </aside>
+            <article class="doc">
+                <h1 class="page">Wire Tap</h1>
+                <div id="preamble">
+                    <div class="sectionbody">
+                        <div class="paragraph">
+                            <p>
+                                <a href="http://www.enterpriseintegrationpatterns.com/WireTap.html">Wire
+                                    Tap</a>
+                                from the <a
+                                    href="enterprise-integration-patterns.html"
+                                    class="xref page">EIP patterns</a>
+                                allows you to route messages to a separate
+                                location while they are being
+                                forwarded to the ultimate destination.</p>
+                        </div>
+                        <div class="imageblock">
+                            <div class="content">
+                                <img src="_images/eip/WireTap.gif" alt="image">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="sect1">
+                    <h2 id="_options"><a class="anchor" href="#_options"></a>Options
+                    </h2>
+                    <div class="sectionbody">
+                        <div class="paragraph">
+                            <p>The Wire Tap eip supports 11 options, which are
+                                listed below.</p>
+                        </div>
+                        <table class="tableblock frame-all grid-all stretch">
+                            <colgroup>
+                                <col style="width: 20%;">
+                                <col style="width: 50%;">
+                                <col style="width: 10%;">
+                                <col style="width: 20%;">
+                            </colgroup>
+                            <thead>
+                            <tr>
+                                <th class="tableblock halign-left valign-top">
+                                    Name
+                                </th>
+                                <th class="tableblock halign-left valign-top">
+                                    Description
+                                </th>
+                                <th class="tableblock halign-center valign-top">
+                                    Default
+                                </th>
+                                <th class="tableblock halign-left valign-top">
+                                    Type
+                                </th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <td class="tableblock halign-left valign-top"><p
+                                        class="tableblock"><strong
+                                        id="_option_copy">copy</strong></p></td>
+                                <td class="tableblock halign-left valign-top">
+                                    <div class="content">
+                                        <div class="paragraph">
+                                            <p>Uses a copy of the original
+                                                exchange.</p>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td class="tableblock halign-center valign-top">
+                                    <p class="tableblock">true</p></td>
+                                <td class="tableblock halign-left valign-top"><p
+                                        class="tableblock">Boolean</p></td>
+                            </tr>
+                            <tr>
+                                <td class="tableblock halign-left valign-top"><p
+                                        class="tableblock"><strong
+                                        id="_option_dynamicUri">dynamicUri</strong>
+                                </p></td>
+                                <td class="tableblock halign-left valign-top">
+                                    <div class="content">
+                                        <div class="paragraph">
+                                            <p>Whether the uri is dynamic or
+                                                static. If the uri is dynamic
+                                                then the simple language is used
+                                                to evaluate a dynamic uri to use
+                                                as the wire-tap destination, for
+                                                each incoming message. This
+                                                works similar to how the toD EIP
+                                                pattern works. If static then
+                                                the uri is used as-is as the
+                                                wire-tap destination.</p>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td class="tableblock halign-center valign-top">
+                                    <p class="tableblock">true</p></td>
+                                <td class="tableblock halign-left valign-top"><p
+                                        class="tableblock">Boolean</p></td>
+                            </tr>
+                            <tr>
+                                <td class="tableblock halign-left valign-top"><p
+                                        class="tableblock"><strong
+                                        id="_option_onPrepare">onPrepare</strong>
+                                </p></td>
+                                <td class="tableblock halign-left valign-top">
+                                    <div class="content">
+                                        <div class="paragraph">
+                                            <p>Uses the Processor when preparing
+                                                the org.apache.camel.Exchange to
+                                                be sent. This can be used to
+                                                deep-clone messages that should
+                                                be sent, or any custom logic
+                                                needed before the exchange is
+                                                sent.</p>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td class="tableblock halign-center valign-top"></td>
+                                <td class="tableblock halign-left valign-top"><p
+                                        class="tableblock">Processor</p></td>
+                            </tr>
+                            <tr>
+                                <td class="tableblock halign-left valign-top"><p
+                                        class="tableblock"><strong
+                                        id="_option_executorService">executorService</strong>
+                                </p></td>
+                                <td class="tableblock halign-left valign-top">
+                                    <div class="content">
+                                        <div class="paragraph">
+                                            <p>Uses a custom thread pool.</p>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td class="tableblock halign-center valign-top"></td>
+                                <td class="tableblock halign-left valign-top"><p
+                                        class="tableblock">ExecutorService</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="tableblock halign-left valign-top"><p
+                                        class="tableblock"><strong
+                                        id="_option_uri">uri</strong></p></td>
+                                <td class="tableblock halign-left valign-top">
+                                    <div class="content">
+                                        <div class="paragraph">
+                                            <p><strong>Required</strong> The uri
+                                                of the endpoint to send to. The
+                                                uri can be dynamic computed
+                                                using the
+                                                org.apache.camel.language.simple.SimpleLanguage
+                                                expression.</p>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td class="tableblock halign-center valign-top"></td>
+                                <td class="tableblock halign-left valign-top"><p
+                                        class="tableblock">String</p></td>
+                            </tr>
+                            <tr>
+                                <td class="tableblock halign-left valign-top"><p
+                                        class="tableblock"><strong
+                                        id="_option_pattern">pattern</strong>
+                                </p></td>
+                                <td class="tableblock halign-left valign-top">
+                                    <div class="content">
+                                        <div class="paragraph">
+                                            <p>Sets the optional ExchangePattern
+                                                used to invoke this
+                                                endpoint.</p>
+                                        </div>
+                                        <div class="paragraph">
+                                            <p>Enum values:</p>
+                                        </div>
+                                        <div class="ulist">
+                                            <ul>
+                                                <li>
+                                                    <p>InOnly</p>
+                                                </li>
+                                                <li>
+                                                    <p>InOut</p>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td class="tableblock halign-center valign-top"></td>
+                                <td class="tableblock halign-left valign-top"><p
+                                        class="tableblock">ExchangePattern</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="tableblock halign-left valign-top"><p
+                                        class="tableblock"><strong
+                                        id="_option_cacheSize">cacheSize</strong>
+                                </p></td>
+                                <td class="tableblock halign-left valign-top">
+                                    <div class="content">
+                                        <div class="paragraph">
+                                            <p>Sets the maximum size used by the
+                                                org.apache.camel.spi.ProducerCache
+                                                which is used to cache and reuse
+                                                producers when using this
+                                                recipient list, when uris are
+                                                reused. Beware that when using
+                                                dynamic endpoints then it
+                                                affects how well the cache can
+                                                be utilized. If each dynamic
+                                                endpoint is unique then its best
+                                                to turn off caching by setting
+                                                this to -1, which allows Camel
+                                                to not cache both the producers
+                                                and endpoints; they are regarded
+                                                as prototype scoped and will be
+                                                stopped and discarded after use.
+                                                This reduces memory usage as
+                                                otherwise producers/endpoints
+                                                are stored in memory in the
+                                                caches. However if there are a
+                                                high degree of dynamic endpoints
+                                                that have been used before, then
+                                                it can benefit to use the cache
+                                                to reuse both producers and
+                                                endpoints and therefore the
+                                                cache size can be set
+                                                accordingly or rely on the
+                                                default size (1000). If there is
+                                                a mix of unique and used before
+                                                dynamic endpoints, then setting
+                                                a reasonable cache size can help
+                                                reduce memory usage to avoid
+                                                storing too many non frequent
+                                                used producers.</p>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td class="tableblock halign-center valign-top"></td>
+                                <td class="tableblock halign-left valign-top"><p
+                                        class="tableblock">Integer</p></td>
+                            </tr>
+                            <tr>
+                                <td class="tableblock halign-left valign-top"><p
+                                        class="tableblock"><strong
+                                        id="_option_ignoreInvalidEndpoint">ignoreInvalidEndpoint</strong>
+                                </p></td>
+                                <td class="tableblock halign-left valign-top">
+                                    <div class="content">
+                                        <div class="paragraph">
+                                            <p>Whether to ignore invalid
+                                                endpoint URIs and skip sending
+                                                the message.</p>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td class="tableblock halign-center valign-top">
+                                    <p class="tableblock">false</p></td>
+                                <td class="tableblock halign-left valign-top"><p
+                                        class="tableblock">Boolean</p></td>
+                            </tr>
+                            <tr>
+                                <td class="tableblock halign-left valign-top"><p
+                                        class="tableblock"><strong
+                                        id="_option_allowOptimisedComponents">allowOptimisedComponents</strong>
+                                </p></td>
+                                <td class="tableblock halign-left valign-top">
+                                    <div class="content">
+                                        <div class="paragraph">
+                                            <p>Whether to allow components to
+                                                optimise toD if they are
+                                                org.apache.camel.spi.SendDynamicAware
+                                                .</p>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td class="tableblock halign-center valign-top">
+                                    <p class="tableblock">true</p></td>
+                                <td class="tableblock halign-left valign-top"><p
+                                        class="tableblock">Boolean</p></td>
+                            </tr>
+                            <tr>
+                                <td class="tableblock halign-left valign-top"><p
+                                        class="tableblock"><strong
+                                        id="_option_autoStartComponents">autoStartComponents</strong>
+                                </p></td>
+                                <td class="tableblock halign-left valign-top">
+                                    <div class="content">
+                                        <div class="paragraph">
+                                            <p>Whether to auto startup
+                                                components when toD is starting
+                                                up.</p>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td class="tableblock halign-center valign-top">
+                                    <p class="tableblock">true</p></td>
+                                <td class="tableblock halign-left valign-top"><p
+                                        class="tableblock">Boolean</p></td>
+                            </tr>
+                            <tr>
+                                <td class="tableblock halign-left valign-top"><p
+                                        class="tableblock"><strong
+                                        id="_option_disabled">disabled</strong>
+                                </p></td>
+                                <td class="tableblock halign-left valign-top">
+                                    <div class="content">
+                                        <div class="paragraph">
+                                            <p>Whether to disable this EIP from
+                                                the route during build time.
+                                                Once an EIP has been disabled
+                                                then it cannot be enabled later
+                                                at runtime.</p>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td class="tableblock halign-center valign-top">
+                                    <p class="tableblock">false</p></td>
+                                <td class="tableblock halign-left valign-top"><p
+                                        class="tableblock">Boolean</p></td>
+                            </tr>
+                            <tr>
+                                <td class="tableblock halign-left valign-top"><p
+                                        class="tableblock"><strong
+                                        id="_option_description">description</strong>
+                                </p></td>
+                                <td class="tableblock halign-left valign-top">
+                                    <div class="content">
+                                        <div class="paragraph">
+                                            <p>Sets the description of this
+                                                node.</p>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td class="tableblock halign-center valign-top"></td>
+                                <td class="tableblock halign-left valign-top"><p
+                                        class="tableblock">
+                                    DescriptionDefinition</p></td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <div class="sect1">
+                    <h2 id="_wire_tap"><a class="anchor" href="#_wire_tap"></a>Wire
+                        Tap</h2>
+                    <div class="sectionbody">
+                        <div class="paragraph">
+                            <p>Camel&#8217;s Wire Tap will copy the original
+                                <a href="../../../manual/4.10.x/exchange.html"
+                                   class="xref page">Exchange</a> and set its
+                                <a href="../../../manual/4.10.x/exchange-pattern.html"
+                                   class="xref page">Exchange Pattern</a> to
+                                <strong><code>InOnly</code></strong>, as we want
+                                the tapped <a
+                                        href="../../../manual/4.10.x/exchange.html"
+                                        class="xref page">Exchange</a> to be
+                                sent in a fire and forget
+                                style. The tapped <a
+                                        href="../../../manual/4.10.x/exchange.html"
+                                        class="xref page">Exchange</a> is then
+                                sent in a
+                                separate thread, so it can run in parallel with
+                                the original. Beware that
+                                only the <code>Exchange</code> is copied - Wire
+                                Tap won&#8217;t do a deep clone (unless you
+                                specify a custom processor via <strong><code>onPrepare</code></strong>
+                                which does that). So all
+                                copies could share objects from the original
+                                <code>Exchange</code>.</p>
+                        </div>
+                        <div class="sect2">
+                            <h3 id="_using_wire_tap"><a class="anchor"
+                                                        href="#_using_wire_tap"></a>Using
+                                Wire Tap</h3>
+                            <div class="paragraph">
+                                <p>In the example below the exchange is wire
+                                    tapped to the direct:tap route.
+                                    This route delays the message 1 second
+                                    before continuing. This is because
+                                    it allows you to see that the tapped message
+                                    is routed independently of the original
+                                    route, so that you would see log:result
+                                    happens before log:tap</p>
+                            </div>
+                            <div id="_tabs_1"
+                                 class="openblock tabs is-sync is-loading">
+                                <div class="content">
+                                    <div class="ulist tablist">
+                                        <ul>
+                                            <li id="_tabs_1_java" class="tab">
+                                                <p>Java</p>
+                                            </li>
+                                            <li id="_tabs_1_xml" class="tab">
+                                                <p>XML</p>
+                                            </li>
+                                            <li id="_tabs_1_yaml" class="tab">
+                                                <p>YAML</p>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div id="_tabs_1_java--panel"
+                                         class="tabpanel"
+                                         aria-labelledby="_tabs_1_java">
+                                        <div class="listingblock">
+                                            <div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs"
+                                         data-lang="java">from("direct:start")
     .to("log:foo")
     .wireTap("direct:tap")
     .to("log:result");
@@ -572,13 +941,16 @@ route, so that you would see log:result happens before log:tap</p>
 from("direct:tap")
     .delay(1000).setBody().constant("Tapped")
     .to("log:tap");</code></pre>
-</div>
-</div>
-</div>
-<div id="_tabs_1_xml--panel" class="tabpanel" aria-labelledby="_tabs_1_xml">
-<div class="listingblock">
-<div class="content">
-<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;routes&gt;
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div id="_tabs_1_xml--panel"
+                                         class="tabpanel"
+                                         aria-labelledby="_tabs_1_xml">
+                                        <div class="listingblock">
+                                            <div class="content">
+<pre class="highlightjs highlight"><code class="language-xml hljs"
+                                         data-lang="xml">&lt;routes&gt;
 
   &lt;route&gt;
     &lt;from uri="direct:start"/&gt;
@@ -592,13 +964,16 @@ from("direct:tap")
   &lt;/route&gt;
 
 &lt;/routes&gt;</code></pre>
-</div>
-</div>
-</div>
-<div id="_tabs_1_yaml--panel" class="tabpanel" aria-labelledby="_tabs_1_yaml">
-<div class="listingblock">
-<div class="content">
-<pre class="highlightjs highlight"><code class="language-yaml hljs" data-lang="yaml">- from:
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div id="_tabs_1_yaml--panel"
+                                         class="tabpanel"
+                                         aria-labelledby="_tabs_1_yaml">
+                                        <div class="listingblock">
+                                            <div class="content">
+<pre class="highlightjs highlight"><code class="language-yaml hljs"
+                                         data-lang="yaml">- from:
     uri: direct:start
     steps:
       - wireTap:
@@ -610,111 +985,148 @@ from("direct:tap")
     steps:
       - to:
           uri: log:log</code></pre>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-<div class="sect2">
-<h3 id="_wire_tapping_with_dynamic_uris"><a class="anchor" href="#_wire_tapping_with_dynamic_uris"></a>Wire tapping with dynamic URIs</h3>
-<div class="paragraph">
-<p>For example to wire tap to a dynamic URI, then the URI
-uses the  <a href="../../4.10.x/languages/simple-language.html" class="xref page">Simple</a> language that
-allows to construct dynamic URIs.</p>
-</div>
-<div class="paragraph">
-<p>For example to wire tap to a JMS queue where the header ID is part of the queue name:</p>
-</div>
-<div id="_tabs_2" class="openblock tabs is-sync is-loading">
-<div class="content">
-<div class="ulist tablist">
-<ul>
-<li id="_tabs_2_java" class="tab">
-<p>Java</p>
-</li>
-<li id="_tabs_2_xml" class="tab">
-<p>XML</p>
-</li>
-<li id="_tabs_2_yaml" class="tab">
-<p>YAML</p>
-</li>
-</ul>
-</div>
-<div id="_tabs_2_java--panel" class="tabpanel" aria-labelledby="_tabs_2_java">
-<div class="listingblock">
-<div class="content">
-<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">from("direct:start")
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="sect2">
+                            <h3 id="_wire_tapping_with_dynamic_uris"><a
+                                    class="anchor"
+                                    href="#_wire_tapping_with_dynamic_uris"></a>Wire
+                                tapping with dynamic URIs</h3>
+                            <div class="paragraph">
+                                <p>For example to wire tap to a dynamic URI,
+                                    then the URI
+                                    uses the <a
+                                            href="../../4.10.x/languages/simple-language.html"
+                                            class="xref page">Simple</a>
+                                    language that
+                                    allows to construct dynamic URIs.</p>
+                            </div>
+                            <div class="paragraph">
+                                <p>For example to wire tap to a JMS queue where
+                                    the header ID is part of the queue name:</p>
+                            </div>
+                            <div id="_tabs_2"
+                                 class="openblock tabs is-sync is-loading">
+                                <div class="content">
+                                    <div class="ulist tablist">
+                                        <ul>
+                                            <li id="_tabs_2_java" class="tab">
+                                                <p>Java</p>
+                                            </li>
+                                            <li id="_tabs_2_xml" class="tab">
+                                                <p>XML</p>
+                                            </li>
+                                            <li id="_tabs_2_yaml" class="tab">
+                                                <p>YAML</p>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div id="_tabs_2_java--panel"
+                                         class="tabpanel"
+                                         aria-labelledby="_tabs_2_java">
+                                        <div class="listingblock">
+                                            <div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs"
+                                         data-lang="java">from("direct:start")
     .wireTap("jms:queue:backup-${header.id}")
     .to("bean:doSomething");</code></pre>
-</div>
-</div>
-</div>
-<div id="_tabs_2_xml--panel" class="tabpanel" aria-labelledby="_tabs_2_xml">
-<div class="listingblock">
-<div class="content">
-<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;route&gt;
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div id="_tabs_2_xml--panel"
+                                         class="tabpanel"
+                                         aria-labelledby="_tabs_2_xml">
+                                        <div class="listingblock">
+                                            <div class="content">
+<pre class="highlightjs highlight"><code class="language-xml hljs"
+                                         data-lang="xml">&lt;route&gt;
   &lt;from uri="direct:start"/&gt;
   &lt;wireTap uri="jms:queue:backup-${header.id}"/&gt;
   &lt;to uri="bean:doSomething"/&gt;
 &lt;/route&gt;</code></pre>
-</div>
-</div>
-</div>
-<div id="_tabs_2_yaml--panel" class="tabpanel" aria-labelledby="_tabs_2_yaml">
-<div class="listingblock">
-<div class="content">
-<pre class="highlightjs highlight"><code class="language-yaml hljs" data-lang="yaml">- from:
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div id="_tabs_2_yaml--panel"
+                                         class="tabpanel"
+                                         aria-labelledby="_tabs_2_yaml">
+                                        <div class="listingblock">
+                                            <div class="content">
+<pre class="highlightjs highlight"><code class="language-yaml hljs"
+                                         data-lang="yaml">- from:
     uri: direct:start
     steps:
       - wireTap:
           uri: jms:queue:backup-${header.id}
       - to:
           uri: bean:doSomething</code></pre>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="_wiretap_thread_pools"><a class="anchor" href="#_wiretap_thread_pools"></a>WireTap Thread Pools</h2>
-<div class="sectionbody">
-<div class="paragraph">
-<p>The WireTap uses a thread pool to process the
-tapped messages. This thread pool will by default use the settings
-detailed at <a href="../../../manual/4.10.x/threading-model.html" class="xref page">Threading Model</a>.</p>
-</div>
-<div class="paragraph">
-<p>In particular, when the pool is exhausted (with all threads utilized), further wiretaps
-will be executed synchronously by the calling thread. To remedy this,
-you can configure an explicit thread pool on the Wire Tap having either
-a different rejection policy, a larger worker queue, or more worker threads.</p>
-</div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="_wire_tapping_streaming_based_messages"><a class="anchor" href="#_wire_tapping_streaming_based_messages"></a>Wire tapping Streaming based messages</h2>
-<div class="sectionbody">
-<div class="paragraph">
-<p>If you Wire Tap a stream message body then you
-should consider enabling <a href="../../../manual/4.10.x/stream-caching.html" class="xref page">Stream caching</a> to
-ensure the message body can be read at each endpoint.</p>
-</div>
-<div class="paragraph">
-<p>See more details at <a href="../../../manual/4.10.x/stream-caching.html" class="xref page">Stream caching</a>.</p>
-</div>
-</div>
-</div>
-</article>
-  </div>
-</main>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="sect1">
+                    <h2 id="_wiretap_thread_pools"><a class="anchor"
+                                                      href="#_wiretap_thread_pools"></a>WireTap
+                        Thread Pools</h2>
+                    <div class="sectionbody">
+                        <div class="paragraph">
+                            <p>The WireTap uses a thread pool to process the
+                                tapped messages. This thread pool will by
+                                default use the settings
+                                detailed at <a
+                                        href="../../../manual/4.10.x/threading-model.html"
+                                        class="xref page">Threading Model</a>.
+                            </p>
+                        </div>
+                        <div class="paragraph">
+                            <p>In particular, when the pool is exhausted (with
+                                all threads utilized), further wiretaps
+                                will be executed synchronously by the calling
+                                thread. To remedy this,
+                                you can configure an explicit thread pool on the
+                                Wire Tap having either
+                                a different rejection policy, a larger worker
+                                queue, or more worker threads.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="sect1">
+                    <h2 id="_wire_tapping_streaming_based_messages"><a
+                            class="anchor"
+                            href="#_wire_tapping_streaming_based_messages"></a>Wire
+                        tapping Streaming based messages</h2>
+                    <div class="sectionbody">
+                        <div class="paragraph">
+                            <p>If you Wire Tap a stream message body then you
+                                should consider enabling <a
+                                        href="../../../manual/4.10.x/stream-caching.html"
+                                        class="xref page">Stream caching</a> to
+                                ensure the message body can be read at each
+                                endpoint.</p>
+                        </div>
+                        <div class="paragraph">
+                            <p>See more details at <a
+                                    href="../../../manual/4.10.x/stream-caching.html"
+                                    class="xref page">Stream caching</a>.</p>
+                        </div>
+                    </div>
+                </div>
+            </article>
+        </div>
+    </main>
 </div>
 <footer class="footer">
 </footer>
-<script id="site-script" src="../../../_/js/site.js" data-ui-root-path="../../../_"></script>
+<script id="site-script" src="../../../_/js/site.js"
+        data-ui-root-path="../../../_"></script>
 <script async src="../../../_/js/vendor/highlight.js"></script>
-  </body>
+</body>
 </html>

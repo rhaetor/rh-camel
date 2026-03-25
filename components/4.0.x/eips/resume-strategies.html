@@ -1,450 +1,662 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+<head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <title>Resume Strategies :: Red Hat build of Apache Camel</title>
-    <meta name="description" content="Provide strategies to allow consuming data from specific offsets">
+    <meta name="description"
+          content="Provide strategies to allow consuming data from specific offsets">
     <meta name="generator" content="Antora 3.1.4">
     <link rel="stylesheet" href="../../../_/css/site.css">
-  </head>
-  <body class="article">
+</head>
+<body class="article">
 <header class="header">
-  <nav class="navbar">
-    <div class="navbar-brand">
-      <a class="navbar-item" href="/">Red Hat build of Apache Camel</a>
-      <button class="navbar-burger" data-target="topbar-nav">
-        <span></span>
-        <span></span>
-        <span></span>
-      </button>
-    </div>
-  </nav>
+    <nav class="navbar">
+        <div class="navbar-brand">
+            <a class="navbar-item" href="/">Red Hat build of Apache Camel</a>
+            <button class="navbar-burger" data-target="topbar-nav">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
 </header>
 <div class="body">
-<div class="nav-container" data-component="components" data-version="4.0.x">
-  <aside class="nav">
-    <div class="panels">
-<div class="nav-panel-menu is-active" data-panel="menu">
-  <nav class="nav-menu">
-    <button class="nav-menu-toggle" aria-label="Toggle expand/collapse all" style="display: none"></button>
-    <h3 class="title"><a href="../index.html">Camel Components</a></h3>
-<ul class="nav-list">
-  <li class="nav-item" data-depth="0">
-<ul class="nav-list">
-  <li class="nav-item" data-depth="1">
-    <button class="nav-item-toggle"></button>
-    <a class="nav-link" href="enterprise-integration-patterns.html">Enterprise Integration Patterns</a>
-<ul class="nav-list">
-  <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="aggregate-eip.html">Aggregate</a>
-  </li>
-  <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="bean-eip.html">Bean</a>
-  </li>
-  <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="change-data-capture.html">Change Data Capture</a>
-  </li>
-  <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="channel-adapter.html">Channel Adapter</a>
-  </li>
-  <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="choice-eip.html">Content Based Router</a>
-  </li>
-  <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="circuitBreaker-eip.html">Circuit Breaker</a>
-  </li>
-  <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="claimCheck-eip.html">Claim Check</a>
-  </li>
-  <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="competing-consumers.html">Competing Consumers</a>
-  </li>
-  <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="composed-message-processor.html">Composed Message Processor</a>
-  </li>
-  <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="content-enricher.html">Content Enricher</a>
-  </li>
-  <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="content-filter-eip.html">Content Filter</a>
-  </li>
-  <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="convertBodyTo-eip.html">Convert Body To</a>
-  </li>
-  <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="correlation-identifier.html">Correlation Identifier</a>
-  </li>
-  <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="dead-letter-channel.html">Dead Letter Channel</a>
-  </li>
-  <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="delay-eip.html">Delay</a>
-  </li>
-  <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="durable-subscriber.html">Durable Subscriber</a>
-  </li>
-  <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="dynamicRouter-eip.html">Dynamic Router</a>
-  </li>
-  <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="enrich-eip.html">Enrich</a>
-  </li>
-  <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="eventDrivenConsumer-eip.html">Event Driven Consumer</a>
-  </li>
-  <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="event-message.html">Event Message</a>
-  </li>
-  <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="filter-eip.html">Filter</a>
-  </li>
-  <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="from-eip.html">From</a>
-  </li>
-  <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="guaranteed-delivery.html">Guaranteed Delivery</a>
-  </li>
-  <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="idempotentConsumer-eip.html">Idempotent Consumer</a>
-  </li>
-  <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="intercept.html">Intercept</a>
-  </li>
-  <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="kamelet-eip.html">Kamelet</a>
-  </li>
-  <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="loadBalance-eip.html">Load Balance</a>
-  </li>
-  <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="log-eip.html">Log</a>
-  </li>
-  <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="loop-eip.html">Loop</a>
-  </li>
-  <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="marshal-eip.html">Marshal</a>
-  </li>
-  <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="message.html">Message</a>
-  </li>
-  <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="message-broker.html">Message Broker</a>
-  </li>
-  <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="message-bus.html">Message Bus</a>
-  </li>
-  <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="message-channel.html">Message Channel</a>
-  </li>
-  <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="message-dispatcher.html">Message Dispatcher</a>
-  </li>
-  <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="message-endpoint.html">Message Endpoint</a>
-  </li>
-  <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="message-expiration.html">Message Expiration</a>
-  </li>
-  <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="message-history.html">Message History</a>
-  </li>
-  <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="message-router.html">Message Router</a>
-  </li>
-  <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="message-translator.html">Message Translator</a>
-  </li>
-  <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="messaging-bridge.html">Messaging Bridge</a>
-  </li>
-  <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="messaging-gateway.html">Messaging Gateway</a>
-  </li>
-  <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="messaging-mapper.html">Messaging Mapper</a>
-  </li>
-  <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="multicast-eip.html">Multicast</a>
-  </li>
-  <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="normalizer.html">Normalizer</a>
-  </li>
-  <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="pipeline-eip.html">Pipeline</a>
-  </li>
-  <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="point-to-point-channel.html">Point to Point Channel</a>
-  </li>
-  <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="pollEnrich-eip.html">Poll Enrich</a>
-  </li>
-  <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="polling-consumer.html">Polling Consumer</a>
-  </li>
-  <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="process-eip.html">Process</a>
-  </li>
-  <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="process-manager.html">Process Manager</a>
-  </li>
-  <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="publish-subscribe-channel.html">Publish Subscribe Channel</a>
-  </li>
-  <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="recipientList-eip.html">Recipient List</a>
-  </li>
-  <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="removeHeader-eip.html">Remove Header</a>
-  </li>
-  <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="removeHeaders-eip.html">Remove Headers</a>
-  </li>
-  <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="removeProperties-eip.html">Remove Properties</a>
-  </li>
-  <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="removeProperty-eip.html">Remove Property</a>
-  </li>
-  <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="requestReply-eip.html">Request Reply</a>
-  </li>
-  <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="resequence-eip.html">Resequence</a>
-  </li>
-  <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="resilience4j-eip.html">Resilience4j Circuit Breaker</a>
-  </li>
-  <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="return-address.html">Return Address</a>
-  </li>
-  <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="rollback-eip.html">Rollback</a>
-  </li>
-  <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="routingSlip-eip.html">Routing Slip</a>
-  </li>
-  <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="saga-eip.html">Saga</a>
-  </li>
-  <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="sample-eip.html">Sample</a>
-  </li>
-  <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="scatter-gather.html">Scatter Gather</a>
-  </li>
-  <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="script-eip.html">Script</a>
-  </li>
-  <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="selective-consumer.html">Selective Consumer</a>
-  </li>
-  <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="service-activator.html">Service Activator</a>
-  </li>
-  <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="serviceCall-eip.html">Service Call</a>
-  </li>
-  <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="setBody-eip.html">Set Body</a>
-  </li>
-  <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="setHeader-eip.html">Set Header</a>
-  </li>
-  <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="setProperty-eip.html">Set Property</a>
-  </li>
-  <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="sort-eip.html">Sort</a>
-  </li>
-  <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="split-eip.html">Split</a>
-  </li>
-  <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="step-eip.html">Step</a>
-  </li>
-  <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="stop-eip.html">Stop</a>
-  </li>
-  <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="threads-eip.html">Threads</a>
-  </li>
-  <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="throttle-eip.html">Throttle</a>
-  </li>
-  <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="to-eip.html">To</a>
-  </li>
-  <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="toD-eip.html">To Dynamic</a>
-  </li>
-  <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="transactional-client.html">Transactional Client</a>
-  </li>
-  <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="transform-eip.html">Transform</a>
-  </li>
-  <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="unmarshal-eip.html">Unmarshal</a>
-  </li>
-  <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="validate-eip.html">Validate</a>
-  </li>
-  <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="wireTap-eip.html">Wire Tap</a>
-  </li>
-</ul>
-  </li>
-</ul>
-  </li>
-</ul>
-  </nav>
-</div>
-<div class="nav-panel-explore" data-panel="explore">
-  <div class="context">
-    <span class="title">Camel Components</span>
-    <span class="version">4.0.x</span>
-  </div>
-  <ul class="components">
-    <li class="component is-current">
-      <div class="title"><a href="../../4.10.x/index.html">Camel Components</a></div>
-      <ul class="versions">
-        <li class="version is-latest">
-          <a href="../../4.10.x/index.html">4.10.x (LTS)</a>
-        </li>
-        <li class="version">
-          <a href="../../4.8.x/index.html">4.8.x</a>
-        </li>
-        <li class="version">
-          <a href="../../4.4.x/index.html">4.4.x</a>
-        </li>
-        <li class="version is-current">
-          <a href="../index.html">4.0.x</a>
-        </li>
-      </ul>
-    </li>
-    <li class="component">
-      <div class="title"><a href="../../../manual/4.10.x/index.html">User manual</a></div>
-      <ul class="versions">
-        <li class="version is-latest">
-          <a href="../../../manual/4.10.x/index.html">4.10.x</a>
-        </li>
-        <li class="version">
-          <a href="../../../manual/4.8.x/index.html">4.8.x</a>
-        </li>
-        <li class="version">
-          <a href="../../../manual/4.4.x/index.html">4.4.x</a>
-        </li>
-        <li class="version">
-          <a href="../../../manual/4.0.x/index.html">4.0.x</a>
-        </li>
-      </ul>
-    </li>
-  </ul>
-</div>
+    <div class="nav-container" data-component="components" data-version="4.0.x">
+        <aside class="nav">
+            <div class="panels">
+                <div class="nav-panel-menu is-active" data-panel="menu">
+                    <nav class="nav-menu">
+                        <button class="nav-menu-toggle"
+                                aria-label="Toggle expand/collapse all"
+                                style="display: none"></button>
+                        <h3 class="title"><a href="../index.html">Camel
+                            Components</a></h3>
+                        <ul class="nav-list">
+                            <li class="nav-item" data-depth="0">
+                                <ul class="nav-list">
+                                    <li class="nav-item" data-depth="1">
+                                        <button class="nav-item-toggle"></button>
+                                        <a class="nav-link"
+                                           href="enterprise-integration-patterns.html">Enterprise
+                                            Integration Patterns</a>
+                                        <ul class="nav-list">
+                                            <li class="nav-item" data-depth="2">
+                                                <a class="nav-link"
+                                                   href="aggregate-eip.html">Aggregate</a>
+                                            </li>
+                                            <li class="nav-item" data-depth="2">
+                                                <a class="nav-link"
+                                                   href="bean-eip.html">Bean</a>
+                                            </li>
+                                            <li class="nav-item" data-depth="2">
+                                                <a class="nav-link"
+                                                   href="change-data-capture.html">Change
+                                                    Data Capture</a>
+                                            </li>
+                                            <li class="nav-item" data-depth="2">
+                                                <a class="nav-link"
+                                                   href="channel-adapter.html">Channel
+                                                    Adapter</a>
+                                            </li>
+                                            <li class="nav-item" data-depth="2">
+                                                <a class="nav-link"
+                                                   href="choice-eip.html">Content
+                                                    Based Router</a>
+                                            </li>
+                                            <li class="nav-item" data-depth="2">
+                                                <a class="nav-link"
+                                                   href="circuitBreaker-eip.html">Circuit
+                                                    Breaker</a>
+                                            </li>
+                                            <li class="nav-item" data-depth="2">
+                                                <a class="nav-link"
+                                                   href="claimCheck-eip.html">Claim
+                                                    Check</a>
+                                            </li>
+                                            <li class="nav-item" data-depth="2">
+                                                <a class="nav-link"
+                                                   href="competing-consumers.html">Competing
+                                                    Consumers</a>
+                                            </li>
+                                            <li class="nav-item" data-depth="2">
+                                                <a class="nav-link"
+                                                   href="composed-message-processor.html">Composed
+                                                    Message Processor</a>
+                                            </li>
+                                            <li class="nav-item" data-depth="2">
+                                                <a class="nav-link"
+                                                   href="content-enricher.html">Content
+                                                    Enricher</a>
+                                            </li>
+                                            <li class="nav-item" data-depth="2">
+                                                <a class="nav-link"
+                                                   href="content-filter-eip.html">Content
+                                                    Filter</a>
+                                            </li>
+                                            <li class="nav-item" data-depth="2">
+                                                <a class="nav-link"
+                                                   href="convertBodyTo-eip.html">Convert
+                                                    Body To</a>
+                                            </li>
+                                            <li class="nav-item" data-depth="2">
+                                                <a class="nav-link"
+                                                   href="correlation-identifier.html">Correlation
+                                                    Identifier</a>
+                                            </li>
+                                            <li class="nav-item" data-depth="2">
+                                                <a class="nav-link"
+                                                   href="dead-letter-channel.html">Dead
+                                                    Letter Channel</a>
+                                            </li>
+                                            <li class="nav-item" data-depth="2">
+                                                <a class="nav-link"
+                                                   href="delay-eip.html">Delay</a>
+                                            </li>
+                                            <li class="nav-item" data-depth="2">
+                                                <a class="nav-link"
+                                                   href="durable-subscriber.html">Durable
+                                                    Subscriber</a>
+                                            </li>
+                                            <li class="nav-item" data-depth="2">
+                                                <a class="nav-link"
+                                                   href="dynamicRouter-eip.html">Dynamic
+                                                    Router</a>
+                                            </li>
+                                            <li class="nav-item" data-depth="2">
+                                                <a class="nav-link"
+                                                   href="enrich-eip.html">Enrich</a>
+                                            </li>
+                                            <li class="nav-item" data-depth="2">
+                                                <a class="nav-link"
+                                                   href="eventDrivenConsumer-eip.html">Event
+                                                    Driven Consumer</a>
+                                            </li>
+                                            <li class="nav-item" data-depth="2">
+                                                <a class="nav-link"
+                                                   href="event-message.html">Event
+                                                    Message</a>
+                                            </li>
+                                            <li class="nav-item" data-depth="2">
+                                                <a class="nav-link"
+                                                   href="filter-eip.html">Filter</a>
+                                            </li>
+                                            <li class="nav-item" data-depth="2">
+                                                <a class="nav-link"
+                                                   href="from-eip.html">From</a>
+                                            </li>
+                                            <li class="nav-item" data-depth="2">
+                                                <a class="nav-link"
+                                                   href="guaranteed-delivery.html">Guaranteed
+                                                    Delivery</a>
+                                            </li>
+                                            <li class="nav-item" data-depth="2">
+                                                <a class="nav-link"
+                                                   href="idempotentConsumer-eip.html">Idempotent
+                                                    Consumer</a>
+                                            </li>
+                                            <li class="nav-item" data-depth="2">
+                                                <a class="nav-link"
+                                                   href="intercept.html">Intercept</a>
+                                            </li>
+                                            <li class="nav-item" data-depth="2">
+                                                <a class="nav-link"
+                                                   href="kamelet-eip.html">Kamelet</a>
+                                            </li>
+                                            <li class="nav-item" data-depth="2">
+                                                <a class="nav-link"
+                                                   href="loadBalance-eip.html">Load
+                                                    Balance</a>
+                                            </li>
+                                            <li class="nav-item" data-depth="2">
+                                                <a class="nav-link"
+                                                   href="log-eip.html">Log</a>
+                                            </li>
+                                            <li class="nav-item" data-depth="2">
+                                                <a class="nav-link"
+                                                   href="loop-eip.html">Loop</a>
+                                            </li>
+                                            <li class="nav-item" data-depth="2">
+                                                <a class="nav-link"
+                                                   href="marshal-eip.html">Marshal</a>
+                                            </li>
+                                            <li class="nav-item" data-depth="2">
+                                                <a class="nav-link"
+                                                   href="message.html">Message</a>
+                                            </li>
+                                            <li class="nav-item" data-depth="2">
+                                                <a class="nav-link"
+                                                   href="message-broker.html">Message
+                                                    Broker</a>
+                                            </li>
+                                            <li class="nav-item" data-depth="2">
+                                                <a class="nav-link"
+                                                   href="message-bus.html">Message
+                                                    Bus</a>
+                                            </li>
+                                            <li class="nav-item" data-depth="2">
+                                                <a class="nav-link"
+                                                   href="message-channel.html">Message
+                                                    Channel</a>
+                                            </li>
+                                            <li class="nav-item" data-depth="2">
+                                                <a class="nav-link"
+                                                   href="message-dispatcher.html">Message
+                                                    Dispatcher</a>
+                                            </li>
+                                            <li class="nav-item" data-depth="2">
+                                                <a class="nav-link"
+                                                   href="message-endpoint.html">Message
+                                                    Endpoint</a>
+                                            </li>
+                                            <li class="nav-item" data-depth="2">
+                                                <a class="nav-link"
+                                                   href="message-expiration.html">Message
+                                                    Expiration</a>
+                                            </li>
+                                            <li class="nav-item" data-depth="2">
+                                                <a class="nav-link"
+                                                   href="message-history.html">Message
+                                                    History</a>
+                                            </li>
+                                            <li class="nav-item" data-depth="2">
+                                                <a class="nav-link"
+                                                   href="message-router.html">Message
+                                                    Router</a>
+                                            </li>
+                                            <li class="nav-item" data-depth="2">
+                                                <a class="nav-link"
+                                                   href="message-translator.html">Message
+                                                    Translator</a>
+                                            </li>
+                                            <li class="nav-item" data-depth="2">
+                                                <a class="nav-link"
+                                                   href="messaging-bridge.html">Messaging
+                                                    Bridge</a>
+                                            </li>
+                                            <li class="nav-item" data-depth="2">
+                                                <a class="nav-link"
+                                                   href="messaging-gateway.html">Messaging
+                                                    Gateway</a>
+                                            </li>
+                                            <li class="nav-item" data-depth="2">
+                                                <a class="nav-link"
+                                                   href="messaging-mapper.html">Messaging
+                                                    Mapper</a>
+                                            </li>
+                                            <li class="nav-item" data-depth="2">
+                                                <a class="nav-link"
+                                                   href="multicast-eip.html">Multicast</a>
+                                            </li>
+                                            <li class="nav-item" data-depth="2">
+                                                <a class="nav-link"
+                                                   href="normalizer.html">Normalizer</a>
+                                            </li>
+                                            <li class="nav-item" data-depth="2">
+                                                <a class="nav-link"
+                                                   href="pipeline-eip.html">Pipeline</a>
+                                            </li>
+                                            <li class="nav-item" data-depth="2">
+                                                <a class="nav-link"
+                                                   href="point-to-point-channel.html">Point
+                                                    to Point Channel</a>
+                                            </li>
+                                            <li class="nav-item" data-depth="2">
+                                                <a class="nav-link"
+                                                   href="pollEnrich-eip.html">Poll
+                                                    Enrich</a>
+                                            </li>
+                                            <li class="nav-item" data-depth="2">
+                                                <a class="nav-link"
+                                                   href="polling-consumer.html">Polling
+                                                    Consumer</a>
+                                            </li>
+                                            <li class="nav-item" data-depth="2">
+                                                <a class="nav-link"
+                                                   href="process-eip.html">Process</a>
+                                            </li>
+                                            <li class="nav-item" data-depth="2">
+                                                <a class="nav-link"
+                                                   href="process-manager.html">Process
+                                                    Manager</a>
+                                            </li>
+                                            <li class="nav-item" data-depth="2">
+                                                <a class="nav-link"
+                                                   href="publish-subscribe-channel.html">Publish
+                                                    Subscribe Channel</a>
+                                            </li>
+                                            <li class="nav-item" data-depth="2">
+                                                <a class="nav-link"
+                                                   href="recipientList-eip.html">Recipient
+                                                    List</a>
+                                            </li>
+                                            <li class="nav-item" data-depth="2">
+                                                <a class="nav-link"
+                                                   href="removeHeader-eip.html">Remove
+                                                    Header</a>
+                                            </li>
+                                            <li class="nav-item" data-depth="2">
+                                                <a class="nav-link"
+                                                   href="removeHeaders-eip.html">Remove
+                                                    Headers</a>
+                                            </li>
+                                            <li class="nav-item" data-depth="2">
+                                                <a class="nav-link"
+                                                   href="removeProperties-eip.html">Remove
+                                                    Properties</a>
+                                            </li>
+                                            <li class="nav-item" data-depth="2">
+                                                <a class="nav-link"
+                                                   href="removeProperty-eip.html">Remove
+                                                    Property</a>
+                                            </li>
+                                            <li class="nav-item" data-depth="2">
+                                                <a class="nav-link"
+                                                   href="requestReply-eip.html">Request
+                                                    Reply</a>
+                                            </li>
+                                            <li class="nav-item" data-depth="2">
+                                                <a class="nav-link"
+                                                   href="resequence-eip.html">Resequence</a>
+                                            </li>
+                                            <li class="nav-item" data-depth="2">
+                                                <a class="nav-link"
+                                                   href="resilience4j-eip.html">Resilience4j
+                                                    Circuit Breaker</a>
+                                            </li>
+                                            <li class="nav-item" data-depth="2">
+                                                <a class="nav-link"
+                                                   href="return-address.html">Return
+                                                    Address</a>
+                                            </li>
+                                            <li class="nav-item" data-depth="2">
+                                                <a class="nav-link"
+                                                   href="rollback-eip.html">Rollback</a>
+                                            </li>
+                                            <li class="nav-item" data-depth="2">
+                                                <a class="nav-link"
+                                                   href="routingSlip-eip.html">Routing
+                                                    Slip</a>
+                                            </li>
+                                            <li class="nav-item" data-depth="2">
+                                                <a class="nav-link"
+                                                   href="saga-eip.html">Saga</a>
+                                            </li>
+                                            <li class="nav-item" data-depth="2">
+                                                <a class="nav-link"
+                                                   href="sample-eip.html">Sample</a>
+                                            </li>
+                                            <li class="nav-item" data-depth="2">
+                                                <a class="nav-link"
+                                                   href="scatter-gather.html">Scatter
+                                                    Gather</a>
+                                            </li>
+                                            <li class="nav-item" data-depth="2">
+                                                <a class="nav-link"
+                                                   href="script-eip.html">Script</a>
+                                            </li>
+                                            <li class="nav-item" data-depth="2">
+                                                <a class="nav-link"
+                                                   href="selective-consumer.html">Selective
+                                                    Consumer</a>
+                                            </li>
+                                            <li class="nav-item" data-depth="2">
+                                                <a class="nav-link"
+                                                   href="service-activator.html">Service
+                                                    Activator</a>
+                                            </li>
+                                            <li class="nav-item" data-depth="2">
+                                                <a class="nav-link"
+                                                   href="serviceCall-eip.html">Service
+                                                    Call</a>
+                                            </li>
+                                            <li class="nav-item" data-depth="2">
+                                                <a class="nav-link"
+                                                   href="setBody-eip.html">Set
+                                                    Body</a>
+                                            </li>
+                                            <li class="nav-item" data-depth="2">
+                                                <a class="nav-link"
+                                                   href="setHeader-eip.html">Set
+                                                    Header</a>
+                                            </li>
+                                            <li class="nav-item" data-depth="2">
+                                                <a class="nav-link"
+                                                   href="setProperty-eip.html">Set
+                                                    Property</a>
+                                            </li>
+                                            <li class="nav-item" data-depth="2">
+                                                <a class="nav-link"
+                                                   href="sort-eip.html">Sort</a>
+                                            </li>
+                                            <li class="nav-item" data-depth="2">
+                                                <a class="nav-link"
+                                                   href="split-eip.html">Split</a>
+                                            </li>
+                                            <li class="nav-item" data-depth="2">
+                                                <a class="nav-link"
+                                                   href="step-eip.html">Step</a>
+                                            </li>
+                                            <li class="nav-item" data-depth="2">
+                                                <a class="nav-link"
+                                                   href="stop-eip.html">Stop</a>
+                                            </li>
+                                            <li class="nav-item" data-depth="2">
+                                                <a class="nav-link"
+                                                   href="threads-eip.html">Threads</a>
+                                            </li>
+                                            <li class="nav-item" data-depth="2">
+                                                <a class="nav-link"
+                                                   href="throttle-eip.html">Throttle</a>
+                                            </li>
+                                            <li class="nav-item" data-depth="2">
+                                                <a class="nav-link"
+                                                   href="to-eip.html">To</a>
+                                            </li>
+                                            <li class="nav-item" data-depth="2">
+                                                <a class="nav-link"
+                                                   href="toD-eip.html">To
+                                                    Dynamic</a>
+                                            </li>
+                                            <li class="nav-item" data-depth="2">
+                                                <a class="nav-link"
+                                                   href="transactional-client.html">Transactional
+                                                    Client</a>
+                                            </li>
+                                            <li class="nav-item" data-depth="2">
+                                                <a class="nav-link"
+                                                   href="transform-eip.html">Transform</a>
+                                            </li>
+                                            <li class="nav-item" data-depth="2">
+                                                <a class="nav-link"
+                                                   href="unmarshal-eip.html">Unmarshal</a>
+                                            </li>
+                                            <li class="nav-item" data-depth="2">
+                                                <a class="nav-link"
+                                                   href="validate-eip.html">Validate</a>
+                                            </li>
+                                            <li class="nav-item" data-depth="2">
+                                                <a class="nav-link"
+                                                   href="wireTap-eip.html">Wire
+                                                    Tap</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+                <div class="nav-panel-explore" data-panel="explore">
+                    <div class="context">
+                        <span class="title">Camel Components</span>
+                        <span class="version">4.0.x</span>
+                    </div>
+                    <ul class="components">
+                        <li class="component is-current">
+                            <div class="title"><a
+                                    href="../../4.10.x/index.html">Camel
+                                Components</a></div>
+                            <ul class="versions">
+                                <li class="version is-latest">
+                                    <a href="../../4.10.x/index.html">4.10.x
+                                        (LTS)</a>
+                                </li>
+                                <li class="version">
+                                    <a href="../../4.8.x/index.html">4.8.x</a>
+                                </li>
+                                <li class="version">
+                                    <a href="../../4.4.x/index.html">4.4.x</a>
+                                </li>
+                                <li class="version is-current">
+                                    <a href="../index.html">4.0.x</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="component">
+                            <div class="title"><a
+                                    href="../../../manual/4.10.x/index.html">User
+                                manual</a></div>
+                            <ul class="versions">
+                                <li class="version is-latest">
+                                    <a href="../../../manual/4.10.x/index.html">4.10.x</a>
+                                </li>
+                                <li class="version">
+                                    <a href="../../../manual/4.8.x/index.html">4.8.x</a>
+                                </li>
+                                <li class="version">
+                                    <a href="../../../manual/4.4.x/index.html">4.4.x</a>
+                                </li>
+                                <li class="version">
+                                    <a href="../../../manual/4.0.x/index.html">4.0.x</a>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </aside>
     </div>
-  </aside>
-</div>
-<main class="article">
-<div class="toolbar" role="navigation">
-<button class="nav-toggle"></button>
-  <a href="../../../manual/4.10.x/index.html" class="home-link"></a>
-<nav class="breadcrumbs" aria-label="breadcrumbs">
-  <ul>
-    <li><a href="../index.html">Camel Components</a></li>
-    <li><a href="resume-strategies.html">Resume Strategies</a></li>
-  </ul>
-</nav>
-<div class="page-versions">
-  <button class="version-menu-toggle" title="Show other versions of page">4.0.x</button>
-  <div class="version-menu">
-    <a class="version" href="../../4.10.x/eips/resume-strategies.html">4.10.x (LTS)</a>
-    <a class="version" href="../../4.8.x/eips/resume-strategies.html">4.8.x</a>
-    <a class="version" href="../../4.4.x/eips/resume-strategies.html">4.4.x</a>
-    <a class="version is-current" href="resume-strategies.html">4.0.x</a>
-  </div>
-</div>
+    <main class="article">
+        <div class="toolbar" role="navigation">
+            <button class="nav-toggle"></button>
+            <a href="../../../manual/4.10.x/index.html" class="home-link"></a>
+            <nav class="breadcrumbs" aria-label="breadcrumbs">
+                <ul>
+                    <li><a href="../index.html">Camel Components</a></li>
+                    <li><a href="resume-strategies.html">Resume Strategies</a>
+                    </li>
+                </ul>
+            </nav>
+            <div class="page-versions">
+                <button class="version-menu-toggle"
+                        title="Show other versions of page">4.0.x
+                </button>
+                <div class="version-menu">
+                    <a class="version"
+                       href="../../4.10.x/eips/resume-strategies.html">4.10.x
+                        (LTS)</a>
+                    <a class="version"
+                       href="../../4.8.x/eips/resume-strategies.html">4.8.x</a>
+                    <a class="version"
+                       href="../../4.4.x/eips/resume-strategies.html">4.4.x</a>
+                    <a class="version is-current" href="resume-strategies.html">4.0.x</a>
+                </div>
+            </div>
 
-</div>
-  <div class="content">
-<aside class="toc sidebar" data-title="Contents" data-levels="2">
-  <div class="toc-menu"></div>
-</aside>
-<article class="doc">
-<h1 class="page">Resume Strategies</h1>
-<div id="preamble">
-<div class="sectionbody">
-<div class="paragraph">
-<p>The resume strategies allow users to implement strategies that point the consumer part of the routes to the last point of consumption. This allows Camel to skip reading and processing data that has already been consumed.</p>
-</div>
-<div class="paragraph">
-<p>The resume strategies can be used to allow quicker stop and resume operations when consuming large data sources. For instance, imagine a scenario where the file consumer is reading a large file. Without a resume strategy, stopping and starting Camel would cause the consumer in the File component to read all the bytes of the given file at the initial offset (offset 0). The resume strategy allow integrations can point the consumer to the exact offset to resume the operations.</p>
-</div>
-<div class="paragraph">
-<p>Support for resume varies according to the component. Initially, the support is available for the following components:</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p><a href="../../4.10.x/atom-component.html" class="xref page">camel-atom</a></p>
-</li>
-<li>
-<p><a href="../../4.10.x/aws2-kinesis-component.html" class="xref page">camel-aws2-kinesis</a></p>
-</li>
-<li>
-<p><a href="../../4.10.x/cql-component.html" class="xref page">camel-cassandracql</a></p>
-</li>
-<li>
-<p><a href="../../4.10.x/couchbase-component.html" class="xref page">camel-couchbase</a></p>
-</li>
-<li>
-<p><a href="../../4.10.x/couchdb-component.html" class="xref page">camel-couchdb</a></p>
-</li>
-<li>
-<p><a href="../../4.10.x/file-component.html" class="xref page">camel-file</a></p>
-</li>
-<li>
-<p><a href="../../4.10.x/kafka-component.html" class="xref page">camel-kafka</a></p>
-</li>
-<li>
-<p><a href="../../4.10.x/rss-component.html" class="xref page">camel-rss</a></p>
-</li>
-</ul>
-</div>
-<div class="paragraph">
-<p>The resume strategies comes in 3 parts:</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>A DSL method that marks the route as supporting resume operations and points to an instance of a strategy implementation.</p>
-</li>
-<li>
-<p>A set of core infrastructure that allow integrations to implement different types of strategies</p>
-</li>
-<li>
-<p>Basic strategies implementations that can be extended to implement the specific resume strategies required by the integrations</p>
-</li>
-</ul>
-</div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="_the_dsl_method"><a class="anchor" href="#_the_dsl_method"></a>The DSL method</h2>
-<div class="sectionbody">
-<div class="paragraph">
-<p>The route needs to use the <code>resumable()</code> method followed by passing a strategy configuration using <code>configuration</code>.
-It is also possible to use the <code>resumableStrategy</code> to point to an instance of the resume strategy in use, although
-this is much more complex. The vast majority of the cases should use a <code>configuration</code>, in which case Camel will do
-the heavy-lifting for you.</p>
-</div>
-<div class="paragraph">
-<p>Using the resume API with the configuration should look like this:</p>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">KafkaResumeStrategyConfigurationBuilder kafkaConfigurationBuilder = KafkaResumeStrategyConfigurationBuilder.newBuilder()
+        </div>
+        <div class="content">
+            <aside class="toc sidebar" data-title="Contents" data-levels="2">
+                <div class="toc-menu"></div>
+            </aside>
+            <article class="doc">
+                <h1 class="page">Resume Strategies</h1>
+                <div id="preamble">
+                    <div class="sectionbody">
+                        <div class="paragraph">
+                            <p>The resume strategies allow users to implement
+                                strategies that point the consumer part of the
+                                routes to the last point of consumption. This
+                                allows Camel to skip reading and processing data
+                                that has already been consumed.</p>
+                        </div>
+                        <div class="paragraph">
+                            <p>The resume strategies can be used to allow
+                                quicker stop and resume operations when
+                                consuming large data sources. For instance,
+                                imagine a scenario where the file consumer is
+                                reading a large file. Without a resume strategy,
+                                stopping and starting Camel would cause the
+                                consumer in the File component to read all the
+                                bytes of the given file at the initial offset
+                                (offset 0). The resume strategy allow
+                                integrations can point the consumer to the exact
+                                offset to resume the operations.</p>
+                        </div>
+                        <div class="paragraph">
+                            <p>Support for resume varies according to the
+                                component. Initially, the support is available
+                                for the following components:</p>
+                        </div>
+                        <div class="ulist">
+                            <ul>
+                                <li>
+                                    <p>
+                                        <a href="../../4.10.x/atom-component.html"
+                                           class="xref page">camel-atom</a></p>
+                                </li>
+                                <li>
+                                    <p>
+                                        <a href="../../4.10.x/aws2-kinesis-component.html"
+                                           class="xref page">camel-aws2-kinesis</a>
+                                    </p>
+                                </li>
+                                <li>
+                                    <p><a href="../../4.10.x/cql-component.html"
+                                          class="xref page">camel-cassandracql</a>
+                                    </p>
+                                </li>
+                                <li>
+                                    <p>
+                                        <a href="../../4.10.x/couchbase-component.html"
+                                           class="xref page">camel-couchbase</a>
+                                    </p>
+                                </li>
+                                <li>
+                                    <p>
+                                        <a href="../../4.10.x/couchdb-component.html"
+                                           class="xref page">camel-couchdb</a>
+                                    </p>
+                                </li>
+                                <li>
+                                    <p>
+                                        <a href="../../4.10.x/file-component.html"
+                                           class="xref page">camel-file</a></p>
+                                </li>
+                                <li>
+                                    <p>
+                                        <a href="../../4.10.x/kafka-component.html"
+                                           class="xref page">camel-kafka</a></p>
+                                </li>
+                                <li>
+                                    <p><a href="../../4.10.x/rss-component.html"
+                                          class="xref page">camel-rss</a></p>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="paragraph">
+                            <p>The resume strategies comes in 3 parts:</p>
+                        </div>
+                        <div class="ulist">
+                            <ul>
+                                <li>
+                                    <p>A DSL method that marks the route as
+                                        supporting resume operations and points
+                                        to an instance of a strategy
+                                        implementation.</p>
+                                </li>
+                                <li>
+                                    <p>A set of core infrastructure that allow
+                                        integrations to implement different
+                                        types of strategies</p>
+                                </li>
+                                <li>
+                                    <p>Basic strategies implementations that can
+                                        be extended to implement the specific
+                                        resume strategies required by the
+                                        integrations</p>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="sect1">
+                    <h2 id="_the_dsl_method"><a class="anchor"
+                                                href="#_the_dsl_method"></a>The
+                        DSL method</h2>
+                    <div class="sectionbody">
+                        <div class="paragraph">
+                            <p>The route needs to use the
+                                <code>resumable()</code> method followed by
+                                passing a strategy configuration using <code>configuration</code>.
+                                It is also possible to use the <code>resumableStrategy</code>
+                                to point to an instance of the resume strategy
+                                in use, although
+                                this is much more complex. The vast majority of
+                                the cases should use a
+                                <code>configuration</code>, in which case Camel
+                                will do
+                                the heavy-lifting for you.</p>
+                        </div>
+                        <div class="paragraph">
+                            <p>Using the resume API with the configuration
+                                should look like this:</p>
+                        </div>
+                        <div class="listingblock">
+                            <div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs"
+                                         data-lang="java">KafkaResumeStrategyConfigurationBuilder kafkaConfigurationBuilder = KafkaResumeStrategyConfigurationBuilder.newBuilder()
     .withBootstrapServers("kafka-address:9092")
     .withTopic("offset")
     .withProducerProperty("max.block.ms", "10000")
@@ -454,209 +666,310 @@ the heavy-lifting for you.</p>
 from("some:component")
     .resumable().configuration(kafkaConfigurationBuilder)
     .process(this::process);</code></pre>
-</div>
-</div>
-<div class="sect2">
-<h3 id="_configuring_via_beans"><a class="anchor" href="#_configuring_via_beans"></a>Configuring via beans</h3>
-<div class="paragraph">
-<p>This instance can be bound in the Context registry as follows:</p>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">getCamelContext().getRegistry().bind("testResumeStrategy", new MyTestResumeStrategy());
+                            </div>
+                        </div>
+                        <div class="sect2">
+                            <h3 id="_configuring_via_beans"><a class="anchor"
+                                                               href="#_configuring_via_beans"></a>Configuring
+                                via beans</h3>
+                            <div class="paragraph">
+                                <p>This instance can be bound in the Context
+                                    registry as follows:</p>
+                            </div>
+                            <div class="listingblock">
+                                <div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs"
+                                         data-lang="java">getCamelContext().getRegistry().bind("testResumeStrategy", new MyTestResumeStrategy());
 getCamelContext().getRegistry().bind("resumeCache", new MyChoiceOfResumeCache&lt;&gt;(100));
 
 from("some:component")
     .resumable("testResumeStrategy")
     .process(this::process);</code></pre>
-</div>
-</div>
-<div class="paragraph">
-<p>Or the instance can be constructed as follows:</p>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">getCamelContext().getRegistry().bind("resumeCache", new MyChoiceOfResumeCache&lt;&gt;(100));
+                                </div>
+                            </div>
+                            <div class="paragraph">
+                                <p>Or the instance can be constructed as
+                                    follows:</p>
+                            </div>
+                            <div class="listingblock">
+                                <div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs"
+                                         data-lang="java">getCamelContext().getRegistry().bind("resumeCache", new MyChoiceOfResumeCache&lt;&gt;(100));
 
 from("some:component")
     .resumable(new MyTestResumeStrategy())
     .process(this::process)</code></pre>
-</div>
-</div>
-<div class="paragraph">
-<p>In some circumstances, such as when dealing with File I/O, it may be necessary to set the offset manually. There are
-<strong>supporting classes</strong> that can help work with resumables:</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p><code>org.apache.camel.support.Resumables</code> - resumables handling support</p>
-</li>
-<li>
-<p><code>org.apache.camel.support.Offsets</code> - offset handling support</p>
-</li>
-</ul>
-</div>
-</div>
-<div class="sect2">
-<h3 id="_intermittent_mode"><a class="anchor" href="#_intermittent_mode"></a>Intermittent Mode</h3>
-<div class="paragraph">
-<p>In some cases it may be necessary to avoid updating the offset for every exchange. You can enable the intermittent mode to modify the route behavior so that missing offsets will not cause an exception:</p>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">from("some:component")
+                                </div>
+                            </div>
+                            <div class="paragraph">
+                                <p>In some circumstances, such as when dealing
+                                    with File I/O, it may be necessary to set
+                                    the offset manually. There are
+                                    <strong>supporting classes</strong> that can
+                                    help work with resumables:</p>
+                            </div>
+                            <div class="ulist">
+                                <ul>
+                                    <li>
+                                        <p><code>org.apache.camel.support.Resumables</code>
+                                            - resumables handling support</p>
+                                    </li>
+                                    <li>
+                                        <p><code>org.apache.camel.support.Offsets</code>
+                                            - offset handling support</p>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="sect2">
+                            <h3 id="_intermittent_mode"><a class="anchor"
+                                                           href="#_intermittent_mode"></a>Intermittent
+                                Mode</h3>
+                            <div class="paragraph">
+                                <p>In some cases it may be necessary to avoid
+                                    updating the offset for every exchange. You
+                                    can enable the intermittent mode to modify
+                                    the route behavior so that missing offsets
+                                    will not cause an exception:</p>
+                            </div>
+                            <div class="listingblock">
+                                <div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs"
+                                         data-lang="java">from("some:component")
 .resumable(new MyTestResumeStrategy()).intermittent(true)
 .process(this::process)</code></pre>
-</div>
-</div>
-</div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="_builtin_resume_strategies"><a class="anchor" href="#_builtin_resume_strategies"></a>Builtin Resume Strategies</h2>
-<div class="sectionbody">
-<div class="paragraph">
-<p>Camel comes with a few builtin strategies that can be used to store, retrieve and update the offsets. The following strategies are available:</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p><code>SingleNodeKafkaResumeStrategy</code> - a resume strategy from the <code>camel-kafka</code> component that uses Kafka as the store for the offsets and is suitable for single node integrations.</p>
-</li>
-<li>
-<p><code>MultiNodeKafkaResumeStrategy</code> - a resume strategy from the <code>camel-kafka</code> component that uses Kafka as the store for the offsets and is suitable for multi node integrations (i.e.: integrations running on clusters using the <a href="../../4.10.x/master-component.html" class="xref page">camel-master</a> component.</p>
-</li>
-</ul>
-</div>
-<div class="sect2">
-<h3 id="_configuring_the_strategies"><a class="anchor" href="#_configuring_the_strategies"></a>Configuring the Strategies</h3>
-<div class="paragraph">
-<p>Some of the builtin strategies may need additional configuration. This can be done using the configuration builders
-available for each strategy. For instance, to configure either one of the Kafka strategies mentioned earlier, the
-<code>KafkaResumeStrategyConfiguration</code> needs to be used. It can be created using a code similar to the following:</p>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">    KafkaResumeStrategyConfiguration resumeStrategyConfiguration = KafkaResumeStrategyConfigurationBuilder.newBuilder()
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="sect1">
+                    <h2 id="_builtin_resume_strategies"><a class="anchor"
+                                                           href="#_builtin_resume_strategies"></a>Builtin
+                        Resume Strategies</h2>
+                    <div class="sectionbody">
+                        <div class="paragraph">
+                            <p>Camel comes with a few builtin strategies that
+                                can be used to store, retrieve and update the
+                                offsets. The following strategies are
+                                available:</p>
+                        </div>
+                        <div class="ulist">
+                            <ul>
+                                <li>
+                                    <p>
+                                        <code>SingleNodeKafkaResumeStrategy</code>
+                                        - a resume strategy from the <code>camel-kafka</code>
+                                        component that uses Kafka as the store
+                                        for the offsets and is suitable for
+                                        single node integrations.</p>
+                                </li>
+                                <li>
+                                    <p><code>MultiNodeKafkaResumeStrategy</code>
+                                        - a resume strategy from the <code>camel-kafka</code>
+                                        component that uses Kafka as the store
+                                        for the offsets and is suitable for
+                                        multi node integrations (i.e.:
+                                        integrations running on clusters using
+                                        the
+                                        <a href="../../4.10.x/master-component.html"
+                                           class="xref page">camel-master</a>
+                                        component.</p>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="sect2">
+                            <h3 id="_configuring_the_strategies"><a
+                                    class="anchor"
+                                    href="#_configuring_the_strategies"></a>Configuring
+                                the Strategies</h3>
+                            <div class="paragraph">
+                                <p>Some of the builtin strategies may need
+                                    additional configuration. This can be done
+                                    using the configuration builders
+                                    available for each strategy. For instance,
+                                    to configure either one of the Kafka
+                                    strategies mentioned earlier, the
+                                    <code>KafkaResumeStrategyConfiguration</code>
+                                    needs to be used. It can be created using a
+                                    code similar to the following:</p>
+                            </div>
+                            <div class="listingblock">
+                                <div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs"
+                                         data-lang="java">    KafkaResumeStrategyConfiguration resumeStrategyConfiguration = KafkaResumeStrategyConfigurationBuilder.newBuilder()
             .withBootstrapServers(bootStrapAddress)
             .withTopic(kafkaTopic)
             .build();</code></pre>
-</div>
-</div>
-</div>
-<div class="sect2">
-<h3 id="_implementing_new_builtin_resume_strategies"><a class="anchor" href="#_implementing_new_builtin_resume_strategies"></a>Implementing New Builtin Resume Strategies</h3>
-<div class="paragraph">
-<p>New builtin resume strategies can be created by implementing the <code>ResumeStrategy</code> interface. Check the code for <code>SingleNodeKafkaResumeStrategy</code> for implementation details.</p>
-</div>
-</div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="_local_cache_support"><a class="anchor" href="#_local_cache_support"></a>Local Cache Support</h2>
-<div class="sectionbody">
-<div class="paragraph">
-<p>A sample local cache implemented using <a href="https://github.com/ben-manes/caffeine">Caffeine</a>.</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p><code>org.apache.camel.component.caffeine.resume.CaffeineCache</code></p>
-</li>
-</ul>
-</div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="_known_limitations"><a class="anchor" href="#_known_limitations"></a>Known Limitations</h2>
-<div class="sectionbody">
-<div class="paragraph">
-<p>When using the converters with the file component, beware of the differences in the behavior from <code>Reader</code> and <code>InputStream</code>:</p>
-</div>
-<div class="paragraph">
-<p>For instance, the behavior of:</p>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">from("file:{{input.dir}}?noop=true&amp;fileName={{input.file}}")
+                                </div>
+                            </div>
+                        </div>
+                        <div class="sect2">
+                            <h3 id="_implementing_new_builtin_resume_strategies">
+                                <a class="anchor"
+                                   href="#_implementing_new_builtin_resume_strategies"></a>Implementing
+                                New Builtin Resume Strategies</h3>
+                            <div class="paragraph">
+                                <p>New builtin resume strategies can be created
+                                    by implementing the
+                                    <code>ResumeStrategy</code> interface. Check
+                                    the code for <code>SingleNodeKafkaResumeStrategy</code>
+                                    for implementation details.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="sect1">
+                    <h2 id="_local_cache_support"><a class="anchor"
+                                                     href="#_local_cache_support"></a>Local
+                        Cache Support</h2>
+                    <div class="sectionbody">
+                        <div class="paragraph">
+                            <p>A sample local cache implemented using <a
+                                    href="https://github.com/ben-manes/caffeine">Caffeine</a>.
+                            </p>
+                        </div>
+                        <div class="ulist">
+                            <ul>
+                                <li>
+                                    <p><code>org.apache.camel.component.caffeine.resume.CaffeineCache</code>
+                                    </p>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="sect1">
+                    <h2 id="_known_limitations"><a class="anchor"
+                                                   href="#_known_limitations"></a>Known
+                        Limitations</h2>
+                    <div class="sectionbody">
+                        <div class="paragraph">
+                            <p>When using the converters with the file
+                                component, beware of the differences in the
+                                behavior from <code>Reader</code> and <code>InputStream</code>:
+                            </p>
+                        </div>
+                        <div class="paragraph">
+                            <p>For instance, the behavior of:</p>
+                        </div>
+                        <div class="listingblock">
+                            <div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs"
+                                         data-lang="java">from("file:{{input.dir}}?noop=true&amp;fileName={{input.file}}")
     .resumable("testResumeStrategy")
     .convertBodyTo(Reader.class)
     .process(this::process);</code></pre>
-</div>
-</div>
-<div class="paragraph">
-<p>Is different from the behavior of:</p>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">from("file:{{input.dir}}?noop=true&amp;fileName={{input.file}}")
+                            </div>
+                        </div>
+                        <div class="paragraph">
+                            <p>Is different from the behavior of:</p>
+                        </div>
+                        <div class="listingblock">
+                            <div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs"
+                                         data-lang="java">from("file:{{input.dir}}?noop=true&amp;fileName={{input.file}}")
     .resumable("testResumeStrategy")
     .convertBodyTo(InputStream.class)
     .process(this::process);</code></pre>
-</div>
-</div>
-<div class="paragraph">
-<p><strong>Reason</strong>: the <code>skip</code> method in the Reader will skip characters, whereas the same method on the InputStream will skip bytes.</p>
-</div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="_pausable_consumers_api"><a class="anchor" href="#_pausable_consumers_api"></a>Pausable Consumers API</h2>
-<div class="sectionbody">
-<div class="paragraph">
-<p>The Pausable consumers API is a subset of the resume API that provides pause and resume features for supported components.
-With this API it is possible to implement logic that controls the behavior of the consumer based on conditions that are
-external to the component. For instance, it makes it possible to pause the consumer if an external system becomes unavailable.</p>
-</div>
-<div class="paragraph">
-<p>Currently, support for pausable consumers is available for the following components:</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p><a href="../../4.10.x/kafka-component.html" class="xref page">camel-kafka</a></p>
-</li>
-</ul>
-</div>
-<div class="paragraph">
-<p>To use the API, it needs an instance of a Consumer listener along with a predicate that tests whether to continue.</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p><code>org.apache.camel.resume.ConsumerListener</code> - the consumer listener interface. Camel already comes with pre-built consumer listeners, but users in need of more complex behaviors can create their own listeners.</p>
-</li>
-<li>
-<p>a predicate that returns true if data consumption should resume or false if consumption should be put on pause</p>
-</li>
-</ul>
-</div>
-<div class="paragraph">
-<p>Usage example:</p>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">from(from)
+                            </div>
+                        </div>
+                        <div class="paragraph">
+                            <p><strong>Reason</strong>: the <code>skip</code>
+                                method in the Reader will skip characters,
+                                whereas the same method on the InputStream will
+                                skip bytes.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="sect1">
+                    <h2 id="_pausable_consumers_api"><a class="anchor"
+                                                        href="#_pausable_consumers_api"></a>Pausable
+                        Consumers API</h2>
+                    <div class="sectionbody">
+                        <div class="paragraph">
+                            <p>The Pausable consumers API is a subset of the
+                                resume API that provides pause and resume
+                                features for supported components.
+                                With this API it is possible to implement logic
+                                that controls the behavior of the consumer based
+                                on conditions that are
+                                external to the component. For instance, it
+                                makes it possible to pause the consumer if an
+                                external system becomes unavailable.</p>
+                        </div>
+                        <div class="paragraph">
+                            <p>Currently, support for pausable consumers is
+                                available for the following components:</p>
+                        </div>
+                        <div class="ulist">
+                            <ul>
+                                <li>
+                                    <p>
+                                        <a href="../../4.10.x/kafka-component.html"
+                                           class="xref page">camel-kafka</a></p>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="paragraph">
+                            <p>To use the API, it needs an instance of a
+                                Consumer listener along with a predicate that
+                                tests whether to continue.</p>
+                        </div>
+                        <div class="ulist">
+                            <ul>
+                                <li>
+                                    <p><code>org.apache.camel.resume.ConsumerListener</code>
+                                        - the consumer listener interface. Camel
+                                        already comes with pre-built consumer
+                                        listeners, but users in need of more
+                                        complex behaviors can create their own
+                                        listeners.</p>
+                                </li>
+                                <li>
+                                    <p>a predicate that returns true if data
+                                        consumption should resume or false if
+                                        consumption should be put on pause</p>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="paragraph">
+                            <p>Usage example:</p>
+                        </div>
+                        <div class="listingblock">
+                            <div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs"
+                                         data-lang="java">from(from)
     .pausable(new KafkaConsumerListener(), o -&gt; canContinue())
     .process(exchange -&gt; LOG.info("Received an exchange: {}", exchange.getMessage().getBody()))
     .to(destination);</code></pre>
-</div>
-</div>
-<div class="paragraph">
-<p>You can also integrate the pausable API and the consumer listener with the circuit breaker EIP. For instance, it&#8217;s
-possible to configure the circuit breaker so that it can manipulate the state of the listener based on success or on
-error conditions on the circuit.</p>
-</div>
-<div class="paragraph">
-<p>One example, would be to create a event watcher that checks for a downstream system availability. It watches for error events and, when they happen, it triggers a scheduled check. On success, it shuts down the scheduled check.</p>
-</div>
-<div class="paragraph">
-<p>An example implementation of this approach would be similar to this:</p>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">CircuitBreaker circuitBreaker = CircuitBreaker.ofDefaults("pausable");
+                            </div>
+                        </div>
+                        <div class="paragraph">
+                            <p>You can also integrate the pausable API and the
+                                consumer listener with the circuit breaker EIP.
+                                For instance, it&#8217;s
+                                possible to configure the circuit breaker so
+                                that it can manipulate the state of the listener
+                                based on success or on
+                                error conditions on the circuit.</p>
+                        </div>
+                        <div class="paragraph">
+                            <p>One example, would be to create a event watcher
+                                that checks for a downstream system
+                                availability. It watches for error events and,
+                                when they happen, it triggers a scheduled check.
+                                On success, it shuts down the scheduled
+                                check.</p>
+                        </div>
+                        <div class="paragraph">
+                            <p>An example implementation of this approach would
+                                be similar to this:</p>
+                        </div>
+                        <div class="listingblock">
+                            <div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs"
+                                         data-lang="java">CircuitBreaker circuitBreaker = CircuitBreaker.ofDefaults("pausable");
 
 circuitBreaker.getEventPublisher()
     .onSuccess(event -&gt; {
@@ -689,17 +1002,18 @@ from(from)
         .resilience4jConfiguration().circuitBreaker("pausableCircuit").end()
         .to(to)
     .end();</code></pre>
-</div>
-</div>
-</div>
-</div>
-</article>
-  </div>
-</main>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </article>
+        </div>
+    </main>
 </div>
 <footer class="footer">
 </footer>
-<script id="site-script" src="../../../_/js/site.js" data-ui-root-path="../../../_"></script>
+<script id="site-script" src="../../../_/js/site.js"
+        data-ui-root-path="../../../_"></script>
 <script async src="../../../_/js/vendor/highlight.js"></script>
-  </body>
+</body>
 </html>

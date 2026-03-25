@@ -1,640 +1,902 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+<head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <title>Competing Consumers :: Red Hat build of Apache Camel</title>
     <meta name="generator" content="Antora 3.1.4">
     <link rel="stylesheet" href="../../../_/css/site.css">
-  </head>
-  <body class="article">
+</head>
+<body class="article">
 <header class="header">
-  <nav class="navbar">
-    <div class="navbar-brand">
-      <a class="navbar-item" href="/">Red Hat build of Apache Camel</a>
-      <button class="navbar-burger" data-target="topbar-nav">
-        <span></span>
-        <span></span>
-        <span></span>
-      </button>
-    </div>
-  </nav>
+    <nav class="navbar">
+        <div class="navbar-brand">
+            <a class="navbar-item" href="/">Red Hat build of Apache Camel</a>
+            <button class="navbar-burger" data-target="topbar-nav">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
 </header>
 <div class="body">
-<div class="nav-container" data-component="components" data-version="4.0.x">
-  <aside class="nav">
-    <div class="panels">
-<div class="nav-panel-menu is-active" data-panel="menu">
-  <nav class="nav-menu">
-    <button class="nav-menu-toggle" aria-label="Toggle expand/collapse all" style="display: none"></button>
-    <h3 class="title"><a href="../index.html">Camel Components</a></h3>
-<ul class="nav-list">
-  <li class="nav-item" data-depth="0">
-<ul class="nav-list">
-  <li class="nav-item" data-depth="1">
-    <button class="nav-item-toggle"></button>
-    <a class="nav-link" href="enterprise-integration-patterns.html">Enterprise Integration Patterns</a>
-<ul class="nav-list">
-  <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="aggregate-eip.html">Aggregate</a>
-  </li>
-  <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="bean-eip.html">Bean</a>
-  </li>
-  <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="change-data-capture.html">Change Data Capture</a>
-  </li>
-  <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="channel-adapter.html">Channel Adapter</a>
-  </li>
-  <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="choice-eip.html">Content Based Router</a>
-  </li>
-  <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="circuitBreaker-eip.html">Circuit Breaker</a>
-  </li>
-  <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="claimCheck-eip.html">Claim Check</a>
-  </li>
-  <li class="nav-item is-current-page" data-depth="2">
-    <a class="nav-link" href="competing-consumers.html">Competing Consumers</a>
-  </li>
-  <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="composed-message-processor.html">Composed Message Processor</a>
-  </li>
-  <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="content-enricher.html">Content Enricher</a>
-  </li>
-  <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="content-filter-eip.html">Content Filter</a>
-  </li>
-  <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="convertBodyTo-eip.html">Convert Body To</a>
-  </li>
-  <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="correlation-identifier.html">Correlation Identifier</a>
-  </li>
-  <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="dead-letter-channel.html">Dead Letter Channel</a>
-  </li>
-  <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="delay-eip.html">Delay</a>
-  </li>
-  <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="durable-subscriber.html">Durable Subscriber</a>
-  </li>
-  <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="dynamicRouter-eip.html">Dynamic Router</a>
-  </li>
-  <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="enrich-eip.html">Enrich</a>
-  </li>
-  <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="eventDrivenConsumer-eip.html">Event Driven Consumer</a>
-  </li>
-  <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="event-message.html">Event Message</a>
-  </li>
-  <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="filter-eip.html">Filter</a>
-  </li>
-  <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="from-eip.html">From</a>
-  </li>
-  <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="guaranteed-delivery.html">Guaranteed Delivery</a>
-  </li>
-  <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="idempotentConsumer-eip.html">Idempotent Consumer</a>
-  </li>
-  <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="intercept.html">Intercept</a>
-  </li>
-  <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="kamelet-eip.html">Kamelet</a>
-  </li>
-  <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="loadBalance-eip.html">Load Balance</a>
-  </li>
-  <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="log-eip.html">Log</a>
-  </li>
-  <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="loop-eip.html">Loop</a>
-  </li>
-  <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="marshal-eip.html">Marshal</a>
-  </li>
-  <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="message.html">Message</a>
-  </li>
-  <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="message-broker.html">Message Broker</a>
-  </li>
-  <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="message-bus.html">Message Bus</a>
-  </li>
-  <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="message-channel.html">Message Channel</a>
-  </li>
-  <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="message-dispatcher.html">Message Dispatcher</a>
-  </li>
-  <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="message-endpoint.html">Message Endpoint</a>
-  </li>
-  <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="message-expiration.html">Message Expiration</a>
-  </li>
-  <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="message-history.html">Message History</a>
-  </li>
-  <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="message-router.html">Message Router</a>
-  </li>
-  <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="message-translator.html">Message Translator</a>
-  </li>
-  <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="messaging-bridge.html">Messaging Bridge</a>
-  </li>
-  <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="messaging-gateway.html">Messaging Gateway</a>
-  </li>
-  <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="messaging-mapper.html">Messaging Mapper</a>
-  </li>
-  <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="multicast-eip.html">Multicast</a>
-  </li>
-  <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="normalizer.html">Normalizer</a>
-  </li>
-  <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="pipeline-eip.html">Pipeline</a>
-  </li>
-  <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="point-to-point-channel.html">Point to Point Channel</a>
-  </li>
-  <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="pollEnrich-eip.html">Poll Enrich</a>
-  </li>
-  <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="polling-consumer.html">Polling Consumer</a>
-  </li>
-  <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="process-eip.html">Process</a>
-  </li>
-  <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="process-manager.html">Process Manager</a>
-  </li>
-  <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="publish-subscribe-channel.html">Publish Subscribe Channel</a>
-  </li>
-  <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="recipientList-eip.html">Recipient List</a>
-  </li>
-  <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="removeHeader-eip.html">Remove Header</a>
-  </li>
-  <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="removeHeaders-eip.html">Remove Headers</a>
-  </li>
-  <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="removeProperties-eip.html">Remove Properties</a>
-  </li>
-  <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="removeProperty-eip.html">Remove Property</a>
-  </li>
-  <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="requestReply-eip.html">Request Reply</a>
-  </li>
-  <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="resequence-eip.html">Resequence</a>
-  </li>
-  <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="resilience4j-eip.html">Resilience4j Circuit Breaker</a>
-  </li>
-  <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="return-address.html">Return Address</a>
-  </li>
-  <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="rollback-eip.html">Rollback</a>
-  </li>
-  <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="routingSlip-eip.html">Routing Slip</a>
-  </li>
-  <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="saga-eip.html">Saga</a>
-  </li>
-  <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="sample-eip.html">Sample</a>
-  </li>
-  <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="scatter-gather.html">Scatter Gather</a>
-  </li>
-  <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="script-eip.html">Script</a>
-  </li>
-  <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="selective-consumer.html">Selective Consumer</a>
-  </li>
-  <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="service-activator.html">Service Activator</a>
-  </li>
-  <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="serviceCall-eip.html">Service Call</a>
-  </li>
-  <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="setBody-eip.html">Set Body</a>
-  </li>
-  <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="setHeader-eip.html">Set Header</a>
-  </li>
-  <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="setProperty-eip.html">Set Property</a>
-  </li>
-  <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="sort-eip.html">Sort</a>
-  </li>
-  <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="split-eip.html">Split</a>
-  </li>
-  <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="step-eip.html">Step</a>
-  </li>
-  <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="stop-eip.html">Stop</a>
-  </li>
-  <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="threads-eip.html">Threads</a>
-  </li>
-  <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="throttle-eip.html">Throttle</a>
-  </li>
-  <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="to-eip.html">To</a>
-  </li>
-  <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="toD-eip.html">To Dynamic</a>
-  </li>
-  <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="transactional-client.html">Transactional Client</a>
-  </li>
-  <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="transform-eip.html">Transform</a>
-  </li>
-  <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="unmarshal-eip.html">Unmarshal</a>
-  </li>
-  <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="validate-eip.html">Validate</a>
-  </li>
-  <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="wireTap-eip.html">Wire Tap</a>
-  </li>
-</ul>
-  </li>
-</ul>
-  </li>
-</ul>
-  </nav>
-</div>
-<div class="nav-panel-explore" data-panel="explore">
-  <div class="context">
-    <span class="title">Camel Components</span>
-    <span class="version">4.0.x</span>
-  </div>
-  <ul class="components">
-    <li class="component is-current">
-      <div class="title"><a href="../../4.10.x/index.html">Camel Components</a></div>
-      <ul class="versions">
-        <li class="version is-latest">
-          <a href="../../4.10.x/index.html">4.10.x (LTS)</a>
-        </li>
-        <li class="version">
-          <a href="../../4.8.x/index.html">4.8.x</a>
-        </li>
-        <li class="version">
-          <a href="../../4.4.x/index.html">4.4.x</a>
-        </li>
-        <li class="version is-current">
-          <a href="../index.html">4.0.x</a>
-        </li>
-      </ul>
-    </li>
-    <li class="component">
-      <div class="title"><a href="../../../manual/4.10.x/index.html">User manual</a></div>
-      <ul class="versions">
-        <li class="version is-latest">
-          <a href="../../../manual/4.10.x/index.html">4.10.x</a>
-        </li>
-        <li class="version">
-          <a href="../../../manual/4.8.x/index.html">4.8.x</a>
-        </li>
-        <li class="version">
-          <a href="../../../manual/4.4.x/index.html">4.4.x</a>
-        </li>
-        <li class="version">
-          <a href="../../../manual/4.0.x/index.html">4.0.x</a>
-        </li>
-      </ul>
-    </li>
-  </ul>
-</div>
+    <div class="nav-container" data-component="components" data-version="4.0.x">
+        <aside class="nav">
+            <div class="panels">
+                <div class="nav-panel-menu is-active" data-panel="menu">
+                    <nav class="nav-menu">
+                        <button class="nav-menu-toggle"
+                                aria-label="Toggle expand/collapse all"
+                                style="display: none"></button>
+                        <h3 class="title"><a href="../index.html">Camel
+                            Components</a></h3>
+                        <ul class="nav-list">
+                            <li class="nav-item" data-depth="0">
+                                <ul class="nav-list">
+                                    <li class="nav-item" data-depth="1">
+                                        <button class="nav-item-toggle"></button>
+                                        <a class="nav-link"
+                                           href="enterprise-integration-patterns.html">Enterprise
+                                            Integration Patterns</a>
+                                        <ul class="nav-list">
+                                            <li class="nav-item" data-depth="2">
+                                                <a class="nav-link"
+                                                   href="aggregate-eip.html">Aggregate</a>
+                                            </li>
+                                            <li class="nav-item" data-depth="2">
+                                                <a class="nav-link"
+                                                   href="bean-eip.html">Bean</a>
+                                            </li>
+                                            <li class="nav-item" data-depth="2">
+                                                <a class="nav-link"
+                                                   href="change-data-capture.html">Change
+                                                    Data Capture</a>
+                                            </li>
+                                            <li class="nav-item" data-depth="2">
+                                                <a class="nav-link"
+                                                   href="channel-adapter.html">Channel
+                                                    Adapter</a>
+                                            </li>
+                                            <li class="nav-item" data-depth="2">
+                                                <a class="nav-link"
+                                                   href="choice-eip.html">Content
+                                                    Based Router</a>
+                                            </li>
+                                            <li class="nav-item" data-depth="2">
+                                                <a class="nav-link"
+                                                   href="circuitBreaker-eip.html">Circuit
+                                                    Breaker</a>
+                                            </li>
+                                            <li class="nav-item" data-depth="2">
+                                                <a class="nav-link"
+                                                   href="claimCheck-eip.html">Claim
+                                                    Check</a>
+                                            </li>
+                                            <li class="nav-item is-current-page"
+                                                data-depth="2">
+                                                <a class="nav-link"
+                                                   href="competing-consumers.html">Competing
+                                                    Consumers</a>
+                                            </li>
+                                            <li class="nav-item" data-depth="2">
+                                                <a class="nav-link"
+                                                   href="composed-message-processor.html">Composed
+                                                    Message Processor</a>
+                                            </li>
+                                            <li class="nav-item" data-depth="2">
+                                                <a class="nav-link"
+                                                   href="content-enricher.html">Content
+                                                    Enricher</a>
+                                            </li>
+                                            <li class="nav-item" data-depth="2">
+                                                <a class="nav-link"
+                                                   href="content-filter-eip.html">Content
+                                                    Filter</a>
+                                            </li>
+                                            <li class="nav-item" data-depth="2">
+                                                <a class="nav-link"
+                                                   href="convertBodyTo-eip.html">Convert
+                                                    Body To</a>
+                                            </li>
+                                            <li class="nav-item" data-depth="2">
+                                                <a class="nav-link"
+                                                   href="correlation-identifier.html">Correlation
+                                                    Identifier</a>
+                                            </li>
+                                            <li class="nav-item" data-depth="2">
+                                                <a class="nav-link"
+                                                   href="dead-letter-channel.html">Dead
+                                                    Letter Channel</a>
+                                            </li>
+                                            <li class="nav-item" data-depth="2">
+                                                <a class="nav-link"
+                                                   href="delay-eip.html">Delay</a>
+                                            </li>
+                                            <li class="nav-item" data-depth="2">
+                                                <a class="nav-link"
+                                                   href="durable-subscriber.html">Durable
+                                                    Subscriber</a>
+                                            </li>
+                                            <li class="nav-item" data-depth="2">
+                                                <a class="nav-link"
+                                                   href="dynamicRouter-eip.html">Dynamic
+                                                    Router</a>
+                                            </li>
+                                            <li class="nav-item" data-depth="2">
+                                                <a class="nav-link"
+                                                   href="enrich-eip.html">Enrich</a>
+                                            </li>
+                                            <li class="nav-item" data-depth="2">
+                                                <a class="nav-link"
+                                                   href="eventDrivenConsumer-eip.html">Event
+                                                    Driven Consumer</a>
+                                            </li>
+                                            <li class="nav-item" data-depth="2">
+                                                <a class="nav-link"
+                                                   href="event-message.html">Event
+                                                    Message</a>
+                                            </li>
+                                            <li class="nav-item" data-depth="2">
+                                                <a class="nav-link"
+                                                   href="filter-eip.html">Filter</a>
+                                            </li>
+                                            <li class="nav-item" data-depth="2">
+                                                <a class="nav-link"
+                                                   href="from-eip.html">From</a>
+                                            </li>
+                                            <li class="nav-item" data-depth="2">
+                                                <a class="nav-link"
+                                                   href="guaranteed-delivery.html">Guaranteed
+                                                    Delivery</a>
+                                            </li>
+                                            <li class="nav-item" data-depth="2">
+                                                <a class="nav-link"
+                                                   href="idempotentConsumer-eip.html">Idempotent
+                                                    Consumer</a>
+                                            </li>
+                                            <li class="nav-item" data-depth="2">
+                                                <a class="nav-link"
+                                                   href="intercept.html">Intercept</a>
+                                            </li>
+                                            <li class="nav-item" data-depth="2">
+                                                <a class="nav-link"
+                                                   href="kamelet-eip.html">Kamelet</a>
+                                            </li>
+                                            <li class="nav-item" data-depth="2">
+                                                <a class="nav-link"
+                                                   href="loadBalance-eip.html">Load
+                                                    Balance</a>
+                                            </li>
+                                            <li class="nav-item" data-depth="2">
+                                                <a class="nav-link"
+                                                   href="log-eip.html">Log</a>
+                                            </li>
+                                            <li class="nav-item" data-depth="2">
+                                                <a class="nav-link"
+                                                   href="loop-eip.html">Loop</a>
+                                            </li>
+                                            <li class="nav-item" data-depth="2">
+                                                <a class="nav-link"
+                                                   href="marshal-eip.html">Marshal</a>
+                                            </li>
+                                            <li class="nav-item" data-depth="2">
+                                                <a class="nav-link"
+                                                   href="message.html">Message</a>
+                                            </li>
+                                            <li class="nav-item" data-depth="2">
+                                                <a class="nav-link"
+                                                   href="message-broker.html">Message
+                                                    Broker</a>
+                                            </li>
+                                            <li class="nav-item" data-depth="2">
+                                                <a class="nav-link"
+                                                   href="message-bus.html">Message
+                                                    Bus</a>
+                                            </li>
+                                            <li class="nav-item" data-depth="2">
+                                                <a class="nav-link"
+                                                   href="message-channel.html">Message
+                                                    Channel</a>
+                                            </li>
+                                            <li class="nav-item" data-depth="2">
+                                                <a class="nav-link"
+                                                   href="message-dispatcher.html">Message
+                                                    Dispatcher</a>
+                                            </li>
+                                            <li class="nav-item" data-depth="2">
+                                                <a class="nav-link"
+                                                   href="message-endpoint.html">Message
+                                                    Endpoint</a>
+                                            </li>
+                                            <li class="nav-item" data-depth="2">
+                                                <a class="nav-link"
+                                                   href="message-expiration.html">Message
+                                                    Expiration</a>
+                                            </li>
+                                            <li class="nav-item" data-depth="2">
+                                                <a class="nav-link"
+                                                   href="message-history.html">Message
+                                                    History</a>
+                                            </li>
+                                            <li class="nav-item" data-depth="2">
+                                                <a class="nav-link"
+                                                   href="message-router.html">Message
+                                                    Router</a>
+                                            </li>
+                                            <li class="nav-item" data-depth="2">
+                                                <a class="nav-link"
+                                                   href="message-translator.html">Message
+                                                    Translator</a>
+                                            </li>
+                                            <li class="nav-item" data-depth="2">
+                                                <a class="nav-link"
+                                                   href="messaging-bridge.html">Messaging
+                                                    Bridge</a>
+                                            </li>
+                                            <li class="nav-item" data-depth="2">
+                                                <a class="nav-link"
+                                                   href="messaging-gateway.html">Messaging
+                                                    Gateway</a>
+                                            </li>
+                                            <li class="nav-item" data-depth="2">
+                                                <a class="nav-link"
+                                                   href="messaging-mapper.html">Messaging
+                                                    Mapper</a>
+                                            </li>
+                                            <li class="nav-item" data-depth="2">
+                                                <a class="nav-link"
+                                                   href="multicast-eip.html">Multicast</a>
+                                            </li>
+                                            <li class="nav-item" data-depth="2">
+                                                <a class="nav-link"
+                                                   href="normalizer.html">Normalizer</a>
+                                            </li>
+                                            <li class="nav-item" data-depth="2">
+                                                <a class="nav-link"
+                                                   href="pipeline-eip.html">Pipeline</a>
+                                            </li>
+                                            <li class="nav-item" data-depth="2">
+                                                <a class="nav-link"
+                                                   href="point-to-point-channel.html">Point
+                                                    to Point Channel</a>
+                                            </li>
+                                            <li class="nav-item" data-depth="2">
+                                                <a class="nav-link"
+                                                   href="pollEnrich-eip.html">Poll
+                                                    Enrich</a>
+                                            </li>
+                                            <li class="nav-item" data-depth="2">
+                                                <a class="nav-link"
+                                                   href="polling-consumer.html">Polling
+                                                    Consumer</a>
+                                            </li>
+                                            <li class="nav-item" data-depth="2">
+                                                <a class="nav-link"
+                                                   href="process-eip.html">Process</a>
+                                            </li>
+                                            <li class="nav-item" data-depth="2">
+                                                <a class="nav-link"
+                                                   href="process-manager.html">Process
+                                                    Manager</a>
+                                            </li>
+                                            <li class="nav-item" data-depth="2">
+                                                <a class="nav-link"
+                                                   href="publish-subscribe-channel.html">Publish
+                                                    Subscribe Channel</a>
+                                            </li>
+                                            <li class="nav-item" data-depth="2">
+                                                <a class="nav-link"
+                                                   href="recipientList-eip.html">Recipient
+                                                    List</a>
+                                            </li>
+                                            <li class="nav-item" data-depth="2">
+                                                <a class="nav-link"
+                                                   href="removeHeader-eip.html">Remove
+                                                    Header</a>
+                                            </li>
+                                            <li class="nav-item" data-depth="2">
+                                                <a class="nav-link"
+                                                   href="removeHeaders-eip.html">Remove
+                                                    Headers</a>
+                                            </li>
+                                            <li class="nav-item" data-depth="2">
+                                                <a class="nav-link"
+                                                   href="removeProperties-eip.html">Remove
+                                                    Properties</a>
+                                            </li>
+                                            <li class="nav-item" data-depth="2">
+                                                <a class="nav-link"
+                                                   href="removeProperty-eip.html">Remove
+                                                    Property</a>
+                                            </li>
+                                            <li class="nav-item" data-depth="2">
+                                                <a class="nav-link"
+                                                   href="requestReply-eip.html">Request
+                                                    Reply</a>
+                                            </li>
+                                            <li class="nav-item" data-depth="2">
+                                                <a class="nav-link"
+                                                   href="resequence-eip.html">Resequence</a>
+                                            </li>
+                                            <li class="nav-item" data-depth="2">
+                                                <a class="nav-link"
+                                                   href="resilience4j-eip.html">Resilience4j
+                                                    Circuit Breaker</a>
+                                            </li>
+                                            <li class="nav-item" data-depth="2">
+                                                <a class="nav-link"
+                                                   href="return-address.html">Return
+                                                    Address</a>
+                                            </li>
+                                            <li class="nav-item" data-depth="2">
+                                                <a class="nav-link"
+                                                   href="rollback-eip.html">Rollback</a>
+                                            </li>
+                                            <li class="nav-item" data-depth="2">
+                                                <a class="nav-link"
+                                                   href="routingSlip-eip.html">Routing
+                                                    Slip</a>
+                                            </li>
+                                            <li class="nav-item" data-depth="2">
+                                                <a class="nav-link"
+                                                   href="saga-eip.html">Saga</a>
+                                            </li>
+                                            <li class="nav-item" data-depth="2">
+                                                <a class="nav-link"
+                                                   href="sample-eip.html">Sample</a>
+                                            </li>
+                                            <li class="nav-item" data-depth="2">
+                                                <a class="nav-link"
+                                                   href="scatter-gather.html">Scatter
+                                                    Gather</a>
+                                            </li>
+                                            <li class="nav-item" data-depth="2">
+                                                <a class="nav-link"
+                                                   href="script-eip.html">Script</a>
+                                            </li>
+                                            <li class="nav-item" data-depth="2">
+                                                <a class="nav-link"
+                                                   href="selective-consumer.html">Selective
+                                                    Consumer</a>
+                                            </li>
+                                            <li class="nav-item" data-depth="2">
+                                                <a class="nav-link"
+                                                   href="service-activator.html">Service
+                                                    Activator</a>
+                                            </li>
+                                            <li class="nav-item" data-depth="2">
+                                                <a class="nav-link"
+                                                   href="serviceCall-eip.html">Service
+                                                    Call</a>
+                                            </li>
+                                            <li class="nav-item" data-depth="2">
+                                                <a class="nav-link"
+                                                   href="setBody-eip.html">Set
+                                                    Body</a>
+                                            </li>
+                                            <li class="nav-item" data-depth="2">
+                                                <a class="nav-link"
+                                                   href="setHeader-eip.html">Set
+                                                    Header</a>
+                                            </li>
+                                            <li class="nav-item" data-depth="2">
+                                                <a class="nav-link"
+                                                   href="setProperty-eip.html">Set
+                                                    Property</a>
+                                            </li>
+                                            <li class="nav-item" data-depth="2">
+                                                <a class="nav-link"
+                                                   href="sort-eip.html">Sort</a>
+                                            </li>
+                                            <li class="nav-item" data-depth="2">
+                                                <a class="nav-link"
+                                                   href="split-eip.html">Split</a>
+                                            </li>
+                                            <li class="nav-item" data-depth="2">
+                                                <a class="nav-link"
+                                                   href="step-eip.html">Step</a>
+                                            </li>
+                                            <li class="nav-item" data-depth="2">
+                                                <a class="nav-link"
+                                                   href="stop-eip.html">Stop</a>
+                                            </li>
+                                            <li class="nav-item" data-depth="2">
+                                                <a class="nav-link"
+                                                   href="threads-eip.html">Threads</a>
+                                            </li>
+                                            <li class="nav-item" data-depth="2">
+                                                <a class="nav-link"
+                                                   href="throttle-eip.html">Throttle</a>
+                                            </li>
+                                            <li class="nav-item" data-depth="2">
+                                                <a class="nav-link"
+                                                   href="to-eip.html">To</a>
+                                            </li>
+                                            <li class="nav-item" data-depth="2">
+                                                <a class="nav-link"
+                                                   href="toD-eip.html">To
+                                                    Dynamic</a>
+                                            </li>
+                                            <li class="nav-item" data-depth="2">
+                                                <a class="nav-link"
+                                                   href="transactional-client.html">Transactional
+                                                    Client</a>
+                                            </li>
+                                            <li class="nav-item" data-depth="2">
+                                                <a class="nav-link"
+                                                   href="transform-eip.html">Transform</a>
+                                            </li>
+                                            <li class="nav-item" data-depth="2">
+                                                <a class="nav-link"
+                                                   href="unmarshal-eip.html">Unmarshal</a>
+                                            </li>
+                                            <li class="nav-item" data-depth="2">
+                                                <a class="nav-link"
+                                                   href="validate-eip.html">Validate</a>
+                                            </li>
+                                            <li class="nav-item" data-depth="2">
+                                                <a class="nav-link"
+                                                   href="wireTap-eip.html">Wire
+                                                    Tap</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+                <div class="nav-panel-explore" data-panel="explore">
+                    <div class="context">
+                        <span class="title">Camel Components</span>
+                        <span class="version">4.0.x</span>
+                    </div>
+                    <ul class="components">
+                        <li class="component is-current">
+                            <div class="title"><a
+                                    href="../../4.10.x/index.html">Camel
+                                Components</a></div>
+                            <ul class="versions">
+                                <li class="version is-latest">
+                                    <a href="../../4.10.x/index.html">4.10.x
+                                        (LTS)</a>
+                                </li>
+                                <li class="version">
+                                    <a href="../../4.8.x/index.html">4.8.x</a>
+                                </li>
+                                <li class="version">
+                                    <a href="../../4.4.x/index.html">4.4.x</a>
+                                </li>
+                                <li class="version is-current">
+                                    <a href="../index.html">4.0.x</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="component">
+                            <div class="title"><a
+                                    href="../../../manual/4.10.x/index.html">User
+                                manual</a></div>
+                            <ul class="versions">
+                                <li class="version is-latest">
+                                    <a href="../../../manual/4.10.x/index.html">4.10.x</a>
+                                </li>
+                                <li class="version">
+                                    <a href="../../../manual/4.8.x/index.html">4.8.x</a>
+                                </li>
+                                <li class="version">
+                                    <a href="../../../manual/4.4.x/index.html">4.4.x</a>
+                                </li>
+                                <li class="version">
+                                    <a href="../../../manual/4.0.x/index.html">4.0.x</a>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </aside>
     </div>
-  </aside>
-</div>
-<main class="article">
-<div class="toolbar" role="navigation">
-<button class="nav-toggle"></button>
-  <a href="../../../manual/4.10.x/index.html" class="home-link"></a>
-<nav class="breadcrumbs" aria-label="breadcrumbs">
-  <ul>
-    <li><a href="../index.html">Camel Components</a></li>
-    <li><a href="enterprise-integration-patterns.html">Enterprise Integration Patterns</a></li>
-    <li><a href="competing-consumers.html">Competing Consumers</a></li>
-  </ul>
-</nav>
-<div class="page-versions">
-  <button class="version-menu-toggle" title="Show other versions of page">4.0.x</button>
-  <div class="version-menu">
-    <a class="version" href="../../4.10.x/eips/competing-consumers.html">4.10.x (LTS)</a>
-    <a class="version" href="../../4.8.x/eips/competing-consumers.html">4.8.x</a>
-    <a class="version" href="../../4.4.x/eips/competing-consumers.html">4.4.x</a>
-    <a class="version is-current" href="competing-consumers.html">4.0.x</a>
-  </div>
-</div>
+    <main class="article">
+        <div class="toolbar" role="navigation">
+            <button class="nav-toggle"></button>
+            <a href="../../../manual/4.10.x/index.html" class="home-link"></a>
+            <nav class="breadcrumbs" aria-label="breadcrumbs">
+                <ul>
+                    <li><a href="../index.html">Camel Components</a></li>
+                    <li><a href="enterprise-integration-patterns.html">Enterprise
+                        Integration Patterns</a></li>
+                    <li><a href="competing-consumers.html">Competing
+                        Consumers</a></li>
+                </ul>
+            </nav>
+            <div class="page-versions">
+                <button class="version-menu-toggle"
+                        title="Show other versions of page">4.0.x
+                </button>
+                <div class="version-menu">
+                    <a class="version"
+                       href="../../4.10.x/eips/competing-consumers.html">4.10.x
+                        (LTS)</a>
+                    <a class="version"
+                       href="../../4.8.x/eips/competing-consumers.html">4.8.x</a>
+                    <a class="version"
+                       href="../../4.4.x/eips/competing-consumers.html">4.4.x</a>
+                    <a class="version is-current"
+                       href="competing-consumers.html">4.0.x</a>
+                </div>
+            </div>
 
-</div>
-  <div class="content">
-<aside class="toc sidebar" data-title="Contents" data-levels="2">
-  <div class="toc-menu"></div>
-</aside>
-<article class="doc">
-<h1 class="page">Competing Consumers</h1>
-<div id="preamble">
-<div class="sectionbody">
-<div class="paragraph">
-<p>Camel supports the
-<a href="https://www.enterpriseintegrationpatterns.com/patterns/messaging/CompetingConsumers.html">Competing Consumers</a>
-from the <a href="enterprise-integration-patterns.html" class="xref page">EIP patterns</a> book.</p>
-</div>
-<div class="paragraph">
-<p>Camel supports the Competing Consumers from the EIP patterns directly from components that can do this.
-For example from SEDA, JMS, Kafka, and various AWS components.</p>
-</div>
-<div class="imageblock">
-<div class="content">
-<img src="_images/eip/CompetingConsumers.gif" alt="image">
-</div>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p><a href="#ROOT:seda-component.adoc" class="xref unresolved">SEDA</a> for SEDA based concurrent processing using a thread pool</p>
-</li>
-<li>
-<p><a href="#ROOT:jms-component.adoc" class="xref unresolved">JMS</a> for distributed SEDA based concurrent processing with queues which support reliable load balancing, failover and clustering.</p>
-</li>
-</ul>
-</div>
-<div class="paragraph">
-<p>For components which does not allow concurrent consumers, then Camel allows routeing from the consumer
-to a thread-pool which can then further process the message concurrently,
-which then simulates a <em>quasi like</em> competing consumers.</p>
-</div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="_competing_consumers_with_jms"><a class="anchor" href="#_competing_consumers_with_jms"></a>Competing Consumers with JMS</h2>
-<div class="sectionbody">
-<div class="paragraph">
-<p>To enable Competing Consumers you just need to set the <code>concurrentConsumers</code> property on the JMS endpoint.</p>
-</div>
-<div class="paragraph">
-<p>For example</p>
-</div>
-<div id="_tabs_1" class="openblock tabs is-sync is-loading">
-<div class="content">
-<div class="ulist tablist">
-<ul>
-<li id="_tabs_1_java" class="tab">
-<p>Java</p>
-</li>
-<li id="_tabs_1_xml" class="tab">
-<p>XML</p>
-</li>
-<li id="_tabs_1_yaml" class="tab">
-<p>YAML</p>
-</li>
-</ul>
-</div>
-<div id="_tabs_1_java--panel" class="tabpanel" aria-labelledby="_tabs_1_java">
-<div class="listingblock">
-<div class="content">
-<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">from("jms:MyQueue?concurrentConsumers=5")
+        </div>
+        <div class="content">
+            <aside class="toc sidebar" data-title="Contents" data-levels="2">
+                <div class="toc-menu"></div>
+            </aside>
+            <article class="doc">
+                <h1 class="page">Competing Consumers</h1>
+                <div id="preamble">
+                    <div class="sectionbody">
+                        <div class="paragraph">
+                            <p>Camel supports the
+                                <a href="https://www.enterpriseintegrationpatterns.com/patterns/messaging/CompetingConsumers.html">Competing
+                                    Consumers</a>
+                                from the <a
+                                        href="enterprise-integration-patterns.html"
+                                        class="xref page">EIP patterns</a> book.
+                            </p>
+                        </div>
+                        <div class="paragraph">
+                            <p>Camel supports the Competing Consumers from the
+                                EIP patterns directly from components that can
+                                do this.
+                                For example from SEDA, JMS, Kafka, and various
+                                AWS components.</p>
+                        </div>
+                        <div class="imageblock">
+                            <div class="content">
+                                <img src="_images/eip/CompetingConsumers.gif"
+                                     alt="image">
+                            </div>
+                        </div>
+                        <div class="ulist">
+                            <ul>
+                                <li>
+                                    <p><a href="#ROOT:seda-component.adoc"
+                                          class="xref unresolved">SEDA</a> for
+                                        SEDA based concurrent processing using a
+                                        thread pool</p>
+                                </li>
+                                <li>
+                                    <p><a href="#ROOT:jms-component.adoc"
+                                          class="xref unresolved">JMS</a> for
+                                        distributed SEDA based concurrent
+                                        processing with queues which support
+                                        reliable load balancing, failover and
+                                        clustering.</p>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="paragraph">
+                            <p>For components which does not allow concurrent
+                                consumers, then Camel allows routeing from the
+                                consumer
+                                to a thread-pool which can then further process
+                                the message concurrently,
+                                which then simulates a <em>quasi like</em>
+                                competing consumers.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="sect1">
+                    <h2 id="_competing_consumers_with_jms"><a class="anchor"
+                                                              href="#_competing_consumers_with_jms"></a>Competing
+                        Consumers with JMS</h2>
+                    <div class="sectionbody">
+                        <div class="paragraph">
+                            <p>To enable Competing Consumers you just need to
+                                set the <code>concurrentConsumers</code>
+                                property on the JMS endpoint.</p>
+                        </div>
+                        <div class="paragraph">
+                            <p>For example</p>
+                        </div>
+                        <div id="_tabs_1"
+                             class="openblock tabs is-sync is-loading">
+                            <div class="content">
+                                <div class="ulist tablist">
+                                    <ul>
+                                        <li id="_tabs_1_java" class="tab">
+                                            <p>Java</p>
+                                        </li>
+                                        <li id="_tabs_1_xml" class="tab">
+                                            <p>XML</p>
+                                        </li>
+                                        <li id="_tabs_1_yaml" class="tab">
+                                            <p>YAML</p>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div id="_tabs_1_java--panel" class="tabpanel"
+                                     aria-labelledby="_tabs_1_java">
+                                    <div class="listingblock">
+                                        <div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs"
+                                         data-lang="java">from("jms:MyQueue?concurrentConsumers=5")
   .to("bean:someBean");</code></pre>
-</div>
-</div>
-</div>
-<div id="_tabs_1_xml--panel" class="tabpanel" aria-labelledby="_tabs_1_xml">
-<div class="listingblock">
-<div class="content">
-<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;route&gt;
+                                        </div>
+                                    </div>
+                                </div>
+                                <div id="_tabs_1_xml--panel" class="tabpanel"
+                                     aria-labelledby="_tabs_1_xml">
+                                    <div class="listingblock">
+                                        <div class="content">
+<pre class="highlightjs highlight"><code class="language-xml hljs"
+                                         data-lang="xml">&lt;route&gt;
   &lt;from uri="jms:MyQueue?concurrentConsumers=5"/&gt;
   &lt;to uri="bean:someBean"/&gt;
 &lt;/route&gt;</code></pre>
-</div>
-</div>
-</div>
-<div id="_tabs_1_yaml--panel" class="tabpanel" aria-labelledby="_tabs_1_yaml">
-<div class="listingblock">
-<div class="content">
-<pre class="highlightjs highlight"><code class="language-yaml hljs" data-lang="yaml">- from:
+                                        </div>
+                                    </div>
+                                </div>
+                                <div id="_tabs_1_yaml--panel" class="tabpanel"
+                                     aria-labelledby="_tabs_1_yaml">
+                                    <div class="listingblock">
+                                        <div class="content">
+<pre class="highlightjs highlight"><code class="language-yaml hljs"
+                                         data-lang="yaml">- from:
     uri: jms:MyQueue
     parameters:
       concurrentConsumers: 5
     steps:
       - to:
           uri: bean:someBean</code></pre>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="_competing_consumers_with_thread_pool"><a class="anchor" href="#_competing_consumers_with_thread_pool"></a>Competing Consumers with Thread Pool</h2>
-<div class="sectionbody">
-<div class="paragraph">
-<p>You can simulate competing consumers by using a thread pool which then continue processing the messages concurrently.
-Then the single thread consumer can quickly continue and pickup new messages to process and offload them to the thread-pool
-(and its task queue).</p>
-</div>
-<div class="paragraph">
-<p>Suppose we have this simple route where we poll a folder for new files,
-process the files and afterwards move the files to a backup folder when complete.</p>
-</div>
-<div id="_tabs_2" class="openblock tabs is-sync is-loading">
-<div class="content">
-<div class="ulist tablist">
-<ul>
-<li id="_tabs_2_java" class="tab">
-<p>Java</p>
-</li>
-<li id="_tabs_2_xml" class="tab">
-<p>XML</p>
-</li>
-<li id="_tabs_2_yaml" class="tab">
-<p>YAML</p>
-</li>
-</ul>
-</div>
-<div id="_tabs_2_java--panel" class="tabpanel" aria-labelledby="_tabs_2_java">
-<div class="listingblock">
-<div class="content">
-<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">from("file://inbox?move=../backup-${date:now:yyyyMMdd}")
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="sect1">
+                    <h2 id="_competing_consumers_with_thread_pool"><a
+                            class="anchor"
+                            href="#_competing_consumers_with_thread_pool"></a>Competing
+                        Consumers with Thread Pool</h2>
+                    <div class="sectionbody">
+                        <div class="paragraph">
+                            <p>You can simulate competing consumers by using a
+                                thread pool which then continue processing the
+                                messages concurrently.
+                                Then the single thread consumer can quickly
+                                continue and pickup new messages to process and
+                                offload them to the thread-pool
+                                (and its task queue).</p>
+                        </div>
+                        <div class="paragraph">
+                            <p>Suppose we have this simple route where we poll a
+                                folder for new files,
+                                process the files and afterwards move the files
+                                to a backup folder when complete.</p>
+                        </div>
+                        <div id="_tabs_2"
+                             class="openblock tabs is-sync is-loading">
+                            <div class="content">
+                                <div class="ulist tablist">
+                                    <ul>
+                                        <li id="_tabs_2_java" class="tab">
+                                            <p>Java</p>
+                                        </li>
+                                        <li id="_tabs_2_xml" class="tab">
+                                            <p>XML</p>
+                                        </li>
+                                        <li id="_tabs_2_yaml" class="tab">
+                                            <p>YAML</p>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div id="_tabs_2_java--panel" class="tabpanel"
+                                     aria-labelledby="_tabs_2_java">
+                                    <div class="listingblock">
+                                        <div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs"
+                                         data-lang="java">from("file://inbox?move=../backup-${date:now:yyyyMMdd}")
   .to("bean:calculateBean");</code></pre>
-</div>
-</div>
-</div>
-<div id="_tabs_2_xml--panel" class="tabpanel" aria-labelledby="_tabs_2_xml">
-<div class="listingblock">
-<div class="content">
-<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;route&gt;
+                                        </div>
+                                    </div>
+                                </div>
+                                <div id="_tabs_2_xml--panel" class="tabpanel"
+                                     aria-labelledby="_tabs_2_xml">
+                                    <div class="listingblock">
+                                        <div class="content">
+<pre class="highlightjs highlight"><code class="language-xml hljs"
+                                         data-lang="xml">&lt;route&gt;
   &lt;from uri="file://inbox?move=../backup-${date:now:yyyyMMdd}"/&gt;
   &lt;to uri="bean:calculateBean"/&gt;
 &lt;/route&gt;</code></pre>
-</div>
-</div>
-</div>
-<div id="_tabs_2_yaml--panel" class="tabpanel" aria-labelledby="_tabs_2_yaml">
-<div class="listingblock">
-<div class="content">
-<pre class="highlightjs highlight"><code class="language-yaml hljs" data-lang="yaml">- from:
+                                        </div>
+                                    </div>
+                                </div>
+                                <div id="_tabs_2_yaml--panel" class="tabpanel"
+                                     aria-labelledby="_tabs_2_yaml">
+                                    <div class="listingblock">
+                                        <div class="content">
+<pre class="highlightjs highlight"><code class="language-yaml hljs"
+                                         data-lang="yaml">- from:
     uri: "file://inbox?move=../backup-${date:now:yyyyMMdd}"
     steps:
       - to:
           uri: bean:calculateBean</code></pre>
-</div>
-</div>
-</div>
-</div>
-</div>
-<div class="paragraph">
-<p>The route is synchronous and there is only a single consumer running at any given time.
-This scenario is well known, and it doesn&#8217;t affect thread safety as we only have one active thread
-involved at any given time.</p>
-</div>
-<div class="paragraph">
-<p>Now imagine that the inbox folder is filled with filers quicker than we can process.
-So we want to speed up this process. How can we do this?</p>
-</div>
-<div class="paragraph">
-<p>Well we could try adding a 2nd route with the same route path.
-Well that doesn&#8217;t work so well as we have competing consumers for the same files.
-That requires however that we use file locking, so we won&#8217;t have two consumers compete for the same file.
-By default, Camel support this with its file locking option on the file component.</p>
-</div>
-<div class="paragraph">
-<p>What if the component doesn&#8217;t support this, or it&#8217;s not possible to add a 2nd consumer
-for the same endpoint? And yes it&#8217;s <em>a bit of a hack</em>, and the route logic code is duplicated.
-And what if we need more, then we need to add a 3rd, a 4th and so on.</p>
-</div>
-<div class="paragraph">
-<p>What if the processing of the file itself is the bottleneck, i.e. the <code>calculateBean</code> is slow?
-So how can we process messages with this bean concurrently?</p>
-</div>
-<div class="paragraph">
-<p>We can use the <a href="threads-eip.html" class="xref page">Threads EIP</a>, so if we insert it in the route we get:</p>
-</div>
-<div id="_tabs_3" class="openblock tabs is-sync is-loading">
-<div class="content">
-<div class="ulist tablist">
-<ul>
-<li id="_tabs_3_java" class="tab">
-<p>Java</p>
-</li>
-<li id="_tabs_3_xml" class="tab">
-<p>XML</p>
-</li>
-<li id="_tabs_3_yaml" class="tab">
-<p>YAML</p>
-</li>
-</ul>
-</div>
-<div id="_tabs_3_java--panel" class="tabpanel" aria-labelledby="_tabs_3_java">
-<div class="listingblock">
-<div class="content">
-<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">from("file://inbox?move=../backup-${date:now:yyyyMMdd}")
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="paragraph">
+                            <p>The route is synchronous and there is only a
+                                single consumer running at any given time.
+                                This scenario is well known, and it doesn&#8217;t
+                                affect thread safety as we only have one active
+                                thread
+                                involved at any given time.</p>
+                        </div>
+                        <div class="paragraph">
+                            <p>Now imagine that the inbox folder is filled with
+                                filers quicker than we can process.
+                                So we want to speed up this process. How can we
+                                do this?</p>
+                        </div>
+                        <div class="paragraph">
+                            <p>Well we could try adding a 2nd route with the
+                                same route path.
+                                Well that doesn&#8217;t work so well as we have
+                                competing consumers for the same files.
+                                That requires however that we use file locking,
+                                so we won&#8217;t have two consumers compete for
+                                the same file.
+                                By default, Camel support this with its file
+                                locking option on the file component.</p>
+                        </div>
+                        <div class="paragraph">
+                            <p>What if the component doesn&#8217;t support this,
+                                or it&#8217;s not possible to add a 2nd consumer
+                                for the same endpoint? And yes it&#8217;s <em>a
+                                    bit of a hack</em>, and the route logic code
+                                is duplicated.
+                                And what if we need more, then we need to add a
+                                3rd, a 4th and so on.</p>
+                        </div>
+                        <div class="paragraph">
+                            <p>What if the processing of the file itself is the
+                                bottleneck, i.e. the <code>calculateBean</code>
+                                is slow?
+                                So how can we process messages with this bean
+                                concurrently?</p>
+                        </div>
+                        <div class="paragraph">
+                            <p>We can use the <a href="threads-eip.html"
+                                                 class="xref page">Threads
+                                EIP</a>, so if we insert it in the route we get:
+                            </p>
+                        </div>
+                        <div id="_tabs_3"
+                             class="openblock tabs is-sync is-loading">
+                            <div class="content">
+                                <div class="ulist tablist">
+                                    <ul>
+                                        <li id="_tabs_3_java" class="tab">
+                                            <p>Java</p>
+                                        </li>
+                                        <li id="_tabs_3_xml" class="tab">
+                                            <p>XML</p>
+                                        </li>
+                                        <li id="_tabs_3_yaml" class="tab">
+                                            <p>YAML</p>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div id="_tabs_3_java--panel" class="tabpanel"
+                                     aria-labelledby="_tabs_3_java">
+                                    <div class="listingblock">
+                                        <div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs"
+                                         data-lang="java">from("file://inbox?move=../backup-${date:now:yyyyMMdd}")
   .threads(10)
   .to("bean:calculateBean");</code></pre>
-</div>
-</div>
-</div>
-<div id="_tabs_3_xml--panel" class="tabpanel" aria-labelledby="_tabs_3_xml">
-<div class="listingblock">
-<div class="content">
-<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;route&gt;
+                                        </div>
+                                    </div>
+                                </div>
+                                <div id="_tabs_3_xml--panel" class="tabpanel"
+                                     aria-labelledby="_tabs_3_xml">
+                                    <div class="listingblock">
+                                        <div class="content">
+<pre class="highlightjs highlight"><code class="language-xml hljs"
+                                         data-lang="xml">&lt;route&gt;
   &lt;from uri="file://inbox?move=../backup-${date:now:yyyyMMdd}"/&gt;
   &lt;threads poolSize="10"/&gt;
   &lt;to uri="bean:calculateBean"/&gt;
 &lt;/route&gt;</code></pre>
-</div>
-</div>
-</div>
-<div id="_tabs_3_yaml--panel" class="tabpanel" aria-labelledby="_tabs_3_yaml">
-<div class="listingblock">
-<div class="content">
-<pre class="highlightjs highlight"><code class="language-yaml hljs" data-lang="yaml">- from:
+                                        </div>
+                                    </div>
+                                </div>
+                                <div id="_tabs_3_yaml--panel" class="tabpanel"
+                                     aria-labelledby="_tabs_3_yaml">
+                                    <div class="listingblock">
+                                        <div class="content">
+<pre class="highlightjs highlight"><code class="language-yaml hljs"
+                                         data-lang="yaml">- from:
     uri: "file://inbox?move=../backup-${date:now:yyyyMMdd}"
     steps:
       - threads:
           poolSize: 10
       - to:
           uri: bean:calculateBean</code></pre>
-</div>
-</div>
-</div>
-</div>
-</div>
-<div class="paragraph">
-<p>So by inserting <code>threads(10)</code> we have instructed Camel that from this point forward in the route
-it should use a thread pool with up till 10 concurrent threads.
-So when the file consumer delivers a message to the threads, then the threads take it from there,
-and the file consumer can return and continue to poll the next file.</p>
-</div>
-<div class="paragraph">
-<p>By leveraging this fact we can still use a single file consumer to poll new files.
-And polling a directory to just grab the file handle is very fast.
-And we won&#8217;t have problem with file locking, sorting, filtering and whatnot.
-And at the same time we can leverage the fact that we can process the file messages concurrently
-by the <code>calculateBean</code> bean.</p>
-</div>
-<div class="paragraph">
-<p>Here at the end lets take a closer look what happens with the synchronous thread and the
-asynchronous thread. The synchronous thread hands over the exchange to the new asynchronous thread and as
-such the synchronous thread completes. The asynchronous thread is then routing and processing the message.
-And when this thread finishes it will take care of the file completion strategy to move the file
-into the backup folder. This is an important note, that the on completion is done by the asynchronous thread.</p>
-</div>
-<div class="paragraph">
-<p>This ensures the file is not moved before the file is processed successfully. Suppose the <code>calculateBean</code> bean
-could not process one of the files. If it was the asynchronous thread that should do the on completion strategy
-then the file would have been moved to early into the backup folder. By handing over this to the asynchronous
-thread we do it after we have processed the message completely</p>
-</div>
-</div>
-</div>
-</article>
-  </div>
-</main>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="paragraph">
+                            <p>So by inserting <code>threads(10)</code> we have
+                                instructed Camel that from this point forward in
+                                the route
+                                it should use a thread pool with up till 10
+                                concurrent threads.
+                                So when the file consumer delivers a message to
+                                the threads, then the threads take it from
+                                there,
+                                and the file consumer can return and continue to
+                                poll the next file.</p>
+                        </div>
+                        <div class="paragraph">
+                            <p>By leveraging this fact we can still use a single
+                                file consumer to poll new files.
+                                And polling a directory to just grab the file
+                                handle is very fast.
+                                And we won&#8217;t have problem with file
+                                locking, sorting, filtering and whatnot.
+                                And at the same time we can leverage the fact
+                                that we can process the file messages
+                                concurrently
+                                by the <code>calculateBean</code> bean.</p>
+                        </div>
+                        <div class="paragraph">
+                            <p>Here at the end lets take a closer look what
+                                happens with the synchronous thread and the
+                                asynchronous thread. The synchronous thread
+                                hands over the exchange to the new asynchronous
+                                thread and as
+                                such the synchronous thread completes. The
+                                asynchronous thread is then routing and
+                                processing the message.
+                                And when this thread finishes it will take care
+                                of the file completion strategy to move the file
+                                into the backup folder. This is an important
+                                note, that the on completion is done by the
+                                asynchronous thread.</p>
+                        </div>
+                        <div class="paragraph">
+                            <p>This ensures the file is not moved before the
+                                file is processed successfully. Suppose the
+                                <code>calculateBean</code> bean
+                                could not process one of the files. If it was
+                                the asynchronous thread that should do the on
+                                completion strategy
+                                then the file would have been moved to early
+                                into the backup folder. By handing over this to
+                                the asynchronous
+                                thread we do it after we have processed the
+                                message completely</p>
+                        </div>
+                    </div>
+                </div>
+            </article>
+        </div>
+    </main>
 </div>
 <footer class="footer">
 </footer>
-<script id="site-script" src="../../../_/js/site.js" data-ui-root-path="../../../_"></script>
+<script id="site-script" src="../../../_/js/site.js"
+        data-ui-root-path="../../../_"></script>
 <script async src="../../../_/js/vendor/highlight.js"></script>
-  </body>
+</body>
 </html>

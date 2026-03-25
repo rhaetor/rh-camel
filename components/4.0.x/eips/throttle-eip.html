@@ -1,540 +1,835 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+<head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <title>Throttle :: Red Hat build of Apache Camel</title>
-    <meta name="description" content="Controls the rate at which messages are passed to the next node in the route">
+    <meta name="description"
+          content="Controls the rate at which messages are passed to the next node in the route">
     <meta name="generator" content="Antora 3.1.4">
     <link rel="stylesheet" href="../../../_/css/site.css">
-  </head>
-  <body class="article">
+</head>
+<body class="article">
 <header class="header">
-  <nav class="navbar">
-    <div class="navbar-brand">
-      <a class="navbar-item" href="/">Red Hat build of Apache Camel</a>
-      <button class="navbar-burger" data-target="topbar-nav">
-        <span></span>
-        <span></span>
-        <span></span>
-      </button>
-    </div>
-  </nav>
+    <nav class="navbar">
+        <div class="navbar-brand">
+            <a class="navbar-item" href="/">Red Hat build of Apache Camel</a>
+            <button class="navbar-burger" data-target="topbar-nav">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
 </header>
 <div class="body">
-<div class="nav-container" data-component="components" data-version="4.0.x">
-  <aside class="nav">
-    <div class="panels">
-<div class="nav-panel-menu is-active" data-panel="menu">
-  <nav class="nav-menu">
-    <button class="nav-menu-toggle" aria-label="Toggle expand/collapse all" style="display: none"></button>
-    <h3 class="title"><a href="../index.html">Camel Components</a></h3>
-<ul class="nav-list">
-  <li class="nav-item" data-depth="0">
-<ul class="nav-list">
-  <li class="nav-item" data-depth="1">
-    <button class="nav-item-toggle"></button>
-    <a class="nav-link" href="enterprise-integration-patterns.html">Enterprise Integration Patterns</a>
-<ul class="nav-list">
-  <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="aggregate-eip.html">Aggregate</a>
-  </li>
-  <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="bean-eip.html">Bean</a>
-  </li>
-  <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="change-data-capture.html">Change Data Capture</a>
-  </li>
-  <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="channel-adapter.html">Channel Adapter</a>
-  </li>
-  <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="choice-eip.html">Content Based Router</a>
-  </li>
-  <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="circuitBreaker-eip.html">Circuit Breaker</a>
-  </li>
-  <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="claimCheck-eip.html">Claim Check</a>
-  </li>
-  <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="competing-consumers.html">Competing Consumers</a>
-  </li>
-  <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="composed-message-processor.html">Composed Message Processor</a>
-  </li>
-  <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="content-enricher.html">Content Enricher</a>
-  </li>
-  <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="content-filter-eip.html">Content Filter</a>
-  </li>
-  <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="convertBodyTo-eip.html">Convert Body To</a>
-  </li>
-  <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="correlation-identifier.html">Correlation Identifier</a>
-  </li>
-  <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="dead-letter-channel.html">Dead Letter Channel</a>
-  </li>
-  <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="delay-eip.html">Delay</a>
-  </li>
-  <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="durable-subscriber.html">Durable Subscriber</a>
-  </li>
-  <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="dynamicRouter-eip.html">Dynamic Router</a>
-  </li>
-  <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="enrich-eip.html">Enrich</a>
-  </li>
-  <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="eventDrivenConsumer-eip.html">Event Driven Consumer</a>
-  </li>
-  <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="event-message.html">Event Message</a>
-  </li>
-  <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="filter-eip.html">Filter</a>
-  </li>
-  <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="from-eip.html">From</a>
-  </li>
-  <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="guaranteed-delivery.html">Guaranteed Delivery</a>
-  </li>
-  <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="idempotentConsumer-eip.html">Idempotent Consumer</a>
-  </li>
-  <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="intercept.html">Intercept</a>
-  </li>
-  <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="kamelet-eip.html">Kamelet</a>
-  </li>
-  <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="loadBalance-eip.html">Load Balance</a>
-  </li>
-  <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="log-eip.html">Log</a>
-  </li>
-  <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="loop-eip.html">Loop</a>
-  </li>
-  <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="marshal-eip.html">Marshal</a>
-  </li>
-  <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="message.html">Message</a>
-  </li>
-  <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="message-broker.html">Message Broker</a>
-  </li>
-  <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="message-bus.html">Message Bus</a>
-  </li>
-  <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="message-channel.html">Message Channel</a>
-  </li>
-  <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="message-dispatcher.html">Message Dispatcher</a>
-  </li>
-  <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="message-endpoint.html">Message Endpoint</a>
-  </li>
-  <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="message-expiration.html">Message Expiration</a>
-  </li>
-  <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="message-history.html">Message History</a>
-  </li>
-  <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="message-router.html">Message Router</a>
-  </li>
-  <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="message-translator.html">Message Translator</a>
-  </li>
-  <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="messaging-bridge.html">Messaging Bridge</a>
-  </li>
-  <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="messaging-gateway.html">Messaging Gateway</a>
-  </li>
-  <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="messaging-mapper.html">Messaging Mapper</a>
-  </li>
-  <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="multicast-eip.html">Multicast</a>
-  </li>
-  <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="normalizer.html">Normalizer</a>
-  </li>
-  <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="pipeline-eip.html">Pipeline</a>
-  </li>
-  <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="point-to-point-channel.html">Point to Point Channel</a>
-  </li>
-  <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="pollEnrich-eip.html">Poll Enrich</a>
-  </li>
-  <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="polling-consumer.html">Polling Consumer</a>
-  </li>
-  <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="process-eip.html">Process</a>
-  </li>
-  <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="process-manager.html">Process Manager</a>
-  </li>
-  <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="publish-subscribe-channel.html">Publish Subscribe Channel</a>
-  </li>
-  <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="recipientList-eip.html">Recipient List</a>
-  </li>
-  <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="removeHeader-eip.html">Remove Header</a>
-  </li>
-  <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="removeHeaders-eip.html">Remove Headers</a>
-  </li>
-  <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="removeProperties-eip.html">Remove Properties</a>
-  </li>
-  <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="removeProperty-eip.html">Remove Property</a>
-  </li>
-  <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="requestReply-eip.html">Request Reply</a>
-  </li>
-  <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="resequence-eip.html">Resequence</a>
-  </li>
-  <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="resilience4j-eip.html">Resilience4j Circuit Breaker</a>
-  </li>
-  <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="return-address.html">Return Address</a>
-  </li>
-  <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="rollback-eip.html">Rollback</a>
-  </li>
-  <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="routingSlip-eip.html">Routing Slip</a>
-  </li>
-  <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="saga-eip.html">Saga</a>
-  </li>
-  <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="sample-eip.html">Sample</a>
-  </li>
-  <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="scatter-gather.html">Scatter Gather</a>
-  </li>
-  <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="script-eip.html">Script</a>
-  </li>
-  <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="selective-consumer.html">Selective Consumer</a>
-  </li>
-  <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="service-activator.html">Service Activator</a>
-  </li>
-  <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="serviceCall-eip.html">Service Call</a>
-  </li>
-  <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="setBody-eip.html">Set Body</a>
-  </li>
-  <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="setHeader-eip.html">Set Header</a>
-  </li>
-  <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="setProperty-eip.html">Set Property</a>
-  </li>
-  <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="sort-eip.html">Sort</a>
-  </li>
-  <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="split-eip.html">Split</a>
-  </li>
-  <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="step-eip.html">Step</a>
-  </li>
-  <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="stop-eip.html">Stop</a>
-  </li>
-  <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="threads-eip.html">Threads</a>
-  </li>
-  <li class="nav-item is-current-page" data-depth="2">
-    <a class="nav-link" href="throttle-eip.html">Throttle</a>
-  </li>
-  <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="to-eip.html">To</a>
-  </li>
-  <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="toD-eip.html">To Dynamic</a>
-  </li>
-  <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="transactional-client.html">Transactional Client</a>
-  </li>
-  <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="transform-eip.html">Transform</a>
-  </li>
-  <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="unmarshal-eip.html">Unmarshal</a>
-  </li>
-  <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="validate-eip.html">Validate</a>
-  </li>
-  <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="wireTap-eip.html">Wire Tap</a>
-  </li>
-</ul>
-  </li>
-</ul>
-  </li>
-</ul>
-  </nav>
-</div>
-<div class="nav-panel-explore" data-panel="explore">
-  <div class="context">
-    <span class="title">Camel Components</span>
-    <span class="version">4.0.x</span>
-  </div>
-  <ul class="components">
-    <li class="component is-current">
-      <div class="title"><a href="../../4.10.x/index.html">Camel Components</a></div>
-      <ul class="versions">
-        <li class="version is-latest">
-          <a href="../../4.10.x/index.html">4.10.x (LTS)</a>
-        </li>
-        <li class="version">
-          <a href="../../4.8.x/index.html">4.8.x</a>
-        </li>
-        <li class="version">
-          <a href="../../4.4.x/index.html">4.4.x</a>
-        </li>
-        <li class="version is-current">
-          <a href="../index.html">4.0.x</a>
-        </li>
-      </ul>
-    </li>
-    <li class="component">
-      <div class="title"><a href="../../../manual/4.10.x/index.html">User manual</a></div>
-      <ul class="versions">
-        <li class="version is-latest">
-          <a href="../../../manual/4.10.x/index.html">4.10.x</a>
-        </li>
-        <li class="version">
-          <a href="../../../manual/4.8.x/index.html">4.8.x</a>
-        </li>
-        <li class="version">
-          <a href="../../../manual/4.4.x/index.html">4.4.x</a>
-        </li>
-        <li class="version">
-          <a href="../../../manual/4.0.x/index.html">4.0.x</a>
-        </li>
-      </ul>
-    </li>
-  </ul>
-</div>
+    <div class="nav-container" data-component="components" data-version="4.0.x">
+        <aside class="nav">
+            <div class="panels">
+                <div class="nav-panel-menu is-active" data-panel="menu">
+                    <nav class="nav-menu">
+                        <button class="nav-menu-toggle"
+                                aria-label="Toggle expand/collapse all"
+                                style="display: none"></button>
+                        <h3 class="title"><a href="../index.html">Camel
+                            Components</a></h3>
+                        <ul class="nav-list">
+                            <li class="nav-item" data-depth="0">
+                                <ul class="nav-list">
+                                    <li class="nav-item" data-depth="1">
+                                        <button class="nav-item-toggle"></button>
+                                        <a class="nav-link"
+                                           href="enterprise-integration-patterns.html">Enterprise
+                                            Integration Patterns</a>
+                                        <ul class="nav-list">
+                                            <li class="nav-item" data-depth="2">
+                                                <a class="nav-link"
+                                                   href="aggregate-eip.html">Aggregate</a>
+                                            </li>
+                                            <li class="nav-item" data-depth="2">
+                                                <a class="nav-link"
+                                                   href="bean-eip.html">Bean</a>
+                                            </li>
+                                            <li class="nav-item" data-depth="2">
+                                                <a class="nav-link"
+                                                   href="change-data-capture.html">Change
+                                                    Data Capture</a>
+                                            </li>
+                                            <li class="nav-item" data-depth="2">
+                                                <a class="nav-link"
+                                                   href="channel-adapter.html">Channel
+                                                    Adapter</a>
+                                            </li>
+                                            <li class="nav-item" data-depth="2">
+                                                <a class="nav-link"
+                                                   href="choice-eip.html">Content
+                                                    Based Router</a>
+                                            </li>
+                                            <li class="nav-item" data-depth="2">
+                                                <a class="nav-link"
+                                                   href="circuitBreaker-eip.html">Circuit
+                                                    Breaker</a>
+                                            </li>
+                                            <li class="nav-item" data-depth="2">
+                                                <a class="nav-link"
+                                                   href="claimCheck-eip.html">Claim
+                                                    Check</a>
+                                            </li>
+                                            <li class="nav-item" data-depth="2">
+                                                <a class="nav-link"
+                                                   href="competing-consumers.html">Competing
+                                                    Consumers</a>
+                                            </li>
+                                            <li class="nav-item" data-depth="2">
+                                                <a class="nav-link"
+                                                   href="composed-message-processor.html">Composed
+                                                    Message Processor</a>
+                                            </li>
+                                            <li class="nav-item" data-depth="2">
+                                                <a class="nav-link"
+                                                   href="content-enricher.html">Content
+                                                    Enricher</a>
+                                            </li>
+                                            <li class="nav-item" data-depth="2">
+                                                <a class="nav-link"
+                                                   href="content-filter-eip.html">Content
+                                                    Filter</a>
+                                            </li>
+                                            <li class="nav-item" data-depth="2">
+                                                <a class="nav-link"
+                                                   href="convertBodyTo-eip.html">Convert
+                                                    Body To</a>
+                                            </li>
+                                            <li class="nav-item" data-depth="2">
+                                                <a class="nav-link"
+                                                   href="correlation-identifier.html">Correlation
+                                                    Identifier</a>
+                                            </li>
+                                            <li class="nav-item" data-depth="2">
+                                                <a class="nav-link"
+                                                   href="dead-letter-channel.html">Dead
+                                                    Letter Channel</a>
+                                            </li>
+                                            <li class="nav-item" data-depth="2">
+                                                <a class="nav-link"
+                                                   href="delay-eip.html">Delay</a>
+                                            </li>
+                                            <li class="nav-item" data-depth="2">
+                                                <a class="nav-link"
+                                                   href="durable-subscriber.html">Durable
+                                                    Subscriber</a>
+                                            </li>
+                                            <li class="nav-item" data-depth="2">
+                                                <a class="nav-link"
+                                                   href="dynamicRouter-eip.html">Dynamic
+                                                    Router</a>
+                                            </li>
+                                            <li class="nav-item" data-depth="2">
+                                                <a class="nav-link"
+                                                   href="enrich-eip.html">Enrich</a>
+                                            </li>
+                                            <li class="nav-item" data-depth="2">
+                                                <a class="nav-link"
+                                                   href="eventDrivenConsumer-eip.html">Event
+                                                    Driven Consumer</a>
+                                            </li>
+                                            <li class="nav-item" data-depth="2">
+                                                <a class="nav-link"
+                                                   href="event-message.html">Event
+                                                    Message</a>
+                                            </li>
+                                            <li class="nav-item" data-depth="2">
+                                                <a class="nav-link"
+                                                   href="filter-eip.html">Filter</a>
+                                            </li>
+                                            <li class="nav-item" data-depth="2">
+                                                <a class="nav-link"
+                                                   href="from-eip.html">From</a>
+                                            </li>
+                                            <li class="nav-item" data-depth="2">
+                                                <a class="nav-link"
+                                                   href="guaranteed-delivery.html">Guaranteed
+                                                    Delivery</a>
+                                            </li>
+                                            <li class="nav-item" data-depth="2">
+                                                <a class="nav-link"
+                                                   href="idempotentConsumer-eip.html">Idempotent
+                                                    Consumer</a>
+                                            </li>
+                                            <li class="nav-item" data-depth="2">
+                                                <a class="nav-link"
+                                                   href="intercept.html">Intercept</a>
+                                            </li>
+                                            <li class="nav-item" data-depth="2">
+                                                <a class="nav-link"
+                                                   href="kamelet-eip.html">Kamelet</a>
+                                            </li>
+                                            <li class="nav-item" data-depth="2">
+                                                <a class="nav-link"
+                                                   href="loadBalance-eip.html">Load
+                                                    Balance</a>
+                                            </li>
+                                            <li class="nav-item" data-depth="2">
+                                                <a class="nav-link"
+                                                   href="log-eip.html">Log</a>
+                                            </li>
+                                            <li class="nav-item" data-depth="2">
+                                                <a class="nav-link"
+                                                   href="loop-eip.html">Loop</a>
+                                            </li>
+                                            <li class="nav-item" data-depth="2">
+                                                <a class="nav-link"
+                                                   href="marshal-eip.html">Marshal</a>
+                                            </li>
+                                            <li class="nav-item" data-depth="2">
+                                                <a class="nav-link"
+                                                   href="message.html">Message</a>
+                                            </li>
+                                            <li class="nav-item" data-depth="2">
+                                                <a class="nav-link"
+                                                   href="message-broker.html">Message
+                                                    Broker</a>
+                                            </li>
+                                            <li class="nav-item" data-depth="2">
+                                                <a class="nav-link"
+                                                   href="message-bus.html">Message
+                                                    Bus</a>
+                                            </li>
+                                            <li class="nav-item" data-depth="2">
+                                                <a class="nav-link"
+                                                   href="message-channel.html">Message
+                                                    Channel</a>
+                                            </li>
+                                            <li class="nav-item" data-depth="2">
+                                                <a class="nav-link"
+                                                   href="message-dispatcher.html">Message
+                                                    Dispatcher</a>
+                                            </li>
+                                            <li class="nav-item" data-depth="2">
+                                                <a class="nav-link"
+                                                   href="message-endpoint.html">Message
+                                                    Endpoint</a>
+                                            </li>
+                                            <li class="nav-item" data-depth="2">
+                                                <a class="nav-link"
+                                                   href="message-expiration.html">Message
+                                                    Expiration</a>
+                                            </li>
+                                            <li class="nav-item" data-depth="2">
+                                                <a class="nav-link"
+                                                   href="message-history.html">Message
+                                                    History</a>
+                                            </li>
+                                            <li class="nav-item" data-depth="2">
+                                                <a class="nav-link"
+                                                   href="message-router.html">Message
+                                                    Router</a>
+                                            </li>
+                                            <li class="nav-item" data-depth="2">
+                                                <a class="nav-link"
+                                                   href="message-translator.html">Message
+                                                    Translator</a>
+                                            </li>
+                                            <li class="nav-item" data-depth="2">
+                                                <a class="nav-link"
+                                                   href="messaging-bridge.html">Messaging
+                                                    Bridge</a>
+                                            </li>
+                                            <li class="nav-item" data-depth="2">
+                                                <a class="nav-link"
+                                                   href="messaging-gateway.html">Messaging
+                                                    Gateway</a>
+                                            </li>
+                                            <li class="nav-item" data-depth="2">
+                                                <a class="nav-link"
+                                                   href="messaging-mapper.html">Messaging
+                                                    Mapper</a>
+                                            </li>
+                                            <li class="nav-item" data-depth="2">
+                                                <a class="nav-link"
+                                                   href="multicast-eip.html">Multicast</a>
+                                            </li>
+                                            <li class="nav-item" data-depth="2">
+                                                <a class="nav-link"
+                                                   href="normalizer.html">Normalizer</a>
+                                            </li>
+                                            <li class="nav-item" data-depth="2">
+                                                <a class="nav-link"
+                                                   href="pipeline-eip.html">Pipeline</a>
+                                            </li>
+                                            <li class="nav-item" data-depth="2">
+                                                <a class="nav-link"
+                                                   href="point-to-point-channel.html">Point
+                                                    to Point Channel</a>
+                                            </li>
+                                            <li class="nav-item" data-depth="2">
+                                                <a class="nav-link"
+                                                   href="pollEnrich-eip.html">Poll
+                                                    Enrich</a>
+                                            </li>
+                                            <li class="nav-item" data-depth="2">
+                                                <a class="nav-link"
+                                                   href="polling-consumer.html">Polling
+                                                    Consumer</a>
+                                            </li>
+                                            <li class="nav-item" data-depth="2">
+                                                <a class="nav-link"
+                                                   href="process-eip.html">Process</a>
+                                            </li>
+                                            <li class="nav-item" data-depth="2">
+                                                <a class="nav-link"
+                                                   href="process-manager.html">Process
+                                                    Manager</a>
+                                            </li>
+                                            <li class="nav-item" data-depth="2">
+                                                <a class="nav-link"
+                                                   href="publish-subscribe-channel.html">Publish
+                                                    Subscribe Channel</a>
+                                            </li>
+                                            <li class="nav-item" data-depth="2">
+                                                <a class="nav-link"
+                                                   href="recipientList-eip.html">Recipient
+                                                    List</a>
+                                            </li>
+                                            <li class="nav-item" data-depth="2">
+                                                <a class="nav-link"
+                                                   href="removeHeader-eip.html">Remove
+                                                    Header</a>
+                                            </li>
+                                            <li class="nav-item" data-depth="2">
+                                                <a class="nav-link"
+                                                   href="removeHeaders-eip.html">Remove
+                                                    Headers</a>
+                                            </li>
+                                            <li class="nav-item" data-depth="2">
+                                                <a class="nav-link"
+                                                   href="removeProperties-eip.html">Remove
+                                                    Properties</a>
+                                            </li>
+                                            <li class="nav-item" data-depth="2">
+                                                <a class="nav-link"
+                                                   href="removeProperty-eip.html">Remove
+                                                    Property</a>
+                                            </li>
+                                            <li class="nav-item" data-depth="2">
+                                                <a class="nav-link"
+                                                   href="requestReply-eip.html">Request
+                                                    Reply</a>
+                                            </li>
+                                            <li class="nav-item" data-depth="2">
+                                                <a class="nav-link"
+                                                   href="resequence-eip.html">Resequence</a>
+                                            </li>
+                                            <li class="nav-item" data-depth="2">
+                                                <a class="nav-link"
+                                                   href="resilience4j-eip.html">Resilience4j
+                                                    Circuit Breaker</a>
+                                            </li>
+                                            <li class="nav-item" data-depth="2">
+                                                <a class="nav-link"
+                                                   href="return-address.html">Return
+                                                    Address</a>
+                                            </li>
+                                            <li class="nav-item" data-depth="2">
+                                                <a class="nav-link"
+                                                   href="rollback-eip.html">Rollback</a>
+                                            </li>
+                                            <li class="nav-item" data-depth="2">
+                                                <a class="nav-link"
+                                                   href="routingSlip-eip.html">Routing
+                                                    Slip</a>
+                                            </li>
+                                            <li class="nav-item" data-depth="2">
+                                                <a class="nav-link"
+                                                   href="saga-eip.html">Saga</a>
+                                            </li>
+                                            <li class="nav-item" data-depth="2">
+                                                <a class="nav-link"
+                                                   href="sample-eip.html">Sample</a>
+                                            </li>
+                                            <li class="nav-item" data-depth="2">
+                                                <a class="nav-link"
+                                                   href="scatter-gather.html">Scatter
+                                                    Gather</a>
+                                            </li>
+                                            <li class="nav-item" data-depth="2">
+                                                <a class="nav-link"
+                                                   href="script-eip.html">Script</a>
+                                            </li>
+                                            <li class="nav-item" data-depth="2">
+                                                <a class="nav-link"
+                                                   href="selective-consumer.html">Selective
+                                                    Consumer</a>
+                                            </li>
+                                            <li class="nav-item" data-depth="2">
+                                                <a class="nav-link"
+                                                   href="service-activator.html">Service
+                                                    Activator</a>
+                                            </li>
+                                            <li class="nav-item" data-depth="2">
+                                                <a class="nav-link"
+                                                   href="serviceCall-eip.html">Service
+                                                    Call</a>
+                                            </li>
+                                            <li class="nav-item" data-depth="2">
+                                                <a class="nav-link"
+                                                   href="setBody-eip.html">Set
+                                                    Body</a>
+                                            </li>
+                                            <li class="nav-item" data-depth="2">
+                                                <a class="nav-link"
+                                                   href="setHeader-eip.html">Set
+                                                    Header</a>
+                                            </li>
+                                            <li class="nav-item" data-depth="2">
+                                                <a class="nav-link"
+                                                   href="setProperty-eip.html">Set
+                                                    Property</a>
+                                            </li>
+                                            <li class="nav-item" data-depth="2">
+                                                <a class="nav-link"
+                                                   href="sort-eip.html">Sort</a>
+                                            </li>
+                                            <li class="nav-item" data-depth="2">
+                                                <a class="nav-link"
+                                                   href="split-eip.html">Split</a>
+                                            </li>
+                                            <li class="nav-item" data-depth="2">
+                                                <a class="nav-link"
+                                                   href="step-eip.html">Step</a>
+                                            </li>
+                                            <li class="nav-item" data-depth="2">
+                                                <a class="nav-link"
+                                                   href="stop-eip.html">Stop</a>
+                                            </li>
+                                            <li class="nav-item" data-depth="2">
+                                                <a class="nav-link"
+                                                   href="threads-eip.html">Threads</a>
+                                            </li>
+                                            <li class="nav-item is-current-page"
+                                                data-depth="2">
+                                                <a class="nav-link"
+                                                   href="throttle-eip.html">Throttle</a>
+                                            </li>
+                                            <li class="nav-item" data-depth="2">
+                                                <a class="nav-link"
+                                                   href="to-eip.html">To</a>
+                                            </li>
+                                            <li class="nav-item" data-depth="2">
+                                                <a class="nav-link"
+                                                   href="toD-eip.html">To
+                                                    Dynamic</a>
+                                            </li>
+                                            <li class="nav-item" data-depth="2">
+                                                <a class="nav-link"
+                                                   href="transactional-client.html">Transactional
+                                                    Client</a>
+                                            </li>
+                                            <li class="nav-item" data-depth="2">
+                                                <a class="nav-link"
+                                                   href="transform-eip.html">Transform</a>
+                                            </li>
+                                            <li class="nav-item" data-depth="2">
+                                                <a class="nav-link"
+                                                   href="unmarshal-eip.html">Unmarshal</a>
+                                            </li>
+                                            <li class="nav-item" data-depth="2">
+                                                <a class="nav-link"
+                                                   href="validate-eip.html">Validate</a>
+                                            </li>
+                                            <li class="nav-item" data-depth="2">
+                                                <a class="nav-link"
+                                                   href="wireTap-eip.html">Wire
+                                                    Tap</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+                <div class="nav-panel-explore" data-panel="explore">
+                    <div class="context">
+                        <span class="title">Camel Components</span>
+                        <span class="version">4.0.x</span>
+                    </div>
+                    <ul class="components">
+                        <li class="component is-current">
+                            <div class="title"><a
+                                    href="../../4.10.x/index.html">Camel
+                                Components</a></div>
+                            <ul class="versions">
+                                <li class="version is-latest">
+                                    <a href="../../4.10.x/index.html">4.10.x
+                                        (LTS)</a>
+                                </li>
+                                <li class="version">
+                                    <a href="../../4.8.x/index.html">4.8.x</a>
+                                </li>
+                                <li class="version">
+                                    <a href="../../4.4.x/index.html">4.4.x</a>
+                                </li>
+                                <li class="version is-current">
+                                    <a href="../index.html">4.0.x</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="component">
+                            <div class="title"><a
+                                    href="../../../manual/4.10.x/index.html">User
+                                manual</a></div>
+                            <ul class="versions">
+                                <li class="version is-latest">
+                                    <a href="../../../manual/4.10.x/index.html">4.10.x</a>
+                                </li>
+                                <li class="version">
+                                    <a href="../../../manual/4.8.x/index.html">4.8.x</a>
+                                </li>
+                                <li class="version">
+                                    <a href="../../../manual/4.4.x/index.html">4.4.x</a>
+                                </li>
+                                <li class="version">
+                                    <a href="../../../manual/4.0.x/index.html">4.0.x</a>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </aside>
     </div>
-  </aside>
-</div>
-<main class="article">
-<div class="toolbar" role="navigation">
-<button class="nav-toggle"></button>
-  <a href="../../../manual/4.10.x/index.html" class="home-link"></a>
-<nav class="breadcrumbs" aria-label="breadcrumbs">
-  <ul>
-    <li><a href="../index.html">Camel Components</a></li>
-    <li><a href="enterprise-integration-patterns.html">Enterprise Integration Patterns</a></li>
-    <li><a href="throttle-eip.html">Throttle</a></li>
-  </ul>
-</nav>
-<div class="page-versions">
-  <button class="version-menu-toggle" title="Show other versions of page">4.0.x</button>
-  <div class="version-menu">
-    <a class="version" href="../../4.10.x/eips/throttle-eip.html">4.10.x (LTS)</a>
-    <a class="version" href="../../4.8.x/eips/throttle-eip.html">4.8.x</a>
-    <a class="version" href="../../4.4.x/eips/throttle-eip.html">4.4.x</a>
-    <a class="version is-current" href="throttle-eip.html">4.0.x</a>
-  </div>
-</div>
+    <main class="article">
+        <div class="toolbar" role="navigation">
+            <button class="nav-toggle"></button>
+            <a href="../../../manual/4.10.x/index.html" class="home-link"></a>
+            <nav class="breadcrumbs" aria-label="breadcrumbs">
+                <ul>
+                    <li><a href="../index.html">Camel Components</a></li>
+                    <li><a href="enterprise-integration-patterns.html">Enterprise
+                        Integration Patterns</a></li>
+                    <li><a href="throttle-eip.html">Throttle</a></li>
+                </ul>
+            </nav>
+            <div class="page-versions">
+                <button class="version-menu-toggle"
+                        title="Show other versions of page">4.0.x
+                </button>
+                <div class="version-menu">
+                    <a class="version"
+                       href="../../4.10.x/eips/throttle-eip.html">4.10.x
+                        (LTS)</a>
+                    <a class="version"
+                       href="../../4.8.x/eips/throttle-eip.html">4.8.x</a>
+                    <a class="version"
+                       href="../../4.4.x/eips/throttle-eip.html">4.4.x</a>
+                    <a class="version is-current"
+                       href="throttle-eip.html">4.0.x</a>
+                </div>
+            </div>
 
-</div>
-  <div class="content">
-<aside class="toc sidebar" data-title="Contents" data-levels="2">
-  <div class="toc-menu"></div>
-</aside>
-<article class="doc">
-<h1 class="page">Throttle</h1>
-<div id="preamble">
-<div class="sectionbody">
-<div class="paragraph">
-<p>How can I throttle messages to ensure that a specific endpoint does not get overloaded, or we don’t exceed an agreed SLA with some external service?</p>
-</div>
-<div class="imageblock">
-<div class="content">
-<img src="_images/eip/MessagingAdapterIcon.gif" alt="image">
-</div>
-</div>
-<div class="paragraph">
-<p>Use a Throttler that controls the rate how many or fast messages are flowing to the endpoint.</p>
-</div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="_options"><a class="anchor" href="#_options"></a>Options</h2>
-<div class="sectionbody">
-<div class="paragraph">
-<p>The Throttle eip supports 7 options, which are listed below.</p>
-</div>
-<table class="tableblock frame-all grid-all stretch">
-<colgroup>
-<col style="width: 20%;">
-<col style="width: 50%;">
-<col style="width: 10%;">
-<col style="width: 20%;">
-</colgroup>
-<thead>
-<tr>
-<th class="tableblock halign-left valign-top">Name</th>
-<th class="tableblock halign-left valign-top">Description</th>
-<th class="tableblock halign-center valign-top">Default</th>
-<th class="tableblock halign-left valign-top">Type</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong id="_option_expression">expression</strong></p></td>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p><strong>Required</strong> Expression to configure the maximum number of messages to throttle per request.</p>
-</div></div></td>
-<td class="tableblock halign-center valign-top"></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">ExpressionDefinition</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong id="_option_correlationExpression">correlationExpression</strong></p></td>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>The expression used to calculate the correlation key to use for throttle grouping. The Exchange which has the same correlation key is throttled together.</p>
-</div></div></td>
-<td class="tableblock halign-center valign-top"></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">ExpressionSubElementDefinition</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong id="_option_executorService">executorService</strong></p></td>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>To use a custom thread pool (ScheduledExecutorService) by the throttler.</p>
-</div></div></td>
-<td class="tableblock halign-center valign-top"></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">ExecutorService</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong id="_option_timePeriodMillis">timePeriodMillis</strong></p></td>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>Sets the time period during which the maximum request count is valid for.</p>
-</div></div></td>
-<td class="tableblock halign-center valign-top"><p class="tableblock">1000</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">String</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong id="_option_asyncDelayed">asyncDelayed</strong></p></td>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>Enables asynchronous delay which means the thread will not block while delaying.</p>
-</div></div></td>
-<td class="tableblock halign-center valign-top"><p class="tableblock">false</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Boolean</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong id="_option_callerRunsWhenRejected">callerRunsWhenRejected</strong></p></td>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>Whether or not the caller should run the task when it was rejected by the thread pool. Is by default true.</p>
-</div></div></td>
-<td class="tableblock halign-center valign-top"><p class="tableblock">true</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Boolean</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong id="_option_rejectExecution">rejectExecution</strong></p></td>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>Whether or not throttler throws the ThrottlerRejectedExecutionException when the exchange exceeds the request limit Is by default false.</p>
-</div></div></td>
-<td class="tableblock halign-center valign-top"><p class="tableblock">false</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Boolean</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong id="_option_disabled">disabled</strong></p></td>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>Whether to disable this EIP from the route during build time. Once an EIP has been disabled then it cannot be enabled later at runtime.</p>
-</div></div></td>
-<td class="tableblock halign-center valign-top"><p class="tableblock">false</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Boolean</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong id="_option_description">description</strong></p></td>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>Sets the description of this node.</p>
-</div></div></td>
-<td class="tableblock halign-center valign-top"></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">DescriptionDefinition</p></td>
-</tr>
-</tbody>
-</table>
-</div>
-</div>
-<div class="sect1">
-<h2 id="_using_throttle"><a class="anchor" href="#_using_throttle"></a>Using Throttle</h2>
-<div class="sectionbody">
-<div class="paragraph">
-<p>The below example will throttle messages received on seda:a before being sent to mock:result
-ensuring that a maximum of 3 messages are sent during a running 10-seconds window slot.</p>
-</div>
-<div id="_tabs_1" class="openblock tabs is-sync is-loading">
-<div class="content">
-<div class="ulist tablist">
-<ul>
-<li id="_tabs_1_java" class="tab">
-<p>Java</p>
-</li>
-<li id="_tabs_1_xml" class="tab">
-<p>XML</p>
-</li>
-<li id="_tabs_1_yaml" class="tab">
-<p>YAML</p>
-</li>
-</ul>
-</div>
-<div id="_tabs_1_java--panel" class="tabpanel" aria-labelledby="_tabs_1_java">
-<div class="listingblock">
-<div class="content">
-<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">from("seda:a")
+        </div>
+        <div class="content">
+            <aside class="toc sidebar" data-title="Contents" data-levels="2">
+                <div class="toc-menu"></div>
+            </aside>
+            <article class="doc">
+                <h1 class="page">Throttle</h1>
+                <div id="preamble">
+                    <div class="sectionbody">
+                        <div class="paragraph">
+                            <p>How can I throttle messages to ensure that a
+                                specific endpoint does not get overloaded, or we
+                                don’t exceed an agreed SLA with some external
+                                service?</p>
+                        </div>
+                        <div class="imageblock">
+                            <div class="content">
+                                <img src="_images/eip/MessagingAdapterIcon.gif"
+                                     alt="image">
+                            </div>
+                        </div>
+                        <div class="paragraph">
+                            <p>Use a Throttler that controls the rate how many
+                                or fast messages are flowing to the
+                                endpoint.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="sect1">
+                    <h2 id="_options"><a class="anchor" href="#_options"></a>Options
+                    </h2>
+                    <div class="sectionbody">
+                        <div class="paragraph">
+                            <p>The Throttle eip supports 7 options, which are
+                                listed below.</p>
+                        </div>
+                        <table class="tableblock frame-all grid-all stretch">
+                            <colgroup>
+                                <col style="width: 20%;">
+                                <col style="width: 50%;">
+                                <col style="width: 10%;">
+                                <col style="width: 20%;">
+                            </colgroup>
+                            <thead>
+                            <tr>
+                                <th class="tableblock halign-left valign-top">
+                                    Name
+                                </th>
+                                <th class="tableblock halign-left valign-top">
+                                    Description
+                                </th>
+                                <th class="tableblock halign-center valign-top">
+                                    Default
+                                </th>
+                                <th class="tableblock halign-left valign-top">
+                                    Type
+                                </th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <td class="tableblock halign-left valign-top"><p
+                                        class="tableblock"><strong
+                                        id="_option_expression">expression</strong>
+                                </p></td>
+                                <td class="tableblock halign-left valign-top">
+                                    <div class="content">
+                                        <div class="paragraph">
+                                            <p><strong>Required</strong>
+                                                Expression to configure the
+                                                maximum number of messages to
+                                                throttle per request.</p>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td class="tableblock halign-center valign-top"></td>
+                                <td class="tableblock halign-left valign-top"><p
+                                        class="tableblock">
+                                    ExpressionDefinition</p></td>
+                            </tr>
+                            <tr>
+                                <td class="tableblock halign-left valign-top"><p
+                                        class="tableblock"><strong
+                                        id="_option_correlationExpression">correlationExpression</strong>
+                                </p></td>
+                                <td class="tableblock halign-left valign-top">
+                                    <div class="content">
+                                        <div class="paragraph">
+                                            <p>The expression used to calculate
+                                                the correlation key to use for
+                                                throttle grouping. The Exchange
+                                                which has the same correlation
+                                                key is throttled together.</p>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td class="tableblock halign-center valign-top"></td>
+                                <td class="tableblock halign-left valign-top"><p
+                                        class="tableblock">
+                                    ExpressionSubElementDefinition</p></td>
+                            </tr>
+                            <tr>
+                                <td class="tableblock halign-left valign-top"><p
+                                        class="tableblock"><strong
+                                        id="_option_executorService">executorService</strong>
+                                </p></td>
+                                <td class="tableblock halign-left valign-top">
+                                    <div class="content">
+                                        <div class="paragraph">
+                                            <p>To use a custom thread pool
+                                                (ScheduledExecutorService) by
+                                                the throttler.</p>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td class="tableblock halign-center valign-top"></td>
+                                <td class="tableblock halign-left valign-top"><p
+                                        class="tableblock">ExecutorService</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="tableblock halign-left valign-top"><p
+                                        class="tableblock"><strong
+                                        id="_option_timePeriodMillis">timePeriodMillis</strong>
+                                </p></td>
+                                <td class="tableblock halign-left valign-top">
+                                    <div class="content">
+                                        <div class="paragraph">
+                                            <p>Sets the time period during which
+                                                the maximum request count is
+                                                valid for.</p>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td class="tableblock halign-center valign-top">
+                                    <p class="tableblock">1000</p></td>
+                                <td class="tableblock halign-left valign-top"><p
+                                        class="tableblock">String</p></td>
+                            </tr>
+                            <tr>
+                                <td class="tableblock halign-left valign-top"><p
+                                        class="tableblock"><strong
+                                        id="_option_asyncDelayed">asyncDelayed</strong>
+                                </p></td>
+                                <td class="tableblock halign-left valign-top">
+                                    <div class="content">
+                                        <div class="paragraph">
+                                            <p>Enables asynchronous delay which
+                                                means the thread will not block
+                                                while delaying.</p>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td class="tableblock halign-center valign-top">
+                                    <p class="tableblock">false</p></td>
+                                <td class="tableblock halign-left valign-top"><p
+                                        class="tableblock">Boolean</p></td>
+                            </tr>
+                            <tr>
+                                <td class="tableblock halign-left valign-top"><p
+                                        class="tableblock"><strong
+                                        id="_option_callerRunsWhenRejected">callerRunsWhenRejected</strong>
+                                </p></td>
+                                <td class="tableblock halign-left valign-top">
+                                    <div class="content">
+                                        <div class="paragraph">
+                                            <p>Whether or not the caller should
+                                                run the task when it was
+                                                rejected by the thread pool. Is
+                                                by default true.</p>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td class="tableblock halign-center valign-top">
+                                    <p class="tableblock">true</p></td>
+                                <td class="tableblock halign-left valign-top"><p
+                                        class="tableblock">Boolean</p></td>
+                            </tr>
+                            <tr>
+                                <td class="tableblock halign-left valign-top"><p
+                                        class="tableblock"><strong
+                                        id="_option_rejectExecution">rejectExecution</strong>
+                                </p></td>
+                                <td class="tableblock halign-left valign-top">
+                                    <div class="content">
+                                        <div class="paragraph">
+                                            <p>Whether or not throttler throws
+                                                the
+                                                ThrottlerRejectedExecutionException
+                                                when the exchange exceeds the
+                                                request limit Is by default
+                                                false.</p>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td class="tableblock halign-center valign-top">
+                                    <p class="tableblock">false</p></td>
+                                <td class="tableblock halign-left valign-top"><p
+                                        class="tableblock">Boolean</p></td>
+                            </tr>
+                            <tr>
+                                <td class="tableblock halign-left valign-top"><p
+                                        class="tableblock"><strong
+                                        id="_option_disabled">disabled</strong>
+                                </p></td>
+                                <td class="tableblock halign-left valign-top">
+                                    <div class="content">
+                                        <div class="paragraph">
+                                            <p>Whether to disable this EIP from
+                                                the route during build time.
+                                                Once an EIP has been disabled
+                                                then it cannot be enabled later
+                                                at runtime.</p>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td class="tableblock halign-center valign-top">
+                                    <p class="tableblock">false</p></td>
+                                <td class="tableblock halign-left valign-top"><p
+                                        class="tableblock">Boolean</p></td>
+                            </tr>
+                            <tr>
+                                <td class="tableblock halign-left valign-top"><p
+                                        class="tableblock"><strong
+                                        id="_option_description">description</strong>
+                                </p></td>
+                                <td class="tableblock halign-left valign-top">
+                                    <div class="content">
+                                        <div class="paragraph">
+                                            <p>Sets the description of this
+                                                node.</p>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td class="tableblock halign-center valign-top"></td>
+                                <td class="tableblock halign-left valign-top"><p
+                                        class="tableblock">
+                                    DescriptionDefinition</p></td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <div class="sect1">
+                    <h2 id="_using_throttle"><a class="anchor"
+                                                href="#_using_throttle"></a>Using
+                        Throttle</h2>
+                    <div class="sectionbody">
+                        <div class="paragraph">
+                            <p>The below example will throttle messages received
+                                on seda:a before being sent to mock:result
+                                ensuring that a maximum of 3 messages are sent
+                                during a running 10-seconds window slot.</p>
+                        </div>
+                        <div id="_tabs_1"
+                             class="openblock tabs is-sync is-loading">
+                            <div class="content">
+                                <div class="ulist tablist">
+                                    <ul>
+                                        <li id="_tabs_1_java" class="tab">
+                                            <p>Java</p>
+                                        </li>
+                                        <li id="_tabs_1_xml" class="tab">
+                                            <p>XML</p>
+                                        </li>
+                                        <li id="_tabs_1_yaml" class="tab">
+                                            <p>YAML</p>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div id="_tabs_1_java--panel" class="tabpanel"
+                                     aria-labelledby="_tabs_1_java">
+                                    <div class="listingblock">
+                                        <div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs"
+                                         data-lang="java">from("seda:a")
   .throttle(3).timePeriodMillis(10000)
   .to("mock:result");</code></pre>
-</div>
-</div>
-</div>
-<div id="_tabs_1_xml--panel" class="tabpanel" aria-labelledby="_tabs_1_xml">
-<div class="listingblock">
-<div class="content">
-<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;route&gt;
+                                        </div>
+                                    </div>
+                                </div>
+                                <div id="_tabs_1_xml--panel" class="tabpanel"
+                                     aria-labelledby="_tabs_1_xml">
+                                    <div class="listingblock">
+                                        <div class="content">
+<pre class="highlightjs highlight"><code class="language-xml hljs"
+                                         data-lang="xml">&lt;route&gt;
   &lt;from uri="seda:a"/&gt;
   &lt;throttle timePeriodMillis="10000"&gt;
     &lt;constant&gt;3&lt;/constant&gt;
   &lt;/throttle&gt;
   &lt;to uri="mock:result"/&gt;
 &lt;/route&gt;</code></pre>
-</div>
-</div>
-</div>
-<div id="_tabs_1_yaml--panel" class="tabpanel" aria-labelledby="_tabs_1_yaml">
-<div class="listingblock">
-<div class="content">
-<pre class="highlightjs highlight"><code class="language-yaml hljs" data-lang="yaml">- from:
+                                        </div>
+                                    </div>
+                                </div>
+                                <div id="_tabs_1_yaml--panel" class="tabpanel"
+                                     aria-labelledby="_tabs_1_yaml">
+                                    <div class="listingblock">
+                                        <div class="content">
+<pre class="highlightjs highlight"><code class="language-yaml hljs"
+                                         data-lang="yaml">- from:
     uri: seda:a
     steps:
       - throttle:
@@ -543,59 +838,72 @@ ensuring that a maximum of 3 messages are sent during a running 10-seconds windo
           timePeriodMillis: 10000
       - to:
           uri: mock:result</code></pre>
-</div>
-</div>
-</div>
-</div>
-</div>
-<div class="paragraph">
-<p>To use 10-seconds window we set the <code>timePeriodMillis</code> to ten-thousand. The default value is 1000 (i.e. 1 second),
-meaning that setting just <code>throttle(3)</code> has the effect of setting the maximum number of requests per second.</p>
-</div>
-<div class="paragraph">
-<p>To throttle by 50 requests per second, would look like this:</p>
-</div>
-<div id="_tabs_2" class="openblock tabs is-sync is-loading">
-<div class="content">
-<div class="ulist tablist">
-<ul>
-<li id="_tabs_2_java" class="tab">
-<p>Java</p>
-</li>
-<li id="_tabs_2_xml" class="tab">
-<p>XML</p>
-</li>
-<li id="_tabs_2_yaml" class="tab">
-<p>YAML</p>
-</li>
-</ul>
-</div>
-<div id="_tabs_2_java--panel" class="tabpanel" aria-labelledby="_tabs_2_java">
-<div class="listingblock">
-<div class="content">
-<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">from("seda:a")
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="paragraph">
+                            <p>To use 10-seconds window we set the <code>timePeriodMillis</code>
+                                to ten-thousand. The default value is 1000 (i.e.
+                                1 second),
+                                meaning that setting just
+                                <code>throttle(3)</code> has the effect of
+                                setting the maximum number of requests per
+                                second.</p>
+                        </div>
+                        <div class="paragraph">
+                            <p>To throttle by 50 requests per second, would look
+                                like this:</p>
+                        </div>
+                        <div id="_tabs_2"
+                             class="openblock tabs is-sync is-loading">
+                            <div class="content">
+                                <div class="ulist tablist">
+                                    <ul>
+                                        <li id="_tabs_2_java" class="tab">
+                                            <p>Java</p>
+                                        </li>
+                                        <li id="_tabs_2_xml" class="tab">
+                                            <p>XML</p>
+                                        </li>
+                                        <li id="_tabs_2_yaml" class="tab">
+                                            <p>YAML</p>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div id="_tabs_2_java--panel" class="tabpanel"
+                                     aria-labelledby="_tabs_2_java">
+                                    <div class="listingblock">
+                                        <div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs"
+                                         data-lang="java">from("seda:a")
   .throttle(50)
   .to("seda:b");</code></pre>
-</div>
-</div>
-</div>
-<div id="_tabs_2_xml--panel" class="tabpanel" aria-labelledby="_tabs_2_xml">
-<div class="listingblock">
-<div class="content">
-<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;route&gt;
+                                        </div>
+                                    </div>
+                                </div>
+                                <div id="_tabs_2_xml--panel" class="tabpanel"
+                                     aria-labelledby="_tabs_2_xml">
+                                    <div class="listingblock">
+                                        <div class="content">
+<pre class="highlightjs highlight"><code class="language-xml hljs"
+                                         data-lang="xml">&lt;route&gt;
   &lt;from uri="seda:a"/&gt;
   &lt;throttle&gt;
     &lt;constant&gt;50&lt;/constant&gt;
   &lt;/throttle&gt;
   &lt;to uri="mock:result"/&gt;
 &lt;/route&gt;</code></pre>
-</div>
-</div>
-</div>
-<div id="_tabs_2_yaml--panel" class="tabpanel" aria-labelledby="_tabs_2_yaml">
-<div class="listingblock">
-<div class="content">
-<pre class="highlightjs highlight"><code class="language-yaml hljs" data-lang="yaml">- from:
+                                        </div>
+                                    </div>
+                                </div>
+                                <div id="_tabs_2_yaml--panel" class="tabpanel"
+                                     aria-labelledby="_tabs_2_yaml">
+                                    <div class="listingblock">
+                                        <div class="content">
+<pre class="highlightjs highlight"><code class="language-yaml hljs"
+                                         data-lang="yaml">- from:
     uri: seda:a
     steps:
       - throttle:
@@ -603,52 +911,77 @@ meaning that setting just <code>throttle(3)</code> has the effect of setting the
             constant: 50
       - to:
           uri: mock:result</code></pre>
-</div>
-</div>
-</div>
-</div>
-</div>
-<div class="sect2">
-<h3 id="_dynamically_changing_maximum_requests_per_period"><a class="anchor" href="#_dynamically_changing_maximum_requests_per_period"></a>Dynamically changing maximum requests per period</h3>
-<div class="paragraph">
-<p>The Throttler uses an <a href="../../../manual/4.10.x/expression.html" class="xref page">Expression</a>
-to configure the number of requests. In all the examples from above, we used
-a <a href="../../4.10.x/languages/constant-language.html" class="xref page">constant</a>. However, the expression can
-be dynamic, such as determined from a message header from the current <code>Exchange</code>.</p>
-</div>
-<div class="paragraph">
-<p>At runtime Camel evaluates the expression and converts the result to a <code>java.lang.Long</code> type.
-In the example below we use a header from the message to determine the maximum requests per period.
-If the header is absent, then the Throttler uses the old value. This allows you to only provide a header if the value is to be changed:</p>
-</div>
-<div id="_tabs_3" class="openblock tabs is-sync is-loading">
-<div class="content">
-<div class="ulist tablist">
-<ul>
-<li id="_tabs_3_java" class="tab">
-<p>Java</p>
-</li>
-<li id="_tabs_3_xml" class="tab">
-<p>XML</p>
-</li>
-<li id="_tabs_3_yaml" class="tab">
-<p>YAML</p>
-</li>
-</ul>
-</div>
-<div id="_tabs_3_java--panel" class="tabpanel" aria-labelledby="_tabs_3_java">
-<div class="listingblock">
-<div class="content">
-<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">from("seda:a")
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="sect2">
+                            <h3 id="_dynamically_changing_maximum_requests_per_period">
+                                <a class="anchor"
+                                   href="#_dynamically_changing_maximum_requests_per_period"></a>Dynamically
+                                changing maximum requests per period</h3>
+                            <div class="paragraph">
+                                <p>The Throttler uses an <a
+                                        href="../../../manual/4.10.x/expression.html"
+                                        class="xref page">Expression</a>
+                                    to configure the number of requests. In all
+                                    the examples from above, we used
+                                    a
+                                    <a href="../../4.10.x/languages/constant-language.html"
+                                       class="xref page">constant</a>. However,
+                                    the expression can
+                                    be dynamic, such as determined from a
+                                    message header from the current <code>Exchange</code>.
+                                </p>
+                            </div>
+                            <div class="paragraph">
+                                <p>At runtime Camel evaluates the expression and
+                                    converts the result to a <code>java.lang.Long</code>
+                                    type.
+                                    In the example below we use a header from
+                                    the message to determine the maximum
+                                    requests per period.
+                                    If the header is absent, then the Throttler
+                                    uses the old value. This allows you to only
+                                    provide a header if the value is to be
+                                    changed:</p>
+                            </div>
+                            <div id="_tabs_3"
+                                 class="openblock tabs is-sync is-loading">
+                                <div class="content">
+                                    <div class="ulist tablist">
+                                        <ul>
+                                            <li id="_tabs_3_java" class="tab">
+                                                <p>Java</p>
+                                            </li>
+                                            <li id="_tabs_3_xml" class="tab">
+                                                <p>XML</p>
+                                            </li>
+                                            <li id="_tabs_3_yaml" class="tab">
+                                                <p>YAML</p>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div id="_tabs_3_java--panel"
+                                         class="tabpanel"
+                                         aria-labelledby="_tabs_3_java">
+                                        <div class="listingblock">
+                                            <div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs"
+                                         data-lang="java">from("seda:a")
   .throttle(header("throttleValue")).timePeriodMillis(500)
   .to("seda:b")</code></pre>
-</div>
-</div>
-</div>
-<div id="_tabs_3_xml--panel" class="tabpanel" aria-labelledby="_tabs_3_xml">
-<div class="listingblock">
-<div class="content">
-<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;route&gt;
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div id="_tabs_3_xml--panel"
+                                         class="tabpanel"
+                                         aria-labelledby="_tabs_3_xml">
+                                        <div class="listingblock">
+                                            <div class="content">
+<pre class="highlightjs highlight"><code class="language-xml hljs"
+                                         data-lang="xml">&lt;route&gt;
   &lt;from uri="seda:a"/&gt;
   &lt;throttle timePeriodMillis="500"&gt;
     &lt;!-- use a header to determine how many messages to throttle per 0.5 sec --&gt;
@@ -656,13 +989,16 @@ If the header is absent, then the Throttler uses the old value. This allows you 
   &lt;/throttle&gt;
   &lt;to uri="seda:b"/&gt;
 &lt;/route&gt;</code></pre>
-</div>
-</div>
-</div>
-<div id="_tabs_3_yaml--panel" class="tabpanel" aria-labelledby="_tabs_3_yaml">
-<div class="listingblock">
-<div class="content">
-<pre class="highlightjs highlight"><code class="language-yaml hljs" data-lang="yaml">- from:
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div id="_tabs_3_yaml--panel"
+                                         class="tabpanel"
+                                         aria-labelledby="_tabs_3_yaml">
+                                        <div class="listingblock">
+                                            <div class="content">
+<pre class="highlightjs highlight"><code class="language-yaml hljs"
+                                         data-lang="yaml">- from:
     uri: seda:a
     steps:
       - throttle:
@@ -672,63 +1008,81 @@ If the header is absent, then the Throttler uses the old value. This allows you 
           timePeriodMillis: 500
       - to:
           uri: seda:b</code></pre>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-<div class="sect2">
-<h3 id="_asynchronous_delaying"><a class="anchor" href="#_asynchronous_delaying"></a>Asynchronous delaying</h3>
-<div class="paragraph">
-<p>You can let the Throttler use non-blocking asynchronous delaying,
-which means Camel will use a scheduler to schedule a task to be executed in the future.
-The task will then continue routing. This allows the caller thread to not block and be able to service other messages, etc.</p>
-</div>
-<div class="paragraph">
-<p>You enable asynchronous delaying using <code>asyncDelayed</code> as shown:</p>
-</div>
-<div id="_tabs_4" class="openblock tabs is-sync is-loading">
-<div class="content">
-<div class="ulist tablist">
-<ul>
-<li id="_tabs_4_java" class="tab">
-<p>Java</p>
-</li>
-<li id="_tabs_4_xml" class="tab">
-<p>XML</p>
-</li>
-<li id="_tabs_4_yaml" class="tab">
-<p>YAML</p>
-</li>
-</ul>
-</div>
-<div id="_tabs_4_java--panel" class="tabpanel" aria-labelledby="_tabs_4_java">
-<div class="listingblock">
-<div class="content">
-<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">from("seda:a")
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="sect2">
+                            <h3 id="_asynchronous_delaying"><a class="anchor"
+                                                               href="#_asynchronous_delaying"></a>Asynchronous
+                                delaying</h3>
+                            <div class="paragraph">
+                                <p>You can let the Throttler use non-blocking
+                                    asynchronous delaying,
+                                    which means Camel will use a scheduler to
+                                    schedule a task to be executed in the
+                                    future.
+                                    The task will then continue routing. This
+                                    allows the caller thread to not block and be
+                                    able to service other messages, etc.</p>
+                            </div>
+                            <div class="paragraph">
+                                <p>You enable asynchronous delaying using <code>asyncDelayed</code>
+                                    as shown:</p>
+                            </div>
+                            <div id="_tabs_4"
+                                 class="openblock tabs is-sync is-loading">
+                                <div class="content">
+                                    <div class="ulist tablist">
+                                        <ul>
+                                            <li id="_tabs_4_java" class="tab">
+                                                <p>Java</p>
+                                            </li>
+                                            <li id="_tabs_4_xml" class="tab">
+                                                <p>XML</p>
+                                            </li>
+                                            <li id="_tabs_4_yaml" class="tab">
+                                                <p>YAML</p>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div id="_tabs_4_java--panel"
+                                         class="tabpanel"
+                                         aria-labelledby="_tabs_4_java">
+                                        <div class="listingblock">
+                                            <div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs"
+                                         data-lang="java">from("seda:a")
   .throttle(100).asyncDelayed()
   .to("seda:b");</code></pre>
-</div>
-</div>
-</div>
-<div id="_tabs_4_xml--panel" class="tabpanel" aria-labelledby="_tabs_4_xml">
-<div class="listingblock">
-<div class="content">
-<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;route&gt;
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div id="_tabs_4_xml--panel"
+                                         class="tabpanel"
+                                         aria-labelledby="_tabs_4_xml">
+                                        <div class="listingblock">
+                                            <div class="content">
+<pre class="highlightjs highlight"><code class="language-xml hljs"
+                                         data-lang="xml">&lt;route&gt;
   &lt;from uri="seda:a"/&gt;
   &lt;throttle asyncDelayed="true"&gt;
     &lt;constant&gt;100&lt;/constant&gt;
   &lt;/throttle&gt;
   &lt;to uri="seda:b"/&gt;
 &lt;/route&gt;</code></pre>
-</div>
-</div>
-</div>
-<div id="_tabs_4_yaml--panel" class="tabpanel" aria-labelledby="_tabs_4_yaml">
-<div class="listingblock">
-<div class="content">
-<pre class="highlightjs highlight"><code class="language-yaml hljs" data-lang="yaml">- from:
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div id="_tabs_4_yaml--panel"
+                                         class="tabpanel"
+                                         aria-labelledby="_tabs_4_yaml">
+                                        <div class="listingblock">
+                                            <div class="content">
+<pre class="highlightjs highlight"><code class="language-yaml hljs"
+                                         data-lang="yaml">- from:
     uri: seda:a
     steps:
       - throttle:
@@ -737,63 +1091,82 @@ The task will then continue routing. This allows the caller thread to not block 
           asyncDelayed: true
       - to:
           uri: seda:b</code></pre>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-<div class="sect2">
-<h3 id="_rejecting_processing_if_rate_limit_hit"><a class="anchor" href="#_rejecting_processing_if_rate_limit_hit"></a>Rejecting processing if rate limit hit</h3>
-<div class="paragraph">
-<p>When a message is being <em>throttled</em> due the maximum request per limit has been reached, then
-the Throttler will by default wait until there is <em>free space</em> before continue routing the message.</p>
-</div>
-<div class="paragraph">
-<p>Instead of waiting you can also configure the Throttler to reject the message by throwing <code>ThrottlerRejectedExecutionException</code>
-exception.</p>
-</div>
-<div id="_tabs_5" class="openblock tabs is-sync is-loading">
-<div class="content">
-<div class="ulist tablist">
-<ul>
-<li id="_tabs_5_java" class="tab">
-<p>Java</p>
-</li>
-<li id="_tabs_5_xml" class="tab">
-<p>XML</p>
-</li>
-<li id="_tabs_5_yaml" class="tab">
-<p>YAML</p>
-</li>
-</ul>
-</div>
-<div id="_tabs_5_java--panel" class="tabpanel" aria-labelledby="_tabs_5_java">
-<div class="listingblock">
-<div class="content">
-<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">from("seda:a")
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="sect2">
+                            <h3 id="_rejecting_processing_if_rate_limit_hit"><a
+                                    class="anchor"
+                                    href="#_rejecting_processing_if_rate_limit_hit"></a>Rejecting
+                                processing if rate limit hit</h3>
+                            <div class="paragraph">
+                                <p>When a message is being <em>throttled</em>
+                                    due the maximum request per limit has been
+                                    reached, then
+                                    the Throttler will by default wait until
+                                    there is <em>free space</em> before continue
+                                    routing the message.</p>
+                            </div>
+                            <div class="paragraph">
+                                <p>Instead of waiting you can also configure the
+                                    Throttler to reject the message by throwing
+                                    <code>ThrottlerRejectedExecutionException</code>
+                                    exception.</p>
+                            </div>
+                            <div id="_tabs_5"
+                                 class="openblock tabs is-sync is-loading">
+                                <div class="content">
+                                    <div class="ulist tablist">
+                                        <ul>
+                                            <li id="_tabs_5_java" class="tab">
+                                                <p>Java</p>
+                                            </li>
+                                            <li id="_tabs_5_xml" class="tab">
+                                                <p>XML</p>
+                                            </li>
+                                            <li id="_tabs_5_yaml" class="tab">
+                                                <p>YAML</p>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div id="_tabs_5_java--panel"
+                                         class="tabpanel"
+                                         aria-labelledby="_tabs_5_java">
+                                        <div class="listingblock">
+                                            <div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs"
+                                         data-lang="java">from("seda:a")
   .throttle(100).rejectExecution(true)
   .to("seda:b");</code></pre>
-</div>
-</div>
-</div>
-<div id="_tabs_5_xml--panel" class="tabpanel" aria-labelledby="_tabs_5_xml">
-<div class="listingblock">
-<div class="content">
-<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;route&gt;
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div id="_tabs_5_xml--panel"
+                                         class="tabpanel"
+                                         aria-labelledby="_tabs_5_xml">
+                                        <div class="listingblock">
+                                            <div class="content">
+<pre class="highlightjs highlight"><code class="language-xml hljs"
+                                         data-lang="xml">&lt;route&gt;
   &lt;from uri="seda:a"/&gt;
   &lt;throttle timePeriodMillis="100" rejectExecution="true"&gt;
     &lt;constant&gt;100&lt;/constant&gt;
   &lt;/throttle&gt;
   &lt;to uri="seda:b"/&gt;
 &lt;/route&gt;</code></pre>
-</div>
-</div>
-</div>
-<div id="_tabs_5_yaml--panel" class="tabpanel" aria-labelledby="_tabs_5_yaml">
-<div class="listingblock">
-<div class="content">
-<pre class="highlightjs highlight"><code class="language-yaml hljs" data-lang="yaml">- from:
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div id="_tabs_5_yaml--panel"
+                                         class="tabpanel"
+                                         aria-labelledby="_tabs_5_yaml">
+                                        <div class="listingblock">
+                                            <div class="content">
+<pre class="highlightjs highlight"><code class="language-yaml hljs"
+                                         data-lang="yaml">- from:
     uri: seda:a
     steps:
       - throttle:
@@ -803,49 +1176,65 @@ exception.</p>
           rejectExecution: true
       - to:
           uri: seda:b</code></pre>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-<div class="sect2">
-<h3 id="_throttling_per_group"><a class="anchor" href="#_throttling_per_group"></a>Throttling per group</h3>
-<div class="paragraph">
-<p>The Throttler will by default throttle all messages in the same group. However, it is possible to use
-a <em>correlation expression</em> to diving into multiple groups, where each group is throttled independently.</p>
-</div>
-<div class="paragraph">
-<p>For example, you can throttle by a <a href="message.html" class="xref page">message</a> header as shown in the following example:</p>
-</div>
-<div id="_tabs_6" class="openblock tabs is-sync is-loading">
-<div class="content">
-<div class="ulist tablist">
-<ul>
-<li id="_tabs_6_java" class="tab">
-<p>Java</p>
-</li>
-<li id="_tabs_6_xml" class="tab">
-<p>XML</p>
-</li>
-<li id="_tabs_6_yaml" class="tab">
-<p>YAML</p>
-</li>
-</ul>
-</div>
-<div id="_tabs_6_java--panel" class="tabpanel" aria-labelledby="_tabs_6_java">
-<div class="listingblock">
-<div class="content">
-<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">from("seda:a")
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="sect2">
+                            <h3 id="_throttling_per_group"><a class="anchor"
+                                                              href="#_throttling_per_group"></a>Throttling
+                                per group</h3>
+                            <div class="paragraph">
+                                <p>The Throttler will by default throttle all
+                                    messages in the same group. However, it is
+                                    possible to use
+                                    a <em>correlation expression</em> to diving
+                                    into multiple groups, where each group is
+                                    throttled independently.</p>
+                            </div>
+                            <div class="paragraph">
+                                <p>For example, you can throttle by a <a
+                                        href="message.html" class="xref page">message</a>
+                                    header as shown in the following example:
+                                </p>
+                            </div>
+                            <div id="_tabs_6"
+                                 class="openblock tabs is-sync is-loading">
+                                <div class="content">
+                                    <div class="ulist tablist">
+                                        <ul>
+                                            <li id="_tabs_6_java" class="tab">
+                                                <p>Java</p>
+                                            </li>
+                                            <li id="_tabs_6_xml" class="tab">
+                                                <p>XML</p>
+                                            </li>
+                                            <li id="_tabs_6_yaml" class="tab">
+                                                <p>YAML</p>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div id="_tabs_6_java--panel"
+                                         class="tabpanel"
+                                         aria-labelledby="_tabs_6_java">
+                                        <div class="listingblock">
+                                            <div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs"
+                                         data-lang="java">from("seda:a")
   .throttle(100).correlationExpression(header("region"))
   .to("seda:b");</code></pre>
-</div>
-</div>
-</div>
-<div id="_tabs_6_xml--panel" class="tabpanel" aria-labelledby="_tabs_6_xml">
-<div class="listingblock">
-<div class="content">
-<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;route&gt;
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div id="_tabs_6_xml--panel"
+                                         class="tabpanel"
+                                         aria-labelledby="_tabs_6_xml">
+                                        <div class="listingblock">
+                                            <div class="content">
+<pre class="highlightjs highlight"><code class="language-xml hljs"
+                                         data-lang="xml">&lt;route&gt;
   &lt;from uri="seda:a"/&gt;
   &lt;throttle&gt;
     &lt;constant&gt;100&lt;/constant&gt;
@@ -855,13 +1244,16 @@ a <em>correlation expression</em> to diving into multiple groups, where each gro
   &lt;/throttle&gt;
   &lt;to uri="seda:b"/&gt;
 &lt;/route&gt;</code></pre>
-</div>
-</div>
-</div>
-<div id="_tabs_6_yaml--panel" class="tabpanel" aria-labelledby="_tabs_6_yaml">
-<div class="listingblock">
-<div class="content">
-<pre class="highlightjs highlight"><code class="language-yaml hljs" data-lang="yaml">- from:
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div id="_tabs_6_yaml--panel"
+                                         class="tabpanel"
+                                         aria-labelledby="_tabs_6_yaml">
+                                        <div class="listingblock">
+                                            <div class="content">
+<pre class="highlightjs highlight"><code class="language-yaml hljs"
+                                         data-lang="yaml">- from:
     uri: seda:a
     steps:
       - throttle:
@@ -871,26 +1263,31 @@ a <em>correlation expression</em> to diving into multiple groups, where each gro
             header: region
       - to:
           uri: seda:b</code></pre>
-</div>
-</div>
-</div>
-</div>
-</div>
-<div class="paragraph">
-<p>In the example above messages are throttled by the header with name region.
-So suppose there are regions for US, EMEA, and ASIA, then we have three different groups, that each
-are throttled by 100 messages per second.</p>
-</div>
-</div>
-</div>
-</div>
-</article>
-  </div>
-</main>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="paragraph">
+                                <p>In the example above messages are throttled
+                                    by the header with name region.
+                                    So suppose there are regions for US, EMEA,
+                                    and ASIA, then we have three different
+                                    groups, that each
+                                    are throttled by 100 messages per
+                                    second.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </article>
+        </div>
+    </main>
 </div>
 <footer class="footer">
 </footer>
-<script id="site-script" src="../../../_/js/site.js" data-ui-root-path="../../../_"></script>
+<script id="site-script" src="../../../_/js/site.js"
+        data-ui-root-path="../../../_"></script>
 <script async src="../../../_/js/vendor/highlight.js"></script>
-  </body>
+</body>
 </html>

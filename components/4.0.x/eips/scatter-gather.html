@@ -1,444 +1,643 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+<head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <title>Scatter Gather :: Red Hat build of Apache Camel</title>
     <meta name="generator" content="Antora 3.1.4">
     <link rel="stylesheet" href="../../../_/css/site.css">
-  </head>
-  <body class="article">
+</head>
+<body class="article">
 <header class="header">
-  <nav class="navbar">
-    <div class="navbar-brand">
-      <a class="navbar-item" href="/">Red Hat build of Apache Camel</a>
-      <button class="navbar-burger" data-target="topbar-nav">
-        <span></span>
-        <span></span>
-        <span></span>
-      </button>
-    </div>
-  </nav>
+    <nav class="navbar">
+        <div class="navbar-brand">
+            <a class="navbar-item" href="/">Red Hat build of Apache Camel</a>
+            <button class="navbar-burger" data-target="topbar-nav">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
 </header>
 <div class="body">
-<div class="nav-container" data-component="components" data-version="4.0.x">
-  <aside class="nav">
-    <div class="panels">
-<div class="nav-panel-menu is-active" data-panel="menu">
-  <nav class="nav-menu">
-    <button class="nav-menu-toggle" aria-label="Toggle expand/collapse all" style="display: none"></button>
-    <h3 class="title"><a href="../index.html">Camel Components</a></h3>
-<ul class="nav-list">
-  <li class="nav-item" data-depth="0">
-<ul class="nav-list">
-  <li class="nav-item" data-depth="1">
-    <button class="nav-item-toggle"></button>
-    <a class="nav-link" href="enterprise-integration-patterns.html">Enterprise Integration Patterns</a>
-<ul class="nav-list">
-  <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="aggregate-eip.html">Aggregate</a>
-  </li>
-  <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="bean-eip.html">Bean</a>
-  </li>
-  <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="change-data-capture.html">Change Data Capture</a>
-  </li>
-  <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="channel-adapter.html">Channel Adapter</a>
-  </li>
-  <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="choice-eip.html">Content Based Router</a>
-  </li>
-  <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="circuitBreaker-eip.html">Circuit Breaker</a>
-  </li>
-  <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="claimCheck-eip.html">Claim Check</a>
-  </li>
-  <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="competing-consumers.html">Competing Consumers</a>
-  </li>
-  <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="composed-message-processor.html">Composed Message Processor</a>
-  </li>
-  <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="content-enricher.html">Content Enricher</a>
-  </li>
-  <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="content-filter-eip.html">Content Filter</a>
-  </li>
-  <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="convertBodyTo-eip.html">Convert Body To</a>
-  </li>
-  <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="correlation-identifier.html">Correlation Identifier</a>
-  </li>
-  <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="dead-letter-channel.html">Dead Letter Channel</a>
-  </li>
-  <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="delay-eip.html">Delay</a>
-  </li>
-  <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="durable-subscriber.html">Durable Subscriber</a>
-  </li>
-  <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="dynamicRouter-eip.html">Dynamic Router</a>
-  </li>
-  <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="enrich-eip.html">Enrich</a>
-  </li>
-  <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="eventDrivenConsumer-eip.html">Event Driven Consumer</a>
-  </li>
-  <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="event-message.html">Event Message</a>
-  </li>
-  <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="filter-eip.html">Filter</a>
-  </li>
-  <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="from-eip.html">From</a>
-  </li>
-  <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="guaranteed-delivery.html">Guaranteed Delivery</a>
-  </li>
-  <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="idempotentConsumer-eip.html">Idempotent Consumer</a>
-  </li>
-  <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="intercept.html">Intercept</a>
-  </li>
-  <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="kamelet-eip.html">Kamelet</a>
-  </li>
-  <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="loadBalance-eip.html">Load Balance</a>
-  </li>
-  <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="log-eip.html">Log</a>
-  </li>
-  <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="loop-eip.html">Loop</a>
-  </li>
-  <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="marshal-eip.html">Marshal</a>
-  </li>
-  <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="message.html">Message</a>
-  </li>
-  <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="message-broker.html">Message Broker</a>
-  </li>
-  <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="message-bus.html">Message Bus</a>
-  </li>
-  <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="message-channel.html">Message Channel</a>
-  </li>
-  <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="message-dispatcher.html">Message Dispatcher</a>
-  </li>
-  <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="message-endpoint.html">Message Endpoint</a>
-  </li>
-  <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="message-expiration.html">Message Expiration</a>
-  </li>
-  <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="message-history.html">Message History</a>
-  </li>
-  <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="message-router.html">Message Router</a>
-  </li>
-  <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="message-translator.html">Message Translator</a>
-  </li>
-  <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="messaging-bridge.html">Messaging Bridge</a>
-  </li>
-  <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="messaging-gateway.html">Messaging Gateway</a>
-  </li>
-  <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="messaging-mapper.html">Messaging Mapper</a>
-  </li>
-  <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="multicast-eip.html">Multicast</a>
-  </li>
-  <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="normalizer.html">Normalizer</a>
-  </li>
-  <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="pipeline-eip.html">Pipeline</a>
-  </li>
-  <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="point-to-point-channel.html">Point to Point Channel</a>
-  </li>
-  <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="pollEnrich-eip.html">Poll Enrich</a>
-  </li>
-  <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="polling-consumer.html">Polling Consumer</a>
-  </li>
-  <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="process-eip.html">Process</a>
-  </li>
-  <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="process-manager.html">Process Manager</a>
-  </li>
-  <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="publish-subscribe-channel.html">Publish Subscribe Channel</a>
-  </li>
-  <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="recipientList-eip.html">Recipient List</a>
-  </li>
-  <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="removeHeader-eip.html">Remove Header</a>
-  </li>
-  <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="removeHeaders-eip.html">Remove Headers</a>
-  </li>
-  <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="removeProperties-eip.html">Remove Properties</a>
-  </li>
-  <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="removeProperty-eip.html">Remove Property</a>
-  </li>
-  <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="requestReply-eip.html">Request Reply</a>
-  </li>
-  <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="resequence-eip.html">Resequence</a>
-  </li>
-  <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="resilience4j-eip.html">Resilience4j Circuit Breaker</a>
-  </li>
-  <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="return-address.html">Return Address</a>
-  </li>
-  <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="rollback-eip.html">Rollback</a>
-  </li>
-  <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="routingSlip-eip.html">Routing Slip</a>
-  </li>
-  <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="saga-eip.html">Saga</a>
-  </li>
-  <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="sample-eip.html">Sample</a>
-  </li>
-  <li class="nav-item is-current-page" data-depth="2">
-    <a class="nav-link" href="scatter-gather.html">Scatter Gather</a>
-  </li>
-  <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="script-eip.html">Script</a>
-  </li>
-  <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="selective-consumer.html">Selective Consumer</a>
-  </li>
-  <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="service-activator.html">Service Activator</a>
-  </li>
-  <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="serviceCall-eip.html">Service Call</a>
-  </li>
-  <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="setBody-eip.html">Set Body</a>
-  </li>
-  <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="setHeader-eip.html">Set Header</a>
-  </li>
-  <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="setProperty-eip.html">Set Property</a>
-  </li>
-  <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="sort-eip.html">Sort</a>
-  </li>
-  <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="split-eip.html">Split</a>
-  </li>
-  <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="step-eip.html">Step</a>
-  </li>
-  <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="stop-eip.html">Stop</a>
-  </li>
-  <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="threads-eip.html">Threads</a>
-  </li>
-  <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="throttle-eip.html">Throttle</a>
-  </li>
-  <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="to-eip.html">To</a>
-  </li>
-  <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="toD-eip.html">To Dynamic</a>
-  </li>
-  <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="transactional-client.html">Transactional Client</a>
-  </li>
-  <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="transform-eip.html">Transform</a>
-  </li>
-  <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="unmarshal-eip.html">Unmarshal</a>
-  </li>
-  <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="validate-eip.html">Validate</a>
-  </li>
-  <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="wireTap-eip.html">Wire Tap</a>
-  </li>
-</ul>
-  </li>
-</ul>
-  </li>
-</ul>
-  </nav>
-</div>
-<div class="nav-panel-explore" data-panel="explore">
-  <div class="context">
-    <span class="title">Camel Components</span>
-    <span class="version">4.0.x</span>
-  </div>
-  <ul class="components">
-    <li class="component is-current">
-      <div class="title"><a href="../../4.10.x/index.html">Camel Components</a></div>
-      <ul class="versions">
-        <li class="version is-latest">
-          <a href="../../4.10.x/index.html">4.10.x (LTS)</a>
-        </li>
-        <li class="version">
-          <a href="../../4.8.x/index.html">4.8.x</a>
-        </li>
-        <li class="version">
-          <a href="../../4.4.x/index.html">4.4.x</a>
-        </li>
-        <li class="version is-current">
-          <a href="../index.html">4.0.x</a>
-        </li>
-      </ul>
-    </li>
-    <li class="component">
-      <div class="title"><a href="../../../manual/4.10.x/index.html">User manual</a></div>
-      <ul class="versions">
-        <li class="version is-latest">
-          <a href="../../../manual/4.10.x/index.html">4.10.x</a>
-        </li>
-        <li class="version">
-          <a href="../../../manual/4.8.x/index.html">4.8.x</a>
-        </li>
-        <li class="version">
-          <a href="../../../manual/4.4.x/index.html">4.4.x</a>
-        </li>
-        <li class="version">
-          <a href="../../../manual/4.0.x/index.html">4.0.x</a>
-        </li>
-      </ul>
-    </li>
-  </ul>
-</div>
+    <div class="nav-container" data-component="components" data-version="4.0.x">
+        <aside class="nav">
+            <div class="panels">
+                <div class="nav-panel-menu is-active" data-panel="menu">
+                    <nav class="nav-menu">
+                        <button class="nav-menu-toggle"
+                                aria-label="Toggle expand/collapse all"
+                                style="display: none"></button>
+                        <h3 class="title"><a href="../index.html">Camel
+                            Components</a></h3>
+                        <ul class="nav-list">
+                            <li class="nav-item" data-depth="0">
+                                <ul class="nav-list">
+                                    <li class="nav-item" data-depth="1">
+                                        <button class="nav-item-toggle"></button>
+                                        <a class="nav-link"
+                                           href="enterprise-integration-patterns.html">Enterprise
+                                            Integration Patterns</a>
+                                        <ul class="nav-list">
+                                            <li class="nav-item" data-depth="2">
+                                                <a class="nav-link"
+                                                   href="aggregate-eip.html">Aggregate</a>
+                                            </li>
+                                            <li class="nav-item" data-depth="2">
+                                                <a class="nav-link"
+                                                   href="bean-eip.html">Bean</a>
+                                            </li>
+                                            <li class="nav-item" data-depth="2">
+                                                <a class="nav-link"
+                                                   href="change-data-capture.html">Change
+                                                    Data Capture</a>
+                                            </li>
+                                            <li class="nav-item" data-depth="2">
+                                                <a class="nav-link"
+                                                   href="channel-adapter.html">Channel
+                                                    Adapter</a>
+                                            </li>
+                                            <li class="nav-item" data-depth="2">
+                                                <a class="nav-link"
+                                                   href="choice-eip.html">Content
+                                                    Based Router</a>
+                                            </li>
+                                            <li class="nav-item" data-depth="2">
+                                                <a class="nav-link"
+                                                   href="circuitBreaker-eip.html">Circuit
+                                                    Breaker</a>
+                                            </li>
+                                            <li class="nav-item" data-depth="2">
+                                                <a class="nav-link"
+                                                   href="claimCheck-eip.html">Claim
+                                                    Check</a>
+                                            </li>
+                                            <li class="nav-item" data-depth="2">
+                                                <a class="nav-link"
+                                                   href="competing-consumers.html">Competing
+                                                    Consumers</a>
+                                            </li>
+                                            <li class="nav-item" data-depth="2">
+                                                <a class="nav-link"
+                                                   href="composed-message-processor.html">Composed
+                                                    Message Processor</a>
+                                            </li>
+                                            <li class="nav-item" data-depth="2">
+                                                <a class="nav-link"
+                                                   href="content-enricher.html">Content
+                                                    Enricher</a>
+                                            </li>
+                                            <li class="nav-item" data-depth="2">
+                                                <a class="nav-link"
+                                                   href="content-filter-eip.html">Content
+                                                    Filter</a>
+                                            </li>
+                                            <li class="nav-item" data-depth="2">
+                                                <a class="nav-link"
+                                                   href="convertBodyTo-eip.html">Convert
+                                                    Body To</a>
+                                            </li>
+                                            <li class="nav-item" data-depth="2">
+                                                <a class="nav-link"
+                                                   href="correlation-identifier.html">Correlation
+                                                    Identifier</a>
+                                            </li>
+                                            <li class="nav-item" data-depth="2">
+                                                <a class="nav-link"
+                                                   href="dead-letter-channel.html">Dead
+                                                    Letter Channel</a>
+                                            </li>
+                                            <li class="nav-item" data-depth="2">
+                                                <a class="nav-link"
+                                                   href="delay-eip.html">Delay</a>
+                                            </li>
+                                            <li class="nav-item" data-depth="2">
+                                                <a class="nav-link"
+                                                   href="durable-subscriber.html">Durable
+                                                    Subscriber</a>
+                                            </li>
+                                            <li class="nav-item" data-depth="2">
+                                                <a class="nav-link"
+                                                   href="dynamicRouter-eip.html">Dynamic
+                                                    Router</a>
+                                            </li>
+                                            <li class="nav-item" data-depth="2">
+                                                <a class="nav-link"
+                                                   href="enrich-eip.html">Enrich</a>
+                                            </li>
+                                            <li class="nav-item" data-depth="2">
+                                                <a class="nav-link"
+                                                   href="eventDrivenConsumer-eip.html">Event
+                                                    Driven Consumer</a>
+                                            </li>
+                                            <li class="nav-item" data-depth="2">
+                                                <a class="nav-link"
+                                                   href="event-message.html">Event
+                                                    Message</a>
+                                            </li>
+                                            <li class="nav-item" data-depth="2">
+                                                <a class="nav-link"
+                                                   href="filter-eip.html">Filter</a>
+                                            </li>
+                                            <li class="nav-item" data-depth="2">
+                                                <a class="nav-link"
+                                                   href="from-eip.html">From</a>
+                                            </li>
+                                            <li class="nav-item" data-depth="2">
+                                                <a class="nav-link"
+                                                   href="guaranteed-delivery.html">Guaranteed
+                                                    Delivery</a>
+                                            </li>
+                                            <li class="nav-item" data-depth="2">
+                                                <a class="nav-link"
+                                                   href="idempotentConsumer-eip.html">Idempotent
+                                                    Consumer</a>
+                                            </li>
+                                            <li class="nav-item" data-depth="2">
+                                                <a class="nav-link"
+                                                   href="intercept.html">Intercept</a>
+                                            </li>
+                                            <li class="nav-item" data-depth="2">
+                                                <a class="nav-link"
+                                                   href="kamelet-eip.html">Kamelet</a>
+                                            </li>
+                                            <li class="nav-item" data-depth="2">
+                                                <a class="nav-link"
+                                                   href="loadBalance-eip.html">Load
+                                                    Balance</a>
+                                            </li>
+                                            <li class="nav-item" data-depth="2">
+                                                <a class="nav-link"
+                                                   href="log-eip.html">Log</a>
+                                            </li>
+                                            <li class="nav-item" data-depth="2">
+                                                <a class="nav-link"
+                                                   href="loop-eip.html">Loop</a>
+                                            </li>
+                                            <li class="nav-item" data-depth="2">
+                                                <a class="nav-link"
+                                                   href="marshal-eip.html">Marshal</a>
+                                            </li>
+                                            <li class="nav-item" data-depth="2">
+                                                <a class="nav-link"
+                                                   href="message.html">Message</a>
+                                            </li>
+                                            <li class="nav-item" data-depth="2">
+                                                <a class="nav-link"
+                                                   href="message-broker.html">Message
+                                                    Broker</a>
+                                            </li>
+                                            <li class="nav-item" data-depth="2">
+                                                <a class="nav-link"
+                                                   href="message-bus.html">Message
+                                                    Bus</a>
+                                            </li>
+                                            <li class="nav-item" data-depth="2">
+                                                <a class="nav-link"
+                                                   href="message-channel.html">Message
+                                                    Channel</a>
+                                            </li>
+                                            <li class="nav-item" data-depth="2">
+                                                <a class="nav-link"
+                                                   href="message-dispatcher.html">Message
+                                                    Dispatcher</a>
+                                            </li>
+                                            <li class="nav-item" data-depth="2">
+                                                <a class="nav-link"
+                                                   href="message-endpoint.html">Message
+                                                    Endpoint</a>
+                                            </li>
+                                            <li class="nav-item" data-depth="2">
+                                                <a class="nav-link"
+                                                   href="message-expiration.html">Message
+                                                    Expiration</a>
+                                            </li>
+                                            <li class="nav-item" data-depth="2">
+                                                <a class="nav-link"
+                                                   href="message-history.html">Message
+                                                    History</a>
+                                            </li>
+                                            <li class="nav-item" data-depth="2">
+                                                <a class="nav-link"
+                                                   href="message-router.html">Message
+                                                    Router</a>
+                                            </li>
+                                            <li class="nav-item" data-depth="2">
+                                                <a class="nav-link"
+                                                   href="message-translator.html">Message
+                                                    Translator</a>
+                                            </li>
+                                            <li class="nav-item" data-depth="2">
+                                                <a class="nav-link"
+                                                   href="messaging-bridge.html">Messaging
+                                                    Bridge</a>
+                                            </li>
+                                            <li class="nav-item" data-depth="2">
+                                                <a class="nav-link"
+                                                   href="messaging-gateway.html">Messaging
+                                                    Gateway</a>
+                                            </li>
+                                            <li class="nav-item" data-depth="2">
+                                                <a class="nav-link"
+                                                   href="messaging-mapper.html">Messaging
+                                                    Mapper</a>
+                                            </li>
+                                            <li class="nav-item" data-depth="2">
+                                                <a class="nav-link"
+                                                   href="multicast-eip.html">Multicast</a>
+                                            </li>
+                                            <li class="nav-item" data-depth="2">
+                                                <a class="nav-link"
+                                                   href="normalizer.html">Normalizer</a>
+                                            </li>
+                                            <li class="nav-item" data-depth="2">
+                                                <a class="nav-link"
+                                                   href="pipeline-eip.html">Pipeline</a>
+                                            </li>
+                                            <li class="nav-item" data-depth="2">
+                                                <a class="nav-link"
+                                                   href="point-to-point-channel.html">Point
+                                                    to Point Channel</a>
+                                            </li>
+                                            <li class="nav-item" data-depth="2">
+                                                <a class="nav-link"
+                                                   href="pollEnrich-eip.html">Poll
+                                                    Enrich</a>
+                                            </li>
+                                            <li class="nav-item" data-depth="2">
+                                                <a class="nav-link"
+                                                   href="polling-consumer.html">Polling
+                                                    Consumer</a>
+                                            </li>
+                                            <li class="nav-item" data-depth="2">
+                                                <a class="nav-link"
+                                                   href="process-eip.html">Process</a>
+                                            </li>
+                                            <li class="nav-item" data-depth="2">
+                                                <a class="nav-link"
+                                                   href="process-manager.html">Process
+                                                    Manager</a>
+                                            </li>
+                                            <li class="nav-item" data-depth="2">
+                                                <a class="nav-link"
+                                                   href="publish-subscribe-channel.html">Publish
+                                                    Subscribe Channel</a>
+                                            </li>
+                                            <li class="nav-item" data-depth="2">
+                                                <a class="nav-link"
+                                                   href="recipientList-eip.html">Recipient
+                                                    List</a>
+                                            </li>
+                                            <li class="nav-item" data-depth="2">
+                                                <a class="nav-link"
+                                                   href="removeHeader-eip.html">Remove
+                                                    Header</a>
+                                            </li>
+                                            <li class="nav-item" data-depth="2">
+                                                <a class="nav-link"
+                                                   href="removeHeaders-eip.html">Remove
+                                                    Headers</a>
+                                            </li>
+                                            <li class="nav-item" data-depth="2">
+                                                <a class="nav-link"
+                                                   href="removeProperties-eip.html">Remove
+                                                    Properties</a>
+                                            </li>
+                                            <li class="nav-item" data-depth="2">
+                                                <a class="nav-link"
+                                                   href="removeProperty-eip.html">Remove
+                                                    Property</a>
+                                            </li>
+                                            <li class="nav-item" data-depth="2">
+                                                <a class="nav-link"
+                                                   href="requestReply-eip.html">Request
+                                                    Reply</a>
+                                            </li>
+                                            <li class="nav-item" data-depth="2">
+                                                <a class="nav-link"
+                                                   href="resequence-eip.html">Resequence</a>
+                                            </li>
+                                            <li class="nav-item" data-depth="2">
+                                                <a class="nav-link"
+                                                   href="resilience4j-eip.html">Resilience4j
+                                                    Circuit Breaker</a>
+                                            </li>
+                                            <li class="nav-item" data-depth="2">
+                                                <a class="nav-link"
+                                                   href="return-address.html">Return
+                                                    Address</a>
+                                            </li>
+                                            <li class="nav-item" data-depth="2">
+                                                <a class="nav-link"
+                                                   href="rollback-eip.html">Rollback</a>
+                                            </li>
+                                            <li class="nav-item" data-depth="2">
+                                                <a class="nav-link"
+                                                   href="routingSlip-eip.html">Routing
+                                                    Slip</a>
+                                            </li>
+                                            <li class="nav-item" data-depth="2">
+                                                <a class="nav-link"
+                                                   href="saga-eip.html">Saga</a>
+                                            </li>
+                                            <li class="nav-item" data-depth="2">
+                                                <a class="nav-link"
+                                                   href="sample-eip.html">Sample</a>
+                                            </li>
+                                            <li class="nav-item is-current-page"
+                                                data-depth="2">
+                                                <a class="nav-link"
+                                                   href="scatter-gather.html">Scatter
+                                                    Gather</a>
+                                            </li>
+                                            <li class="nav-item" data-depth="2">
+                                                <a class="nav-link"
+                                                   href="script-eip.html">Script</a>
+                                            </li>
+                                            <li class="nav-item" data-depth="2">
+                                                <a class="nav-link"
+                                                   href="selective-consumer.html">Selective
+                                                    Consumer</a>
+                                            </li>
+                                            <li class="nav-item" data-depth="2">
+                                                <a class="nav-link"
+                                                   href="service-activator.html">Service
+                                                    Activator</a>
+                                            </li>
+                                            <li class="nav-item" data-depth="2">
+                                                <a class="nav-link"
+                                                   href="serviceCall-eip.html">Service
+                                                    Call</a>
+                                            </li>
+                                            <li class="nav-item" data-depth="2">
+                                                <a class="nav-link"
+                                                   href="setBody-eip.html">Set
+                                                    Body</a>
+                                            </li>
+                                            <li class="nav-item" data-depth="2">
+                                                <a class="nav-link"
+                                                   href="setHeader-eip.html">Set
+                                                    Header</a>
+                                            </li>
+                                            <li class="nav-item" data-depth="2">
+                                                <a class="nav-link"
+                                                   href="setProperty-eip.html">Set
+                                                    Property</a>
+                                            </li>
+                                            <li class="nav-item" data-depth="2">
+                                                <a class="nav-link"
+                                                   href="sort-eip.html">Sort</a>
+                                            </li>
+                                            <li class="nav-item" data-depth="2">
+                                                <a class="nav-link"
+                                                   href="split-eip.html">Split</a>
+                                            </li>
+                                            <li class="nav-item" data-depth="2">
+                                                <a class="nav-link"
+                                                   href="step-eip.html">Step</a>
+                                            </li>
+                                            <li class="nav-item" data-depth="2">
+                                                <a class="nav-link"
+                                                   href="stop-eip.html">Stop</a>
+                                            </li>
+                                            <li class="nav-item" data-depth="2">
+                                                <a class="nav-link"
+                                                   href="threads-eip.html">Threads</a>
+                                            </li>
+                                            <li class="nav-item" data-depth="2">
+                                                <a class="nav-link"
+                                                   href="throttle-eip.html">Throttle</a>
+                                            </li>
+                                            <li class="nav-item" data-depth="2">
+                                                <a class="nav-link"
+                                                   href="to-eip.html">To</a>
+                                            </li>
+                                            <li class="nav-item" data-depth="2">
+                                                <a class="nav-link"
+                                                   href="toD-eip.html">To
+                                                    Dynamic</a>
+                                            </li>
+                                            <li class="nav-item" data-depth="2">
+                                                <a class="nav-link"
+                                                   href="transactional-client.html">Transactional
+                                                    Client</a>
+                                            </li>
+                                            <li class="nav-item" data-depth="2">
+                                                <a class="nav-link"
+                                                   href="transform-eip.html">Transform</a>
+                                            </li>
+                                            <li class="nav-item" data-depth="2">
+                                                <a class="nav-link"
+                                                   href="unmarshal-eip.html">Unmarshal</a>
+                                            </li>
+                                            <li class="nav-item" data-depth="2">
+                                                <a class="nav-link"
+                                                   href="validate-eip.html">Validate</a>
+                                            </li>
+                                            <li class="nav-item" data-depth="2">
+                                                <a class="nav-link"
+                                                   href="wireTap-eip.html">Wire
+                                                    Tap</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+                <div class="nav-panel-explore" data-panel="explore">
+                    <div class="context">
+                        <span class="title">Camel Components</span>
+                        <span class="version">4.0.x</span>
+                    </div>
+                    <ul class="components">
+                        <li class="component is-current">
+                            <div class="title"><a
+                                    href="../../4.10.x/index.html">Camel
+                                Components</a></div>
+                            <ul class="versions">
+                                <li class="version is-latest">
+                                    <a href="../../4.10.x/index.html">4.10.x
+                                        (LTS)</a>
+                                </li>
+                                <li class="version">
+                                    <a href="../../4.8.x/index.html">4.8.x</a>
+                                </li>
+                                <li class="version">
+                                    <a href="../../4.4.x/index.html">4.4.x</a>
+                                </li>
+                                <li class="version is-current">
+                                    <a href="../index.html">4.0.x</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="component">
+                            <div class="title"><a
+                                    href="../../../manual/4.10.x/index.html">User
+                                manual</a></div>
+                            <ul class="versions">
+                                <li class="version is-latest">
+                                    <a href="../../../manual/4.10.x/index.html">4.10.x</a>
+                                </li>
+                                <li class="version">
+                                    <a href="../../../manual/4.8.x/index.html">4.8.x</a>
+                                </li>
+                                <li class="version">
+                                    <a href="../../../manual/4.4.x/index.html">4.4.x</a>
+                                </li>
+                                <li class="version">
+                                    <a href="../../../manual/4.0.x/index.html">4.0.x</a>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </aside>
     </div>
-  </aside>
-</div>
-<main class="article">
-<div class="toolbar" role="navigation">
-<button class="nav-toggle"></button>
-  <a href="../../../manual/4.10.x/index.html" class="home-link"></a>
-<nav class="breadcrumbs" aria-label="breadcrumbs">
-  <ul>
-    <li><a href="../index.html">Camel Components</a></li>
-    <li><a href="enterprise-integration-patterns.html">Enterprise Integration Patterns</a></li>
-    <li><a href="scatter-gather.html">Scatter Gather</a></li>
-  </ul>
-</nav>
-<div class="page-versions">
-  <button class="version-menu-toggle" title="Show other versions of page">4.0.x</button>
-  <div class="version-menu">
-    <a class="version" href="../../4.10.x/eips/scatter-gather.html">4.10.x (LTS)</a>
-    <a class="version" href="../../4.8.x/eips/scatter-gather.html">4.8.x</a>
-    <a class="version" href="../../4.4.x/eips/scatter-gather.html">4.4.x</a>
-    <a class="version is-current" href="scatter-gather.html">4.0.x</a>
-  </div>
-</div>
+    <main class="article">
+        <div class="toolbar" role="navigation">
+            <button class="nav-toggle"></button>
+            <a href="../../../manual/4.10.x/index.html" class="home-link"></a>
+            <nav class="breadcrumbs" aria-label="breadcrumbs">
+                <ul>
+                    <li><a href="../index.html">Camel Components</a></li>
+                    <li><a href="enterprise-integration-patterns.html">Enterprise
+                        Integration Patterns</a></li>
+                    <li><a href="scatter-gather.html">Scatter Gather</a></li>
+                </ul>
+            </nav>
+            <div class="page-versions">
+                <button class="version-menu-toggle"
+                        title="Show other versions of page">4.0.x
+                </button>
+                <div class="version-menu">
+                    <a class="version"
+                       href="../../4.10.x/eips/scatter-gather.html">4.10.x
+                        (LTS)</a>
+                    <a class="version"
+                       href="../../4.8.x/eips/scatter-gather.html">4.8.x</a>
+                    <a class="version"
+                       href="../../4.4.x/eips/scatter-gather.html">4.4.x</a>
+                    <a class="version is-current" href="scatter-gather.html">4.0.x</a>
+                </div>
+            </div>
 
-</div>
-  <div class="content">
-<aside class="toc sidebar" data-title="Contents" data-levels="2">
-  <div class="toc-menu"></div>
-</aside>
-<article class="doc">
-<h1 class="page">Scatter Gather</h1>
-<div id="preamble">
-<div class="sectionbody">
-<div class="paragraph">
-<p>Camel supports the
-<a href="https://www.enterpriseintegrationpatterns.com/patterns/messaging/BroadcastAggregate.html">Scatter Gather</a>
-from the <a href="enterprise-integration-patterns.html" class="xref page">EIP patterns</a> book.</p>
-</div>
-<div class="paragraph">
-<p>The Scatter Gather from the EIP patterns allows you to route messages to a number of dynamically
-specified recipients and re-aggregate the responses back into a single message.</p>
-</div>
-<div class="imageblock">
-<div class="content">
-<img src="_images/eip/BroadcastAggregate.gif" alt="image">
-</div>
-</div>
-<div class="paragraph">
-<p>In Camel the Scatter Gather EIP is supported in two different synchronous modes.</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>request/reply mode, where the re-aggregated response message continues being routed synchronously
-after the Scatter Gather is complete.</p>
-</li>
-<li>
-<p>one-way mode, where the response message is being routed asynchronous separately from
-the incoming message thread.</p>
-</li>
-</ul>
-</div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="_requestreply_vs_one_way_messaging_modes"><a class="anchor" href="#_requestreply_vs_one_way_messaging_modes"></a>Request/Reply vs One-Way messaging modes</h2>
-<div class="sectionbody">
-<div class="paragraph">
-<p>In Camel the request/reply mode is done by using only the <a href="recipientList-eip.html" class="xref page">Recipient List</a>
-which comes with aggregation built-in (which is often the simplest solution).</p>
-</div>
-<div class="paragraph">
-<p>The request/reply mode refers to the fact that the response message, is tied synchronously
-to the incoming message (that would wait), until the response message is ready, and then continue being routed.
-This allows for <a href="requestReply-eip.html" class="xref page">Request Reply</a> messaging style.</p>
-</div>
-<div class="paragraph">
-<p>The one-way mode refers to the fact that the response message, is not tied to the incoming message (which will continue).
-And the response message (when its ready) will continue being routed independently of the incoming message.
-This only allows for <a href="event-message.html" class="xref page">Event Message</a> messaging style.</p>
-</div>
-<div class="paragraph">
-<p>In the one-way mode, then you combine the <a href="recipientList-eip.html" class="xref page">Recipient List</a> and <a href="aggregate-eip.html" class="xref page">Aggregate</a> EIPs
-together as the Scatter Gather EIP solution.</p>
-</div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="_using_recipient_list_only"><a class="anchor" href="#_using_recipient_list_only"></a>Using Recipient List only</h2>
-<div class="sectionbody">
-<div class="paragraph">
-<p>In the following example we want to call two HTTP services and gather their responses into a single message,
-as the response:</p>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;routes&gt;
+        </div>
+        <div class="content">
+            <aside class="toc sidebar" data-title="Contents" data-levels="2">
+                <div class="toc-menu"></div>
+            </aside>
+            <article class="doc">
+                <h1 class="page">Scatter Gather</h1>
+                <div id="preamble">
+                    <div class="sectionbody">
+                        <div class="paragraph">
+                            <p>Camel supports the
+                                <a href="https://www.enterpriseintegrationpatterns.com/patterns/messaging/BroadcastAggregate.html">Scatter
+                                    Gather</a>
+                                from the <a
+                                        href="enterprise-integration-patterns.html"
+                                        class="xref page">EIP patterns</a> book.
+                            </p>
+                        </div>
+                        <div class="paragraph">
+                            <p>The Scatter Gather from the EIP patterns allows
+                                you to route messages to a number of dynamically
+                                specified recipients and re-aggregate the
+                                responses back into a single message.</p>
+                        </div>
+                        <div class="imageblock">
+                            <div class="content">
+                                <img src="_images/eip/BroadcastAggregate.gif"
+                                     alt="image">
+                            </div>
+                        </div>
+                        <div class="paragraph">
+                            <p>In Camel the Scatter Gather EIP is supported in
+                                two different synchronous modes.</p>
+                        </div>
+                        <div class="ulist">
+                            <ul>
+                                <li>
+                                    <p>request/reply mode, where the
+                                        re-aggregated response message continues
+                                        being routed synchronously
+                                        after the Scatter Gather is
+                                        complete.</p>
+                                </li>
+                                <li>
+                                    <p>one-way mode, where the response message
+                                        is being routed asynchronous separately
+                                        from
+                                        the incoming message thread.</p>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="sect1">
+                    <h2 id="_requestreply_vs_one_way_messaging_modes"><a
+                            class="anchor"
+                            href="#_requestreply_vs_one_way_messaging_modes"></a>Request/Reply
+                        vs One-Way messaging modes</h2>
+                    <div class="sectionbody">
+                        <div class="paragraph">
+                            <p>In Camel the request/reply mode is done by using
+                                only the <a href="recipientList-eip.html"
+                                            class="xref page">Recipient List</a>
+                                which comes with aggregation built-in (which is
+                                often the simplest solution).</p>
+                        </div>
+                        <div class="paragraph">
+                            <p>The request/reply mode refers to the fact that
+                                the response message, is tied synchronously
+                                to the incoming message (that would wait), until
+                                the response message is ready, and then continue
+                                being routed.
+                                This allows for <a href="requestReply-eip.html"
+                                                   class="xref page">Request
+                                    Reply</a> messaging style.</p>
+                        </div>
+                        <div class="paragraph">
+                            <p>The one-way mode refers to the fact that the
+                                response message, is not tied to the incoming
+                                message (which will continue).
+                                And the response message (when its ready) will
+                                continue being routed independently of the
+                                incoming message.
+                                This only allows for <a
+                                        href="event-message.html"
+                                        class="xref page">Event Message</a>
+                                messaging style.</p>
+                        </div>
+                        <div class="paragraph">
+                            <p>In the one-way mode, then you combine the <a
+                                    href="recipientList-eip.html"
+                                    class="xref page">Recipient List</a> and <a
+                                    href="aggregate-eip.html" class="xref page">Aggregate</a>
+                                EIPs
+                                together as the Scatter Gather EIP solution.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="sect1">
+                    <h2 id="_using_recipient_list_only"><a class="anchor"
+                                                           href="#_using_recipient_list_only"></a>Using
+                        Recipient List only</h2>
+                    <div class="sectionbody">
+                        <div class="paragraph">
+                            <p>In the following example we want to call two HTTP
+                                services and gather their responses into a
+                                single message,
+                                as the response:</p>
+                        </div>
+                        <div class="listingblock">
+                            <div class="content">
+<pre class="highlightjs highlight"><code class="language-xml hljs"
+                                         data-lang="xml">&lt;routes&gt;
 
   &lt;route&gt;
     &lt;from uri="servlet:cheese"/&gt;
@@ -449,30 +648,46 @@ as the response:</p>
   &lt;/route&gt;
 
 &lt;/routes&gt;</code></pre>
-</div>
-</div>
-<div class="paragraph">
-<p>This is a basic example that only uses basic functionality of the <a href="recipientList-eip.html" class="xref page">Recipient List</a>.
-For more details how the aggregation works, see the <a href="recipientList-eip.html" class="xref page">Recipient List</a> documentation.</p>
-</div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="_using_recipient_list_and_aggregate_eip"><a class="anchor" href="#_using_recipient_list_and_aggregate_eip"></a>Using Recipient List and Aggregate EIP</h2>
-<div class="sectionbody">
-<div class="paragraph">
-<p>In this example we want to get the best quote for beer from several vendors.</p>
-</div>
-<div class="paragraph">
-<p>We use <a href="recipientList-eip.html" class="xref page">Recipient List</a> to get the request for a quote to all vendors
-and an <a href="aggregate-eip.html" class="xref page">Aggregate</a> to pick the best quote out of all the responses.</p>
-</div>
-<div class="paragraph">
-<p>The routes for this are defined as:</p>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;routes&gt;
+                            </div>
+                        </div>
+                        <div class="paragraph">
+                            <p>This is a basic example that only uses basic
+                                functionality of the <a
+                                        href="recipientList-eip.html"
+                                        class="xref page">Recipient List</a>.
+                                For more details how the aggregation works, see
+                                the <a href="recipientList-eip.html"
+                                       class="xref page">Recipient List</a>
+                                documentation.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="sect1">
+                    <h2 id="_using_recipient_list_and_aggregate_eip"><a
+                            class="anchor"
+                            href="#_using_recipient_list_and_aggregate_eip"></a>Using
+                        Recipient List and Aggregate EIP</h2>
+                    <div class="sectionbody">
+                        <div class="paragraph">
+                            <p>In this example we want to get the best quote for
+                                beer from several vendors.</p>
+                        </div>
+                        <div class="paragraph">
+                            <p>We use <a href="recipientList-eip.html"
+                                         class="xref page">Recipient List</a> to
+                                get the request for a quote to all vendors
+                                and an <a href="aggregate-eip.html"
+                                          class="xref page">Aggregate</a> to
+                                pick the best quote out of all the responses.
+                            </p>
+                        </div>
+                        <div class="paragraph">
+                            <p>The routes for this are defined as:</p>
+                        </div>
+                        <div class="listingblock">
+                            <div class="content">
+<pre class="highlightjs highlight"><code class="language-xml hljs"
+                                         data-lang="xml">&lt;routes&gt;
 
   &lt;route&gt;
     &lt;from uri="direct:start"/&gt;
@@ -492,28 +707,39 @@ and an <a href="aggregate-eip.html" class="xref page">Aggregate</a> to pick the 
   &lt;/route&gt;
 
 &lt;/routes&gt;</code></pre>
-</div>
-</div>
-<div class="paragraph">
-<p>So in the first route you see that the <a href="recipientList-eip.html" class="xref page">Recipient List</a> is looking at the
-listOfVendors header for the list of recipients. So, we need to send a message like:</p>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">Map&lt;String, Object&gt; headers = new HashMap&lt;&gt;();
+                            </div>
+                        </div>
+                        <div class="paragraph">
+                            <p>So in the first route you see that the <a
+                                    href="recipientList-eip.html"
+                                    class="xref page">Recipient List</a> is
+                                looking at the
+                                listOfVendors header for the list of recipients.
+                                So, we need to send a message like:</p>
+                        </div>
+                        <div class="listingblock">
+                            <div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs"
+                                         data-lang="java">Map&lt;String, Object&gt; headers = new HashMap&lt;&gt;();
 headers.put("listOfVendors", "bean:vendor1,bean:vendor2,bean:vendor3");
 headers.put("quoteRequestId", "quoteRequest-1");
 
 template.sendBodyAndHeaders("direct:start", "&lt;quote_request item=\"beer\"/&gt;", headers);</code></pre>
-</div>
-</div>
-<div class="paragraph">
-<p>This message will be distributed to the following Endpoints: bean:vendor1, bean:vendor2, and bean:vendor3.
-These are all Java beans (called via the Camel <a href="../../4.10.x/bean-component.html" class="xref page">Bean</a> endpoint), which look like:</p>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">public class MyVendor {
+                            </div>
+                        </div>
+                        <div class="paragraph">
+                            <p>This message will be distributed to the following
+                                Endpoints: bean:vendor1, bean:vendor2, and
+                                bean:vendor3.
+                                These are all Java beans (called via the Camel
+                                <a href="../../4.10.x/bean-component.html"
+                                   class="xref page">Bean</a> endpoint), which
+                                look like:</p>
+                        </div>
+                        <div class="listingblock">
+                            <div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs"
+                                         data-lang="java">public class MyVendor {
     private int beerPrice;
 
     @Produce("seda:quoteAggregator")
@@ -532,14 +758,15 @@ These are all Java beans (called via the Camel <a href="../../4.10.x/bean-compon
         }
     }
 }</code></pre>
-</div>
-</div>
-<div class="paragraph">
-<p>And are loaded up in XML like this:</p>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;camelContext&gt;
+                            </div>
+                        </div>
+                        <div class="paragraph">
+                            <p>And are loaded up in XML like this:</p>
+                        </div>
+                        <div class="listingblock">
+                            <div class="content">
+<pre class="highlightjs highlight"><code class="language-xml hljs"
+                                         data-lang="xml">&lt;camelContext&gt;
 
     &lt;bean id="aggregatorStrategy" class="org.apache.camel.spring.processor.scattergather.LowestQuoteAggregationStrategy"/&gt;
 
@@ -556,30 +783,55 @@ These are all Java beans (called via the Camel <a href="../../4.10.x/bean-compon
     &lt;/bean&gt;
 
 &lt;/camelContext&gt;</code></pre>
-</div>
-</div>
-<div class="paragraph">
-<p>Each bean is loaded with a different price for beer. When the message is sent to each bean endpoint,
-it will arrive at the <code>MyVendor.quote</code> method. This method does a simple check whether this quote
-request is for beer and then sets the price of beer on the exchange for retrieval at a later step.
-The message is forwarded on to the next step using <a href="../../../manual/4.10.x/pojo-producing.html" class="xref page">POJO Producing</a>
-(see the <code>@Produce</code> annotation).</p>
-</div>
-<div class="paragraph">
-<p>At the next step we want to take the beer quotes from all vendors and find out which one was the best
-(i.e. the lowest!). To do this we use the <a href="aggregate-eip.html" class="xref page">Aggregate</a> EIP with a custom
-<code>AggregationStrategy</code>.</p>
-</div>
-<div class="paragraph">
-<p>The <a href="aggregate-eip.html" class="xref page">Aggregate</a> needs to be able to compare only the messages from this particular quote;
-this is easily done by specifying a correlation expression equal to the value of the quoteRequestId header.
-As shown above in the message sending snippet, we set this header to quoteRequest-1.
-This correlation value must be unique, or you may include responses that are not part of this quote.
-To pick the lowest quote out of the set, we use a custom <code>AggregationStrategy</code> like:</p>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">public class LowestQuoteAggregationStrategy implements AggregationStrategy {
+                            </div>
+                        </div>
+                        <div class="paragraph">
+                            <p>Each bean is loaded with a different price for
+                                beer. When the message is sent to each bean
+                                endpoint,
+                                it will arrive at the
+                                <code>MyVendor.quote</code> method. This method
+                                does a simple check whether this quote
+                                request is for beer and then sets the price of
+                                beer on the exchange for retrieval at a later
+                                step.
+                                The message is forwarded on to the next step
+                                using <a
+                                        href="../../../manual/4.10.x/pojo-producing.html"
+                                        class="xref page">POJO Producing</a>
+                                (see the <code>@Produce</code> annotation).</p>
+                        </div>
+                        <div class="paragraph">
+                            <p>At the next step we want to take the beer quotes
+                                from all vendors and find out which one was the
+                                best
+                                (i.e. the lowest!). To do this we use the <a
+                                        href="aggregate-eip.html"
+                                        class="xref page">Aggregate</a> EIP with
+                                a custom
+                                <code>AggregationStrategy</code>.</p>
+                        </div>
+                        <div class="paragraph">
+                            <p>The <a href="aggregate-eip.html"
+                                      class="xref page">Aggregate</a> needs to
+                                be able to compare only the messages from this
+                                particular quote;
+                                this is easily done by specifying a correlation
+                                expression equal to the value of the
+                                quoteRequestId header.
+                                As shown above in the message sending snippet,
+                                we set this header to quoteRequest-1.
+                                This correlation value must be unique, or you
+                                may include responses that are not part of this
+                                quote.
+                                To pick the lowest quote out of the set, we use
+                                a custom <code>AggregationStrategy</code> like:
+                            </p>
+                        </div>
+                        <div class="listingblock">
+                            <div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs"
+                                         data-lang="java">public class LowestQuoteAggregationStrategy implements AggregationStrategy {
 
     public Exchange aggregate(Exchange oldExchange, Exchange newExchange) {
         // the first time we only have the new exchange
@@ -594,43 +846,57 @@ To pick the lowest quote out of the set, we use a custom <code>AggregationStrate
         }
     }
 }</code></pre>
-</div>
-</div>
-<div class="paragraph">
-<p>And finally the aggregator will assemble the response message with the best beer price (the lowest).
-Notice how the aggregator has timeout built-in, meaning that if one or more of the beer vendors does
-not respond, then the aggregator will discard those <em>late</em> responses, and send out a message with the <em>best price so far</em>.</p>
-</div>
-<div class="paragraph">
-<p>The message is then continued to another route via the <code>direct:bestBeer</code> endpoint.</p>
-</div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="_see_also"><a class="anchor" href="#_see_also"></a>See Also</h2>
-<div class="sectionbody">
-<div class="paragraph">
-<p>The Scatter Gather EIP is a composite pattern that is built by exiting EIPs:</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p><a href="recipientList-eip.html" class="xref page">Recipient List</a></p>
-</li>
-<li>
-<p><a href="aggregate-eip.html" class="xref page">Aggregate</a></p>
-</li>
-</ul>
-</div>
-</div>
-</div>
-</article>
-  </div>
-</main>
+                            </div>
+                        </div>
+                        <div class="paragraph">
+                            <p>And finally the aggregator will assemble the
+                                response message with the best beer price (the
+                                lowest).
+                                Notice how the aggregator has timeout built-in,
+                                meaning that if one or more of the beer vendors
+                                does
+                                not respond, then the aggregator will discard
+                                those <em>late</em> responses, and send out a
+                                message with the <em>best price so far</em>.</p>
+                        </div>
+                        <div class="paragraph">
+                            <p>The message is then continued to another route
+                                via the <code>direct:bestBeer</code> endpoint.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="sect1">
+                    <h2 id="_see_also"><a class="anchor" href="#_see_also"></a>See
+                        Also</h2>
+                    <div class="sectionbody">
+                        <div class="paragraph">
+                            <p>The Scatter Gather EIP is a composite pattern
+                                that is built by exiting EIPs:</p>
+                        </div>
+                        <div class="ulist">
+                            <ul>
+                                <li>
+                                    <p><a href="recipientList-eip.html"
+                                          class="xref page">Recipient List</a>
+                                    </p>
+                                </li>
+                                <li>
+                                    <p><a href="aggregate-eip.html"
+                                          class="xref page">Aggregate</a></p>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </article>
+        </div>
+    </main>
 </div>
 <footer class="footer">
 </footer>
-<script id="site-script" src="../../../_/js/site.js" data-ui-root-path="../../../_"></script>
+<script id="site-script" src="../../../_/js/site.js"
+        data-ui-root-path="../../../_"></script>
 <script async src="../../../_/js/vendor/highlight.js"></script>
-  </body>
+</body>
 </html>
