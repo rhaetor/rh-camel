@@ -3341,24 +3341,15 @@
                                     <a href="../4.10.x/index.html">4.10.x
                                         (LTS)</a>
                                 </li>
-                                <li class="version">
-                                    <a href="../4.8.x/index.html">4.8.x</a>
-                                </li>
-                                <li class="version">
-                                    <a href="../4.4.x/index.html">4.4.x</a>
-                                </li>
-                                <li class="version">
-                                    <a href="../4.0.x/index.html">4.0.x</a>
-                                </li>
                             </ul>
                         </li>
                         <li class="component">
                             <div class="title"><a
-                                    href="../../manual/4.18.x/index.html">User
+                                    href="../../manual/index.html">User
                                 manual</a></div>
                             <ul class="versions">
                                 <li class="version is-latest">
-                                    <a href="../../manual/4.18.x/index.html">default</a>
+                                    <a href="../../manual/index.html">default</a>
                                 </li>
                                 <li class="version">
                                     <a href="../../manual/4.18.x/index.html">4.18.x</a>
@@ -3368,15 +3359,6 @@
                                 </li>
                                 <li class="version">
                                     <a href="../../manual/4.10.x/index.html">4.10.x</a>
-                                </li>
-                                <li class="version">
-                                    <a href="../../manual/4.8.x/index.html">4.8.x</a>
-                                </li>
-                                <li class="version">
-                                    <a href="../../manual/4.4.x/index.html">4.4.x</a>
-                                </li>
-                                <li class="version">
-                                    <a href="../../manual/4.0.x/index.html">4.0.x</a>
                                 </li>
                             </ul>
                         </li>
@@ -3388,7 +3370,7 @@
     <main class="article">
         <div class="toolbar" role="navigation">
             <button class="nav-toggle"></button>
-            <a href="../../manual/4.18.x/index.html" class="home-link"></a>
+            <a href="../../manual/index.html" class="home-link"></a>
             <nav class="breadcrumbs" aria-label="breadcrumbs">
                 <ul>
                     <li><a href="index.html">Camel Components</a></li>
@@ -3406,18 +3388,16 @@
                         (Pre-release)</a>
                     <a class="version is-missing"
                        href="../next/index.html">next</a>
-                    <a class="version is-current" href="openai-component.html">4.18.x
-                        (LTS)</a>
+                    <a class="version is-current" href="openai-component.html">4.18.x</a>
                     <a class="version is-missing" href="../4.14.x/index.html">4.14.x
                         (LTS)</a>
                     <a class="version is-missing" href="../4.10.x/index.html">4.10.x
                         (LTS)</a>
-                    <a class="version is-missing" href="../4.8.x/index.html">4.8.x</a>
-                    <a class="version is-missing" href="../4.4.x/index.html">4.4.x</a>
-                    <a class="version is-missing" href="../4.0.x/index.html">4.0.x</a>
                 </div>
             </div>
-
+            <div class="edit-this-page"><a
+                    href="file:///Users/ajonsson/code/rh/rh-jboss-camel/docs/components/modules/ROOT/pages/openai-component.adoc">Edit
+                this Page</a></div>
         </div>
         <div class="content">
             <aside class="toc sidebar" data-title="Contents" data-levels="2">
@@ -3539,7 +3519,7 @@
                                 <ul>
                                     <li>
                                         <p>the <a
-                                                href="../../manual/4.18.x/component-dsl.html"
+                                                href="../../manual/component-dsl.html"
                                                 class="xref page">Component
                                             DSL</a>.</p>
                                     </li>
@@ -3572,10 +3552,10 @@
                                     directly in the endpoint URI as
                                     <em>path</em> and <em>query</em> parameters.
                                     You can also use the <a
-                                            href="../../manual/4.18.x/Endpoint-dsl.html"
+                                            href="../../manual/Endpoint-dsl.html"
                                             class="xref page">Endpoint DSL</a>
                                     and
-                                    <a href="../../manual/4.18.x/dataformat-dsl.html"
+                                    <a href="../../manual/dataformat-dsl.html"
                                        class="xref page">DataFormat DSL</a>
                                     as a <em>type safe</em> way of configuring
                                     endpoints and data formats in Java.</p>
@@ -3583,7 +3563,7 @@
                             <div class="paragraph">
                                 <p>A good practice when configuring options is
                                     to use <a
-                                            href="../../manual/4.18.x/using-propertyplaceholder.html"
+                                            href="../../manual/using-propertyplaceholder.html"
                                             class="xref page">Property
                                         Placeholders</a>.</p>
                             </div>
@@ -3863,11 +3843,25 @@
                                                     'chat-completion' or
                                                     'embeddings'.</p>
                                             </div>
+                                            <div class="paragraph">
+                                                <p>Enum values:</p>
+                                            </div>
+                                            <div class="ulist">
+                                                <ul>
+                                                    <li>
+                                                        <p>chat-completion</p>
+                                                    </li>
+                                                    <li>
+                                                        <p>embeddings</p>
+                                                    </li>
+                                                </ul>
+                                            </div>
                                         </div>
                                     </td>
                                     <td class="tableblock halign-center valign-top"></td>
                                     <td class="tableblock halign-left valign-top">
-                                        <p class="tableblock">String</p></td>
+                                        <p class="tableblock">
+                                            OpenAIOperations</p></td>
                                 </tr>
                                 </tbody>
                             </table>
@@ -5003,8 +4997,8 @@
                                                 <p>The API key can be omitted if
                                                     using OpenAI-compatible
                                                     providers that don&#8217;t
-                                                    require authentication
-                                                    (e.g., some local LLM
+                                                    require authentication (for
+                                                    example, some local LLM
                                                     servers).</p>
                                             </div>
                                         </td>
@@ -5105,7 +5099,8 @@
                                                 <p>When using image files, the
                                                     userMessage is required.
                                                     Supported image formats are
-                                                    detected by MIME type (e.g.,
+                                                    detected by MIME type (for
+                                                    example,
                                                     <code>image/png</code>,
                                                     <code>image/jpeg</code>,
                                                     <code>image/gif</code>,
@@ -5168,6 +5163,14 @@
                                     class="anchor"
                                     href="#_structured_output_with_outputclass"></a>Structured
                                 Output with outputClass</h3>
+                            <div class="paragraph">
+                                <p>When <code>outputClass</code> is set, the
+                                    model is instructed to produce JSON matching
+                                    the given class, but the component returns
+                                    the raw String. Deserialize the body
+                                    yourself (for example, with Camel&#8217;s
+                                    Jackson) if you need a typed object.</p>
+                            </div>
                             <div class="listingblock">
                                 <div class="title">Usage example:</div>
                                 <div class="content">
@@ -5374,9 +5377,6 @@ from("direct:structured")
                             </div>
                             <div class="paragraph">
                                 <p>IMPORTANT:
-                                    * Resource cleanup is handled automatically
-                                    when the Exchange completes (success or
-                                    failure)
                                     * Conversation memory is
                                     <strong>not</strong> automatically updated
                                     for streaming responses (only for
@@ -5477,29 +5477,33 @@ from("direct:with-history")
                         <div class="paragraph">
                             <p>This component works with any OpenAI
                                 API-compatible endpoint by setting the <code>baseUrl</code>
-                                parameter. This includes:</p>
+                                parameter.</p>
+                        </div>
+                        <div class="paragraph">
+                            <p>Supported endpoints:</p>
                         </div>
                         <div class="ulist">
                             <ul>
                                 <li>
-                                    <p>OpenAI official API (<code><a
-                                            href="https://api.openai.com/v1"
-                                            class="bare">https://api.openai.com/v1</a></code>)
-                                    </p>
+                                    <p>
+                                        <a href="https://docs.redhat.com/en/documentation/red_hat_ai_inference_server/">RedHat
+                                            Inference Server</a></p>
                                 </li>
                                 <li>
-                                    <p>Azure OpenAI (may require additional
-                                        configuration)</p>
+                                    <p><a href="https://api.openai.com/v1">OpenAI
+                                        official API</a></p>
                                 </li>
                                 <li>
-                                    <p>Local LLM servers (e.g., Ollama, LM
-                                        Studio, LocalAI)</p>
-                                </li>
-                                <li>
-                                    <p>Third-party OpenAI-compatible
-                                        providers</p>
+                                    <p><a href="https://ollama.com/">Ollama</a>
+                                        Local LLM server</p>
                                 </li>
                             </ul>
+                        </div>
+                        <div class="paragraph">
+                            <p>It is possible to use Third-party
+                                OpenAI-compatible providers, but these are not
+                                supported, and may require additional
+                                configuration.</p>
                         </div>
                         <div class="admonitionblock note">
                             <table>
@@ -5528,96 +5532,65 @@ from("direct:with-history")
                                     class="anchor"
                                     href="#_embedding_models_by_provider"></a>Embedding
                                 Models by Provider</h3>
-                            <table class="tableblock frame-all grid-all stretch">
-                                <colgroup>
-                                    <col style="width: 25%;">
-                                    <col style="width: 50%;">
-                                    <col style="width: 25%;">
-                                </colgroup>
-                                <thead>
-                                <tr>
-                                    <th class="tableblock halign-left valign-top">
-                                        Provider
-                                    </th>
-                                    <th class="tableblock halign-left valign-top">
-                                        Recommended Model
-                                    </th>
-                                    <th class="tableblock halign-left valign-top">
-                                        Dimensions
-                                    </th>
-                                </tr>
-                                </thead>
-                                <tbody>
-                                <tr>
-                                    <td class="tableblock halign-left valign-top">
-                                        <p class="tableblock">OpenAI</p></td>
-                                    <td class="tableblock halign-left valign-top">
-                                        <p class="tableblock"><code>text-embedding-3-small</code>
-                                        </p></td>
-                                    <td class="tableblock halign-left valign-top">
-                                        <p class="tableblock">1536 (reducible to
-                                            256, 512, 1024)</p></td>
-                                </tr>
-                                <tr>
-                                    <td class="tableblock halign-left valign-top">
-                                        <p class="tableblock">OpenAI</p></td>
-                                    <td class="tableblock halign-left valign-top">
-                                        <p class="tableblock"><code>text-embedding-3-large</code>
-                                        </p></td>
-                                    <td class="tableblock halign-left valign-top">
-                                        <p class="tableblock">3072
-                                            (reducible)</p></td>
-                                </tr>
-                                <tr>
-                                    <td class="tableblock halign-left valign-top">
-                                        <p class="tableblock">Ollama</p></td>
-                                    <td class="tableblock halign-left valign-top">
-                                        <p class="tableblock"><code>nomic-embed-text</code>
-                                        </p></td>
-                                    <td class="tableblock halign-left valign-top">
-                                        <p class="tableblock">768</p></td>
-                                </tr>
-                                <tr>
-                                    <td class="tableblock halign-left valign-top">
-                                        <p class="tableblock">Ollama</p></td>
-                                    <td class="tableblock halign-left valign-top">
-                                        <p class="tableblock"><code>mxbai-embed-large</code>
-                                        </p></td>
-                                    <td class="tableblock halign-left valign-top">
-                                        <p class="tableblock">1024</p></td>
-                                </tr>
-                                <tr>
-                                    <td class="tableblock halign-left valign-top">
-                                        <p class="tableblock">Mistral</p></td>
-                                    <td class="tableblock halign-left valign-top">
-                                        <p class="tableblock"><code>mistral-embed</code>
-                                        </p></td>
-                                    <td class="tableblock halign-left valign-top">
-                                        <p class="tableblock">1024</p></td>
-                                </tr>
-                                <tr>
-                                    <td class="tableblock halign-left valign-top">
-                                        <p class="tableblock">Azure OpenAI</p>
-                                    </td>
-                                    <td class="tableblock halign-left valign-top">
-                                        <p class="tableblock"><code>text-embedding-ada-002</code>
-                                        </p></td>
-                                    <td class="tableblock halign-left valign-top">
-                                        <p class="tableblock">1536</p></td>
-                                </tr>
-                                </tbody>
-                            </table>
-                            <div class="listingblock">
-                                <div class="title">Example using Ollama for
-                                    local embeddings:
-                                </div>
-                                <div class="content">
+                            <div class="sect3">
+                                <h4 id="_supported"><a class="anchor"
+                                                       href="#_supported"></a>Supported
+                                </h4>
+                                <table class="tableblock frame-all grid-all stretch">
+                                    <colgroup>
+                                        <col style="width: 33.3333%;">
+                                        <col style="width: 66.6667%;">
+                                    </colgroup>
+                                    <thead>
+                                    <tr>
+                                        <th class="tableblock halign-left valign-top">
+                                            Provider
+                                        </th>
+                                        <th class="tableblock halign-left valign-top">
+                                            Model example
+                                        </th>
+                                    </tr>
+                                    </thead>
+                                    <tbody>
+                                    <tr>
+                                        <td class="tableblock halign-left valign-top">
+                                            <p class="tableblock">RedHat
+                                                Inference Server</p></td>
+                                        <td class="tableblock halign-left valign-top">
+                                            <p class="tableblock"><code>sentence-transformers/all-MiniLM-L6-v2</code>
+                                            </p></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="tableblock halign-left valign-top">
+                                            <p class="tableblock">OpenAI</p>
+                                        </td>
+                                        <td class="tableblock halign-left valign-top">
+                                            <p class="tableblock"><code>text-embedding-3-large</code>
+                                            </p></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="tableblock halign-left valign-top">
+                                            <p class="tableblock">Ollama</p>
+                                        </td>
+                                        <td class="tableblock halign-left valign-top">
+                                            <p class="tableblock"><code>nomic-embed-text</code>
+                                            </p></td>
+                                    </tr>
+                                    </tbody>
+                                </table>
+                                <div class="listingblock">
+                                    <div class="title">Generic example for local
+                                        embeddings:
+                                    </div>
+                                    <div class="content">
 <pre class="highlightjs highlight"><code class="language-yaml hljs"
                                          data-lang="yaml">- to:
     uri: openai:embeddings
     parameters:
-      baseUrl: http://localhost:11434/v1
-      embeddingModel: nomic-embed-text</code></pre>
+      # Replace parameters with your model
+      baseUrl: http://your.model.domain/v1
+      embeddingModel: &lt;your-embedding-model&gt;</code></pre>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -5656,6 +5629,9 @@ from("direct:with-history")
                                          class="tabpanel"
                                          aria-labelledby="_tabs_2_java">
                                         <div class="listingblock">
+                                            <div class="title">Ollama embedding
+                                                example
+                                            </div>
                                             <div class="content">
 <pre class="highlightjs highlight"><code class="language-java hljs"
                                          data-lang="java">from("direct:embed")
@@ -5668,6 +5644,9 @@ from("direct:with-history")
                                          class="tabpanel"
                                          aria-labelledby="_tabs_2_yaml">
                                         <div class="listingblock">
+                                            <div class="title">Ollama embedding
+                                                example
+                                            </div>
                                             <div class="content">
 <pre class="highlightjs highlight"><code class="language-yaml hljs"
                                          data-lang="yaml">- route:
@@ -5743,6 +5722,9 @@ from("direct:with-history")
                                         href="#_postgresql_pgvector_recommended"></a>PostgreSQL
                                     + pgvector (Recommended)</h4>
                                 <div class="listingblock">
+                                    <div class="title">Ollama database
+                                        integration example
+                                    </div>
                                     <div class="content">
 <pre class="highlightjs highlight"><code class="language-yaml hljs"
                                          data-lang="yaml"># Index documents in PostgreSQL with pgvector
@@ -5958,7 +5940,7 @@ List&lt;Float&gt; normalized = SimilarityUtils.normalize(embedding);</span></cod
                                                     supported)</p>
                                             </li>
                                             <li>
-                                                <p>When invalid JSON schema
+                                                <p>When invalid, a JSON schema
                                                     string is provided</p>
                                             </li>
                                         </ul>
@@ -5967,10 +5949,11 @@ List&lt;Float&gt; normalized = SimilarityUtils.normalize(embedding);</span></cod
                                 <li>
                                     <p>API-specific exceptions from the OpenAI
                                         SDK for network errors, authentication
-                                        failures, rate limiting, etc.</p>
+                                        failures, rate limiting, and so on.</p>
                                 </li>
                             </ul>
                         </div>
+
                     </div>
                 </div>
             </article>
