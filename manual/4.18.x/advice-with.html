@@ -657,22 +657,13 @@
           <a href="../../components/next/index.html">next</a>
         </li>
         <li class="version">
-          <a href="../../components/4.18.x/index.html">4.18.x</a>
+          <a href="../../components/4.18.x/index.html">4.18.x (LTS)</a>
         </li>
         <li class="version">
-          <a href="../../components/4.14.x/index.html">4.14.x</a>
+          <a href="../../components/4.14.x/index.html">4.14.x (LTS)</a>
         </li>
         <li class="version">
-          <a href="../../components/4.10.x/index.html">4.10.x</a>
-        </li>
-        <li class="version">
-          <a href="../../components/4.8.x/index.html">4.8.x</a>
-        </li>
-        <li class="version">
-          <a href="../../components/4.4.x/index.html">4.4.x</a>
-        </li>
-        <li class="version">
-          <a href="../../components/4.0.x/index.html">4.0.x</a>
+          <a href="../../components/4.10.x/index.html">4.10.x (LTS)</a>
         </li>
       </ul>
     </li>
@@ -690,15 +681,6 @@
         </li>
         <li class="version">
           <a href="../4.10.x/index.html">4.10.x</a>
-        </li>
-        <li class="version">
-          <a href="../4.8.x/index.html">4.8.x</a>
-        </li>
-        <li class="version">
-          <a href="../4.4.x/index.html">4.4.x</a>
-        </li>
-        <li class="version">
-          <a href="../4.0.x/index.html">4.0.x</a>
         </li>
       </ul>
     </li>
@@ -726,12 +708,8 @@
     <a class="version is-current" href="advice-with.html">4.18.x</a>
     <a class="version" href="../4.14.x/advice-with.html">4.14.x</a>
     <a class="version" href="../4.10.x/advice-with.html">4.10.x</a>
-    <a class="version" href="../4.8.x/advice-with.html">4.8.x</a>
-    <a class="version" href="../4.4.x/advice-with.html">4.4.x</a>
-    <a class="version" href="../4.0.x/advice-with.html">4.0.x</a>
   </div>
 </div>
-
 </div>
   <div class="content">
 <aside class="toc sidebar" data-title="Contents" data-levels="2">
@@ -874,7 +852,7 @@ But first, you need to select which route to manipulate which you can do by the 
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">AdviceWith.adviceWith(context, "myRoute", new AdviceWithRouteBuilder() {
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">AdviceWith.adviceWith("myRoute", context, new AdviceWithRouteBuilder() {
         @Override
         public void configure() throws Exception {
             weaveAddLast().to("mock:result");
@@ -1390,8 +1368,6 @@ then we want to only advise the second filter.</p>
 </main>
 </div>
 <footer class="footer">
-  
-  
 </footer>
 <script id="site-script" src="../../_/js/site.js" data-ui-root-path="../../_"></script>
 <script async src="../../_/js/vendor/highlight.js"></script>
