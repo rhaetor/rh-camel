@@ -1,0 +1,1095 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Resilience4j Configuration :: Red Hat build of Apache Camel</title>
+    <meta name="description"
+          content="Resilience4j Circuit Breaker EIP configuration">
+    <meta name="generator" content="Antora 3.1.4">
+    <link rel="stylesheet" href="../../../_/css/site.css">
+</head>
+<body class="article">
+<header class="header">
+    <nav class="navbar">
+        <div class="navbar-brand">
+            <a class="navbar-item" href="/">Red Hat build of Apache Camel</a>
+            <button class="navbar-burger" data-target="topbar-nav">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+</header>
+<div class="body">
+    <div class="nav-container" data-component="components" data-version="4.0.x">
+        <aside class="nav">
+            <div class="panels">
+                <div class="nav-panel-menu is-active" data-panel="menu">
+                    <nav class="nav-menu">
+                        <button class="nav-menu-toggle"
+                                aria-label="Toggle expand/collapse all"
+                                style="display: none"></button>
+                        <h3 class="title"><a href="../index.html">Camel
+                            Components</a></h3>
+                        <ul class="nav-list">
+                            <li class="nav-item" data-depth="0">
+                                <ul class="nav-list">
+                                    <li class="nav-item" data-depth="1">
+                                        <button class="nav-item-toggle"></button>
+                                        <a class="nav-link"
+                                           href="enterprise-integration-patterns.html">Enterprise
+                                            Integration Patterns</a>
+                                        <ul class="nav-list">
+                                            <li class="nav-item" data-depth="2">
+                                                <a class="nav-link"
+                                                   href="aggregate-eip.html">Aggregate</a>
+                                            </li>
+                                            <li class="nav-item" data-depth="2">
+                                                <a class="nav-link"
+                                                   href="bean-eip.html">Bean</a>
+                                            </li>
+                                            <li class="nav-item" data-depth="2">
+                                                <a class="nav-link"
+                                                   href="change-data-capture.html">Change
+                                                    Data Capture</a>
+                                            </li>
+                                            <li class="nav-item" data-depth="2">
+                                                <a class="nav-link"
+                                                   href="channel-adapter.html">Channel
+                                                    Adapter</a>
+                                            </li>
+                                            <li class="nav-item" data-depth="2">
+                                                <a class="nav-link"
+                                                   href="choice-eip.html">Content
+                                                    Based Router</a>
+                                            </li>
+                                            <li class="nav-item" data-depth="2">
+                                                <a class="nav-link"
+                                                   href="circuitBreaker-eip.html">Circuit
+                                                    Breaker</a>
+                                            </li>
+                                            <li class="nav-item" data-depth="2">
+                                                <a class="nav-link"
+                                                   href="claimCheck-eip.html">Claim
+                                                    Check</a>
+                                            </li>
+                                            <li class="nav-item" data-depth="2">
+                                                <a class="nav-link"
+                                                   href="competing-consumers.html">Competing
+                                                    Consumers</a>
+                                            </li>
+                                            <li class="nav-item" data-depth="2">
+                                                <a class="nav-link"
+                                                   href="composed-message-processor.html">Composed
+                                                    Message Processor</a>
+                                            </li>
+                                            <li class="nav-item" data-depth="2">
+                                                <a class="nav-link"
+                                                   href="content-enricher.html">Content
+                                                    Enricher</a>
+                                            </li>
+                                            <li class="nav-item" data-depth="2">
+                                                <a class="nav-link"
+                                                   href="content-filter-eip.html">Content
+                                                    Filter</a>
+                                            </li>
+                                            <li class="nav-item" data-depth="2">
+                                                <a class="nav-link"
+                                                   href="convertBodyTo-eip.html">Convert
+                                                    Body To</a>
+                                            </li>
+                                            <li class="nav-item" data-depth="2">
+                                                <a class="nav-link"
+                                                   href="correlation-identifier.html">Correlation
+                                                    Identifier</a>
+                                            </li>
+                                            <li class="nav-item" data-depth="2">
+                                                <a class="nav-link"
+                                                   href="dead-letter-channel.html">Dead
+                                                    Letter Channel</a>
+                                            </li>
+                                            <li class="nav-item" data-depth="2">
+                                                <a class="nav-link"
+                                                   href="delay-eip.html">Delay</a>
+                                            </li>
+                                            <li class="nav-item" data-depth="2">
+                                                <a class="nav-link"
+                                                   href="durable-subscriber.html">Durable
+                                                    Subscriber</a>
+                                            </li>
+                                            <li class="nav-item" data-depth="2">
+                                                <a class="nav-link"
+                                                   href="dynamicRouter-eip.html">Dynamic
+                                                    Router</a>
+                                            </li>
+                                            <li class="nav-item" data-depth="2">
+                                                <a class="nav-link"
+                                                   href="enrich-eip.html">Enrich</a>
+                                            </li>
+                                            <li class="nav-item" data-depth="2">
+                                                <a class="nav-link"
+                                                   href="eventDrivenConsumer-eip.html">Event
+                                                    Driven Consumer</a>
+                                            </li>
+                                            <li class="nav-item" data-depth="2">
+                                                <a class="nav-link"
+                                                   href="event-message.html">Event
+                                                    Message</a>
+                                            </li>
+                                            <li class="nav-item" data-depth="2">
+                                                <a class="nav-link"
+                                                   href="filter-eip.html">Filter</a>
+                                            </li>
+                                            <li class="nav-item" data-depth="2">
+                                                <a class="nav-link"
+                                                   href="from-eip.html">From</a>
+                                            </li>
+                                            <li class="nav-item" data-depth="2">
+                                                <a class="nav-link"
+                                                   href="guaranteed-delivery.html">Guaranteed
+                                                    Delivery</a>
+                                            </li>
+                                            <li class="nav-item" data-depth="2">
+                                                <a class="nav-link"
+                                                   href="idempotentConsumer-eip.html">Idempotent
+                                                    Consumer</a>
+                                            </li>
+                                            <li class="nav-item" data-depth="2">
+                                                <a class="nav-link"
+                                                   href="intercept.html">Intercept</a>
+                                            </li>
+                                            <li class="nav-item" data-depth="2">
+                                                <a class="nav-link"
+                                                   href="kamelet-eip.html">Kamelet</a>
+                                            </li>
+                                            <li class="nav-item" data-depth="2">
+                                                <a class="nav-link"
+                                                   href="loadBalance-eip.html">Load
+                                                    Balance</a>
+                                            </li>
+                                            <li class="nav-item" data-depth="2">
+                                                <a class="nav-link"
+                                                   href="log-eip.html">Log</a>
+                                            </li>
+                                            <li class="nav-item" data-depth="2">
+                                                <a class="nav-link"
+                                                   href="loop-eip.html">Loop</a>
+                                            </li>
+                                            <li class="nav-item" data-depth="2">
+                                                <a class="nav-link"
+                                                   href="marshal-eip.html">Marshal</a>
+                                            </li>
+                                            <li class="nav-item" data-depth="2">
+                                                <a class="nav-link"
+                                                   href="message.html">Message</a>
+                                            </li>
+                                            <li class="nav-item" data-depth="2">
+                                                <a class="nav-link"
+                                                   href="message-broker.html">Message
+                                                    Broker</a>
+                                            </li>
+                                            <li class="nav-item" data-depth="2">
+                                                <a class="nav-link"
+                                                   href="message-bus.html">Message
+                                                    Bus</a>
+                                            </li>
+                                            <li class="nav-item" data-depth="2">
+                                                <a class="nav-link"
+                                                   href="message-channel.html">Message
+                                                    Channel</a>
+                                            </li>
+                                            <li class="nav-item" data-depth="2">
+                                                <a class="nav-link"
+                                                   href="message-dispatcher.html">Message
+                                                    Dispatcher</a>
+                                            </li>
+                                            <li class="nav-item" data-depth="2">
+                                                <a class="nav-link"
+                                                   href="message-endpoint.html">Message
+                                                    Endpoint</a>
+                                            </li>
+                                            <li class="nav-item" data-depth="2">
+                                                <a class="nav-link"
+                                                   href="message-expiration.html">Message
+                                                    Expiration</a>
+                                            </li>
+                                            <li class="nav-item" data-depth="2">
+                                                <a class="nav-link"
+                                                   href="message-history.html">Message
+                                                    History</a>
+                                            </li>
+                                            <li class="nav-item" data-depth="2">
+                                                <a class="nav-link"
+                                                   href="message-router.html">Message
+                                                    Router</a>
+                                            </li>
+                                            <li class="nav-item" data-depth="2">
+                                                <a class="nav-link"
+                                                   href="message-translator.html">Message
+                                                    Translator</a>
+                                            </li>
+                                            <li class="nav-item" data-depth="2">
+                                                <a class="nav-link"
+                                                   href="messaging-bridge.html">Messaging
+                                                    Bridge</a>
+                                            </li>
+                                            <li class="nav-item" data-depth="2">
+                                                <a class="nav-link"
+                                                   href="messaging-gateway.html">Messaging
+                                                    Gateway</a>
+                                            </li>
+                                            <li class="nav-item" data-depth="2">
+                                                <a class="nav-link"
+                                                   href="messaging-mapper.html">Messaging
+                                                    Mapper</a>
+                                            </li>
+                                            <li class="nav-item" data-depth="2">
+                                                <a class="nav-link"
+                                                   href="multicast-eip.html">Multicast</a>
+                                            </li>
+                                            <li class="nav-item" data-depth="2">
+                                                <a class="nav-link"
+                                                   href="normalizer.html">Normalizer</a>
+                                            </li>
+                                            <li class="nav-item" data-depth="2">
+                                                <a class="nav-link"
+                                                   href="pipeline-eip.html">Pipeline</a>
+                                            </li>
+                                            <li class="nav-item" data-depth="2">
+                                                <a class="nav-link"
+                                                   href="point-to-point-channel.html">Point
+                                                    to Point Channel</a>
+                                            </li>
+                                            <li class="nav-item" data-depth="2">
+                                                <a class="nav-link"
+                                                   href="pollEnrich-eip.html">Poll
+                                                    Enrich</a>
+                                            </li>
+                                            <li class="nav-item" data-depth="2">
+                                                <a class="nav-link"
+                                                   href="polling-consumer.html">Polling
+                                                    Consumer</a>
+                                            </li>
+                                            <li class="nav-item" data-depth="2">
+                                                <a class="nav-link"
+                                                   href="process-eip.html">Process</a>
+                                            </li>
+                                            <li class="nav-item" data-depth="2">
+                                                <a class="nav-link"
+                                                   href="process-manager.html">Process
+                                                    Manager</a>
+                                            </li>
+                                            <li class="nav-item" data-depth="2">
+                                                <a class="nav-link"
+                                                   href="publish-subscribe-channel.html">Publish
+                                                    Subscribe Channel</a>
+                                            </li>
+                                            <li class="nav-item" data-depth="2">
+                                                <a class="nav-link"
+                                                   href="recipientList-eip.html">Recipient
+                                                    List</a>
+                                            </li>
+                                            <li class="nav-item" data-depth="2">
+                                                <a class="nav-link"
+                                                   href="removeHeader-eip.html">Remove
+                                                    Header</a>
+                                            </li>
+                                            <li class="nav-item" data-depth="2">
+                                                <a class="nav-link"
+                                                   href="removeHeaders-eip.html">Remove
+                                                    Headers</a>
+                                            </li>
+                                            <li class="nav-item" data-depth="2">
+                                                <a class="nav-link"
+                                                   href="removeProperties-eip.html">Remove
+                                                    Properties</a>
+                                            </li>
+                                            <li class="nav-item" data-depth="2">
+                                                <a class="nav-link"
+                                                   href="removeProperty-eip.html">Remove
+                                                    Property</a>
+                                            </li>
+                                            <li class="nav-item" data-depth="2">
+                                                <a class="nav-link"
+                                                   href="requestReply-eip.html">Request
+                                                    Reply</a>
+                                            </li>
+                                            <li class="nav-item" data-depth="2">
+                                                <a class="nav-link"
+                                                   href="resequence-eip.html">Resequence</a>
+                                            </li>
+                                            <li class="nav-item" data-depth="2">
+                                                <a class="nav-link"
+                                                   href="resilience4j-eip.html">Resilience4j
+                                                    Circuit Breaker</a>
+                                            </li>
+                                            <li class="nav-item" data-depth="2">
+                                                <a class="nav-link"
+                                                   href="return-address.html">Return
+                                                    Address</a>
+                                            </li>
+                                            <li class="nav-item" data-depth="2">
+                                                <a class="nav-link"
+                                                   href="rollback-eip.html">Rollback</a>
+                                            </li>
+                                            <li class="nav-item" data-depth="2">
+                                                <a class="nav-link"
+                                                   href="routingSlip-eip.html">Routing
+                                                    Slip</a>
+                                            </li>
+                                            <li class="nav-item" data-depth="2">
+                                                <a class="nav-link"
+                                                   href="saga-eip.html">Saga</a>
+                                            </li>
+                                            <li class="nav-item" data-depth="2">
+                                                <a class="nav-link"
+                                                   href="sample-eip.html">Sample</a>
+                                            </li>
+                                            <li class="nav-item" data-depth="2">
+                                                <a class="nav-link"
+                                                   href="scatter-gather.html">Scatter
+                                                    Gather</a>
+                                            </li>
+                                            <li class="nav-item" data-depth="2">
+                                                <a class="nav-link"
+                                                   href="script-eip.html">Script</a>
+                                            </li>
+                                            <li class="nav-item" data-depth="2">
+                                                <a class="nav-link"
+                                                   href="selective-consumer.html">Selective
+                                                    Consumer</a>
+                                            </li>
+                                            <li class="nav-item" data-depth="2">
+                                                <a class="nav-link"
+                                                   href="service-activator.html">Service
+                                                    Activator</a>
+                                            </li>
+                                            <li class="nav-item" data-depth="2">
+                                                <a class="nav-link"
+                                                   href="serviceCall-eip.html">Service
+                                                    Call</a>
+                                            </li>
+                                            <li class="nav-item" data-depth="2">
+                                                <a class="nav-link"
+                                                   href="setBody-eip.html">Set
+                                                    Body</a>
+                                            </li>
+                                            <li class="nav-item" data-depth="2">
+                                                <a class="nav-link"
+                                                   href="setHeader-eip.html">Set
+                                                    Header</a>
+                                            </li>
+                                            <li class="nav-item" data-depth="2">
+                                                <a class="nav-link"
+                                                   href="setProperty-eip.html">Set
+                                                    Property</a>
+                                            </li>
+                                            <li class="nav-item" data-depth="2">
+                                                <a class="nav-link"
+                                                   href="sort-eip.html">Sort</a>
+                                            </li>
+                                            <li class="nav-item" data-depth="2">
+                                                <a class="nav-link"
+                                                   href="split-eip.html">Split</a>
+                                            </li>
+                                            <li class="nav-item" data-depth="2">
+                                                <a class="nav-link"
+                                                   href="step-eip.html">Step</a>
+                                            </li>
+                                            <li class="nav-item" data-depth="2">
+                                                <a class="nav-link"
+                                                   href="stop-eip.html">Stop</a>
+                                            </li>
+                                            <li class="nav-item" data-depth="2">
+                                                <a class="nav-link"
+                                                   href="threads-eip.html">Threads</a>
+                                            </li>
+                                            <li class="nav-item" data-depth="2">
+                                                <a class="nav-link"
+                                                   href="throttle-eip.html">Throttle</a>
+                                            </li>
+                                            <li class="nav-item" data-depth="2">
+                                                <a class="nav-link"
+                                                   href="to-eip.html">To</a>
+                                            </li>
+                                            <li class="nav-item" data-depth="2">
+                                                <a class="nav-link"
+                                                   href="toD-eip.html">To
+                                                    Dynamic</a>
+                                            </li>
+                                            <li class="nav-item" data-depth="2">
+                                                <a class="nav-link"
+                                                   href="transactional-client.html">Transactional
+                                                    Client</a>
+                                            </li>
+                                            <li class="nav-item" data-depth="2">
+                                                <a class="nav-link"
+                                                   href="transform-eip.html">Transform</a>
+                                            </li>
+                                            <li class="nav-item" data-depth="2">
+                                                <a class="nav-link"
+                                                   href="unmarshal-eip.html">Unmarshal</a>
+                                            </li>
+                                            <li class="nav-item" data-depth="2">
+                                                <a class="nav-link"
+                                                   href="validate-eip.html">Validate</a>
+                                            </li>
+                                            <li class="nav-item" data-depth="2">
+                                                <a class="nav-link"
+                                                   href="wireTap-eip.html">Wire
+                                                    Tap</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+                <div class="nav-panel-explore" data-panel="explore">
+                    <div class="context">
+                        <span class="title">Camel Components</span>
+                        <span class="version">4.0.x</span>
+                    </div>
+                    <ul class="components">
+                        <li class="component is-current">
+                            <div class="title"><a
+                                    href="../../4.0.x/index.html">Camel
+                                Components</a></div>
+                            <ul class="versions">
+                                <li class="version is-latest">
+                                    <a href="../../4.0.x/index.html">4.0.x
+                                        (LTS)</a>
+                                </li>
+                                <li class="version">
+                                    <a href="../../4.8.x/index.html">4.8.x</a>
+                                </li>
+                                <li class="version">
+                                    <a href="../../4.4.x/index.html">4.4.x</a>
+                                </li>
+                                <li class="version is-current">
+                                    <a href="../index.html">4.0.x</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="component">
+                            <div class="title"><a
+                                    href="../../../manual/4.0.x/index.html">User
+                                manual</a></div>
+                            <ul class="versions">
+                                <li class="version is-latest">
+                                    <a href="../../manual/4.0.x/index.html">4.0.x</a>
+                                </li>
+                                <li class="version">
+                                    <a href="../../manual/4.8.x/index.html">4.8.x</a>
+                                </li>
+                                <li class="version">
+                                    <a href="../../manual/4.4.x/index.html">4.4.x</a>
+                                </li>
+                                <li class="version">
+                                    <a href="../../manual/4.0.x/index.html">4.0.x</a>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </aside>
+    </div>
+    <main class="article">
+        <div class="toolbar" role="navigation">
+            <button class="nav-toggle"></button>
+            <a href="../../manual/4.0.x/index.html" class="home-link"></a>
+            <nav class="breadcrumbs" aria-label="breadcrumbs">
+                <ul>
+                    <li><a href="../index.html">Camel Components</a></li>
+                    <li><a href="resilience4jConfiguration-eip.html">Resilience4j
+                        Configuration</a></li>
+                </ul>
+            </nav>
+            <div class="page-versions">
+                <button class="version-menu-toggle"
+                        title="Show other versions of page">4.0.x
+                </button>
+                <div class="version-menu">
+                    <a class="version"
+                       href="../../4.0.x/eips/resilience4jConfiguration-eip.html">4.0.x
+                        (LTS)</a>
+                    <a class="version"
+                       href="../../4.8.x/eips/resilience4jConfiguration-eip.html">4.8.x</a>
+                    <a class="version"
+                       href="../../4.4.x/eips/resilience4jConfiguration-eip.html">4.4.x</a>
+                    <a class="version is-current"
+                       href="resilience4jConfiguration-eip.html">4.0.x</a>
+                </div>
+            </div>
+
+        </div>
+        <div class="content">
+            <aside class="toc sidebar" data-title="Contents" data-levels="2">
+                <div class="toc-menu"></div>
+            </aside>
+            <article class="doc">
+                <h1 class="page">Resilience4j Configuration</h1>
+                <div id="preamble">
+                    <div class="sectionbody">
+                        <div class="paragraph">
+                            <p>This page documents all the specific options for
+                                the <a href="resilience4j-eip.html"
+                                       class="xref page">Resilience4j</a> EIP.
+                            </p>
+                        </div>
+                        <div class="paragraph">
+                            <p>The Resilience4j Configuration eip supports 20
+                                options, which are listed below.</p>
+                        </div>
+                        <table class="tableblock frame-all grid-all stretch">
+                            <colgroup>
+                                <col style="width: 20%;">
+                                <col style="width: 50%;">
+                                <col style="width: 10%;">
+                                <col style="width: 20%;">
+                            </colgroup>
+                            <thead>
+                            <tr>
+                                <th class="tableblock halign-left valign-top">
+                                    Name
+                                </th>
+                                <th class="tableblock halign-left valign-top">
+                                    Description
+                                </th>
+                                <th class="tableblock halign-center valign-top">
+                                    Default
+                                </th>
+                                <th class="tableblock halign-left valign-top">
+                                    Type
+                                </th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <td class="tableblock halign-left valign-top"><p
+                                        class="tableblock"><strong
+                                        id="_option_circuitBreaker">circuitBreaker</strong>
+                                </p></td>
+                                <td class="tableblock halign-left valign-top">
+                                    <div class="content">
+                                        <div class="paragraph">
+                                            <p>Refers to an existing
+                                                io.github.resilience4j.circuitbreaker.CircuitBreaker
+                                                instance to lookup and use from
+                                                the registry. When using this,
+                                                then any other circuit breaker
+                                                options are not in use.</p>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td class="tableblock halign-center valign-top"></td>
+                                <td class="tableblock halign-left valign-top"><p
+                                        class="tableblock">String</p></td>
+                            </tr>
+                            <tr>
+                                <td class="tableblock halign-left valign-top"><p
+                                        class="tableblock"><strong
+                                        id="_option_config">config</strong></p>
+                                </td>
+                                <td class="tableblock halign-left valign-top">
+                                    <div class="content">
+                                        <div class="paragraph">
+                                            <p>Refers to an existing
+                                                io.github.resilience4j.circuitbreaker.CircuitBreakerConfig
+                                                instance to lookup and use from
+                                                the registry.</p>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td class="tableblock halign-center valign-top"></td>
+                                <td class="tableblock halign-left valign-top"><p
+                                        class="tableblock">String</p></td>
+                            </tr>
+                            <tr>
+                                <td class="tableblock halign-left valign-top"><p
+                                        class="tableblock"><strong
+                                        id="_option_failureRateThreshold">failureRateThreshold</strong>
+                                </p></td>
+                                <td class="tableblock halign-left valign-top">
+                                    <div class="content">
+                                        <div class="paragraph">
+                                            <p>Configures the failure rate
+                                                threshold in percentage. If the
+                                                failure rate is equal or greater
+                                                than the threshold the
+                                                CircuitBreaker transitions to
+                                                open and starts short-circuiting
+                                                calls. The threshold must be
+                                                greater than 0 and not greater
+                                                than 100. Default value is 50
+                                                percentage.</p>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td class="tableblock halign-center valign-top">
+                                    <p class="tableblock">50</p></td>
+                                <td class="tableblock halign-left valign-top"><p
+                                        class="tableblock">Float</p></td>
+                            </tr>
+                            <tr>
+                                <td class="tableblock halign-left valign-top"><p
+                                        class="tableblock"><strong
+                                        id="_option_permittedNumberOfCallsInHalfOpenState">permittedNumberOfCallsInHalfOpenState</strong>
+                                </p></td>
+                                <td class="tableblock halign-left valign-top">
+                                    <div class="content">
+                                        <div class="paragraph">
+                                            <p>Configures the number of
+                                                permitted calls when the
+                                                CircuitBreaker is half open. The
+                                                size must be greater than 0.
+                                                Default size is 10.</p>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td class="tableblock halign-center valign-top">
+                                    <p class="tableblock">10</p></td>
+                                <td class="tableblock halign-left valign-top"><p
+                                        class="tableblock">Integer</p></td>
+                            </tr>
+                            <tr>
+                                <td class="tableblock halign-left valign-top"><p
+                                        class="tableblock"><strong
+                                        id="_option_throwExceptionWhenHalfOpenOrOpenState">throwExceptionWhenHalfOpenOrOpenState</strong>
+                                </p></td>
+                                <td class="tableblock halign-left valign-top">
+                                    <div class="content">
+                                        <div class="paragraph">
+                                            <p>Whether to throw
+                                                io.github.resilience4j.circuitbreaker.CallNotPermittedException
+                                                when the call is rejected due
+                                                circuit breaker is half open or
+                                                open.</p>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td class="tableblock halign-center valign-top">
+                                    <p class="tableblock">false</p></td>
+                                <td class="tableblock halign-left valign-top"><p
+                                        class="tableblock">Boolean</p></td>
+                            </tr>
+                            <tr>
+                                <td class="tableblock halign-left valign-top"><p
+                                        class="tableblock"><strong
+                                        id="_option_slidingWindowSize">slidingWindowSize</strong>
+                                </p></td>
+                                <td class="tableblock halign-left valign-top">
+                                    <div class="content">
+                                        <div class="paragraph">
+                                            <p>Configures the size of the
+                                                sliding window which is used to
+                                                record the outcome of calls when
+                                                the CircuitBreaker is closed.
+                                                slidingWindowSize configures the
+                                                size of the sliding window.
+                                                Sliding window can either be
+                                                count-based or time-based. If
+                                                slidingWindowType is
+                                                COUNT_BASED, the last
+                                                slidingWindowSize calls are
+                                                recorded and aggregated. If
+                                                slidingWindowType is TIME_BASED,
+                                                the calls of the last
+                                                slidingWindowSize seconds are
+                                                recorded and aggregated. The
+                                                slidingWindowSize must be
+                                                greater than 0. The
+                                                minimumNumberOfCalls must be
+                                                greater than 0. If the
+                                                slidingWindowType is
+                                                COUNT_BASED, the
+                                                minimumNumberOfCalls cannot be
+                                                greater than slidingWindowSize .
+                                                If the slidingWindowType is
+                                                TIME_BASED, you can pick
+                                                whatever you want. Default
+                                                slidingWindowSize is 100.</p>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td class="tableblock halign-center valign-top">
+                                    <p class="tableblock">100</p></td>
+                                <td class="tableblock halign-left valign-top"><p
+                                        class="tableblock">Integer</p></td>
+                            </tr>
+                            <tr>
+                                <td class="tableblock halign-left valign-top"><p
+                                        class="tableblock"><strong
+                                        id="_option_slidingWindowType">slidingWindowType</strong>
+                                </p></td>
+                                <td class="tableblock halign-left valign-top">
+                                    <div class="content">
+                                        <div class="paragraph">
+                                            <p>Configures the type of the
+                                                sliding window which is used to
+                                                record the outcome of calls when
+                                                the CircuitBreaker is closed.
+                                                Sliding window can either be
+                                                count-based or time-based. If
+                                                slidingWindowType is
+                                                COUNT_BASED, the last
+                                                slidingWindowSize calls are
+                                                recorded and aggregated. If
+                                                slidingWindowType is TIME_BASED,
+                                                the calls of the last
+                                                slidingWindowSize seconds are
+                                                recorded and aggregated. Default
+                                                slidingWindowType is
+                                                COUNT_BASED.</p>
+                                        </div>
+                                        <div class="paragraph">
+                                            <p>Enum values:</p>
+                                        </div>
+                                        <div class="ulist">
+                                            <ul>
+                                                <li>
+                                                    <p>TIME_BASED</p>
+                                                </li>
+                                                <li>
+                                                    <p>COUNT_BASED</p>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td class="tableblock halign-center valign-top">
+                                    <p class="tableblock">COUNT_BASED</p></td>
+                                <td class="tableblock halign-left valign-top"><p
+                                        class="tableblock">String</p></td>
+                            </tr>
+                            <tr>
+                                <td class="tableblock halign-left valign-top"><p
+                                        class="tableblock"><strong
+                                        id="_option_minimumNumberOfCalls">minimumNumberOfCalls</strong>
+                                </p></td>
+                                <td class="tableblock halign-left valign-top">
+                                    <div class="content">
+                                        <div class="paragraph">
+                                            <p>Configures the minimum number of
+                                                calls which are required (per
+                                                sliding window period) before
+                                                the CircuitBreaker can calculate
+                                                the error rate. For example, if
+                                                minimumNumberOfCalls is 10, then
+                                                at least 10 calls must be
+                                                recorded, before the failure
+                                                rate can be calculated. If only
+                                                9 calls have been recorded the
+                                                CircuitBreaker will not
+                                                transition to open even if all 9
+                                                calls have failed. Default
+                                                minimumNumberOfCalls is 100.</p>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td class="tableblock halign-center valign-top">
+                                    <p class="tableblock">100</p></td>
+                                <td class="tableblock halign-left valign-top"><p
+                                        class="tableblock">Integer</p></td>
+                            </tr>
+                            <tr>
+                                <td class="tableblock halign-left valign-top"><p
+                                        class="tableblock"><strong
+                                        id="_option_writableStackTraceEnabled">writableStackTraceEnabled</strong>
+                                </p></td>
+                                <td class="tableblock halign-left valign-top">
+                                    <div class="content">
+                                        <div class="paragraph">
+                                            <p>Enables writable stack traces.
+                                                When set to false,
+                                                Exception.getStackTrace returns
+                                                a zero length array. This may be
+                                                used to reduce log spam when the
+                                                circuit breaker is open as the
+                                                cause of the exceptions is
+                                                already known (the circuit
+                                                breaker is short-circuiting
+                                                calls).</p>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td class="tableblock halign-center valign-top">
+                                    <p class="tableblock">true</p></td>
+                                <td class="tableblock halign-left valign-top"><p
+                                        class="tableblock">Boolean</p></td>
+                            </tr>
+                            <tr>
+                                <td class="tableblock halign-left valign-top"><p
+                                        class="tableblock"><strong
+                                        id="_option_waitDurationInOpenState">waitDurationInOpenState</strong>
+                                </p></td>
+                                <td class="tableblock halign-left valign-top">
+                                    <div class="content">
+                                        <div class="paragraph">
+                                            <p>Configures the wait duration (in
+                                                seconds) which specifies how
+                                                long the CircuitBreaker should
+                                                stay open, before it switches to
+                                                half open. Default value is 60
+                                                seconds.</p>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td class="tableblock halign-center valign-top">
+                                    <p class="tableblock">60</p></td>
+                                <td class="tableblock halign-left valign-top"><p
+                                        class="tableblock">Integer</p></td>
+                            </tr>
+                            <tr>
+                                <td class="tableblock halign-left valign-top"><p
+                                        class="tableblock"><strong
+                                        id="_option_automaticTransitionFromOpenToHalfOpenEnabled">automaticTransitionFromOpenToHalfOpenEnabled</strong>
+                                </p></td>
+                                <td class="tableblock halign-left valign-top">
+                                    <div class="content">
+                                        <div class="paragraph">
+                                            <p>Enables automatic transition from
+                                                OPEN to HALF_OPEN state once the
+                                                waitDurationInOpenState has
+                                                passed.</p>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td class="tableblock halign-center valign-top">
+                                    <p class="tableblock">false</p></td>
+                                <td class="tableblock halign-left valign-top"><p
+                                        class="tableblock">Boolean</p></td>
+                            </tr>
+                            <tr>
+                                <td class="tableblock halign-left valign-top"><p
+                                        class="tableblock"><strong
+                                        id="_option_slowCallRateThreshold">slowCallRateThreshold</strong>
+                                </p></td>
+                                <td class="tableblock halign-left valign-top">
+                                    <div class="content">
+                                        <div class="paragraph">
+                                            <p>Configures a threshold in
+                                                percentage. The CircuitBreaker
+                                                considers a call as slow when
+                                                the call duration is greater
+                                                than slowCallDurationThreshold
+                                                Duration. When the percentage of
+                                                slow calls is equal or greater
+                                                the threshold, the
+                                                CircuitBreaker transitions to
+                                                open and starts short-circuiting
+                                                calls. The threshold must be
+                                                greater than 0 and not greater
+                                                than 100. Default value is 100
+                                                percentage which means that all
+                                                recorded calls must be slower
+                                                than
+                                                slowCallDurationThreshold.</p>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td class="tableblock halign-center valign-top">
+                                    <p class="tableblock">100</p></td>
+                                <td class="tableblock halign-left valign-top"><p
+                                        class="tableblock">Float</p></td>
+                            </tr>
+                            <tr>
+                                <td class="tableblock halign-left valign-top"><p
+                                        class="tableblock"><strong
+                                        id="_option_slowCallDurationThreshold">slowCallDurationThreshold</strong>
+                                </p></td>
+                                <td class="tableblock halign-left valign-top">
+                                    <div class="content">
+                                        <div class="paragraph">
+                                            <p>Configures the duration threshold
+                                                (seconds) above which calls are
+                                                considered as slow and increase
+                                                the slow calls percentage.
+                                                Default value is 60 seconds.</p>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td class="tableblock halign-center valign-top">
+                                    <p class="tableblock">60</p></td>
+                                <td class="tableblock halign-left valign-top"><p
+                                        class="tableblock">Integer</p></td>
+                            </tr>
+                            <tr>
+                                <td class="tableblock halign-left valign-top"><p
+                                        class="tableblock"><strong
+                                        id="_option_bulkheadEnabled">bulkheadEnabled</strong>
+                                </p></td>
+                                <td class="tableblock halign-left valign-top">
+                                    <div class="content">
+                                        <div class="paragraph">
+                                            <p>Whether bulkhead is enabled or
+                                                not on the circuit breaker.
+                                                Default is false.</p>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td class="tableblock halign-center valign-top">
+                                    <p class="tableblock">false</p></td>
+                                <td class="tableblock halign-left valign-top"><p
+                                        class="tableblock">Boolean</p></td>
+                            </tr>
+                            <tr>
+                                <td class="tableblock halign-left valign-top"><p
+                                        class="tableblock"><strong
+                                        id="_option_bulkheadMaxConcurrentCalls">bulkheadMaxConcurrentCalls</strong>
+                                </p></td>
+                                <td class="tableblock halign-left valign-top">
+                                    <div class="content">
+                                        <div class="paragraph">
+                                            <p>Configures the max amount of
+                                                concurrent calls the bulkhead
+                                                will support.</p>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td class="tableblock halign-center valign-top">
+                                    <p class="tableblock">25</p></td>
+                                <td class="tableblock halign-left valign-top"><p
+                                        class="tableblock">Integer</p></td>
+                            </tr>
+                            <tr>
+                                <td class="tableblock halign-left valign-top"><p
+                                        class="tableblock"><strong
+                                        id="_option_bulkheadMaxWaitDuration">bulkheadMaxWaitDuration</strong>
+                                </p></td>
+                                <td class="tableblock halign-left valign-top">
+                                    <div class="content">
+                                        <div class="paragraph">
+                                            <p>Configures a maximum amount of
+                                                time which the calling thread
+                                                will wait to enter the bulkhead.
+                                                If bulkhead has space available,
+                                                entry is guaranteed and
+                                                immediate. If bulkhead is full,
+                                                calling threads will contest for
+                                                space, if it becomes available.
+                                                maxWaitDuration can be set to 0.
+                                                Note: for threads running on an
+                                                event-loop or equivalent (rx
+                                                computation pool, etc), setting
+                                                maxWaitDuration to 0 is highly
+                                                recommended. Blocking an
+                                                event-loop thread will most
+                                                likely have a negative effect on
+                                                application throughput.</p>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td class="tableblock halign-center valign-top">
+                                    <p class="tableblock">0</p></td>
+                                <td class="tableblock halign-left valign-top"><p
+                                        class="tableblock">Integer</p></td>
+                            </tr>
+                            <tr>
+                                <td class="tableblock halign-left valign-top"><p
+                                        class="tableblock"><strong
+                                        id="_option_timeoutEnabled">timeoutEnabled</strong>
+                                </p></td>
+                                <td class="tableblock halign-left valign-top">
+                                    <div class="content">
+                                        <div class="paragraph">
+                                            <p>Whether timeout is enabled or not
+                                                on the circuit breaker. Default
+                                                is false.</p>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td class="tableblock halign-center valign-top">
+                                    <p class="tableblock">false</p></td>
+                                <td class="tableblock halign-left valign-top"><p
+                                        class="tableblock">Boolean</p></td>
+                            </tr>
+                            <tr>
+                                <td class="tableblock halign-left valign-top"><p
+                                        class="tableblock"><strong
+                                        id="_option_timeoutExecutorService">timeoutExecutorService</strong>
+                                </p></td>
+                                <td class="tableblock halign-left valign-top">
+                                    <div class="content">
+                                        <div class="paragraph">
+                                            <p>References to a custom thread
+                                                pool to use when timeout is
+                                                enabled (uses
+                                                ForkJoinPool#commonPool() by
+                                                default).</p>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td class="tableblock halign-center valign-top"></td>
+                                <td class="tableblock halign-left valign-top"><p
+                                        class="tableblock">ExecutorService</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="tableblock halign-left valign-top"><p
+                                        class="tableblock"><strong
+                                        id="_option_timeoutDuration">timeoutDuration</strong>
+                                </p></td>
+                                <td class="tableblock halign-left valign-top">
+                                    <div class="content">
+                                        <div class="paragraph">
+                                            <p>Configures the thread execution
+                                                timeout. Default value is 1
+                                                second.</p>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td class="tableblock halign-center valign-top">
+                                    <p class="tableblock">1000</p></td>
+                                <td class="tableblock halign-left valign-top"><p
+                                        class="tableblock">Integer</p></td>
+                            </tr>
+                            <tr>
+                                <td class="tableblock halign-left valign-top"><p
+                                        class="tableblock"><strong
+                                        id="_option_timeoutCancelRunningFuture">timeoutCancelRunningFuture</strong>
+                                </p></td>
+                                <td class="tableblock halign-left valign-top">
+                                    <div class="content">
+                                        <div class="paragraph">
+                                            <p>Configures whether cancel is
+                                                called on the running future.
+                                                Defaults to true.</p>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td class="tableblock halign-center valign-top">
+                                    <p class="tableblock">true</p></td>
+                                <td class="tableblock halign-left valign-top"><p
+                                        class="tableblock">Boolean</p></td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <div class="sect1">
+                    <h2 id="_example"><a class="anchor" href="#_example"></a>Example
+                    </h2>
+                    <div class="sectionbody">
+                        <div class="paragraph">
+                            <p>See <a href="resilience4j-eip.html"
+                                      class="xref page">Resilience4j</a> EIP for
+                                details how to use this EIP.</p>
+                        </div>
+                    </div>
+                </div>
+            </article>
+        </div>
+    </main>
+</div>
+<footer class="footer">
+</footer>
+<script id="site-script" src="../../../_/js/site.js"
+        data-ui-root-path="../../../_"></script>
+<script async src="../../../_/js/vendor/highlight.js"></script>
+</body>
+</html>

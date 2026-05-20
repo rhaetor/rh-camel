@@ -1,0 +1,1180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Threads :: Red Hat build of Apache Camel</title>
+    <meta name="description"
+          content="Specifies that all steps after this node are processed asynchronously">
+    <meta name="generator" content="Antora 3.1.4">
+    <link rel="stylesheet" href="../../../_/css/site.css">
+</head>
+<body class="article">
+<header class="header">
+    <nav class="navbar">
+        <div class="navbar-brand">
+            <a class="navbar-item" href="/">Red Hat build of Apache Camel</a>
+            <button class="navbar-burger" data-target="topbar-nav">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+</header>
+<div class="body">
+    <div class="nav-container" data-component="components" data-version="4.0.x">
+        <aside class="nav">
+            <div class="panels">
+                <div class="nav-panel-menu is-active" data-panel="menu">
+                    <nav class="nav-menu">
+                        <button class="nav-menu-toggle"
+                                aria-label="Toggle expand/collapse all"
+                                style="display: none"></button>
+                        <h3 class="title"><a href="../index.html">Camel
+                            Components</a></h3>
+                        <ul class="nav-list">
+                            <li class="nav-item" data-depth="0">
+                                <ul class="nav-list">
+                                    <li class="nav-item" data-depth="1">
+                                        <button class="nav-item-toggle"></button>
+                                        <a class="nav-link"
+                                           href="enterprise-integration-patterns.html">Enterprise
+                                            Integration Patterns</a>
+                                        <ul class="nav-list">
+                                            <li class="nav-item" data-depth="2">
+                                                <a class="nav-link"
+                                                   href="aggregate-eip.html">Aggregate</a>
+                                            </li>
+                                            <li class="nav-item" data-depth="2">
+                                                <a class="nav-link"
+                                                   href="bean-eip.html">Bean</a>
+                                            </li>
+                                            <li class="nav-item" data-depth="2">
+                                                <a class="nav-link"
+                                                   href="change-data-capture.html">Change
+                                                    Data Capture</a>
+                                            </li>
+                                            <li class="nav-item" data-depth="2">
+                                                <a class="nav-link"
+                                                   href="channel-adapter.html">Channel
+                                                    Adapter</a>
+                                            </li>
+                                            <li class="nav-item" data-depth="2">
+                                                <a class="nav-link"
+                                                   href="choice-eip.html">Content
+                                                    Based Router</a>
+                                            </li>
+                                            <li class="nav-item" data-depth="2">
+                                                <a class="nav-link"
+                                                   href="circuitBreaker-eip.html">Circuit
+                                                    Breaker</a>
+                                            </li>
+                                            <li class="nav-item" data-depth="2">
+                                                <a class="nav-link"
+                                                   href="claimCheck-eip.html">Claim
+                                                    Check</a>
+                                            </li>
+                                            <li class="nav-item" data-depth="2">
+                                                <a class="nav-link"
+                                                   href="competing-consumers.html">Competing
+                                                    Consumers</a>
+                                            </li>
+                                            <li class="nav-item" data-depth="2">
+                                                <a class="nav-link"
+                                                   href="composed-message-processor.html">Composed
+                                                    Message Processor</a>
+                                            </li>
+                                            <li class="nav-item" data-depth="2">
+                                                <a class="nav-link"
+                                                   href="content-enricher.html">Content
+                                                    Enricher</a>
+                                            </li>
+                                            <li class="nav-item" data-depth="2">
+                                                <a class="nav-link"
+                                                   href="content-filter-eip.html">Content
+                                                    Filter</a>
+                                            </li>
+                                            <li class="nav-item" data-depth="2">
+                                                <a class="nav-link"
+                                                   href="convertBodyTo-eip.html">Convert
+                                                    Body To</a>
+                                            </li>
+                                            <li class="nav-item" data-depth="2">
+                                                <a class="nav-link"
+                                                   href="correlation-identifier.html">Correlation
+                                                    Identifier</a>
+                                            </li>
+                                            <li class="nav-item" data-depth="2">
+                                                <a class="nav-link"
+                                                   href="dead-letter-channel.html">Dead
+                                                    Letter Channel</a>
+                                            </li>
+                                            <li class="nav-item" data-depth="2">
+                                                <a class="nav-link"
+                                                   href="delay-eip.html">Delay</a>
+                                            </li>
+                                            <li class="nav-item" data-depth="2">
+                                                <a class="nav-link"
+                                                   href="durable-subscriber.html">Durable
+                                                    Subscriber</a>
+                                            </li>
+                                            <li class="nav-item" data-depth="2">
+                                                <a class="nav-link"
+                                                   href="dynamicRouter-eip.html">Dynamic
+                                                    Router</a>
+                                            </li>
+                                            <li class="nav-item" data-depth="2">
+                                                <a class="nav-link"
+                                                   href="enrich-eip.html">Enrich</a>
+                                            </li>
+                                            <li class="nav-item" data-depth="2">
+                                                <a class="nav-link"
+                                                   href="eventDrivenConsumer-eip.html">Event
+                                                    Driven Consumer</a>
+                                            </li>
+                                            <li class="nav-item" data-depth="2">
+                                                <a class="nav-link"
+                                                   href="event-message.html">Event
+                                                    Message</a>
+                                            </li>
+                                            <li class="nav-item" data-depth="2">
+                                                <a class="nav-link"
+                                                   href="filter-eip.html">Filter</a>
+                                            </li>
+                                            <li class="nav-item" data-depth="2">
+                                                <a class="nav-link"
+                                                   href="from-eip.html">From</a>
+                                            </li>
+                                            <li class="nav-item" data-depth="2">
+                                                <a class="nav-link"
+                                                   href="guaranteed-delivery.html">Guaranteed
+                                                    Delivery</a>
+                                            </li>
+                                            <li class="nav-item" data-depth="2">
+                                                <a class="nav-link"
+                                                   href="idempotentConsumer-eip.html">Idempotent
+                                                    Consumer</a>
+                                            </li>
+                                            <li class="nav-item" data-depth="2">
+                                                <a class="nav-link"
+                                                   href="intercept.html">Intercept</a>
+                                            </li>
+                                            <li class="nav-item" data-depth="2">
+                                                <a class="nav-link"
+                                                   href="kamelet-eip.html">Kamelet</a>
+                                            </li>
+                                            <li class="nav-item" data-depth="2">
+                                                <a class="nav-link"
+                                                   href="loadBalance-eip.html">Load
+                                                    Balance</a>
+                                            </li>
+                                            <li class="nav-item" data-depth="2">
+                                                <a class="nav-link"
+                                                   href="log-eip.html">Log</a>
+                                            </li>
+                                            <li class="nav-item" data-depth="2">
+                                                <a class="nav-link"
+                                                   href="loop-eip.html">Loop</a>
+                                            </li>
+                                            <li class="nav-item" data-depth="2">
+                                                <a class="nav-link"
+                                                   href="marshal-eip.html">Marshal</a>
+                                            </li>
+                                            <li class="nav-item" data-depth="2">
+                                                <a class="nav-link"
+                                                   href="message.html">Message</a>
+                                            </li>
+                                            <li class="nav-item" data-depth="2">
+                                                <a class="nav-link"
+                                                   href="message-broker.html">Message
+                                                    Broker</a>
+                                            </li>
+                                            <li class="nav-item" data-depth="2">
+                                                <a class="nav-link"
+                                                   href="message-bus.html">Message
+                                                    Bus</a>
+                                            </li>
+                                            <li class="nav-item" data-depth="2">
+                                                <a class="nav-link"
+                                                   href="message-channel.html">Message
+                                                    Channel</a>
+                                            </li>
+                                            <li class="nav-item" data-depth="2">
+                                                <a class="nav-link"
+                                                   href="message-dispatcher.html">Message
+                                                    Dispatcher</a>
+                                            </li>
+                                            <li class="nav-item" data-depth="2">
+                                                <a class="nav-link"
+                                                   href="message-endpoint.html">Message
+                                                    Endpoint</a>
+                                            </li>
+                                            <li class="nav-item" data-depth="2">
+                                                <a class="nav-link"
+                                                   href="message-expiration.html">Message
+                                                    Expiration</a>
+                                            </li>
+                                            <li class="nav-item" data-depth="2">
+                                                <a class="nav-link"
+                                                   href="message-history.html">Message
+                                                    History</a>
+                                            </li>
+                                            <li class="nav-item" data-depth="2">
+                                                <a class="nav-link"
+                                                   href="message-router.html">Message
+                                                    Router</a>
+                                            </li>
+                                            <li class="nav-item" data-depth="2">
+                                                <a class="nav-link"
+                                                   href="message-translator.html">Message
+                                                    Translator</a>
+                                            </li>
+                                            <li class="nav-item" data-depth="2">
+                                                <a class="nav-link"
+                                                   href="messaging-bridge.html">Messaging
+                                                    Bridge</a>
+                                            </li>
+                                            <li class="nav-item" data-depth="2">
+                                                <a class="nav-link"
+                                                   href="messaging-gateway.html">Messaging
+                                                    Gateway</a>
+                                            </li>
+                                            <li class="nav-item" data-depth="2">
+                                                <a class="nav-link"
+                                                   href="messaging-mapper.html">Messaging
+                                                    Mapper</a>
+                                            </li>
+                                            <li class="nav-item" data-depth="2">
+                                                <a class="nav-link"
+                                                   href="multicast-eip.html">Multicast</a>
+                                            </li>
+                                            <li class="nav-item" data-depth="2">
+                                                <a class="nav-link"
+                                                   href="normalizer.html">Normalizer</a>
+                                            </li>
+                                            <li class="nav-item" data-depth="2">
+                                                <a class="nav-link"
+                                                   href="pipeline-eip.html">Pipeline</a>
+                                            </li>
+                                            <li class="nav-item" data-depth="2">
+                                                <a class="nav-link"
+                                                   href="point-to-point-channel.html">Point
+                                                    to Point Channel</a>
+                                            </li>
+                                            <li class="nav-item" data-depth="2">
+                                                <a class="nav-link"
+                                                   href="pollEnrich-eip.html">Poll
+                                                    Enrich</a>
+                                            </li>
+                                            <li class="nav-item" data-depth="2">
+                                                <a class="nav-link"
+                                                   href="polling-consumer.html">Polling
+                                                    Consumer</a>
+                                            </li>
+                                            <li class="nav-item" data-depth="2">
+                                                <a class="nav-link"
+                                                   href="process-eip.html">Process</a>
+                                            </li>
+                                            <li class="nav-item" data-depth="2">
+                                                <a class="nav-link"
+                                                   href="process-manager.html">Process
+                                                    Manager</a>
+                                            </li>
+                                            <li class="nav-item" data-depth="2">
+                                                <a class="nav-link"
+                                                   href="publish-subscribe-channel.html">Publish
+                                                    Subscribe Channel</a>
+                                            </li>
+                                            <li class="nav-item" data-depth="2">
+                                                <a class="nav-link"
+                                                   href="recipientList-eip.html">Recipient
+                                                    List</a>
+                                            </li>
+                                            <li class="nav-item" data-depth="2">
+                                                <a class="nav-link"
+                                                   href="removeHeader-eip.html">Remove
+                                                    Header</a>
+                                            </li>
+                                            <li class="nav-item" data-depth="2">
+                                                <a class="nav-link"
+                                                   href="removeHeaders-eip.html">Remove
+                                                    Headers</a>
+                                            </li>
+                                            <li class="nav-item" data-depth="2">
+                                                <a class="nav-link"
+                                                   href="removeProperties-eip.html">Remove
+                                                    Properties</a>
+                                            </li>
+                                            <li class="nav-item" data-depth="2">
+                                                <a class="nav-link"
+                                                   href="removeProperty-eip.html">Remove
+                                                    Property</a>
+                                            </li>
+                                            <li class="nav-item" data-depth="2">
+                                                <a class="nav-link"
+                                                   href="requestReply-eip.html">Request
+                                                    Reply</a>
+                                            </li>
+                                            <li class="nav-item" data-depth="2">
+                                                <a class="nav-link"
+                                                   href="resequence-eip.html">Resequence</a>
+                                            </li>
+                                            <li class="nav-item" data-depth="2">
+                                                <a class="nav-link"
+                                                   href="resilience4j-eip.html">Resilience4j
+                                                    Circuit Breaker</a>
+                                            </li>
+                                            <li class="nav-item" data-depth="2">
+                                                <a class="nav-link"
+                                                   href="return-address.html">Return
+                                                    Address</a>
+                                            </li>
+                                            <li class="nav-item" data-depth="2">
+                                                <a class="nav-link"
+                                                   href="rollback-eip.html">Rollback</a>
+                                            </li>
+                                            <li class="nav-item" data-depth="2">
+                                                <a class="nav-link"
+                                                   href="routingSlip-eip.html">Routing
+                                                    Slip</a>
+                                            </li>
+                                            <li class="nav-item" data-depth="2">
+                                                <a class="nav-link"
+                                                   href="saga-eip.html">Saga</a>
+                                            </li>
+                                            <li class="nav-item" data-depth="2">
+                                                <a class="nav-link"
+                                                   href="sample-eip.html">Sample</a>
+                                            </li>
+                                            <li class="nav-item" data-depth="2">
+                                                <a class="nav-link"
+                                                   href="scatter-gather.html">Scatter
+                                                    Gather</a>
+                                            </li>
+                                            <li class="nav-item" data-depth="2">
+                                                <a class="nav-link"
+                                                   href="script-eip.html">Script</a>
+                                            </li>
+                                            <li class="nav-item" data-depth="2">
+                                                <a class="nav-link"
+                                                   href="selective-consumer.html">Selective
+                                                    Consumer</a>
+                                            </li>
+                                            <li class="nav-item" data-depth="2">
+                                                <a class="nav-link"
+                                                   href="service-activator.html">Service
+                                                    Activator</a>
+                                            </li>
+                                            <li class="nav-item" data-depth="2">
+                                                <a class="nav-link"
+                                                   href="serviceCall-eip.html">Service
+                                                    Call</a>
+                                            </li>
+                                            <li class="nav-item" data-depth="2">
+                                                <a class="nav-link"
+                                                   href="setBody-eip.html">Set
+                                                    Body</a>
+                                            </li>
+                                            <li class="nav-item" data-depth="2">
+                                                <a class="nav-link"
+                                                   href="setHeader-eip.html">Set
+                                                    Header</a>
+                                            </li>
+                                            <li class="nav-item" data-depth="2">
+                                                <a class="nav-link"
+                                                   href="setProperty-eip.html">Set
+                                                    Property</a>
+                                            </li>
+                                            <li class="nav-item" data-depth="2">
+                                                <a class="nav-link"
+                                                   href="sort-eip.html">Sort</a>
+                                            </li>
+                                            <li class="nav-item" data-depth="2">
+                                                <a class="nav-link"
+                                                   href="split-eip.html">Split</a>
+                                            </li>
+                                            <li class="nav-item" data-depth="2">
+                                                <a class="nav-link"
+                                                   href="step-eip.html">Step</a>
+                                            </li>
+                                            <li class="nav-item" data-depth="2">
+                                                <a class="nav-link"
+                                                   href="stop-eip.html">Stop</a>
+                                            </li>
+                                            <li class="nav-item is-current-page"
+                                                data-depth="2">
+                                                <a class="nav-link"
+                                                   href="threads-eip.html">Threads</a>
+                                            </li>
+                                            <li class="nav-item" data-depth="2">
+                                                <a class="nav-link"
+                                                   href="throttle-eip.html">Throttle</a>
+                                            </li>
+                                            <li class="nav-item" data-depth="2">
+                                                <a class="nav-link"
+                                                   href="to-eip.html">To</a>
+                                            </li>
+                                            <li class="nav-item" data-depth="2">
+                                                <a class="nav-link"
+                                                   href="toD-eip.html">To
+                                                    Dynamic</a>
+                                            </li>
+                                            <li class="nav-item" data-depth="2">
+                                                <a class="nav-link"
+                                                   href="transactional-client.html">Transactional
+                                                    Client</a>
+                                            </li>
+                                            <li class="nav-item" data-depth="2">
+                                                <a class="nav-link"
+                                                   href="transform-eip.html">Transform</a>
+                                            </li>
+                                            <li class="nav-item" data-depth="2">
+                                                <a class="nav-link"
+                                                   href="unmarshal-eip.html">Unmarshal</a>
+                                            </li>
+                                            <li class="nav-item" data-depth="2">
+                                                <a class="nav-link"
+                                                   href="validate-eip.html">Validate</a>
+                                            </li>
+                                            <li class="nav-item" data-depth="2">
+                                                <a class="nav-link"
+                                                   href="wireTap-eip.html">Wire
+                                                    Tap</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+                <div class="nav-panel-explore" data-panel="explore">
+                    <div class="context">
+                        <span class="title">Camel Components</span>
+                        <span class="version">4.0.x</span>
+                    </div>
+                    <ul class="components">
+                        <li class="component is-current">
+                            <div class="title"><a
+                                    href="../../4.10.x/index.html">Camel
+                                Components</a></div>
+                            <ul class="versions">
+                                <li class="version is-latest">
+                                    <a href="../../4.10.x/index.html">4.10.x
+                                        (LTS)</a>
+                                </li>
+                                <li class="version">
+                                    <a href="../../4.8.x/index.html">4.8.x</a>
+                                </li>
+                                <li class="version">
+                                    <a href="../../4.4.x/index.html">4.4.x</a>
+                                </li>
+                                <li class="version is-current">
+                                    <a href="../index.html">4.0.x</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="component">
+                            <div class="title"><a
+                                    href="../../../manual/4.10.x/index.html">User
+                                manual</a></div>
+                            <ul class="versions">
+                                <li class="version is-latest">
+                                    <a href="../../manual/4.10.x/index.html">4.10.x</a>
+                                </li>
+                                <li class="version">
+                                    <a href="../../manual/4.8.x/index.html">4.8.x</a>
+                                </li>
+                                <li class="version">
+                                    <a href="../../manual/4.4.x/index.html">4.4.x</a>
+                                </li>
+                                <li class="version">
+                                    <a href="../../manual/4.0.x/index.html">4.0.x</a>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </aside>
+    </div>
+    <main class="article">
+        <div class="toolbar" role="navigation">
+            <button class="nav-toggle"></button>
+            <a href="../../manual/4.10.x/index.html" class="home-link"></a>
+            <nav class="breadcrumbs" aria-label="breadcrumbs">
+                <ul>
+                    <li><a href="../index.html">Camel Components</a></li>
+                    <li><a href="enterprise-integration-patterns.html">Enterprise
+                        Integration Patterns</a></li>
+                    <li><a href="threads-eip.html">Threads</a></li>
+                </ul>
+            </nav>
+            <div class="page-versions">
+                <button class="version-menu-toggle"
+                        title="Show other versions of page">4.0.x
+                </button>
+                <div class="version-menu">
+                    <a class="version"
+                       href="../../4.10.x/eips/threads-eip.html">4.10.x
+                        (LTS)</a>
+                    <a class="version" href="../../4.8.x/eips/threads-eip.html">4.8.x</a>
+                    <a class="version" href="../../4.4.x/eips/threads-eip.html">4.4.x</a>
+                    <a class="version is-current"
+                       href="threads-eip.html">4.0.x</a>
+                </div>
+            </div>
+
+        </div>
+        <div class="content">
+            <aside class="toc sidebar" data-title="Contents" data-levels="2">
+                <div class="toc-menu"></div>
+            </aside>
+            <article class="doc">
+                <h1 class="page">Threads</h1>
+                <div id="preamble">
+                    <div class="sectionbody">
+                        <div class="paragraph">
+                            <p>How can I decouple the continued routing of a
+                                message from the current thread?</p>
+                        </div>
+                        <div class="imageblock">
+                            <div class="content">
+                                <img src="_images/eip/MessagingAdapterIcon.gif"
+                                     alt="image">
+                            </div>
+                        </div>
+                        <div class="paragraph">
+                            <p>Submit the message to a thread pool, which then
+                                is responsible for the continued routing of the
+                                message.</p>
+                        </div>
+                        <div class="paragraph">
+                            <p>In Camel this is implemented as the Threads
+                                EIP.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="sect1">
+                    <h2 id="_options"><a class="anchor" href="#_options"></a>Options
+                    </h2>
+                    <div class="sectionbody">
+                        <div class="paragraph">
+                            <p>The Threads eip supports 11 options, which are
+                                listed below.</p>
+                        </div>
+                        <table class="tableblock frame-all grid-all stretch">
+                            <colgroup>
+                                <col style="width: 20%;">
+                                <col style="width: 50%;">
+                                <col style="width: 10%;">
+                                <col style="width: 20%;">
+                            </colgroup>
+                            <thead>
+                            <tr>
+                                <th class="tableblock halign-left valign-top">
+                                    Name
+                                </th>
+                                <th class="tableblock halign-left valign-top">
+                                    Description
+                                </th>
+                                <th class="tableblock halign-center valign-top">
+                                    Default
+                                </th>
+                                <th class="tableblock halign-left valign-top">
+                                    Type
+                                </th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <td class="tableblock halign-left valign-top"><p
+                                        class="tableblock"><strong
+                                        id="_option_executorService">executorService</strong>
+                                </p></td>
+                                <td class="tableblock halign-left valign-top">
+                                    <div class="content">
+                                        <div class="paragraph">
+                                            <p>To use a custom thread pool.</p>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td class="tableblock halign-center valign-top"></td>
+                                <td class="tableblock halign-left valign-top"><p
+                                        class="tableblock">ExecutorService</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="tableblock halign-left valign-top"><p
+                                        class="tableblock"><strong
+                                        id="_option_poolSize">poolSize</strong>
+                                </p></td>
+                                <td class="tableblock halign-left valign-top">
+                                    <div class="content">
+                                        <div class="paragraph">
+                                            <p>Sets the core pool size.</p>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td class="tableblock halign-center valign-top"></td>
+                                <td class="tableblock halign-left valign-top"><p
+                                        class="tableblock">Integer</p></td>
+                            </tr>
+                            <tr>
+                                <td class="tableblock halign-left valign-top"><p
+                                        class="tableblock"><strong
+                                        id="_option_maxPoolSize">maxPoolSize</strong>
+                                </p></td>
+                                <td class="tableblock halign-left valign-top">
+                                    <div class="content">
+                                        <div class="paragraph">
+                                            <p>Sets the maximum pool size.</p>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td class="tableblock halign-center valign-top"></td>
+                                <td class="tableblock halign-left valign-top"><p
+                                        class="tableblock">Integer</p></td>
+                            </tr>
+                            <tr>
+                                <td class="tableblock halign-left valign-top"><p
+                                        class="tableblock"><strong
+                                        id="_option_keepAliveTime">keepAliveTime</strong>
+                                </p></td>
+                                <td class="tableblock halign-left valign-top">
+                                    <div class="content">
+                                        <div class="paragraph">
+                                            <p>Sets the keep alive time for idle
+                                                threads.</p>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td class="tableblock halign-center valign-top"></td>
+                                <td class="tableblock halign-left valign-top"><p
+                                        class="tableblock">Long</p></td>
+                            </tr>
+                            <tr>
+                                <td class="tableblock halign-left valign-top"><p
+                                        class="tableblock"><strong
+                                        id="_option_timeUnit">timeUnit</strong>
+                                </p></td>
+                                <td class="tableblock halign-left valign-top">
+                                    <div class="content">
+                                        <div class="paragraph">
+                                            <p>Sets the keep alive time unit. By
+                                                default SECONDS is used.</p>
+                                        </div>
+                                        <div class="paragraph">
+                                            <p>Enum values:</p>
+                                        </div>
+                                        <div class="ulist">
+                                            <ul>
+                                                <li>
+                                                    <p>NANOSECONDS</p>
+                                                </li>
+                                                <li>
+                                                    <p>MICROSECONDS</p>
+                                                </li>
+                                                <li>
+                                                    <p>MILLISECONDS</p>
+                                                </li>
+                                                <li>
+                                                    <p>SECONDS</p>
+                                                </li>
+                                                <li>
+                                                    <p>MINUTES</p>
+                                                </li>
+                                                <li>
+                                                    <p>HOURS</p>
+                                                </li>
+                                                <li>
+                                                    <p>DAYS</p>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td class="tableblock halign-center valign-top"></td>
+                                <td class="tableblock halign-left valign-top"><p
+                                        class="tableblock">TimeUnit</p></td>
+                            </tr>
+                            <tr>
+                                <td class="tableblock halign-left valign-top"><p
+                                        class="tableblock"><strong
+                                        id="_option_maxQueueSize">maxQueueSize</strong>
+                                </p></td>
+                                <td class="tableblock halign-left valign-top">
+                                    <div class="content">
+                                        <div class="paragraph">
+                                            <p>Sets the maximum number of tasks
+                                                in the work queue. Use -1 or
+                                                Integer.MAX_VALUE for an
+                                                unbounded queue.</p>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td class="tableblock halign-center valign-top"></td>
+                                <td class="tableblock halign-left valign-top"><p
+                                        class="tableblock">Integer</p></td>
+                            </tr>
+                            <tr>
+                                <td class="tableblock halign-left valign-top"><p
+                                        class="tableblock"><strong
+                                        id="_option_allowCoreThreadTimeOut">allowCoreThreadTimeOut</strong>
+                                </p></td>
+                                <td class="tableblock halign-left valign-top">
+                                    <div class="content">
+                                        <div class="paragraph">
+                                            <p>Whether idle core threads are
+                                                allowed to timeout and therefore
+                                                can shrink the pool size below
+                                                the core pool size Is by default
+                                                false.</p>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td class="tableblock halign-center valign-top">
+                                    <p class="tableblock">false</p></td>
+                                <td class="tableblock halign-left valign-top"><p
+                                        class="tableblock">Boolean</p></td>
+                            </tr>
+                            <tr>
+                                <td class="tableblock halign-left valign-top"><p
+                                        class="tableblock"><strong
+                                        id="_option_threadName">threadName</strong>
+                                </p></td>
+                                <td class="tableblock halign-left valign-top">
+                                    <div class="content">
+                                        <div class="paragraph">
+                                            <p>Sets the thread name to use.</p>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td class="tableblock halign-center valign-top">
+                                    <p class="tableblock">Threads</p></td>
+                                <td class="tableblock halign-left valign-top"><p
+                                        class="tableblock">String</p></td>
+                            </tr>
+                            <tr>
+                                <td class="tableblock halign-left valign-top"><p
+                                        class="tableblock"><strong
+                                        id="_option_rejectedPolicy">rejectedPolicy</strong>
+                                </p></td>
+                                <td class="tableblock halign-left valign-top">
+                                    <div class="content">
+                                        <div class="paragraph">
+                                            <p>Sets the handler for tasks which
+                                                cannot be executed by the thread
+                                                pool.</p>
+                                        </div>
+                                        <div class="paragraph">
+                                            <p>Enum values:</p>
+                                        </div>
+                                        <div class="ulist">
+                                            <ul>
+                                                <li>
+                                                    <p>Abort</p>
+                                                </li>
+                                                <li>
+                                                    <p>CallerRuns</p>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td class="tableblock halign-center valign-top"></td>
+                                <td class="tableblock halign-left valign-top"><p
+                                        class="tableblock">
+                                    ThreadPoolRejectedPolicy</p></td>
+                            </tr>
+                            <tr>
+                                <td class="tableblock halign-left valign-top"><p
+                                        class="tableblock"><strong
+                                        id="_option_callerRunsWhenRejected">callerRunsWhenRejected</strong>
+                                </p></td>
+                                <td class="tableblock halign-left valign-top">
+                                    <div class="content">
+                                        <div class="paragraph">
+                                            <p>Whether or not to use as caller
+                                                runs as fallback when a task is
+                                                rejected being added to the
+                                                thread pool (when its full).
+                                                This is only used as fallback if
+                                                no rejectedPolicy has been
+                                                configured, or the thread pool
+                                                has no configured rejection
+                                                handler. Is by default true.</p>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td class="tableblock halign-center valign-top">
+                                    <p class="tableblock">true</p></td>
+                                <td class="tableblock halign-left valign-top"><p
+                                        class="tableblock">String</p></td>
+                            </tr>
+                            <tr>
+                                <td class="tableblock halign-left valign-top"><p
+                                        class="tableblock"><strong
+                                        id="_option_disabled">disabled</strong>
+                                </p></td>
+                                <td class="tableblock halign-left valign-top">
+                                    <div class="content">
+                                        <div class="paragraph">
+                                            <p>Whether to disable this EIP from
+                                                the route during build time.
+                                                Once an EIP has been disabled
+                                                then it cannot be enabled later
+                                                at runtime.</p>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td class="tableblock halign-center valign-top">
+                                    <p class="tableblock">false</p></td>
+                                <td class="tableblock halign-left valign-top"><p
+                                        class="tableblock">Boolean</p></td>
+                            </tr>
+                            <tr>
+                                <td class="tableblock halign-left valign-top"><p
+                                        class="tableblock"><strong
+                                        id="_option_description">description</strong>
+                                </p></td>
+                                <td class="tableblock halign-left valign-top">
+                                    <div class="content">
+                                        <div class="paragraph">
+                                            <p>Sets the description of this
+                                                node.</p>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td class="tableblock halign-center valign-top"></td>
+                                <td class="tableblock halign-left valign-top"><p
+                                        class="tableblock">
+                                    DescriptionDefinition</p></td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <div class="sect1">
+                    <h2 id="_using_threads_eip"><a class="anchor"
+                                                   href="#_using_threads_eip"></a>Using
+                        Threads EIP</h2>
+                    <div class="sectionbody">
+                        <div class="paragraph">
+                            <p>The example below will add a Thread pool with a
+                                pool size of 5 threads before sending to
+                                mock:result.</p>
+                        </div>
+                        <div id="_tabs_1"
+                             class="openblock tabs is-sync is-loading">
+                            <div class="content">
+                                <div class="ulist tablist">
+                                    <ul>
+                                        <li id="_tabs_1_java" class="tab">
+                                            <p>Java</p>
+                                        </li>
+                                        <li id="_tabs_1_xml" class="tab">
+                                            <p>XML</p>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div id="_tabs_1_java--panel" class="tabpanel"
+                                     aria-labelledby="_tabs_1_java">
+                                    <div class="listingblock">
+                                        <div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs"
+                                         data-lang="java">from("seda:a")
+  .threads(5)
+  .to("mock:result");</code></pre>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div id="_tabs_1_xml--panel" class="tabpanel"
+                                     aria-labelledby="_tabs_1_xml">
+                                    <div class="listingblock">
+                                        <div class="content">
+<pre class="highlightjs highlight"><code class="language-xml hljs"
+                                         data-lang="xml">&lt;route&gt;
+    &lt;from uri="seda:a"/&gt;
+    &lt;threads poolSize="5"/&gt;
+    &lt;to uri="mock:result"/&gt;
+&lt;/route&gt;</code></pre>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="paragraph">
+                            <p>And to use a thread pool with a task queue of
+                                only 20 elements:</p>
+                        </div>
+                        <div id="_tabs_2"
+                             class="openblock tabs is-sync is-loading">
+                            <div class="content">
+                                <div class="ulist tablist">
+                                    <ul>
+                                        <li id="_tabs_2_java" class="tab">
+                                            <p>Java</p>
+                                        </li>
+                                        <li id="_tabs_2_xml" class="tab">
+                                            <p>XML</p>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div id="_tabs_2_java--panel" class="tabpanel"
+                                     aria-labelledby="_tabs_2_java">
+                                    <div class="listingblock">
+                                        <div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs"
+                                         data-lang="java">from("seda:a")
+  .threads(5).maxQueueSize(20)
+  .to("mock:result");</code></pre>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div id="_tabs_2_xml--panel" class="tabpanel"
+                                     aria-labelledby="_tabs_2_xml">
+                                    <div class="listingblock">
+                                        <div class="content">
+<pre class="highlightjs highlight"><code class="language-xml hljs"
+                                         data-lang="xml">&lt;route&gt;
+    &lt;from uri="seda:a"/&gt;
+    &lt;threads poolSize="5" maxQueueSize="20"/&gt;
+    &lt;to uri="mock:result"/&gt;
+&lt;/route&gt;</code></pre>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="paragraph">
+                            <p>And you can also use a thread pool with no queue
+                                (meaning that a task cannot be pending on a
+                                queue):</p>
+                        </div>
+                        <div id="_tabs_3"
+                             class="openblock tabs is-sync is-loading">
+                            <div class="content">
+                                <div class="ulist tablist">
+                                    <ul>
+                                        <li id="_tabs_3_java" class="tab">
+                                            <p>Java</p>
+                                        </li>
+                                        <li id="_tabs_3_xml" class="tab">
+                                            <p>XML</p>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div id="_tabs_3_java--panel" class="tabpanel"
+                                     aria-labelledby="_tabs_3_java">
+                                    <div class="listingblock">
+                                        <div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs"
+                                         data-lang="java">from("seda:a")
+  .threads(5).maxQueueSize(0)
+  .to("mock:result");</code></pre>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div id="_tabs_3_xml--panel" class="tabpanel"
+                                     aria-labelledby="_tabs_3_xml">
+                                    <div class="listingblock">
+                                        <div class="content">
+<pre class="highlightjs highlight"><code class="language-xml hljs"
+                                         data-lang="xml">&lt;route&gt;
+    &lt;from uri="seda:a"/&gt;
+    &lt;threads poolSize="5" maxQueueSize="0"/&gt;
+    &lt;to uri="mock:result"/&gt;
+&lt;/route&gt;</code></pre>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="sect2">
+                            <h3 id="_about_rejected_tasks"><a class="anchor"
+                                                              href="#_about_rejected_tasks"></a>About
+                                rejected tasks</h3>
+                            <div class="paragraph">
+                                <p>The Threads EIP uses a thread pool which has
+                                    a worker queue for tasks.
+                                    When the worker queue gets full, the task is
+                                    rejected.</p>
+                            </div>
+                            <div class="paragraph">
+                                <p>You can customize how to react upon this
+                                    using the <code>rejectedPolicy</code> and
+                                    <code>callerRunsWhenRejected</code> options.
+                                    The latter is used to easily switch
+                                    between the two most common and recommended
+                                    settings. Either let the
+                                    current caller thread execute the task (i.e.
+                                    it will become synchronous),
+                                    but also give time for the thread pool to
+                                    process its current tasks,
+                                    without adding more tasks (self throttling).
+                                    This is the default
+                                    behavior.</p>
+                            </div>
+                            <div class="paragraph">
+                                <p>The <code>Abort</code> policy, means the task
+                                    is rejected, and a
+                                    <code>RejectedExecutionException</code> is
+                                    thrown.</p>
+                            </div>
+                            <div class="admonitionblock important">
+                                <table>
+                                    <tr>
+                                        <td class="icon">
+                                            <i class="fa icon-important"
+                                               title="Important"></i>
+                                        </td>
+                                        <td class="content">
+                                            The reject policy options <code>Discard</code>
+                                            and <code>DiscardOldest</code> is
+                                            deprecated in Camel 3.x and removed
+                                            in Camel 4 onwards.
+                                        </td>
+                                    </tr>
+                                </table>
+                            </div>
+                        </div>
+                        <div class="sect2">
+                            <h3 id="_default_values"><a class="anchor"
+                                                        href="#_default_values"></a>Default
+                                values</h3>
+                            <div class="paragraph">
+                                <p>The Threads EIP uses the default values from
+                                    the default <a
+                                            href="../../../manual/4.10.x/threading-model.html"
+                                            class="xref page">Thread Pool
+                                        Profile</a>.
+                                    If the profile has not been altered, then
+                                    the default profile are as follows:</p>
+                            </div>
+                            <table class="tableblock frame-all grid-all stretch">
+                                <colgroup>
+                                    <col style="width: 25%;">
+                                    <col style="width: 25%;">
+                                    <col style="width: 50%;">
+                                </colgroup>
+                                <thead>
+                                <tr>
+                                    <th class="tableblock halign-left valign-top">
+                                        Option
+                                    </th>
+                                    <th class="tableblock halign-left valign-top">
+                                        Default
+                                    </th>
+                                    <th class="tableblock halign-left valign-top">
+                                        Description
+                                    </th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                <tr>
+                                    <td class="tableblock halign-left valign-top">
+                                        <p class="tableblock">
+                                            <strong>poolSize</strong></p></td>
+                                    <td class="tableblock halign-left valign-top">
+                                        <p class="tableblock"><code>10</code>
+                                        </p></td>
+                                    <td class="tableblock halign-left valign-top">
+                                        <p class="tableblock">Sets the default
+                                            core pool size (threads to keep
+                                            minimum in pool)</p></td>
+                                </tr>
+                                <tr>
+                                    <td class="tableblock halign-left valign-top">
+                                        <p class="tableblock"><strong>keepAliveTime</strong>
+                                        </p></td>
+                                    <td class="tableblock halign-left valign-top">
+                                        <p class="tableblock"><code>60</code>
+                                        </p></td>
+                                    <td class="tableblock halign-left valign-top">
+                                        <p class="tableblock">Sets the default
+                                            keep alive time (in seconds) for
+                                            inactive threads</p></td>
+                                </tr>
+                                <tr>
+                                    <td class="tableblock halign-left valign-top">
+                                        <p class="tableblock"><strong>maxPoolSize</strong>
+                                        </p></td>
+                                    <td class="tableblock halign-left valign-top">
+                                        <p class="tableblock"><code>20</code>
+                                        </p></td>
+                                    <td class="tableblock halign-left valign-top">
+                                        <p class="tableblock">Sets the default
+                                            maximum pool size</p></td>
+                                </tr>
+                                <tr>
+                                    <td class="tableblock halign-left valign-top">
+                                        <p class="tableblock"><strong>maxQueueSize</strong>
+                                        </p></td>
+                                    <td class="tableblock halign-left valign-top">
+                                        <p class="tableblock"><code>1000</code>
+                                        </p></td>
+                                    <td class="tableblock halign-left valign-top">
+                                        <p class="tableblock">Sets the default
+                                            maximum number of tasks in the work
+                                            queue. Use -1 for an unbounded
+                                            queue.</p></td>
+                                </tr>
+                                <tr>
+                                    <td class="tableblock halign-left valign-top">
+                                        <p class="tableblock"><strong>allowCoreThreadTimeOut</strong>
+                                        </p></td>
+                                    <td class="tableblock halign-left valign-top">
+                                        <p class="tableblock"><code>true</code>
+                                        </p></td>
+                                    <td class="tableblock halign-left valign-top">
+                                        <p class="tableblock">Sets default
+                                            whether to allow core threads to
+                                            timeout</p></td>
+                                </tr>
+                                <tr>
+                                    <td class="tableblock halign-left valign-top">
+                                        <p class="tableblock"><strong>rejectedPolicy</strong>
+                                        </p></td>
+                                    <td class="tableblock halign-left valign-top">
+                                        <p class="tableblock">
+                                            <code>CallerRuns</code></p></td>
+                                    <td class="tableblock halign-left valign-top">
+                                        <p class="tableblock">Sets the default
+                                            handler for tasks which cannot be
+                                            executed by the thread pool. Has
+                                            four options:
+                                            <code>Abort, CallerRuns, Discard,
+                                                DiscardOldest</code> which
+                                            corresponds to the same four options
+                                            provided out of the box in the JDK.
+                                        </p></td>
+                                </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <div class="sect2">
+                            <h3 id="_see_also"><a class="anchor"
+                                                  href="#_see_also"></a>See Also
+                            </h3>
+                            <div class="paragraph">
+                                <p>See <a
+                                        href="../../../manual/4.10.x/threading-model.html"
+                                        class="xref page">Threading Model</a>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </article>
+        </div>
+    </main>
+</div>
+<footer class="footer">
+</footer>
+<script id="site-script" src="../../../_/js/site.js"
+        data-ui-root-path="../../../_"></script>
+<script async src="../../../_/js/vendor/highlight.js"></script>
+</body>
+</html>

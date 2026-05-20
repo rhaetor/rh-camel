@@ -1,0 +1,1440 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Resequence :: Red Hat build of Apache Camel</title>
+    <meta name="description"
+          content="Resequences (re-order) messages based on an expression">
+    <meta name="generator" content="Antora 3.1.4">
+    <link rel="stylesheet" href="../../../_/css/site.css">
+</head>
+<body class="article">
+<header class="header">
+    <nav class="navbar">
+        <div class="navbar-brand">
+            <a class="navbar-item" href="/">Red Hat build of Apache Camel</a>
+            <button class="navbar-burger" data-target="topbar-nav">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+</header>
+<div class="body">
+    <div class="nav-container" data-component="components" data-version="4.0.x">
+        <aside class="nav">
+            <div class="panels">
+                <div class="nav-panel-menu is-active" data-panel="menu">
+                    <nav class="nav-menu">
+                        <button class="nav-menu-toggle"
+                                aria-label="Toggle expand/collapse all"
+                                style="display: none"></button>
+                        <h3 class="title"><a href="../index.html">Camel
+                            Components</a></h3>
+                        <ul class="nav-list">
+                            <li class="nav-item" data-depth="0">
+                                <ul class="nav-list">
+                                    <li class="nav-item" data-depth="1">
+                                        <button class="nav-item-toggle"></button>
+                                        <a class="nav-link"
+                                           href="enterprise-integration-patterns.html">Enterprise
+                                            Integration Patterns</a>
+                                        <ul class="nav-list">
+                                            <li class="nav-item" data-depth="2">
+                                                <a class="nav-link"
+                                                   href="aggregate-eip.html">Aggregate</a>
+                                            </li>
+                                            <li class="nav-item" data-depth="2">
+                                                <a class="nav-link"
+                                                   href="bean-eip.html">Bean</a>
+                                            </li>
+                                            <li class="nav-item" data-depth="2">
+                                                <a class="nav-link"
+                                                   href="change-data-capture.html">Change
+                                                    Data Capture</a>
+                                            </li>
+                                            <li class="nav-item" data-depth="2">
+                                                <a class="nav-link"
+                                                   href="channel-adapter.html">Channel
+                                                    Adapter</a>
+                                            </li>
+                                            <li class="nav-item" data-depth="2">
+                                                <a class="nav-link"
+                                                   href="choice-eip.html">Content
+                                                    Based Router</a>
+                                            </li>
+                                            <li class="nav-item" data-depth="2">
+                                                <a class="nav-link"
+                                                   href="circuitBreaker-eip.html">Circuit
+                                                    Breaker</a>
+                                            </li>
+                                            <li class="nav-item" data-depth="2">
+                                                <a class="nav-link"
+                                                   href="claimCheck-eip.html">Claim
+                                                    Check</a>
+                                            </li>
+                                            <li class="nav-item" data-depth="2">
+                                                <a class="nav-link"
+                                                   href="competing-consumers.html">Competing
+                                                    Consumers</a>
+                                            </li>
+                                            <li class="nav-item" data-depth="2">
+                                                <a class="nav-link"
+                                                   href="composed-message-processor.html">Composed
+                                                    Message Processor</a>
+                                            </li>
+                                            <li class="nav-item" data-depth="2">
+                                                <a class="nav-link"
+                                                   href="content-enricher.html">Content
+                                                    Enricher</a>
+                                            </li>
+                                            <li class="nav-item" data-depth="2">
+                                                <a class="nav-link"
+                                                   href="content-filter-eip.html">Content
+                                                    Filter</a>
+                                            </li>
+                                            <li class="nav-item" data-depth="2">
+                                                <a class="nav-link"
+                                                   href="convertBodyTo-eip.html">Convert
+                                                    Body To</a>
+                                            </li>
+                                            <li class="nav-item" data-depth="2">
+                                                <a class="nav-link"
+                                                   href="correlation-identifier.html">Correlation
+                                                    Identifier</a>
+                                            </li>
+                                            <li class="nav-item" data-depth="2">
+                                                <a class="nav-link"
+                                                   href="dead-letter-channel.html">Dead
+                                                    Letter Channel</a>
+                                            </li>
+                                            <li class="nav-item" data-depth="2">
+                                                <a class="nav-link"
+                                                   href="delay-eip.html">Delay</a>
+                                            </li>
+                                            <li class="nav-item" data-depth="2">
+                                                <a class="nav-link"
+                                                   href="durable-subscriber.html">Durable
+                                                    Subscriber</a>
+                                            </li>
+                                            <li class="nav-item" data-depth="2">
+                                                <a class="nav-link"
+                                                   href="dynamicRouter-eip.html">Dynamic
+                                                    Router</a>
+                                            </li>
+                                            <li class="nav-item" data-depth="2">
+                                                <a class="nav-link"
+                                                   href="enrich-eip.html">Enrich</a>
+                                            </li>
+                                            <li class="nav-item" data-depth="2">
+                                                <a class="nav-link"
+                                                   href="eventDrivenConsumer-eip.html">Event
+                                                    Driven Consumer</a>
+                                            </li>
+                                            <li class="nav-item" data-depth="2">
+                                                <a class="nav-link"
+                                                   href="event-message.html">Event
+                                                    Message</a>
+                                            </li>
+                                            <li class="nav-item" data-depth="2">
+                                                <a class="nav-link"
+                                                   href="filter-eip.html">Filter</a>
+                                            </li>
+                                            <li class="nav-item" data-depth="2">
+                                                <a class="nav-link"
+                                                   href="from-eip.html">From</a>
+                                            </li>
+                                            <li class="nav-item" data-depth="2">
+                                                <a class="nav-link"
+                                                   href="guaranteed-delivery.html">Guaranteed
+                                                    Delivery</a>
+                                            </li>
+                                            <li class="nav-item" data-depth="2">
+                                                <a class="nav-link"
+                                                   href="idempotentConsumer-eip.html">Idempotent
+                                                    Consumer</a>
+                                            </li>
+                                            <li class="nav-item" data-depth="2">
+                                                <a class="nav-link"
+                                                   href="intercept.html">Intercept</a>
+                                            </li>
+                                            <li class="nav-item" data-depth="2">
+                                                <a class="nav-link"
+                                                   href="kamelet-eip.html">Kamelet</a>
+                                            </li>
+                                            <li class="nav-item" data-depth="2">
+                                                <a class="nav-link"
+                                                   href="loadBalance-eip.html">Load
+                                                    Balance</a>
+                                            </li>
+                                            <li class="nav-item" data-depth="2">
+                                                <a class="nav-link"
+                                                   href="log-eip.html">Log</a>
+                                            </li>
+                                            <li class="nav-item" data-depth="2">
+                                                <a class="nav-link"
+                                                   href="loop-eip.html">Loop</a>
+                                            </li>
+                                            <li class="nav-item" data-depth="2">
+                                                <a class="nav-link"
+                                                   href="marshal-eip.html">Marshal</a>
+                                            </li>
+                                            <li class="nav-item" data-depth="2">
+                                                <a class="nav-link"
+                                                   href="message.html">Message</a>
+                                            </li>
+                                            <li class="nav-item" data-depth="2">
+                                                <a class="nav-link"
+                                                   href="message-broker.html">Message
+                                                    Broker</a>
+                                            </li>
+                                            <li class="nav-item" data-depth="2">
+                                                <a class="nav-link"
+                                                   href="message-bus.html">Message
+                                                    Bus</a>
+                                            </li>
+                                            <li class="nav-item" data-depth="2">
+                                                <a class="nav-link"
+                                                   href="message-channel.html">Message
+                                                    Channel</a>
+                                            </li>
+                                            <li class="nav-item" data-depth="2">
+                                                <a class="nav-link"
+                                                   href="message-dispatcher.html">Message
+                                                    Dispatcher</a>
+                                            </li>
+                                            <li class="nav-item" data-depth="2">
+                                                <a class="nav-link"
+                                                   href="message-endpoint.html">Message
+                                                    Endpoint</a>
+                                            </li>
+                                            <li class="nav-item" data-depth="2">
+                                                <a class="nav-link"
+                                                   href="message-expiration.html">Message
+                                                    Expiration</a>
+                                            </li>
+                                            <li class="nav-item" data-depth="2">
+                                                <a class="nav-link"
+                                                   href="message-history.html">Message
+                                                    History</a>
+                                            </li>
+                                            <li class="nav-item" data-depth="2">
+                                                <a class="nav-link"
+                                                   href="message-router.html">Message
+                                                    Router</a>
+                                            </li>
+                                            <li class="nav-item" data-depth="2">
+                                                <a class="nav-link"
+                                                   href="message-translator.html">Message
+                                                    Translator</a>
+                                            </li>
+                                            <li class="nav-item" data-depth="2">
+                                                <a class="nav-link"
+                                                   href="messaging-bridge.html">Messaging
+                                                    Bridge</a>
+                                            </li>
+                                            <li class="nav-item" data-depth="2">
+                                                <a class="nav-link"
+                                                   href="messaging-gateway.html">Messaging
+                                                    Gateway</a>
+                                            </li>
+                                            <li class="nav-item" data-depth="2">
+                                                <a class="nav-link"
+                                                   href="messaging-mapper.html">Messaging
+                                                    Mapper</a>
+                                            </li>
+                                            <li class="nav-item" data-depth="2">
+                                                <a class="nav-link"
+                                                   href="multicast-eip.html">Multicast</a>
+                                            </li>
+                                            <li class="nav-item" data-depth="2">
+                                                <a class="nav-link"
+                                                   href="normalizer.html">Normalizer</a>
+                                            </li>
+                                            <li class="nav-item" data-depth="2">
+                                                <a class="nav-link"
+                                                   href="pipeline-eip.html">Pipeline</a>
+                                            </li>
+                                            <li class="nav-item" data-depth="2">
+                                                <a class="nav-link"
+                                                   href="point-to-point-channel.html">Point
+                                                    to Point Channel</a>
+                                            </li>
+                                            <li class="nav-item" data-depth="2">
+                                                <a class="nav-link"
+                                                   href="pollEnrich-eip.html">Poll
+                                                    Enrich</a>
+                                            </li>
+                                            <li class="nav-item" data-depth="2">
+                                                <a class="nav-link"
+                                                   href="polling-consumer.html">Polling
+                                                    Consumer</a>
+                                            </li>
+                                            <li class="nav-item" data-depth="2">
+                                                <a class="nav-link"
+                                                   href="process-eip.html">Process</a>
+                                            </li>
+                                            <li class="nav-item" data-depth="2">
+                                                <a class="nav-link"
+                                                   href="process-manager.html">Process
+                                                    Manager</a>
+                                            </li>
+                                            <li class="nav-item" data-depth="2">
+                                                <a class="nav-link"
+                                                   href="publish-subscribe-channel.html">Publish
+                                                    Subscribe Channel</a>
+                                            </li>
+                                            <li class="nav-item" data-depth="2">
+                                                <a class="nav-link"
+                                                   href="recipientList-eip.html">Recipient
+                                                    List</a>
+                                            </li>
+                                            <li class="nav-item" data-depth="2">
+                                                <a class="nav-link"
+                                                   href="removeHeader-eip.html">Remove
+                                                    Header</a>
+                                            </li>
+                                            <li class="nav-item" data-depth="2">
+                                                <a class="nav-link"
+                                                   href="removeHeaders-eip.html">Remove
+                                                    Headers</a>
+                                            </li>
+                                            <li class="nav-item" data-depth="2">
+                                                <a class="nav-link"
+                                                   href="removeProperties-eip.html">Remove
+                                                    Properties</a>
+                                            </li>
+                                            <li class="nav-item" data-depth="2">
+                                                <a class="nav-link"
+                                                   href="removeProperty-eip.html">Remove
+                                                    Property</a>
+                                            </li>
+                                            <li class="nav-item" data-depth="2">
+                                                <a class="nav-link"
+                                                   href="requestReply-eip.html">Request
+                                                    Reply</a>
+                                            </li>
+                                            <li class="nav-item is-current-page"
+                                                data-depth="2">
+                                                <a class="nav-link"
+                                                   href="resequence-eip.html">Resequence</a>
+                                            </li>
+                                            <li class="nav-item" data-depth="2">
+                                                <a class="nav-link"
+                                                   href="resilience4j-eip.html">Resilience4j
+                                                    Circuit Breaker</a>
+                                            </li>
+                                            <li class="nav-item" data-depth="2">
+                                                <a class="nav-link"
+                                                   href="return-address.html">Return
+                                                    Address</a>
+                                            </li>
+                                            <li class="nav-item" data-depth="2">
+                                                <a class="nav-link"
+                                                   href="rollback-eip.html">Rollback</a>
+                                            </li>
+                                            <li class="nav-item" data-depth="2">
+                                                <a class="nav-link"
+                                                   href="routingSlip-eip.html">Routing
+                                                    Slip</a>
+                                            </li>
+                                            <li class="nav-item" data-depth="2">
+                                                <a class="nav-link"
+                                                   href="saga-eip.html">Saga</a>
+                                            </li>
+                                            <li class="nav-item" data-depth="2">
+                                                <a class="nav-link"
+                                                   href="sample-eip.html">Sample</a>
+                                            </li>
+                                            <li class="nav-item" data-depth="2">
+                                                <a class="nav-link"
+                                                   href="scatter-gather.html">Scatter
+                                                    Gather</a>
+                                            </li>
+                                            <li class="nav-item" data-depth="2">
+                                                <a class="nav-link"
+                                                   href="script-eip.html">Script</a>
+                                            </li>
+                                            <li class="nav-item" data-depth="2">
+                                                <a class="nav-link"
+                                                   href="selective-consumer.html">Selective
+                                                    Consumer</a>
+                                            </li>
+                                            <li class="nav-item" data-depth="2">
+                                                <a class="nav-link"
+                                                   href="service-activator.html">Service
+                                                    Activator</a>
+                                            </li>
+                                            <li class="nav-item" data-depth="2">
+                                                <a class="nav-link"
+                                                   href="serviceCall-eip.html">Service
+                                                    Call</a>
+                                            </li>
+                                            <li class="nav-item" data-depth="2">
+                                                <a class="nav-link"
+                                                   href="setBody-eip.html">Set
+                                                    Body</a>
+                                            </li>
+                                            <li class="nav-item" data-depth="2">
+                                                <a class="nav-link"
+                                                   href="setHeader-eip.html">Set
+                                                    Header</a>
+                                            </li>
+                                            <li class="nav-item" data-depth="2">
+                                                <a class="nav-link"
+                                                   href="setProperty-eip.html">Set
+                                                    Property</a>
+                                            </li>
+                                            <li class="nav-item" data-depth="2">
+                                                <a class="nav-link"
+                                                   href="sort-eip.html">Sort</a>
+                                            </li>
+                                            <li class="nav-item" data-depth="2">
+                                                <a class="nav-link"
+                                                   href="split-eip.html">Split</a>
+                                            </li>
+                                            <li class="nav-item" data-depth="2">
+                                                <a class="nav-link"
+                                                   href="step-eip.html">Step</a>
+                                            </li>
+                                            <li class="nav-item" data-depth="2">
+                                                <a class="nav-link"
+                                                   href="stop-eip.html">Stop</a>
+                                            </li>
+                                            <li class="nav-item" data-depth="2">
+                                                <a class="nav-link"
+                                                   href="threads-eip.html">Threads</a>
+                                            </li>
+                                            <li class="nav-item" data-depth="2">
+                                                <a class="nav-link"
+                                                   href="throttle-eip.html">Throttle</a>
+                                            </li>
+                                            <li class="nav-item" data-depth="2">
+                                                <a class="nav-link"
+                                                   href="to-eip.html">To</a>
+                                            </li>
+                                            <li class="nav-item" data-depth="2">
+                                                <a class="nav-link"
+                                                   href="toD-eip.html">To
+                                                    Dynamic</a>
+                                            </li>
+                                            <li class="nav-item" data-depth="2">
+                                                <a class="nav-link"
+                                                   href="transactional-client.html">Transactional
+                                                    Client</a>
+                                            </li>
+                                            <li class="nav-item" data-depth="2">
+                                                <a class="nav-link"
+                                                   href="transform-eip.html">Transform</a>
+                                            </li>
+                                            <li class="nav-item" data-depth="2">
+                                                <a class="nav-link"
+                                                   href="unmarshal-eip.html">Unmarshal</a>
+                                            </li>
+                                            <li class="nav-item" data-depth="2">
+                                                <a class="nav-link"
+                                                   href="validate-eip.html">Validate</a>
+                                            </li>
+                                            <li class="nav-item" data-depth="2">
+                                                <a class="nav-link"
+                                                   href="wireTap-eip.html">Wire
+                                                    Tap</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+                <div class="nav-panel-explore" data-panel="explore">
+                    <div class="context">
+                        <span class="title">Camel Components</span>
+                        <span class="version">4.0.x</span>
+                    </div>
+                    <ul class="components">
+                        <li class="component is-current">
+                            <div class="title"><a
+                                    href="../../4.0.x/index.html">Camel
+                                Components</a></div>
+                            <ul class="versions">
+                                <li class="version is-latest">
+                                    <a href="../../4.0.x/index.html">4.0.x
+                                        (LTS)</a>
+                                </li>
+                                <li class="version">
+                                    <a href="../../4.8.x/index.html">4.8.x</a>
+                                </li>
+                                <li class="version">
+                                    <a href="../../4.4.x/index.html">4.4.x</a>
+                                </li>
+                                <li class="version is-current">
+                                    <a href="../index.html">4.0.x</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="component">
+                            <div class="title"><a
+                                    href="../../../manual/4.0.x/index.html">User
+                                manual</a></div>
+                            <ul class="versions">
+                                <li class="version is-latest">
+                                    <a href="../../manual/4.0.x/index.html">4.0.x</a>
+                                </li>
+                                <li class="version">
+                                    <a href="../../manual/4.8.x/index.html">4.8.x</a>
+                                </li>
+                                <li class="version">
+                                    <a href="../../manual/4.4.x/index.html">4.4.x</a>
+                                </li>
+                                <li class="version">
+                                    <a href="../../manual/4.0.x/index.html">4.0.x</a>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </aside>
+    </div>
+    <main class="article">
+        <div class="toolbar" role="navigation">
+            <button class="nav-toggle"></button>
+            <a href="../../manual/4.0.x/index.html" class="home-link"></a>
+            <nav class="breadcrumbs" aria-label="breadcrumbs">
+                <ul>
+                    <li><a href="../index.html">Camel Components</a></li>
+                    <li><a href="enterprise-integration-patterns.html">Enterprise
+                        Integration Patterns</a></li>
+                    <li><a href="resequence-eip.html">Resequence</a></li>
+                </ul>
+            </nav>
+            <div class="page-versions">
+                <button class="version-menu-toggle"
+                        title="Show other versions of page">4.0.x
+                </button>
+                <div class="version-menu">
+                    <a class="version"
+                       href="../../4.0.x/eips/resequence-eip.html">4.0.x
+                        (LTS)</a>
+                    <a class="version"
+                       href="../../4.8.x/eips/resequence-eip.html">4.8.x</a>
+                    <a class="version"
+                       href="../../4.4.x/eips/resequence-eip.html">4.4.x</a>
+                    <a class="version is-current" href="resequence-eip.html">4.0.x</a>
+                </div>
+            </div>
+
+        </div>
+        <div class="content">
+            <aside class="toc sidebar" data-title="Contents" data-levels="2">
+                <div class="toc-menu"></div>
+            </aside>
+            <article class="doc">
+                <h1 class="page">Resequence</h1>
+                <div id="preamble">
+                    <div class="sectionbody">
+                        <div class="paragraph">
+                            <p>Camel supports the
+                                <a href="http://www.enterpriseintegrationpatterns.com/Resequencer.html">Resequencer</a>
+                                from the <a
+                                        href="enterprise-integration-patterns.html"
+                                        class="xref page">EIP patterns</a>.</p>
+                        </div>
+                        <div class="paragraph">
+                            <p>How can we get a stream of related but
+                                out-of-sequence messages back into the correct
+                                order?</p>
+                        </div>
+                        <div class="imageblock">
+                            <div class="content">
+                                <img src="_images/eip/Resequencer.gif"
+                                     alt="image">
+                            </div>
+                        </div>
+                        <div class="paragraph">
+                            <p>Use a stateful filter, a Resequencer, to collect
+                                and re-order messages so that they can be
+                                published to the output channel in a specified
+                                order.</p>
+                        </div>
+                        <div class="paragraph">
+                            <p>The Resequencer implementation in Camel uses an
+                                <a href="../../manual/4.0.x/expression.html"
+                                   class="xref page">Expression</a>
+                                as the <code>Comparator</code> to re-order the
+                                messages. By using the expression then the
+                                messages
+                                can easily be re-ordered by a message header or
+                                another piece of the message.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="sect1">
+                    <h2 id="_options"><a class="anchor" href="#_options"></a>Options
+                    </h2>
+                    <div class="sectionbody">
+                        <div class="paragraph">
+                            <p>The Resequence eip supports 2 options, which are
+                                listed below.</p>
+                        </div>
+                        <table class="tableblock frame-all grid-all stretch">
+                            <colgroup>
+                                <col style="width: 20%;">
+                                <col style="width: 50%;">
+                                <col style="width: 10%;">
+                                <col style="width: 20%;">
+                            </colgroup>
+                            <thead>
+                            <tr>
+                                <th class="tableblock halign-left valign-top">
+                                    Name
+                                </th>
+                                <th class="tableblock halign-left valign-top">
+                                    Description
+                                </th>
+                                <th class="tableblock halign-center valign-top">
+                                    Default
+                                </th>
+                                <th class="tableblock halign-left valign-top">
+                                    Type
+                                </th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <td class="tableblock halign-left valign-top"><p
+                                        class="tableblock"><strong
+                                        id="_option_expression">expression</strong>
+                                </p></td>
+                                <td class="tableblock halign-left valign-top">
+                                    <div class="content">
+                                        <div class="paragraph">
+                                            <p><strong>Required</strong>
+                                                Expression to use for
+                                                re-ordering the messages, such
+                                                as a header with a sequence
+                                                number.</p>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td class="tableblock halign-center valign-top"></td>
+                                <td class="tableblock halign-left valign-top"><p
+                                        class="tableblock">
+                                    ExpressionDefinition</p></td>
+                            </tr>
+                            <tr>
+                                <td class="tableblock halign-left valign-top"><p
+                                        class="tableblock"><strong
+                                        id="_option_resequencerConfig">resequencerConfig</strong>
+                                </p></td>
+                                <td class="tableblock halign-left valign-top">
+                                    <div class="content">
+                                        <div class="paragraph">
+                                            <p><strong>Required</strong> To
+                                                configure the resequencer in
+                                                using either batch or stream
+                                                configuration. Will by default
+                                                use batch configuration.</p>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td class="tableblock halign-center valign-top"></td>
+                                <td class="tableblock halign-left valign-top"><p
+                                        class="tableblock">ResequencerConfig</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="tableblock halign-left valign-top"><p
+                                        class="tableblock"><strong
+                                        id="_option_outputs">outputs</strong>
+                                </p></td>
+                                <td class="tableblock halign-left valign-top">
+                                    <div class="content">
+                                        <div class="paragraph">
+                                            <p><strong>Required</strong></p>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td class="tableblock halign-center valign-top"></td>
+                                <td class="tableblock halign-left valign-top"><p
+                                        class="tableblock">List</p></td>
+                            </tr>
+                            <tr>
+                                <td class="tableblock halign-left valign-top"><p
+                                        class="tableblock"><strong
+                                        id="_option_disabled">disabled</strong>
+                                </p></td>
+                                <td class="tableblock halign-left valign-top">
+                                    <div class="content">
+                                        <div class="paragraph">
+                                            <p>Whether to disable this EIP from
+                                                the route during build time.
+                                                Once an EIP has been disabled
+                                                then it cannot be enabled later
+                                                at runtime.</p>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td class="tableblock halign-center valign-top">
+                                    <p class="tableblock">false</p></td>
+                                <td class="tableblock halign-left valign-top"><p
+                                        class="tableblock">Boolean</p></td>
+                            </tr>
+                            <tr>
+                                <td class="tableblock halign-left valign-top"><p
+                                        class="tableblock"><strong
+                                        id="_option_description">description</strong>
+                                </p></td>
+                                <td class="tableblock halign-left valign-top">
+                                    <div class="content">
+                                        <div class="paragraph">
+                                            <p>Sets the description of this
+                                                node.</p>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td class="tableblock halign-center valign-top"></td>
+                                <td class="tableblock halign-left valign-top"><p
+                                        class="tableblock">
+                                    DescriptionDefinition</p></td>
+                            </tr>
+                            </tbody>
+                        </table>
+                        <div class="paragraph">
+                            <p>Camel supports two re-sequencing algorithms:</p>
+                        </div>
+                        <div class="ulist">
+                            <ul>
+                                <li>
+                                    <p><a href="batch-config-eip.html"
+                                          class="xref page">Batch
+                                        Resequencing</a> - <strong>Default
+                                        mode</strong>: collects messages into a
+                                        batch, sorts the messages and sends them
+                                        to their output.</p>
+                                </li>
+                                <li>
+                                    <p><a href="stream-config-eip.html"
+                                          class="xref page">Stream
+                                        Resequencing</a> - re-orders
+                                        (continuous) message streams based on
+                                        the detection of gaps between messages.
+                                    </p>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="paragraph">
+                            <p>By default, the Resequencer does not support
+                                duplicate messages and will only keep the last
+                                message, in case a message arrives with the same
+                                message expression.
+                                However, in the batch mode you can enable it to
+                                allow duplicates.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="sect1">
+                    <h2 id="_batch_resequencing"><a class="anchor"
+                                                    href="#_batch_resequencing"></a>Batch
+                        Resequencing</h2>
+                    <div class="sectionbody">
+                        <div class="paragraph">
+                            <p>The following example shows how to use the
+                                Resequencer in <a href="batch-config-eip.html"
+                                                  class="xref page">batch
+                                    mode</a> (default),
+                                so that messages are sorted in order of the
+                                message body.</p>
+                        </div>
+                        <div class="paragraph">
+                            <p>That is messages are collected into a batch
+                                (either by a maximum number of messages per
+                                batch or using a timeout)
+                                then they are sorted, and sent out, to continue
+                                being routed.</p>
+                        </div>
+                        <div class="paragraph">
+                            <p>In the example below we re-order the message
+                                based on content of the message body.
+                                The default batch modes will collect up till 100
+                                messages per batch, or timeout every second.</p>
+                        </div>
+                        <div id="_tabs_1"
+                             class="openblock tabs is-sync is-loading">
+                            <div class="content">
+                                <div class="ulist tablist">
+                                    <ul>
+                                        <li id="_tabs_1_java" class="tab">
+                                            <p>Java</p>
+                                        </li>
+                                        <li id="_tabs_1_xml" class="tab">
+                                            <p>XML</p>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div id="_tabs_1_java--panel" class="tabpanel"
+                                     aria-labelledby="_tabs_1_java">
+                                    <div class="listingblock">
+                                        <div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs"
+                                         data-lang="java">from("direct:start")
+    .resequence().body()
+    .to("mock:result");</code></pre>
+                                        </div>
+                                    </div>
+                                    <div class="paragraph">
+                                        <p>This is equivalent to:</p>
+                                    </div>
+                                    <div class="listingblock">
+                                        <div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs"
+                                         data-lang="java">from("direct:start")
+    .resequence(body()).batch()
+    .to("mock:result");</code></pre>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div id="_tabs_1_xml--panel" class="tabpanel"
+                                     aria-labelledby="_tabs_1_xml">
+                                    <div class="listingblock">
+                                        <div class="content">
+<pre class="highlightjs highlight"><code class="language-xml hljs"
+                                         data-lang="xml">&lt;route&gt;
+    &lt;from uri="direct:start"/&gt;
+    &lt;resequence&gt;
+        &lt;simple&gt;${body}&lt;/simple&gt;
+        &lt;to uri="mock:result"/&gt;
+    &lt;/resequence&gt;
+&lt;/route&gt;</code></pre>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="paragraph">
+                            <p>The batch resequencer can be further configured
+                                via the <code>size()</code> and
+                                <code>timeout()</code> methods:</p>
+                        </div>
+                        <div id="_tabs_2"
+                             class="openblock tabs is-sync is-loading">
+                            <div class="content">
+                                <div class="ulist tablist">
+                                    <ul>
+                                        <li id="_tabs_2_java" class="tab">
+                                            <p>Java</p>
+                                        </li>
+                                        <li id="_tabs_2_xml" class="tab">
+                                            <p>XML</p>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div id="_tabs_2_java--panel" class="tabpanel"
+                                     aria-labelledby="_tabs_2_java">
+                                    <div class="listingblock">
+                                        <div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs"
+                                         data-lang="java">from("direct:start")
+    .resequence(body()).batch().size(300).timeout(4000L)
+    .to("mock:result")</code></pre>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div id="_tabs_2_xml--panel" class="tabpanel"
+                                     aria-labelledby="_tabs_2_xml">
+                                    <div class="listingblock">
+                                        <div class="content">
+<pre class="highlightjs highlight"><code class="language-xml hljs"
+                                         data-lang="xml">&lt;route&gt;
+    &lt;from uri="direct:start"/&gt;
+    &lt;resequence&gt;
+        &lt;batch-config batchSize="300" batchTimeout="4000"/&gt;
+        &lt;simple&gt;${body}&lt;/simple&gt;
+        &lt;to uri="mock:result"/&gt;
+    &lt;/resequence&gt;
+&lt;/route&gt;</code></pre>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="paragraph">
+                            <p>This sets the batch size to 300 and the batch
+                                timeout to 4000 ms (by default, the batch size
+                                is 100 and the timeout is 1000 ms).</p>
+                        </div>
+                        <div class="paragraph">
+                            <p>So the above example will reorder messages in
+                                order of their bodies.
+                                Typically, you&#8217;d use a header rather than
+                                the body to order things; or maybe a part of the
+                                body.
+                                So you could replace this expression with:</p>
+                        </div>
+                        <div id="_tabs_3"
+                             class="openblock tabs is-sync is-loading">
+                            <div class="content">
+                                <div class="ulist tablist">
+                                    <ul>
+                                        <li id="_tabs_3_java" class="tab">
+                                            <p>Java</p>
+                                        </li>
+                                        <li id="_tabs_3_xml" class="tab">
+                                            <p>XML</p>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div id="_tabs_3_java--panel" class="tabpanel"
+                                     aria-labelledby="_tabs_3_java">
+                                    <div class="listingblock">
+                                        <div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs"
+                                         data-lang="java">from("direct:start")
+    .resequence(header("mySeqNo"))
+    .to("mock:result")</code></pre>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div id="_tabs_3_xml--panel" class="tabpanel"
+                                     aria-labelledby="_tabs_3_xml">
+                                    <div class="listingblock">
+                                        <div class="content">
+<pre class="highlightjs highlight"><code class="language-xml hljs"
+                                         data-lang="xml">&lt;route&gt;
+    &lt;from uri="direct:start"/&gt;
+    &lt;resequence&gt;
+        &lt;header&gt;mySeqNo&lt;/header&gt;
+        &lt;to uri="mock:result"/&gt;
+    &lt;/resequence&gt;
+&lt;/route&gt;</code></pre>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="paragraph">
+                            <p>This reorders messages using a custom sequence
+                                number with the header name mySeqNo.</p>
+                        </div>
+                        <div class="sect2">
+                            <h3 id="_allow_duplicates"><a class="anchor"
+                                                          href="#_allow_duplicates"></a>Allow
+                                Duplicates</h3>
+                            <div class="paragraph">
+                                <p>When allowing duplicates then the resequencer
+                                    retain duplicate message instead
+                                    of keeping only last duplicated message.</p>
+                            </div>
+                            <div class="paragraph">
+                                <p>In batch mode, you can turn on duplicates as
+                                    follows:</p>
+                            </div>
+                            <div id="_tabs_4"
+                                 class="openblock tabs is-sync is-loading">
+                                <div class="content">
+                                    <div class="ulist tablist">
+                                        <ul>
+                                            <li id="_tabs_4_java" class="tab">
+                                                <p>Java</p>
+                                            </li>
+                                            <li id="_tabs_4_xml" class="tab">
+                                                <p>XML</p>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div id="_tabs_4_java--panel"
+                                         class="tabpanel"
+                                         aria-labelledby="_tabs_4_java">
+                                        <div class="listingblock">
+                                            <div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs"
+                                         data-lang="java">from("direct:start")
+    .resequence(header("mySeqNo")).allowDuplicates()
+    .to("mock:result")</code></pre>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div id="_tabs_4_xml--panel"
+                                         class="tabpanel"
+                                         aria-labelledby="_tabs_4_xml">
+                                        <div class="listingblock">
+                                            <div class="content">
+<pre class="highlightjs highlight"><code class="language-xml hljs"
+                                         data-lang="xml">&lt;route&gt;
+    &lt;from uri="direct:start"/&gt;
+    &lt;resequence&gt;
+        &lt;batch-config allowDuplicates="true"/&gt;
+        &lt;header&gt;mySeqNo&lt;/header&gt;
+        &lt;to uri="mock:result"/&gt;
+    &lt;/resequence&gt;
+&lt;/route&gt;</code></pre>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="sect2">
+                            <h3 id="_reverse_ordering"><a class="anchor"
+                                                          href="#_reverse_ordering"></a>Reverse
+                                Ordering</h3>
+                            <div class="paragraph">
+                                <p>You can reverse the expression ordering.
+                                    By default, the order is based on 0..9,A..Z,
+                                    which would let messages with low numbers be
+                                    ordered first, and thus also outgoing first.
+                                    In some cases you want to reverse the
+                                    ordering.</p>
+                            </div>
+                            <div class="paragraph">
+                                <p>In batch mode, you can turn on reverse as
+                                    follows:</p>
+                            </div>
+                            <div class="exampleblock">
+                                <div class="content">
+                                    <div class="paragraph">
+                                        <p>+</p>
+                                    </div>
+                                    <div class="listingblock">
+                                        <div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs"
+                                         data-lang="java">from("direct:start")
+    .resequence(header("mySeqNo")).reverse()
+    .to("mock:result")</code></pre>
+                                        </div>
+                                    </div>
+                                    <div class="dlist">
+                                        <dl>
+                                            <dt class="hdlist1">XML</dt>
+                                            <dd>
+                                                <div class="listingblock">
+                                                    <div class="content">
+<pre class="highlightjs highlight"><code class="language-xml hljs"
+                                         data-lang="xml">&lt;route&gt;
+    &lt;from uri="direct:start"/&gt;
+    &lt;resequence&gt;
+        &lt;batch-config reverse="true"/&gt;
+        &lt;header&gt;mySeqNo&lt;/header&gt;
+        &lt;to uri="mock:result"/&gt;
+    &lt;/resequence&gt;
+&lt;/route&gt;</code></pre>
+                                                    </div>
+                                                </div>
+                                            </dd>
+                                        </dl>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="sect2">
+                            <h3 id="_ignoring_invalid_messages"><a
+                                    class="anchor"
+                                    href="#_ignoring_invalid_messages"></a>Ignoring
+                                invalid messages</h3>
+                            <div class="paragraph">
+                                <p>The Resequencer throws a <code>CamelExchangeException</code>
+                                    if the incoming Exchange is not valid for
+                                    the resequencer
+                                    such as, the expression cannot be evaluated
+                                    due to a missing header.</p>
+                            </div>
+                            <div class="paragraph">
+                                <p>You can ignore these kinds of errors, and let
+                                    the Resequencer skip the invalid
+                                    Exchange.</p>
+                            </div>
+                            <div class="paragraph">
+                                <p>To do this you do as follows in Java DSL:</p>
+                            </div>
+                            <div id="_tabs_5"
+                                 class="openblock tabs is-sync is-loading">
+                                <div class="content">
+                                    <div class="ulist tablist">
+                                        <ul>
+                                            <li id="_tabs_5_java" class="tab">
+                                                <p>Java</p>
+                                            </li>
+                                            <li id="_tabs_5_xml" class="tab">
+                                                <p>XML</p>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div id="_tabs_5_java--panel"
+                                         class="tabpanel"
+                                         aria-labelledby="_tabs_5_java">
+                                        <div class="listingblock">
+                                            <div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs"
+                                         data-lang="java">from("direct:start")
+    .resequence(header("seqno")).batch()
+        // ignore invalid exchanges (they are discarded)
+        .ignoreInvalidExchanges()
+    .to("mock:result");</code></pre>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div id="_tabs_5_xml--panel"
+                                         class="tabpanel"
+                                         aria-labelledby="_tabs_5_xml">
+                                        <div class="listingblock">
+                                            <div class="content">
+<pre class="highlightjs highlight"><code class="language-xml hljs"
+                                         data-lang="xml">&lt;route&gt;
+    &lt;from uri="direct:start"/&gt;
+    &lt;resequence&gt;
+        &lt;batch-config ignoreInvalidExchanges="true"/&gt;
+        &lt;header&gt;seqno&lt;/header&gt;
+        &lt;to uri="mock:result"/&gt;
+    &lt;/resequence&gt;
+&lt;/route&gt;</code></pre>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="paragraph">
+                                <p>This option is available for both batch and
+                                    stream mode.</p>
+                            </div>
+                        </div>
+                        <div class="sect2">
+                            <h3 id="_resequence_jms_messages_based_on_jmspriority">
+                                <a class="anchor"
+                                   href="#_resequence_jms_messages_based_on_jmspriority"></a>Resequence
+                                JMS messages based on JMSPriority</h3>
+                            <div class="paragraph">
+                                <p>It&#8217;s now much easier to use the
+                                    Resequencer to resequence messages from JMS
+                                    queues based on JMSPriority. For that to
+                                    work you need to use the two new options
+                                    <code>allowDuplicates</code> and <code>reverse</code>.
+                                </p>
+                            </div>
+                            <div class="listingblock">
+                                <div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs"
+                                         data-lang="java">from("jms:queue:foo")
+    // sort by JMSPriority by allowing duplicates (message can have same JMSPriority)
+    // and use reverse ordering so 9 is first output (most important), and 0 is last
+    // use batch mode and fire every 3th second
+    .resequence(header("JMSPriority")).batch().timeout(3000).allowDuplicates().reverse()
+    .to("mock:result");</code></pre>
+                                </div>
+                            </div>
+                            <div class="paragraph">
+                                <p>Notice this is <strong>only</strong> possible
+                                    in the <code>batch</code> mode of the
+                                    Resequencer.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="sect1">
+                    <h2 id="_stream_resequencing"><a class="anchor"
+                                                     href="#_stream_resequencing"></a>Stream
+                        Resequencing</h2>
+                    <div class="sectionbody">
+                        <div class="paragraph">
+                            <p>In streaming mode then the Resequencer will send
+                                out messages as soon as possible when
+                                a message with the next expected sequence number
+                                arrived.</p>
+                        </div>
+                        <div class="paragraph">
+                            <p>The streaming mode requires the messages to be
+                                re-ordered based on integer numeric values
+                                that are ordered 1,2,3&#8230;&#8203;N.</p>
+                        </div>
+                        <div class="paragraph">
+                            <p>The following example uses the header seqnum for
+                                the ordering:</p>
+                        </div>
+                        <div id="_tabs_6"
+                             class="openblock tabs is-sync is-loading">
+                            <div class="content">
+                                <div class="ulist tablist">
+                                    <ul>
+                                        <li id="_tabs_6_java" class="tab">
+                                            <p>Java</p>
+                                        </li>
+                                        <li id="_tabs_6_xml" class="tab">
+                                            <p>XML</p>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div id="_tabs_6_java--panel" class="tabpanel"
+                                     aria-labelledby="_tabs_6_java">
+                                    <div class="listingblock">
+                                        <div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs"
+                                         data-lang="java">from("direct:start")
+  .resequence(header("seqnum")).stream()
+  .to("mock:result");</code></pre>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div id="_tabs_6_xml--panel" class="tabpanel"
+                                     aria-labelledby="_tabs_6_xml">
+                                    <div class="listingblock">
+                                        <div class="content">
+<pre class="highlightjs highlight"><code class="language-xml hljs"
+                                         data-lang="xml">&lt;route&gt;
+    &lt;from uri="direct:start"/&gt;
+    &lt;resequence&gt;
+        &lt;stream-config/&gt;
+        &lt;header&gt;seqno&lt;/header&gt;
+        &lt;to uri="mock:result"/&gt;
+    &lt;/resequence&gt;
+&lt;/route&gt;</code></pre>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="paragraph">
+                            <p>The Resequencer keeps a backlog of pending
+                                messages in a backlog.
+                                The default capacity is 1000 elements, which can
+                                be configured:</p>
+                        </div>
+                        <div id="_tabs_7"
+                             class="openblock tabs is-sync is-loading">
+                            <div class="content">
+                                <div class="ulist tablist">
+                                    <ul>
+                                        <li id="_tabs_7_java" class="tab">
+                                            <p>Java</p>
+                                        </li>
+                                        <li id="_tabs_7_xml" class="tab">
+                                            <p>XML</p>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div id="_tabs_7_java--panel" class="tabpanel"
+                                     aria-labelledby="_tabs_7_java">
+                                    <div class="listingblock">
+                                        <div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs"
+                                         data-lang="java">from("direct:start")
+    .resequence(header("seqnum")).stream().capacity(5000).timeout(4000)
+    .to("mock:result")</code></pre>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div id="_tabs_7_xml--panel" class="tabpanel"
+                                     aria-labelledby="_tabs_7_xml">
+                                    <div class="listingblock">
+                                        <div class="content">
+<pre class="highlightjs highlight"><code class="language-xml hljs"
+                                         data-lang="xml">&lt;route&gt;
+    &lt;from uri="direct:start"/&gt;
+    &lt;resequence&gt;
+        &lt;stream-config capacity="5000" timeout="4000"/&gt;
+        &lt;header&gt;seqno&lt;/header&gt;
+        &lt;to uri="mock:result"/&gt;
+    &lt;/resequence&gt;
+&lt;/route&gt;</code></pre>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="paragraph">
+                            <p>This uses a capacity of 5000 elements. And the
+                                timeout has been set to 4 seconds.
+                                In case of a timeout, then the resequencer
+                                disreards the current exepected sequence number,
+                                and moves to the next expected number.</p>
+                        </div>
+                        <div class="sect2">
+                            <h3 id="_how_streaming_mode_works"><a class="anchor"
+                                                                  href="#_how_streaming_mode_works"></a>How
+                                streaming mode works</h3>
+                            <div class="paragraph">
+                                <p>The stream-processing resequencer algorithm
+                                    is based on the detection of gaps in a
+                                    message stream rather than on a fixed batch
+                                    size.
+                                    Gap detection in combination with timeouts
+                                    removes the constraint of having to know the
+                                    number of messages of a sequence (i.e. the
+                                    batch size) in advance.
+                                    Messages must contain a unique sequence
+                                    number for which a predecessor and a
+                                    successor is known.</p>
+                            </div>
+                            <div class="paragraph">
+                                <p>For example a message with the sequence
+                                    number 3 has a predecessor message with the
+                                    sequence number 2 and a successor message
+                                    with the sequence number 4.
+                                    The message sequence 2,3,5 has a gap because
+                                    the successor of 3 is missing. The
+                                    resequencer therefore has to retain message
+                                    5 until message 4 arrives (or a timeout
+                                    occurs).</p>
+                            </div>
+                            <div class="paragraph">
+                                <p>If the maximum time difference between
+                                    messages (with successor/predecessor
+                                    relationship with respect to the sequence
+                                    number)
+                                    in a message stream is known, then the
+                                    Resequencer timeout parameter should be set
+                                    to this value.</p>
+                            </div>
+                            <div class="paragraph">
+                                <p>In this case it is guaranteed that all
+                                    messages of a stream are delivered in
+                                    correct order to the next processor.
+                                    The lower the timeout value is compared to
+                                    the out-of-sequence time difference the
+                                    higher is the probability for
+                                    out-of-sequence messages delivered by this
+                                    Resequencer.
+                                    Large timeout values should be supported by
+                                    sufficiently high capacity values. The
+                                    capacity parameter is used to prevent the
+                                    Resequencer from running out of memory.</p>
+                            </div>
+                        </div>
+                        <div class="sect2">
+                            <h3 id="_using_custom_streaming_mode_sequence_expression">
+                                <a class="anchor"
+                                   href="#_using_custom_streaming_mode_sequence_expression"></a>Using
+                                custom streaming mode sequence expression</h3>
+                            <div class="paragraph">
+                                <p>By default, the stream Resequencer expects
+                                    long sequence numbers but other sequence
+                                    numbers types can be supported as well by
+                                    providing a custom expression.</p>
+                            </div>
+                            <div class="listingblock">
+                                <div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs"
+                                         data-lang="java">public class MyFileNameExpression implements Expression {
+
+    public String getFileName(Exchange exchange) {
+        return exchange.getIn().getBody(String.class);
+    }
+
+    public Object evaluate(Exchange exchange) {
+        // parser the file name with YYYYMMDD-DNNN pattern
+        String fileName = getFileName(exchange);
+        String[] files = fileName.split("-D");
+        Long answer = Long.parseLong(files[0]) * 1000 + Long.parseLong(files[1]);
+        return answer;
+    }
+
+    public &lt;T&gt; T evaluate(Exchange exchange, Class&lt;T&gt; type) {
+        Object result = evaluate(exchange);
+        return exchange.getContext().getTypeConverter().convertTo(type, result);
+    }
+}</code></pre>
+                                </div>
+                            </div>
+                            <div class="paragraph">
+                                <p>And then you can use this expression in a
+                                    Camel route:</p>
+                            </div>
+                            <div class="listingblock">
+                                <div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs"
+                                         data-lang="java">from("direct:start")
+    .resequence(new MyFileNameExpression()).stream().timeout(2000)
+    .to("mock:result");</code></pre>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="sect2">
+                            <h3 id="_rejecting_old_messages"><a class="anchor"
+                                                                href="#_rejecting_old_messages"></a>Rejecting
+                                old messages</h3>
+                            <div class="paragraph">
+                                <p>Rejecting old messages is used to prevent out
+                                    of order messages from being sent,
+                                    regardless of the event that delivered
+                                    messages downstream (capacity, timeout,
+                                    etc).</p>
+                            </div>
+                            <div class="paragraph">
+                                <p>If enabled, the Resequencer will throw a
+                                    <code>MessageRejectedException</code>
+                                    when an incoming Exchange is <em>older</em>
+                                    (based on the <code>Comparator</code>) than
+                                    the last delivered message.</p>
+                            </div>
+                            <div class="paragraph">
+                                <p>This provides an extra level of control in
+                                    regard to delayed message ordering.</p>
+                            </div>
+                            <div class="paragraph">
+                                <p>In the example below old messages are
+                                    rejected:</p>
+                            </div>
+                            <div id="_tabs_8"
+                                 class="openblock tabs is-sync is-loading">
+                                <div class="content">
+                                    <div class="ulist tablist">
+                                        <ul>
+                                            <li id="_tabs_8_java" class="tab">
+                                                <p>Java</p>
+                                            </li>
+                                            <li id="_tabs_8_xml" class="tab">
+                                                <p>XML</p>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div id="_tabs_8_java--panel"
+                                         class="tabpanel"
+                                         aria-labelledby="_tabs_8_java">
+                                        <div class="listingblock">
+                                            <div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs"
+                                         data-lang="java">from("direct:start")
+    .resequence(header("seqno")).stream().timeout(1000).rejectOld()
+    .to("mock:result");</code></pre>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div id="_tabs_8_xml--panel"
+                                         class="tabpanel"
+                                         aria-labelledby="_tabs_8_xml">
+                                        <div class="listingblock">
+                                            <div class="content">
+<pre class="highlightjs highlight"><code class="language-xml hljs"
+                                         data-lang="xml">&lt;route&gt;
+    &lt;from uri="direct:start"/&gt;
+    &lt;resequence&gt;
+        &lt;stream-config rejectOld="true" timeout="1000"/&gt;
+        &lt;header&gt;seqno&lt;/header&gt;
+        &lt;to uri="mock:result"/&gt;
+    &lt;/resequence&gt;
+&lt;/route&gt;</code></pre>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="paragraph">
+                                <p>If an old message is detected then Camel
+                                    throws <code>MessageRejectedException</code>.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </article>
+        </div>
+    </main>
+</div>
+<footer class="footer">
+</footer>
+<script id="site-script" src="../../../_/js/site.js"
+        data-ui-root-path="../../../_"></script>
+<script async src="../../../_/js/vendor/highlight.js"></script>
+</body>
+</html>
