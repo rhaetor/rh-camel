@@ -36,7 +36,7 @@ def stripdiv(infile: Path):
 
 
 def main():
-    comp_dir = Path('components')
+    comp_dir = Path('../components/4.22.x')
 
     for fiel in Path(comp_dir).rglob('*.html'):
         stripdiv(fiel)
