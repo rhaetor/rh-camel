@@ -1,0 +1,1658 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>JSSE Utility :: Red Hat build of Apache Camel</title>
+    <meta name="generator" content="Antora 3.1.14">
+    <link rel="stylesheet" href="../../_/css/site.css">
+  </head>
+  <body class="article">
+<header class="header">
+  <nav class="navbar">
+    <div class="navbar-brand">
+      <a class="navbar-item" href="/">Red Hat build of Apache Camel</a>
+      <button class="navbar-burger" data-target="topbar-nav">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </nav>
+</header>
+<div class="body">
+<div class="nav-container" data-component="manual" data-version="4.22.x">
+  <aside class="nav">
+    <div class="panels">
+<div class="nav-panel-menu is-active" data-panel="menu">
+  <nav class="nav-menu">
+    <button class="nav-menu-toggle" aria-label="Toggle expand/collapse all" style="display: none"></button>
+    <h3 class="title"><a href="index.html">User manual</a></h3>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="getting-started.html">Getting started</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="book-getting-started.html">Getting Started with Apache Camel</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="what-are-the-dependencies.html">What are the dependencies?</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Resources &amp; Guides</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="/community/books/">Books</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="building.html">Building</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="camel-console.html">Camel Developer Console</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="camel-jbang.html">Camel CLI</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="jbang-commands/camel-jbang-commands.html">Camel CLI Command Reference</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="camel-jbang-launcher.html">Camel CLI Launcher</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="camel-jbang-launcher-install.html">Installing the Camel CLI Launcher</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="camel-jbang-kubernetes.html">Camel Kubernetes Plugin</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="camel-jbang-test.html">Camel Testing Plugin</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="camel-jbang-tui.html">Camel TUI</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="camel-jbang-mcp.html">Camel MCP Server</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="camel-jbang-container.html">Camel CLI container</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="camel-maven-plugin.html">Camel Maven Plugin</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="camel-component-maven-plugin.html">Camel Component Maven Plugin</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="camel-report-maven-plugin.html">Camel Maven Report Plugin</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="camel-yaml-dsl-validator-maven-plugin.html">Camel Maven YAML DSL Validator Plugin</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="camel-maven-archetypes.html">Camel Maven Archetypes</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="configuring-route-startup-ordering-and-autostartup.html">Configuring route startup ordering and autostartup</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="component-dsl.html">Component DSL</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="Endpoint-dsl.html">Endpoint DSL</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="dataformat-dsl.html">DataFormat DSL</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="examples.html">Examples</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="graceful-shutdown.html">Graceful Shutdown</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="error-handler.html">Error handler</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="error-registry.html">Error Registry</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="using-propertyplaceholder.html">How to use Camel property placeholders</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="property-placeholder-functions.html">Property Placeholder Functions</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="variables.html">How to use Variables</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="testing.html">Testing</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="test-infra.html">Test Infra</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="notify-builder.html">NotifyBuilder</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="advice-with.html">AdviceWith</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="integration-test.html">Integration Test</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="rest-dsl.html">Working with REST and Rest DSL</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="rest-dsl-binding.html">Rest DSL binding and configuration</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="rest-dsl-openapi.html">Rest DSL contract first</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="rest-dsl-validation.html">Rest DSL error handling and validation</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="writing-components.html">Writing Components</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="sbom.html">Generating SBOMs</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="release-guide.html">Release guide</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="release-guide-website.html">Adding doc versions to the website</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="improving-the-documentation.html">Improving the Documentation</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="migration-and-upgrade.html">Migration and Upgrade</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="camel-3-migration-guide.html">Camel 2.x to 3.0 Migration Guide</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="camel-3x-upgrade-guide.html">Camel 3.x Upgrade Guide</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="camel-4-migration-guide.html">Camel 3.x to 4.0 Migration Guide</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="camel-4x-upgrade-guide.html">Camel 4.x Upgrade Guide</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Security</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="security.html">Security</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="security-policy.html">Security Policy Enforcement</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="security-model.html">Security Model</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="architecture.html">Architecture</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="backlog-debugger.html">Backlog debugger</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="backlog-tracer.html">Backlog Tracer</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="batch-consumer.html">Batch Consumer</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="bean-binding.html">Bean Binding</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="bean-integration.html">Bean Integration</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="browsable-endpoint.html">BrowsableEndpoint</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="camelcontext.html">CamelContext</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="camelcontext-autoconfigure.html">CamelContext Auto Configuration</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="clustering.html">Clustering and Load Balancing</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="component.html">Component</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="data-format.html">Data Format</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="debugger.html">Debugger</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="delay-interceptor.html">Delayer</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="endpoint.html">Endpoints</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="endpoint-annotations.html">Endpoint Annotations</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="exception-clause.html">Exception Clause</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="exception-redelivery.html">Exception Clause redelivery</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="exception-handling-patterns.html">Exception Clause handling patterns</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="exception-advanced.html">Exception Clause advanced usage</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="exchange-pooling.html">Exchange Pooling</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="http-session-handling.html">HTTP-Session Handling</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="parameter-binding-annotations.html">Parameter Binding Annotations</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="pojo-producing.html">POJO Producing</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="pojo-consuming.html">POJO Consuming</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="producertemplate.html">ProducerTemplate</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="consumertemplate.html">ConsumerTemplate</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="error-handler.html">Error Handler</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="exchange.html">Message Exchange</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="exchange-pattern.html">Exchange Pattern</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="using-exchange-pattern-annotations.html">Using Exchange pattern annotations</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="expression.html">Expressions</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../components/next/eips/content-enricher.html">Content Enrichment</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="injector.html">Injector</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../components/next/eips/intercept.html">Intercept</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="jmx.html">JMX</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="lifecycle.html">Camel Lifecycle</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="message-size.html">Message Size</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="oncompletion.html">OnCompletion</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="pluggable-class-resolvers.html">Pluggable Class Resolvers</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="predicate.html">Predicates</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="processor.html">Processor</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="registry.html">Registry</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="route-builder.html">RouteBuilder</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="lambda-route-builder.html">LambdaRouteBuilder</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="route-controller.html">RouteController</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="route-policy.html">RoutePolicy</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="route-configuration.html">RouteConfiguration</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="route-group.html">RouteGroup</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="context-reload.html">ContextReload</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="route-reload.html">RouteReload</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="route-diagram.html">Visual Route Diagrams</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="route-template.html">RouteTemplate</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="route-template-bean-binding.html">Bean Binding</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="routes.html">Routes</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="startup-condition.html">Startup Condition</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="stream-caching.html">Stream caching</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="template-engines.html">Template Engines</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="transformer.html">Transformer</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="threading-model.html">Threading Model</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="virtual-threads.html">Virtual Threads</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="tracer.html">Tracer</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="type-converter.html">Type Converter</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="uris.html">URIs</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="uuidgenerator.html">UuidGenerator</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="validator.html">Validator</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="health-check.html">Health Checks</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Domain Specific Languages</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="dsl.html">Camel Domain Specific Language</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="languages.html">Languages</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="java-dsl.html">Java DSL</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="java-dsl-model-writer.html">Java DSL Model Writer</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="spring.html">Spring support</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Reference</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="#components::index.adoc">Components</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="#components:dataformats:index.adoc">Data Formats</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="#components:languages:index.adoc">Languages</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../components/next/eips/enterprise-integration-patterns.html">EIP Patterns</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="#next@components:eips:ai-patterns.adoc">AI Patterns</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="faq/index.html">FAQ</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="faq/what-is-camel.html">What is Camel?</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="/community/support/">How can I get help?</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="faq/can-i-get-commercial-support.html">Can I get commercial support?</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="faq/how-can-i-get-the-source-code.html">How can I get the source code?</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="faq/how-do-i-edit-the-website.html">How do I edit the documentation?</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="faq/how-do-i-become-a-committer.html">How do I become a committer?</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="faq/why-the-name-camel.html">Why the name Camel?</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+</ul>
+  </nav>
+</div>
+<div class="nav-panel-explore" data-panel="explore">
+  <div class="context">
+    <span class="title">User manual</span>
+    <span class="version">4.22.x</span>
+  </div>
+  <ul class="components">
+    <li class="component is-current">
+      <div class="title"><a href="../index.html">User manual</a></div>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../index.html">default</a>
+        </li>
+        <li class="version is-current">
+          <a href="index.html">4.22.x</a>
+        </li>
+        <li class="version">
+          <a href="../4.18.x/index.html">4.18.x</a>
+        </li>
+        <li class="version">
+          <a href="../4.14.x/index.html">4.14.x</a>
+        </li>
+        <li class="version">
+          <a href="../4.10.x/index.html">4.10.x</a>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</div>
+    </div>
+  </aside>
+</div>
+<main class="article">
+<div class="toolbar" role="navigation">
+<button class="nav-toggle"></button>
+  <a href="../index.html" class="home-link"></a>
+<nav class="breadcrumbs" aria-label="breadcrumbs">
+  <ul>
+    <li><a href="index.html">User manual</a></li>
+    <li><a href="camel-configuration-utilities.html">JSSE Utility</a></li>
+  </ul>
+</nav>
+<div class="page-versions">
+  <button class="version-menu-toggle" title="Show other versions of page">4.22.x</button>
+  <div class="version-menu">
+    <a class="version" href="../camel-configuration-utilities.html">default</a>
+    <a class="version is-current" href="camel-configuration-utilities.html">4.22.x</a>
+    <a class="version" href="../4.18.x/camel-configuration-utilities.html">4.18.x</a>
+    <a class="version" href="../4.14.x/camel-configuration-utilities.html">4.14.x</a>
+    <a class="version" href="../4.10.x/camel-configuration-utilities.html">4.10.x</a>
+  </div>
+</div>
+<div class="edit-this-page"><a href="file:///Users/ajonsson/code/rh/rh-jboss-camel/docs/user-manual/modules/ROOT/pages/camel-configuration-utilities.adoc">Edit this Page</a></div>
+</div>
+  <div class="content">
+<aside class="toc sidebar" data-title="Contents" data-levels="2">
+  <div class="toc-menu"></div>
+</aside>
+<article class="doc">
+<h1 class="page">JSSE Utility</h1>
+<div id="preamble">
+<div class="sectionbody">
+<div class="paragraph">
+<p>The JSSE Utility allows you to easily configure aspects of the
+<a href="https://docs.oracle.com/en/java/javase/11/security/java-secure-socket-extension-jsse-reference-guide.html">Java
+Secure Socket Extension</a> (JSSE) API in order to greatly simplify the use
+of custom transport layer security (TLS) settings on Camel components.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_supported_jsse_components"><a class="anchor" href="#_supported_jsse_components"></a>Supported JSSE Components</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>A number of Camel components support this (such as but not limited to):</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="#components::cometd-component.adoc" class="xref unresolved">Cometd</a></p>
+</li>
+<li>
+<p><a href="#components::http-component.adoc" class="xref unresolved">HTTP</a></p>
+</li>
+<li>
+<p><a href="#components::irc-component.adoc" class="xref unresolved">IRC</a></p>
+</li>
+<li>
+<p><a href="#components::jetty-component.adoc" class="xref unresolved">Jetty</a></p>
+</li>
+<li>
+<p><a href="#components::netty-component.adoc" class="xref unresolved">Netty</a></p>
+</li>
+<li>
+<p><a href="#components::mail-component.adoc" class="xref unresolved">Mail</a></p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_configuring_jsse_with_camel"><a class="anchor" href="#_configuring_jsse_with_camel"></a>Configuring JSSE with Camel</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>The key component in configuring TLS through the JSSE API is the <code>SSLContext</code>.</p>
+</div>
+<div class="paragraph">
+<p>The <code>SSLContext</code> provides socket factories for both client side and server side sockets
+as well as another component called an <code>SSLEngine</code> that is used by non-blocking IO to support TLS.</p>
+</div>
+<div class="paragraph">
+<p>The JSSE configuration utility provides an easy-to-use builder for configuring
+these JSSE components, among others, in a manner that allows you to provide all
+configuration options up front during the initialization of your
+application such that you don&#8217;t have to customize library code or dig
+though the inner workings of a third-party library in order to inject
+hooks for the configuration of each component in the JSSE API.  The
+central builder in the JSSE configuration utility is the
+SSLContextParameters. This class serves as the entry point for most
+configuration in the JSSE utility.</p>
+</div>
+<div class="sect2">
+<h3 id="_sslcontextparameters"><a class="anchor" href="#_sslcontextparameters"></a>SSLContextParameters</h3>
+<div class="paragraph">
+<p><code>SSLContextParameters</code> (<code>&lt;sslContextParameters&gt;</code> XML tag)
+contain the following elements:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>provider (attribute)</p>
+</li>
+<li>
+<p>secureSocketProtocol (attribute)</p>
+</li>
+<li>
+<p>certAlias (attribute)</p>
+</li>
+<li>
+<p>sessionTimeout (attribute)</p>
+</li>
+<li>
+<p>cipherSuites (element)</p>
+</li>
+<li>
+<p>cipherSuitesFilter (element)</p>
+</li>
+<li>
+<p>secureSocketProtocols (element)</p>
+</li>
+<li>
+<p>secureSocketProtocolsFilter (element)</p>
+</li>
+<li>
+<p>namedGroups (element)</p>
+</li>
+<li>
+<p>namedGroupsFilter (element)</p>
+</li>
+<li>
+<p>keyManagers (element)</p>
+</li>
+<li>
+<p>trustManagers (element)</p>
+</li>
+<li>
+<p>secureRandom (element)</p>
+</li>
+<li>
+<p>clientParameters (element)</p>
+</li>
+<li>
+<p>serverParameters (element)</p>
+<div class="dlist">
+<dl>
+<dt class="hdlist1">provider</dt>
+<dd>
+<p>The optional provider identifier for the JSSE implementation to use when
+constructing the SSLContext. If omitted, the standard provider look-up
+mechanism is used to resolve the provider.</p>
+</dd>
+<dt class="hdlist1">secureSocketProtocol</dt>
+<dd>
+<p>The optional secure socket protocol. See <a href="https://docs.oracle.com/en/java/javase/11/docs/specs/security/standard-names.html">Java Security Standard Algorithm Names</a>
+for information about standard protocol names. If omitted, TLS is used by default.
+Note that this property is related to but distinctly different from the
+secureSocketProtocols and secureSocketProtocolsFilter properties.</p>
+</dd>
+<dt class="hdlist1">certAlias</dt>
+<dd>
+<p>An optional certificate alias to use. This is useful when
+the keystore has multiple certificates.</p>
+</dd>
+<dt class="hdlist1">sessionTimeout</dt>
+<dd>
+<p>This optional property defines the timeout period, in seconds, for
+sessions on both the client and server side as well as in the SSLEngine.</p>
+</dd>
+<dt class="hdlist1">cipherSuites</dt>
+<dd>
+<p>This optional property represents a collection of explicitly named
+cipher suites to enable on both the client and server side as well as in
+the SSLEngine. These values take precedence over filters supplied in
+cipherSuitesFilter. The utility attempts to enable the listed cipher
+suites regardless of whether the JSSE provider actually supports
+them or not. This behavior guarantees that listed cipher suites are
+always enabled when listed. For a more lenient option, use
+cipherSuitesFilter.</p>
+</dd>
+<dt class="hdlist1">cipherSuitesFilter</dt>
+<dd>
+<p>This optional property represents a collection of include and exclude
+patterns for cipher suites to enable on both the client and server side
+as well as in the SSLEngine. The patterns are applied over only the
+available cipher suites. The excludes patterns have precedence over the
+includes patterns. If no cipherSuites and no cipherSuitesFilter are
+present, the default patterns applied are:</p>
+</dd>
+</dl>
+</div>
+</li>
+</ul>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-text hljs" data-lang="text">Includes .\*;
+Excludes .*_NULL_.*, .\*_anon_.*, .\*DES.*, .\*EXPORT.*, .\*MD5, .*RC4.*</code></pre>
+</div>
+</div>
+<div class="dlist">
+<dl>
+<dt class="hdlist1">secureSocketProtocols</dt>
+<dd>
+<p>This optional property represents a collection of explicitly named
+secure socket protocols, such as SSLv3/TLS/etc., to enable on both the
+client and server side as well as in the SSLEngine. These values take
+precedence over filters supplied in secureSocketProtocolsFilter.  The
+utility attempts to enable the listed protocols regardless of whether
+the JSSE provider actually supports them or not. This behavior
+guarantees that listed protocols are always enabled when listed. For a
+more lenient option, use secureSocketProtocolsFilter.</p>
+</dd>
+<dt class="hdlist1">secureSocketProtocolsFilter</dt>
+<dd>
+<p>This optional property represents a collection of include and exclude
+patterns for secure socket protocols to enable on both the client and
+server side as well as in the SSLEngine. The patterns are applied over
+only the available protocols. The excludes patterns have precedence over
+the includes patterns. If no secureSocketProtocols and no
+secureSocketProtocolsFilter are present, the default patterns applied
+are:</p>
+</dd>
+</dl>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-text hljs" data-lang="text">Includes .*</code></pre>
+</div>
+</div>
+<div class="dlist">
+<dl>
+<dt class="hdlist1">namedGroups</dt>
+<dd>
+<p>This optional property represents a collection of explicitly named
+TLS named groups (key exchange algorithms) to enable on both the client
+and server side as well as in the SSLEngine. Named groups control which
+key exchange algorithms are available during the TLS handshake, including
+post-quantum hybrid groups such as <code>X25519MLKEM768</code>. These values take
+precedence over filters supplied in namedGroupsFilter. The utility
+attempts to enable the listed named groups regardless of whether the
+JSSE provider actually supports them or not. No default filtering is
+applied to named groups.</p>
+</dd>
+<dt class="hdlist1">namedGroupsFilter</dt>
+<dd>
+<p>This optional property represents a collection of include and exclude
+patterns for named groups to enable on both the client and server side
+as well as in the SSLEngine. The patterns are applied over only the
+available named groups. The excludes patterns have precedence over the
+includes patterns. No default filtering is applied to named groups.</p>
+</dd>
+<dt class="hdlist1">keyManagers</dt>
+<dd>
+<p>This optional property configures the source of key material for
+providing identity of client and server side connections as well as in
+the SSLEngine. If omitted, no source of key material is provided and
+the SSLContext is suitable only for client-side usage when mutual
+authentication is not in use. You typically configure this property
+with a key store containing a client or server private key.</p>
+</dd>
+<dt class="hdlist1">trustManagers</dt>
+<dd>
+<p>This optional property configures the source of material for verifying
+trust of key material used in the handshake process. If omitted, the
+default trust manager is automatically used. See the
+<a href="https://docs.oracle.com/en/java/javase/11/security/java-secure-socket-extension-jsse-reference-guide.html#GUID-7D9F43B8-AABF-4C5B-93E6-3AFB18B66150">JSSE
+documentation</a> for more information on how the default trust manager is
+configured. You typically configure this property with a key store
+containing trusted CA certificates.</p>
+</dd>
+<dt class="hdlist1">secureRandom</dt>
+<dd>
+<p>This optional property configures the secure random number generator
+used by the client and server side as well as in the SSLEngine. If
+omitted, the default secure random number generator is used.</p>
+</dd>
+<dt class="hdlist1">clientParameters</dt>
+<dd>
+<p>This optional property configures additional settings that apply only to
+the client side aspects of the SSLContext. If present, these settings
+override the settings specified at the SSLContextParameters level.</p>
+</dd>
+<dt class="hdlist1">serverParameters</dt>
+<dd>
+<p>This optional property configures additional settings that apply only to
+the server side aspects of the SSLContext. If present, these settings
+override the settings specified at the SSLContextParameters level.</p>
+</dd>
+</dl>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_keymanagersparameters"><a class="anchor" href="#_keymanagersparameters"></a>KeyManagersParameters</h3>
+<div class="paragraph">
+<p>KeyManagersParameters contain the following elements:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>keyPassword (attribute)</p>
+</li>
+<li>
+<p>provider (attribute)</p>
+</li>
+<li>
+<p>algorithm (attribute)</p>
+</li>
+<li>
+<p>keyStore (element)</p>
+<div class="dlist">
+<dl>
+<dt class="hdlist1">keyPassword</dt>
+<dd>
+<p>The optional password for recovering/accessing the private key in the
+key store.  This is typically the password for the private key in the
+configured key store; however, in some cases, such as when using
+PKCS#11, the key password may be provided through other means and is
+omitted entirely in this configuration.</p>
+</dd>
+<dt class="hdlist1">provider</dt>
+<dd>
+<p>The optional provider identifier for the KeyManagerFactory used to
+create the KeyManagers represented by this object&#8217;s configuration. If
+omitted, the default look-up behavior is used.</p>
+</dd>
+<dt class="hdlist1">algorithm</dt>
+<dd>
+<p>The optional algorithm name for the KeyManagerFactory used to create the
+KeyManager represented by this object&#8217;s configuration. See the
+<a href="https://docs.oracle.com/en/java/javase/11/security/java-secure-socket-extension-jsse-reference-guide.html">Java
+Secure Socket Extension Reference Guide</a> for information about standard
+algorithm names.</p>
+</dd>
+<dt class="hdlist1">keyStore</dt>
+<dd>
+<p>This optional property represents the key store that provides key
+material to the key manager. This is typically configured with a key
+store containing a user or server private key. In some cases, such as
+when using PKCS#11, the key store is omitted entirely.</p>
+</dd>
+</dl>
+</div>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_trustmanagersparameters"><a class="anchor" href="#_trustmanagersparameters"></a>TrustManagersParameters</h3>
+<div class="paragraph">
+<p>TrustManagersParameters contain the following elements:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>provider (attribute)</p>
+</li>
+<li>
+<p>algorithm (attribute)</p>
+</li>
+<li>
+<p>trustManager (attribute)</p>
+</li>
+<li>
+<p>keyStore (element)</p>
+<div class="dlist">
+<dl>
+<dt class="hdlist1">provider</dt>
+<dd>
+<p>The optional provider identifier for the TrustManagerFactory used to
+create the TrustManagers represented by this object&#8217;s configuration. If
+omitted, the default look-up behavior is used.</p>
+</dd>
+<dt class="hdlist1">algorithm</dt>
+<dd>
+<p>The optional algorithm name for the TrustManagerFactory used to create
+the TrustManager represented by this object&#8217;s configuration.  See the
+<a href="https://docs.oracle.com/en/java/javase/11/security/java-secure-socket-extension-jsse-reference-guide.html">Java
+Secure Socket Extension Reference Guide</a> for information about standard
+algorithm names.</p>
+</dd>
+<dt class="hdlist1">trustManager</dt>
+<dd>
+<p>To use an existing configured trust manager instead of using
+TrustManagerFactory to get the TrustManager.</p>
+</dd>
+<dt class="hdlist1">keyStore</dt>
+<dd>
+<p>See <a href="#CamelConfigurationUtilities-KeyStoreParameters">KeyStoreParameters</a>.
+This optional property represents the key store that provides key
+material to the trust manager. This is typically configured with a key
+store containing trusted CA certificates / public keys.  In some cases,
+such as when using PKCS#11, the key store is omitted entirely.</p>
+</dd>
+</dl>
+</div>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="CamelConfigurationUtilities-KeyStoreParameters"><a class="anchor" href="#CamelConfigurationUtilities-KeyStoreParameters"></a>KeyStoreParameters</h3>
+<div class="paragraph">
+<p>KeyStoreParameters contain the following elements:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>type (attribute)</p>
+</li>
+<li>
+<p>password (attribute)</p>
+</li>
+<li>
+<p>provider (attribute)</p>
+</li>
+<li>
+<p>resource (attribute)</p>
+<div class="dlist">
+<dl>
+<dt class="hdlist1">type</dt>
+<dd>
+<p>The optional type of the key store. See the
+<a href="https://docs.oracle.com/en/java/javase/11/docs/specs/security/standard-names.html">Java Security Standard Algorithm Names</a>
+for more information on standard names. If omitted, defaults to the default
+lookup mechanism as defined by <code>KeyStore.getDefaultType()</code></p>
+</dd>
+<dt class="hdlist1">password</dt>
+<dd>
+<p>The optional password for reading/opening/verifying the key store.</p>
+</dd>
+<dt class="hdlist1">provider</dt>
+<dd>
+<p>The optional provider identifier for the provider used to create the
+KeyStores represented by this object&#8217;s configuration. If omitted, the
+default look-up behavior is used.</p>
+</dd>
+<dt class="hdlist1">resource</dt>
+<dd>
+<p>Optional property to load the key store resource from a uri. By default the class path is used, otherwise
+the uri needs to be specified. For example to use file path as a resource, the prefix file is needed (file:/path/to/keystore).
+In some cases, the resource is omitted as the key store is provided by other means.</p>
+</dd>
+</dl>
+</div>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_filterparameters"><a class="anchor" href="#_filterparameters"></a>FilterParameters</h3>
+<div class="paragraph">
+<p>FilterParameters contain the following elements:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>include (element, multiple string)</p>
+</li>
+<li>
+<p>exclude (element, multiple string)</p>
+<div class="dlist">
+<dl>
+<dt class="hdlist1">include</dt>
+<dd>
+<p>This optional property represents zero or more regular expression
+patterns for which matching values should be included. The list of
+excludes takes precedence over the includes patterns.</p>
+</dd>
+<dt class="hdlist1">exclude</dt>
+<dd>
+<p>This optional property represents zero or more regular expression
+patterns for which matching values should be included. The list of
+excludes takes precedence over the includes patterns.</p>
+</dd>
+</dl>
+</div>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_securerandomparameters"><a class="anchor" href="#_securerandomparameters"></a>SecureRandomParameters</h3>
+<div class="paragraph">
+<p>SecureRandomParameters contain the following elements:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>algorithm (attribute)</p>
+</li>
+<li>
+<p>provider (attribute)</p>
+<div class="dlist">
+<dl>
+<dt class="hdlist1">algorithm</dt>
+<dd>
+<p>This optional property represents the Random Number Generator (RNG)
+algorithm identifier for the SecureRandom factory method used to create
+the SecureRandom represented by this object&#8217;s configuration. See
+<a href="https://docs.oracle.com/en/java/javase/11/docs/specs/security/standard-names.html">Java Security Standard Algorithm Names</a>
+for information about standard RNG algorithm names.</p>
+</dd>
+<dt class="hdlist1">provider</dt>
+<dd>
+<p>The optional provider identifier for the SecureRandom factory method
+used to create the SecureRandom represented by this object&#8217;s
+configuration. If omitted, the default look-up behavior is used.</p>
+</dd>
+</dl>
+</div>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_sslcontextserverparameters"><a class="anchor" href="#_sslcontextserverparameters"></a>SSLContextServerParameters</h3>
+<div class="paragraph">
+<p>SSLContextServerParameters contain the following elements:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>clientAuthentication (attribute)</p>
+</li>
+<li>
+<p>sessionTimeout (attribute)</p>
+</li>
+<li>
+<p>cipherSuites (element)</p>
+</li>
+<li>
+<p>cipherSuitesFilter (element)</p>
+</li>
+<li>
+<p>secureSocketProtocols (element)</p>
+</li>
+<li>
+<p>secureSocketProtocolsFilter (element)</p>
+</li>
+<li>
+<p>namedGroups (element)</p>
+</li>
+<li>
+<p>namedGroupsFilter (element)</p>
+<div class="dlist">
+<dl>
+<dt class="hdlist1">clientAuthentication</dt>
+<dd>
+<p>This optional property indicates if the server side does not request,
+requests, or requires clients to provide authentication credentials
+during the handshake process. This is commonly referred to as mutual
+authentication, two direction SSL/TLS, or two-legged SSL/TLS.
+Valid values are: NONE, WANT, REQUIRE</p>
+</dd>
+<dt class="hdlist1">sessionTimeout</dt>
+<dd>
+<p>This optional property defines the timeout period, in seconds, for
+sessions on the server side. This setting affects both the
+SSLServerSocketFactory/SSLServerSocket and the server side of the
+SSLEngine.</p>
+</dd>
+<dt class="hdlist1">cipherSuites</dt>
+<dd>
+<p>This optional property overrides the value of this
+setting in the SSLContextParameters. This option has no effect on the
+SSLEngine configuration.</p>
+</dd>
+<dt class="hdlist1">cipherSuitesFilter</dt>
+<dd>
+<p>This optional property overrides the value of this
+setting in the SSLContextParameters.  This option has no effect on the
+SSLEngine configuration.</p>
+</dd>
+<dt class="hdlist1">secureSocketProtocols</dt>
+<dd>
+<p>This optional property overrides the
+value of this setting in the SSLContextParameters. This option has no
+effect on the SSLEngine configuration.</p>
+</dd>
+<dt class="hdlist1">secureSocketProtocolsFilter</dt>
+<dd>
+<p>This optional property overrides the value of this
+setting in the SSLContextParameters. This option has no effect on the
+SSLEngine configuration.</p>
+</dd>
+<dt class="hdlist1">namedGroups</dt>
+<dd>
+<p>This optional property overrides the value of this
+setting in the SSLContextParameters. This option has no effect on the
+SSLEngine configuration.</p>
+</dd>
+<dt class="hdlist1">namedGroupsFilter</dt>
+<dd>
+<p>This optional property overrides the value of this
+setting in the SSLContextParameters. This option has no effect on the
+SSLEngine configuration.</p>
+</dd>
+</dl>
+</div>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_sslcontextclientparameters"><a class="anchor" href="#_sslcontextclientparameters"></a>SSLContextClientParameters</h3>
+<div class="paragraph">
+<p>SSLContextClientParameters contains the following elements:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>sniHostNames (elements)</p>
+</li>
+<li>
+<p>sessionTimeout (attribute)</p>
+</li>
+<li>
+<p>cipherSuites (element)</p>
+</li>
+<li>
+<p>cipherSuitesFilter (element)</p>
+</li>
+<li>
+<p>secureSocketProtocols (element)</p>
+</li>
+<li>
+<p>secureSocketProtocolsFilter (element)</p>
+</li>
+<li>
+<p>namedGroups (element)</p>
+</li>
+<li>
+<p>namedGroupsFilter (element)</p>
+<div class="dlist">
+<dl>
+<dt class="hdlist1">sniHostNames</dt>
+<dd>
+<p>Contains a list of sniHostName elements which provides a list
+of SNIHostNames to be used for SSL.</p>
+</dd>
+<dt class="hdlist1">sessionTimeout</dt>
+<dd>
+<p>See above</p>
+</dd>
+<dt class="hdlist1">cipherSuites</dt>
+<dd>
+<p>See above</p>
+</dd>
+<dt class="hdlist1">cipherSuitesFilter</dt>
+<dd>
+<p>See above</p>
+</dd>
+<dt class="hdlist1">secureSocketProtocols</dt>
+<dd>
+<p>See above</p>
+</dd>
+<dt class="hdlist1">secureSocketProtocolsFilter</dt>
+<dd>
+<p>See above</p>
+</dd>
+<dt class="hdlist1">namedGroups</dt>
+<dd>
+<p>See above</p>
+</dd>
+<dt class="hdlist1">namedGroupsFilter</dt>
+<dd>
+<p>See above</p>
+</dd>
+<dt class="hdlist1">signatureSchemes</dt>
+<dd>
+<p>This optional property represents a collection of explicitly named
+TLS signature schemes to enable on both the client and server side
+as well as in the SSLEngine. Signature schemes control which signature
+algorithms are available during the TLS handshake, including post-quantum
+signature algorithms such as <code>ML-DSA</code>. These values take precedence over
+filters supplied in signatureSchemesFilter. The utility attempts to
+enable the listed signature schemes regardless of whether the JSSE
+provider actually supports them or not. No default filtering is applied
+to signature schemes.</p>
+</dd>
+<dt class="hdlist1">signatureSchemesFilter</dt>
+<dd>
+<p>This optional property represents a collection of include and exclude
+patterns for signature schemes to enable on both the client and server
+side as well as in the SSLEngine. The patterns are applied over only the
+available signature schemes. The excludes patterns have precedence over
+the includes patterns. No default filtering is applied to signature
+schemes.</p>
+</dd>
+</dl>
+</div>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_configuring_sslcontextparameters_in_xml_and_yaml_dsl"><a class="anchor" href="#_configuring_sslcontextparameters_in_xml_and_yaml_dsl"></a>Configuring SSLContextParameters in XML and YAML DSL</h3>
+<div class="paragraph">
+<p><strong>Available as of Camel 4.19</strong></p>
+</div>
+<div class="paragraph">
+<p>You can setup SSL in XML DSL as follows:</p>
+</div>
+<div id="_tabs_1" class="openblock tabs is-loading">
+<div class="content">
+<div class="ulist tablist">
+<ul>
+<li id="_tabs_1_xml" class="tab">
+<p>XML</p>
+</li>
+<li id="_tabs_1_yaml" class="tab">
+<p>YAML</p>
+</li>
+<li id="_tabs_1_spring_boot" class="tab">
+<p>Spring Boot</p>
+</li>
+</ul>
+</div>
+<div id="_tabs_1_xml--panel" class="tabpanel" aria-labelledby="_tabs_1_xml">
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;camel xmlns="http://camel.apache.org/schema/xml-io"&gt;
+    &lt;sslContextParameters id="mySSL" keyStore="server.p12" keystorePassword="changeit"
+                           trustStore="truststore.p12" trustStorePassword="changeit"/&gt;
+
+    &lt;route id="sslRoute"&gt;
+        &lt;from uri="direct:ssl"/&gt;
+        &lt;to uri="mock:ssl"/&gt;
+    &lt;/route&gt;
+&lt;/camel&gt;</code></pre>
+</div>
+</div>
+</div>
+<div id="_tabs_1_yaml--panel" class="tabpanel" aria-labelledby="_tabs_1_yaml">
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-yaml hljs" data-lang="yaml">- sslContextParameters:
+    id: mySSL
+    keyStore: server.p12
+    keystorePassword: changeit
+    trustStore: truststore.p12
+    trustStorePassword: changeit
+- route:
+    from:
+      uri: direct:ssl
+      steps:
+        - to:
+            uri: mock:ssl</code></pre>
+</div>
+</div>
+</div>
+<div id="_tabs_1_spring_boot--panel" class="tabpanel" aria-labelledby="_tabs_1_spring_boot">
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-properties hljs" data-lang="properties">camel.ssl.key-managers.key-store.password=changeit
+camel.ssl.key-managers.key-store.resource=server.p12
+camel.ssl.trust-managers.key-store.password=changeit
+camel.ssl.trust-managers.key-store.resource=truststore.p12</code></pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_post_quantum_cryptography_pqc_tls_configuration"><a class="anchor" href="#_post_quantum_cryptography_pqc_tls_configuration"></a>Post-Quantum Cryptography (PQC) TLS Configuration</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Starting with Camel 4.19, Apache Camel supports Post-Quantum Cryptography (PQC) at the TLS transport layer.
+This protects connections against <em>harvest-now-decrypt-later</em> attacks, where an adversary captures
+encrypted traffic today with the intent to decrypt it once a cryptographically relevant quantum computer
+becomes available.</p>
+</div>
+<div class="sect2">
+<h3 id="_jdk_requirements"><a class="anchor" href="#_jdk_requirements"></a>JDK Requirements</h3>
+<div class="paragraph">
+<p>PQC TLS support requires a JDK that implements post-quantum key exchange algorithms.
+JDK 25+ is expected to include support for <code>X25519MLKEM768</code>, a hybrid key exchange
+that combines the classical X25519 algorithm with the ML-KEM-768 post-quantum algorithm
+(NIST FIPS 203).</p>
+</div>
+<div class="paragraph">
+<p>To verify whether your JDK supports PQC named groups, you can inspect the available groups:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">SSLContext ctx = SSLContext.getDefault();
+SSLEngine engine = ctx.createSSLEngine();
+String[] groups = engine.getSSLParameters().getNamedGroups();
+System.out.println(Arrays.toString(groups));
+// Look for X25519MLKEM768 in the output</code></pre>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_auto_configuration_zero_config_pqc"><a class="anchor" href="#_auto_configuration_zero_config_pqc"></a>Auto-Configuration (Zero-Config PQC)</h3>
+<div class="paragraph">
+<p>When running on a JDK that supports <code>X25519MLKEM768</code>, Camel <strong>automatically</strong> configures
+PQC-preferred named groups on all <code>SSLContextParameters</code> instances — no configuration is required.</p>
+</div>
+<div class="paragraph">
+<p>The auto-configuration activates only when:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>The user has <strong>not</strong> explicitly set <code>namedGroups</code> or <code>namedGroupsFilter</code></p>
+</li>
+<li>
+<p>The JVM&#8217;s TLS provider reports <code>X25519MLKEM768</code> as an available named group</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>When activated, Camel sets the following named group ordering:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-text hljs" data-lang="text">X25519MLKEM768, x25519, secp256r1, secp384r1, [remaining JVM defaults...]</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>This ensures post-quantum key exchange is preferred while maintaining backward compatibility
+with servers that do not yet support PQC. A log message confirms activation:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-text hljs" data-lang="text">INFO  o.a.c.s.j.SSLContextParameters - Auto-configured PQC named groups: [X25519MLKEM768, x25519, secp256r1, secp384r1, ...]</code></pre>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_explicit_configuration_via_application_properties"><a class="anchor" href="#_explicit_configuration_via_application_properties"></a>Explicit Configuration via application.properties</h3>
+<div class="paragraph">
+<p>You can explicitly control PQC TLS settings in <code>application.properties</code>:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-properties hljs" data-lang="properties"># Enable SSL
+camel.ssl.enabled = true
+
+# Explicit named groups ordering (PQC-first)
+camel.ssl.namedGroups = X25519MLKEM768,x25519,secp256r1,secp384r1
+
+# Explicit signature schemes (if your JDK supports PQC signatures)
+camel.ssl.signatureSchemes = ML-DSA,ECDSA,RSA</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>You can also use include/exclude filters instead of explicit lists:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-properties hljs" data-lang="properties"># Include only PQC and ECDH groups
+camel.ssl.namedGroupsInclude = X25519MLKEM768,x25519,secp256r1
+
+# Exclude specific groups
+camel.ssl.namedGroupsExclude = ffdhe2048</code></pre>
+</div>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+When <code>namedGroups</code> is set explicitly, include/exclude filters are ignored.
+When neither <code>namedGroups</code> nor filters are set, auto-configuration applies.
+</td>
+</tr>
+</table>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_explicit_configuration_via_java_dsl"><a class="anchor" href="#_explicit_configuration_via_java_dsl"></a>Explicit Configuration via Java DSL</h3>
+<div class="paragraph">
+<p>You can also configure PQC TLS programmatically using <code>SSLContextParameters</code>:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">KeyStoreParameters ksp = new KeyStoreParameters();
+ksp.setResource("file:/path/to/keystore.jks");
+ksp.setPassword("keystorePassword");
+
+KeyManagersParameters kmp = new KeyManagersParameters();
+kmp.setKeyStore(ksp);
+kmp.setKeyPassword("keyPassword");
+
+// Configure named groups with PQC preference
+NamedGroupsParameters ngp = new NamedGroupsParameters();
+ngp.setNamedGroup(List.of("X25519MLKEM768", "x25519", "secp256r1", "secp384r1"));
+
+SSLContextParameters scp = new SSLContextParameters();
+scp.setKeyManagers(kmp);
+scp.setNamedGroups(ngp);
+
+SSLContext context = scp.createSSLContext();</code></pre>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_disabling_pqc_auto_configuration"><a class="anchor" href="#_disabling_pqc_auto_configuration"></a>Disabling PQC Auto-Configuration</h3>
+<div class="paragraph">
+<p>If you need to disable PQC auto-configuration (for example, for compatibility testing),
+set the named groups explicitly to classical-only values:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-properties hljs" data-lang="properties">camel.ssl.namedGroups = x25519,secp256r1,secp384r1</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Or use a named groups filter:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-properties hljs" data-lang="properties">camel.ssl.namedGroupsExclude = X25519MLKEM768</code></pre>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_tls_layer_pqc_vs_application_layer_pqc"><a class="anchor" href="#_tls_layer_pqc_vs_application_layer_pqc"></a>TLS-Layer PQC vs. Application-Layer PQC</h3>
+<div class="paragraph">
+<p>Camel provides PQC protection at two distinct layers:</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 33.3333%;">
+<col style="width: 33.3333%;">
+<col style="width: 33.3334%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Aspect</th>
+<th class="tableblock halign-left valign-top">TLS-Layer PQC</th>
+<th class="tableblock halign-left valign-top">Application-Layer PQC (camel-pqc)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Scope</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Transport security (TLS handshake)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Message payload encryption and signing</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Configuration</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>camel.ssl.*</code> properties or <code>SSLContextParameters</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>camel-pqc</code> component and <code>pqc</code> data format</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Protects</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Data in transit between endpoints</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Data at rest and message payloads</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Algorithms</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">X25519MLKEM768 (hybrid KEM)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">ML-KEM, ML-DSA, SLH-DSA, LMS, XMSS, Falcon, and more</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>JDK requirement</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">JDK 25+ (for built-in PQC named groups)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">JDK 21+ with Bouncy Castle provider</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>User action</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Zero-config on JDK 25+ (auto-configured)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Requires explicit component configuration</p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p>Both layers are complementary and can be used together for defense in depth:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>TLS-layer PQC</strong> secures the connection between Camel and external services (brokers, APIs, databases)</p>
+</li>
+<li>
+<p><strong>Application-layer PQC</strong> (<code>camel-pqc</code>) secures the message content itself, independent of transport</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>For full application-layer PQC documentation, see <a href="#components::pqc-component.adoc" class="xref unresolved">PQC Component</a>
+and <a href="#components:dataformats:pqc-dataformat.adoc" class="xref unresolved">PQC Data Format</a>.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_migration_from_classical_tls"><a class="anchor" href="#_migration_from_classical_tls"></a>Migration from Classical TLS</h3>
+<div class="paragraph">
+<p>For users currently running classical TLS, migration to PQC TLS is straightforward:</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p><strong>Upgrade your JDK</strong> to JDK 25+ (or a JDK that supports <code>X25519MLKEM768</code>)</p>
+</li>
+<li>
+<p><strong>Upgrade Camel</strong> to 4.19 or later</p>
+</li>
+<li>
+<p><strong>No configuration changes needed</strong> — PQC named groups are auto-configured</p>
+</li>
+<li>
+<p><strong>Verify</strong> that your TLS peers (servers, brokers, load balancers) support PQC key exchange or
+at least accept the classical fallback groups (<code>x25519</code>, <code>secp256r1</code>)</p>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p>The hybrid nature of <code>X25519MLKEM768</code> ensures that even if the remote peer does not support
+PQC, the handshake gracefully falls back to classical key exchange using the next available group.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_examples"><a class="anchor" href="#_examples"></a>Examples</h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="_setting_client_authentication_on_the_server_side"><a class="anchor" href="#_setting_client_authentication_on_the_server_side"></a>Setting Client Authentication on the Server Side</h3>
+<div class="paragraph">
+<p>This configuration sets the server side aspects of the TLS configuration
+to require client authentication during the handshake process.  This
+configuration uses the default trust store and a custom key store to
+provide key material for both the server and client sides of the
+SSLContext.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">KeyStoreParameters ksp = new KeyStoreParameters();
+ksp.setResource("file:/users/home/server/keystore.jks");
+ksp.setPassword("keystorePassword");
+
+KeyManagersParameters kmp = new KeyManagersParameters();
+kmp.setKeyStore(ksp);
+kmp.setKeyPassword("keyPassword");
+
+SSLContextServerParameters scsp = new SSLContextServerParameters();
+scsp.setClientAuthentication(ClientAuthentication.REQUIRE);
+SSLContextParameters scp = new SSLContextParameters();
+scp.setServerParameters(scsp);
+scp.setKeyManagers(kmp);
+
+SSLContext context = scp.createSSLContext();
+SSLEngine engine = scp.createSSLEngine();</code></pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_configuring_different_options_on_the_client_and_server_side"><a class="anchor" href="#_configuring_different_options_on_the_client_and_server_side"></a>Configuring Different Options on the Client and Server Side</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>In this example, both the client and server sides share the same custom
+key store; however, the client side allows any supported cipher suite
+while the server side will use the default cipher suite filter and
+exclude any cipher suites that match the patterns:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-text hljs" data-lang="text">.*_NULL_.*
+.*_anon_.*</code></pre>
+</div>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">KeyStoreParameters ksp = new KeyStoreParameters();
+ksp.setResource("file:/users/home/server/keystore.jks");
+ksp.setPassword("keystorePassword");
+
+KeyManagersParameters kmp = new KeyManagersParameters();
+kmp.setKeyStore(ksp);
+kmp.setKeyPassword("keyPassword");
+
+FilterParameters filter = new FilterParameters();
+filter.getInclude().add(".*");
+
+SSLContextClientParameters sccp = new SSLContextClientParameters();
+sccp.setCipherSuitesFilter(filter);
+
+SSLContextParameters scp = new SSLContextParameters();
+scp.setClientParameters(sccp);
+scp.setKeyManagers(kmp);
+
+SSLContext context = scp.createSSLContext();
+SSLEngine engine = scp.createSSLEngine();</code></pre>
+</div>
+</div>
+</div>
+</div>
+</article>
+  </div>
+</main>
+</div>
+<footer class="footer">
+  <p>This page was built using the Antora default UI.</p>
+  <p>The source code for this UI is licensed under the terms of the MPL-2.0 license.</p>
+</footer>
+<script id="site-script" src="../../_/js/site.js" data-ui-root-path="../../_"></script>
+<script async src="../../_/js/vendor/highlight.js"></script>
+  </body>
+</html>

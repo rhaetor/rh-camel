@@ -1,0 +1,976 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Routes :: Red Hat build of Apache Camel</title>
+    <meta name="generator" content="Antora 3.1.14">
+    <link rel="stylesheet" href="../../_/css/site.css">
+  </head>
+  <body class="article">
+<header class="header">
+  <nav class="navbar">
+    <div class="navbar-brand">
+      <a class="navbar-item" href="/">Red Hat build of Apache Camel</a>
+      <button class="navbar-burger" data-target="topbar-nav">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </nav>
+</header>
+<div class="body">
+<div class="nav-container" data-component="manual" data-version="4.22.x">
+  <aside class="nav">
+    <div class="panels">
+<div class="nav-panel-menu is-active" data-panel="menu">
+  <nav class="nav-menu">
+    <button class="nav-menu-toggle" aria-label="Toggle expand/collapse all" style="display: none"></button>
+    <h3 class="title"><a href="index.html">User manual</a></h3>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="getting-started.html">Getting started</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="book-getting-started.html">Getting Started with Apache Camel</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="what-are-the-dependencies.html">What are the dependencies?</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Resources &amp; Guides</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="/community/books/">Books</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="building.html">Building</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="camel-console.html">Camel Developer Console</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="camel-jbang.html">Camel CLI</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="jbang-commands/camel-jbang-commands.html">Camel CLI Command Reference</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="camel-jbang-launcher.html">Camel CLI Launcher</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="camel-jbang-launcher-install.html">Installing the Camel CLI Launcher</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="camel-jbang-kubernetes.html">Camel Kubernetes Plugin</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="camel-jbang-test.html">Camel Testing Plugin</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="camel-jbang-tui.html">Camel TUI</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="camel-jbang-mcp.html">Camel MCP Server</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="camel-jbang-container.html">Camel CLI container</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="camel-maven-plugin.html">Camel Maven Plugin</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="camel-component-maven-plugin.html">Camel Component Maven Plugin</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="camel-report-maven-plugin.html">Camel Maven Report Plugin</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="camel-yaml-dsl-validator-maven-plugin.html">Camel Maven YAML DSL Validator Plugin</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="camel-maven-archetypes.html">Camel Maven Archetypes</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="configuring-route-startup-ordering-and-autostartup.html">Configuring route startup ordering and autostartup</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="component-dsl.html">Component DSL</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="Endpoint-dsl.html">Endpoint DSL</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="dataformat-dsl.html">DataFormat DSL</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="examples.html">Examples</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="graceful-shutdown.html">Graceful Shutdown</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="error-handler.html">Error handler</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="error-registry.html">Error Registry</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="using-propertyplaceholder.html">How to use Camel property placeholders</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="property-placeholder-functions.html">Property Placeholder Functions</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="variables.html">How to use Variables</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="testing.html">Testing</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="test-infra.html">Test Infra</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="notify-builder.html">NotifyBuilder</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="advice-with.html">AdviceWith</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="integration-test.html">Integration Test</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="rest-dsl.html">Working with REST and Rest DSL</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="rest-dsl-binding.html">Rest DSL binding and configuration</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="rest-dsl-openapi.html">Rest DSL contract first</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="rest-dsl-validation.html">Rest DSL error handling and validation</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="writing-components.html">Writing Components</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="sbom.html">Generating SBOMs</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="release-guide.html">Release guide</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="release-guide-website.html">Adding doc versions to the website</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="improving-the-documentation.html">Improving the Documentation</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="migration-and-upgrade.html">Migration and Upgrade</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="camel-3-migration-guide.html">Camel 2.x to 3.0 Migration Guide</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="camel-3x-upgrade-guide.html">Camel 3.x Upgrade Guide</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="camel-4-migration-guide.html">Camel 3.x to 4.0 Migration Guide</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="camel-4x-upgrade-guide.html">Camel 4.x Upgrade Guide</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Security</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="security.html">Security</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="security-policy.html">Security Policy Enforcement</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="security-model.html">Security Model</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="architecture.html">Architecture</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="backlog-debugger.html">Backlog debugger</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="backlog-tracer.html">Backlog Tracer</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="batch-consumer.html">Batch Consumer</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="bean-binding.html">Bean Binding</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="bean-integration.html">Bean Integration</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="browsable-endpoint.html">BrowsableEndpoint</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="camelcontext.html">CamelContext</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="camelcontext-autoconfigure.html">CamelContext Auto Configuration</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="clustering.html">Clustering and Load Balancing</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="component.html">Component</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="data-format.html">Data Format</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="debugger.html">Debugger</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="delay-interceptor.html">Delayer</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="endpoint.html">Endpoints</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="endpoint-annotations.html">Endpoint Annotations</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="exception-clause.html">Exception Clause</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="exception-redelivery.html">Exception Clause redelivery</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="exception-handling-patterns.html">Exception Clause handling patterns</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="exception-advanced.html">Exception Clause advanced usage</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="exchange-pooling.html">Exchange Pooling</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="http-session-handling.html">HTTP-Session Handling</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="parameter-binding-annotations.html">Parameter Binding Annotations</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="pojo-producing.html">POJO Producing</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="pojo-consuming.html">POJO Consuming</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="producertemplate.html">ProducerTemplate</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="consumertemplate.html">ConsumerTemplate</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="error-handler.html">Error Handler</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="exchange.html">Message Exchange</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="exchange-pattern.html">Exchange Pattern</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="using-exchange-pattern-annotations.html">Using Exchange pattern annotations</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="expression.html">Expressions</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../components/next/eips/content-enricher.html">Content Enrichment</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="injector.html">Injector</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../components/next/eips/intercept.html">Intercept</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="jmx.html">JMX</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="lifecycle.html">Camel Lifecycle</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="message-size.html">Message Size</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="oncompletion.html">OnCompletion</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="pluggable-class-resolvers.html">Pluggable Class Resolvers</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="predicate.html">Predicates</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="processor.html">Processor</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="registry.html">Registry</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="route-builder.html">RouteBuilder</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="lambda-route-builder.html">LambdaRouteBuilder</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="route-controller.html">RouteController</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="route-policy.html">RoutePolicy</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="route-configuration.html">RouteConfiguration</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="route-group.html">RouteGroup</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="context-reload.html">ContextReload</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="route-reload.html">RouteReload</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="route-diagram.html">Visual Route Diagrams</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="route-template.html">RouteTemplate</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="route-template-bean-binding.html">Bean Binding</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item is-current-page" data-depth="2">
+    <a class="nav-link" href="routes.html">Routes</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="startup-condition.html">Startup Condition</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="stream-caching.html">Stream caching</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="template-engines.html">Template Engines</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="transformer.html">Transformer</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="threading-model.html">Threading Model</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="virtual-threads.html">Virtual Threads</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="tracer.html">Tracer</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="type-converter.html">Type Converter</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="uris.html">URIs</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="uuidgenerator.html">UuidGenerator</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="validator.html">Validator</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="health-check.html">Health Checks</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Domain Specific Languages</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="dsl.html">Camel Domain Specific Language</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="languages.html">Languages</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="java-dsl.html">Java DSL</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="java-dsl-model-writer.html">Java DSL Model Writer</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="spring.html">Spring support</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Reference</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="#components::index.adoc">Components</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="#components:dataformats:index.adoc">Data Formats</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="#components:languages:index.adoc">Languages</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../components/next/eips/enterprise-integration-patterns.html">EIP Patterns</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="#next@components:eips:ai-patterns.adoc">AI Patterns</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="faq/index.html">FAQ</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="faq/what-is-camel.html">What is Camel?</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="/community/support/">How can I get help?</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="faq/can-i-get-commercial-support.html">Can I get commercial support?</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="faq/how-can-i-get-the-source-code.html">How can I get the source code?</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="faq/how-do-i-edit-the-website.html">How do I edit the documentation?</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="faq/how-do-i-become-a-committer.html">How do I become a committer?</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="faq/why-the-name-camel.html">Why the name Camel?</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+</ul>
+  </nav>
+</div>
+<div class="nav-panel-explore" data-panel="explore">
+  <div class="context">
+    <span class="title">User manual</span>
+    <span class="version">4.22.x</span>
+  </div>
+  <ul class="components">
+    <li class="component is-current">
+      <div class="title"><a href="../index.html">User manual</a></div>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../index.html">default</a>
+        </li>
+        <li class="version is-current">
+          <a href="index.html">4.22.x</a>
+        </li>
+        <li class="version">
+          <a href="../4.18.x/index.html">4.18.x</a>
+        </li>
+        <li class="version">
+          <a href="../4.14.x/index.html">4.14.x</a>
+        </li>
+        <li class="version">
+          <a href="../4.10.x/index.html">4.10.x</a>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</div>
+    </div>
+  </aside>
+</div>
+<main class="article">
+<div class="toolbar" role="navigation">
+<button class="nav-toggle"></button>
+  <a href="../index.html" class="home-link"></a>
+<nav class="breadcrumbs" aria-label="breadcrumbs">
+  <ul>
+    <li><a href="index.html">User manual</a></li>
+    <li><a href="architecture.html">Architecture</a></li>
+    <li><a href="routes.html">Routes</a></li>
+  </ul>
+</nav>
+<div class="page-versions">
+  <button class="version-menu-toggle" title="Show other versions of page">4.22.x</button>
+  <div class="version-menu">
+    <a class="version" href="../routes.html">default</a>
+    <a class="version is-current" href="routes.html">4.22.x</a>
+    <a class="version" href="../4.18.x/routes.html">4.18.x</a>
+    <a class="version" href="../4.14.x/routes.html">4.14.x</a>
+    <a class="version" href="../4.10.x/routes.html">4.10.x</a>
+  </div>
+</div>
+<div class="edit-this-page"><a href="file:///Users/ajonsson/code/rh/rh-jboss-camel/docs/user-manual/modules/ROOT/pages/routes.adoc">Edit this Page</a></div>
+</div>
+  <div class="content">
+<aside class="toc sidebar" data-title="Contents" data-levels="2">
+  <div class="toc-menu"></div>
+</aside>
+<article class="doc">
+<h1 class="page">Routes</h1>
+<div id="preamble">
+<div class="sectionbody">
+<div class="paragraph">
+<p>In Apache Camel, a <em>route</em> is a set of processing steps that are applied to a message as it travels from a source to a destination. A route typically consists of a series of processing steps that are connected in a linear sequence.</p>
+</div>
+<div class="paragraph">
+<p>A Camel <em>route</em> is where the integration flow is defined. For example, you can write a Camel route to specify how two systems can be integrated. You can also specify how the data can be manipulated, routed, or mediated between the systems.</p>
+</div>
+<div class="paragraph">
+<p>The routes are typically defined using a simple, declarative syntax that is easy to read and understand.
+Camel supports <em>coding</em> routes in different <a href="dsl.html" class="xref page">DSLs</a> of your choice.</p>
+</div>
+<div class="paragraph">
+<p>For instance, you could write a <em>route</em> to consume files from an FTP server and send them to an <a href="http://activemq.apache.org">ActiveMQ</a> messaging system.
+A <em>route</em> to do so, would look like this:</p>
+</div>
+<div id="_tabs_1" class="openblock tabs is-loading">
+<div class="content">
+<div class="ulist tablist">
+<ul>
+<li id="_tabs_1_java" class="tab">
+<p>Java</p>
+</li>
+<li id="_tabs_1_xml" class="tab">
+<p>XML</p>
+</li>
+<li id="_tabs_1_yaml" class="tab">
+<p>YAML</p>
+</li>
+</ul>
+</div>
+<div id="_tabs_1_java--panel" class="tabpanel" aria-labelledby="_tabs_1_java">
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">from("ftp:myserver/folder")
+  .to("activemq:queue:cheese");</code></pre>
+</div>
+</div>
+</div>
+<div id="_tabs_1_xml--panel" class="tabpanel" aria-labelledby="_tabs_1_xml">
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;route&gt;
+  &lt;from uri="ftp:myserver/folder"/&gt;
+  &lt;to uri="activemq:queue:cheese"/&gt;
+&lt;/route&gt;</code></pre>
+</div>
+</div>
+</div>
+<div id="_tabs_1_yaml--panel" class="tabpanel" aria-labelledby="_tabs_1_yaml">
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-yaml hljs" data-lang="yaml">- route:
+    from:
+      uri: ftp:myserver/folder
+      steps:
+        - to:
+            uri: activemq:queue:cheese</code></pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_naming_routes"><a class="anchor" href="#_naming_routes"></a>Naming routes</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>You can assign names to your routes in Java DSL using <code>routeId</code>:</p>
+</div>
+<div id="_tabs_2" class="openblock tabs is-loading">
+<div class="content">
+<div class="ulist tablist">
+<ul>
+<li id="_tabs_2_java" class="tab">
+<p>Java</p>
+</li>
+<li id="_tabs_2_xml" class="tab">
+<p>XML</p>
+</li>
+<li id="_tabs_2_yaml" class="tab">
+<p>YAML</p>
+</li>
+</ul>
+</div>
+<div id="_tabs_2_java--panel" class="tabpanel" aria-labelledby="_tabs_2_java">
+<div class="paragraph">
+<p>In Java DSL you use <code>routeId</code> to declare the name/id of the route.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">from("ftp:myserver/folder").routeId("myRoute")
+  .to("activemq:queue:cheese");</code></pre>
+</div>
+</div>
+</div>
+<div id="_tabs_2_xml--panel" class="tabpanel" aria-labelledby="_tabs_2_xml">
+<div class="paragraph">
+<p>In XML DSL you use <code>id</code> in the <code>&lt;route&gt;</code> element to declare the name/id of the route.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;route id="myRoute"&gt;
+  &lt;from uri="ftp:myserver/folder"/&gt;
+  &lt;to uri="activemq:queue:cheese"/&gt;
+&lt;/route&gt;</code></pre>
+</div>
+</div>
+</div>
+<div id="_tabs_2_yaml--panel" class="tabpanel" aria-labelledby="_tabs_2_yaml">
+<div class="paragraph">
+<p>In YAML DSL you use <code>id</code> in the <code>- route</code> node to declare the name/id of the route.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-yaml hljs" data-lang="yaml">- route:
+    id: myRoute
+    from:
+      uri: ftp:myserver/folder
+      steps:
+        - to:
+            uri: activemq:queue:cheese</code></pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_route_description_and_notes"><a class="anchor" href="#_route_description_and_notes"></a>Route Description and Notes</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>You can add a description to your routes, for example to provide a short human summary of what the route does.</p>
+</div>
+<div id="_tabs_3" class="openblock tabs is-loading">
+<div class="content">
+<div class="ulist tablist">
+<ul>
+<li id="_tabs_3_java" class="tab">
+<p>Java</p>
+</li>
+<li id="_tabs_3_xml" class="tab">
+<p>XML</p>
+</li>
+<li id="_tabs_3_yaml" class="tab">
+<p>YAML</p>
+</li>
+</ul>
+</div>
+<div id="_tabs_3_java--panel" class="tabpanel" aria-labelledby="_tabs_3_java">
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">from("ftp:myserver/folder").routeDescription("Routes files from the FTP server to internal messaging system")
+  .to("activemq:queue:cheese");</code></pre>
+</div>
+</div>
+</div>
+<div id="_tabs_3_xml--panel" class="tabpanel" aria-labelledby="_tabs_3_xml">
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;route description="Routes files from the FTP server to internal messaging system"&gt;
+  &lt;from uri="ftp:myserver/folder"/&gt;
+  &lt;to uri="activemq:queue:cheese"/&gt;
+&lt;/route&gt;</code></pre>
+</div>
+</div>
+</div>
+<div id="_tabs_3_yaml--panel" class="tabpanel" aria-labelledby="_tabs_3_yaml">
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-yaml hljs" data-lang="yaml">- route:
+    description: "Routes files from the FTP server to internal messaging system"
+    from:
+      uri: ftp:myserver/folder
+      steps:
+        - to:
+            uri: activemq:cheese</code></pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="paragraph">
+<p>A note (requires <strong>Camel 4.16</strong> onwards) on the other hand is like a <em>code comments</em> for developers or some other kind of information you
+want to keep. Both the notes and descriptions has no impact at runtime but are read-only information.</p>
+</div>
+<div id="_tabs_4" class="openblock tabs is-loading">
+<div class="content">
+<div class="ulist tablist">
+<ul>
+<li id="_tabs_4_java" class="tab">
+<p>Java</p>
+</li>
+<li id="_tabs_4_xml" class="tab">
+<p>XML</p>
+</li>
+<li id="_tabs_4_yaml" class="tab">
+<p>YAML</p>
+</li>
+</ul>
+</div>
+<div id="_tabs_4_java--panel" class="tabpanel" aria-labelledby="_tabs_4_java">
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">from("ftp:myserver/folder").routeDescription("Routes files from the FTP server to internal messaging system")
+    .routeNote("The FTP server can be offline from time to time, and if so then just restart Camel")
+  .to("activemq:queue:cheese");</code></pre>
+</div>
+</div>
+</div>
+<div id="_tabs_4_xml--panel" class="tabpanel" aria-labelledby="_tabs_4_xml">
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;route description="Routes files from the FTP server to internal messaging system"
+       note="The FTP server can be offline from time to time, and if so then just restart Camel"&gt;
+  &lt;from uri="ftp:myserver/folder"/&gt;
+  &lt;to uri="activemq:queue:cheese"/&gt;
+&lt;/route&gt;</code></pre>
+</div>
+</div>
+</div>
+<div id="_tabs_4_yaml--panel" class="tabpanel" aria-labelledby="_tabs_4_yaml">
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-yaml hljs" data-lang="yaml">- route:
+    description: "Routes files from the FTP server to internal messaging system"
+    note: "The FTP server can be offline from time to time, and if so then just restart Camel"
+    from:
+      uri: ftp:myserver/folder
+      steps:
+        - to:
+            uri: activemq:cheese</code></pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="admonitionblock tip">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-tip" title="Tip"></i>
+</td>
+<td class="content">
+You can also add description and notes to EIP patterns
+</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_writing_routes_in_java_using_the_java_dsl"><a class="anchor" href="#_writing_routes_in_java_using_the_java_dsl"></a>Writing Routes in Java using the Java DSL</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>You can create a route using the Java language by extending the <a href="../route-builder.html" class="xref page"><code>RouteBuilder</code> class</a>, and implementing the <code>configure</code> method.</p>
+</div>
+<div class="paragraph">
+<p>Here&#8217;s an example:</p>
+</div>
+<div class="listingblock">
+<div class="title"><em>Java-only: anonymous RouteBuilder class</em></div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">RouteBuilder builder = new RouteBuilder() {
+    public void configure() {
+        from("direct:a").to("direct:b");
+    }
+};</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>The code above is an anonymous class, and its more common to create your own class when using Java DSL for example we
+can create a class called <code>MyRoute</code> which then implements the route as follows:</p>
+</div>
+<div class="listingblock">
+<div class="title"><em>Java-only: named RouteBuilder class</em></div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java"><span class="fold-block is-hidden-folded">import org.apache.camel.builder.RouteBuilder;
+
+</span><span class="fold-block">public class MyRoute extends RouteBuilder {
+
+    @Override
+    public void configure() {
+        from("direct:a").to("direct:b");
+    }
+
+}</span></code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>As you can see from the code snippet above, Camel uses <a href="../uris.html" class="xref page">URIs</a> to wire endpoints together.</p>
+</div>
+<div class="paragraph">
+<p>We refer to this way of writing route as using the <a href="../java-dsl.html" class="xref page">Java DSL</a>.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_route_precondition"><a class="anchor" href="#_route_precondition"></a>Route Precondition</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>The routes can be included or not according to the result of a test. You can express the condition for the tests using the simple language.
+Camel evaluates this condition only once during the initialization phase.</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+When a route is not included due to precondition, then the route is skipped by Camel, and its not possible to include the router later during runtime.
+If you want to include the route, but not start the route, then you can set <code>autoStartup=false</code> on the route. Which allows to start the route later during runtime.
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>Here&#8217;s an example that includes the route only if the parameter <code>format</code> has been set to <code>xml</code>:</p>
+</div>
+<div id="_tabs_5" class="openblock tabs is-loading">
+<div class="content">
+<div class="ulist tablist">
+<ul>
+<li id="_tabs_5_java" class="tab">
+<p>Java</p>
+</li>
+<li id="_tabs_5_xml" class="tab">
+<p>XML</p>
+</li>
+<li id="_tabs_5_yaml" class="tab">
+<p>YAML</p>
+</li>
+</ul>
+</div>
+<div id="_tabs_5_java--panel" class="tabpanel" aria-labelledby="_tabs_5_java">
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">from("direct:in").precondition("'{{format}}' == 'xml'")
+   .unmarshal().jaxb()
+   .to("direct:out");</code></pre>
+</div>
+</div>
+</div>
+<div id="_tabs_5_xml--panel" class="tabpanel" aria-labelledby="_tabs_5_xml">
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;route precondition="'{{format}}' == 'xml'"&gt;
+  &lt;from uri="direct:in"/&gt;
+  &lt;unmarshal&gt;&lt;jaxb/&gt;&lt;/unmarshal&gt;
+  &lt;to uri="direct:out"/&gt;
+&lt;/route&gt;</code></pre>
+</div>
+</div>
+</div>
+<div id="_tabs_5_yaml--panel" class="tabpanel" aria-labelledby="_tabs_5_yaml">
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-yaml hljs" data-lang="yaml">- route:
+    precondition: "'{{format}}' == 'xml'"
+    from:
+      uri: "direct:in"
+      steps:
+        - unmarshal:
+            jaxb: {}
+        - to:
+            uri: direct:out</code></pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_more_information"><a class="anchor" href="#_more_information"></a>More Information</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Check the <a href="dsl.html" class="xref page">list of supported languages</a> that you can use for writing Camel routes.</p>
+</div>
+</div>
+</div>
+</article>
+  </div>
+</main>
+</div>
+<footer class="footer">
+  <p>This page was built using the Antora default UI.</p>
+  <p>The source code for this UI is licensed under the terms of the MPL-2.0 license.</p>
+</footer>
+<script id="site-script" src="../../_/js/site.js" data-ui-root-path="../../_"></script>
+<script async src="../../_/js/vendor/highlight.js"></script>
+  </body>
+</html>

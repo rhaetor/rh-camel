@@ -1,0 +1,1319 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Error Handler :: Red Hat build of Apache Camel</title>
+    <meta name="generator" content="Antora 3.1.14">
+    <link rel="stylesheet" href="../../_/css/site.css">
+  </head>
+  <body class="article">
+<header class="header">
+  <nav class="navbar">
+    <div class="navbar-brand">
+      <a class="navbar-item" href="/">Red Hat build of Apache Camel</a>
+      <button class="navbar-burger" data-target="topbar-nav">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </nav>
+</header>
+<div class="body">
+<div class="nav-container" data-component="manual" data-version="4.22.x">
+  <aside class="nav">
+    <div class="panels">
+<div class="nav-panel-menu is-active" data-panel="menu">
+  <nav class="nav-menu">
+    <button class="nav-menu-toggle" aria-label="Toggle expand/collapse all" style="display: none"></button>
+    <h3 class="title"><a href="index.html">User manual</a></h3>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="getting-started.html">Getting started</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="book-getting-started.html">Getting Started with Apache Camel</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="what-are-the-dependencies.html">What are the dependencies?</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Resources &amp; Guides</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="/community/books/">Books</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="building.html">Building</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="camel-console.html">Camel Developer Console</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="camel-jbang.html">Camel CLI</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="jbang-commands/camel-jbang-commands.html">Camel CLI Command Reference</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="camel-jbang-launcher.html">Camel CLI Launcher</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="camel-jbang-launcher-install.html">Installing the Camel CLI Launcher</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="camel-jbang-kubernetes.html">Camel Kubernetes Plugin</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="camel-jbang-test.html">Camel Testing Plugin</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="camel-jbang-tui.html">Camel TUI</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="camel-jbang-mcp.html">Camel MCP Server</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="camel-jbang-container.html">Camel CLI container</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="camel-maven-plugin.html">Camel Maven Plugin</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="camel-component-maven-plugin.html">Camel Component Maven Plugin</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="camel-report-maven-plugin.html">Camel Maven Report Plugin</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="camel-yaml-dsl-validator-maven-plugin.html">Camel Maven YAML DSL Validator Plugin</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="camel-maven-archetypes.html">Camel Maven Archetypes</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="configuring-route-startup-ordering-and-autostartup.html">Configuring route startup ordering and autostartup</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="component-dsl.html">Component DSL</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="Endpoint-dsl.html">Endpoint DSL</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="dataformat-dsl.html">DataFormat DSL</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="examples.html">Examples</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="graceful-shutdown.html">Graceful Shutdown</a>
+  </li>
+  <li class="nav-item is-current-page" data-depth="2">
+    <a class="nav-link" href="error-handler.html">Error handler</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="error-registry.html">Error Registry</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="using-propertyplaceholder.html">How to use Camel property placeholders</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="property-placeholder-functions.html">Property Placeholder Functions</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="variables.html">How to use Variables</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="testing.html">Testing</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="test-infra.html">Test Infra</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="notify-builder.html">NotifyBuilder</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="advice-with.html">AdviceWith</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="integration-test.html">Integration Test</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="rest-dsl.html">Working with REST and Rest DSL</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="rest-dsl-binding.html">Rest DSL binding and configuration</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="rest-dsl-openapi.html">Rest DSL contract first</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="rest-dsl-validation.html">Rest DSL error handling and validation</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="writing-components.html">Writing Components</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="sbom.html">Generating SBOMs</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="release-guide.html">Release guide</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="release-guide-website.html">Adding doc versions to the website</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="improving-the-documentation.html">Improving the Documentation</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="migration-and-upgrade.html">Migration and Upgrade</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="camel-3-migration-guide.html">Camel 2.x to 3.0 Migration Guide</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="camel-3x-upgrade-guide.html">Camel 3.x Upgrade Guide</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="camel-4-migration-guide.html">Camel 3.x to 4.0 Migration Guide</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="camel-4x-upgrade-guide.html">Camel 4.x Upgrade Guide</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Security</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="security.html">Security</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="security-policy.html">Security Policy Enforcement</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="security-model.html">Security Model</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="architecture.html">Architecture</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="backlog-debugger.html">Backlog debugger</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="backlog-tracer.html">Backlog Tracer</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="batch-consumer.html">Batch Consumer</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="bean-binding.html">Bean Binding</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="bean-integration.html">Bean Integration</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="browsable-endpoint.html">BrowsableEndpoint</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="camelcontext.html">CamelContext</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="camelcontext-autoconfigure.html">CamelContext Auto Configuration</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="clustering.html">Clustering and Load Balancing</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="component.html">Component</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="data-format.html">Data Format</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="debugger.html">Debugger</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="delay-interceptor.html">Delayer</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="endpoint.html">Endpoints</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="endpoint-annotations.html">Endpoint Annotations</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="exception-clause.html">Exception Clause</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="exception-redelivery.html">Exception Clause redelivery</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="exception-handling-patterns.html">Exception Clause handling patterns</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="exception-advanced.html">Exception Clause advanced usage</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="exchange-pooling.html">Exchange Pooling</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="http-session-handling.html">HTTP-Session Handling</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="parameter-binding-annotations.html">Parameter Binding Annotations</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="pojo-producing.html">POJO Producing</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="pojo-consuming.html">POJO Consuming</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="producertemplate.html">ProducerTemplate</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="consumertemplate.html">ConsumerTemplate</a>
+  </li>
+  <li class="nav-item is-current-page" data-depth="2">
+    <a class="nav-link" href="error-handler.html">Error Handler</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="exchange.html">Message Exchange</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="exchange-pattern.html">Exchange Pattern</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="using-exchange-pattern-annotations.html">Using Exchange pattern annotations</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="expression.html">Expressions</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../components/next/eips/content-enricher.html">Content Enrichment</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="injector.html">Injector</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../components/next/eips/intercept.html">Intercept</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="jmx.html">JMX</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="lifecycle.html">Camel Lifecycle</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="message-size.html">Message Size</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="oncompletion.html">OnCompletion</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="pluggable-class-resolvers.html">Pluggable Class Resolvers</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="predicate.html">Predicates</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="processor.html">Processor</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="registry.html">Registry</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="route-builder.html">RouteBuilder</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="lambda-route-builder.html">LambdaRouteBuilder</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="route-controller.html">RouteController</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="route-policy.html">RoutePolicy</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="route-configuration.html">RouteConfiguration</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="route-group.html">RouteGroup</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="context-reload.html">ContextReload</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="route-reload.html">RouteReload</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="route-diagram.html">Visual Route Diagrams</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="route-template.html">RouteTemplate</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="route-template-bean-binding.html">Bean Binding</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="routes.html">Routes</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="startup-condition.html">Startup Condition</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="stream-caching.html">Stream caching</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="template-engines.html">Template Engines</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="transformer.html">Transformer</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="threading-model.html">Threading Model</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="virtual-threads.html">Virtual Threads</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="tracer.html">Tracer</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="type-converter.html">Type Converter</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="uris.html">URIs</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="uuidgenerator.html">UuidGenerator</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="validator.html">Validator</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="health-check.html">Health Checks</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Domain Specific Languages</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="dsl.html">Camel Domain Specific Language</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="languages.html">Languages</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="java-dsl.html">Java DSL</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="java-dsl-model-writer.html">Java DSL Model Writer</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="spring.html">Spring support</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Reference</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="#components::index.adoc">Components</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="#components:dataformats:index.adoc">Data Formats</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="#components:languages:index.adoc">Languages</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../components/next/eips/enterprise-integration-patterns.html">EIP Patterns</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="#next@components:eips:ai-patterns.adoc">AI Patterns</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="faq/index.html">FAQ</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="faq/what-is-camel.html">What is Camel?</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="/community/support/">How can I get help?</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="faq/can-i-get-commercial-support.html">Can I get commercial support?</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="faq/how-can-i-get-the-source-code.html">How can I get the source code?</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="faq/how-do-i-edit-the-website.html">How do I edit the documentation?</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="faq/how-do-i-become-a-committer.html">How do I become a committer?</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="faq/why-the-name-camel.html">Why the name Camel?</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+</ul>
+  </nav>
+</div>
+<div class="nav-panel-explore" data-panel="explore">
+  <div class="context">
+    <span class="title">User manual</span>
+    <span class="version">4.22.x</span>
+  </div>
+  <ul class="components">
+    <li class="component is-current">
+      <div class="title"><a href="../index.html">User manual</a></div>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../index.html">default</a>
+        </li>
+        <li class="version is-current">
+          <a href="index.html">4.22.x</a>
+        </li>
+        <li class="version">
+          <a href="../4.18.x/index.html">4.18.x</a>
+        </li>
+        <li class="version">
+          <a href="../4.14.x/index.html">4.14.x</a>
+        </li>
+        <li class="version">
+          <a href="../4.10.x/index.html">4.10.x</a>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</div>
+    </div>
+  </aside>
+</div>
+<main class="article">
+<div class="toolbar" role="navigation">
+<button class="nav-toggle"></button>
+  <a href="../index.html" class="home-link"></a>
+<nav class="breadcrumbs" aria-label="breadcrumbs">
+  <ul>
+    <li><a href="index.html">User manual</a></li>
+    <li>Resources &amp; Guides</li>
+    <li><a href="error-handler.html">Error handler</a></li>
+  </ul>
+</nav>
+<div class="page-versions">
+  <button class="version-menu-toggle" title="Show other versions of page">4.22.x</button>
+  <div class="version-menu">
+    <a class="version" href="../error-handler.html">default</a>
+    <a class="version is-current" href="error-handler.html">4.22.x</a>
+    <a class="version" href="../4.18.x/error-handler.html">4.18.x</a>
+    <a class="version" href="../4.14.x/error-handler.html">4.14.x</a>
+    <a class="version" href="../4.10.x/error-handler.html">4.10.x</a>
+  </div>
+</div>
+<div class="edit-this-page"><a href="file:///Users/ajonsson/code/rh/rh-jboss-camel/docs/user-manual/modules/ROOT/pages/error-handler.adoc">Edit this Page</a></div>
+</div>
+  <div class="content">
+<aside class="toc sidebar" data-title="Contents" data-levels="2">
+  <div class="toc-menu"></div>
+</aside>
+<article class="doc">
+<h1 class="page">Error Handler</h1>
+<div id="preamble">
+<div class="sectionbody">
+<div class="paragraph">
+<p>Camel supports pluggable
+<a href="https://www.javadoc.io/doc/org.apache.camel/camel-base/current/org/apache/camel/processor/ErrorHandler.html">ErrorHandler</a>
+strategies to deal with errors processing an <a href="../../components/next/eips/eventDrivenConsumer-eip.html" class="xref page">Event Driven Consumer</a>.</p>
+</div>
+<div class="paragraph">
+<p>An alternative is to specify the error handling directly in the <a href="dsl.html" class="xref page">DSL</a>
+using the <a href="exception-clause.html" class="xref page">Exception Clause</a>.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_exception_clause"><a class="anchor" href="#_exception_clause"></a>Exception Clause</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Using Error Handler combined with
+Exception Clause is a very powerful
+combination. We encourage end-users to use this combination in your
+error handling strategies. See samples and
+Exception Clause.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_using_try_catch_finally"><a class="anchor" href="#_using_try_catch_finally"></a>Using try &#8230;&#8203; catch &#8230;&#8203; finally</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Related to error handling is the <a href="try-catch-finally.html" class="xref page">Try Catch
+Finally</a> as DSL you can use directly in your route. Its basically a
+mimic of the regular try catch finally in the Java language but with
+more power.</p>
+</div>
+<div class="paragraph">
+<p>The current implementations Camel provides out of the box are:</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_non_transacted"><a class="anchor" href="#_non_transacted"></a>Non transacted</h2>
+<div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p>DefaultErrorHandler is the default
+error handler in Camel. This error handler does not support a dead
+letter queue, it will propagate exceptions back to the caller, as if
+there were no error handler at all. It has a limited set of features.</p>
+</li>
+<li>
+<p>Dead Letter Channel which supports
+attempting to redeliver the message exchange a number of times before
+sending it to a dead letter endpoint</p>
+</li>
+<li>
+<p>NoErrorHandler for no error handling</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_transacted"><a class="anchor" href="#_transacted"></a>Transacted</h2>
+<div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p>TransactionErrorHandler is the
+default error handler in Camel for transacted routes. See the
+Transactional Client EIP pattern.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>These error handlers can be applied in the DSL to an
+entire set of rules or a specific routing rule as we show in the next
+examples. Error handling rules are inherited on each routing rule within
+a single RouteBuilder</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_short_summary_of_the_provided_error_handlers"><a class="anchor" href="#_short_summary_of_the_provided_error_handlers"></a>Short Summary of the provided Error Handlers</h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="_defaulterrorhandler"><a class="anchor" href="#_defaulterrorhandler"></a>DefaultErrorHandler</h3>
+<div class="paragraph">
+<p>The DefaultErrorHandler is the default
+error handler in Camel. Unlike <a href="../../components/next/eips/dead-letter-channel.html" class="xref page">Dead Letter
+Channel</a> it does not have any dead letter queue, and do <strong>not</strong> handle
+exceptions by default.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_dead_letter_channel"><a class="anchor" href="#_dead_letter_channel"></a>Dead Letter Channel</h3>
+<div class="paragraph">
+<p>The Dead Letter Channel will redeliver at
+most 6 times using 1-second delay, and if the exchange failed it will be
+logged at ERROR level.</p>
+</div>
+<div class="paragraph">
+<p>You can configure the default dead letter endpoint to use:
+or in Spring XML DSL:</p>
+</div>
+<div class="listingblock">
+<div class="title">Spring XML</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;camel:errorHandler id="deadLetterErrorHandler" type="DeadLetterChannel" deadLetterUri="log:dead"&gt;
+
+&lt;camel:camelContext errorHandlerRef="deadLetterErrorHandler"&gt;
+  ...
+&lt;/camel:camelContext&gt;</code></pre>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_no_error_handler"><a class="anchor" href="#_no_error_handler"></a>No Error Handler</h3>
+<div class="paragraph">
+<p>The no error handler is to be used for disabling error handling.</p>
+</div>
+<div id="_tabs_1" class="openblock tabs is-loading">
+<div class="content">
+<div class="ulist tablist">
+<ul>
+<li id="_tabs_1_java" class="tab">
+<p>Java</p>
+</li>
+<li id="_tabs_1_spring_xml" class="tab">
+<p>Spring XML</p>
+</li>
+</ul>
+</div>
+<div id="_tabs_1_java--panel" class="tabpanel" aria-labelledby="_tabs_1_java">
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">errorHandler(noErrorHandler());</code></pre>
+</div>
+</div>
+</div>
+<div id="_tabs_1_spring_xml--panel" class="tabpanel" aria-labelledby="_tabs_1_spring_xml">
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;camel:errorHandler id="noErrorHandler" type="NoErrorHandler"/&gt;
+
+&lt;camel:camelContext errorHandlerRef="noErrorHandler"&gt;
+  ...
+&lt;/camel:camelContext&gt;</code></pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_transactionerrorhandler"><a class="anchor" href="#_transactionerrorhandler"></a>TransactionErrorHandler</h3>
+<div class="paragraph">
+<p>The TransactionErrorHandler is the
+default error handler in Camel for transacted routes.</p>
+</div>
+<div class="admonitionblock tip">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-tip" title="Tip"></i>
+</td>
+<td class="content">
+If you have marked a route as transacted using the <strong>transacted</strong> DSL then
+Camel will automatically use a
+TransactionErrorHandler. It will try
+to lookup the global/per route configured error handler and use it if
+it is a <code>TransactionErrorHandlerBuilder</code> instance. If not Camel will
+automatically create a temporary
+TransactionErrorHandler that
+overrules the default error handler. This is convention over
+configuration.
+</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_features_support_by_various_error_handlers"><a class="anchor" href="#_features_support_by_various_error_handlers"></a>Features support by various Error Handlers</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Here is a breakdown of which features are supported by the
+Error Handler(s):</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 20%;">
+<col style="width: 80%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Feature</th>
+<th class="tableblock halign-left valign-top">Supported by the following Error Handler</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">all scopes</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">DefaultErrorHandler,
+TransactionErrorHandler,
+Dead Letter Channel</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">onException</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">DefaultErrorHandler,
+TransactionErrorHandler,
+Dead Letter Channel</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">onWhen</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">DefaultErrorHandler,
+TransactionErrorHandler,
+Dead Letter Channel</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">continued</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">DefaultErrorHandler,
+TransactionErrorHandler,
+Dead Letter Channel</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">handled</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">DefaultErrorHandler,
+TransactionErrorHandler,
+Dead Letter Channel</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Custom ExceptionPolicy</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">DefaultErrorHandler,
+TransactionErrorHandler,
+Dead Letter Channel</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">useOriginalBody</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">DefaultErrorHandler,
+TransactionErrorHandler,
+Dead Letter Channel</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">retryWhile</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">DefaultErrorHandler,
+TransactionErrorHandler,
+Dead Letter Channel</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">onRedelivery</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">DefaultErrorHandler,
+TransactionErrorHandler,
+Dead Letter Channel</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">RedeliveryPolicy</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">DefaultErrorHandler,
+TransactionErrorHandler,
+Dead Letter Channel</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">asyncDelayedRedelivery</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">DefaultErrorHandler,
+TransactionErrorHandler,
+Dead Letter Channel</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">redeliverWhileStopping</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">DefaultErrorHandler,
+TransactionErrorHandler,
+Dead Letter Channel</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">dead letter queue</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Dead Letter Channel</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">onPrepareFailure</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">DefaultErrorHandler,
+Dead Letter Channel</p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p>See <a href="exception-clause.html" class="xref page">Exception Clause</a> documentation for
+additional documentation of the features above.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_scopes"><a class="anchor" href="#_scopes"></a>Scopes</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>The error handler is scoped as either:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>CamelContext - <em>Globally</em> in XML or <em>globally only</em> within the same <code>RouteBuilder</code> in Java DSL</p>
+</li>
+<li>
+<p>Route - <em>Individually per route</em></p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>The following example shows how you can register a global error handler for the <code>RouteBuilder</code>:</p>
+</div>
+<div class="listingblock">
+<div class="title"><em>Java-only: RouteBuilder with global error handler</em></div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">RouteBuilder builder = new RouteBuilder() {
+    public void configure() {
+        errorHandler(deadLetterChannel("seda:error"));
+
+        // here is our regular route
+        from("seda:a").to("seda:b");
+    }
+};</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>The following example shows how you can register a route specific error
+handler:</p>
+</div>
+<div class="listingblock">
+<div class="title"><em>Java-only: RouteBuilder with route-specific error handler</em></div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">RouteBuilder builder = new RouteBuilder() {
+    public void configure() {
+        // this route is using a nested error handler
+        from("seda:a")
+            // here we configure the error handler
+            .errorHandler(deadLetterChannel("seda:error"))
+            // and we continue with the routing here
+            .to("seda:b");
+
+        // this route will use the default error handler
+        from("seda:b").to("seda:c");
+    }
+};</code></pre>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_xml_and_yaml_based_configuration"><a class="anchor" href="#_xml_and_yaml_based_configuration"></a>XML and YAML based configuration</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p><strong>Java DSL vs. Spring DSL</strong>
+The error handler is configured a bit differently in Java DSL and XML or YAML
+DSL. Legacy Spring XML relies more on standard Spring <code>&lt;beans&gt;</code> XML configuration
+whereas Java DSL uses fluent builders.</p>
+</div>
+<div class="paragraph">
+<p>The error handler can be configured as a legacy Spring XML bean and scoped in:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>global (the <code>&lt;camelContext&gt;</code> tag)</p>
+</li>
+<li>
+<p>per route (the <code>&lt;route&gt;</code> tag)</p>
+</li>
+<li>
+<p>or per policy (the <code>&lt;policy&gt;</code>/<code>&lt;transacted&gt;</code> tag)</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>The error handler is configured with the <code>errorHandlerRef</code> attribute.</p>
+</div>
+<div class="admonitionblock tip">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-tip" title="Tip"></i>
+</td>
+<td class="content">
+<strong>Error Handler Hierarchy</strong><br>
+The error handlers are inherited, so if you only have set a global error
+handler, then it is used everywhere. But you can override this in a route
+and use another error handler.
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>In this example, we configure a <a href="../../components/next/eips/dead-letter-channel.html" class="xref page">Dead Letter
+Channel</a> on the route that should redeliver at most 3 times and use a
+little delay before retrying.</p>
+</div>
+<div id="_tabs_2" class="openblock tabs is-loading">
+<div class="content">
+<div class="ulist tablist">
+<ul>
+<li id="_tabs_2_xml" class="tab">
+<p>XML</p>
+</li>
+<li id="_tabs_2_legacy_spring_xml" class="tab">
+<p>Legacy Spring XML</p>
+</li>
+<li id="_tabs_2_yaml" class="tab">
+<p>YAML</p>
+</li>
+</ul>
+</div>
+<div id="_tabs_2_xml--panel" class="tabpanel" aria-labelledby="_tabs_2_xml">
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;route&gt;
+    &lt;errorHandler&gt;
+        &lt;deadLetterChannel deadLetterUri="mock:dead"&gt;
+            &lt;redeliveryPolicy maximumRedeliveries="3" redeliveryDelay="250"/&gt;
+        &lt;/deadLetterChannel&gt;
+    &lt;/errorHandler&gt;
+    &lt;from uri="direct:in"/&gt;
+    &lt;process ref="myFailureProcessor"/&gt;
+    &lt;to uri="mock:result"/&gt;
+&lt;/route&gt;</code></pre>
+</div>
+</div>
+</div>
+<div id="_tabs_2_legacy_spring_xml--panel" class="tabpanel" aria-labelledby="_tabs_2_legacy_spring_xml">
+<div class="paragraph">
+<p>First we configure the reference to <strong>myDeadLetterErrorHandler</strong> using
+the <code>errorHandlerRef</code> attribute on the <code>route</code> tag.</p>
+</div>
+<div class="paragraph">
+<p>Then we configure <strong>myDeadLetterErrorHandler</strong> that is our
+Dead Letter Channel. This configuration
+is legacy Spring XML using the bean element.
+And finally we have another spring bean for the redelivery policy where
+we can configure the options for how many times to redeliver, delays
+etc.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">    &lt;!-- here we configure our DeadLetterChannel --&gt;
+    &lt;bean id="myDeadLetterErrorHandler" class="org.apache.camel.builder.DeadLetterChannelBuilder"&gt;
+	    &lt;!-- exchanges is routed to mock:dead in cased redelivery failed --&gt;
+        &lt;property name="deadLetterUri" value="mock:dead"/&gt;
+		&lt;!-- reference the redelivery policy to use --&gt;
+        &lt;property name="redeliveryPolicy" ref="myRedeliveryPolicyConfig"/&gt;
+    &lt;/bean&gt;
+
+    &lt;!-- here we set the redelivery settings --&gt;
+    &lt;bean id="myRedeliveryPolicyConfig" class="org.apache.camel.processor.errorhandler.RedeliveryPolicy"&gt;
+	    &lt;!-- try redelivery at most 3 times, after that the exchange is dead and its routed to the mock:dead endpoint --&gt;
+        &lt;property name="maximumRedeliveries" value="3"/&gt;
+		&lt;!-- delay 250ms before redelivery --&gt;
+        &lt;property name="redeliveryDelay" value="250"/&gt;
+    &lt;/bean&gt;
+
+    &lt;camelContext xmlns="http://camel.apache.org/schema/spring"&gt;
+        &lt;!-- set the errorHandlerRef to our DeadLetterChannel, this applies for this route only --&gt;
+        &lt;route errorHandlerRef="myDeadLetterErrorHandler"&gt;
+            &lt;from uri="direct:in"/&gt;
+            &lt;process ref="myFailureProcessor"/&gt;
+            &lt;to uri="mock:result"/&gt;
+        &lt;/route&gt;
+    &lt;/camelContext&gt;</code></pre>
+</div>
+</div>
+</div>
+<div id="_tabs_2_yaml--panel" class="tabpanel" aria-labelledby="_tabs_2_yaml">
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-yaml hljs" data-lang="yaml">- route:
+    errorHandler:
+      deadLetterChannel:
+        deadLetterUri: mock:dead
+        redeliveryPolicy:
+          maximumRedeliveries: 3
+          redeliveryDelay: 250
+    steps:
+      - process:
+          ref: myFailureProcessor
+      - to:
+          uri: mock:result
+    from:
+      uri: direct:in</code></pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_using_the_transactional_error_handler"><a class="anchor" href="#_using_the_transactional_error_handler"></a>Using the transactional error handler</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>The transactional error handler is based on spring transaction. This
+requires the usage of the camel-spring or camel-jta component.</p>
+</div>
+<div class="paragraph">
+<p>See <a href="../../components/next/eips/transactional-client.html" class="xref page">Transactional Client</a> that has many
+samples for how to use and transactional behavior and configuration with
+this error handler.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_how_do_i_retry_failed_messages_forever"><a class="anchor" href="#_how_do_i_retry_failed_messages_forever"></a>How do I retry failed messages forever?</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>If you want to keep the bad message in the original system (such as a message broker),
+then you are also blocking the following messages that has arrived on the queue after the bad
+message.</p>
+</div>
+<div class="paragraph">
+<p>For example with  <a href="#components::activemq-component.adoc" class="xref unresolved">ActiveMQ</a>, Camel will retry consuming a message up til 6 times before
+its moved to the default dead letter queue on the broker (this is ActiveMQ broker specific).</p>
+</div>
+<div class="paragraph">
+<p>If you configure the <a href="defaulterrorhandler.html" class="xref page">Default Error Handler</a> or <a href="../../components/next/eips/dead-letter-channel.html" class="xref page">Dead Letter Channel</a>
+to use <code>maximumRedeliveries = -1</code> then Camel will retry forever.</p>
+</div>
+<div class="admonitionblock important">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-important" title="Important"></i>
+</td>
+<td class="content">
+Beware that there is a difference between letting Camel retry processing a message, such as Camel fails to route a message to an external system (producer) vs
+consuming messages from a messaging system that offers redelivery such as <a href="#components::activemq-component.adoc" class="xref unresolved">ActiveMQ</a>. The latter allows
+to roll back the entire message and attempt processing the same message again from Camel.
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>If an external system such as <a href="#components::activemq-component.adoc" class="xref unresolved">ActiveMQ</a> is redelivering a message,
+then Camel enriches the message with headers that mark this.</p>
+</div>
+<div class="paragraph">
+<p>The <code>CamelRedeliveryCounter</code> contains the number of times it has been redelivered.
+The <code>CamelRedelivered</code> contains a boolean if its redelivered or if it is the first time the message is processed.</p>
+</div>
+<div class="paragraph">
+<p>See also <a href="../../components/next/eips/transactional-client.html" class="xref page">Transactional Client</a>.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_how_do_i_retry_processing_a_message_from_a_certain_point_back_or_an_entire_route"><a class="anchor" href="#_how_do_i_retry_processing_a_message_from_a_certain_point_back_or_an_entire_route"></a>How do I retry processing a message from a certain point back or an entire route</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>By default, Camel will perform any redelivery (retry) attempts
+from the point of failure. So if you want to retry from a point before
+this, you would need to split up your route.</p>
+</div>
+<div class="paragraph">
+<p>In the example below we have 2 routes (<code>direct:start</code>, <code>direct:sub</code>). In
+case of a failure anywhere in the <code>direct:sub</code> route, then the entire
+route is retried. This happens because we have instructed the <code>direct:sub</code>
+route to not use any error handler (e.g. the no error handler). Then we
+link the routes using the <a href="#components::direct-component.adoc" class="xref unresolved">Direct</a> component by calling
+the sub route from the 1st route.</p>
+</div>
+<div id="_tabs_3" class="openblock tabs is-loading">
+<div class="content">
+<div class="ulist tablist">
+<ul>
+<li id="_tabs_3_java" class="tab">
+<p>Java</p>
+</li>
+<li id="_tabs_3_spring_xml" class="tab">
+<p>Spring XML</p>
+</li>
+<li id="_tabs_3_xml" class="tab">
+<p>XML</p>
+</li>
+<li id="_tabs_3_yaml" class="tab">
+<p>YAML</p>
+</li>
+</ul>
+</div>
+<div id="_tabs_3_java--panel" class="tabpanel" aria-labelledby="_tabs_3_java">
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">// in case of io exception then try to redeliver up till 2 times
+// (do not use any delay due faster unit testing)
+onException(IOException.class)
+    .maximumRedeliveries(2).redeliveryDelay(0);
+
+from("direct:start")
+    .to("mock:a")
+    // call sub route (using direct)
+    .to("direct:sub")
+    .to("mock:c");
+
+from("direct:sub")
+    // disable error handler, so the entire route can be retried in case of redelivery
+    .errorHandler(noErrorHandler())
+    .to("mock:b")
+    .bean("myProcessor");</code></pre>
+</div>
+</div>
+</div>
+<div id="_tabs_3_spring_xml--panel" class="tabpanel" aria-labelledby="_tabs_3_spring_xml">
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;!-- this is the processor that will fail the first 2 attempts --&gt;
+&lt;bean id="myProcessor" class="org.apache.camel.processor.RedeliverToSubRouteTest.MyProcessor"/&gt;
+
+&lt;camelContext xmlns="http://camel.apache.org/schema/spring"&gt;
+
+    &lt;!-- setup no error handler with an id, we refer to from the 2nd route --&gt;
+    &lt;errorHandler id="noErrorHandler" type="NoErrorHandler"/&gt;
+
+    &lt;!-- configure on exception to redelivery at most 2 times when an IOException was thrown
+         do not use redelivery delay to run unit test faster --&gt;
+    &lt;onException&gt;
+        &lt;exception&gt;java.io.IOException&lt;/exception&gt;
+        &lt;redeliveryPolicy maximumRedeliveries="2" redeliveryDelay="0"/&gt;
+    &lt;/onException&gt;
+
+    &lt;!-- 1st route, no need to setup error handler, as it will use the default error handler --&gt;
+    &lt;route&gt;
+        &lt;from uri="direct:start"/&gt;
+        &lt;to uri="mock:a"/&gt;
+        &lt;to uri="direct:sub"/&gt;
+        &lt;to uri="mock:c"/&gt;
+    &lt;/route&gt;
+
+    &lt;!-- disable error handler on this route, so the entire route can be redelivered
+         when called from the 1st route --&gt;
+    &lt;route errorHandlerRef="noErrorHandler"&gt;
+        &lt;from uri="direct:sub"/&gt;
+        &lt;to uri="mock:b"/&gt;
+        &lt;process ref="myProcessor"/&gt;
+    &lt;/route&gt;
+&lt;/camelContext&gt;</code></pre>
+</div>
+</div>
+</div>
+<div id="_tabs_3_xml--panel" class="tabpanel" aria-labelledby="_tabs_3_xml">
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;route&gt;
+    &lt;from uri="direct:start"/&gt;
+    &lt;onException&gt;
+        &lt;exception&gt;java.io.IOException&lt;/exception&gt;
+        &lt;redeliveryPolicy maximumRedeliveries="2" redeliveryDelay="0"/&gt;
+    &lt;/onException&gt;
+    &lt;to uri="mock:a"/&gt;
+    &lt;to uri="direct:sub"/&gt;
+    &lt;to uri="mock:c"/&gt;
+&lt;/route&gt;
+
+&lt;route&gt;
+    &lt;errorHandler&gt;
+        &lt;noErrorHandler/&gt;
+    &lt;/errorHandler&gt;
+    &lt;from uri="direct:sub"/&gt;
+    &lt;to uri="mock:b"/&gt;
+    &lt;process ref="myProcessor"/&gt;
+&lt;/route&gt;</code></pre>
+</div>
+</div>
+</div>
+<div id="_tabs_3_yaml--panel" class="tabpanel" aria-labelledby="_tabs_3_yaml">
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-yaml hljs" data-lang="yaml">- route:
+    from:
+      uri: direct:start
+      steps:
+        - onException:
+            exception:
+              - java.io.IOException
+        - redeliveryPolicy:
+            maximumRedeliveries: 2
+            redeliveryDelay: 0
+        - to:
+            uri: mock:a
+        - to:
+            uri: direct:sub
+        - to:
+            uri: mock:c
+
+- route:
+    errorHandler:
+      noErrorHandler: {}
+    from:
+      uri: direct:sub
+      steps:
+        - to:
+            uri: mock:b
+        - process:
+            ref: myProcessor</code></pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="paragraph">
+<p>The code above is based on a unit test, and as you can see the
+processor below is configured to fail the first 2 attempts.
+So that means the entire <code>direct:sub</code> route is redelivered, meaning that
+the <code>mock:b</code> endpoint receives the incoming message again.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">public static class MyProcessor implements Processor {
+
+    private int counter;
+
+    @Override
+    public void process(Exchange exchange) throws Exception {
+        // use a processor to simulate error in the first 2 calls
+        if (counter++ &lt; 2) {
+            throw new IOException("Forced");
+        }
+        exchange.getIn().setBody("Bye World");
+    }
+}</code></pre>
+</div>
+</div>
+</div>
+</div>
+</article>
+  </div>
+</main>
+</div>
+<footer class="footer">
+  <p>This page was built using the Antora default UI.</p>
+  <p>The source code for this UI is licensed under the terms of the MPL-2.0 license.</p>
+</footer>
+<script id="site-script" src="../../_/js/site.js" data-ui-root-path="../../_"></script>
+<script async src="../../_/js/vendor/highlight.js"></script>
+  </body>
+</html>

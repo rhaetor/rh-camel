@@ -1,0 +1,1198 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Threading Model :: Red Hat build of Apache Camel</title>
+    <meta name="generator" content="Antora 3.1.14">
+    <link rel="stylesheet" href="../../_/css/site.css">
+  </head>
+  <body class="article">
+<header class="header">
+  <nav class="navbar">
+    <div class="navbar-brand">
+      <a class="navbar-item" href="/">Red Hat build of Apache Camel</a>
+      <button class="navbar-burger" data-target="topbar-nav">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </nav>
+</header>
+<div class="body">
+<div class="nav-container" data-component="manual" data-version="4.22.x">
+  <aside class="nav">
+    <div class="panels">
+<div class="nav-panel-menu is-active" data-panel="menu">
+  <nav class="nav-menu">
+    <button class="nav-menu-toggle" aria-label="Toggle expand/collapse all" style="display: none"></button>
+    <h3 class="title"><a href="index.html">User manual</a></h3>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="getting-started.html">Getting started</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="book-getting-started.html">Getting Started with Apache Camel</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="what-are-the-dependencies.html">What are the dependencies?</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Resources &amp; Guides</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="/community/books/">Books</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="building.html">Building</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="camel-console.html">Camel Developer Console</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="camel-jbang.html">Camel CLI</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="jbang-commands/camel-jbang-commands.html">Camel CLI Command Reference</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="camel-jbang-launcher.html">Camel CLI Launcher</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="camel-jbang-launcher-install.html">Installing the Camel CLI Launcher</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="camel-jbang-kubernetes.html">Camel Kubernetes Plugin</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="camel-jbang-test.html">Camel Testing Plugin</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="camel-jbang-tui.html">Camel TUI</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="camel-jbang-mcp.html">Camel MCP Server</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="camel-jbang-container.html">Camel CLI container</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="camel-maven-plugin.html">Camel Maven Plugin</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="camel-component-maven-plugin.html">Camel Component Maven Plugin</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="camel-report-maven-plugin.html">Camel Maven Report Plugin</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="camel-yaml-dsl-validator-maven-plugin.html">Camel Maven YAML DSL Validator Plugin</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="camel-maven-archetypes.html">Camel Maven Archetypes</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="configuring-route-startup-ordering-and-autostartup.html">Configuring route startup ordering and autostartup</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="component-dsl.html">Component DSL</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="Endpoint-dsl.html">Endpoint DSL</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="dataformat-dsl.html">DataFormat DSL</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="examples.html">Examples</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="graceful-shutdown.html">Graceful Shutdown</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="error-handler.html">Error handler</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="error-registry.html">Error Registry</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="using-propertyplaceholder.html">How to use Camel property placeholders</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="property-placeholder-functions.html">Property Placeholder Functions</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="variables.html">How to use Variables</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="testing.html">Testing</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="test-infra.html">Test Infra</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="notify-builder.html">NotifyBuilder</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="advice-with.html">AdviceWith</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="integration-test.html">Integration Test</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="rest-dsl.html">Working with REST and Rest DSL</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="rest-dsl-binding.html">Rest DSL binding and configuration</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="rest-dsl-openapi.html">Rest DSL contract first</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="rest-dsl-validation.html">Rest DSL error handling and validation</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="writing-components.html">Writing Components</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="sbom.html">Generating SBOMs</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="release-guide.html">Release guide</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="release-guide-website.html">Adding doc versions to the website</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="improving-the-documentation.html">Improving the Documentation</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="migration-and-upgrade.html">Migration and Upgrade</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="camel-3-migration-guide.html">Camel 2.x to 3.0 Migration Guide</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="camel-3x-upgrade-guide.html">Camel 3.x Upgrade Guide</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="camel-4-migration-guide.html">Camel 3.x to 4.0 Migration Guide</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="camel-4x-upgrade-guide.html">Camel 4.x Upgrade Guide</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Security</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="security.html">Security</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="security-policy.html">Security Policy Enforcement</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="security-model.html">Security Model</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="architecture.html">Architecture</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="backlog-debugger.html">Backlog debugger</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="backlog-tracer.html">Backlog Tracer</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="batch-consumer.html">Batch Consumer</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="bean-binding.html">Bean Binding</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="bean-integration.html">Bean Integration</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="browsable-endpoint.html">BrowsableEndpoint</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="camelcontext.html">CamelContext</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="camelcontext-autoconfigure.html">CamelContext Auto Configuration</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="clustering.html">Clustering and Load Balancing</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="component.html">Component</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="data-format.html">Data Format</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="debugger.html">Debugger</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="delay-interceptor.html">Delayer</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="endpoint.html">Endpoints</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="endpoint-annotations.html">Endpoint Annotations</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="exception-clause.html">Exception Clause</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="exception-redelivery.html">Exception Clause redelivery</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="exception-handling-patterns.html">Exception Clause handling patterns</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="exception-advanced.html">Exception Clause advanced usage</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="exchange-pooling.html">Exchange Pooling</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="http-session-handling.html">HTTP-Session Handling</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="parameter-binding-annotations.html">Parameter Binding Annotations</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="pojo-producing.html">POJO Producing</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="pojo-consuming.html">POJO Consuming</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="producertemplate.html">ProducerTemplate</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="consumertemplate.html">ConsumerTemplate</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="error-handler.html">Error Handler</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="exchange.html">Message Exchange</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="exchange-pattern.html">Exchange Pattern</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="using-exchange-pattern-annotations.html">Using Exchange pattern annotations</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="expression.html">Expressions</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../components/next/eips/content-enricher.html">Content Enrichment</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="injector.html">Injector</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../components/next/eips/intercept.html">Intercept</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="jmx.html">JMX</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="lifecycle.html">Camel Lifecycle</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="message-size.html">Message Size</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="oncompletion.html">OnCompletion</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="pluggable-class-resolvers.html">Pluggable Class Resolvers</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="predicate.html">Predicates</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="processor.html">Processor</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="registry.html">Registry</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="route-builder.html">RouteBuilder</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="lambda-route-builder.html">LambdaRouteBuilder</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="route-controller.html">RouteController</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="route-policy.html">RoutePolicy</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="route-configuration.html">RouteConfiguration</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="route-group.html">RouteGroup</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="context-reload.html">ContextReload</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="route-reload.html">RouteReload</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="route-diagram.html">Visual Route Diagrams</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="route-template.html">RouteTemplate</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="route-template-bean-binding.html">Bean Binding</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="routes.html">Routes</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="startup-condition.html">Startup Condition</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="stream-caching.html">Stream caching</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="template-engines.html">Template Engines</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="transformer.html">Transformer</a>
+  </li>
+  <li class="nav-item is-current-page" data-depth="2">
+    <a class="nav-link" href="threading-model.html">Threading Model</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="virtual-threads.html">Virtual Threads</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="tracer.html">Tracer</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="type-converter.html">Type Converter</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="uris.html">URIs</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="uuidgenerator.html">UuidGenerator</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="validator.html">Validator</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="health-check.html">Health Checks</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Domain Specific Languages</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="dsl.html">Camel Domain Specific Language</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="languages.html">Languages</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="java-dsl.html">Java DSL</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="java-dsl-model-writer.html">Java DSL Model Writer</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="spring.html">Spring support</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Reference</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="#components::index.adoc">Components</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="#components:dataformats:index.adoc">Data Formats</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="#components:languages:index.adoc">Languages</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../components/next/eips/enterprise-integration-patterns.html">EIP Patterns</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="#next@components:eips:ai-patterns.adoc">AI Patterns</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="faq/index.html">FAQ</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="faq/what-is-camel.html">What is Camel?</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="/community/support/">How can I get help?</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="faq/can-i-get-commercial-support.html">Can I get commercial support?</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="faq/how-can-i-get-the-source-code.html">How can I get the source code?</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="faq/how-do-i-edit-the-website.html">How do I edit the documentation?</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="faq/how-do-i-become-a-committer.html">How do I become a committer?</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="faq/why-the-name-camel.html">Why the name Camel?</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+</ul>
+  </nav>
+</div>
+<div class="nav-panel-explore" data-panel="explore">
+  <div class="context">
+    <span class="title">User manual</span>
+    <span class="version">4.22.x</span>
+  </div>
+  <ul class="components">
+    <li class="component is-current">
+      <div class="title"><a href="../index.html">User manual</a></div>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../index.html">default</a>
+        </li>
+        <li class="version is-current">
+          <a href="index.html">4.22.x</a>
+        </li>
+        <li class="version">
+          <a href="../4.18.x/index.html">4.18.x</a>
+        </li>
+        <li class="version">
+          <a href="../4.14.x/index.html">4.14.x</a>
+        </li>
+        <li class="version">
+          <a href="../4.10.x/index.html">4.10.x</a>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</div>
+    </div>
+  </aside>
+</div>
+<main class="article">
+<div class="toolbar" role="navigation">
+<button class="nav-toggle"></button>
+  <a href="../index.html" class="home-link"></a>
+<nav class="breadcrumbs" aria-label="breadcrumbs">
+  <ul>
+    <li><a href="index.html">User manual</a></li>
+    <li><a href="architecture.html">Architecture</a></li>
+    <li><a href="threading-model.html">Threading Model</a></li>
+  </ul>
+</nav>
+<div class="page-versions">
+  <button class="version-menu-toggle" title="Show other versions of page">4.22.x</button>
+  <div class="version-menu">
+    <a class="version" href="../threading-model.html">default</a>
+    <a class="version is-current" href="threading-model.html">4.22.x</a>
+    <a class="version" href="../4.18.x/threading-model.html">4.18.x</a>
+    <a class="version" href="../4.14.x/threading-model.html">4.14.x</a>
+    <a class="version" href="../4.10.x/threading-model.html">4.10.x</a>
+  </div>
+</div>
+<div class="edit-this-page"><a href="file:///Users/ajonsson/code/rh/rh-jboss-camel/docs/user-manual/modules/ROOT/pages/threading-model.adoc">Edit this Page</a></div>
+</div>
+  <div class="content">
+<aside class="toc sidebar" data-title="Contents" data-levels="2">
+  <div class="toc-menu"></div>
+</aside>
+<article class="doc">
+<h1 class="page">Threading Model</h1>
+<div id="preamble">
+<div class="sectionbody">
+<div class="paragraph">
+<p>The threading model in Camel is based on a pluggable reactive routing engine,
+and thread pools from the JDK concurrency API.</p>
+</div>
+<div class="paragraph">
+<p>This page focuses on thread pools.
+Camel leverages thread pools in several places such as:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Several <a href="../../components/next/eips/enterprise-integration-patterns.html" class="xref page">EIP</a> patterns support using thread pools for
+concurrency</p>
+</li>
+<li>
+<p><a href="#components::seda-component.adoc" class="xref unresolved">SEDA</a> component for asynchronous connectivity</p>
+</li>
+<li>
+<p><a href="../../components/next/eips/threads-eip.html" class="xref page">Threads</a> EIP in Camel routes</p>
+</li>
+<li>
+<p>Several components use thread pools out of the box, such as
+<a href="#components::jms-component.adoc" class="xref unresolved">JMS</a>, <a href="#components::kafka-component.adoc" class="xref unresolved">Kafka</a>, <a href="#components::netty-component.adoc" class="xref unresolved">Netty</a> or <a href="#components::jetty-component.adoc" class="xref unresolved">Jetty</a></p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_thread_pool_profiles"><a class="anchor" href="#_thread_pool_profiles"></a>Thread pool profiles</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>By default, when a thread pool is to be created by Camel, then the pool configuration
+is based upon a profile, the <em>default thread pool profile</em></p>
+</div>
+<div class="paragraph">
+<p>The default profile is pre-configured out of the box with the following settings:</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 25%;">
+<col style="width: 25%;">
+<col style="width: 50%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Option</th>
+<th class="tableblock halign-left valign-top">Default</th>
+<th class="tableblock halign-left valign-top">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>poolSize</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>10</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Sets the default core pool size (threads to keep minimum in pool)</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>keepAliveTime</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>60</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Sets the default keep alive time (in seconds) for inactive threads</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>maxPoolSize</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>20</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Sets the default maximum pool size</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>maxQueueSize</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>1000</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Sets the default maximum number of tasks in the work queue. Use -1 for an unbounded queue.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>allowCoreThreadTimeOut</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>true</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Sets default whether to allow core threads to timeout</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>rejectedPolicy</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>CallerRuns</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Sets the default handler for tasks which cannot be executed by the thread pool. Has three options:
+<code>Abort</code>, <code>CallerRuns</code>, <code>Block</code>. See <a href="#rejected-policy">Rejected Policy</a> for details.</p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p>What that means is that for example when you use
+<a href="../../components/next/eips/multicast-eip.html" class="xref page">Multicast</a> with <code>parallelProcessing=true</code> enabled,
+then it would create a thread pool based on the profile above.</p>
+</div>
+<div class="paragraph">
+<p>You can define as many thread pool profiles as you like. But there must
+be only <strong>one</strong> default profile. A custom thread pool profile will inherit
+from the default profile. Which means that any option you do not
+explicit define will fallback and use the option from the default
+profile.</p>
+</div>
+<div class="sect2">
+<h3 id="_configuring_default_thread_pool_profile"><a class="anchor" href="#_configuring_default_thread_pool_profile"></a>Configuring default thread pool profile</h3>
+<div class="paragraph">
+<p>In Spring XML you can configure thread pool profile with <code>threadPoolProfile</code> as shown:</p>
+</div>
+<div id="_tabs_1" class="openblock tabs is-loading">
+<div class="content">
+<div class="ulist tablist">
+<ul>
+<li id="_tabs_1_java" class="tab">
+<p>Java</p>
+</li>
+<li id="_tabs_1_spring_xml" class="tab">
+<p>Spring XML</p>
+</li>
+<li id="_tabs_1_application_properties" class="tab">
+<p>Application Properties</p>
+</li>
+</ul>
+</div>
+<div id="_tabs_1_java--panel" class="tabpanel" aria-labelledby="_tabs_1_java">
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">ThreadPoolProfile profile = camelContext.getExecutorServiceManager().getDefaultThreadPoolProfile();
+profile.setPoolSize(5);
+profile.setMaxPoolSize(10);</code></pre>
+</div>
+</div>
+</div>
+<div id="_tabs_1_spring_xml--panel" class="tabpanel" aria-labelledby="_tabs_1_spring_xml">
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;threadPoolProfile id="defaultThreadPoolProfile"
+    defaultProfile="true"
+    poolSize="5"
+    maxPoolSize="10"/&gt;</code></pre>
+</div>
+</div>
+</div>
+<div id="_tabs_1_application_properties--panel" class="tabpanel" aria-labelledby="_tabs_1_application_properties">
+<div class="paragraph">
+<p>You can also configure the thread pools in <code>application.properties</code>. The default pool can easily be configured as follows:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-properties hljs" data-lang="properties">## configure default thread pool profile
+camel.threadpool.pool-size = 5
+camel.threadpool.max-pool-size = 5</code></pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_using_thread_pool_profiles"><a class="anchor" href="#_using_thread_pool_profiles"></a>Using thread pool profiles</h3>
+<div class="paragraph">
+<p>Suppose you want to use a custom thread pool profile for a Multicast EIP
+pattern in a Camel route you can do it using the <code>executorServiceRef</code>
+attribute as shown in Spring XML:</p>
+</div>
+<div id="_tabs_2" class="openblock tabs is-loading">
+<div class="content">
+<div class="ulist tablist">
+<ul>
+<li id="_tabs_2_java" class="tab">
+<p>Java</p>
+</li>
+<li id="_tabs_2_spring_xml" class="tab">
+<p>Spring XML</p>
+</li>
+<li id="_tabs_2_yaml" class="tab">
+<p>YAML</p>
+</li>
+</ul>
+</div>
+<div id="_tabs_2_java--panel" class="tabpanel" aria-labelledby="_tabs_2_java">
+<div class="paragraph">
+<p>In Java DSL you can use <code>ThreadPoolProfileBuilder</code> to create a profile and then register the profile:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">// setup thread pool profile
+ThreadPoolProfileBuilder builder = new ThreadPoolProfileBuilder("fooProfile");
+builder.poolSize(20).maxPoolSize(50).maxQueueSize(-1);
+
+// add profile to camel
+camelContext.getExecutorServiceManager().registerThreadPoolProfile(builder.build());
+
+// camel routes can now refer to the thread pool via its id
+from("direct:start")
+  .multicast().aggregationStrategy("myStrategy").executorService("fooProfile").to("xxx");</code></pre>
+</div>
+</div>
+</div>
+<div id="_tabs_2_spring_xml--panel" class="tabpanel" aria-labelledby="_tabs_2_spring_xml">
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;camelContext&gt;
+
+    &lt;threadPoolProfile id="fooProfile"
+                       poolSize="20" maxPoolSize="50" maxQueueSize="-1"/&gt;
+
+    &lt;route&gt;
+       &lt;multicast aggregationStrategy="myStrategy" executorServiceRef="fooProfile"&gt;
+          ...
+       &lt;/multicast&gt;
+    &lt;/route&gt;
+&lt;/camelContext&gt;</code></pre>
+</div>
+</div>
+</div>
+<div id="_tabs_2_yaml--panel" class="tabpanel" aria-labelledby="_tabs_2_yaml">
+<div class="paragraph">
+<p>To create a new profile, then use <code>camel.threadpool.config[profileId]</code> syntax as shown below:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-properties hljs" data-lang="properties">camel.threadpool.config[fooProfile].id = fooProfile
+camel.threadpool.config[fooProfile].pool-size = 20
+camel.threadpool.config[fooProfile].max-pool-size = 50
+camel.threadpool.config[fooProfile].max-queue-size = -1</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>And then you can refer to the thread pool in the Camel route:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-yaml hljs" data-lang="yaml">- route:
+    from:
+      uri: direct:start
+      steps:
+        - multicast:
+            aggregationStrategy: myStrategy
+            executorService: fooProfile
+            steps:
+              - to:
+                  uri: log:hello</code></pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="paragraph">
+<p>What Camel will do at runtime is to lookup in the
+<a href="registry.html" class="xref page">Registry</a> for a <code>ExecutorService</code> with the id <code>fooProfile</code>.
+If none found it will fallback and see if there is a
+<code>ThreadPoolProfile</code> defined with that id. In this example there is a profile,
+so the profile is used as base settings for creating a new <code>ExecutorService</code> which is
+handed back to the <a href="../../components/next/eips/multicast-eip.html" class="xref page">Multicast</a> EIP to use in the
+Camel route.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_creating_custom_thread_pools"><a class="anchor" href="#_creating_custom_thread_pools"></a>Creating custom thread pools</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>You can also use the <code>&lt;threadPool&gt;</code> tag in Spring XML to create a
+Java thread pool (<code>ExecutorService</code>). Notice that any options you
+do not explicit define, will have Camel to use the default thread pool
+profile as fallback. For example if you omit setting the <code>maxQueueSize</code>
+then Camel will fallback and use the value from the default thread pool
+profiles, which by default is <code>1000</code>.</p>
+</div>
+<div class="dlist">
+<dl>
+<dt class="hdlist1">Spring XML</dt>
+<dd>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;camelContext&gt;
+
+    &lt;threadPool id="nyPool" poolSize="20" maxPoolSize="50"/&gt;
+
+    &lt;route&gt;
+       &lt;multicast aggregationStrategy="myStrategy" executorServiceRef="myPool"&gt;
+          ...
+       &lt;/multicast&gt;
+    &lt;/route&gt;
+&lt;/camelContext&gt;</code></pre>
+</div>
+</div>
+</dd>
+</dl>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_what_is_the_difference_between_thread_pool_and_thread_pool_profile"><a class="anchor" href="#_what_is_the_difference_between_thread_pool_and_thread_pool_profile"></a>What is the difference between thread-pool and thread-pool-profile?</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>A thread pool profile is a recipe for creating 1 or more actual thread pools (ie <code>ExecutorService</code>).
+A thread pool is a concrete <code>ExecutorService</code> object.</p>
+</div>
+<div class="paragraph">
+<p>The purpose is to use profiles to make it easy to create many thread pools using the same settings.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_customizing_thread_names"><a class="anchor" href="#_customizing_thread_names"></a>Customizing thread names</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>On the <code>ExecutorServiceManager</code> you can
+configure the thread name pattern using the <code>setThreadNamePattern</code>
+method, which defines the thread names used when a thread pool creates a
+thread.</p>
+</div>
+<div class="paragraph">
+<p>The default pattern is:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-text hljs" data-lang="text">Camel (#camelId#) thread ##counter# - #name#</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>In the pattern you can use the following placeholders</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>#camelId#</code> - The <a href="camelcontext.html" class="xref page">CamelContext</a> name</p>
+</li>
+<li>
+<p><code>#counter#</code> An unique incrementing counter</p>
+</li>
+<li>
+<p><code>#name#</code> - The thread name</p>
+</li>
+<li>
+<p><code>#longName#</code> - The long thread name which can include endpoint parameters etc.</p>
+</li>
+</ul>
+</div>
+<div id="_tabs_3" class="openblock tabs is-loading">
+<div class="content">
+<div class="ulist tablist">
+<ul>
+<li id="_tabs_3_java" class="tab">
+<p>Java</p>
+</li>
+<li id="_tabs_3_spring_xml" class="tab">
+<p>Spring XML</p>
+</li>
+<li id="_tabs_3_application_properties" class="tab">
+<p>Application Properties</p>
+</li>
+</ul>
+</div>
+<div id="_tabs_3_java--panel" class="tabpanel" aria-labelledby="_tabs_3_java">
+<div class="paragraph">
+<p>In Javayou set the pattern on the <code>ExecutorServiceMananger</code> as shown:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">CamelContext camel = ...
+camel.getExecutorServiceManager().setThreadNamePattern("Riding the thread #counter#")</code></pre>
+</div>
+</div>
+</div>
+<div id="_tabs_3_spring_xml--panel" class="tabpanel" aria-labelledby="_tabs_3_spring_xml">
+<div class="paragraph">
+<p>In Spring XML the pattern can be set with <code>threadNamePattern</code> attribute as shown:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;camelContext threadNamePattern="Riding the thread #counter#"&gt;
+  &lt;route&gt;
+    &lt;from uri="seda:start"/&gt;
+    &lt;to uri="log:result"/&gt;
+    &lt;to uri="mock:result"/&gt;
+  &lt;/route&gt;
+&lt;/camelContext&gt;</code></pre>
+</div>
+</div>
+</div>
+<div id="_tabs_3_application_properties--panel" class="tabpanel" aria-labelledby="_tabs_3_application_properties">
+<div class="paragraph">
+<p>And with camel-main, Spring Boot or Quarkus you can configure this in the <code>application.properties|yaml</code> file:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-properties hljs" data-lang="properties">camel.main.thread-name-pattern = Riding the thread #counter#</code></pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_shutting_down_thread_pools"><a class="anchor" href="#_shutting_down_thread_pools"></a>Shutting down thread pools</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>All thread pools created by Camel will be properly shutdown when
+<code>CamelContext</code> shutdowns which ensures no leaks in the pools in case you
+run in a server environment with hot deployments and the likes.</p>
+</div>
+<div class="paragraph">
+<p>The <code>ExecutorServiceManager</code> has APIs for shutting down thread pools
+gracefully and aggressively. It is encouraged to use this API for creating
+and shutting down thread pools.</p>
+</div>
+<div class="paragraph">
+<p>The method <code>shutdownGraceful(executorService)</code> from <code>ExecutorServiceManager</code>
+will shutdown graceful at first, until a timeout value is hit. After
+that it shuts down aggressively, again using the timeout value to wait for
+the operation to complete. This means you can wait at most 2 x timeout
+for shutting down the thread pool.</p>
+</div>
+<div class="paragraph">
+<p>The timeout value is by default <code>10000</code> millis. You can configure a
+custom value on the <code>ExecutorServiceManager</code> if needed. During shutdown
+Camel will log every 2 seconds at INFO level progress of shutting down
+the thread pool. For example in case a shutdown takes a while, then
+there is activity in the logs.</p>
+</div>
+<div class="paragraph">
+<p>The APIs on <code>ExecutorServiceManager</code> that is related to shutting down a
+thread pool is as follows:</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 25%;">
+<col style="width: 75%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Method</th>
+<th class="tableblock halign-left valign-top">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">shutdown</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Marks the thread pool as shutdown(like calling the <code>ExecutorService.shutdown()</code> method).</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">shutdownNow</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Forces the thread pool to shut down now(like calling the <code>ExecutorService.shutdownNow()</code> method).</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">shutdownGraceful</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Marks the thread pool as shutdown, and graceful shutdown the pool, by waiting for tasks to complete. A default timeout value of 10 sec is used, before shutdown becomes aggressive using <code>shutdownNow</code>, forcing threads to shut down quicker.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">shutdownGraceful(timeout)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">As shutdownGraceful but with custom timeout value</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">awaitTermination</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">To wait graceful for the termination of a thread pool (e.g. to wait for its tasks to complete). Will wait until all tasks are completed or timed out.</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_jmx_management"><a class="anchor" href="#_jmx_management"></a>JMX Management</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>All the thread pools that Camel creates are managed, and thus you can see them in JMX under the <code>threadpools</code> tree.</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+This requires to enabled JMX by including <code>camel-management</code> JAR in the classpath.
+</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_component_developers"><a class="anchor" href="#_component_developers"></a>Component developers</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>If you develop your own Camel component and are in need of a thread pool,
+then it is advised to use the <code>ExecutorServiceStrategy</code>/<code>ExecutorServiceManager</code>
+to create the thread pool you need.</p>
+</div>
+<div class="sect2">
+<h3 id="_executorservicestrategy_and_executorservicemanager"><a class="anchor" href="#_executorservicestrategy_and_executorservicemanager"></a>ExecutorServiceStrategy and ExecutorServiceManager</h3>
+<div class="paragraph">
+<p>Camel provides a pluggable strategy to hook in your own thread pool
+provider.See the <code>org.apache.camel.spi.ExecutorServiceStrategy</code> interface which
+you should implement and hook into the WorkManager.</p>
+</div>
+<div class="paragraph">
+<p>To hook in custom thread pool providers a
+<code>ThreadPoolFactory</code> interface can be implemented. The implementation can
+be set in the <code>ExecutorServiceManager</code>.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="rejected-policy"><a class="anchor" href="#rejected-policy"></a>Rejected Policy</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>The <code>rejectedPolicy</code> option controls what happens when a thread pool cannot accept a new task
+(i.e., the pool and its work queue are full). The available policies are:</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 20%;">
+<col style="width: 80%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Policy</th>
+<th class="tableblock halign-left valign-top">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>CallerRuns</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The task runs on the caller&#8217;s thread. This provides natural backpressure — the caller is blocked
+doing useful work and cannot submit more tasks until it finishes. Tasks are never lost. This is the default.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Abort</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The task is rejected with a <code>RejectedExecutionException</code>. Use this for HTTP APIs or latency-sensitive
+systems where failing fast is preferred over blocking.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Block</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The caller blocks indefinitely until capacity becomes available. No timeout, no rejection. Use this for
+message broker consumers and batch workloads where losing a task is unacceptable and latency is less critical.</p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p>With platform threads, these policies apply when the <code>ThreadPoolExecutor</code> work queue is full. With virtual threads,
+the same policies apply when the concurrency semaphore has no available permits (see <a href="#virtual-threads">Virtual Threads</a>).</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="virtual-threads"><a class="anchor" href="#virtual-threads"></a>Virtual Threads</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Starting from Java 21, the default <code>ThreadPoolFactory</code> can build <code>ExecutorService</code> and <code>ScheduledExecutorService</code> that
+use <a href="https://openjdk.org/jeps/444">virtual threads</a> instead of platform threads.</p>
+</div>
+<div class="paragraph">
+<p>To enable virtual threads, set the System property <code>camel.threads.virtual.enabled</code> to <code>true</code> and run Camel using
+Java 21 or above.</p>
+</div>
+<div class="paragraph">
+<p>Be aware that even if it is enabled, there are some use cases where platform threads are still used, for example, if the
+thread factory is configured to create non-daemon threads since virtual threads can only be daemons, or when the
+<code>ExecutorService</code> or <code>ScheduledExecutorService</code> to build cannot have more than one thread or finally when <code>corePoolSize</code>
+is set to zero and <code>maxQueueSize</code> is set to a value less or equal to <code>0</code>.</p>
+</div>
+<div class="sect2">
+<h3 id="_bounded_concurrency_with_virtual_threads"><a class="anchor" href="#_bounded_concurrency_with_virtual_threads"></a>Bounded Concurrency with Virtual Threads</h3>
+<div class="paragraph">
+<p>When <code>maxQueueSize</code> is set to a positive value, Camel wraps the virtual thread executor with a semaphore-based
+concurrency limit. This ensures that <code>maxQueueSize</code> is honored for backpressure, even though virtual threads do not
+use a traditional work queue.</p>
+</div>
+<div class="paragraph">
+<p>Unlike <code>ThreadPoolExecutor</code> where pool threads and queued tasks are distinct concepts, the virtual thread executor
+enforces a flat concurrency cap: the maximum number of concurrently executing tasks equals <code>maxQueueSize</code>.
+Pool sizing parameters (<code>poolSize</code>, <code>maxPoolSize</code>) are ignored since virtual threads are not pooled.
+All permitted tasks execute immediately on virtual threads — there is no queue of waiting tasks.</p>
+</div>
+<div class="paragraph">
+<p>The <code>rejectedPolicy</code> controls what happens when the concurrency limit is reached:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>CallerRuns</strong> (default): the caller blocks up to <code>keepAliveTime</code> waiting for a permit. If the timeout expires,
+the task runs on the caller&#8217;s thread.</p>
+</li>
+<li>
+<p><strong>Abort</strong>: the caller blocks up to <code>keepAliveTime</code> waiting for a permit. If the timeout expires,
+a <code>RejectedExecutionException</code> is thrown.</p>
+</li>
+<li>
+<p><strong>Block</strong>: the caller blocks indefinitely until a permit becomes available.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>While waiting for a permit, the calling thread is blocked. When callers are virtual threads this is inexpensive
+(the carrier thread is released). When callers are platform threads (e.g., HTTP server threads) the blocked thread
+is unavailable for other work.</p>
+</div>
+<div class="paragraph">
+<p>Pool sizing parameters (<code>poolSize</code>, <code>maxPoolSize</code>, <code>keepAliveTime</code>) do not control thread reuse with virtual threads
+since virtual threads are cheap to create and are never pooled. However, <code>keepAliveTime</code> is reused as the timeout
+for permit acquisition with <code>CallerRuns</code> and <code>Abort</code> policies.</p>
+</div>
+</div>
+</div>
+</div>
+</article>
+  </div>
+</main>
+</div>
+<footer class="footer">
+  <p>This page was built using the Antora default UI.</p>
+  <p>The source code for this UI is licensed under the terms of the MPL-2.0 license.</p>
+</footer>
+<script id="site-script" src="../../_/js/site.js" data-ui-root-path="../../_"></script>
+<script async src="../../_/js/vendor/highlight.js"></script>
+  </body>
+</html>
