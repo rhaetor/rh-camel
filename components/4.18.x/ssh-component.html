@@ -5109,946 +5109,584 @@
                             </tr>
                             </thead>
                             <tbody>
-                            <tr>
-                                <td class="tableblock halign-left valign-top">
-                                    <p class="tableblock">
-                                        <a id="_component_option_failOnUnknownHost">
-                                        </a>
-                                        <a class="anchor"
-                                           href="#_component_option_failOnUnknownHost">
-                                        </a>
-                                        <strong>
-                                            failOnUnknownHost
-                                        </strong>
-                                        (common)
-                                    </p>
-                                </td>
-                                <td class="tableblock halign-left valign-top">
-                                    <div class="content">
-                                        <div class="paragraph">
-                                            <p>
-                                                Specifies whether a connection
-                                                to
-                                                an unknown host should fail or
-                                                not. This value is only checked
-                                                when the property knownHosts is
-                                                set.
-                                            </p>
-                                        </div>
-                                    </div>
-                                </td>
-                                <td class="tableblock halign-center valign-top">
-                                    <p class="tableblock">
-                                        false
-                                    </p>
-                                </td>
-                                <td class="tableblock halign-left valign-top">
-                                    <p class="tableblock">
-                                        boolean
-                                    </p>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td class="tableblock halign-left valign-top">
-                                    <p class="tableblock">
-                                        <a id="_component_option_knownHostsResource">
-                                        </a>
-                                        <a class="anchor"
-                                           href="#_component_option_knownHostsResource">
-                                        </a>
-                                        <strong>
-                                            knownHostsResource
-                                        </strong>
-                                        (common)
-                                    </p>
-                                </td>
-                                <td class="tableblock halign-left valign-top">
-                                    <div class="content">
-                                        <div class="paragraph">
-                                            <p>
-                                                Sets the resource path for a
-                                                known_hosts file.
-                                            </p>
-                                        </div>
-                                    </div>
-                                </td>
-                                <td class="tableblock halign-center valign-top">
-                                </td>
-                                <td class="tableblock halign-left valign-top">
-                                    <p class="tableblock">
-                                        String
-                                    </p>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td class="tableblock halign-left valign-top">
-                                    <p class="tableblock">
-                                        <a id="_component_option_timeout">
-                                        </a>
-                                        <a class="anchor"
-                                           href="#_component_option_timeout">
-                                        </a>
-                                        <strong>
-                                            timeout
-                                        </strong>
-                                        (common)
-                                    </p>
-                                </td>
-                                <td class="tableblock halign-left valign-top">
-                                    <div class="content">
-                                        <div class="paragraph">
-                                            <p>
-                                                Sets the timeout in milliseconds
-                                                to wait in establishing the
-                                                remote SSH server connection.
-                                                Defaults to 30000
-                                                milliseconds.
-                                            </p>
-                                        </div>
-                                    </div>
-                                </td>
-                                <td class="tableblock halign-center valign-top">
-                                    <p class="tableblock">
-                                        30000
-                                    </p>
-                                </td>
-                                <td class="tableblock halign-left valign-top">
-                                    <p class="tableblock">
-                                        long
-                                    </p>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td class="tableblock halign-left valign-top">
-                                    <p class="tableblock">
-                                        <a id="_component_option_bridgeErrorHandler">
-                                        </a>
-                                        <a class="anchor"
-                                           href="#_component_option_bridgeErrorHandler">
-                                        </a>
-                                        <strong>
-                                            bridgeErrorHandler
-                                        </strong>
-                                        (consumer)
-                                    </p>
-                                </td>
-                                <td class="tableblock halign-left valign-top">
-                                    <div class="content">
-                                        <div class="paragraph">
-                                            <p>
-                                                Allows for bridging the consumer
-                                                to the Camel routing Error
-                                                Handler, which mean any
-                                                exceptions (if possible)
-                                                occurred while the Camel
-                                                consumer is trying to pickup
-                                                incoming messages, or the likes,
-                                                will now be processed as a
-                                                message and handled by the
-                                                routing Error Handler.
-                                                Important: This is only possible
-                                                if the 3rd party component
-                                                allows Camel to be alerted if an
-                                                exception was thrown. Some
-                                                components handle this
-                                                internally only, and therefore
-                                                bridgeErrorHandler is not
-                                                possible. In other situations we
-                                                may improve the Camel component
-                                                to hook into the 3rd party
-                                                component and make this possible
-                                                for future releases. By default
-                                                the consumer will use the
-                                                org.apache.camel.spi.ExceptionHandler
-                                                to deal with exceptions, that
-                                                will be logged at WARN or ERROR
-                                                level and ignored.
-                                            </p>
-                                        </div>
-                                    </div>
-                                </td>
-                                <td class="tableblock halign-center valign-top">
-                                    <p class="tableblock">
-                                        false
-                                    </p>
-                                </td>
-                                <td class="tableblock halign-left valign-top">
-                                    <p class="tableblock">
-                                        boolean
-                                    </p>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td class="tableblock halign-left valign-top">
-                                    <p class="tableblock">
-                                        <a id="_component_option_pollCommand">
-                                        </a>
-                                        <a class="anchor"
-                                           href="#_component_option_pollCommand">
-                                        </a>
-                                        <strong>
-                                            pollCommand
-                                        </strong>
-                                        (consumer)
-                                    </p>
-                                </td>
-                                <td class="tableblock halign-left valign-top">
-                                    <div class="content">
-                                        <div class="paragraph">
-                                            <p>
-                                                Sets the command string to send
-                                                to the remote SSH server during
-                                                every poll cycle. Only works
-                                                with camel-ssh component being
-                                                used as a consumer, i.e.
-                                                from(ssh://…​) You
-                                                may need to end your command
-                                                with a newline, and that must be
-                                                URL encoded %0A.
-                                            </p>
-                                        </div>
-                                    </div>
-                                </td>
-                                <td class="tableblock halign-center valign-top">
-                                </td>
-                                <td class="tableblock halign-left valign-top">
-                                    <p class="tableblock">
-                                        String
-                                    </p>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td class="tableblock halign-left valign-top">
-                                    <p class="tableblock">
-                                        <a id="_component_option_lazyStartProducer">
-                                        </a>
-                                        <a class="anchor"
-                                           href="#_component_option_lazyStartProducer">
-                                        </a>
-                                        <strong>
-                                            lazyStartProducer
-                                        </strong>
-                                        (producer)
-                                    </p>
-                                </td>
-                                <td class="tableblock halign-left valign-top">
-                                    <div class="content">
-                                        <div class="paragraph">
-                                            <p>
-                                                Whether the producer should be
-                                                started lazy (on the first
-                                                message). By starting lazy you
-                                                can use this to allow
-                                                CamelContext and routes to
-                                                startup in situations where a
-                                                producer may otherwise fail
-                                                during starting and cause the
-                                                route to fail being started. By
-                                                deferring this startup to be
-                                                lazy then the startup failure
-                                                can be handled during routing
-                                                messages via Camel’s
-                                                routing error handlers. Beware
-                                                that when the first message is
-                                                processed then creating and
-                                                starting the producer may take a
-                                                little time and prolong the
-                                                total processing time of the
-                                                processing.
-                                            </p>
-                                        </div>
-                                    </div>
-                                </td>
-                                <td class="tableblock halign-center valign-top">
-                                    <p class="tableblock">
-                                        false
-                                    </p>
-                                </td>
-                                <td class="tableblock halign-left valign-top">
-                                    <p class="tableblock">
-                                        boolean
-                                    </p>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td class="tableblock halign-left valign-top">
-                                    <p class="tableblock">
-                                        <a id="_component_option_autowiredEnabled">
-                                        </a>
-                                        <a class="anchor"
-                                           href="#_component_option_autowiredEnabled">
-                                        </a>
-                                        <strong>
-                                            autowiredEnabled
-                                        </strong>
-                                        (advanced)
-                                    </p>
-                                </td>
-                                <td class="tableblock halign-left valign-top">
-                                    <div class="content">
-                                        <div class="paragraph">
-                                            <p>
-                                                Whether autowiring is enabled.
-                                                This is used for automatic
-                                                autowiring options (the option
-                                                must be marked as autowired) by
-                                                looking up in the registry to
-                                                find if there is a single
-                                                instance of matching type, which
-                                                then gets configured on the
-                                                component. This can be used for
-                                                automatic configuring JDBC data
-                                                sources, JMS connection
-                                                factories, AWS Clients, etc.
-                                            </p>
-                                        </div>
-                                    </div>
-                                </td>
-                                <td class="tableblock halign-center valign-top">
-                                    <p class="tableblock">
-                                        true
-                                    </p>
-                                </td>
-                                <td class="tableblock halign-left valign-top">
-                                    <p class="tableblock">
-                                        boolean
-                                    </p>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td class="tableblock halign-left valign-top">
-                                    <p class="tableblock">
-                                        <a id="_component_option_channelType">
-                                        </a>
-                                        <a class="anchor"
-                                           href="#_component_option_channelType">
-                                        </a>
-                                        <strong>
-                                            channelType
-                                        </strong>
-                                        (advanced)
-                                    </p>
-                                </td>
-                                <td class="tableblock halign-left valign-top">
-                                    <div class="content">
-                                        <div class="paragraph">
-                                            <p>
-                                                Sets the channel type to pass to
-                                                the Channel as part of command
-                                                execution. Defaults to exec.
-                                            </p>
-                                        </div>
-                                    </div>
-                                </td>
-                                <td class="tableblock halign-center valign-top">
-                                    <p class="tableblock">
-                                        exec
-                                    </p>
-                                </td>
-                                <td class="tableblock halign-left valign-top">
-                                    <p class="tableblock">
-                                        String
-                                    </p>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td class="tableblock halign-left valign-top">
-                                    <p class="tableblock">
-                                        <a id="_component_option_clientBuilder">
-                                        </a>
-                                        <a class="anchor"
-                                           href="#_component_option_clientBuilder">
-                                        </a>
-                                        <strong>
-                                            clientBuilder
-                                        </strong>
-                                        (advanced)
-                                    </p>
-                                </td>
-                                <td class="tableblock halign-left valign-top">
-                                    <div class="content">
-                                        <div class="paragraph">
-                                            <p>
-                                                <strong>
-                                                    Autowired
-                                                </strong>
-                                                Instance of ClientBuilder used
-                                                by the producer or consumer to
-                                                create a new SshClient.
-                                            </p>
-                                        </div>
-                                    </div>
-                                </td>
-                                <td class="tableblock halign-center valign-top">
-                                </td>
-                                <td class="tableblock halign-left valign-top">
-                                    <p class="tableblock">
-                                        ClientBuilder
-                                    </p>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td class="tableblock halign-left valign-top">
-                                    <p class="tableblock">
-                                        <a id="_component_option_compressions">
-                                        </a>
-                                        <a class="anchor"
-                                           href="#_component_option_compressions">
-                                        </a>
-                                        <strong>
-                                            compressions
-                                        </strong>
-                                        (advanced)
-                                    </p>
-                                </td>
-                                <td class="tableblock halign-left valign-top">
-                                    <div class="content">
-                                        <div class="paragraph">
-                                            <p>
-                                                Whether to use compression, and
-                                                if so which.
-                                            </p>
-                                        </div>
-                                    </div>
-                                </td>
-                                <td class="tableblock halign-center valign-top">
-                                </td>
-                                <td class="tableblock halign-left valign-top">
-                                    <p class="tableblock">
-                                        String
-                                    </p>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td class="tableblock halign-left valign-top">
-                                    <p class="tableblock">
-                                        <a id="_component_option_configuration">
-                                        </a>
-                                        <a class="anchor"
-                                           href="#_component_option_configuration">
-                                        </a>
-                                        <strong>
-                                            configuration
-                                        </strong>
-                                        (advanced)
-                                    </p>
-                                </td>
-                                <td class="tableblock halign-left valign-top">
-                                    <div class="content">
-                                        <div class="paragraph">
-                                            <p>
-                                                Component configuration.
-                                            </p>
-                                        </div>
-                                    </div>
-                                </td>
-                                <td class="tableblock halign-center valign-top">
-                                </td>
-                                <td class="tableblock halign-left valign-top">
-                                    <p class="tableblock">
-                                        SshConfiguration
-                                    </p>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td class="tableblock halign-left valign-top">
-                                    <p class="tableblock">
-                                        <a id="_component_option_shellPrompt">
-                                        </a>
-                                        <a class="anchor"
-                                           href="#_component_option_shellPrompt">
-                                        </a>
-                                        <strong>
-                                            shellPrompt
-                                        </strong>
-                                        (advanced)
-                                    </p>
-                                </td>
-                                <td class="tableblock halign-left valign-top">
-                                    <div class="content">
-                                        <div class="paragraph">
-                                            <p>
-                                                Sets the shellPrompt to be
-                                                dropped when response is read
-                                                after command execution.
-                                            </p>
-                                        </div>
-                                    </div>
-                                </td>
-                                <td class="tableblock halign-center valign-top">
-                                </td>
-                                <td class="tableblock halign-left valign-top">
-                                    <p class="tableblock">
-                                        String
-                                    </p>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td class="tableblock halign-left valign-top">
-                                    <p class="tableblock">
-                                        <a id="_component_option_sleepForShellPrompt">
-                                        </a>
-                                        <a class="anchor"
-                                           href="#_component_option_sleepForShellPrompt">
-                                        </a>
-                                        <strong>
-                                            sleepForShellPrompt
-                                        </strong>
-                                        (advanced)
-                                    </p>
-                                </td>
-                                <td class="tableblock halign-left valign-top">
-                                    <div class="content">
-                                        <div class="paragraph">
-                                            <p>
-                                                Sets the sleep period in
-                                                milliseconds to wait reading
-                                                response from shell prompt.
-                                                Defaults to 100
-                                                milliseconds.
-                                            </p>
-                                        </div>
-                                    </div>
-                                </td>
-                                <td class="tableblock halign-center valign-top">
-                                    <p class="tableblock">
-                                        100
-                                    </p>
-                                </td>
-                                <td class="tableblock halign-left valign-top">
-                                    <p class="tableblock">
-                                        long
-                                    </p>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td class="tableblock halign-left valign-top">
-                                    <p class="tableblock">
-                                        <a id="_component_option_healthCheckConsumerEnabled">
-                                        </a>
-                                        <a class="anchor"
-                                           href="#_component_option_healthCheckConsumerEnabled">
-                                        </a>
-                                        <strong>
-                                            healthCheckConsumerEnabled
-                                        </strong>
-                                        (health)
-                                    </p>
-                                </td>
-                                <td class="tableblock halign-left valign-top">
-                                    <div class="content">
-                                        <div class="paragraph">
-                                            <p>
-                                                Used for enabling or disabling
-                                                all consumer based health checks
-                                                from this component.
-                                            </p>
-                                        </div>
-                                    </div>
-                                </td>
-                                <td class="tableblock halign-center valign-top">
-                                    <p class="tableblock">
-                                        true
-                                    </p>
-                                </td>
-                                <td class="tableblock halign-left valign-top">
-                                    <p class="tableblock">
-                                        boolean
-                                    </p>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td class="tableblock halign-left valign-top">
-                                    <p class="tableblock">
-                                        <a id="_component_option_healthCheckProducerEnabled">
-                                        </a>
-                                        <a class="anchor"
-                                           href="#_component_option_healthCheckProducerEnabled">
-                                        </a>
-                                        <strong>
-                                            healthCheckProducerEnabled
-                                        </strong>
-                                        (health)
-                                    </p>
-                                </td>
-                                <td class="tableblock halign-left valign-top">
-                                    <div class="content">
-                                        <div class="paragraph">
-                                            <p>
-                                                Used for enabling or disabling
-                                                all producer based health checks
-                                                from this component. Notice:
-                                                Camel has by default disabled
-                                                all producer based
-                                                health-checks. You can turn on
-                                                producer checks globally by
-                                                setting
-                                                camel.health.producersEnabled=true.
-                                            </p>
-                                        </div>
-                                    </div>
-                                </td>
-                                <td class="tableblock halign-center valign-top">
-                                    <p class="tableblock">
-                                        true
-                                    </p>
-                                </td>
-                                <td class="tableblock halign-left valign-top">
-                                    <p class="tableblock">
-                                        boolean
-                                    </p>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td class="tableblock halign-left valign-top">
-                                    <p class="tableblock">
-                                        <a id="_component_option_certResource">
-                                        </a>
-                                        <a class="anchor"
-                                           href="#_component_option_certResource">
-                                        </a>
-                                        <strong>
-                                            certResource
-                                        </strong>
-                                        (security)
-                                    </p>
-                                </td>
-                                <td class="tableblock halign-left valign-top">
-                                    <div class="content">
-                                        <div class="paragraph">
-                                            <p>
-                                                Sets the resource path of the
-                                                certificate to use for
-                                                Authentication. Will use
-                                                ResourceHelperKeyPairProvider to
-                                                resolve file based certificate,
-                                                and depends on keyType
-                                                setting.
-                                            </p>
-                                        </div>
-                                    </div>
-                                </td>
-                                <td class="tableblock halign-center valign-top">
-                                </td>
-                                <td class="tableblock halign-left valign-top">
-                                    <p class="tableblock">
-                                        String
-                                    </p>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td class="tableblock halign-left valign-top">
-                                    <p class="tableblock">
-                                        <a id="_component_option_certResourcePassword">
-                                        </a>
-                                        <a class="anchor"
-                                           href="#_component_option_certResourcePassword">
-                                        </a>
-                                        <strong>
-                                            certResourcePassword
-                                        </strong>
-                                        (security)
-                                    </p>
-                                </td>
-                                <td class="tableblock halign-left valign-top">
-                                    <div class="content">
-                                        <div class="paragraph">
-                                            <p>
-                                                Sets the password to use in
-                                                loading certResource, if
-                                                certResource is an encrypted
-                                                key.
-                                            </p>
-                                        </div>
-                                    </div>
-                                </td>
-                                <td class="tableblock halign-center valign-top">
-                                </td>
-                                <td class="tableblock halign-left valign-top">
-                                    <p class="tableblock">
-                                        String
-                                    </p>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td class="tableblock halign-left valign-top">
-                                    <p class="tableblock">
-                                        <a id="_component_option_ciphers">
-                                        </a>
-                                        <a class="anchor"
-                                           href="#_component_option_ciphers">
-                                        </a>
-                                        <strong>
-                                            ciphers
-                                        </strong>
-                                        (security)
-                                    </p>
-                                </td>
-                                <td class="tableblock halign-left valign-top">
-                                    <div class="content">
-                                        <div class="paragraph">
-                                            <p>
-                                                Comma-separated list of
-                                                allowed/supported ciphers in
-                                                their order of preference.
-                                            </p>
-                                        </div>
-                                    </div>
-                                </td>
-                                <td class="tableblock halign-center valign-top">
-                                </td>
-                                <td class="tableblock halign-left valign-top">
-                                    <p class="tableblock">
-                                        String
-                                    </p>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td class="tableblock halign-left valign-top">
-                                    <p class="tableblock">
-                                        <a id="_component_option_kex">
-                                        </a>
-                                        <a class="anchor"
-                                           href="#_component_option_kex">
-                                        </a>
-                                        <strong>
-                                            kex
-                                        </strong>
-                                        (security)
-                                    </p>
-                                </td>
-                                <td class="tableblock halign-left valign-top">
-                                    <div class="content">
-                                        <div class="paragraph">
-                                            <p>
-                                                Comma-separated list of
-                                                allowed/supported key exchange
-                                                algorithms in their order of
-                                                preference.
-                                            </p>
-                                        </div>
-                                    </div>
-                                </td>
-                                <td class="tableblock halign-center valign-top">
-                                </td>
-                                <td class="tableblock halign-left valign-top">
-                                    <p class="tableblock">
-                                        String
-                                    </p>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td class="tableblock halign-left valign-top">
-                                    <p class="tableblock">
-                                        <a id="_component_option_keyPairProvider">
-                                        </a>
-                                        <a class="anchor"
-                                           href="#_component_option_keyPairProvider">
-                                        </a>
-                                        <strong>
-                                            keyPairProvider
-                                        </strong>
-                                        (security)
-                                    </p>
-                                </td>
-                                <td class="tableblock halign-left valign-top">
-                                    <div class="content">
-                                        <div class="paragraph">
-                                            <p>
-                                                Sets the KeyPairProvider
-                                                reference to use when connecting
-                                                using Certificates to the remote
-                                                SSH Server.
-                                            </p>
-                                        </div>
-                                    </div>
-                                </td>
-                                <td class="tableblock halign-center valign-top">
-                                </td>
-                                <td class="tableblock halign-left valign-top">
-                                    <p class="tableblock">
-                                        KeyPairProvider
-                                    </p>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td class="tableblock halign-left valign-top">
-                                    <p class="tableblock">
-                                        <a id="_component_option_keyType">
-                                        </a>
-                                        <a class="anchor"
-                                           href="#_component_option_keyType">
-                                        </a>
-                                        <strong>
-                                            keyType
-                                        </strong>
-                                        (security)
-                                    </p>
-                                </td>
-                                <td class="tableblock halign-left valign-top">
-                                    <div class="content">
-                                        <div class="paragraph">
-                                            <p>
-                                                Sets the key type to pass to the
-                                                KeyPairProvider as part of
-                                                authentication.
-                                                KeyPairProvider.loadKey(…​)
-                                                will be passed this value. From
-                                                Camel 3.0.0 / 2.25.0, by default
-                                                Camel will select the first
-                                                available KeyPair that is
-                                                loaded. Prior to this, a KeyType
-                                                of 'ssh-rsa' was enforced by
-                                                default.
-                                            </p>
-                                        </div>
-                                    </div>
-                                </td>
-                                <td class="tableblock halign-center valign-top">
-                                </td>
-                                <td class="tableblock halign-left valign-top">
-                                    <p class="tableblock">
-                                        String
-                                    </p>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td class="tableblock halign-left valign-top">
-                                    <p class="tableblock">
-                                        <a id="_component_option_macs">
-                                        </a>
-                                        <a class="anchor"
-                                           href="#_component_option_macs">
-                                        </a>
-                                        <strong>
-                                            macs
-                                        </strong>
-                                        (security)
-                                    </p>
-                                </td>
-                                <td class="tableblock halign-left valign-top">
-                                    <div class="content">
-                                        <div class="paragraph">
-                                            <p>
-                                                Comma-separated list of
-                                                allowed/supported message
-                                                authentication code algorithms
-                                                in their order of preference.
-                                                The MAC algorithm is used for
-                                                data integrity protection.
-                                            </p>
-                                        </div>
-                                    </div>
-                                </td>
-                                <td class="tableblock halign-center valign-top">
-                                </td>
-                                <td class="tableblock halign-left valign-top">
-                                    <p class="tableblock">
-                                        String
-                                    </p>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td class="tableblock halign-left valign-top">
-                                    <p class="tableblock">
-                                        <a id="_component_option_password">
-                                        </a>
-                                        <a class="anchor"
-                                           href="#_component_option_password">
-                                        </a>
-                                        <strong>
-                                            password
-                                        </strong>
-                                        (security)
-                                    </p>
-                                </td>
-                                <td class="tableblock halign-left valign-top">
-                                    <div class="content">
-                                        <div class="paragraph">
-                                            <p>
-                                                Sets the password to use in
-                                                connecting to remote SSH server.
-                                                Requires keyPairProvider to be
-                                                set to null.
-                                            </p>
-                                        </div>
-                                    </div>
-                                </td>
-                                <td class="tableblock halign-center valign-top">
-                                </td>
-                                <td class="tableblock halign-left valign-top">
-                                    <p class="tableblock">
-                                        String
-                                    </p>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td class="tableblock halign-left valign-top">
-                                    <p class="tableblock">
-                                        <a id="_component_option_signatures">
-                                        </a>
-                                        <a class="anchor"
-                                           href="#_component_option_signatures">
-                                        </a>
-                                        <strong>
-                                            signatures
-                                        </strong>
-                                        (security)
-                                    </p>
-                                </td>
-                                <td class="tableblock halign-left valign-top">
-                                    <div class="content">
-                                        <div class="paragraph">
-                                            <p>
-                                                Comma-separated list of
-                                                allowed/supported signature
-                                                algorithms in their order of
-                                                preference.
-                                            </p>
-                                        </div>
-                                    </div>
-                                </td>
-                                <td class="tableblock halign-center valign-top">
-                                </td>
-                                <td class="tableblock halign-left valign-top">
-                                    <p class="tableblock">
-                                        String
-                                    </p>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td class="tableblock halign-left valign-top">
-                                    <p class="tableblock">
-                                        <a id="_component_option_username">
-                                        </a>
-                                        <a class="anchor"
-                                           href="#_component_option_username">
-                                        </a>
-                                        <strong>
-                                            username
-                                        </strong>
-                                        (security)
-                                    </p>
-                                </td>
-                                <td class="tableblock halign-left valign-top">
-                                    <div class="content">
-                                        <div class="paragraph">
-                                            <p>
-                                                Sets the username to use in
-                                                logging into the remote SSH
-                                                server.
-                                            </p>
-                                        </div>
-                                    </div>
-                                </td>
-                                <td class="tableblock halign-center valign-top">
-                                </td>
-                                <td class="tableblock halign-left valign-top">
-                                    <p class="tableblock">
-                                        String
-                                    </p>
-                                </td>
-                            </tr>
+                                <tr>
+        <td class="tableblock halign-left valign-top">
+            <p class="tableblock"><a
+                    id="_component_option_failOnUnknownHost"></a> <a
+                    class="anchor"
+                    href="#_component_option_failOnUnknownHost"></a><strong><span class="identifier">fail<wbr>On<wbr>Unknown<wbr>Host</span></strong>
+                (common)
+            </p>
+        </td>
+        <td class="tableblock halign-left valign-top">
+            <div class="content">
+                <div class="paragraph">
+                    <p>Specifies whether a connection to a server whose host has
+                        no entry without a marker in the <span
+                                class="identifier">known_hosts</span> resource
+                        should fail or not. This value is only checked when the
+                        property <span class="identifier">known<wbr>Hosts<wbr>Resource</span>
+                        is set. A server whose host has entries without a marker
+                        is always rejected when it presents a key that none of
+                        them lists, and a key listed in a matching revoked entry
+                        is always rejected.
+                    </p>
+                </div>
+            </div>
+        </td>
+        <td class="tableblock halign-center valign-top"><p class="tableblock">
+            false</p></td>
+        <td class="tableblock halign-left valign-top"><p class="tableblock">
+            boolean</p></td>
+    </tr>
+    <tr>
+        <td class="tableblock halign-left valign-top">
+            <p class="tableblock"><a
+                    id="_component_option_knownHostsResource"></a> <a
+                    class="anchor"
+                    href="#_component_option_knownHostsResource"></a><strong><span class="identifier">known<wbr>Hosts<wbr>Resource</span></strong>
+                (common)
+            </p>
+        </td>
+        <td class="tableblock halign-left valign-top">
+            <div class="content">
+                <div class="paragraph"><p>Sets the resource path for a <span
+                        class="identifier">known_hosts</span> file used to
+                    verify the SSH server host key. The file uses the <span
+                            class="identifier">OpenSSH</span> <span
+                            class="identifier">known_hosts</span> format, and
+                    its entries are matched against the host and port configured
+                    on the endpoint. A resource that cannot be read, or that has
+                    a line that cannot be read, makes every connection fail.
+                    When not set, the client does not verify the server host key
+                    against a <span class="identifier">known_hosts</span> file.
+                </p></div>
+            </div>
+        </td>
+        <td class="tableblock halign-center valign-top"></td>
+        <td class="tableblock halign-left valign-top"><p class="tableblock">
+            String</p></td>
+    </tr>
+    <tr>
+        <td class="tableblock halign-left valign-top"><p class="tableblock"><a
+                id="_component_option_timeout"></a> <a
+                class="anchor" href="#_component_option_timeout"></a><strong>timeout</strong>
+            (common)</p></td>
+        <td class="tableblock halign-left valign-top">
+            <div class="content">
+                <div class="paragraph"><p>Sets the timeout in milliseconds to
+                    wait in establishing the remote SSH server connection.
+                    Defaults to 30000 milliseconds.</p></div>
+            </div>
+        </td>
+        <td class="tableblock halign-center valign-top"><p class="tableblock">
+            30000</p></td>
+        <td class="tableblock halign-left valign-top"><p class="tableblock">
+            long</p></td>
+    </tr>
+    <tr>
+        <td class="tableblock halign-left valign-top">
+            <p class="tableblock"><a
+                    id="_component_option_bridgeErrorHandler"></a> <a
+                    class="anchor"
+                    href="#_component_option_bridgeErrorHandler"></a><strong><span class="identifier">bridge<wbr>Error<wbr>Handler</span></strong>
+                (consumer)
+            </p>
+        </td>
+        <td class="tableblock halign-left valign-top">
+            <div class="content">
+                <div class="paragraph">
+                    <p>Allows for bridging the consumer to the Camel routing
+                        Error Handler, which mean any exceptions (if possible)
+                        occurred while the Camel consumer is trying to pickup
+                        incoming messages, or the likes, will now be processed
+                        as a message and handled by the routing Error Handler.
+                        Important: This is only possible if the 3rd party
+                        component allows Camel to be alerted if an exception was
+                        thrown. Some components handle this internally only, and
+                        therefore <span class="identifier">bridge<wbr>Error<wbr>Handler</span>
+                        is not possible. In other situations we may improve the
+                        Camel component to hook into the 3rd party component and
+                        make this possible for future releases. By default the
+                        consumer will use the <span class="identifier">org.<wbr>apache.<wbr>camel.<wbr>spi.<wbr>Exception<wbr>Handler</span>
+                        to deal with exceptions, that will be logged at WARN or
+                        ERROR level and ignored.
+                    </p>
+                </div>
+            </div>
+        </td>
+        <td class="tableblock halign-center valign-top"><p class="tableblock">
+            false</p></td>
+        <td class="tableblock halign-left valign-top"><p class="tableblock">
+            boolean</p></td>
+    </tr>
+    <tr>
+        <td class="tableblock halign-left valign-top"><p class="tableblock"><a
+                id="_component_option_pollCommand"></a> <a
+                class="anchor"
+                href="#_component_option_pollCommand"></a><strong><span
+                class="identifier">pollCommand</span></strong> (consumer)</p>
+        </td>
+        <td class="tableblock halign-left valign-top">
+            <div class="content">
+                <div class="paragraph">
+                    <p>Sets the command string to send to the remote SSH server
+                        during every poll cycle. Only works with camel-ssh
+                        component being used as a consumer, i.e. <span
+                                class="identifier">from(ssh:<wbr>/<wbr>/<wbr>…&ZeroWidthSpace;)</span>
+                        You may need to end your command with a newline, and
+                        that must be URL encoded %0A.
+                    </p>
+                </div>
+            </div>
+        </td>
+        <td class="tableblock halign-center valign-top"></td>
+        <td class="tableblock halign-left valign-top"><p class="tableblock">
+            String</p></td>
+    </tr>
+    <tr>
+        <td class="tableblock halign-left valign-top">
+            <p class="tableblock"><a
+                    id="_component_option_lazyStartProducer"></a> <a
+                    class="anchor"
+                    href="#_component_option_lazyStartProducer"></a><strong><span class="identifier">lazy<wbr>Start<wbr>Producer</span></strong>
+                (producer)
+            </p>
+        </td>
+        <td class="tableblock halign-left valign-top">
+            <div class="content">
+                <div class="paragraph">
+                    <p>Whether the producer should be started lazy (on the first
+                        message). By starting lazy you can use this to allow
+                        <span class="identifier">Camel<wbr>Context</span> and
+                        routes to startup in situations where a producer may
+                        otherwise fail during starting and cause the route to
+                        fail being started. By deferring this startup to be lazy
+                        then the startup failure can be handled during routing
+                        messages via Camel’s routing error handlers. Beware that
+                        when the first message is processed then creating and
+                        starting the producer may take a little time and prolong
+                        the total processing time of the processing.
+                    </p>
+                </div>
+            </div>
+        </td>
+        <td class="tableblock halign-center valign-top"><p class="tableblock">
+            false</p></td>
+        <td class="tableblock halign-left valign-top"><p class="tableblock">
+            boolean</p></td>
+    </tr>
+    <tr>
+        <td class="tableblock halign-left valign-top">
+            <p class="tableblock"><a
+                    id="_component_option_autowiredEnabled"></a> <a
+                    class="anchor"
+                    href="#_component_option_autowiredEnabled"></a><strong><span class="identifier">autowired<wbr>Enabled</span></strong>
+                (advanced)
+            </p>
+        </td>
+        <td class="tableblock halign-left valign-top">
+            <div class="content">
+                <div class="paragraph"><p>Whether autowiring is enabled. This is
+                    used for automatic autowiring options (the option must be
+                    marked as autowired) by looking up in the registry to find
+                    if there is a single instance of matching type, which then
+                    gets configured on the component. This can be used for
+                    automatic configuring JDBC data sources, JMS connection
+                    factories, AWS Clients, etc.</p></div>
+            </div>
+        </td>
+        <td class="tableblock halign-center valign-top"><p class="tableblock">
+            true</p></td>
+        <td class="tableblock halign-left valign-top"><p class="tableblock">
+            boolean</p></td>
+    </tr>
+    <tr>
+        <td class="tableblock halign-left valign-top"><p class="tableblock"><a
+                id="_component_option_channelType"></a> <a
+                class="anchor"
+                href="#_component_option_channelType"></a><strong><span
+                class="identifier">channelType</span></strong> (advanced)</p>
+        </td>
+        <td class="tableblock halign-left valign-top">
+            <div class="content">
+                <div class="paragraph"><p>Sets the channel type to pass to the
+                    Channel as part of command execution. Defaults to exec.</p>
+                </div>
+            </div>
+        </td>
+        <td class="tableblock halign-center valign-top"><p class="tableblock">
+            exec</p></td>
+        <td class="tableblock halign-left valign-top"><p class="tableblock">
+            String</p></td>
+    </tr>
+    <tr>
+        <td class="tableblock halign-left valign-top">
+            <p class="tableblock"><a id="_component_option_clientBuilder"></a>
+                <a class="anchor"
+                   href="#_component_option_clientBuilder"></a><strong><span class="identifier">client<wbr>Builder</span></strong>
+                (advanced)
+            </p>
+        </td>
+        <td class="tableblock halign-left valign-top">
+            <div class="content">
+                <div class="paragraph">
+                    <p><strong>Autowired</strong> Instance of <span
+                            class="identifier">Client<wbr>Builder</span> used by
+                        the producer or consumer to create a new <span
+                                class="identifier">SshClient.</span></p>
+                </div>
+            </div>
+        </td>
+        <td class="tableblock halign-center valign-top"></td>
+        <td class="tableblock halign-left valign-top">
+            <p class="tableblock"><span class="identifier">Client<wbr>Builder</span>
+            </p>
+        </td>
+    </tr>
+    <tr>
+        <td class="tableblock halign-left valign-top"><p class="tableblock"><a
+                id="_component_option_compressions"></a> <a
+                class="anchor"
+                href="#_component_option_compressions"></a><strong>compressions</strong> (advanced)</p>
+        </td>
+        <td class="tableblock halign-left valign-top">
+            <div class="content">
+                <div class="paragraph"><p>Whether to use compression, and if so
+                    which.</p></div>
+            </div>
+        </td>
+        <td class="tableblock halign-center valign-top"></td>
+        <td class="tableblock halign-left valign-top"><p class="tableblock">
+            String</p></td>
+    </tr>
+    <tr>
+        <td class="tableblock halign-left valign-top"><p class="tableblock"><a
+                id="_component_option_configuration"></a> <a
+                class="anchor"
+                href="#_component_option_configuration"></a><strong>configuration</strong> (advanced)</p>
+        </td>
+        <td class="tableblock halign-left valign-top">
+            <div class="content">
+                <div class="paragraph"><p>Component configuration.</p></div>
+            </div>
+        </td>
+        <td class="tableblock halign-center valign-top"></td>
+        <td class="tableblock halign-left valign-top">
+            <p class="tableblock"><span class="identifier">Ssh<wbr>Configuration</span>
+            </p>
+        </td>
+    </tr>
+    <tr>
+        <td class="tableblock halign-left valign-top"><p class="tableblock"><a
+                id="_component_option_idleTimeout"></a> <a
+                class="anchor"
+                href="#_component_option_idleTimeout"></a><strong><span
+                class="identifier">idleTimeout</span></strong> (advanced)</p>
+        </td>
+        <td class="tableblock halign-left valign-top">
+            <div class="content">
+                <div class="paragraph"><p>Sets the timeout in milliseconds to
+                    wait before the SSH session is closed due to inactivity. The
+                    default value is 0, which means no idle timeout is
+                    applied.</p></div>
+            </div>
+        </td>
+        <td class="tableblock halign-center valign-top"></td>
+        <td class="tableblock halign-left valign-top"><p class="tableblock">
+            long</p></td>
+    </tr>
+    <tr>
+        <td class="tableblock halign-left valign-top"><p class="tableblock"><a
+                id="_component_option_shellPrompt"></a> <a
+                class="anchor"
+                href="#_component_option_shellPrompt"></a><strong><span
+                class="identifier">shellPrompt</span></strong> (advanced)</p>
+        </td>
+        <td class="tableblock halign-left valign-top">
+            <div class="content">
+                <div class="paragraph"><p>Sets the <span class="identifier">shellPrompt</span>
+                    to be dropped when response is read after command execution.
+                </p></div>
+            </div>
+        </td>
+        <td class="tableblock halign-center valign-top"></td>
+        <td class="tableblock halign-left valign-top"><p class="tableblock">
+            String</p></td>
+    </tr>
+    <tr>
+        <td class="tableblock halign-left valign-top">
+            <p class="tableblock"><a
+                    id="_component_option_sleepForShellPrompt"></a> <a
+                    class="anchor"
+                    href="#_component_option_sleepForShellPrompt"></a><strong><span class="identifier">sleep<wbr>For<wbr>Shell<wbr>Prompt</span></strong>
+                (advanced)
+            </p>
+        </td>
+        <td class="tableblock halign-left valign-top">
+            <div class="content">
+                <div class="paragraph"><p>Sets the sleep period in milliseconds
+                    to wait reading response from shell prompt. Defaults to 100
+                    milliseconds.</p></div>
+            </div>
+        </td>
+        <td class="tableblock halign-center valign-top"><p class="tableblock">
+            100</p></td>
+        <td class="tableblock halign-left valign-top"><p class="tableblock">
+            long</p></td>
+    </tr>
+    <tr>
+        <td class="tableblock halign-left valign-top">
+            <p class="tableblock"><a
+                    id="_component_option_healthCheckConsumerEnabled"></a> <a
+                    class="anchor"
+                    href="#_component_option_healthCheckConsumerEnabled"></a><strong><span class="identifier">health<wbr>Check<wbr>Consumer<wbr>Enabled</span></strong>
+                (health)
+            </p>
+        </td>
+        <td class="tableblock halign-left valign-top">
+            <div class="content">
+                <div class="paragraph"><p>Used for enabling or disabling all
+                    consumer based health checks from this component.</p></div>
+            </div>
+        </td>
+        <td class="tableblock halign-center valign-top"><p class="tableblock">
+            true</p></td>
+        <td class="tableblock halign-left valign-top"><p class="tableblock">
+            boolean</p></td>
+    </tr>
+    <tr>
+        <td class="tableblock halign-left valign-top">
+            <p class="tableblock"><a
+                    id="_component_option_healthCheckProducerEnabled"></a> <a
+                    class="anchor"
+                    href="#_component_option_healthCheckProducerEnabled"></a><strong><span class="identifier">health<wbr>Check<wbr>Producer<wbr>Enabled</span></strong>
+                (health)
+            </p>
+        </td>
+        <td class="tableblock halign-left valign-top">
+            <div class="content">
+                <div class="paragraph">
+                    <p>Used for enabling or disabling all producer based health
+                        checks from this component. Notice: Camel has by default
+                        disabled all producer based health-checks. You can turn
+                        on producer checks globally by setting <span
+                                class="identifier">camel.<wbr>health.<wbr>producers<wbr>Enabled=true.<wbr></span>
+                    </p>
+                </div>
+            </div>
+        </td>
+        <td class="tableblock halign-center valign-top"><p class="tableblock">
+            true</p></td>
+        <td class="tableblock halign-left valign-top"><p class="tableblock">
+            boolean</p></td>
+    </tr>
+    <tr>
+        <td class="tableblock halign-left valign-top">
+            <p class="tableblock"><a id="_component_option_certResource"></a> <a
+                    class="anchor"
+                    href="#_component_option_certResource"></a><strong><span class="identifier">cert<wbr>Resource</span></strong>
+                (security)
+            </p>
+        </td>
+        <td class="tableblock halign-left valign-top">
+            <div class="content">
+                <div class="paragraph">
+                    <p>Sets the resource path of the certificate to use for
+                        Authentication. Will use <span class="identifier">Resource<wbr>Helper<wbr>Key<wbr>Pair<wbr>Provider</span>
+                        to resolve file based certificate, and depends on <span
+                                class="identifier">keyType</span> setting.
+                    </p>
+                </div>
+            </div>
+        </td>
+        <td class="tableblock halign-center valign-top"></td>
+        <td class="tableblock halign-left valign-top"><p class="tableblock">
+            String</p></td>
+    </tr>
+    <tr>
+        <td class="tableblock halign-left valign-top">
+            <p class="tableblock"><a
+                    id="_component_option_certResourcePassword"></a> <a
+                    class="anchor"
+                    href="#_component_option_certResourcePassword"></a><strong><span class="identifier">cert<wbr>Resource<wbr>Password</span></strong>
+                (security)
+            </p>
+        </td>
+        <td class="tableblock halign-left valign-top">
+            <div class="content">
+                <div class="paragraph">
+                    <p>Sets the password to use in loading <span
+                            class="identifier">cert<wbr>Resource,<wbr></span> if
+                        <span class="identifier">cert<wbr>Resource</span> is an
+                        encrypted key.
+                    </p>
+                </div>
+            </div>
+        </td>
+        <td class="tableblock halign-center valign-top"></td>
+        <td class="tableblock halign-left valign-top"><p class="tableblock">
+            String</p></td>
+    </tr>
+    <tr>
+        <td class="tableblock halign-left valign-top"><p class="tableblock"><a
+                id="_component_option_ciphers"></a> <a
+                class="anchor" href="#_component_option_ciphers"></a><strong>ciphers</strong>
+            (security)</p></td>
+        <td class="tableblock halign-left valign-top">
+            <div class="content">
+                <div class="paragraph">
+                    <p>Comma-separated list of <span class="identifier">allowed/<wbr>supported</span>
+                        ciphers in their order of preference.
+                    </p>
+                </div>
+            </div>
+        </td>
+        <td class="tableblock halign-center valign-top"></td>
+        <td class="tableblock halign-left valign-top"><p class="tableblock">
+            String</p></td>
+    </tr>
+    <tr>
+        <td class="tableblock halign-left valign-top"><p class="tableblock"><a
+                id="_component_option_kex"></a> <a class="anchor"
+                                                   href="#_component_option_kex"></a><strong>kex</strong>
+            (security)</p></td>
+        <td class="tableblock halign-left valign-top">
+            <div class="content">
+                <div class="paragraph">
+                    <p>Comma-separated list of <span class="identifier">allowed/<wbr>supported</span>
+                        key exchange algorithms in their order of preference.
+                    </p>
+                </div>
+            </div>
+        </td>
+        <td class="tableblock halign-center valign-top"></td>
+        <td class="tableblock halign-left valign-top"><p class="tableblock">
+            String</p></td>
+    </tr>
+    <tr>
+        <td class="tableblock halign-left valign-top">
+            <p class="tableblock"><a id="_component_option_keyPairProvider"></a>
+                <a class="anchor" href="#_component_option_keyPairProvider"></a><strong><span
+                        class="identifier">key<wbr>Pair<wbr>Provider</span></strong>
+                (security)
+            </p>
+        </td>
+        <td class="tableblock halign-left valign-top">
+            <div class="content">
+                <div class="paragraph">
+                    <p>Sets the <span class="identifier">Key<wbr>Pair<wbr>Provider</span>
+                        reference to use when connecting using Certificates to
+                        the remote SSH Server.
+                    </p>
+                </div>
+            </div>
+        </td>
+        <td class="tableblock halign-center valign-top"></td>
+        <td class="tableblock halign-left valign-top">
+            <p class="tableblock"><span class="identifier">Key<wbr>Pair<wbr>Provider</span>
+            </p>
+        </td>
+    </tr>
+    <tr>
+        <td class="tableblock halign-left valign-top"><p class="tableblock"><a
+                id="_component_option_keyType"></a> <a
+                class="anchor"
+                href="#_component_option_keyType"></a><strong><span
+                class="identifier">keyType</span></strong> (security)</p></td>
+        <td class="tableblock halign-left valign-top">
+            <div class="content">
+                <div class="paragraph">
+                    <p>Sets the key type to pass to the <span
+                            class="identifier">Key<wbr>Pair<wbr>Provider</span>
+                        as part of authentication. <span class="identifier">Key<wbr>Pair<wbr>Provider.<wbr>load<wbr>Key(…&ZeroWidthSpace;)</span>
+                        will be passed this value. From Camel <span
+                                class="identifier">3.0.0</span> / <span
+                                class="identifier">2.25.0,</span> by default
+                        Camel will select the first available <span
+                                class="identifier">KeyPair</span> that is
+                        loaded. Prior to this, a <span class="identifier">KeyType</span>
+                        of 'ssh-rsa' was enforced by default.
+                    </p>
+                </div>
+            </div>
+        </td>
+        <td class="tableblock halign-center valign-top"></td>
+        <td class="tableblock halign-left valign-top"><p class="tableblock">
+            String</p></td>
+    </tr>
+    <tr>
+        <td class="tableblock halign-left valign-top"><p class="tableblock"><a
+                id="_component_option_macs"></a> <a
+                class="anchor"
+                href="#_component_option_macs"></a><strong>macs</strong> (security)</p></td>
+        <td class="tableblock halign-left valign-top">
+            <div class="content">
+                <div class="paragraph">
+                    <p>Comma-separated list of <span class="identifier">allowed/<wbr>supported</span>
+                        message authentication code algorithms in their order of
+                        preference. The MAC algorithm is used for data integrity
+                        protection.
+                    </p>
+                </div>
+            </div>
+        </td>
+        <td class="tableblock halign-center valign-top"></td>
+        <td class="tableblock halign-left valign-top"><p class="tableblock">
+            String</p></td>
+    </tr>
+    <tr>
+        <td class="tableblock halign-left valign-top"><p class="tableblock"><a
+                id="_component_option_password"></a> <a
+                class="anchor" href="#_component_option_password"></a><strong>password</strong>
+            (security)</p></td>
+        <td class="tableblock halign-left valign-top">
+            <div class="content">
+                <div class="paragraph">
+                    <p>Sets the password to use in connecting to remote SSH
+                        server. Requires <span class="identifier">key<wbr>Pair<wbr>Provider</span>
+                        to be set to null.
+                    </p>
+                </div>
+            </div>
+        </td>
+        <td class="tableblock halign-center valign-top"></td>
+        <td class="tableblock halign-left valign-top"><p class="tableblock">
+            String</p></td>
+    </tr>
+    <tr>
+        <td class="tableblock halign-left valign-top"><p class="tableblock"><a
+                id="_component_option_signatures"></a> <a
+                class="anchor" href="#_component_option_signatures"></a><strong>signatures</strong>
+            (security)</p></td>
+        <td class="tableblock halign-left valign-top">
+            <div class="content">
+                <div class="paragraph">
+                    <p>Comma-separated list of <span class="identifier">allowed/<wbr>supported</span>
+                        signature algorithms in their order of preference.
+                    </p>
+                </div>
+            </div>
+        </td>
+        <td class="tableblock halign-center valign-top"></td>
+        <td class="tableblock halign-left valign-top"><p class="tableblock">
+            String</p></td>
+    </tr>
+    <tr>
+        <td class="tableblock halign-left valign-top"><p class="tableblock"><a
+                id="_component_option_username"></a> <a
+                class="anchor" href="#_component_option_username"></a><strong>username</strong>
+            (security)</p></td>
+        <td class="tableblock halign-left valign-top">
+            <div class="content">
+                <div class="paragraph"><p>Sets the username to use in logging
+                    into the remote SSH server.</p></div>
+            </div>
+        </td>
+        <td class="tableblock halign-center valign-top"></td>
+        <td class="tableblock halign-left valign-top"><p class="tableblock">
+            String</p></td>
+    </tr>
                             </tbody>
                         </table>
                     </div>
