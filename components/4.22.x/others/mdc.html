@@ -3947,7 +3947,7 @@
          <p>
           include the MDC service and additionally instruct the Camel application to treat that header as a MDC trace (via
           <code>
-           camel.mdc.customHeaders=myCustomMDCKey
+           camel.mdc.customExchangeHeaders=myCustomMDCKey
           </code>
           or
           <code>
@@ -3980,7 +3980,7 @@
         </div>
         <div class="listingblock">
          <div class="content">
-          <pre class="highlightjs highlight"><code class="language-text hljs" data-lang="text">... [%X{camel.contextId}, %X{camel.routeId}, %X{camel.exchangeId}, %X{camel.messageId}, %X{customHead}, %X{customProp}]</code></pre>
+          <pre class="highlightjs highlight"><code class="language-text hljs" data-lang="text">... [%X{camel.contextId}, %X{camel.routeId}, %X{camel.exchangeId}, %X{camel.messageId}, %X{myCustomMDCKey}, %X{customProp}]</code></pre>
          </div>
         </div>
         <div class="paragraph">
@@ -4045,11 +4045,11 @@
          <p>
           If they exist in the Exchange, then, they will be included in the MDC. You can use
           <code>
-           camel.mdc.customHeaders
+           camel.mdc.customExchangeHeaders
           </code>
           and
           <code>
-           camel.mdc.customProperties
+           camel.mdc.customExchangeProperties
           </code>
           to include any further header and property you need to trace.
          </p>
